@@ -19,9 +19,23 @@
         justify-content: space-between;	
         margin-top: 12px;
         padding: 22px 0 22px 22px;
-        border-radius: 10px;            
-        background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
+        border-radius: 10px;                    
         background-size: initial;
+        &.face_buffett {
+            background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
+        }
+        &.face_graham {
+            background:#fff url('../img/face_graham.svg') no-repeat left bottom;
+        }
+        &.face_templeton {
+            background:#fff url('../img/face_templeton.svg') no-repeat left bottom;
+        }
+        &.face_lynch {
+            background:#fff url('../img/face_lynch.svg') no-repeat left bottom;
+        }
+        &.face_greenblatt {
+            background:#fff url('../img/face_greenblatt.svg') no-repeat left bottom;
+        }
 
         .left {                
             width: 150px;          
@@ -306,8 +320,6 @@
         &.greenblatt {
             // 마법공식 전용
             .stand_standard {    
-    
-                background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
                 
                 .left {                
                     width: 100px;                              

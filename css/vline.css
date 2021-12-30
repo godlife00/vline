@@ -4778,8 +4778,27 @@ input[type='radio']:checked:before {
   margin-top: 12px;
   padding: 22px 0 22px 22px;
   border-radius: 10px;
-  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
   background-size: initial;
+}
+
+.top_invest .stand_standard.face_buffett {
+  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_graham {
+  background: #fff url("../img/face_graham.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_templeton {
+  background: #fff url("../img/face_templeton.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_lynch {
+  background: #fff url("../img/face_lynch.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_greenblatt {
+  background: #fff url("../img/face_greenblatt.svg") no-repeat left bottom;
 }
 
 .top_invest .stand_standard .left {
@@ -5083,8 +5102,27 @@ input[type='radio']:checked:before {
   margin-top: 12px;
   padding: 22px 0 22px 22px;
   border-radius: 10px;
-  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
   background-size: initial;
+}
+
+.top_invest .stand_standard.face_buffett {
+  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_graham {
+  background: #fff url("../img/face_graham.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_templeton {
+  background: #fff url("../img/face_templeton.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_lynch {
+  background: #fff url("../img/face_lynch.svg") no-repeat left bottom;
+}
+
+.top_invest .stand_standard.face_greenblatt {
+  background: #fff url("../img/face_greenblatt.svg") no-repeat left bottom;
 }
 
 .top_invest .stand_standard .left {
@@ -5244,10 +5282,6 @@ input[type='radio']:checked:before {
   width: 12px;
   height: 12px;
   background: url("../img/icon_help.svg") no-repeat 0 0;
-}
-
-.top_invest.greenblatt .stand_standard {
-  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
 }
 
 .top_invest.greenblatt .stand_standard .left {
