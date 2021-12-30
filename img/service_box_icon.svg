@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="78.66" viewBox="0 0 14 78.66">
+  <g id="그룹_3024" data-name="그룹 3024" transform="translate(-15 -73)">
+    <g id="그룹_455" data-name="그룹 455" transform="translate(16.168 139.873)">
+      <g id="그룹_436" data-name="그룹 436" transform="translate(0 0)">
+        <g id="그룹_435" data-name="그룹 435" transform="translate(0 0)">
+          <path id="패스_649" data-name="패스 649" d="M450.363,444.552s.728.076,1.105.076c3.5,0,6.337-2.238,6.337-5s-2.837-5-6.337-5-6.337,2.239-6.337,5a4.809,4.809,0,0,0,2.752,4.124s-.133.97-.405,2.425c0,0-.054.373.3.187S449.341,445.33,450.363,444.552Z" transform="translate(-445.131 -434.628)" fill="#97a3c9"/>
+        </g>
+      </g>
+    </g>
+    <path id="newspaper_fill" data-name="newspaper fill" d="M11.9,14H2.1A2.087,2.087,0,0,1,0,11.9V.7A.676.676,0,0,1,.2.2.676.676,0,0,1,.7,0h9.8a.676.676,0,0,1,.5.2.676.676,0,0,1,.2.5V5.6H14v6.3A2.087,2.087,0,0,1,11.9,14Zm-.7-7v4.9a.7.7,0,1,0,1.4,0V7ZM2.1,2.8V7H6.3V2.8Zm0,4.9V9.1h7V7.7Zm0,2.1v1.4h7V9.8ZM3.5,4.2H4.9V5.6H3.5Z" transform="translate(15 105)" fill="#97a3c9"/>
+    <path id="file_chart_fill" data-name="file chart fill" d="M9.1,0l3.5,3.5v9.8a.693.693,0,0,1-.7.7H.7a.676.676,0,0,1-.5-.2.676.676,0,0,1-.2-.5V.7A.676.676,0,0,1,.2.2.676.676,0,0,1,.7,0ZM5.6,3.5v7H7v-7ZM8.4,6.3v4.2H9.8V6.3ZM2.8,7.7v2.8H4.2V7.7Z" transform="translate(15 73)" fill="#97a3c9"/>
+  </g>
+</svg>

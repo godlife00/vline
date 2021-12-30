@@ -1,0 +1,174 @@
+/* 헤더 header */
+#header {
+    .bgWrap {        
+        .title {            
+            display: inline-block;
+            width: 18%;
+            padding-left: 15px;            
+            box-sizing: border-box;            
+            vertical-align: top;
+            margin-top: 12px;
+            .h1_logo {            
+                width: 89px;
+                height: 17px;
+                img {
+                    display: inline-block;                
+                    width: 100%;                
+                }
+            }                        
+        }
+        .gnb {
+            display: inline-block;
+            vertical-align: bottom;            
+            ul {
+                display: flex;    
+                justify-content: space-between;                
+                li {
+                    margin-left: 23px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    display: inline-block;                                
+                    a {
+                        display: inline-block;
+                        height: 42px;        
+                        padding: 9px 1px 0;
+                        box-sizing: border-box;
+                        font-size: 15px;                    
+                        color: #fff;
+                    }
+                    &.active {
+                        a {                            
+                            border-bottom: 4px solid #fff;                                                        
+                            font-weight: $f_sizeB;
+                        }                        
+                    }
+                }
+            }            
+        }        
+        .searchArea {
+            position: relative;
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: top;  
+            margin-top: 7px;                   
+
+            form {
+                position: relative;
+                .searchInput {
+                    width: 210px;
+                    height: 28px;
+                    box-sizing: border-box;
+                    padding: 7px 6px 7px 28px;                
+                    border-radius: 4px;
+                    border: solid 1px rgba(137, 160, 255, 0.51);
+                    background-color: #273986;                
+                    color: #fff;
+                    font-size: 12px;                    
+                    &::placeholder {
+                        color: #fff;
+                        font-size: 12px;                                            
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .searchBtn {
+                    position: absolute;
+                    left: 7px;
+                    top: 7px;
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            .AutoComplete {  
+                border-bottom-left-radius: 5px;          
+                border-bottom-left-radius: 5px;          
+                background: #fff;
+                z-index: 999;
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top:30px;
+                background: #fff;
+                box-sizing: border-box;
+                padding: 5px 0;
+                border:1px solid #ececec;
+                z-index: 85;
+                max-height: 185px;
+                overflow: auto;
+                overflow-x: hidden;
+                -webkit-box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.09);
+                -moz-box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.09);
+                box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.09);
+                
+                li {
+                    line-height: 1;
+                    padding: 5px 10px;
+                    padding-bottom: 5px;
+                    a {
+                        font-size: 13px;                                                
+                        letter-spacing: -0.33px;                        
+                        color: #656d7e;
+                        strong {
+                            font-weight: $f_sizeB;
+                        }
+                    }         
+                    &:nth-child(2n) {
+                        background: #f4f6fa;
+                    }
+                }                
+
+            }
+        }
+        
+        .premium {
+            float: right;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 12px;            
+            a.join {                
+                display: inline-block;
+                font-size: 14px;
+                font-weight: bold;            
+                letter-spacing: -0.35px;            
+                padding-left: 20px;
+                color: #fff;
+                position: relative;
+                vertical-align: top;
+                &::before {
+                    content: '';                    
+                    position: absolute;
+                    left: 5px;
+                    top: 3px;
+                    display: inline-block;
+                    width: 10.4px;
+                    height: 14px;
+                    background: url('../img/premium_join_bg.png') no-repeat 0 0;
+                    background-size: cover;
+                }
+            }             
+            .loginId {
+                padding-left: 20px;                
+                display: inline-block;                                                
+                position: relative;
+                top: -2px;
+                .login {
+                    display: inline-block;                                                            
+                    width: 24px;
+                    height: 24px;
+                    img {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }           
+        }
+        
+    }
+    
+
+}

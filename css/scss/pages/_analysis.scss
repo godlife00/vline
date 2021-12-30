@@ -1,0 +1,275 @@
+// 재무분석
+// BIC 차트
+#container .M_right .contents .bic_chartbox {
+    
+    .chart_line {
+        margin-top: 56px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .title_box {
+            padding: 21px 24px;
+            background-color: #edf3ff;
+
+            .title {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: $f_sizeB;                
+                letter-spacing: -0.4px;                
+                color: #3655d6;                
+                i {
+                    font-style: normal;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: $f_sizeB;       
+                    letter-spacing: -0.35px;                    
+                    color: #fff;
+                    background-color: #3655d6;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-right: 12px;
+                }
+            }
+            .sub_title {
+                display: inline-block;
+                font-size: 14px;                
+                letter-spacing: -0.35px;
+                color: #656d7e;
+                padding-left: 6px;
+            }
+        }
+        .con_box {            
+            margin-top: 24px;            
+            display: flex;
+            justify-content: space-between;	
+            flex-wrap: nowrap;
+            .left {                
+                width: 500px;                                
+                flex-grow: 1;                
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 340px;
+                }
+            }
+            .right {                
+                &.hide {
+                    width: 0;                    
+                    height: 0;
+                    margin-left: 0;                    
+                    overflow: hidden;
+                    -webkit-transition: width 0.35s;
+                    -moz-transition: width 0.35s;
+                    transition: width 0.35s;                    
+                    .title, .txt {                                                
+                        color: #fff;
+                    }                    
+                }
+                width: calc(100% - 540px);
+                margin-left: 40px;
+                -webkit-transition: width 0.35s;
+                -moz-transition: width 0.35s;
+                transition: width 0.35s;                    
+                .title {
+                    font-size: 14px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.35px;                    
+                    color: #374b9d;
+                    padding-top: 24px;
+                    padding-bottom: 13px;
+                    border-top: 1px solid #e8eaf1;    
+                    &:first-child {
+                        padding-top: 6px;
+                        border-top: none;                        
+                    }                                    
+                }
+                .txt {
+                    font-size: 13px;                    
+                    line-height: 1.77;
+                    letter-spacing: -0.33px;                    
+                    color: #656d7e;
+                    padding-bottom: 17px;                                        
+                }
+            }
+            &::after {
+                content: "";
+                display: table;
+                table-layout: fixed;
+                clear: both;
+            }
+        }
+    }
+}
+// MRI 차트
+#container .M_right .contents .mri_chartbox {    
+    margin-top: -8px;    
+    .top_spider {
+        padding: 0;
+        background-color: #f7f9fd;
+        display: flex;
+        justify-content: space-between;	
+        flex-wrap: nowrap;
+        .left {
+            width: 380px;                                
+            flex-grow: 1;                
+            .containercharm1 {
+                width: 100%;
+                height: 290px;
+                padding: 30px 30px;                
+                box-sizing: border-box;
+                .highcharts-axis-labels {
+                    text {
+                        @include font-family;
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+        .right {
+            background-color: #fff;
+            width: calc(100% - 380px);            
+            margin: 30px 30px;            
+        }
+
+    }
+    .mid_column {        
+        .report_title {
+            padding: 10.5px 20px;
+            background-color: #374b9d;            
+            font-size: 18px;
+            font-weight: $f_sizeB;
+            letter-spacing: -0.45px;            
+            color: #fff;
+        }
+        .con {
+            display: flex;
+            justify-content: space-between;	
+            flex-wrap: nowrap;
+            padding: 40px 30px;
+            border-bottom: 1px solid #e7eaf2;            
+            &:last-child {
+                border-bottom: none;
+            }
+            .left {
+                width: 380px;                                
+                flex-grow: 1;                            
+                .alloca_star {                    
+                    .alloca_box {
+                        display: inline-block;
+                        vertical-align: bottom;
+                        margin-left: 19px;
+                        padding-left: 19px;
+                        border-left: 1px solid #e7eaf2;     
+                        
+                        .small_star {
+                            .title {
+                                display: inline-block;
+                                padding-bottom: 8px;                                
+                                font-size: 14px;    
+                                font-weight: $f_sizeN;                            
+                                letter-spacing: -0.7px;
+                                color: #656d7e;
+                            }
+                            .star_area {
+                                .starRev {
+                                    .starR {
+                                        width: 12px;
+                                        height: 12px;
+                                        
+                                    }
+                                }
+
+                            }
+                        }
+
+                        &:first-child {
+                            border-left: none;
+                            margin-left: 0;
+                            padding-left: 0;
+                            .title {
+                                padding-bottom: 7px;                                
+                                font-size: 15px;
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.75px;                                
+                                color: #333;                                                                    
+                            }
+                            .star_area {
+                                .starRev {
+                                    .starR {
+                                        width: 20px;
+                                        height: 20px;                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .txt {
+                        margin-top: 44px;
+                        font-size: 13px;            
+                        line-height: 1.54;            
+                        color: #656d7e;                        
+                    }
+                }
+            }
+            .right {
+                background-color: #fff;
+                width: calc(100% - 380px);                            
+                margin-left: 30px;
+                .containerfinancials1 {
+                    height: 240px;                    
+                    rect.highcharts-color-0,
+                    rect.highcharts-color-1,
+                    rect.highcharts-color-2 {
+                        // width: 16px;                        
+                    }
+
+                }
+            }            
+        }
+    }
+}
+// 턴어라운드
+#container .M_right .contents .turn_box {
+    .thead2_table {                        
+        thead {        
+            tr:first-child {
+                th, td {
+                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                }                    
+            }
+            tr:nth-child(2) {
+                th, td {
+                    background: #fff url('../img/gray_tdline.gif') repeat-x left top;        
+                }                    
+            }
+
+            th {
+                &.fix {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    
+        &.fix_table {        
+            thead {
+                .fix {                                           
+                    &::before {                    
+                        content: "";       
+                        position: absolute;
+                        right: -12px;
+                        top: 1px;
+                        bottom: 1px;
+                        width: 12px;                                
+                        height: 58px;
+                        background:url('../img/fix_shadow.svg') repeat-y 0 0;                        
+                    }
+                } 
+            }
+        }    
+    }
+    
+}

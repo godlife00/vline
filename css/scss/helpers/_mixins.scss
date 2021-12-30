@@ -1,0 +1,110 @@
+// 변수들
+//color
+$colorbg: #f7f7f8;
+$collonk: #527bea;
+$colup: #d30000;
+$coldown: #26ABFF;
+//primary
+$colpmr: #374b9d;
+$colpmr10: #f7f9fd;
+$colpmr100: #edf3ff;
+$colpmr500: #93add3;
+$colpmr800: #3655d6;
+//txt
+$coltxt: #222;
+$col200: #bdc8d8;
+$col300: #b1b9cb;
+$col500: #656d7e;
+$f_sizeS:300;
+$f_sizeN:400;
+$f_sizeB:700;
+
+// Set a default value
+$default-padding: 0px;
+$default-margin: 0px;
+$default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin font-family {
+    font-family: $default-fontfamily;
+    line-height:normal;        
+}
+@mixin pad($n: $default-padding) {
+    padding: $n;
+}
+@mixin mar($n: $default-margin) {
+    padding: $n;
+}
+@mixin width_minmax {
+    margin: 0 auto;  
+    box-sizing: border-box;
+    min-width: 1000px;
+    max-width: 1138px;
+    padding: 0 15px;
+}
+@mixin white-space {
+    box-sizing: border-box;
+    display: inline-block;
+    // width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+}
+
+// 버튼 css
+@mixin one_btn {          
+    position: relative;        
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 13px 0;            
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: $colpmr;
+    font-size: 18px;
+    font-weight: $f_sizeB;                
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: #fff;                      
+
+    &::before {
+        content: '';
+        width: 11px;
+        height: 11px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        display: inline-block;                    
+        transform: rotate(45deg);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    b {
+        color: #ff8d5a;                    
+        font-weight: $f_sizeB;                
+    }    
+}
+@mixin two_btn {          
+    display: flex;
+    justify-content: space-between;  
+
+    .btn {    
+        flex: 1;
+        padding: 13px 0;            
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $colpmr;
+        font-size: 18px;
+        font-weight: $f_sizeB;                
+        letter-spacing: -0.9px;
+        text-align: center;
+        color: #fff;          
+        &:first-child {
+            border: solid 1px #3b4b98;
+            background-color: #fff;
+            color: $colpmr;            
+        }             
+        &:last-child {
+            margin-left: 10px;
+        }             
+    }
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>밸류라인 : 현명한 투자자를 위한 최고의 선택</title>
+    <meta name="robots" content="밸류라인 : 현명한 투자자를 위한 최고의 선택">
+    <meta name="description" content="밸류라인 content">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2A3979">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="밸류라인 content" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="밸류라인 content">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+    <!-- jquery 최신버전 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/vline_chartjs.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/vline.css" />
+    <!-- js -->
+    <script src="../js/header.js"></script>
+    <script src="../js/vline.js"></script>
+</head>
+
+<body class="valueline">
+    <div id="wrap">
+
+        <!-- 헤더 -->
+        <div id="header" class="main_hdr"></div>
+
+        <div id="container">
+            <!-- 좌측메뉴 -->
+            <div class="M_left">
+                <div class="sub_nav">
+                    <ul class="depth_1">
+                        <li><span class="title"><a href="blue_stocks.html">우량주</a></span></li>
+                        <li><span class="title"><a href="ex_turnaround.html">턴 어라운드</a></span></li>
+                        <li><span class="title"><a href="result.html">실적분석</a></span></li>
+                        <li class=""><span class="title"><a href="shopping.html">마이쇼핑</a></span></li>
+                        <li class="active"><span class="title open"><a href="pattern.html">BIC 차트 패턴</a></span>
+                            <ul class="depth_2">
+                                <li class="active"><a href="pattern.html">이익증가 미반영</a></li>
+                                <li><a href="pattern_gra.html">그레이엄 만족형</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //sub_nav -->
+
+                <div class="service_box">
+                    <ul>
+                        <li class="uses"><a href="">서비스활용법</a></li>
+                        <li class="update"><a href="">업데이트 소식</a></li>
+                        <li class="question"><a href="">카카오톡 문의</a></li>
+                    </ul>
+                </div>
+                <!-- //service_box -->
+
+            </div>
+
+            <!-- 우측 컨텐츠_메인 -->
+            <div class="M_right">
+                <!-- 페이지 위치 -->
+                <div class="path_area">
+                    <ul>
+                        <li>종목발굴</li>
+                        <li>BIC 차트 패턴</li>
+                        <li>이익증가 미반영</li>
+                    </ul>
+                </div>
+
+                <div class="group_nav">
+                    <ul>
+                        <li class="active"><a href="#">이익증가 미반영</a></li>
+                    </ul>
+                </div>
+                <div class="sum_box small">
+                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
+                    <span class="more">자세히</span>
+                    <p>자체 개발한 '주식MRI(Midas Real-time Investigator)분석 시스템'을 통해 기업에 대한 투자 매력도를 한 눈에 확인할 수 있습니다. 특히 사업독점력을
+                        통해 현재 수익을 얼마나 유지할 수 있을지, 밸류에이션을 통해선 현재 주가가 매수하기에 매력적인 수준인지 여부를 바로 확인할 수 있습니다.</p>
+                </div>
+                <!-- //sum_box -->
+
+                <div class="contents_header">
+                    <div class="data_filter">
+                        <div class="data">
+                            <ul>
+                                <li>코스피</li>
+                                <li>업종 전체</li>
+                                <li>시가총액 전체</li>
+                            </ul>
+                            <span class="set"><img src="../img/settings.png" alt="설정"></span>
+                        </div>
+
+                        <div class="table_search">
+                            <form action="" class="form_box">
+                                <fieldset>
+                                    <input type="text" placeholder="리스트 내 종목 검색" class="searchInput">
+                                    <input type="image" src="../img/search_btn_blue.svg" alt="검색" class="searchBtn">
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- //table_search -->
+
+                        <div class="set_box" style="display: none;">
+                            <form action="">
+                                <div class="set_filter">
+                                    <div class="top">
+                                        <p class="title">보기</p>
+                                        <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+                                    </div>
+                                    <!-- //top -->
+                                    <div class="mid">
+                                        <div class="">
+                                            <span class="title">시장</span>
+                                            <label>
+                                                <input name="line_01" type="radio" checked><span>전체</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_01" type="radio"><span>코스피</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_01" type="radio"><span>코스닥</span>
+                                            </label>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">업종</span>
+                                            <div class="selectBoxList">
+                                                <select style="width: 89px;">
+                                                    <option selected>전체</option>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                            &nbsp;~&nbsp;
+                                            <div class="selectBoxList">
+                                                <select style="width: 89px;">
+                                                    <option selected>전체</option>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">시가총액</span>
+                                            <div class="selectBoxList">
+                                                <select style="width: 170px;">
+                                                    <option selected>전체</option>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">순이익(연환산)</span>
+                                            <label>
+                                                <input name="line_04" type="radio" checked=""><span>전체</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_04" type="radio"><span>흑자기업</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_04" type="radio"><span>적자기업</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- //mid -->
+                                    <div class="btm">
+                                        <input type="submit" value="확인" name="" id="" class="btn_submit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- //set_box -->
+                    </div>
+                    <!-- //data_filter -->
+
+                    <div class="table_filter">
+                        <input type="button" value="엑셀다운로드" class="save_excel">
+                    </div>
+                    <!-- //table_filter -->
+
+                    <div class="table_filter">
+                        <div class="term">
+                            <span class="active" rel="tab1">차트</span>
+                            <span rel="tab2">데이터</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contents sub_con">
+                    <div class="excavation_area pattern">
+
+                        <div id="tab1" class="tab_content">
+                            <!-- 테스트 -->
+                            <div id="test1" class="containerfinance1" style="display: block; height: 300px;"></div>
+                            <style>
+                                #test1 rect.highcharts-color-0 {
+                                    fill: #d30000;
+                                    background: #d30000;
+                                }
+                                #test1 rect.highcharts-color-1 {
+                                    fill: #0052ff;
+                                    background: #0052ff;
+                                }
+                            </style>
+
+
+                            <!-- <div id="containersummary1" class="containerfinance1"></div>
+                            <div id="containersummary2" class="containerfinance1"></div>
+                            <div id="containersummary3" class="containerfinance1"></div>
+                            <div id="containersummary4" class="containerfinance1"></div>
+                            <div id="containersummary5" class="containerfinance1"></div> -->
+                        </div>
+                        <div id="tab2" class="tab_content">
+                            <span class="table_update">Update 2021. 7&#47;16</span>
+                            <table cellspacing="0" border="0" class="table thead2_table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2" class=""><strong>순위</strong></th>
+                                        <td rowspan="2" class=""><strong>종목</strong></td>
+                                        <td class=""><strong>합산순위</strong></td>
+                                        <td class=""><strong>괴리율</strong>(%)</td>
+                                        <td class=""><strong>괴리율순위</strong></td>
+                                        <td class=""><strong>PER</strong>(배)</td>
+                                        <td class=""><strong>PER순위</strong></td>
+                                        <td class=""><strong>ROE</strong>(%)</td>
+                                        <td class=""><strong>ROE순위</strong></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="">1</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">2</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">3</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">4</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">5</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">6</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">7</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">8</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">9</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">10</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                        <td>6874억</td>
+                                        <td>5.7%</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paginate">
+                            <a href="#" class="cb_pre">이전</a>
+                            <strong>1</strong>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#" class="cb_next">다음</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="w_box">
+                <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+            </div>
+            <!-- //w_box -->
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+<!-- 도움말 팝업 -->
+<div class="layer_pop">
+    <div class="pop_top">
+        <p class="title">도움말</p>
+        <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+    </div>
+    <!-- //top -->
+    <div class="pop_mid">
+        <ul>
+            <li>- PER(Price Earning Ratio, 주가수익배수) = 시가총액 / 순이익</li>
+            <li>- PBR(Price Book value Ratio, 주가순자산배수) = 시가총액 / 자본총계</li>
+            <li>- PSR(Price Sales Ratio, 주가매출액배수) = 시가총액 / 매출액</li>
+            <li>- PCR(Price Cash flow Ratio, 주가영업현금배수) = 시가총액 / 영업현금</li>
+            <li>- ROE(Return On Equity, 자기자본이익률) = 순이익 / 자본총계</li>
+            <li>- ROA(Return On Assets, 총자산이익률) = 순이익 / 자산총계</li>
+            <li>- DY(Dividend Yield ratio, 배당수익률) = (현금배당+주식배당) / 시가총액</li>
+            <li>- 영업이익 = 개별 재무제표 최근 4분기 합산 영업이익</li>
+            <li>- 순이익 = 연결 재무제표 최근 4분기 합산 지배지분 순이익</li>
+        </ul>
+        <p class="txt_guide">검색된 종목은 종목추천이 아닌 투자 참고용으로만 활용하시기 바랍니다 </p>
+    </div>
+    <!-- //mid -->
+</div>
+<!-- //layer_pop -->
+
+</html>
