@@ -4778,11 +4778,11 @@ input[type='radio']:checked:before {
   margin-top: 12px;
   padding: 22px 0 22px 22px;
   border-radius: 10px;
+  background-size: initial;
 }
 
 .top_invest .stand_standard.face_buffett {
   background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
-  background-size: initial;
 }
 
 .top_invest .stand_standard.face_graham {
@@ -5102,11 +5102,11 @@ input[type='radio']:checked:before {
   margin-top: 12px;
   padding: 22px 0 22px 22px;
   border-radius: 10px;
+  background-size: initial;
 }
 
 .top_invest .stand_standard.face_buffett {
   background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
-  background-size: initial;
 }
 
 .top_invest .stand_standard.face_graham {
@@ -5940,33 +5940,6 @@ input[type='radio']:checked:before {
   color: #3655d6;
 }
 
-.modal.terms_form .pop_con .member_sum {
-  margin-top: 15px;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: -0.33px;
-  color: #222;
-  text-align: center;
-}
-
-.modal.terms_form .pop_con .agree_area .member_txt {
-  margin-top: 45px;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: -0.33px;
-  color: #656d7e;
-  text-align: center;
-}
-
-.modal.terms_form .pop_con .agree_area .member_txt b {
-  color: #222;
-  font-weight: normal;
-}
-
-.modal.terms_form .pop_con .agree_area .member_txt + .txt {
-  margin-top: 7px;
-}
-
 .modal.terms_form .pop_con .agree_area .txt {
   margin-top: 53px;
   margin-bottom: 15px;
@@ -6073,36 +6046,18 @@ input[type='radio']:checked:before {
 }
 
 .modal.sign_complete .pop_con .loign_com .login_title {
-  padding: 35px 33px;
-  background: #fff url("../img/bg_premium_top.svg") no-repeat 90% 70%;
+  background: #fff url("../img/bg_premium_top.svg") no-repeat 90% bottom;
+  padding: 55px 33px;
   text-align: left;
-}
-
-.modal.sign_complete .pop_con .loign_com .login_title .title {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -1.5px;
   color: #222;
 }
 
-.modal.sign_complete .pop_con .loign_com .login_title .title strong {
+.modal.sign_complete .pop_con .loign_com .login_title strong {
   color: #3655d6;
   font-weight: 700;
-}
-
-.modal.sign_complete .pop_con .loign_com .login_title .txt {
-  width: 75%;
-  margin-top: 30px;
-  font-size: 16px;
-  color: #222;
-  letter-spacing: -0.33px;
-}
-
-.modal.sign_complete .pop_con .loign_com .login_title .txt_sum {
-  width: 75%;
-  font-size: 13px;
-  letter-spacing: -0.33px;
-  color: #656d7e;
 }
 
 .modal.sign_complete .pop_con .loign_com .prm_guide {

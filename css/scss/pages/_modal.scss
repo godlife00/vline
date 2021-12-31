@@ -179,30 +179,7 @@
                     color: #3655d6;
                 }
             }
-            .member_sum {
-                margin-top: 15px;
-                font-size: 13px;
-                font-weight: normal;
-                letter-spacing: -0.33px;
-                color: #222;
-                text-align: center;
-            }
             .agree_area {
-                .member_txt {
-                    margin-top: 45px;                                        
-                    font-size: 13px;
-                    font-weight: normal;                    
-                    letter-spacing: -0.33px;                    
-                    color: #656d7e;
-                    text-align: center;                    
-                    b {
-                        color: #222;
-                        font-weight: normal;
-                    }
-                }
-                .member_txt + .txt {
-                    margin-top: 7px;                                        
-                }                
                 .txt {
                     margin-top: 53px;
                     margin-bottom: 15px;
@@ -283,37 +260,19 @@
     &.sign_complete {
         .pop_con {
            .loign_com {
-               .login_title {                  
-                    padding: 35px 33px;
-                    background: #fff url('../img/bg_premium_top.svg') no-repeat 90% 70%;
+               .login_title {                    
+                    background: #fff url('../img/bg_premium_top.svg') no-repeat 90% bottom;
+                    padding: 55px 33px;
                     text-align: left;
-
-                    .title {         
-                        font-size: 30px;
+                    font-size: 30px;
+                    font-weight: $f_sizeB;                                        
+                    letter-spacing: -1.5px;                    
+                    color: #222;
+                    strong {
+                        color: #3655d6;
                         font-weight: $f_sizeB;                                        
-                        letter-spacing: -1.5px;                    
-                        color: #222;
-                            strong {
-                            color: #3655d6;
-                            font-weight: $f_sizeB;                                        
-                        }
                     }
-                    .txt {
-                        width: 75%;
-                        margin-top: 30px;
-                        font-size: 16px;                        
-                        color: #222;
-                        letter-spacing: -0.33px;
-                    }
-                    .txt_sum {
-                        width: 75%;
-                        font-size: 13px;                        
-                        letter-spacing: -0.33px;
-                        color: #656d7e;
-                    }  
                 }
-
-                
 
                 .prm_guide {
                     background-color: #f4f6fa;                   

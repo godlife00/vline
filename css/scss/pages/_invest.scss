@@ -19,10 +19,10 @@
         justify-content: space-between;	
         margin-top: 12px;
         padding: 22px 0 22px 22px;
-        border-radius: 10px;                            
+        border-radius: 10px;                    
+        background-size: initial;
         &.face_buffett {
             background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
-            background-size: initial;
         }
         &.face_graham {
             background:#fff url('../img/face_graham.svg') no-repeat left bottom;
