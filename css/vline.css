@@ -852,9 +852,10 @@ input[type='radio']:checked:before {
   height: 17px;
 }
 
-#header .bgWrap .title .h1_logo img {
+#header .bgWrap .title .h1_logo a, #header .bgWrap .title .h1_logo img {
   display: inline-block;
   width: 100%;
+  height: 100%;
 }
 
 #header .bgWrap .gnb {
@@ -2406,6 +2407,14 @@ input[type='radio']:checked:before {
   color: #0052ff;
 }
 
+.valueline #wrap #container .indices_area .table_box .table_unitdate {
+  font-size: 12px;
+  line-height: 2.5;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #b1b9cb;
+}
+
 .valueline #wrap #container .indices_area .banner_top_right {
   width: 254px;
   height: 116px;
@@ -2419,7 +2428,7 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing {
-  margin-top: 45px;
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2542,17 +2551,17 @@ input[type='radio']:checked:before {
   padding: 0 13px 15px;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table {
+.valueline #wrap #container .new_listing .newListing_table {
   position: relative;
   width: 100%;
   margin-top: 15px;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table:last-child {
+.valueline #wrap #container .new_listing .newListing_table:last-child {
   margin-top: 40px;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table:last-child::before {
+.valueline #wrap #container .new_listing .newListing_table:last-child::before {
   content: '';
   position: absolute;
   left: 0;
@@ -2563,16 +2572,16 @@ input[type='radio']:checked:before {
   background-color: #e7eaf2;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table:last-child thead {
+.valueline #wrap #container .new_listing .newListing_table:last-child thead {
   visibility: collapse;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table:last-child thead th, .valueline #wrap #container .new_listing .hotListing_table:last-child thead td {
+.valueline #wrap #container .new_listing .newListing_table:last-child thead th, .valueline #wrap #container .new_listing .newListing_table:last-child thead td {
   padding: 0;
   height: 0;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table th, .valueline #wrap #container .new_listing .hotListing_table td {
+.valueline #wrap #container .new_listing .newListing_table th, .valueline #wrap #container .new_listing .newListing_table td {
   text-align: left;
   vertical-align: middle;
   font-size: 16px;
@@ -2580,35 +2589,35 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table th.txt_c, .valueline #wrap #container .new_listing .hotListing_table td.txt_c {
+.valueline #wrap #container .new_listing .newListing_table th.txt_c, .valueline #wrap #container .new_listing .newListing_table td.txt_c {
   text-align: center;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table thead th {
+.valueline #wrap #container .new_listing .newListing_table thead th {
   padding-bottom: 3px;
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #b1b9cb;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table thead th.yield {
+.valueline #wrap #container .new_listing .newListing_table thead th.yield {
   text-align: center;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table thead th.num {
+.valueline #wrap #container .new_listing .newListing_table thead th.num {
   text-align: center;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td {
+.valueline #wrap #container .new_listing .newListing_table tbody td {
   padding: 5px 0;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.name {
+.valueline #wrap #container .new_listing .newListing_table tbody td.name {
   width: 190px;
   max-width: 190px;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.name a {
+.valueline #wrap #container .new_listing .newListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -2626,69 +2635,21 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.up .price, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .newListing_table tbody td.up .price, .valueline #wrap #container .new_listing .newListing_table tbody td.down .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.up .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .newListing_table tbody td.up .per, .valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
   padding-left: 2px;
   font-size: 10px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
   color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box {
-  position: relative;
-  padding-left: 12px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention {
-  background-color: #bfc8d6;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation-name: beat;
-  animation-name: beat;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:after {
-  background-color: #bfc8d6;
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  top: 0px;
-  left: 3px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:before {
-  background-color: #bfc8d6;
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  top: -3px;
-  left: 0px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on, .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on:after, .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on:before {
-  background-color: #ff6f6f;
 }
 
 .valueline #wrap #container .new_listing .alloListing_table {
@@ -2792,17 +2753,17 @@ input[type='radio']:checked:before {
   color: #0052ff;
 }
 
-.valueline #wrap #container .new_listing .newListing_table {
+.valueline #wrap #container .new_listing .hotListing_table {
   position: relative;
   width: 100%;
   margin-top: 15px;
 }
 
-.valueline #wrap #container .new_listing .newListing_table:last-child {
+.valueline #wrap #container .new_listing .hotListing_table:last-child {
   margin-top: 40px;
 }
 
-.valueline #wrap #container .new_listing .newListing_table:last-child::before {
+.valueline #wrap #container .new_listing .hotListing_table:last-child::before {
   content: '';
   position: absolute;
   left: 0;
@@ -2813,16 +2774,16 @@ input[type='radio']:checked:before {
   background-color: #e7eaf2;
 }
 
-.valueline #wrap #container .new_listing .newListing_table:last-child thead {
+.valueline #wrap #container .new_listing .hotListing_table:last-child thead {
   visibility: collapse;
 }
 
-.valueline #wrap #container .new_listing .newListing_table:last-child thead th, .valueline #wrap #container .new_listing .newListing_table:last-child thead td {
+.valueline #wrap #container .new_listing .hotListing_table:last-child thead th, .valueline #wrap #container .new_listing .hotListing_table:last-child thead td {
   padding: 0;
   height: 0;
 }
 
-.valueline #wrap #container .new_listing .newListing_table th, .valueline #wrap #container .new_listing .newListing_table td {
+.valueline #wrap #container .new_listing .hotListing_table th, .valueline #wrap #container .new_listing .hotListing_table td {
   text-align: left;
   vertical-align: middle;
   font-size: 16px;
@@ -2830,35 +2791,35 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .newListing_table th.txt_c, .valueline #wrap #container .new_listing .newListing_table td.txt_c {
+.valueline #wrap #container .new_listing .hotListing_table th.txt_c, .valueline #wrap #container .new_listing .hotListing_table td.txt_c {
   text-align: center;
 }
 
-.valueline #wrap #container .new_listing .newListing_table thead th {
+.valueline #wrap #container .new_listing .hotListing_table thead th {
   padding-bottom: 3px;
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #b1b9cb;
 }
 
-.valueline #wrap #container .new_listing .newListing_table thead th.yield {
+.valueline #wrap #container .new_listing .hotListing_table thead th.yield {
   text-align: center;
 }
 
-.valueline #wrap #container .new_listing .newListing_table thead th.num {
+.valueline #wrap #container .new_listing .hotListing_table thead th.num {
   text-align: center;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td {
+.valueline #wrap #container .new_listing .hotListing_table tbody td {
   padding: 5px 0;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.name {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.name {
   width: 190px;
   max-width: 190px;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.name a {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
@@ -2876,21 +2837,73 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.up .price, .valueline #wrap #container .new_listing .newListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.up .price, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.up .per, .valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.up .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
   padding-left: 2px;
   font-size: 10px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table .attention_box {
+  position: relative;
+  padding-left: 14px;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention {
+  background-color: #bfc8d6;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation-name: beat;
+  animation-name: beat;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:after {
+  background-color: #bfc8d6;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0px;
+  left: 4px;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:before {
+  background-color: #bfc8d6;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -4px;
+  left: 0px;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on, .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on:after, .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on:before {
+  background-color: #ff6f6f;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table td.txt_L {
+  text-align: left;
 }
 
 .valueline #wrap #container .new_listing .turnListing_table {
@@ -3009,6 +3022,21 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .turnListing_table:last-child thead th, .valueline #wrap #container .new_listing .turnListing_table:last-child thead td {
   padding: 0;
   height: 0;
+}
+
+.valueline #wrap #container .new_listing .new_tabs tbody td {
+  padding: 0 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
+}
+
+.valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(1) {
+  padding: 5px 0;
+}
+
+.valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(2) {
+  padding-right: 30px;
 }
 
 .valueline #wrap #container .new_listing .mriListing_table {
@@ -3302,10 +3330,10 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_update {
   position: absolute;
   right: 0;
-  top: 13px;
-  display: block;
-  font-size: 10px;
-  letter-spacing: -0.25px;
+  top: 10px;
+  font-size: 12px;
+  line-height: 2.5;
+  letter-spacing: -0.3px;
   text-align: right;
   color: #b1b9cb;
 }
@@ -3400,12 +3428,27 @@ input[type='radio']:checked:before {
   border-radius: 90px;
 }
 
+.valueline #wrap #container .btm_layBox .left .market_box {
+  position: relative;
+}
+
 .valueline #wrap #container .btm_layBox .left .market_box .title {
   display: inline-block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #222;
+}
+
+.valueline #wrap #container .btm_layBox .left .market_box .table_update {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  font-size: 12px;
+  line-height: 2.5;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #b1b9cb;
 }
 
 .valueline #wrap #container .btm_layBox .left .market_box .chart_stand {
@@ -3684,6 +3727,7 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .resultdata_area {
+  background-color: red;
   margin-top: 25px;
   margin-bottom: 65px;
   background-color: #fff;
@@ -4782,24 +4826,28 @@ input[type='radio']:checked:before {
 }
 
 .top_invest .stand_standard.face_buffett {
-  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
-  background-size: initial;
+  background: #fff url("../img/face_buffett.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_graham {
-  background: #fff url("../img/face_graham.svg") no-repeat left bottom;
+  background: #fff url("../img/face_graham.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_templeton {
-  background: #fff url("../img/face_templeton.svg") no-repeat left bottom;
+  background: #fff url("../img/face_templeton.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_lynch {
-  background: #fff url("../img/face_lynch.svg") no-repeat left bottom;
+  background: #fff url("../img/face_lynch.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_greenblatt {
-  background: #fff url("../img/face_greenblatt.svg") no-repeat left bottom;
+  background: #fff url("../img/face_greenblatt.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard .left {
@@ -5106,24 +5154,28 @@ input[type='radio']:checked:before {
 }
 
 .top_invest .stand_standard.face_buffett {
-  background: #fff url("../img/face_buffett.svg") no-repeat left bottom;
-  background-size: initial;
+  background: #fff url("../img/face_buffett.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_graham {
-  background: #fff url("../img/face_graham.svg") no-repeat left bottom;
+  background: #fff url("../img/face_graham.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_templeton {
-  background: #fff url("../img/face_templeton.svg") no-repeat left bottom;
+  background: #fff url("../img/face_templeton.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_lynch {
-  background: #fff url("../img/face_lynch.svg") no-repeat left bottom;
+  background: #fff url("../img/face_lynch.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_greenblatt {
-  background: #fff url("../img/face_greenblatt.svg") no-repeat left bottom;
+  background: #fff url("../img/face_greenblatt.png") no-repeat left bottom;
+  background-size: 102px auto;
 }
 
 .top_invest .stand_standard .left {

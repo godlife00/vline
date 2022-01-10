@@ -21,20 +21,26 @@
         padding: 22px 0 22px 22px;
         border-radius: 10px;                            
         &.face_buffett {
-            background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
-            background-size: initial;
+            // background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
+            // background-size: initial;
+            background:#fff url('../img/face_buffett.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
-        &.face_graham {
-            background:#fff url('../img/face_graham.svg') no-repeat left bottom;
+        &.face_graham {            
+            background:#fff url('../img/face_graham.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
         &.face_templeton {
-            background:#fff url('../img/face_templeton.svg') no-repeat left bottom;
+            background:#fff url('../img/face_templeton.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
         &.face_lynch {
-            background:#fff url('../img/face_lynch.svg') no-repeat left bottom;
+            background:#fff url('../img/face_lynch.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
         &.face_greenblatt {
-            background:#fff url('../img/face_greenblatt.svg') no-repeat left bottom;
+            background:#fff url('../img/face_greenblatt.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
 
         .left {                

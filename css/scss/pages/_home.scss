@@ -31,10 +31,10 @@
             vertical-align: middle;
             font-size: 16px;                
             letter-spacing: -0.4px;                
-            color: #222;               
+            color: #222;                                       
             &.txt_c {
                 text-align: center;
-            }   
+            }               
         }
         thead {
             th {
@@ -296,6 +296,13 @@
                 }
     
             }
+            .table_unitdate {
+                font-size: 12px;                
+                line-height: 2.5;
+                letter-spacing: -0.3px;
+                text-align: right;
+                color: #b1b9cb;                
+            }
         }
         
         .banner_top_right {                                    
@@ -395,28 +402,37 @@
                 }
             }
         }
-
                
-        margin-top: 45px;
+        margin-top: 15px;
         display: flex;        
-        justify-content: space-between;        
-
+        justify-content: space-between;     
+        
         // 신규상장
+        .newListing_table {
+            @include newListingTable_style;                                                                      
+        }
+
+        // 배당배력
+        .alloListing_table {
+            @include newListingTable_style;                                 
+        }
+
+        // 인기종목
         .hotListing_table {
             @include newListingTable_style;                        
 
             .attention_box {
                 position: relative;
-                padding-left: 12px;                
+                padding-left: 14px;                
                 .attention {
                     // 하트 크기
                     @mixin whpx {
-                        width: 6px;
-                        height: 6px;                        
+                        width: 8px;
+                        height: 8px;                        
                     }
                     background-color: #bfc8d6;
                     position: absolute;
-                    top: 10px;
+                    top: 8px;
                     left: 0;
                     @include whpx;                    
                     -webkit-transform: rotate(-45deg);
@@ -435,7 +451,7 @@
                         position: absolute;
                         @include whpx;                    
                         top: 0px;
-                        left: 3px;
+                        left: 4px;
                     }
 
                     &:before {
@@ -444,7 +460,7 @@
                         border-radius: 50%;
                         position: absolute;
                         @include whpx;                    
-                        top: -3px;
+                        top: -4px;
                         left: 0px;
                     }
 
@@ -455,15 +471,11 @@
                     }
                 }
             }
+            td.txt_L {
+                text-align: left;
+            }
         }
-        // 배당배력
-        .alloListing_table {
-            @include newListingTable_style;                                                     
-        }
-        // 주당배당금
-        .newListing_table {
-            @include newListingTable_style;                        
-        }
+        
         // 턴어라운드
         .turnListing_table {
             @include newListingTable_style;                        
@@ -480,6 +492,22 @@
                     }                    
                 }   
             }    
+        }
+
+        .new_tabs {            
+            tbody {
+                td {                    
+                    padding: 0 12px;
+                    box-sizing: border-box;
+                    text-align: right;                
+                    &:nth-child(1) {
+                        padding: 5px 0;
+                    }
+                    &:nth-child(2) {
+                        padding-right: 30px;
+                    }
+                }            
+            }  
         }
 
         // MRI
@@ -547,7 +575,7 @@
     }
 
     // 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트
-    .btm_layBox {
+    .btm_layBox {        
         clear: both;
         position: relative;
         margin-top: 55px;
@@ -578,12 +606,12 @@
                     .table_update {
                         position: absolute;
                         right: 0;
-                        top: 13px;
-                        display: block;            
-                        font-size: 10px;
-                        letter-spacing: -0.25px;
+                        top: 10px;
+                        font-size: 12px;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
                         text-align: right;
-                        color: #b1b9cb;            
+                        color: #b1b9cb;              
                     } 
                     .table_div {                        
                         position: relative;
@@ -670,13 +698,24 @@
             // 마켓차트
             .market_box {                
                 // margin-top: 55px;
+                position: relative;
                 .title {
                     display: inline-block;
                     font-size: 20px;
                     font-weight: $f_sizeB;
                     letter-spacing: -0.5px;                    
                     color: #222;
-                }                   
+                }  
+                .table_update {
+                    position: absolute;
+                    right: 0;
+                    top: 13px;
+                    font-size: 12px;
+                    line-height: 2.5;
+                    letter-spacing: -0.3px;
+                    text-align: right;
+                    color: #b1b9cb;        
+                }                 
 
                 .chart_stand {
                     display: inline-block;                    
@@ -934,6 +973,7 @@
 
     // 메인 시즌
     .resultdata_area {
+        background-color: red;
         margin-top: 25px;
         margin-bottom: 65px;
         background-color: #fff;

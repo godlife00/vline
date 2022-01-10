@@ -19,12 +19,6 @@ $(document).ready(function () {
 
             colors: ["#d30000", "#0052ff"],
             title: {
-                style: {
-                    'font-weight': "bold",
-                    color: '#E0E0E3',
-                    textTransform: 'uppercase',
-                    fontSize: '0',
-                },
                 text: null
             },
 
@@ -126,108 +120,66 @@ $(document).ready(function () {
     //메인 마켓차트
     if ($('#main_treemap01').length) {
 
-        Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-mortality.json', function (data) {
-
-        var points = [],
-            regionP,
-            regionVal,
-            regionI = 0,
-            countryP,
-            countryI,
-            causeP,
-            causeI,
-            region,
-            country,
-            cause,
-            causeName = {
-                'Communicable & other Group I': 'Communicable diseases',
-                'Noncommunicable diseases': 'Non-communicable diseases',
-                Injuries: 'Injuries'
-            };
-
-        for (region in data) {
-            if (Object.hasOwnProperty.call(data, region)) {
-                regionVal = 0;
-                regionP = {
-                    id: 'id_' + regionI,
-                    name: region,
-                    color: Highcharts.getOptions().colors[regionI]
-                };
-                countryI = 0;
-                for (country in data[region]) {
-                    if (Object.hasOwnProperty.call(data[region], country)) {
-                        countryP = {
-                            id: regionP.id + '_' + countryI,
-                            name: country,
-                            parent: regionP.id
-                        };
-                        points.push(countryP);
-                        causeI = 0;
-                        for (cause in data[region][country]) {
-                            if (Object.hasOwnProperty.call(
-                                data[region][country], cause
-                            )) {
-                                causeP = {
-                                    id: countryP.id + '_' + causeI,
-                                    name: causeName[cause],
-                                    parent: countryP.id,
-                                    value: Math.round(+data[region][country][cause])
-                                };
-                                regionVal += causeP.value;
-                                points.push(causeP);
-                                causeI = causeI + 1;
-                            }
-                        }
-                        countryI = countryI + 1;
-                    }
-                }
-                regionP.value = Math.round(regionVal / countryI);
-                points.push(regionP);
-                regionI = regionI + 1;
-            }
-        }
         Highcharts.chart('main_treemap01', {
-            exporting: {
-                enabled: false
+            colorAxis: {
+                min: 1,
+                max: 3,                
+                minColor: '#C5D0E2',
+                maxColor: '#1E51F5'
             },
+
+            title: {
+                text: null
+            },
+
             credits: {
-                enabled: false
+                enabled: false,
             },
+
             legend: {
                 enabled: false,
             },
 
+            exporting: {
+                enabled: false
+            },
+            
             series: [{
                 type: 'treemap',
                 layoutAlgorithm: 'squarified',
-                allowDrillToNode: true,
-                animationLimit: 5000,
-                dataLabels: {
-                    enabled: false
-                },
-                levels: [{
-                    level: 1,
-                    dataLabels: {
-                        enabled: true
-                    },
-                    borderWidth: 3,
-                    levelIsConstant: false
+                data: [{
+                    name: '삼성전자',
+                    value: 6,
+                    colorValue: 1,
                 }, {
-                    level: 1,
-                    dataLabels: {
-                        style: {
-                            fontSize: '14px'
-                        }
-                    }
-                }],
-                data: points
-            }],            
-            title: {
-                text: null,
-            },
+                    name: 'B',
+                    value: 6,
+                    colorValue: 2
+                }, {
+                    name: 'C',
+                    value: 4,
+                    colorValue: 3
+                }, {
+                    name: 'D',
+                    value: 3,
+                    colorValue: 3
+                }, {
+                    name: 'E',
+                    value: 2,
+                    colorValue: 2
+                }, {
+                    name: 'F',
+                    value: 2,
+                    colorValue: 2
+                }, {
+                    name: 'G',
+                    value: 1,
+                    colorValue: 1
+                }]
+            }],
+            
         });
-
-    });
+        
     }
 
     //메인 스파이더 차트

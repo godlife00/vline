@@ -52,6 +52,12 @@
 </head>
 
 <body class="valueline">
+    <div style="background-color: blanchedalmond; position: fixed; left: 0; top: 150px; display: inline-block; padding: 15px 15px;">
+        <ul>
+            <li><a href="index_s.html">시즌</a></li>
+            <li><a href="index.html">비시즌</a></li>
+        </ul>
+    </div>
     <div id="wrap">
 
         <!-- 헤더 -->
@@ -412,6 +418,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <p class="table_unitdate">기준 08/31 15:20 / 단위 억</p>
                 </div>
                 <!-- 브랜드 / 이벤트 배너 영역 -->
                 <div class="banner_top_right">
@@ -428,16 +435,19 @@
                     <!-- 마켓차트 -->
                     <div class="market_box">
                         <h2 class="title">마켓차트</h2>
-                        
-                        <form action="">
-                            <label>
-                                <input name="line_01" type="radio" checked=""><span>업종</span>
-                            </label>
-                            <label>
-                                <input name="line_01" type="radio"><span>상위 100 종목</span>
-                            </label>
-                        </form>
-                        
+                        <span class="table_update">기준 08/30 / 시가총액상위</span>
+                        <div class="chart_stand">
+                            <form action="">
+                                <label>
+                                    <input name="market_radio" type="radio" checked=""><span>업종</span>
+                                </label>
+                                <label>
+                                    <input name="market_radio" type="radio"><span>상위 100 종목</span>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- //chart_stand -->
+
                         <div class="line_swbox">
                             <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
                         </div>
