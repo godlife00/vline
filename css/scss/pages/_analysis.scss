@@ -54,24 +54,21 @@
                     height: 340px;
                 }
             }
-            .right {                
+            .right {    
+                width: calc(100% - 540px);                
+                margin-left: 40px;                
+                transition: width 0.35s;                    
+
                 &.hide {
                     width: 0;                    
                     height: 0;
-                    margin-left: 0;                    
-                    overflow: hidden;
-                    -webkit-transition: width 0.35s;
-                    -moz-transition: width 0.35s;
+                    margin-left: 0;                                                            
+                    overflow: hidden;                    
                     transition: width 0.35s;                    
                     .title, .txt {                                                
-                        color: #fff;
-                    }                    
-                }
-                width: calc(100% - 540px);
-                margin-left: 40px;
-                -webkit-transition: width 0.35s;
-                -moz-transition: width 0.35s;
-                transition: width 0.35s;                    
+                        color: #fff;                        
+                    }                   
+                }                
                 .title {
                     font-size: 14px;
                     font-weight: $f_sizeB;

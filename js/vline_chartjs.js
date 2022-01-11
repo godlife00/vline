@@ -121,11 +121,18 @@ $(document).ready(function () {
     if ($('#main_treemap01').length) {
 
         Highcharts.chart('main_treemap01', {
+
+            chart: {                
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+            },
+
             colorAxis: {
                 min: 1,
                 max: 3,                
-                minColor: '#C5D0E2',
-                maxColor: '#1E51F5'
+                minColor: '#1E51F5',
+                maxColor: '#C5D0E2'
             },
 
             title: {
@@ -143,36 +150,57 @@ $(document).ready(function () {
             exporting: {
                 enabled: false
             },
+
+            tooltip: {
+                enabled: false
+            },
             
             series: [{
                 type: 'treemap',
                 layoutAlgorithm: 'squarified',
-                data: [{
-                    name: '삼성전자',
+                data: [
+                {
+                    name: '삼성전자 <br> 20.28%',
                     value: 6,
                     colorValue: 1,
                 }, {
-                    name: 'B',
-                    value: 6,
-                    colorValue: 2
+                    name: 'LG디스플레이 <br> 12.45%',
+                    value: 5,
+                    color: '#d30000'
                 }, {
-                    name: 'C',
+                    name: '삼성전자 <br> 20.28%',
+                    value: 1,
+                    colorValue: 1,
+                }, {
+                    name: 'LG디스플레이 <br> 12.45%',
+                    value: 3,
+                    color: '#d30000'
+                }, {
+                    name: '삼성전자 <br> 20.28%',
+                    value: 3,
+                    colorValue: 1,
+                }, {
+                    name: 'LG디스플레이 <br> 12.45%',
                     value: 4,
-                    colorValue: 3
+                    color: '#d30000'
                 }, {
-                    name: 'D',
+                    name: '삼성전자 <br> 20.28%C',
                     value: 3,
                     colorValue: 3
                 }, {
-                    name: 'E',
+                    name: '삼성전자 <br> 20.28%',
+                    value: 4,
+                    colorValue: 3
+                }, {
+                    name: 'LG디스플레이 <br> 12.45%',
+                    value: 3,
+                    color:'#d30000'
+                }, {
+                    name: 'LG디스플레이 <br> 12.45%',
                     value: 2,
                     colorValue: 2
                 }, {
-                    name: 'F',
-                    value: 2,
-                    colorValue: 2
-                }, {
-                    name: 'G',
+                    name: 'LG디스플레이 <br> 12.45%',
                     value: 1,
                     colorValue: 1
                 }]

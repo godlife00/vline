@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    //상단 GNB 고정                
-    
-    
-    
     //tabs
     $(".new_tabs .tab_content").hide();
     $(".new_tabs .tab_content:first").show();

@@ -1,8 +1,14 @@
 $(document).ready(function () {
 
-    // $('#header').load('/common/header.html');  // 해더
-    // $("#footers").load("/common/footer.html");  // 푸터
-    $('#header').load('../common/header.html', function () {
+    if (window.location.href.indexOf("index") > -1) {        
+        var urlRoute = './';
+        var htmlRoute = 'header_index.html';        
+    } else {
+        var urlRoute = '../';
+        var htmlRoute = 'header.html';        
+    }    
+    
+    $('#header').load(urlRoute + 'common/' + htmlRoute, function () {
 
         $(function () {
             $('.gnb ul li').removeClass('active'); //재무분석

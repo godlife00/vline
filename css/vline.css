@@ -3480,6 +3480,22 @@ input[type='radio']:checked:before {
   height: 555px;
 }
 
+.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text {
+  font-size: 14px !important;
+  color: #fff !important;
+  fill: #fff !important;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text tspan {
+  stroke: none;
+}
+
+.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text .highcharts-br {
+  background-color: red;
+}
+
 .valueline #wrap #container .btm_layBox .right {
   float: right;
   width: 254px;

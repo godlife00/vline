@@ -739,7 +739,20 @@
                     border-top: 2px solid #7389af;                    
                     margin-top: 17px;
                     .treemap_style {
-                        height: 555px;                        
+                        height: 555px;           
+                        text {                   
+                            font-size: 14px !important;                                     
+                            color: #fff !important;
+                            fill: #fff !important;
+                            font-weight: bold;
+                            text-shadow: none;
+                            tspan {                                
+                                stroke: none;                                                   
+                            }
+                            .highcharts-br {
+                                background-color: red;
+                            }
+                        }             
                     }
                 }
             }
