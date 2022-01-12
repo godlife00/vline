@@ -2643,7 +2643,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .newListing_table tbody td.up .per, .valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
@@ -2744,7 +2744,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .alloListing_table tbody td.up .per, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
@@ -2845,7 +2845,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .hotListing_table tbody td.up .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
@@ -2998,7 +2998,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .turnListing_table tbody td.up .per, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
@@ -3131,7 +3131,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .mriListing_table tbody td.up .per, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
@@ -3251,7 +3251,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .perListing_table tbody td.up .per, .valueline #wrap #container .new_listing .perListing_table tbody td.down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
@@ -3610,7 +3610,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .up .per, .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .per {
   padding-left: 2px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
 }
