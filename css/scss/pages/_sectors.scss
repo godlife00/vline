@@ -89,6 +89,9 @@
                 &.txt_name {                    
                     a {
                         color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
                     }                                        
                 } 
             }                      
@@ -193,18 +196,18 @@
             display: inline-block;
             width: 56px;
             .ascend, .descend {
-                cursor: pointer;
+                // cursor: pointer;
                 display: inline-block;
                 width: 24px;            
-                i {
-                    vertical-align: middle;
-                    margin-left: 2px;
-                    display: inline-block;
-                    width: 0;
-                    height: 0;                
-                    border-left: 3px solid transparent;
-                    border-right: 3px solid transparent;
-                }            
+                // i {
+                //     vertical-align: middle;
+                //     margin-left: 2px;
+                //     display: inline-block;
+                //     width: 0;
+                //     height: 0;                
+                //     border-left: 3px solid transparent;
+                //     border-right: 3px solid transparent;
+                // }            
             }
             .ascend {
                 margin-right: 3px;
@@ -307,6 +310,9 @@
                     padding:8.5px 12px 8.5px 7px;                                  
                     a {
                         color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
                     }                                        
                 }        
                 .check {

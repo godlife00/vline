@@ -391,7 +391,7 @@ $(document).ready(function () {
                 pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
             },
             xAxis: [{
-                categories: ['예상 매출액 성장률(%)', '예상 영업이익 성장률(%)'],
+                categories: ['매출액성장률(%)'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -431,16 +431,19 @@ $(document).ready(function () {
             },
             exporting: {
                 enabled: false
-            },            
+            },       
+            legend: {
+                enabled: false,
+            },     
             series: [{
                 name: '종목',
-                data: [97, 45]
+                data: [97]
             }, {
                 name: '영업평균',
-                data: [85, 24]
+                data: [85]
             }, {
                 name: '전체평균',
-                data: [25, 34]
+                data: [25]
             }],
 
             plotOptions: {
@@ -491,7 +494,7 @@ $(document).ready(function () {
                 pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
             },
             xAxis: [{
-                categories: ['5년평균 ROE(%)', '5년평균 영업이익률(%)', '5년평균 매출액성장률(%)'],
+                categories: ['영업이익성장률(%)'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -531,16 +534,19 @@ $(document).ready(function () {
             },
             exporting: {
                 enabled: false
+            },
+            legend: {
+                enabled: false,
             },            
             series: [{
                 name: '종목',
-                data: [97, 45, 84]
+                data: [45]
             }, {
                 name: '영업평균',
-                data: [85, 24, 57]
+                data: [24]
             }, {
                 name: '전체평균',
-                data: [25, 34, 26]
+                data: [34]
             }],
 
             plotOptions: {
@@ -591,7 +597,110 @@ $(document).ready(function () {
                 pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
             },
             xAxis: [{
-                categories: ['예상 매출액 성장률(%)', '예상 영업이익 성장률(%)'],
+                categories: ['예상매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },          
+            legend: {
+                enabled: false,
+            },  
+            series: [{
+                name: '종목',
+                data: [45]
+            }, {
+                name: '영업평균',
+                data: [24]
+            }, {
+                name: '전체평균',
+                data: [34]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',                        
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials1_4').length) {
+        Highcharts.chart('containerfinancials1_4', {
+            chart: {
+                type: 'column',
+                renderTo: 'containerfinancials1_4',
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['예상영업익성장률(%)'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -632,15 +741,18 @@ $(document).ready(function () {
             exporting: {
                 enabled: false
             },            
+            legend: {
+                enabled: false,
+            },
             series: [{
                 name: '종목',
-                data: [97, 45]
+                data: [45]
             }, {
                 name: '영업평균',
-                data: [85, 24]
+                data: [24]
             }, {
                 name: '전체평균',
-                data: [25, 34]
+                data: [34]
             }],
 
             plotOptions: {
@@ -669,60 +781,60 @@ $(document).ready(function () {
     // 이익증가 미반영
     if ($('#containersummary1').length) {
         Highcharts.chart('containersummary1', {
-
             chart: {
                 type: 'line',
+                zoomType: 'xy',
                 renderTo: 'containersummary1',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
                 },
                 style: {
-                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                    fontFamily: "'Lato', 'Noto Sans KR'"
                 },
+                marginTop: 20,
+                marginBottom: 70,
+
                 plotBorderColor: null,
                 plotBorderWidth: null,
-                plotShadow: false
+                plotShadow: false,
             },
 
-            colors: ["#877edf"],
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+
             title: {
                 style: {
-                    'font-weight': "bold",
-                    color: '#E0E0E3',
-                    textTransform: 'uppercase',
                     fontSize: '0',
                 },
-                text: null
             },
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} 달러</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 달러</b><br/>'
             },
 
             xAxis: [{
-                labels: {
-                    enabled: false
-                }
+                categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+                crosshair: true
             }],
 
             yAxis: {
-                title: {
-                    text: null
-                },
-                lineColor: '#333',
-                gridLineDashStyle: 'Dot',
                 labels: {
-                    enabled: false
+                    format: '{value} 달러',
+                    style: {
+                        color: ["#656d7e"],
+                    },
+                },
+                title: {
+                    text: null,
                 }
             },
 
             credits: {
-                enabled: false,
-            },
-
-            legend: {
-                enabled: false,
+                enabled: false
             },
 
             exporting: {
@@ -730,85 +842,79 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '',
-                data: [
-                    3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0, 6.1, 3.7, 3.3, 6.4,
-                    6.9, 6.0, 6.8, 4.4, 4.0, 3.8, 5.0, 4.9, 9.2, 9.6, 9.5, 6.3,
-                    9.5, 10.8, 14.0, 11.5, 10.0, 10.2, 10.3, 9.4, 8.9, 10.6, 10.5, 11.1,
-                    10.4, 10.7, 11.3, 10.2, 9.6, 10.2, 11.1, 10.8, 13.0, 12.5, 12.5, 11.3,
-                    10.1
-                ]
+                name: '주당순이익',
+                data: [42, 52, 57, 69, 97, 11]
+            }, {
+                name: '주가',
+                type: 'line',
+                data: [72, 32, 37, 69, 27, 31]
             }],
 
             plotOptions: {
                 series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: null,
                     marker: {
                         enabled: false,
-                    },
-                },
+                    }
+                }
             },
         });
     }
     if ($('#containersummary2').length) {
         Highcharts.chart('containersummary2', {
-
             chart: {
                 type: 'line',
+                zoomType: 'xy',
                 renderTo: 'containersummary2',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
                 },
                 style: {
-                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                    fontFamily: "'Lato', 'Noto Sans KR'"
                 },
+                marginTop: 20,
+                marginBottom: 70,
+
                 plotBorderColor: null,
                 plotBorderWidth: null,
-                plotShadow: false
+                plotShadow: false,
             },
 
-            colors: ["#877edf"],
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+
             title: {
                 style: {
-                    'font-weight': "bold",
-                    color: '#E0E0E3',
-                    textTransform: 'uppercase',
                     fontSize: '0',
                 },
-                text: null
             },
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} 달러</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 달러</b><br/>'
             },
 
             xAxis: [{
-                labels: {
-                    enabled: false
-                }
+                categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+                crosshair: true
             }],
 
             yAxis: {
-                title: {
-                    text: null
-                },
-                lineColor: '#333',
-                gridLineDashStyle: 'Dot',
                 labels: {
-                    enabled: false
+                    format: '{value} 달러',
+                    style: {
+                        color: ["#656d7e"],
+                    },
+                },
+                title: {
+                    text: null,
                 }
             },
 
             credits: {
-                enabled: false,
-            },
-
-            legend: {
-                enabled: false,
+                enabled: false
             },
 
             exporting: {
@@ -816,85 +922,81 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '',
-                data: [
-                    3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0, 6.1, 3.7, 3.3, 6.4,
-                    6.9, 6.0, 6.8, 4.4, 4.0, 3.8, 5.0, 4.9, 9.2, 9.6, 9.5, 6.3,
-                    9.5, 10.8, 14.0, 11.5, 10.0, 10.2, 10.3, 9.4, 8.9, 10.6, 10.5, 11.1,
-                    10.4, 10.7, 11.3, 10.2, 9.6, 10.2, 11.1, 10.8, 13.0, 12.5, 12.5, 11.3,
-                    10.1
-                ]
+                name: '주당순이익',
+                data: [42, 52, 57, 69, 97, 11]
+            }, {
+                name: '주가',
+                type: 'line',
+                data: [72, 32, 37, 69, 27, 31]
             }],
 
             plotOptions: {
                 series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: null,
                     marker: {
                         enabled: false,
-                    },
-                },
+                    }
+                }
             },
         });
     }
-    if ($('#containersummary3').length) {
-        Highcharts.chart('containersummary3', {
 
+    // 그레이엄 만족형
+    if ($('#containersummary_gra1').length) {
+        Highcharts.chart('containersummary_gra1', {
             chart: {
                 type: 'line',
-                renderTo: 'containersummary3',
+                zoomType: 'xy',
+                renderTo: 'containersummary_gra1',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
                 },
                 style: {
-                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                    fontFamily: "'Lato', 'Noto Sans KR'"
                 },
+                marginTop: 20,
+                marginBottom: 70,
+
                 plotBorderColor: null,
                 plotBorderWidth: null,
-                plotShadow: false
+                plotShadow: false,
             },
 
-            colors: ["#877edf"],
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+
             title: {
                 style: {
-                    'font-weight': "bold",
-                    color: '#E0E0E3',
-                    textTransform: 'uppercase',
                     fontSize: '0',
                 },
-                text: null
             },
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} 달러</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
             },
 
             xAxis: [{
-                labels: {
-                    enabled: false
-                }
+                categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+                crosshair: true
             }],
 
             yAxis: {
-                title: {
-                    text: null
-                },
-                lineColor: '#333',
-                gridLineDashStyle: 'Dot',
                 labels: {
-                    enabled: false
+                    format: '{value} 억',
+                    style: {
+                        color: ["#656d7e"],
+                    },
+                },
+                title: {
+                    text: null,
                 }
             },
 
             credits: {
-                enabled: false,
-            },
-
-            legend: {
-                enabled: false,
+                enabled: false
             },
 
             exporting: {
@@ -902,85 +1004,81 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '',
-                data: [
-                    3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0, 6.1, 3.7, 3.3, 6.4,
-                    6.9, 6.0, 6.8, 4.4, 4.0, 3.8, 5.0, 4.9, 9.2, 9.6, 9.5, 6.3,
-                    9.5, 10.8, 14.0, 11.5, 10.0, 10.2, 10.3, 9.4, 8.9, 10.6, 10.5, 11.1,
-                    10.4, 10.7, 11.3, 10.2, 9.6, 10.2, 11.1, 10.8, 13.0, 12.5, 12.5, 11.3,
-                    10.1
-                ]
+                name: '순운전',
+                data: [42, 52, 57, 69, 97, 11]
+            }, {
+                name: '그레이엄매수가',
+                data: [142, 152, 257, 269, 397, 311]
+            }, {
+                name: '시가총액',
+                data: [421, 521, 571, 691, 971, 111]
             }],
 
             plotOptions: {
                 series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: null,
                     marker: {
                         enabled: false,
-                    },
-                },
+                    }
+                }
             },
         });
     }
-    if ($('#containersummary4').length) {
-        Highcharts.chart('containersummary4', {
-
+    if ($('#containersummary_gra2').length) {
+        Highcharts.chart('containersummary_gra2', {
             chart: {
                 type: 'line',
-                renderTo: 'containersummary4',
+                zoomType: 'xy',
+                renderTo: 'containersummary_gra2',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
                 },
                 style: {
-                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                    fontFamily: "'Lato', 'Noto Sans KR'"
                 },
+                marginTop: 20,
+                marginBottom: 70,
+
                 plotBorderColor: null,
                 plotBorderWidth: null,
-                plotShadow: false
+                plotShadow: false,
             },
 
-            colors: ["#877edf"],
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+
             title: {
                 style: {
-                    'font-weight': "bold",
-                    color: '#E0E0E3',
-                    textTransform: 'uppercase',
                     fontSize: '0',
                 },
-                text: null
             },
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} 달러</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
             },
 
             xAxis: [{
-                labels: {
-                    enabled: false
-                }
+                categories: ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+                crosshair: true
             }],
 
             yAxis: {
-                title: {
-                    text: null
-                },
-                lineColor: '#333',
-                gridLineDashStyle: 'Dot',
                 labels: {
-                    enabled: false
+                    format: '{value} 억',
+                    style: {
+                        color: ["#656d7e"],
+                    },
+                },
+                title: {
+                    text: null,
                 }
             },
 
             credits: {
-                enabled: false,
-            },
-
-            legend: {
-                enabled: false,
+                enabled: false
             },
 
             exporting: {
@@ -988,112 +1086,22 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '',
-                data: [
-                    3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0, 6.1, 3.7, 3.3, 6.4,
-                    6.9, 6.0, 6.8, 4.4, 4.0, 3.8, 5.0, 4.9, 9.2, 9.6, 9.5, 6.3,
-                    9.5, 10.8, 14.0, 11.5, 10.0, 10.2, 10.3, 9.4, 8.9, 10.6, 10.5, 11.1,
-                    10.4, 10.7, 11.3, 10.2, 9.6, 10.2, 11.1, 10.8, 13.0, 12.5, 12.5, 11.3,
-                    10.1
-                ]
+                name: '순운전',
+                data: [42, 52, 57, 69, 97, 11]
+            }, {
+                name: '그레이엄매수가',
+                data: [142, 152, 257, 269, 397, 311]
+            }, {
+                name: '시가총액',
+                data: [421, 521, 571, 691, 971, 111]
             }],
 
             plotOptions: {
                 series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: null,
                     marker: {
                         enabled: false,
-                    },
-                },
-            },
-        });
-    }
-    if ($('#containersummary5').length) {
-        Highcharts.chart('containersummary5', {
-
-            chart: {
-                type: 'line',
-                renderTo: 'containersummary5',
-                backgroundColor: {
-                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
-                style: {
-                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
-                },
-                plotBorderColor: null,
-                plotBorderWidth: null,
-                plotShadow: false
-            },
-
-            colors: ["#877edf"],
-            title: {
-                style: {
-                    'font-weight': "bold",
-                    color: '#E0E0E3',
-                    textTransform: 'uppercase',
-                    fontSize: '0',
-                },
-                text: null
-            },
-
-            tooltip: {
-                shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} 달러</b><br/>'
-            },
-
-            xAxis: [{
-                labels: {
-                    enabled: false
+                    }
                 }
-            }],
-
-            yAxis: {
-                title: {
-                    text: null
-                },
-                lineColor: '#333',
-                gridLineDashStyle: 'Dot',
-                labels: {
-                    enabled: false
-                }
-            },
-
-            credits: {
-                enabled: false,
-            },
-
-            legend: {
-                enabled: false,
-            },
-
-            exporting: {
-                enabled: false
-            },
-
-            series: [{
-                name: '',
-                data: [
-                    3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0, 6.1, 3.7, 3.3, 6.4,
-                    6.9, 6.0, 6.8, 4.4, 4.0, 3.8, 5.0, 4.9, 9.2, 9.6, 9.5, 6.3,
-                    9.5, 10.8, 14.0, 11.5, 10.0, 10.2, 10.3, 9.4, 8.9, 10.6, 10.5, 11.1,
-                    10.4, 10.7, 11.3, 10.2, 9.6, 10.2, 11.1, 10.8, 13.0, 12.5, 12.5, 11.3,
-                    10.1
-                ]
-            }],
-
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: null,
-                    marker: {
-                        enabled: false,
-                    },
-                },
             },
         });
     }

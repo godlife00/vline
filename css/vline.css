@@ -183,7 +183,13 @@ select {
 
 /* 그리드 grid */
 body {
+  counter-reset: section;
   background: #f7f7f8;
+}
+
+body .numCunt::before {
+  counter-increment: section;
+  content: counter(section);
 }
 
 #wrap {
@@ -314,7 +320,13 @@ body {
 }
 
 .table th strong, .table td strong {
+  font-size: 13px;
   font-weight: 700;
+}
+
+.table th .unit, .table td .unit {
+  opacity: 0.9;
+  padding-left: 1px;
 }
 
 .table th.txt_L, .table td.txt_L {
@@ -381,19 +393,45 @@ body {
 }
 
 .table thead th, .table thead td {
-  font-size: 13px;
+  font-size: 12px;
   color: #7389af;
   text-align: center;
   background: url("../img/gray_thline.gif") repeat-x left bottom;
 }
 
+.table thead th span, .table thead td span {
+  color: #7389af;
+}
+
 .table thead th strong, .table thead td strong {
   color: #7389af;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .table tbody td:nth-child(2n) {
   background-color: #f7f9fc;
+}
+
+.table tbody td i {
+  position: relative;
+  top: -1px;
+  left: -3px;
+  vertical-align: middle;
+  margin-left: 2px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.table tbody td i.up {
+  border-bottom: 7px solid #97a3c9;
+}
+
+.table tbody td i.down {
+  border-top: 7px solid #97a3c9;
 }
 
 .table.fix_table .fix {
@@ -466,6 +504,47 @@ body {
 
 .table.fix_table.thead2_table tbody .va_cen, .table.fix_table.thead2_table tbody td:nth-child(2n - 1) {
   background-color: #f7f9fc;
+}
+
+.table.table_oneview th, .table.table_oneview td {
+  padding: 8.5px 4px;
+}
+
+.table.table_oneview th a, .table.table_oneview td a {
+  color: #527bea;
+  padding: 8.5px 4px;
+}
+
+.table.table_oneview td.bdr_r {
+  position: relative;
+}
+
+.table.table_oneview td.bdr_r::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+}
+
+.table.table_oneview tbody td.txt_name {
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.table.table_oneview tbody td.txt_name a {
+  padding: 0;
+  color: #527bea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
+  box-sizing: border-box;
 }
 
 .table-scroll {
@@ -1913,6 +1992,7 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents_header .data_filter .set_box {
   z-index: 60;
+  display: none;
   position: absolute;
   left: -2px;
   right: 0;
@@ -2268,7 +2348,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .attention_area .data_area .name {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2620,7 +2700,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .newListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2721,7 +2801,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .alloListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2822,7 +2902,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .hotListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2975,7 +3055,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .turnListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3108,7 +3188,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .mriListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3228,7 +3308,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .new_listing .perListing_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3389,7 +3469,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3587,7 +3667,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li a.name {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3636,7 +3716,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .btm_layBox .right .spider_area .data_area .name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3946,7 +4026,7 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.name a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -4266,7 +4346,48 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1 {
-  height: 240px;
+  display: inline-block;
+  width: calc(100% / 2 - 2px);
+  height: 180px;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend {
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 17px;
+  text-align: right;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend li {
+  display: inline-block;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend li span {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1.54;
+  padding: 0 8px;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend li span i {
+  display: inline-block;
+  margin-bottom: 1px;
+  margin-right: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend li:nth-child(1) span i {
+  background: #3655d6;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend li:nth-child(2) span i {
+  background: #656d7e;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend li:nth-child(3) span i {
+  background: #bdc8d8;
 }
 
 #container .M_right .contents .turn_box .thead2_table thead tr:first-child th, #container .M_right .contents .turn_box .thead2_table thead tr:first-child td {
@@ -4331,6 +4452,13 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .excavation_area .thead2_table tbody td.txt_name a {
   color: #527bea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table {
@@ -4753,8 +4881,8 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.pattern .tab_content .containerfinance1 {
-  width: 100%;
-  height: 160px;
+  width: calc(100% / 2 - 2px);
+  height: 220px;
 }
 
 #container .M_right .contents .excavation_area.pattern .tab_content .thead2_table {
@@ -4797,6 +4925,10 @@ input[type='radio']:checked:before {
   padding-left: 10px;
 }
 
+#container .M_right .contents .excavation_area.pattern .tab_content .thead2_table tbody td.txt_name a {
+  max-width: 180px;
+}
+
 #container .M_right .contents .excavation_area.pattern .tab_content .thead2_table tbody td.txt_name::after {
   content: "";
   position: absolute;
@@ -4810,6 +4942,10 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .excavation_area.pattern .paginate {
   margin-top: 30px;
+}
+
+#container .M_right .contents .excavation_area.pattern_gra .tab_content .thead2_table tbody td.txt_name a {
+  max-width: 100px;
 }
 
 #container .M_right .contents .invest_area.buffett {
@@ -5040,10 +5176,6 @@ input[type='radio']:checked:before {
   border-top: none;
 }
 
-#container .M_right .contents .invest_area.buffett .thead2_table td.bdr_r {
-  border-right: 1px solid #e7eaf2;
-}
-
 #container .M_right .contents .invest_area.buffett .thead2_table thead th, #container .M_right .contents .invest_area.buffett .thead2_table thead td {
   padding: 8.5px 8px;
   vertical-align: middle;
@@ -5065,13 +5197,12 @@ input[type='radio']:checked:before {
   background: #7b93f4;
 }
 
-#container .M_right .contents .invest_area.buffett .thead2_table thead tr:last-child th, #container .M_right .contents .invest_area.buffett .thead2_table thead tr:last-child td {
-  padding: 3.5px 5px;
-  letter-spacing: -1px;
+#container .M_right .contents .invest_area.buffett .thead2_table thead tr:last-child th strong, #container .M_right .contents .invest_area.buffett .thead2_table thead tr:last-child td strong {
+  font-size: 12px;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table thead tr:last-child td:nth-child(n + 3) {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table thead tr:last-child td:nth-child(2) {
@@ -5091,7 +5222,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td {
-  padding: 8.5px 3px;
+  padding: 8.5px 8px;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td:nth-child(2n + 1) {
@@ -5102,7 +5233,7 @@ input[type='radio']:checked:before {
   width: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 8.5px 3px;
+  padding: 8.5px 8px;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td:first-child, #container .M_right .contents .invest_area.buffett .thead2_table tbody td:nth-child(2n) {
@@ -5116,6 +5247,13 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td.txt_name a {
   color: #527bea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td.txt_name::after {
@@ -5133,7 +5271,8 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("../img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat center center;
+  background-size: 12px auto;
 }
 
 #container .M_right .contents .invest_area.buffett .paginate {
@@ -5465,6 +5604,13 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table tbody td.txt_name a {
   color: #527bea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table tbody tr:last-child {
@@ -5556,6 +5702,13 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .sectors_area .thead2_table tbody td.txt_name a {
   color: #527bea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
 }
 
 #container .M_right .contents .sectors_area .thead2_table tbody tr:last-child {
@@ -5657,19 +5810,8 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table .order_select .ascend, #container .M_right .contents .sectors_area.ratio .thead2_table .order_select .descend {
-  cursor: pointer;
   display: inline-block;
   width: 24px;
-}
-
-#container .M_right .contents .sectors_area.ratio .thead2_table .order_select .ascend i, #container .M_right .contents .sectors_area.ratio .thead2_table .order_select .descend i {
-  vertical-align: middle;
-  margin-left: 2px;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table .order_select .ascend {
@@ -5774,6 +5916,13 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .sectors_area.ratio .thead2_table tbody td.txt_name a {
   color: #527bea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table tbody td .check {

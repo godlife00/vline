@@ -217,7 +217,7 @@
     .thead2_table {
         border-top: none;                  
         td.bdr_r {
-            border-right: 1px solid #e7eaf2;
+            // border-right: 1px solid #e7eaf2;
         }
 
         thead {                
@@ -243,13 +243,16 @@
             }
             tr:last-child {
                 th, td {
-                    padding: 3.5px 5px;
-                    letter-spacing: -1px;                    
+                    strong {
+                        font-size: 12px;                                                
+                    }                    
+                    // padding: 3.5px 5px;
+                    // letter-spacing: -1px;                    
                 }
                 td { 
                                        
                     &:nth-child(n + 3) {
-                        font-size: 10px;                                                
+                        font-size: 12px;                                                
                     }
                     &:nth-child(2) {
                         position: relative;                                                
@@ -271,14 +274,14 @@
         }
         tbody {
             td {                                                    
-                padding:8.5px 3px;                                                                          
+                padding:8.5px 8px;                                                            
                 &:nth-child(2n + 1) {
                     background-color: #f7f9fc;
                 }
                 &:first-child {
                     width: 40px;
                     box-sizing: border-box;
-                    padding:8.5px 3px;                                                                          
+                    padding:8.5px 8px;
                 }
                 &:first-child,
                 &:nth-child(2n) {
@@ -289,6 +292,9 @@
                     padding:8.5px 12px 8.5px 7px;                                                                          
                     a {
                         color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
                     }                    
                     &::after {
                         content: "";
@@ -305,7 +311,8 @@
                     display: inline-block;
                     width: 16px;
                     height: 12px;                    
-                    background: url('../img/icon_check.svg') no-repeat 0 0;
+                    background: url('../img/icon_check.svg') no-repeat center center;
+                    background-size: 12px auto;
                 }             
             }            
         }
@@ -444,7 +451,10 @@
                 &.txt_name {                    
                     a {
                         color: #527bea;           
-                    }                                        
+                        @include white-space;     
+                        max-width: 100px;         
+                        
+                    }                           
                 }    
             }    
                               

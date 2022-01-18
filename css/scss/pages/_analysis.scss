@@ -211,17 +211,56 @@
                 }
             }
             .right {
-                background-color: #fff;
+                background-color: #fff;                
                 width: calc(100% - 380px);                            
                 margin-left: 30px;
                 .containerfinancials1 {
-                    height: 240px;                    
+                    display: inline-block;
+                    width: calc(100% / 2 - 2px);
+                    height: 180px;                    
                     rect.highcharts-color-0,
                     rect.highcharts-color-1,
                     rect.highcharts-color-2 {
                         // width: 16px;                        
                     }
-
+                }
+                .chart_legend {                    
+                    display: block;
+                    border-radius: 5px;
+                    margin-bottom: 17px;
+                    text-align: right;
+                }
+                
+                .chart_legend li {
+                    display: inline-block;
+                }
+                
+                .chart_legend li span {
+                    display: inline-block;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    padding: 0 8px;
+                }
+                
+                .chart_legend li span i {
+                    display: inline-block;
+                    margin-bottom: 1px;
+                    margin-right: 5px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                }
+                
+                .chart_legend li:nth-child(1) span i {
+                    background: #3655d6;
+                }
+                
+                .chart_legend li:nth-child(2) span i {
+                    background: #656d7e;
+                }
+                
+                .chart_legend li:nth-child(3) span i {
+                    background: #bdc8d8;
                 }
             }            
         }

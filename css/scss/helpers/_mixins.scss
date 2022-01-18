@@ -43,7 +43,7 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
 }
 @mixin white-space {
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     // width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;

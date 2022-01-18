@@ -132,6 +132,11 @@
             }
             
         }
+
+        .update_acc {
+            
+        }
+
         .sub_nav {            
             margin-top: 23px;
             ul.depth_1 {                                
@@ -779,6 +784,7 @@
                 }
                 .set_box {
                     z-index: 60;
+                    display: none;
                     position: absolute;                
                     left: -2px;
                     right: 0;

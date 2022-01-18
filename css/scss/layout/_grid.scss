@@ -1,6 +1,12 @@
 /* 그리드 grid */
 body {
-    background: $colorbg;
+    // 카운터넘버링
+    counter-reset: section;   
+    .numCunt::before {
+        counter-increment: section;
+        content: counter(section);
+    }  
+    background: $colorbg;    
 }
 #wrap {                
     @include pad(0);          
@@ -86,13 +92,13 @@ body {
         background-color: #E7EAF2;             
     }    
 }
-.table {
+.table {    
     width: 100%;
     border: none;       
     tr.hide_line {
         display: none;
     }
-    th, td {        
+    th, td {                
         text-align: center;        
         font-size: 13px;
         font-weight: normal;                        
@@ -102,7 +108,12 @@ body {
         box-sizing: border-box;        
         background: #fff url('../img/gray_tdline.gif') repeat-x left bottom;        
         strong {
+            font-size: 13px;
             font-weight: $f_sizeB;
+        }
+        .unit {
+            opacity: 0.9;            
+            padding-left: 1px;
         }
         &.txt_L {
             text-align: left;
@@ -161,12 +172,16 @@ body {
     }    
     thead {        
         th, td {
-            font-size: 13px;            
+            font-size: 12px;       
             color: #7389af;            
             text-align: center;                        
             background: url('../img/gray_thline.gif') repeat-x left bottom;        
+            span {
+                color: #7389af;                            
+            }
             strong {
                 color: #7389af;            
+                font-size: 13px;
                 font-weight: $f_sizeB;
             }
         }        
@@ -174,6 +189,26 @@ body {
     tbody {                
         td:nth-child(2n) {
             background-color: #f7f9fc;
+        }
+        td {   
+            i {                
+                position: relative;
+                top: -1px;
+                left: -3px;
+                vertical-align: middle;
+                margin-left: 2px;
+                display: inline-block;
+                width: 0;
+                height: 0;                
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;                
+                &.up {
+                    border-bottom: 7px solid #97a3c9;
+                }
+                &.down {
+                    border-top: 7px solid #97a3c9;                    
+                }
+            }     
         }
     }
 
@@ -255,6 +290,49 @@ body {
                 }                    
             }
                
+        }
+    }   
+    
+    &.table_oneview {
+        th, td {                
+            padding: 8.5px 4px;
+            a {
+                color: #527bea;
+                padding: 8.5px 4px;
+
+            }
+        }     
+        
+        td.bdr_r {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background: #fff url('../img/gray_tdline.gif') repeat-y right top;                
+                
+            }            
+        }
+        
+        tbody {
+            td {                                
+                &.txt_name {
+                    background-color: #fff;
+                    padding: 0 10px;                                        
+                    
+                }
+                &.txt_name a {
+                    padding: 0;
+                    color: #527bea;               
+                    @include white-space;     
+                    max-width: 100px;         
+                               
+                    box-sizing: border-box;
+                } 
+            }            
         }
     }    
 }
