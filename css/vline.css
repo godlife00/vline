@@ -258,6 +258,7 @@ body .numCunt::before {
 
 #footer {
   padding: 0;
+  padding-bottom: 24px;
   margin-top: 80px;
   min-height: 50px;
   background: #dee1ea;
@@ -270,7 +271,6 @@ body .numCunt::before {
   min-width: 1000px;
   max-width: 1138px;
   padding: 0 15px;
-  padding: 25px 0;
 }
 
 .fix_wrap {
@@ -316,7 +316,7 @@ body .numCunt::before {
   padding: 8.5px 17px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #fff url("../img/gray_tdline.gif") repeat-x left bottom;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left bottom;
 }
 
 .table th strong, .table td strong {
@@ -396,7 +396,7 @@ body .numCunt::before {
   font-size: 12px;
   color: #7389af;
   text-align: center;
-  background: url("../img/gray_thline.gif") repeat-x left bottom;
+  background: url("/img/gray_thline.gif") repeat-x left bottom;
 }
 
 .table thead th span, .table thead td span {
@@ -441,7 +441,7 @@ body .numCunt::before {
 }
 
 .table.fix_table tbody .fix {
-  background: #fff url("../img/gray_tdline.gif") repeat-x left bottom, #fff url("../img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left bottom, #fff url("/img/gray_tdline.gif") repeat-y right top;
 }
 
 .table.fix_table tbody .fix::before {
@@ -453,7 +453,7 @@ body .numCunt::before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
   opacity: 0.75;
 }
 
@@ -494,7 +494,7 @@ body .numCunt::before {
   top: 1px;
   bottom: 0;
   width: 12px;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
   opacity: 0.75;
 }
 
@@ -526,7 +526,7 @@ body .numCunt::before {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
 }
 
 .table.table_oneview tbody td.txt_name {
@@ -737,7 +737,7 @@ input[type='radio']:checked:before {
 }
 
 .star_area .starR {
-  background: url("../img/ico_review.svg") no-repeat 50% 0;
+  background: url("/img/ico_review.svg") no-repeat 50% 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;
@@ -885,7 +885,7 @@ input[type='radio']:checked:before {
   right: 0;
   width: 26px;
   height: 26px;
-  background: url("../img/select.png") no-repeat 0 0;
+  background: url("/img/select.png") no-repeat 0 0;
 }
 
 .selectbox label {
@@ -1036,8 +1036,6 @@ input[type='radio']:checked:before {
 #header .bgWrap .searchArea .AutoComplete {
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  background: #fff;
-  z-index: 999;
   display: none;
   position: absolute;
   left: 0;
@@ -1046,14 +1044,14 @@ input[type='radio']:checked:before {
   background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 5px 0;
+  padding: 0;
   border: 1px solid #ececec;
   z-index: 85;
   max-height: 185px;
   overflow: auto;
   overflow-x: hidden;
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
 }
 
 #header .bgWrap .searchArea .AutoComplete li {
@@ -1063,6 +1061,7 @@ input[type='radio']:checked:before {
 }
 
 #header .bgWrap .searchArea .AutoComplete li a {
+  display: block;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
@@ -1074,6 +1073,14 @@ input[type='radio']:checked:before {
 
 #header .bgWrap .searchArea .AutoComplete li:nth-child(2n) {
   background: #f4f6fa;
+}
+
+#header .bgWrap .searchArea .AutoComplete li.active {
+  background-color: #273986;
+}
+
+#header .bgWrap .searchArea .AutoComplete li.active a, #header .bgWrap .searchArea .AutoComplete li.active strong {
+  color: #fff;
 }
 
 #header .bgWrap .premium {
@@ -1102,7 +1109,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 10.4px;
   height: 14px;
-  background: url("../img/premium_join_bg.png") no-repeat 0 0;
+  background: url("/img/premium_join_bg.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -1126,6 +1133,120 @@ input[type='radio']:checked:before {
 }
 
 /* 푸터 footer */
+#footer .w_box .service_info {
+  padding: 12px 0 10px;
+  border-bottom: 1px solid #b1b9cb;
+}
+
+#footer .w_box .service_info p {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  color: #7389af;
+}
+
+#footer .w_box .f_btm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer .w_box .terms_list {
+  padding: 15px 0 0;
+}
+
+#footer .w_box .terms_list .terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 18px;
+}
+
+#footer .w_box .terms_list .terms li {
+  display: inline-block;
+}
+
+#footer .w_box .terms_list .terms li a {
+  font-size: 13px;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+}
+
+#footer .w_box .terms_list .terms li a strong {
+  font-weight: 700;
+}
+
+#footer .w_box .foot_info {
+  margin-top: 45px;
+}
+
+#footer .w_box .foot_info .copyright, #footer .w_box .foot_info .copyright a {
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+}
+
+#footer .w_box .foot_info .copyright i, #footer .w_box .foot_info .copyright a i {
+  display: inline-block;
+  margin: 0 8px;
+  width: 1px;
+  height: 13px;
+  background-color: #b1b9cb;
+  vertical-align: middle;
+}
+
+#footer .w_box .family_site .title {
+  display: inline-block;
+  font-family: 'SpoqaHanSansNeo';
+  font-size: 13px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  text-align: left;
+  color: #39509a;
+}
+
+#footer .w_box .family_site ul {
+  display: inline-block;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: 1px solid #b1b9cb;
+}
+
+#footer .w_box .family_site ul li a {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  padding: 3px 0;
+  padding-right: 13px;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+}
+
+#footer .w_box .family_site ul li a::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-top: 1px solid #b1b9cb;
+  border-right: 1px solid #b1b9cb;
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: 1px;
+  top: 10px;
+}
+
 /* 주요 내용 container */
 #container .M_left .detail_box {
   border-radius: 5px;
@@ -1345,7 +1466,7 @@ input[type='radio']:checked:before {
   top: 0;
   bottom: 31px;
   width: 1px;
-  background: url("../img/sub_dotline.svg") repeat-y 0 0;
+  background: url("/img/sub_dotline.svg") repeat-y 0 0;
 }
 
 #container .M_left .sub_nav ul.depth_1 ul.depth_2 li {
@@ -1424,7 +1545,7 @@ input[type='radio']:checked:before {
   line-height: 1.69;
   letter-spacing: -0.33px;
   color: #656d7e;
-  background: url("../img/service_box_icon.svg") no-repeat left top;
+  background: url("/img/service_box_icon.svg") no-repeat left top;
 }
 
 #container .M_left .service_box li:nth-child(1) a {
@@ -1481,7 +1602,7 @@ input[type='radio']:checked:before {
   position: relative;
   margin-top: 23px;
   padding-bottom: 7px;
-  background: url("../img/dot_gray.png") repeat-x left bottom;
+  background: url("/img/dot_gray.png") repeat-x left bottom;
 }
 
 #container .M_right .group_nav ul {
@@ -1518,7 +1639,7 @@ input[type='radio']:checked:before {
   position: relative;
   width: 100%;
   margin-top: 23px;
-  background: url("../img/dot_gray.png") repeat-x left bottom;
+  background: url("/img/dot_gray.png") repeat-x left bottom;
 }
 
 #container .M_right .blue_stocks_area::after {
@@ -1611,7 +1732,7 @@ input[type='radio']:checked:before {
   padding-right: 23px;
   margin-bottom: 6px;
   margin-right: 15px;
-  background: url("../img/bg_blue.jpg") repeat-x 0 calc(100% + 2px);
+  background: url("/img/bg_blue.jpg") repeat-x 0 calc(100% + 2px);
 }
 
 #container .M_right .blue_stocks_area .stocks_filter .path::after {
@@ -2240,7 +2361,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 14px;
   height: 14px;
-  background: url("../img/check_img.svg") no-repeat 0 100%;
+  background: url("/img/check_img.svg") no-repeat 0 100%;
 }
 
 #container .M_right .contents_header .table_filter .detail span.active {
@@ -2530,7 +2651,7 @@ input[type='radio']:checked:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/dot_gray.png") repeat-x left calc(100% + 1px);
+  background: url("/img/dot_gray.png") repeat-x left calc(100% + 1px);
 }
 
 .valueline #wrap #container .new_listing .left .new_tabs .tab_area ul li {
@@ -2573,7 +2694,7 @@ input[type='radio']:checked:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/dot_gray.png") repeat-x left calc(100% + 1px);
+  background: url("/img/dot_gray.png") repeat-x left calc(100% + 1px);
 }
 
 .valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul li {
@@ -2618,7 +2739,7 @@ input[type='radio']:checked:before {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
-  background: #eceff5 url("../img/icon_chartFill.svg") no-repeat 13px center;
+  background: #eceff5 url("/img/icon_chartFill.svg") no-repeat 13px center;
 }
 
 .valueline #wrap #container .new_listing .right .btm .title strong {
@@ -2693,8 +2814,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .newListing_table tbody td.name {
-  width: 190px;
-  max-width: 190px;
+  width: 180px;
+  max-width: 180px;
 }
 
 .valueline #wrap #container .new_listing .newListing_table tbody td.name a {
@@ -2794,8 +2915,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .alloListing_table tbody td.name {
-  width: 190px;
-  max-width: 190px;
+  width: 180px;
+  max-width: 180px;
 }
 
 .valueline #wrap #container .new_listing .alloListing_table tbody td.name a {
@@ -2895,8 +3016,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .hotListing_table tbody td.name {
-  width: 190px;
-  max-width: 190px;
+  width: 180px;
+  max-width: 180px;
 }
 
 .valueline #wrap #container .new_listing .hotListing_table tbody td.name a {
@@ -3048,8 +3169,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .turnListing_table tbody td.name {
-  width: 190px;
-  max-width: 190px;
+  width: 180px;
+  max-width: 180px;
 }
 
 .valueline #wrap #container .new_listing .turnListing_table tbody td.name a {
@@ -3181,8 +3302,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .mriListing_table tbody td.name {
-  width: 190px;
-  max-width: 190px;
+  width: 180px;
+  max-width: 180px;
 }
 
 .valueline #wrap #container .new_listing .mriListing_table tbody td.name a {
@@ -3301,8 +3422,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .perListing_table tbody td.name {
-  width: 190px;
-  max-width: 190px;
+  width: 180px;
+  max-width: 180px;
 }
 
 .valueline #wrap #container .new_listing .perListing_table tbody td.name a {
@@ -3459,6 +3580,10 @@ input[type='radio']:checked:before {
   letter-spacing: -0.35px;
   color: #656d7e;
   padding: 5px 0;
+  padding-right: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
 }
 
 .valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table tbody td.name {
@@ -3576,6 +3701,278 @@ input[type='radio']:checked:before {
   background-color: red;
 }
 
+.valueline #wrap #container .btm_layBox .left .result_box {
+  margin-top: 45px;
+  margin-bottom: 55px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #3655d6;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox {
+  position: relative;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_update {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 12px;
+  line-height: 2.5;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #b1b9cb;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div {
+  position: relative;
+  float: left;
+  width: calc(100% / 2 - 20px);
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div:last-child {
+  float: right;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div:last-child::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 47px;
+  width: 1px;
+  height: 106px;
+  background-color: #e7eaf2;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table {
+  width: 100%;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table th, .valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table td {
+  padding: 9px 0 6px;
+  background: none;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table thead th {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.3px;
+  color: #b1b9cb;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table tbody td {
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  color: #656d7e;
+  padding: 5px 0;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table tbody td.name {
+  width: 150px;
+  max-width: 150px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table tbody td.name a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: table-cell;
+  width: 100%;
+  max-width: 150px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.35px;
+  color: #222;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .result_boxswiper .swiper-wrapper .swiper-slide {
+  border-top: 2px solid #7389af;
+  border-bottom: 1px solid #bdc8d8;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .swiper-container-horizontal > .swiper-pagination-bullets {
+  top: 6px;
+  bottom: auto;
+  text-align: left;
+  padding-left: 185px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .swiper-pagination .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 90px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data {
+  padding: 9px 0 0;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data::after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:first-child {
+  margin-bottom: 40px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:first-child::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  height: 1px;
+  width: 100%;
+  background-color: #e7eaf2;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:last-child thead {
+  visibility: collapse;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table th, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table td {
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table th.txt_c, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table td.txt_c {
+  text-align: center;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table thead th {
+  padding-bottom: 3px;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #b1b9cb;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td {
+  padding: 5px 0;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion {
+  display: inline-block;
+  vertical-align: sub;
+  border-radius: 3px;
+  padding: 1px 5px;
+  background-color: #d9e6ff;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #656d7e;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion.result {
+  color: #fff;
+  background-color: #97a3c9;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.name {
+  width: 210px;
+  max-width: 210px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.name a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: table-cell;
+  width: 100%;
+  max-width: 210px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price {
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .per, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
+  padding-left: 2px;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #d30000;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
+  color: #0052ff;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.35px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson.deficit {
+  color: #d30000;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson.bk_check {
+  color: #0052ff;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans {
+  text-align: center;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans span {
+  display: inline-block;
+  padding: 1px 3px;
+  font-size: 10px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans.deficit span {
+  border: 1px solid #1e51f5;
+  color: #0052ff;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans.bk_check span {
+  border: 1px solid #d30000;
+  color: #d30000;
+}
+
 .valueline #wrap #container .btm_layBox .right {
   float: right;
   width: 254px;
@@ -3586,7 +3983,7 @@ input[type='radio']:checked:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/dot_gray.png") repeat-x left bottom;
+  background: url("/img/dot_gray.png") repeat-x left bottom;
 }
 
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li {
@@ -3609,7 +4006,7 @@ input[type='radio']:checked:before {
   padding: 3px 3px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../img/tabcon_up.svg") no-repeat center bottom;
+  background: url("/img/tabcon_up.svg") no-repeat center bottom;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
@@ -3633,7 +4030,7 @@ input[type='radio']:checked:before {
   padding: 3px 3px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../img/tabcon_down.svg") no-repeat center bottom;
+  background: url("/img/tabcon_down.svg") no-repeat center bottom;
   background-size: 12px 13px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -3862,7 +4259,7 @@ input[type='radio']:checked:before {
   top: 0;
   width: 83px;
   height: 100%;
-  background: #374b9d url("../img/bg_filechart.svg") no-repeat center center;
+  background: #374b9d url("/img/bg_filechart.svg") no-repeat center center;
 }
 
 .valueline #wrap #container .resultdata_area .season .box .title {
@@ -4086,13 +4483,13 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans.deficit span {
-  border: 1px solid #d30000;
-  color: #d30000;
+  border: 1px solid #1e51f5;
+  color: #0052ff;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans.bk_check span {
-  border: 1px solid #1e51f5;
-  color: #0052ff;
+  border: 1px solid #d30000;
+  color: #d30000;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line {
@@ -4391,11 +4788,11 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .turn_box .thead2_table thead tr:first-child th, #container .M_right .contents .turn_box .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .turn_box .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .turn_box .thead2_table thead tr:nth-child(2) td {
-  background: #fff url("../img/gray_tdline.gif") repeat-x left top;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .turn_box .thead2_table thead th.fix::before {
@@ -4410,7 +4807,7 @@ input[type='radio']:checked:before {
   bottom: 1px;
   width: 12px;
   height: 58px;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .excavation_area {
@@ -4443,7 +4840,7 @@ input[type='radio']:checked:before {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
 }
 
 #container .M_right .contents .excavation_area .thead2_table thead tr:nth-child(2) td {
@@ -4462,15 +4859,15 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table {
-  background: url("../img/gray_tdline.gif") repeat-x left bottom;
+  background: url("/img/gray_tdline.gif") repeat-x left bottom;
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child th, #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child th.fix::before, #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child td.fix::before {
@@ -4478,7 +4875,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:nth-child(2) td {
-  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:nth-child(2) td:first-child {
@@ -4494,13 +4891,13 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.blue_box .thead2_table tbody tr:first-child td {
-  background-image: url("../img/gray_thline.gif");
+  background-image: url("/img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table tbody th, #container .M_right .contents .excavation_area.blue_box .thead2_table tbody td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -4531,7 +4928,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.ex_turn .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.ex_turn .thead2_table thead tr:nth-child(2) td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
@@ -4545,7 +4942,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.ex_turn .thead2_table tbody th, #container .M_right .contents .excavation_area.ex_turn .thead2_table tbody td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -4576,11 +4973,11 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.result .thead2_table thead {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child th, #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child th.fix, #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child td.fix {
@@ -4593,7 +4990,7 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .excavation_area.result .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.result .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
 }
 
 #container .M_right .contents .excavation_area.result .thead2_table thead th.fix::before {
@@ -4601,13 +4998,13 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.result .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.result .thead2_table tbody tr:first-child td {
-  background-image: url("../img/gray_thline.gif");
+  background-image: url("/img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 
 #container .M_right .contents .excavation_area.result .thead2_table tbody th, #container .M_right .contents .excavation_area.result .thead2_table tbody td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -4651,7 +5048,7 @@ input[type='radio']:checked:before {
   top: 0;
   width: 16px;
   height: 100%;
-  background: url("../img/icon_shop.svg") no-repeat 0 5px;
+  background: url("/img/icon_shop.svg") no-repeat 0 5px;
 }
 
 .top_shopping .shop_radio {
@@ -4707,7 +5104,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("../img/icon_help.svg") no-repeat 0 0;
+  background: url("/img/icon_help.svg") no-repeat 0 0;
 }
 
 .top_shopping .shopping_list .form_box .set_filter .mid {
@@ -4818,11 +5215,11 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table thead {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child th, #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child th.fix, #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child td.fix {
@@ -4835,7 +5232,7 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table thead th.fix::before {
@@ -4843,13 +5240,13 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.shopping .thead2_table tbody tr:first-child td {
-  background-image: url("../img/gray_thline.gif");
+  background-image: url("/img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table tbody th, #container .M_right .contents .excavation_area.shopping .thead2_table tbody td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -4978,27 +5375,27 @@ input[type='radio']:checked:before {
 }
 
 .top_invest .stand_standard.face_buffett {
-  background: #fff url("../img/face_buffett.png") no-repeat left bottom;
+  background: #fff url("/img/face_buffett.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_graham {
-  background: #fff url("../img/face_graham.png") no-repeat left bottom;
+  background: #fff url("/img/face_graham.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_templeton {
-  background: #fff url("../img/face_templeton.png") no-repeat left bottom;
+  background: #fff url("/img/face_templeton.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_lynch {
-  background: #fff url("../img/face_lynch.png") no-repeat left bottom;
+  background: #fff url("/img/face_lynch.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_greenblatt {
-  background: #fff url("../img/face_greenblatt.png") no-repeat left bottom;
+  background: #fff url("/img/face_greenblatt.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
@@ -5089,7 +5486,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("../img/icon_agreecheck.svg") no-repeat right 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat right 0;
 }
 
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type="checkbox"]:checked + label {
@@ -5158,7 +5555,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("../img/icon_help.svg") no-repeat 0 0;
+  background: url("/img/icon_help.svg") no-repeat 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .table_update {
@@ -5271,7 +5668,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("../img/icon_check.svg") no-repeat center center;
+  background: url("/img/icon_check.svg") no-repeat center center;
   background-size: 12px auto;
 }
 
@@ -5309,27 +5706,27 @@ input[type='radio']:checked:before {
 }
 
 .top_invest .stand_standard.face_buffett {
-  background: #fff url("../img/face_buffett.png") no-repeat left bottom;
+  background: #fff url("/img/face_buffett.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_graham {
-  background: #fff url("../img/face_graham.png") no-repeat left bottom;
+  background: #fff url("/img/face_graham.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_templeton {
-  background: #fff url("../img/face_templeton.png") no-repeat left bottom;
+  background: #fff url("/img/face_templeton.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_lynch {
-  background: #fff url("../img/face_lynch.png") no-repeat left bottom;
+  background: #fff url("/img/face_lynch.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
 .top_invest .stand_standard.face_greenblatt {
-  background: #fff url("../img/face_greenblatt.png") no-repeat left bottom;
+  background: #fff url("/img/face_greenblatt.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 
@@ -5420,7 +5817,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("../img/icon_agreecheck.svg") no-repeat right 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat right 0;
 }
 
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type="checkbox"]:checked + label {
@@ -5489,7 +5886,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("../img/icon_help.svg") no-repeat 0 0;
+  background: url("/img/icon_help.svg") no-repeat 0 0;
 }
 
 .top_invest.greenblatt .stand_standard .left {
@@ -5553,11 +5950,11 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child th, #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child th.fix, #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child td.fix {
@@ -5570,7 +5967,7 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead th.fix::before {
@@ -5578,13 +5975,13 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table tbody tr:first-child th, #container .M_right .contents .invest_area.greenblatt .thead2_table tbody tr:first-child td {
-  background-image: url("../img/gray_thline.gif");
+  background-image: url("/img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table tbody th, #container .M_right .contents .invest_area.greenblatt .thead2_table tbody td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -5651,11 +6048,11 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area .thead2_table thead {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .sectors_area .thead2_table thead tr:first-child th, #container .M_right .contents .sectors_area .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .sectors_area .thead2_table thead tr:first-child th.fix, #container .M_right .contents .sectors_area .thead2_table thead tr:first-child td.fix {
@@ -5668,7 +6065,7 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .sectors_area .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .sectors_area .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
 }
 
 #container .M_right .contents .sectors_area .thead2_table thead th.fix::before {
@@ -5676,13 +6073,13 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area .thead2_table tbody tr:first-child th, #container .M_right .contents .sectors_area .thead2_table tbody tr:first-child td {
-  background-image: url("../img/gray_thline.gif");
+  background-image: url("/img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 
 #container .M_right .contents .sectors_area .thead2_table tbody th, #container .M_right .contents .sectors_area .thead2_table tbody td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -5847,7 +6244,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child th, #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child td {
-  background: #fff url("../img/gray_thline.gif") repeat-x left top;
+  background: #fff url("/img/gray_thline.gif") repeat-x left top;
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child th.fix, #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child td.fix {
@@ -5897,7 +6294,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:nth-child(3) td {
-  background-image: url("../img/gray_tdline.gif");
+  background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
@@ -5929,7 +6326,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("../img/icon_check.svg") no-repeat 0 0;
+  background: url("/img/icon_check.svg") no-repeat 0 0;
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table .updown {
@@ -6060,7 +6457,7 @@ input[type='radio']:checked:before {
   top: 3px;
   width: 22px;
   height: 22px;
-  background: url("../img/sns_n.svg") no-repeat 0 0;
+  background: url("/img/sns_n.svg") no-repeat 0 0;
 }
 
 .modal.login_form .pop_con .sns li a.sns_n {
@@ -6072,7 +6469,7 @@ input[type='radio']:checked:before {
 }
 
 .modal.login_form .pop_con .sns li a.sns_n span::before {
-  background: url("../img/sns_n.svg") no-repeat 0 0;
+  background: url("/img/sns_n.svg") no-repeat 0 0;
 }
 
 .modal.login_form .pop_con .sns li a.sns_k {
@@ -6085,7 +6482,7 @@ input[type='radio']:checked:before {
 }
 
 .modal.login_form .pop_con .sns li a.sns_k span::before {
-  background: url("../img/sns_k.svg") no-repeat 0 0;
+  background: url("/img/sns_k.svg") no-repeat 0 0;
 }
 
 .modal.login_form .pop_con .guide_txt {
@@ -6224,7 +6621,7 @@ input[type='radio']:checked:before {
   left: -21px;
   width: 14px;
   height: 14px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 100%;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 100%;
   margin-right: 7px;
 }
 
@@ -6292,7 +6689,7 @@ input[type='radio']:checked:before {
 
 .modal.sign_complete .pop_con .loign_com .login_title {
   padding: 35px 33px;
-  background: #fff url("../img/bg_premium_top.svg") no-repeat 90% 70%;
+  background: #fff url("/img/bg_premium_top.svg") no-repeat 90% 70%;
   text-align: left;
 }
 
@@ -6432,7 +6829,7 @@ input[type='radio']:checked:before {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #374b9d url("../img/bg_premium_top.svg") no-repeat 93% bottom;
+  background: #374b9d url("/img/bg_premium_top.svg") no-repeat 93% bottom;
 }
 
 .modal.premium_join .pop_header .pop_title {
@@ -6540,7 +6937,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("../img/com_select.svg") no-repeat 0 0;
+  background: url("/img/com_select.svg") no-repeat 0 0;
 }
 
 .modal.premium_join .pop_foot {
@@ -6718,7 +7115,7 @@ input[type='radio']:checked:before {
   left: 0;
   width: 12px;
   height: 12px;
-  background: url("../img/icon_preinfo.svg") no-repeat 0 0;
+  background: url("/img/icon_preinfo.svg") no-repeat 0 0;
 }
 
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .i_dsc.error {
@@ -6728,7 +7125,7 @@ input[type='radio']:checked:before {
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .i_dsc.error::before {
   width: 12px;
   height: 12px;
-  background: url("../img/bg_error.png") no-repeat 0 0;
+  background: url("/img/bg_error.png") no-repeat 0 0;
   background-size: 12px 12px;
 }
 
@@ -6816,7 +7213,7 @@ input[type='radio']:checked:before {
   left: -21px;
   width: 14px;
   height: 14px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 100%;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 100%;
   margin-right: 7px;
 }
 
@@ -7414,7 +7811,7 @@ input[type='radio']:checked:before {
   content: '';
   width: 16px;
   height: 16px;
-  background: url("../img/icon_checkmark.png") no-repeat 100% 0;
+  background: url("/img/icon_checkmark.png") no-repeat 100% 0;
   position: absolute;
   right: 12px;
   top: 13px;
@@ -7621,7 +8018,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("../img/icon_moreL.png") no-repeat 0 0;
+  background: url("/img/icon_moreL.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -7632,7 +8029,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("../img/icon_moreRR.png") no-repeat 0 0;
+  background: url("/img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -7719,7 +8116,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("../img/bg_x.png") no-repeat 0 0;
+  background: url("/img/bg_x.png") no-repeat 0 0;
 }
 
 .mapage_form .form_table td .i_dsc.phone {
@@ -7843,7 +8240,7 @@ input[type='radio']:checked:before {
   top: -2px;
   width: 16px;
   height: 16px;
-  background: url("../img/icon_agreecheck.png") no-repeat 0 100%;
+  background: url("/img/icon_agreecheck.png") no-repeat 0 100%;
   margin-right: 7px;
 }
 
@@ -7924,7 +8321,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("../img/icon_moreRR.png") no-repeat 0 0;
+  background: url("/img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -8037,7 +8434,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("../img/icon_sale.png") no-repeat 0 0;
+  background: url("/img/icon_sale.png") no-repeat 0 0;
   margin-right: 5px;
 }
 
@@ -8094,7 +8491,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("../img/bg_x.png") no-repeat 0 0;
+  background: url("/img/bg_x.png") no-repeat 0 0;
 }
 
 .payment_guide .mapage_form .form_table td .i_dsc.coupon {
@@ -8276,7 +8673,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 16px;
   height: 16px;
-  background: url("../img/icon_agreecheck.png") no-repeat 0 100%;
+  background: url("/img/icon_agreecheck.png") no-repeat 0 100%;
   margin-right: 7px;
 }
 
@@ -8450,7 +8847,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 16px;
   height: 16px;
-  background: url("../img/icon_agreecheck.png") no-repeat 0 100%;
+  background: url("/img/icon_agreecheck.png") no-repeat 0 100%;
   margin-right: 7px;
 }
 
@@ -8503,13 +8900,13 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url("../img/select_on.png") no-repeat 0 100%;
+  background: url("/img/select_on.png") no-repeat 0 100%;
   background-size: 20px 20px;
   margin-right: 7px;
 }
 
 .payment_note .top .agree.active i {
-  background: url("../img/select.png") no-repeat 0 100%;
+  background: url("/img/select.png") no-repeat 0 100%;
   background-size: 20px 20px;
 }
 
@@ -8527,13 +8924,13 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url("../img/select_on.png") no-repeat 0 100%;
+  background: url("/img/select_on.png") no-repeat 0 100%;
   background-size: 20px 20px;
   margin-right: 7px;
 }
 
 .agree_chk .txt.active i {
-  background: url("../img/select.png") no-repeat 0 100%;
+  background: url("/img/select.png") no-repeat 0 100%;
   background-size: 20px 20px;
 }
 
@@ -8541,7 +8938,7 @@ input[type='radio']:checked:before {
   float: right;
   display: inline-block;
   padding: 11px 5px;
-  background: url("../img/more_Black.png") no-repeat center center;
+  background: url("/img/more_Black.png") no-repeat center center;
   font-size: 0;
   width: 7px;
   height: 12px;
@@ -8571,13 +8968,13 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url("../img/select_on.png") no-repeat 0 100%;
+  background: url("/img/select_on.png") no-repeat 0 100%;
   background-size: 20px 20px;
   margin-right: 7px;
 }
 
 .payment_chk .txt.active i {
-  background: url("../img/select.png") no-repeat 0 100%;
+  background: url("/img/select.png") no-repeat 0 100%;
   background-size: 20px 20px;
 }
 
@@ -8683,7 +9080,7 @@ input[type='radio']:checked:before {
   width: 12.5px;
   height: 15.5px;
   margin-right: 3px;
-  background: url("../img/banner/icon_alarm2.png") no-repeat 0 0;
+  background: url("/img/banner/icon_alarm2.png") no-repeat 0 0;
   background-size: 12.5px 15.5px;
   position: relative;
   top: 2px;
@@ -8722,7 +9119,7 @@ input[type='radio']:checked:before {
   height: 6px;
   padding: 0 1px;
   margin-right: 3px;
-  background: url("../img/more_Black.png") no-repeat 0 0;
+  background: url("/img/more_Black.png") no-repeat 0 0;
   background-size: 3px 6px;
   position: relative;
   top: -2px;
@@ -8730,7 +9127,7 @@ input[type='radio']:checked:before {
 
 /* 가입 - 결제완료 step 03 */
 .pay03 .step_top {
-  background: #fff url("../img/bg_payment_com.png") no-repeat 105% 22px;
+  background: #fff url("/img/bg_payment_com.png") no-repeat 105% 22px;
   min-height: 175px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

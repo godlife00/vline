@@ -272,12 +272,12 @@
         thead {        
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                 }                    
             }
             tr:nth-child(2) {
                 th, td {
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top;        
                 }                    
             }
 
@@ -301,7 +301,7 @@
                         bottom: 1px;
                         width: 12px;                                
                         height: 58px;
-                        background:url('../img/fix_shadow.svg') repeat-y 0 0;                        
+                        background:url('/img/fix_shadow.svg') repeat-y 0 0;                        
                     }
                 } 
             }

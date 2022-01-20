@@ -220,7 +220,7 @@
                             top: 0;                                            
                             bottom: 31px;
                             width: 1px;                        
-                            background: url('../img/sub_dotline.svg') repeat-y 0 0;                            
+                            background: url('/img/sub_dotline.svg') repeat-y 0 0;                            
                         }      
                     li {
                         border: none;                                                    
@@ -293,7 +293,7 @@
                     line-height: 1.69;
                     letter-spacing: -0.33px;                    
                     color: #656d7e;
-                    background: url('../img/service_box_icon.svg') no-repeat left top;                    
+                    background: url('/img/service_box_icon.svg') no-repeat left top;                    
                 }
                 &:nth-child(1) {
                     a {
@@ -352,7 +352,7 @@
             position: relative;            
             margin-top: 23px;
             padding-bottom: 7px;
-            background: url('../img/dot_gray.png') repeat-x left bottom;            
+            background: url('/img/dot_gray.png') repeat-x left bottom;            
             ul {
                 display: flex;
                 li {                
@@ -385,7 +385,7 @@
             position: relative;            
             width: 100%;
             margin-top: 23px;                        
-            background: url('../img/dot_gray.png') repeat-x left bottom;            
+            background: url('/img/dot_gray.png') repeat-x left bottom;            
             &::after {
                 content: "";
                 display: table;
@@ -468,7 +468,7 @@
                     padding-right: 23px;    
                     margin-bottom: 6px;
                     margin-right: 15px;     
-                    background: url('../img/bg_blue.jpg') repeat-x 0 calc(100% + 2px);                    
+                    background: url('/img/bg_blue.jpg') repeat-x 0 calc(100% + 2px);                    
                     &::after {
                         content: '';
                         width: 4px;
@@ -993,7 +993,7 @@
                             top: 2px;
                             width: 14px;
                             height: 14px;
-                            background: url('../img/check_img.svg') no-repeat 0 100%;                            
+                            background: url('/img/check_img.svg') no-repeat 0 100%;                            
                         }
                         &.active {
                             color: #3655d6;                            

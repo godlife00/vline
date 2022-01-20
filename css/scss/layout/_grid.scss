@@ -30,7 +30,7 @@ body {
 #container {    
     @include pad(0);  
     @include width_minmax;        
-    // background: url('../img/temp.jpg') no-repeat center -42px;
+    // background: url('/img/temp.jpg') no-repeat center -42px;
     padding-top: 14px;
     position: relative;
 
@@ -60,12 +60,12 @@ body {
 
 #footer {
     @include pad(0);   
+    padding-bottom: 24px;
     margin-top: 80px; 
     min-height: 50px;
     background:#dee1ea;
     .w_box {
-        @include width_minmax;
-        padding: 25px 0;
+        @include width_minmax;        
     }
 }
 
@@ -106,7 +106,7 @@ body {
         background-color: #fff;
         padding: 8.5px 17px;
         box-sizing: border-box;        
-        background: #fff url('../img/gray_tdline.gif') repeat-x left bottom;        
+        background: #fff url('/img/gray_tdline.gif') repeat-x left bottom;        
         strong {
             font-size: 13px;
             font-weight: $f_sizeB;
@@ -175,7 +175,7 @@ body {
             font-size: 12px;       
             color: #7389af;            
             text-align: center;                        
-            background: url('../img/gray_thline.gif') repeat-x left bottom;        
+            background: url('/img/gray_thline.gif') repeat-x left bottom;        
             span {
                 color: #7389af;                            
             }
@@ -220,7 +220,7 @@ body {
         }        
         tbody {
             .fix {
-                background: #fff url('../img/gray_tdline.gif') repeat-x left bottom, #fff url('../img/gray_tdline.gif') repeat-y right top;                
+                background: #fff url('/img/gray_tdline.gif') repeat-x left bottom, #fff url('/img/gray_tdline.gif') repeat-y right top;                
                 
                 &::before {
                     content: attr(data-content) ' any other text you may want';
@@ -231,7 +231,7 @@ body {
                     bottom: 0;
                     width: 12px;              
                     height: 100%;                                                                              
-                    background:url('../img/fix_shadow.svg') repeat-y 0 0;
+                    background:url('/img/fix_shadow.svg') repeat-y 0 0;
                     opacity: 0.75;                    
                 }
             }            
@@ -273,7 +273,7 @@ body {
                         top: 1px;
                         bottom: 0;
                         width: 12px;                                                        
-                        background: url('../img/fix_shadow.svg') repeat-y 0 0;                
+                        background: url('/img/fix_shadow.svg') repeat-y 0 0;                
                         opacity: 0.75;
                     }
                 }                           
@@ -312,7 +312,7 @@ body {
                 top: 0;
                 bottom: 0;
                 width: 1px;
-                background: #fff url('../img/gray_tdline.gif') repeat-y right top;                
+                background: #fff url('/img/gray_tdline.gif') repeat-y right top;                
                 
             }            
         }
@@ -523,7 +523,7 @@ input[type='radio']:checked:before {
         vertical-align: top;
     }
     .starR {
-        background:url('../img/ico_review.svg') no-repeat 50% 0;
+        background:url('/img/ico_review.svg') no-repeat 50% 0;
         background-size:auto 100%;	
         display:inline-block;
         text-indent:-9999px;
@@ -667,7 +667,7 @@ input[type='radio']:checked:before {
 	right:0;
 	width:26px;
 	height:26px;
-	background:url('../img/select.png') no-repeat 0 0;
+	background:url('/img/select.png') no-repeat 0 0;
 }
 .selectbox label {
 	position:absolute;

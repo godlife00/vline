@@ -54,9 +54,9 @@
         tbody {
             td {
                 padding: 5px 0;
-                &.name {                        
-                    width: 190px;
-                    max-width: 190px;                                                    
+                &.name {      
+                    width: 180px;
+                    max-width: 180px;                                                    
 
                     a {
                         @include white-space;
@@ -322,7 +322,7 @@
         @mixin tabarea {
             ul {
                 display: flex;
-                background: url('../img/dot_gray.png') repeat-x left calc(100% + 1px);
+                background: url('/img/dot_gray.png') repeat-x left calc(100% + 1px);
                 li {                                    
                     cursor: pointer;
                     font-size: 20px;
@@ -390,7 +390,7 @@
                     font-size: 16px;                    
                     letter-spacing: -0.4px;                    
                     color: #222;                    
-                    background: #eceff5 url('../img/icon_chartFill.svg') no-repeat 13px center;
+                    background: #eceff5 url('/img/icon_chartFill.svg') no-repeat 13px center;
                     strong {
                         color: #3655d6; 
                         font-weight: $f_sizeB;
@@ -574,7 +574,7 @@
         }
     }
 
-    // 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트
+    // 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트, 최신 실적 재무데이터
     .btm_layBox {        
         clear: both;
         position: relative;
@@ -587,7 +587,7 @@
             clear: both;
         }
         
-        // 업종별 재무비율, 마켓차트
+        // 업종별 재무비율, 마켓차트, 최신 실적 재무데이터
         .left {            
             min-height: 100px;
             float: left;            
@@ -651,6 +651,9 @@
                                     letter-spacing: -0.35px;
                                     color: #656d7e;                                    
                                     padding: 5px 0;
+                                    padding-right: 5px;
+                                    box-sizing: border-box;
+                                    text-align: right;
 
                                     &.name {                        
                                         width: 150px;
@@ -756,6 +759,254 @@
                     }
                 }
             }
+            // 최신 실적 재무데이터
+            .result_box {                
+                margin-top: 45px;
+                margin-bottom: 55px;
+                .title {
+                    font-size: 20px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;                    
+                    color: #3655d6;                    
+                }
+                .line_swbox {                    
+                    position: relative;                    
+                    .table_update {
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        font-size: 12px;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
+                        text-align: right;
+                        color: #b1b9cb;              
+                    } 
+                    .table_div {                        
+                        position: relative;
+                        float: left;
+                        width: calc(100% / 2 - 20px);                        
+                        
+                        &:last-child {                                                
+                            float: right;                            
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: -20px;                    
+                                top: 47px;
+                                width: 1px;
+                                height: 106px;                    
+                                background-color: #e7eaf2;                    
+                            }      
+                        }
+                        
+                        .table {                    
+                            width: 100%;
+                            th, td {
+                                padding: 9px 0 6px;
+                                background: none;                                
+                            }
+                            thead {
+                                th {
+                                    font-size: 12px;
+                                    font-weight: normal;                                    
+                                    letter-spacing: -0.3px;                                    
+                                    color: #b1b9cb;                                    
+                                }
+                            }
+                            tbody {
+                                td {
+                                    font-size: 14px;                                                                        
+                                    letter-spacing: -0.35px;
+                                    color: #656d7e;                                    
+                                    padding: 5px 0;
+
+                                    &.name {                        
+                                        width: 150px;
+                                        max-width: 150px;                                                   
+                                        a {
+                                            @include white-space;
+                                            display: table-cell;
+                                            width: 100%;
+                                            max-width: 150px;                                                    
+                                            padding-right: 20px;
+                                            box-sizing: border-box;
+                                            font-size: 14px;
+                                            font-weight: $f_sizeB;
+                                            letter-spacing: -0.35px;                                
+                                            color: #222;
+                                        }
+                                    }
+                                }
+                            }                                                        
+                        } 
+                    }
+                    .result_boxswiper .swiper-wrapper .swiper-slide {                        
+                        border-top: 2px solid #7389af;
+                        border-bottom: 1px solid #bdc8d8;
+                        padding-bottom: 10px;
+                        margin-top: 15px;
+                    }
+                    .swiper-container-horizontal > .swiper-pagination-bullets {
+                        top: 6px;                        
+                        bottom: auto;
+                        text-align: left;
+                        padding-left: 185px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet {                        
+                        width: 10px;
+                        height: 10px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet-active {
+                        width: 30px;
+                        border-radius: 90px;
+                    }
+                    
+                }
+
+                // 최신 실적 재무데이터
+                .season_data {
+                    padding: 9px 0 0;             
+                    &::after {            
+                        content: "";
+                        display: table;
+                        table-layout: fixed;
+                        clear: both;
+                    }
+                    .season_table {        
+                        position: relative;    
+                        // width: calc(50% - 2.5%);                            
+                        width: 100%;
+                        box-sizing: border-box;
+                        &:first-child {
+                            margin-bottom: 40px;
+                        }
+                        &:first-child::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -20px;
+                            height: 1px;
+                            width: 100%;
+                            background-color: #e7eaf2;
+                        }
+                        &:last-child {
+                            thead {
+                                visibility: collapse;
+                            }
+                        }
+
+                        th, td {
+                            text-align: left;                
+                            vertical-align: middle;
+                            font-size: 16px;                    
+                            letter-spacing: -0.4px;                    
+                            color: #222;
+                            &.txt_c {
+                                text-align: center;
+                            }   
+                        }
+                        thead {
+                            th {
+                                padding-bottom: 3px;
+                                font-size: 12px;                    
+                                letter-spacing: -0.3px;                    
+                                color: #b1b9cb;
+                            }
+                        }   
+                        tbody {
+                            td {
+                                padding: 5px 0;
+                                &.dvsion {
+                                    display: inline-block;
+                                    vertical-align: sub;
+                                    border-radius: 3px;
+                                    padding: 1px 5px;
+                                    background-color: #d9e6ff;
+                                    font-size: 10px;
+                                    font-weight: $f_sizeS;                            
+                                    letter-spacing: -0.5px;
+                                    text-align: center;
+                                    color: #656d7e;                                                
+                                    &.result {
+                                        color: #fff;
+                                        background-color: #97a3c9;                                
+                                    }                
+                                }
+                                &.name {               
+                                    width: 210px;                                             
+                                    max-width: 210px;                                                    
+
+                                    a {
+                                        @include white-space;
+                                        display: table-cell;
+                                        width: 100%;
+                                        max-width: 210px;                                                    
+                                        padding-right: 20px;
+                                        box-sizing: border-box;
+                                        font-size: 16px;
+                                        font-weight: $f_sizeB;
+                                        letter-spacing: -0.4px;                                
+                                        color: #222;
+                                    }
+                                }
+                                &.up, &.down {
+                                    .price {
+                                        font-size: 16px;                                
+                                        letter-spacing: -0.4px;                                
+                                        color: #222;
+                                    }                        
+                                    .per {
+                                        padding-left: 2px;                                
+                                        font-size: 12px;                                
+                                        letter-spacing: -0.3px;                                
+                                        color: #d30000;
+                                    }
+                                }
+                                &.down {
+                                    .per {                            
+                                        color: #0052ff;
+                                    }                        
+                                }
+                                &.cpson {
+                                    text-align: center;                            
+                                    font-size: 14px;                                                        
+                                    letter-spacing: -0.35px;
+                                    &.deficit {
+                                        color: #d30000;
+                                    }        
+                                    &.bk_check {
+                                        color: #0052ff;
+                                    }                    
+                                }
+                                &.trans {
+                                    text-align: center;
+                                    span {
+                                        display: inline-block;
+                                        padding: 1px 3px;
+                                        font-size: 10px;                            
+                                        letter-spacing: -0.5px;
+                                        text-align: center;
+                                        border-radius: 3px;                            
+                                    }
+                                    &.deficit {
+                                        span {
+                                            border: 1px solid #1e51f5;
+                                            color: #0052ff;
+                                        }                                        
+                                    }        
+                                    &.bk_check {
+                                        span {
+                                            border: 1px solid #d30000;
+                                            color: #d30000;
+                                        }
+                                    }           
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         // 상승종목, 하락종목, 스파이더 차트
@@ -772,7 +1023,7 @@
                 .tab_area {
                     ul {
                         display: flex;                                      
-                        background: url('../img/dot_gray.png') repeat-x left bottom;
+                        background: url('/img/dot_gray.png') repeat-x left bottom;
                         li {                
                             flex: 1;
                             cursor: pointer;                            
@@ -789,7 +1040,7 @@
                                     height: 22px;
                                     padding: 3px 3px;
                                     box-sizing: border-box;                                
-                                    background: url('../img/tabcon_up.svg') no-repeat center bottom;                                                                    
+                                    background: url('/img/tabcon_up.svg') no-repeat center bottom;                                                                    
                                     filter: grayscale(100%);
                                 }
                                 &.active {                   
@@ -809,7 +1060,7 @@
                                     height: 22px;
                                     padding: 3px 3px;
                                     box-sizing: border-box;                                
-                                    background: url('../img/tabcon_down.svg') no-repeat center bottom;                                                                    
+                                    background: url('/img/tabcon_down.svg') no-repeat center bottom;                                                                    
                                     background-size: 12px 13px;
                                     filter: grayscale(100%);
                                 }
@@ -1013,7 +1264,7 @@
                         top: 0;
                         width: 83px;
                         height: 100%;
-                        background: $colpmr url('../img/bg_filechart.svg') no-repeat center center;
+                        background: $colpmr url('/img/bg_filechart.svg') no-repeat center center;
                     }
                 }
                 
@@ -1222,17 +1473,15 @@
                             }
                             &.deficit {
                                 span {
-                                    border: 1px solid #d30000;
-                                    color: #d30000;
-                                }
-                                
-                            }        
-                            &.bk_check {
-                                span {
                                     border: 1px solid #1e51f5;
                                     color: #0052ff;
                                 }
-                                
+                            }        
+                            &.bk_check {
+                                span {
+                                    border: 1px solid #d30000;
+                                    color: #d30000;
+                                }                               
                             }      
                                           
                         }

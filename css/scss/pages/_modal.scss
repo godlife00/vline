@@ -87,7 +87,7 @@
                                 top: 3px;
                                 width: 22px;                            
                                 height: 22px;
-                                background: url('../img/sns_n.svg') no-repeat 0 0;    
+                                background: url('/img/sns_n.svg') no-repeat 0 0;    
                             }     
                         }                        
                         
@@ -96,7 +96,7 @@
                             span {                                
                                 color: #fff;
                                 &::before {                                    
-                                    background: url('../img/sns_n.svg') no-repeat 0 0;                                
+                                    background: url('/img/sns_n.svg') no-repeat 0 0;                                
                                 }                        
                             }  
                         }
@@ -106,7 +106,7 @@
                             span {                                
                                 color: #333;
                                 &::before {                                    
-                                    background: url('../img/sns_k.svg') no-repeat 0 0;                                
+                                    background: url('/img/sns_k.svg') no-repeat 0 0;                                
                                 }                        
                             }  
                         }
@@ -238,7 +238,7 @@
                             left: -21px;
                             width:14px;
                             height:14px;
-                            background: url('../img/icon_agreecheck.svg') no-repeat 100% 100%;
+                            background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
                             margin-right:7px;
                         }
                         &.active {
@@ -285,7 +285,7 @@
            .loign_com {
                .login_title {                  
                     padding: 35px 33px;
-                    background: #fff url('../img/bg_premium_top.svg') no-repeat 90% 70%;
+                    background: #fff url('/img/bg_premium_top.svg') no-repeat 90% 70%;
                     text-align: left;
 
                     .title {         
@@ -385,7 +385,7 @@
         .pop_header {
             padding: 25px 30px 30px;
             margin: 0; width: 100%; box-sizing: border-box;            
-            background: $colpmr url('../img/bg_premium_top.svg') no-repeat 93% bottom;
+            background: $colpmr url('/img/bg_premium_top.svg') no-repeat 93% bottom;
             .pop_title {
                 font-size: 24px;
                 font-weight: $f_sizeB;
@@ -486,7 +486,7 @@
                                 display: inline-block;
                                 width: 16px;
                                 height: 12px;
-                                background: url('../img/com_select.svg') no-repeat 0 0;
+                                background: url('/img/com_select.svg') no-repeat 0 0;
                             }
                         }
                     }
@@ -620,14 +620,14 @@
                                     left: 0;                                    
                                     width:12px;
                                     height:12px;                                    
-                                    background: url('../img/icon_preinfo.svg') no-repeat 0 0;
+                                    background: url('/img/icon_preinfo.svg') no-repeat 0 0;
                                 }
                                 &.error {
                                     color: #ff0200;                                                     
                                     &::before {                                        
                                         width:12px;
                                         height:12px;                                    
-                                        background: url('../img/bg_error.png') no-repeat 0 0;
+                                        background: url('/img/bg_error.png') no-repeat 0 0;
                                         background-size: 12px 12px;
                                     }
                                     
@@ -710,7 +710,7 @@
                                     left: -21px;
                                     width:14px;
                                     height:14px;
-                                    background: url('../img/icon_agreecheck.svg') no-repeat 100% 100%;
+                                    background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
                                     margin-right:7px;
                                 }
                                 &.active {
@@ -1162,7 +1162,7 @@
 	content:'';
 	width:16px;
 	height:16px;
-	background:url('../img/icon_checkmark.png') no-repeat 100% 0;
+	background:url('/img/icon_checkmark.png') no-repeat 100% 0;
 	position:absolute;
 	right:12px;
 	top:13px;
@@ -1341,7 +1341,7 @@
 	display:inline-block;
 	width:5px;
 	height:10px;
-	background:url('../img/icon_moreL.png') no-repeat 0 0;
+	background:url('/img/icon_moreL.png') no-repeat 0 0;
 	background-size:cover;
 }
 .payBtn .btn_save i {
@@ -1351,7 +1351,7 @@
 	display:inline-block;
 	width:5px;
 	height:10px;
-	background:url('../img/icon_moreRR.png') no-repeat 0 0;
+	background:url('/img/icon_moreRR.png') no-repeat 0 0;
 	background-size:cover;
 }
 .step_box .pay_line {
@@ -1424,7 +1424,7 @@
 	display:inline-block;
 	width:14px;
 	height:14px;
-	background:url('../img/bg_x.png') no-repeat 0 0;
+	background:url('/img/bg_x.png') no-repeat 0 0;
 }
 .mapage_form .form_table td .i_dsc.phone {
 	color:#ff0200;
@@ -1528,7 +1528,7 @@
 	top:-2px;
 	width:16px;
 	height:16px;
-	background:url('../img/icon_agreecheck.png') no-repeat 0 100%;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
 	margin-right:7px;
 }
 .sub_freeguide .agree_area .agree_from .label .label_chk strong {
@@ -1596,7 +1596,7 @@
 	display:inline-block;
 	width:5px;
 	height:10px;
-	background:url('../img/icon_moreRR.png') no-repeat 0 0;
+	background:url('/img/icon_moreRR.png') no-repeat 0 0;
 	background-size: cover;
 }
 /* 가입 - 결제하기 step 02 */
@@ -1690,7 +1690,7 @@
 	display:inline-block;
 	width:13px;
 	height:13px;
-	background:url('../img/icon_sale.png') no-repeat 0 0;
+	background:url('/img/icon_sale.png') no-repeat 0 0;
 	margin-right:5px;
 }
 .payment_guide .mapage_form {
@@ -1738,7 +1738,7 @@
 	display:inline-block;
 	width:14px;
 	height:14px;
-	background:url('../img/bg_x.png') no-repeat 0 0;
+	background:url('/img/bg_x.png') no-repeat 0 0;
 }
 .payment_guide .mapage_form .form_table td .i_dsc.coupon {
 	color:#ff0200;
@@ -1893,7 +1893,7 @@
 	vertical-align:top;
 	width:16px;
 	height:16px;
-	background:url('../img/icon_agreecheck.png') no-repeat 0 100%;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
 	margin-right:7px;
 }
 .payment_note .note_chk .txt.active i {
@@ -2041,7 +2041,7 @@
 	vertical-align:top;
 	width:16px;
 	height:16px;
-	background:url('../img/icon_agreecheck.png') no-repeat 0 100%;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
 	margin-right:7px;
 }
 .card_info span.bns_num.active i {
@@ -2085,12 +2085,12 @@
 	vertical-align:top;
 	width:20px;
 	height:20px;
-	background:url('../img/select_on.png') no-repeat 0 100%;
+	background:url('/img/select_on.png') no-repeat 0 100%;
 	background-size:20px 20px;
 	margin-right:7px;
 }
 .payment_note .top .agree.active i {
-	background:url('../img/select.png') no-repeat 0 100%;
+	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
 .agree_chk {}
@@ -2107,19 +2107,19 @@
 	vertical-align:top;
 	width:20px;
 	height:20px;
-	background:url('../img/select_on.png') no-repeat 0 100%;
+	background:url('/img/select_on.png') no-repeat 0 100%;
 	background-size:20px 20px;
 	margin-right:7px;
 }
 .agree_chk .txt.active i {
-	background:url('../img/select.png') no-repeat 0 100%;
+	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
 .agree_chk .age_link {
 	float:right;
 	display:inline-block;
 	padding:11px 5px;
-	background:url('../img/more_Black.png') no-repeat center center;
+	background:url('/img/more_Black.png') no-repeat center center;
 	font-size:0;
 	width:7px;
 	height:12px;
@@ -2146,12 +2146,12 @@
 	vertical-align:top;
 	width:20px;
 	height:20px;
-	background:url('../img/select_on.png') no-repeat 0 100%;
+	background:url('/img/select_on.png') no-repeat 0 100%;
 	background-size:20px 20px;
 	margin-right:7px;
 }
 .payment_chk .txt.active i {
-	background:url('../img/select.png') no-repeat 0 100%;
+	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
 .help_nicepay {
@@ -2242,7 +2242,7 @@
 	width:12.5px;
 	height:15.5px;
 	margin-right:3px;
-	background:url('../img/banner/icon_alarm2.png') no-repeat 0 0;
+	background:url('/img/banner/icon_alarm2.png') no-repeat 0 0;
 	background-size:12.5px 15.5px;
 	position:relative;
 	top:2px;
@@ -2276,14 +2276,14 @@
 	height:6px;
 	padding:0 1px;
 	margin-right:3px;
-	background:url('../img/more_Black.png') no-repeat 0 0;
+	background:url('/img/more_Black.png') no-repeat 0 0;
 	background-size:3px 6px;
 	position:relative;
 	top: -2px;
 }
 /* 가입 - 결제완료 step 03 */
 .pay03 .step_top {
-	background:#fff url('../img/bg_payment_com.png') no-repeat 105% 22px;
+	background:#fff url('/img/bg_payment_com.png') no-repeat 105% 22px;
 	min-height:175px;
 	box-sizing:border-box;
 }

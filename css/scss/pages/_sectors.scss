@@ -32,10 +32,10 @@
             padding: 8.5px 12px;
         }        
         thead {    
-            background: #fff url('../img/gray_thline.gif') repeat-x left top;                    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: 60px;
                         &::before {
@@ -48,7 +48,7 @@
             tr:nth-child(2) {
                 th, td {
                     padding: 4px 3px;
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top !important;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
                 }                                    
             }         
             
@@ -63,13 +63,13 @@
         tbody {
             tr:first-child {
                 th, td {
-                    background-image: url('../img/gray_thline.gif');
+                    background-image: url('/img/gray_thline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }                    
             }  
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                    
                 height: 34px;                
@@ -244,7 +244,7 @@
             }            
             tr:first-child {                                
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: auto;
                         &::before {
@@ -292,7 +292,7 @@
             tr:nth-child(3) {          
                                 
                 td {
-                    background-image: url('../img/gray_tdline.gif');
+                    background-image: url('/img/gray_tdline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }             
@@ -319,7 +319,7 @@
                     display: inline-block;
                     width: 16px;
                     height: 12px;                    
-                    background: url('../img/icon_check.svg') no-repeat 0 0;
+                    background: url('/img/icon_check.svg') no-repeat 0 0;
                 }             
             }            
         }

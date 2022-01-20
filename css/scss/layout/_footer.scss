@@ -1,1 +1,97 @@
 /* 푸터 footer */
+#footer .w_box {         
+    .service_info {                
+        padding: 12px 0 10px;
+        border-bottom: 1px solid #b1b9cb;
+        p {
+            font-size: 13px;
+            font-weight: normal;            
+            line-height: 1.54;
+            letter-spacing: -0.33px;            
+            color: #7389af;
+        }
+    }    
+    .f_btm {
+        display: flex;        
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .terms_list {
+        padding: 15px 0 0;        
+        .terms {
+            display: flex;
+            gap: 18px;
+        }
+        .terms li {
+            display: inline-block;
+            a {
+                font-size: 13px;            
+                letter-spacing: -0.33px;            
+                color: #656d7e;            
+                strong {
+                    font-weight: $f_sizeB;
+                }
+            }
+        }
+    }
+    .foot_info {
+        margin-top: 45px;
+        .copyright, .copyright a {
+            font-size: 13px;            
+            line-height: 1.54;
+            letter-spacing: -0.33px;
+            color: #656d7e;
+            i {
+                display: inline-block;
+                margin: 0 8px;                
+                width: 1px;
+                height: 13px;
+                background-color: #b1b9cb;
+                vertical-align: middle;
+            }
+        }
+
+    }
+    .family_site {                
+        .title {
+            display: inline-block;
+            font-family: 'SpoqaHanSansNeo';
+            font-size: 13px;
+            font-weight: $f_sizeB;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.54;
+            letter-spacing: -0.33px;
+            text-align: left;
+            color: #39509a;
+        }
+        ul {
+            display: inline-block;            
+            padding-left: 20px;
+            margin-left: 20px;
+            border-left: 1px solid #b1b9cb;
+            li a {
+                position: relative;
+                display: inline-block;
+                font-size: 13px;                                
+                padding: 3px 0;
+                padding-right: 13px;
+                letter-spacing: -0.33px;                
+                color: #656d7e;
+                &::after {
+                    content: '';
+                    width: 4px;
+                    height: 4px;
+                    border-top: 1px solid #b1b9cb;
+                    border-right: 1px solid #b1b9cb;
+                    display: inline-block;                    
+                    transform: rotate(45deg);
+                    position: absolute;
+                    right: 1px;
+                    top: 10px;
+                  }
+                  
+            }
+        }        
+    }
+}
