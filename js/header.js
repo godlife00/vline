@@ -10,6 +10,20 @@ $(document).ready(function () {
 
     $('#header').load(urlRoute + 'common/' + htmlRoute, function () {
 
+        console.log("해더js");
+        // 상단 검색바
+        $('.searchArea form .searchInput').on("focusout", function () {            
+            $('.searchArea .AutoComplete').hide();
+        });
+        $('.searchArea form .searchInput').on("keydown", function () {            
+            $('.searchArea .AutoComplete').show();
+        });
+        $('.searchArea .AutoComplete li').removeClass('active');
+        $('.searchArea .AutoComplete li').on("mouseover", function () {            
+            $('.searchArea .AutoComplete li').removeClass('active')
+            $(this).addClass('active');
+        });
+
         // active
         $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function () {
             $(this).toggleClass('active');
