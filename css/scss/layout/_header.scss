@@ -86,7 +86,7 @@
             .AutoComplete {  
                 border-bottom-left-radius: 5px;          
                 border-bottom-left-radius: 5px;                          
-                // display: inline-block;
+                display: none;                
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -96,6 +96,7 @@
                 padding: 0;
                 border:1px solid #ececec;
                 z-index: 85;
+                width: 500px;
                 max-height: 185px;
                 overflow: auto;
                 overflow-x: hidden;                

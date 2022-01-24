@@ -11,6 +11,20 @@ $(document).ready(function () {
     $('#header').load(urlRoute + 'common/' + htmlRoute, function () {
 
         console.log("해더js");
+        $(function () {
+            $('.gnb ul li').removeClass('active'); //재무분석
+            var loc = window.location.href; // returns the full URL            
+            if (/analysis/.test(loc)) {
+                $('.gnb ul li.analysis').addClass('active'); //재무분석
+            } else if (/excavation/.test(loc)) {
+                $('.gnb ul li.excavation').addClass('active'); // 종목발굴
+            } else if (/invest/.test(loc)) {
+                $('.gnb ul li.invest').addClass('active'); // 투자대가        
+            } else if (/sectors/.test(loc)) {
+                $('.gnb ul li.sectors').addClass('active'); // 업종분석
+            }
+        });
+        
         // 상단 검색바
         $('.searchArea form .searchInput').on("focusout", function () {            
             $('.searchArea .AutoComplete').hide();
