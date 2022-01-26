@@ -111,6 +111,9 @@ body {
             font-size: 13px;
             font-weight: $f_sizeB;
         }
+        .deci {
+            display: inline-block;            
+        }
         .unit {
             opacity: 0.9;            
             padding-left: 1px;
@@ -335,6 +338,12 @@ body {
             }            
         }
     }    
+
+    &.txtInt {
+        td span.deci {
+            display: none;            
+        }
+    }
 }
 
 .table-scroll {

@@ -1,6 +1,6 @@
 <div class="bgWrap">
     <div class="title">
-        <h1 class="h1_logo"><a href=" ../index.html"><img src="../img/h1_logo.png" alt="벨류라인"></a></h1>        
+        <h1 class="h1_logo"><a href=" ../index.html"><img src="../img/h1_logo.png" alt="벨류라인"></a></h1>
     </div>
     <div class="gnb">
         <ul>
@@ -20,53 +20,38 @@
         <!-- 검색어 자동완성 -->
         <div class="AutoComplete">
             <!-- //자동완성 결과 노출 class : _show -->
-            <ul>
-                <li>
-                    <a href="">
-                        <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="">
-                        <strong>삼성전</strong>기(009150)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성전</strong>기(009150)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성전</strong>기(009150)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성전</strong>기(009150)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성전</strong>기(009150)
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <strong>삼성전</strong>기(009150)
-                    </a>
-                </li>
+            <ul id="autocomplete_list">
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
             </ul>
+            <div class="no_result" style="display: none;">
+                <p>"<strong></strong>"에 대한 검색결과가 없습니다.</p>
+            </div>
+            <!--<ul>
+                <li>
+                    <a href="">
+                        <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
+                    </a>
+                </li>
+            </ul>-->
         </div>
         <!-- //AutoComplete 검색어 자동완성 끝 -->
     </div>
@@ -79,7 +64,7 @@
                 <!-- <a href="#" class="logout">로그아웃</a> -->
             </span>
             <!-- //log -->
-        </div>        
+        </div>
     </div>
 </div>
 <!-- //header_bgWrap -->
@@ -118,7 +103,7 @@
         </a>
     </div>
     <!-- 비회원인 경우 -->
-    <div class="pop_con">        
+    <div class="pop_con">
         <div class="loign_chk">
             <div class="id_chk">
                 <p class="sns_name">네이버 아이디</p>
@@ -126,7 +111,7 @@
             </div>
             <!-- //id_chk -->
         </div>
-        <!-- //loign_chk -->        
+        <!-- //loign_chk -->
 
         <div class="agree_area">
             <p class="txt">서비스 이용을 위해 약관을 확인하시고 동의해주세요.</p>
@@ -153,7 +138,7 @@
     </div>
 
     <!-- 기존 회원인 경우 -->
-    <div class="pop_con">        
+    <div class="pop_con">
         <div class="loign_chk">
             <div class="id_chk">
                 <p class="sns_name">네이버 아이디</p>
@@ -161,16 +146,16 @@
             </div>
             <!-- //id_chk -->
         </div>
-        <!-- //loign_chk -->        
+        <!-- //loign_chk -->
         <p class="member_sum"><b>초이스스탁 통합회원 아이디입니다.</b> (가입일 2021. 12/23)</p>
 
         <div class="agree_area">
-            <p class="member_txt"><b>밸류라인 프리미엄 2주 무료 체험이 제공됩니다.</b> (최초 1회) </p>            
+            <p class="member_txt"><b>밸류라인 프리미엄 2주 무료 체험이 제공됩니다.</b> (최초 1회) </p>
             <p class="txt">서비스 이용을 위해 약관을 확인하시고 동의해주세요.</p>
             <div class="agree_from">
                 <div class="label">
-                    <p class="label_chk active">프리미엄 서비스 무료체험 이용 동의(필수)</p>                    
-                </div>                
+                    <p class="label_chk active">프리미엄 서비스 무료체험 이용 동의(필수)</p>
+                </div>
                 <div class="label sub_label">
                     <p class="label_chk">뉴스레터, 특별 프로모션 정보를 수신합니다. (선택)</p>
                 </div>
@@ -200,7 +185,7 @@
                 <p class="txt">신규 회원에게는 밸류라인 프리미엄 2주 무료체험이 제공됩니다.<br>밸류라인 프리미엄서비스를 마음껏 체험해보세요!</p>
                 <p class="txt_sum">(무료체험은 최초 1회만 제공되며, 기간 만료 시 자동 종료됩니다.)</p>
             </div>
-            
+
             <!-- 기존 회원인 경우 -->
             <div class="login_title">
                 <h2 class="title"><strong>밸류라인 프리미엄</strong><br>2주 무료체험 시작!</h2>
@@ -208,7 +193,7 @@
                 <p class="txt_sum">(무료체험은 최초 1회만 제공되며, 기간 만료 시 자동 종료됩니다.)</p>
             </div>
 
-            <div class="">                
+            <div class="">
                 <div class="prm_guide">
                     <h3 class="title">밸류라인 프리미엄</h3>
                     <p class="sum">종목발굴 서비스와 데이터를 무제한으로 이용하세요.</p>
@@ -225,10 +210,10 @@
             </div>
 
             <div class="btnArea">
-                <a href="../index.html" class="join_btn">홈으로 이동</a>                
+                <a href="../index.html" class="join_btn">홈으로 이동</a>
             </div>
         </div>
-    </div>    
+    </div>
 </div>
 
 
@@ -493,19 +478,19 @@
 
             <div class="att_service">
                 <h3 class="title">사용중인 유료서비스</h3>
-                <table cellspacing="0" border="0" class="service_list">                    
+                <table cellspacing="0" border="0" class="service_list">
                     <tbody>
                         <tr>
                             <th class="th"><span class="cunt">1</span>밸류라인 프리미엄</th>
-                            <td class="td">21.09/01~21.10/01 <span>월자동</span></td>                            
+                            <td class="td">21.09/01~21.10/01 <span>월자동</span></td>
                         </tr>
                         <tr>
                             <th class="th"><span class="cunt">2</span>초이스스탁US 프리미엄</th>
-                            <td class="td">21.09/01~21.10/01 <span>기간결제</span></td>                            
+                            <td class="td">21.09/01~21.10/01 <span>기간결제</span></td>
                         </tr>
                         <tr>
                             <th class="th"><span class="cunt">3</span>인더스트리워치 프리미엄</th>
-                            <td class="td">21.09/01~21.10/01 <span>무통장</span></td>                            
+                            <td class="td">21.09/01~21.10/01 <span>무통장</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -757,7 +742,7 @@
                 </ul>
                 <ul class="guide">
                     <li class="th">결제금액</li>
-                    <li class="td_txt"><strong>33,000</strong>원 <span>(부가세포함)</span></li>                    
+                    <li class="td_txt"><strong>33,000</strong>원 <span>(부가세포함)</span></li>
                 </ul>
                 <ul class="guide">
                     <li class="th">결제수단</li>
@@ -768,17 +753,19 @@
             <div class="payment_note">
                 <ul class="note">
                     <li><span>결제 확인 및 취소/환불 신청은 ‘마이페이지’에서 확인</span>할 수 있습니다.<br>
-                        <a href="#" class="mod_btn">마이페이지</a></li>
-                    <li>고객센터 <a href="tel:0262252300">02)6225-2300</a>, <a href="mailto:hero@datahero.co.kr">hero@datahero.co.kr</a><br>
+                        <a href="#" class="mod_btn">마이페이지</a>
+                    </li>
+                    <li>고객센터 <a href="tel:0262252300">02)6225-2300</a>, <a
+                            href="mailto:hero@datahero.co.kr">hero@datahero.co.kr</a><br>
                         (평일 09:00~17:00 (주말, 공휴일 제외), 점심시간 (11:30~12:30)</li>
                 </ul>
             </div>
 
             <div class="btnArea modBtn">
-                <a href="#" class="btn btn_save">서비스 메인으로</a>                
+                <a href="#" class="btn btn_save">서비스 메인으로</a>
             </div>
 
         </div>
-        
+
     </div>
 </div>

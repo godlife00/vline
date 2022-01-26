@@ -32,10 +32,10 @@ $(document).ready(function () {
         $('.searchArea form .searchInput').on("keydown", function () {            
             $('.searchArea .AutoComplete').show();
         });
-        $('.searchArea .AutoComplete li').removeClass('active');
+        $('.searchArea .AutoComplete li').removeClass('_on');
         $('.searchArea .AutoComplete li').on("mouseover", function () {            
-            $('.searchArea .AutoComplete li').removeClass('active')
-            $(this).addClass('active');
+            $('.searchArea .AutoComplete li').removeClass('_on')
+            $(this).addClass('_on');
         });
 
         // active

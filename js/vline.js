@@ -11,10 +11,10 @@ $(document).ready(function () {
         $('.searchArea form .searchInput').on("keydown", function () {            
             $('.searchArea .AutoComplete').show();
         });
-        $('.searchArea .AutoComplete li').removeClass('active');
+        $('.searchArea .AutoComplete li').removeClass('_on');
         $('.searchArea .AutoComplete li').on("mouseover", function () {            
-            $('.searchArea .AutoComplete li').removeClass('active')
-            $(this).addClass('active');
+            $('.searchArea .AutoComplete li').removeClass('_on')
+            $(this).addClass('_on');
         });
 
         // active
@@ -246,10 +246,6 @@ $(document).ready(function () {
         $('#container .M_right .page_drop ul').slideToggle('fast');
     });
 
-    // table 좌측 고정
-    $(".fix_table").clone(true).appendTo('#table-scroll').addClass('clone');
-
-
     // 종목발굴 우량주 정렬 박스
     $('#container .M_right .contents_header .data_filter .set_box .set_filter .mid .sort_box .sort li').on('click', function () {
         $("#container .M_right .contents_header .data_filter .set_box .set_filter .mid .sort_box .sort li").removeClass("active");
@@ -352,4 +348,11 @@ $(document).ready(function () {
         },
     });
 
+    // table 좌측 고정
+    $(".fix_table").clone(true).appendTo('#table-scroll').addClass('clone');
+
+    // 소수점 체크
+    $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
+        $('.table.fix_table').toggleClass('txtInt');
+    });
 });

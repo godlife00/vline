@@ -1066,7 +1066,8 @@
                     <div id="tab1" class="tab_content">
                         <div id="table-scroll" class="table-scroll">
                             <div class="fix_wrap">
-                                <table cellspacing="0" border="0" class="table fix_table">
+                                <!-- 소수점 숨김처리 인 경우 class = txtInt -->
+                                <table cellspacing="0" border="0" class="table fix_table txtInt">
                                     <thead>
                                         <tr>
                                             <th class="fix txt_L"><strong>손익계산서</strong></th>
@@ -1087,10 +1088,10 @@
                                     <tbody>
                                         <tr>
                                             <th class="depth_1 fix txt_L"><strong>매출액(수익)</strong></th>
-                                            <td>2,569.043</td>
-                                            <td>2,569,043</td>
-                                            <td>2,569,043</td>
-                                            <td>2,569,043</td>
+                                            <!-- 숨김 처리되는 소수점은 class = deci -->
+                                            <td>90<span class="deci">.043</span></td>
+                                            <td>69,043<span class="deci">.043</span></td>
+                                            <td>2,569<span class="deci">.043</span></td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
