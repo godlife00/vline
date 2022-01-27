@@ -27,9 +27,9 @@ body {
         @include width_minmax;
     }
 }
-#container {    
-    @include pad(0);  
+#container {        
     @include width_minmax;        
+    @include pad(0);  
     // background: url('/img/temp.jpg') no-repeat center -42px;
     padding-top: 14px;
     position: relative;

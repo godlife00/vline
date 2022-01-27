@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $('#header').load(urlRoute + 'common/' + htmlRoute, function () {
 
-        console.log("해더js");
+        console.log("로컬해더js");
         $(function () {
             $('.gnb ul li').removeClass('active'); //재무분석
             var loc = window.location.href; // returns the full URL            

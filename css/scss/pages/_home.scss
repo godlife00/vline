@@ -865,6 +865,8 @@
 
                 // 최신 실적 재무데이터
                 .season_data {
+                    display: flex;
+                    justify-content: space-between;
                     padding: 9px 0 0;             
                     &::after {            
                         content: "";
@@ -873,27 +875,12 @@
                         clear: both;
                     }
                     .season_table {        
-                        position: relative;    
-                        // width: calc(50% - 2.5%);                            
-                        width: 100%;
+                        position: relative;                            
+                        width: 100%;                        
                         box-sizing: border-box;
-                        &:first-child {
-                            margin-bottom: 40px;
-                        }
-                        &:first-child::after {
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            right: 0;
-                            bottom: -20px;
-                            height: 1px;
-                            width: 100%;
-                            background-color: #e7eaf2;
-                        }
-                        &:last-child {
-                            thead {
-                                visibility: collapse;
-                            }
+                        background-color: blanchedalmond;
+                        &:nth-child(2) {
+                            margin-left: 30px;                            
                         }
 
                         th, td {
@@ -930,18 +917,20 @@
                                     color: #656d7e;                                                
                                     &.result {
                                         color: #fff;
-                                        background-color: #97a3c9;                                
+                                        background-color: #b1b9cb;                                
                                     }                
                                 }
                                 &.name {               
-                                    width: 210px;                                             
-                                    max-width: 210px;                                                    
+                                    padding-left: 10px;                                    
+                                    width: 100px;                                             
+                                    max-width: 100px;                                                    
 
                                     a {
+                                        background-color: blanchedalmond;
                                         @include white-space;
                                         display: table-cell;
                                         width: 100%;
-                                        max-width: 210px;                                                    
+                                        max-width: 100px;                                                    
                                         padding-right: 20px;
                                         box-sizing: border-box;
                                         font-size: 16px;
