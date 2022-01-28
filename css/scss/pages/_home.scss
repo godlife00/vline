@@ -740,7 +740,7 @@
 
                 .line_swbox {
                     border-top: 2px solid #7389af;                    
-                    margin-top: 17px;
+                    margin-top: 15px;
                     .treemap_style {
                         height: 555px;           
                         text {                   
@@ -761,8 +761,8 @@
             }
             // 최신 실적 재무데이터
             .result_box {                
-                margin-top: 45px;
-                margin-bottom: 55px;
+                margin-top: 45px;                
+                // margin-bottom: 55px;
                 .title {
                     font-size: 20px;
                     font-weight: $f_sizeB;
@@ -814,7 +814,7 @@
                                 }
                             }
                             tbody {
-                                td {
+                                td {                                                     
                                     font-size: 14px;                                                                        
                                     letter-spacing: -0.35px;
                                     color: #656d7e;                                    
@@ -835,7 +835,7 @@
                                             letter-spacing: -0.35px;                                
                                             color: #222;
                                         }
-                                    }
+                                    }                                    
                                 }
                             }                                                        
                         } 
@@ -877,10 +877,18 @@
                     .season_table {        
                         position: relative;                            
                         width: 100%;                        
-                        box-sizing: border-box;
-                        background-color: blanchedalmond;
+                        box-sizing: border-box;                        
                         &:nth-child(2) {
                             margin-left: 30px;                            
+                        }
+                        &:first-child::after {
+                            content: '';
+                            position: absolute;                            
+                            right: -12px;
+                            bottom: 5px;
+                            width: 1px;                        
+                            height: 107px;                            
+                            background-color: #e7eaf2;
                         }
 
                         th, td {
@@ -895,7 +903,7 @@
                         }
                         thead {
                             th {
-                                padding-bottom: 3px;
+                                padding-bottom: 5px;
                                 font-size: 12px;                    
                                 letter-spacing: -0.3px;                    
                                 color: #b1b9cb;
@@ -903,13 +911,14 @@
                         }   
                         tbody {
                             td {
-                                padding: 5px 0;
+                                padding: 5px 2px;
+                                font-size: 14px;                                
                                 &.dvsion {
-                                    display: inline-block;
-                                    vertical-align: sub;
+                                    display: inline-block;                                    
                                     border-radius: 3px;
                                     padding: 1px 5px;
-                                    background-color: #d9e6ff;
+                                    // background-color: #d9e6ff;
+                                    background-color: red;
                                     font-size: 10px;
                                     font-weight: $f_sizeS;                            
                                     letter-spacing: -0.5px;
@@ -922,26 +931,27 @@
                                 }
                                 &.name {               
                                     padding-left: 10px;                                    
-                                    width: 100px;                                             
-                                    max-width: 100px;                                                    
+                                    width: 80px;                                             
+                                    max-width: 80px;                                                    
 
                                     a {
-                                        background-color: blanchedalmond;
                                         @include white-space;
                                         display: table-cell;
                                         width: 100%;
-                                        max-width: 100px;                                                    
+                                        max-width: 95px;                                                    
                                         padding-right: 20px;
                                         box-sizing: border-box;
-                                        font-size: 16px;
+                                        font-size: 14px;
                                         font-weight: $f_sizeB;
                                         letter-spacing: -0.4px;                                
                                         color: #222;
                                     }
-                                }
-                                &.up, &.down {
+                                }                                
+                                &.up, &.down {                                    
+                                    text-align: right;
+                                    padding-right: 5px;
                                     .price {
-                                        font-size: 16px;                                
+                                        font-size: 14px;                                
                                         letter-spacing: -0.4px;                                
                                         color: #222;
                                     }                        
@@ -959,7 +969,7 @@
                                 }
                                 &.cpson {
                                     text-align: center;                            
-                                    font-size: 14px;                                                        
+                                    font-size: 12px;                                                        
                                     letter-spacing: -0.35px;
                                     &.deficit {
                                         color: #d30000;
@@ -973,20 +983,18 @@
                                     span {
                                         display: inline-block;
                                         padding: 1px 3px;
-                                        font-size: 10px;                            
+                                        font-size: 12px;                            
                                         letter-spacing: -0.5px;
                                         text-align: center;
                                         border-radius: 3px;                            
                                     }
                                     &.deficit {
-                                        span {
-                                            border: 1px solid #1e51f5;
+                                        span {                                            
                                             color: #0052ff;
                                         }                                        
                                     }        
                                     &.bk_check {
-                                        span {
-                                            border: 1px solid #d30000;
+                                        span {                                            
                                             color: #d30000;
                                         }
                                     }           
@@ -1016,7 +1024,7 @@
                         li {                
                             flex: 1;
                             cursor: pointer;                            
-                            padding: 7px 0 10px;
+                            padding: 7px 0 8px;
                             text-align: center;                                      
                             font-size: 18px;                            
                             letter-spacing: -0.45px;                            
@@ -1208,15 +1216,13 @@
                     }                    
                 }
             }            
-
         }
-
     }    
 
     // 하단 배너    
     .btm_banner {
         background-color: #dbdfed;
-        margin-top: 30px;
+        margin-top: 60px;
         a, img {
             display: inline-block;
             width: 100%;

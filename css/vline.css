@@ -3698,7 +3698,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .left .market_box .line_swbox {
   border-top: 2px solid #7389af;
-  margin-top: 17px;
+  margin-top: 15px;
 }
 
 .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style {
@@ -3723,7 +3723,6 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .left .result_box {
   margin-top: 45px;
-  margin-bottom: 55px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .title {
@@ -3860,11 +3859,20 @@ input[type='radio']:checked:before {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: blanchedalmond;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:nth-child(2) {
   margin-left: 30px;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:first-child::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  bottom: 5px;
+  width: 1px;
+  height: 107px;
+  background-color: #e7eaf2;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table th, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table td {
@@ -3880,22 +3888,22 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table thead th {
-  padding-bottom: 3px;
+  padding-bottom: 5px;
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #b1b9cb;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td {
-  padding: 5px 0;
+  padding: 5px 2px;
+  font-size: 14px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion {
   display: inline-block;
-  vertical-align: sub;
   border-radius: 3px;
   padding: 1px 5px;
-  background-color: #d9e6ff;
+  background-color: red;
   font-size: 10px;
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -3910,12 +3918,11 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.name {
   padding-left: 10px;
-  width: 100px;
-  max-width: 100px;
+  width: 80px;
+  max-width: 80px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.name a {
-  background-color: blanchedalmond;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -3924,17 +3931,22 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 100px;
+  max-width: 95px;
   padding-right: 20px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.4px;
   color: #222;
 }
 
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down {
+  text-align: right;
+  padding-right: 5px;
+}
+
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price {
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.4px;
   color: #222;
 }
@@ -3952,7 +3964,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: -0.35px;
 }
 
@@ -3971,19 +3983,17 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans span {
   display: inline-block;
   padding: 1px 3px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: -0.5px;
   text-align: center;
   border-radius: 3px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans.deficit span {
-  border: 1px solid #1e51f5;
   color: #0052ff;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans.bk_check span {
-  border: 1px solid #d30000;
   color: #d30000;
 }
 
@@ -4005,7 +4015,7 @@ input[type='radio']:checked:before {
       -ms-flex: 1;
           flex: 1;
   cursor: pointer;
-  padding: 7px 0 10px;
+  padding: 7px 0 8px;
   text-align: center;
   font-size: 18px;
   letter-spacing: -0.45px;
@@ -4224,7 +4234,7 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_banner {
   background-color: #dbdfed;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .valueline #wrap #container .btm_banner a, .valueline #wrap #container .btm_banner img {
@@ -4569,10 +4579,31 @@ input[type='radio']:checked:before {
           flex-grow: 1;
 }
 
-#container .M_right .contents .bic_chartbox .chart_line .con_box .left img {
-  display: inline-block;
+#container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC {
+  background-color: red;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style {
+  background-color: #f7f7f8;
   width: 100%;
   height: 340px;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style .highcharts-title {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.85px;
+  text-align: center;
+  color: #222;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style .highcharts-title tspan {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  fill: #3655d6;
+  color: #3655d6;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box .right {

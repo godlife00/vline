@@ -289,77 +289,111 @@ $(document).ready(function () {
     }
 
     //BIC 스파이더 차트 테스트
-    if ($('#containercharm_test').length) {
+    if ($('#BICchart_temp01').length) {        
 
-        Highcharts.chart('containercharm_test', {
+        Highcharts.chart('BICchart_temp01', {
             chart: {
-                polar: true,
-                backgroundColor: {                    
+                type: 'spline',
+                zoomType: 'xy',
+                renderTo: 'BICchart_temp01',
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
                         [0, '#ffffff'],
                         [1, '#ffffff']
                     ]
-                },                
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 70,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
             },
-            colors: ["#014B8D", "#549EF4", "#CCD1D5"],
+
+            colors: ["#DBDFED", "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
             title: {
-                text: null,
+                text: '매출액 & 이익차트 <span>삼성전자 (005930)</span>',                
+                y: 20,                
             },
+
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 달러</b><br/>'
             },
-            pane: {
-                startAngle: 0,
-                endAngle: 360
-            },
-            xAxis: {
-                categories: ['미래성장성', '사업<br>독점력', '현금창출력', '수익성장성', '재무<br>안전성'],
-                tickmarkPlacement: 'on',
-                lineWidth: 0,                
-                max: 5,                
-            },
-            yAxis: {
-                gridLineInterpolation: 'polygon',
-                minorGridLineColor: '#E0E0E0',
-                tickInterval: 1.07,
-                min: 0,
-                max: 5,
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
                 labels: {
-                    enabled: false
-                }
-            },
-            exporting: {
-                enabled: false
-            },
+                    format: '{value}억',
+                    style: {
+                        color: ["#DBDFED"],
+                    }
+                },
+            }, {// 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#3655D6"],
+                    }
+                },
+                opposite: true
+            }, {// 3
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#37C60C"],
+                    }
+                },
+                opposite: true
+            }],
+            
+
             credits: {
                 enabled: false
             },
-            legend: {
-                enabled: false,
+
+            exporting: {
+                enabled: false
             },
+
             series: [{
-                type: 'area',                
-                name: '데이터1',
-                data: [5, 3, 4, 4.5, 3],                
-                pointPlacement: 'on',
-                marker: {
-                    enabled: true,
-                }
+                name: '매출액(좌)',                
+                type: 'column',                
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131]
             }, {
-                type: 'area',
-                name: '데이터2',                
-                data: [4, 4, 3, 4, 4],
-                pointPlacement: 'on',
+                name: '영업이익(우)',                               
+                yAxis: 1,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11]
+            }, {
+                name: '순이익(지배)(우)',                        
+                yAxis: 2,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31]
             }],
+
             plotOptions: {
                 series: {
-                    lineWidth: 1,
-                    fillOpacity: 0.3,
-                    marker: {
-                        enabled: false,
-                    }
-                },                
+                    // marker: {
+                    //     enabled: false,
+                    // }
+                }
             },
         });
     }

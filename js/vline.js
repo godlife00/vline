@@ -207,8 +207,12 @@ $(document).ready(function () {
         $('.table tr.hide_line').toggle();
     });
     $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
-        $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide');
-    })
+        $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide');        
+    })    
+    $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function() {
+        $('.highcharts-root').append( "<div>Handler for .resize() called.</div>" );
+      });
+
 
     // 자세히보기 열기닫기
     $('#container .M_right .sum_box .more').on('click', function () {
