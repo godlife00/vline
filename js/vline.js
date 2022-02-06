@@ -207,8 +207,9 @@ $(document).ready(function () {
         $('.table tr.hide_line').toggle();
     });
     $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
-        $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide');        
+        // $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide'); 차트 리사이즈 버튼, 차트js에 넣어서 여기선 주석처리   
     })    
+    
     $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function() {
         $('.highcharts-root').append( "<div>Handler for .resize() called.</div>" );
       });

@@ -203,7 +203,7 @@ body .numCunt::before {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 52;
   min-width: 1000px;
   height: 42px;
   -webkit-box-sizing: border-box;
@@ -4545,8 +4545,11 @@ input[type='radio']:checked:before {
   letter-spacing: -0.35px;
   color: #fff;
   background-color: #3655d6;
-  width: 24px;
+  min-width: 24px;
   height: 24px;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 24px;
   text-align: center;
   margin-right: 12px;
@@ -4608,9 +4611,27 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box .right {
   width: calc(100% - 540px);
+  padding-right: 5px;
+  overflow: auto;
+  max-height: 340px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-left: 40px;
   -webkit-transition: width 0.35s;
   transition: width 0.35s;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right::-webkit-scrollbar {
+  width: 8px;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right::-webkit-scrollbar-thumb {
+  background-color: #BDC8D8;
+  border-radius: 8px;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right::-webkit-scrollbar-track {
+  background-color: #E7EAF2;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box .right.hide {
@@ -4643,10 +4664,41 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box .right .txt {
   font-size: 13px;
-  line-height: 1.77;
   letter-spacing: -0.33px;
   color: #656d7e;
   padding-bottom: 17px;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right .txt span {
+  color: #656d7e;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right .txt b {
+  color: #656d7e;
+  font-weight: 700;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right .tip {
+  background: #edf3ff;
+  padding: 3px 8px;
+  margin-bottom: 15px;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right .tip .title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.35px;
+  color: #374b9d;
+  padding: 0;
+  padding-bottom: 4px;
+  border-top: 1px solid #e8eaf1;
+}
+
+#container .M_right .contents .bic_chartbox .chart_line .con_box .right .tip .txt {
+  font-size: 12px;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+  padding: 0;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box::after {

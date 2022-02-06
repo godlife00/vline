@@ -288,16 +288,15 @@ $(document).ready(function () {
         });
     }
 
-    //BIC 스파이더 차트 테스트
-    if ($('#BICchart_temp01').length) {        
 
-        Highcharts.chart('BICchart_temp01', {
+
+    //재무분석 BIC 차트 - 매출액 & 이익차트
+    if ($('#BICchart_temp01').length) {    
+        var reflowchart01 = Highcharts.chart('BICchart_temp01', {
             chart: {
                 type: 'spline',
-                zoomType: 'xy',
-                renderTo: 'BICchart_temp01',
-                backgroundColor: {
-                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                zoomType: 'xy',                
+                backgroundColor: {                    
                     stops: [
                         [0, '#ffffff'],
                         [1, '#ffffff']
@@ -307,7 +306,7 @@ $(document).ready(function () {
                     fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
                 },
                 marginTop: 60,
-                marginBottom: 70,
+                marginBottom: 90,
                 plotBorderColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
@@ -321,8 +320,7 @@ $(document).ready(function () {
             },
 
             tooltip: {
-                shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 달러</b><br/>'
+                shared: true,                
             },
 
             xAxis: [{
@@ -338,7 +336,7 @@ $(document).ready(function () {
                 labels: {
                     format: '{value}억',
                     style: {
-                        color: ["#DBDFED"],
+                        color: ["#656d7e"],
                     }
                 },
             }, {// 2
@@ -348,7 +346,7 @@ $(document).ready(function () {
                 labels: {
                     format: '{value}억',
                     style: {
-                        color: ["#3655D6"],
+                        color: ["#656d7e"],
                     }
                 },
                 opposite: true
@@ -359,7 +357,7 @@ $(document).ready(function () {
                 labels: {
                     format: '{value}억',
                     style: {
-                        color: ["#37C60C"],
+                        color: ["#656d7e"],
                     }
                 },
                 opposite: true
@@ -377,26 +375,2613 @@ $(document).ready(function () {
             series: [{
                 name: '매출액(좌)',                
                 type: 'column',                
-                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131]
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
             }, {
                 name: '영업이익(우)',                               
                 yAxis: 1,
-                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11]
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
             }, {
                 name: '순이익(지배)(우)',                        
-                yAxis: 2,
-                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31]
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
             }],
 
             plotOptions: {
                 series: {
-                    // marker: {
-                    //     enabled: false,
-                    // }
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
                 }
             },
+        });            
+    }       
+    //재무분석 BIC 차트 - 매출액지수 & 순이익지수
+    if ($('#BICchart_temp02').length) {    
+        var reflowchart02 = Highcharts.chart('BICchart_temp02', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '매출액지수 & 순이익지수 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '영업수익(매출)지수',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }, {
+                name: '순이익지수',                        
+                yAxis: 0,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });        
+                    
+    }  
+    //재무분석 BIC 차트 - 이익률
+    if ($('#BICchart_temp03').length) {    
+        var reflowchart03 = Highcharts.chart('BICchart_temp03', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '이익률 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '영업이익률',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '순이익률(지배)',                        
+                yAxis: 0,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });        
+                    
+    }  
+
+    if ($('#BICchart_temp04').length) {    
+        var reflowchart04 = Highcharts.chart('BICchart_temp04', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '매출원가율 & 판관비율 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '매출원가율[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '판관비율[우]',                        
+                yAxis: 0,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });        
+                    
+    }  
+
+    if ($('#BICchart_temp05').length) {    
+        var reflowchart05 = Highcharts.chart('BICchart_temp05', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '영업외손익률 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '영업외손익',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '외환',                        
+                yAxis: 0,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '파생상품',                        
+                yAxis: 0,
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '금융자산',                        
+                yAxis: 0,
+                data: [272, 232, 237, 269, 227, 231, 272, 232, 237, 269, 227, 231],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '자산,투자자산',                        
+                yAxis: 0,
+                data: [372, 332, 337, 369, 327, 331, 372, 332, 337, 369, 327, 331],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '이자',                        
+                yAxis: 0,
+                data: [472, 432, 437, 469, 427, 431, 472, 432, 437, 469, 427, 431],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });        
+                    
+    } 
+    if ($('#BICchart_temp06').length) {    
+        var reflowchart06 = Highcharts.chart('BICchart_temp06', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 순이익지수 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, {// 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주가[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '순이익지수[우]',                        
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp07').length) {    
+        var reflowchart07 = Highcharts.chart('BICchart_temp07', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '부채비율과 유동비율 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, {// 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '부채비율[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '유동비율[우]',                        
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp08').length) {    
+        var reflowchart08 = Highcharts.chart('BICchart_temp08', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '차입금과 차입금 비중 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, {// 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '차입금[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '차입금 비중[우]',                        
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp09').length) {    
+        var reflowchart09 = Highcharts.chart('BICchart_temp09', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '영업이익과 이자비용 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, {// 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '영업이익[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '이자비용[우]',                        
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp10').length) {    
+        var reflowchart10 = Highcharts.chart('BICchart_temp10', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '이자보상배율 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '이자보상배율',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp11').length) {    
+        var reflowchart11 = Highcharts.chart('BICchart_temp11', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '차입금과 금융비용비율 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+            
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '차입금[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '금융비용[우]',                               
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp12').length) {    
+        var reflowchart12 = Highcharts.chart('BICchart_temp12', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자산구조 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '장기자본',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '자기자본',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '고정자산',                                               
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '유형자산',                                               
+                data: [272, 232, 237, 269, 227, 231, 272, 232, 237, 269, 227, 231],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '투자자산',                                               
+                data: [372, 332, 337, 369, 327, 331, 372, 332, 337, 369, 327, 331],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp13').length) {    
+        var reflowchart13 = Highcharts.chart('BICchart_temp13', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '이익축적 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '이익잉여금',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '당좌자산',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '투자자산',                                               
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '유형자산',                                               
+                data: [272, 232, 237, 269, 227, 231, 272, 232, 237, 269, 227, 231],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp14').length) {    
+        var reflowchart14 = Highcharts.chart('BICchart_temp14', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 110,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주주자본 구조 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '자본총계',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '사업(이익잉여금)',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '주주(자본금+자본잉여금)',                                               
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '재테크(기타포괄손익)',                                               
+                data: [272, 232, 237, 269, 227, 231, 272, 232, 237, 269, 227, 231],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '기타자본)',                                               
+                data: [372, 332, 337, 369, 327, 331, 372, 332, 337, 369, 327, 331],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp15').length) {    
+        var reflowchart15 = Highcharts.chart('BICchart_temp15', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: ["#DBDFED", "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '배당금 & 시가배당률 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '배당금[좌]',                               
+                type: 'column',    
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '시가배당률[우]',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp16').length) {    
+        var reflowchart16 = Highcharts.chart('BICchart_temp16', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '배당성향 & 시가배당률 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '배당성향[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '시가배당률[우]',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp17').length) {    
+        var reflowchart17 = Highcharts.chart('BICchart_temp17', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자기자본이익률(ROE) & 주가순자산배수(PBR) <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'ROE[좌]',                               
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: 'PBR[우]',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp18').length) {    
+        var reflowchart18 = Highcharts.chart('BICchart_temp18', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자기자본이익률(듀퐁분석) <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }, { // 3
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '순이익률[좌]',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '총자산회전율[우]',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],                
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }, {
+                name: '재무레버리지[우]',                                               
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],  
+                yAxis: 1,                              
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp19').length) {    
+        var reflowchart19 = Highcharts.chart('BICchart_temp19', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: 'ROA & ROIC & ROE <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'ROA',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: 'ROIC',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],                                
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: 'ROE',                                               
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],                  
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp20').length) {    
+        var reflowchart20 = Highcharts.chart('BICchart_temp20', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '운전자본 회전일수 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}일',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '매출채권 회전일수',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 일</b><br/>'
+                },
+            }, {
+                name: '재고자산 회전일수',                                               
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],                                
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 일</b><br/>'
+                },
+            }, {
+                name: '매입채무 회전일수',                                               
+                data: [172, 132, 137, 169, 127, 131, 172, 132, 137, 169, 127, 131],                  
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 일</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp21').length) {    
+        var reflowchart21 = Highcharts.chart('BICchart_temp21', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '현금회전일수(CCC:Cash Conversion Cycle) <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}일',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '현금 회전일수',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 일</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp22').length) {    
+        var reflowchart22 = Highcharts.chart('BICchart_temp22', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '현금흐름 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '영업활동 현금흐름',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '투자활동 현금흐름',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '재무활동 현금흐름',                                               
+                data: [242, 252, 257, 269, 297, 211, 242, 252, 257, 269, 297, 211],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp23').length) {    
+        var reflowchart23 = Highcharts.chart('BICchart_temp23', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '잉여현금흐름(FCF) & 순이익 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '잉여현금흐름',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '당기순이익',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp24').length) {    
+        var reflowchart24 = Highcharts.chart('BICchart_temp24', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '매출액 잉여현금흐름 비율 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '(잉여현금흐름/매출액)X100',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp25').length) {    
+        var reflowchart25 = Highcharts.chart('BICchart_temp25', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '가치평가지표 PER <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'PER',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp26').length) {    
+        var reflowchart26 = Highcharts.chart('BICchart_temp26', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 주당순이익 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'PER',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: 'PER',                                               
+                data: [121, 12, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],                
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp27').length) {    
+        var reflowchart27 = Highcharts.chart('BICchart_temp27', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '가치평가지수 PBR <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'PBR',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_temp28').length) {    
+        var reflowchart28 = Highcharts.chart('BICchart_temp28', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 주당순자산 <span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주가',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '주당순자산',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                        
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    
+    // 차트 리사이즈 버튼
+    $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
+        $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggle(0, function(){
+            reflowchart01.reflow();
+            reflowchart02.reflow();
+            reflowchart03.reflow();
+            reflowchart04.reflow();
+            reflowchart05.reflow();
+            reflowchart06.reflow();
+            reflowchart07.reflow();
+            reflowchart08.reflow();
+            reflowchart09.reflow();
+            reflowchart10.reflow();
+            reflowchart11.reflow();
+            reflowchart12.reflow();
+            reflowchart13.reflow();
+            reflowchart14.reflow();
+            reflowchart15.reflow();
+            reflowchart16.reflow();
+            reflowchart17.reflow();
+            reflowchart18.reflow();
+            reflowchart19.reflow();
+            reflowchart20.reflow();
+            reflowchart21.reflow();
+            reflowchart22.reflow();
+            reflowchart23.reflow();
+            reflowchart24.reflow();
+            reflowchart25.reflow();
+            reflowchart26.reflow();
+            reflowchart27.reflow();
+            reflowchart28.reflow();
         });
-    }
+    });    
 
     //MRI 스파이더 차트 테스트
     if ($('#containerfinancials1_1').length) {

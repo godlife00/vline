@@ -51,7 +51,7 @@
 
 <body class="valueline">
     <div id="wrap">
-        
+
         <!-- 헤더 -->
         <div id="header" class="main_hdr"></div>
 
@@ -141,7 +141,8 @@
                 <div class="service_box">
                     <ul>
                         <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502" target="_black">업데이트 소식</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                                target="_black">업데이트 소식</a></li>
                         <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
                 </div>
@@ -187,7 +188,7 @@
                         <li><a href=""><i>3</i>영업활동을 통해 번 돈이 어떤 자산으로 쌓이는가?</a></li>
                         <li><a href=""><i>4</i>영업활동을 통해 번 돈이 얼마나 빨리 쌓이는가?</a></li>
                         <li><a href=""><i>5</i>기업의 현금 창출 능력은 어떠한가?</a></li>
-                        <li><a href=""><i>6</i>싸게 거래되고 있는가?</a></li>                        
+                        <li><a href=""><i>6</i>싸게 거래되고 있는가?</a></li>
                     </ul>
                 </div>
                 <!-- //page_drop -->
@@ -259,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- 재무분석 -->
                 <div class="contents sub_con">
                     <div class="analysis bic_chartbox">
@@ -272,18 +273,54 @@
 
                             <div class="con_box">
                                 <div class="left">
-                                    <div class="chart_BIC">                                        
-                                        <div id="BICchart_temp01" class="BICchart_style"  style="width: 100%;"></div>
+                                    <div class="chart_BIC">
+                                        <!--  매출액 & 이익차트 -->
+                                        <div id="BICchart_temp01" class="BICchart_style"></div>
                                     </div>
                                 </div>
-                                <!-- //chart_wrap -->
+                                <!-- //left -->
                                 <div class="right">
                                     <h4 class="title">차트설명</h4>
-                                    <p class="txt">기업의 운전자본인 매출채권, 재고자산, 매입채무에 대한 회전일수를 확인할 수 있는 차트입니다.</p>
+                                    <p class="txt">연결 기업(모회사 + 연결대상 종속기업)의 전체 매출액과 영업이익, 순이익 금액과 추이를 알 수 있는 차트입니다.</p>
+                                    <div class="tip">
+                                        <h5 class="title">[아하!]</h5>
+                                        <p class="txt">
+                                            연결Tip : 연결 기준 매출액과 이익을 집계할 때는 모회사와 연결대상 종속기업의 거래는 제외합니다. 연결재무제표는 모회사와 종속기업을
+                                            하나의
+                                            기업처럼 보고 작성되기 때문입니다.
+                                            <br><br>
+                                            각 기간별 매출액과 이익을 나타냅니다.
+                                            <br><br>
+                                            분기: 각 분기별 매출액과 이익을 표시합니다.
+                                            <br><br>
+                                            연간: 각 연간별 매출액과 이익을 표시합니다. 최근 연도는 각 연도에 나온 분기 누적치입니다. 예를 들어 만약 2015년 2분기 실적까지
+                                            발표됐다면, 2015년에 표시된 매출액과 이익은 2015년 상반기(1분기 + 2분기) 수치입니다.
+                                            <br><br>
+                                            연환산: 최근 12개월간 합산 금액입니다. 예를 들어 2015년 1분기 금액은 해당 값에서 최근 12개월인 2014년 2분기 +
+                                            2014년
+                                            3분기 + 2014년 4분기 + 2015년 1분기로 계산합니다. 이렇게 계산하면 연간 실적에 대한 추정이 매우 빠르고 정확해 집니다.
+                                        </p>
+                                    </div>
                                     <h4 class="title">실전활용법</h4>
-                                    <p class="txt">매출채권 회전일수는 제품을 판매한 후, 현금으로 회수하는 데 걸리는 기간입니다.</p>
+                                    <p class="txt">
+                                        연결Tip: 연결 기준 실적과 개별 기준 실적의 차이가 큰 기업은 그만큼 자회사들이 기업가치에 미치는 영향이 크다는 의미입니다. 해외에 진출한
+                                        기업, 자회사를 통해 신사업을 전개하는 기업 등이 해당합니다.
+                                        <br><br>
+                                        우량 기업은 매출액이 꾸준히 상승합니다. 매출액이 정체되거나 하락하는 기업은 투자하기 전에 확인할 필요가 있습니다.
+                                        <br><br>
+                                        특히 이익이 줄어들거나, 적자를 기록하고 있는 기업의 경우 투자대상에서 제외하는 것이 좋습니다. 영업이익과 순이익이 적자를 기록하고 있는 기업도
+                                        투자 대상에서 제외하는 것이 좋습니다.
+                                        <br><br>
+                                        또한 최근 5년 이상 실적을 확인해 이익의 상하 변동 폭이 작은 기업을 매수하는 것이 좋습니다. 이익의 상하 변동 폭이 작고, 저점과 고점이
+                                        꾸준히 상승하는 기업은 이익의 안정성이 높은 '우량 기업'입니다.
+                                        이들 우량 기업은 PER이 낮을 때가 저평가 된 것으로 판단할 수 있습니다.
+                                        <br><br>
+                                        반면 이익의 상하 변동 폭이 크고, 흑자와 적자를 반복하는 기업은 '경기변동형' 기업 유형으로 장기 투자 대상으로 적합하지 않습니다. 경기변동형
+                                        기업은 PER이 낮을 때가 오히려 주가가 비싼 경우가 있으므로
+                                        투자에 유의해야 합니다.
+                                    </p>
                                 </div>
-                                <!-- //chart_exp -->
+                                <!-- //right -->
                             </div>
                             <!-- //con_box -->
                         </div>
@@ -298,18 +335,789 @@
 
                             <div class="con_box">
                                 <div class="left">
-                                    <div class="temp">
-                                        <img src="../img/temp_chart.png" alt="">
+                                    <div class="chart_BIC">
+                                        <!--  매출액지수 & 순이익지수 -->
+                                        <div id="BICchart_temp02" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">우량 기업은 매출과 순이익이 꾸준히 늘어납니다. 따라서 성장률을 나타내는 매출지수와 순이익지수 또한 높아집니다. 따라서 두
+                                        지수의 기울기가 우상향하면 매출과 순이익 성장률이 높아지고 있다는 것을 의미합니다.</p>
+                                    <div class="tip">
+                                        <h5 class="title">[아하!]</h5>
+                                        <p class="txt">
+                                            지수란 성장률을 의미합니다. 기준 시기를 100으로 정한 뒤, 현재 규모와 비교한 값이 지수입니다. 예를 들어 현재 매출액지수가
+                                            200이라면, 이는 기준 시점보다 매출액이 2배 늘었음을 의미합니다. 즉 매출액지수는 매출액이 얼마나 성장했는지, 순이익지수는 순이익이
+                                            얼마나 늘었는지를 보여줍니다.
+                                        </p>
+                                    </div>
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        매출지수와 순이익지수의 기울기가 급할수록 성장률이 높은 기업입니다. 투자자는 매출 & 순이익 지수 차트를 통해 성장기업, 우량기업,
+                                        경기변동형기업으로 나눠 투자전략을 세울 수 있습니다.
+                                        <br><br>
+                                        <b>성장 기업</b> : 지수의 기울기가 급하며, 순이익지수 기울기가 매출지수의 기울기보다 높게 나타납니다. 즉, 매출성장률보다 순이익성장률이
+                                        높게 나타납니다.
+                                        <br><br>
+                                        <b>우량 기업</b> : 지수의 기울기가 완만하며, 두 지수의 기울기가 비슷하게 나타납니다. 성숙기에 들어간 기업들이 주로 해당합니다. 경쟁이
+                                        끝난 후 안정적인 매출과 이익을 올리고 있어 안정된 수익률을 올리기에 적합해
+                                        초보투자자에게 잘 맞는 기업 유형입니다.
+                                        <br><br>
+                                        <b>경기변동형 기업</b> : 지수가 일정 주기로 오르락 내리락 하며 그 상하 폭이 큰 것이 특징입니다. 산업의 호황과 불황에 따라 매출과
+                                        이익의 변동이 크기 때문입니다. 특히 순이익지수의 변동 폭이 크고
+                                        마이너스(적자)를 기록하기도 합니다. 투자대가 피터 린치는 경기변동형기업에 투자하려면 "업황이 최악일 때 매수하고, 최고일 때 매도하라."고
+                                        조언한 바 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>3</i>이익률</h2>
+                                <p class="sub_title">- “이익률이 높은 기업에 투자하라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  이익률 -->
+                                        <div id="BICchart_temp03" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">기업의 영업이익률과 순이익률을 나타내는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        연결 Tip: 이익률 차트의 연결과 개별 기준을 비교하면, 자회사의 수익성을 간접적으로 확인할 수 있습니다. 연결 기준 영업이익률이 개별
+                                        기준보다 높으면, 자회사의 수익성이 모회사보다 높다는 의미입니다.
+                                        반대로 연결 기준 영업이익률이 개별 기준보다 낮으면, 자회사는 모회사보다 영업이익률이 낮다고 해석합니다.
+                                        <br><br>
+                                        영업이익률은 기업이 제품 등을 팔아 본업에서 얼마를 남기는지를 나타내는 지표입니다. 만약 영업이익률이 10%인 기업이라면, 1000원 어치
+                                        물건을 팔아 100원을 남긴다고 해석할 수 있습니다. 영업이익률은
+                                        기업의 영업능력을 판단하는 대표적인 지표 중 하나로, 투자자는 매출액과 함께 영업이익률을 고려해야 합니다. 매출액이 늘어나는 가운데,
+                                        영업이익률을 유지하거나 높인다면 ‘우량 기업’으로 볼 수 있습니다.
+                                        <br><br>
+                                        순이익률은 이자비용이나 법인세비용 등 모든 비용을 제외하고 최종적으로 얼마를 남겼는지를 나타내는 지표입니다. 따라서 일반적으로 영업이익률보다는
+                                        순이익률이 낮습니다.
+                                        <br><br>
+                                        대체로 영업이익률과 순이익률은 비슷하게 움직입니다. 하지만 때때로 영업이익률과 순이익률이 차이가 나는 경우가 있습니다. 영업이익률이 유지되거나
+                                        높아졌는데, 순이익률이 떨어지거나 적자를 냈다면 영업외활동에서
+                                        일시적으로 적자가 발생했을 가능성이 큽니다. 아래 영업외손익률 차트를 참고해 원인을 파악해보고, 적자가 일시적인지 앞으로도 반복해 발생할지
+                                        확인할 필요가 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>4</i>매출원가율</h2>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  매출원가율 & 판관비율 -->
+                                        <div id="BICchart_temp04" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">연결 기업(모회사 + 연결대상 종속기업)의 전체 매출액과 영업이익, 순이익 금액과 추이를 알 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        매출원가율과 판관비율은 기업의 이익률에 직접적인 영향을 미치는 요인입니다.
+                                        <br><br>
+                                        매출원가는 기업이 제품을 만드는 데 들어가는 비용을 뜻합니다. 매출원가율은 매출액에서 매출원가가 차지하는 비중입니다. 판관비는 기업이 제품을
+                                        판매하고 관리하는데 들어가는 비용이며, 판관비율은 매출액에서
+                                        판관비가 차지하는 비중을 뜻합니다.
+                                        <br><br>
+                                        따라서 매출원가율과 판관비율이 낮을수록 이익률은 높아지게 됩니다. 즉, 매출원가율과 판관비율이 낮은 기업이 우량 기업에 해당됩니다. 다만
+                                        매출원가율과 판관비율은 업종에 따라 차이가 납니다. 따라서 같은 업종에
+                                        속해있는 기업과 비교해 낮은지 높은지 판단해야 합니다.
+                                        <br><br>
+                                        한편 매출원가율이 다른 기업에 비해 낮거나 거의 없는 경우는 제품 생산을 위한 원가가 필요 없는 서비스 업종일 가능성이 높습니다.
+                                        <br><br>
+                                        매출원가율 & 판관비율 차트는 회전일지수 차트와 함께 보면 더욱 유용합니다. 매출원가율이 낮아지는데 매출지수가 증가한다는 것은, 매출액은
+                                        늘어나고 비용은 줄어 이익이 늘어나게 됩니다. 이는 결국 주가 상승의
+                                        원동력이 됩니다.
+                                        <br><br>
+                                        또한 매출원가율은 기말 재고자산 규모에 영향을 받는데, 매출원가율이 낮아지는데도 재고자산 회전일수가 큰 폭의 상승 없이 일정하게 유지되면 기업의
+                                        제품이 원활하게 판매되고 있음을 의미합니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>5</i>영업외손익률</h2>
+                                <p class="sub_title">- “턴어라운드 기업을 찾아라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  영업외손익률 -->
+                                        <div id="BICchart_temp05" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">기업의 순이익은 외부 환경에 의해서도 영향을 받습니다. 이를 영업외손익이라고 부릅니다.<br>
+                                        따라서 영업외손익 발생 이유를 확인하면, 이러한 외부 상황이 바뀔 경우 순이익 대폭 늘어날 가능성이 있습니다. 이와 함께 주가 상승 또한 크게
+                                        나타날 수 있는 만큼 투자자가 꼭 눈여겨봐야 할
+                                        차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        기업은 고유한 영업활동으로 벌어들이는 영업이익 외 이자수익, 배당수익, 관계기업투자이익 등 다양한 활동을 통해 이익과 손실이 발생합니다. 이를
+                                        영업외손익이라고 부릅니다. 기업이 영업을 잘 했더라도,
+                                        영업외손익이 크게 감소해 순이익이 줄어들 경우가 있습니다.
+                                        <br><br>
+                                        이는 환율 하락 등 외부환경에 의한 경우가 많습니다. 또한 일시적인 경우가 대부분입니다. 투자자들은 이런 기업을 주목할 필요가 있습니다.
+                                        영업외손익 개선으로 순이익이 크게 늘어나면서, 주가 또한 상승할
+                                        여지가 높기 때문입니다.
+                                        <br><br>
+                                        영업외손익은 환율, 자회사(관계기업 등), 투자자산, 이자 등 크게 4가지로 구분합니다. 영업외손익률 차트를 통해 영업외손익이 어디서 (+)가,
+                                        혹은 어디서 (-)가 발생했는지 확인하면 됩니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>6</i>주가 & 순이익지수</h2>
+                                <p class="sub_title">- “이익증가율이 주가에 미반영된 기업을 찾아라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  주가 & 순이익지수 -->
+                                        <div id="BICchart_temp06" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">일반적으로 이익이 증가하면 주가도 상승합니다.
+                                        <br><br>
+                                        하지만 때때로 이익이 늘어도 주가가 그대로이거나 오히려 하락하는 경우도 있습니다. 이때가 투자자에게 좋은 매수 기회가 될 수 있습니다.
+                                        <br><br>
+                                        주가&순이익지수 차트는 주가 흐름과 순이익지수를 함께 보여줍니다. 이를 통해 투자자들은 주가와 순이익 지수 흐름이 반대인 기업을 쉽게 찾아볼 수
+                                        있습니다. 파워V차트 > 이익증가미반영을 통해 이런 기업만 따로
+                                        찾아볼 수도 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>2-1</i>부채비율과 유동비율</h2>
+                                <p class="sub_title">- “부채비율이 낮고, 유동비율이 높은 기업이 안전하다"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  부채비율과 유동비율 -->
+                                        <div id="BICchart_temp07" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">기업의 재무 위험도를 측정하는 가장 기본적인 지표는 부채비율과 유동비율입니다.
+                                        일반적으로 부채비율은 낮고, 유동비율은 높은 기업은 부도 위험이 낮다고 판단할 수 있습니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        연결Tip: 연결 기준 부채비율, 유동비율을 통해 개별 기준에서는 파악하기 어려운 자회사의 재무 안전성도 점검할 수 있습니다. 개별 기준
+                                        부채비율이 낮더라도 연결 기준 부채비율이 높다면 자회사의 재무 부실이
+                                        모회사에도 영향을 줄 수 있는 만큼, 꼼꼼히 점검해야 합니다.
+                                        <br><br>
+                                        일반적으로 제조업의 경우 부채비율이 100% 미만이고, 유동비율은 100% 이상이면 재무 안전성이 높다고 할 수 있습니다.
+                                        <br><br>
+                                        그러나 세부 업종별로 산업의 특성상 부채비율이 높은 경우가 있습니다. 예를 들어 조선업의 경우 배를 수주할 경우, 대금의 일부를 미리
+                                        받습니다. 이를 선수금이라고 하는데, 재무제표에는 부채로 기록됩니다.
+                                        <br><br>
+                                        결국 수주를 많이 한 조선업체의 부채비율이 높아지는 현상이 발생하기도 합니다. 따라서 업종 평균 비율 등을 함께 고려해 재무 안전성을
+                                        판단하는 것이 좋습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>2-2</i>차입금과 차입금 비중</h2>
+                                <p class="sub_title">- “차입금 비중이 40% 이상이면 조심하자"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  차입금과 차입금 비중 -->
+                                        <div id="BICchart_temp08" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">이자를 지급해야 하는 부채 규모를 확인할 수 있는 차트입니다.
+                                        차입금은 장·단기 차입금, 회사채 등 이자를 지급해야 하는 부채의 총 합계 금액입니다.
+                                        차입금 비중은 전체 자산에서 차입금이 차지하는 비율을 말합니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        연결Tip: 차입금 비중 또한 연결과 개별 기준 비교가 필요합니다. 연결 기준 차입금 비중이 개별 기준보다 높다면 자회사와 모회사 간의
+                                        지급보증 등 우발채무 관계가 있는지 점검해야 합니다. 연결과 개별 기준
+                                        모두 차입금 비중이 낮은 기업에 투자하는 게 가장 안전합니다.
+                                        <br><br>
+                                        전체적인 차입금 추세가 하락하고 있고, 차입금 비중이 낮은 기업이 안전한 회사입니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>2-3</i>영업이익과 이자비용</h2>
+                                <p class="sub_title">- “영업이익이 이자비용 보다는 많아야 한다"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  영업이익과 이자비용 -->
+                                        <div id="BICchart_temp09" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">재무 안전성을 체크하는 중요한 지표 중 하나입니다.
+                                        부채비율, 유동비율과 함께 비교하면 기업의 재무 안전성을 종합적으로 판단하는 데 도움이 됩니다.</p>
+
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        부채비율이 약간 높더라도 영업이익이 이자비용 보다 4배 ~ 5배이상 많으면, 재무 위험이 낮다고 판단할 수 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>2-4</i>이자보상배율</h2>
+                                <p class="sub_title">- “이자보상배율은 최소한 1이상 이어야한다"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  이자보상배율 -->
+                                        <div id="BICchart_temp10" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">영업이익을 이자비용으로 나눈 값으로, 기업이 영업으로 벌어들인 이익으로 이자를 얼마만큼 낼 수 있는지 알아보는
+                                        지표입니다.</p>
+
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        이자보상배율은 최소한 1을 넘어야 합니다. 이 비율이 1이란 뜻은 한 해 영업이익이 이자비용으로 모두 나간다는 뜻입니다.
+                                        <br><br>
+                                        따라서 1 미만 기업은 영업이익으로 연간 이자비용도 지불할 능력이 없는 기업이란 뜻입니다.장기적으로 1 미만이 되면 부도 위험이 높아지는
+                                        만큼, 이자보상배율을 꼼꼼히 확인해야 합니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>2-5</i>차입금과 금융비용비율</h2>
+                                <p class="sub_title">- “차입금과 금융비용은 낮을수록 좋다"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  차입금과 금융비용비율 -->
+                                        <div id="BICchart_temp11" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">차입금은 기업이 이자를 지급해야 하는 부채를 말합니다.<br>
+                                        금융비용은 매출액 대비 이자비용을 얼마나 지급하는지를 알 수 있습니다.<br>
+                                        금융비용은 (이자비용 ÷ 매출액)100 으로 계산합니다.</p>
+
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        차입금은 이자비용을 발생시켜 순이익을 줄이게 됩니다. 따라서 장기적으로 차입금이 감소하는 기업이 좋습니다.
+                                        <br> <br>
+                                        금융비용은 매출액 대비 이자비용 비율을 구한 것으로, 이 비율이 높은 기업은 제품을 팔아 밑지는 장사를 하게 된다는 것을 의미합니다.
+                                        일반적으로 금융비용이 5%를 넘으면 수익성이 매우 낮거나, 적자를 기록할
+                                        가능성이 높아집니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>3-1</i>자산구조</h2>
+                                <p class="sub_title">- “장>자>고 기업을 찾아라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  자산구조 -->
+                                        <div id="BICchart_temp12" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">자산구조가 안정적이면서 매력적인 기업을 찾는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        연결 Tip: 해외 생산공장을 설립한 기업들은 개별 기준에는 없던 유형자산이 연결 기준 차트에서는 많이 나타날 수 있습니다.
+                                        <br><br>
+                                        좋은 자본구조는 장기자본(자본총계 + 비유동부채) > 자본총계 > 고정자산 순으로 구성돼 있습니다. 장기자본과 자본총계 차이가 작고,
+                                        유형자산 증가율이 다른 자본에 비해 낮은 기업은 투자 매력이 높습니다.
+                                        <br><br>
+                                        다만, 성장을 위한 대규모 시설 투자를 할 경우 2년 ~ 3년 정도는 고정자산이 가장 많을 수 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>3-2</i>이익축적</h2>
+                                <p class="sub_title">- “현금이 차곡차곡 쌓이는 기업에 투자하라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  이익축적 -->
+                                        <div id="BICchart_temp13" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">기업의 이익이 어떤 자산으로 쌓이는지 확인할 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        이익잉여금이 당좌자산으로 쌓인다는 것은, 수익을 유지하기 위해 대규모 설비투자가 필요 없다는 것을 의미합니다. 따라서 순이익이 매년
+                                        현금으로 차곡차곡 쌓이는 기업은 비즈니스 매력도가 매우 높고, 투자 매력도
+                                        높습니다.
+                                        <br><br>
+                                        워렌 버핏도 대규모 설비 투자 없이 주주의 자본을 증가시켜 나가는 기업을 좋아합니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>3-3</i>주주자본 구조</h2>
+                                <p class="sub_title">- “이익잉여금으로 자본을 늘리는 기업이 '최고'"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  주주자본 구조 -->
+                                        <div id="BICchart_temp14" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">주주의 몫인 자본총계를 어떤 방법으로 증가시켰는지를 알 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        연결Tip: 연결 재무제표의 자본총계는 지배 / 비지배로 나눌 수 있습니다. 주주에게 의미있는 자본은 ‘지배지분 자본’ 입니다. 비지배
+                                        자본은 모회사가 가진 자회사 지분이 100%가 아닐 때 생기며,
+                                        가치평가나 투자지표 계산에선 제외하는 게 합리적입니다.
+                                        <br><br>
+                                        성장기 또는 성숙기에 있는 기업에 투자하는 것이 좋습니다. 쇠퇴기에 해당되는 기업에는 투자 위험이 있는 만큼, 재무 안전성 지표도 함께
+                                        확인하시기 바랍니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>3-4</i>배당금 & 시가배당률</h2>
+                                <p class="sub_title">- “매력적인 배당주 = 시가배당률 > 국채금리* 1.5"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  배당금 & 시가배당률 -->
+                                        <div id="BICchart_temp15" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">주주에게 직접 현금으로 돌려주는 배당금과 시가배당률을 알 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        1) 매력적인 배당주 찾는 법 : <span style="text-decoration: underline;">시가배당률이 현재
+                                            국채금리(5년)의 1.5배 이상 되는 기업.</span>
+                                        <br><br>
+                                        2) 배당주 투자전략 : 고배당주에 대한 투자전략은 매년 2월 ~ 3월 쯤 매수하고 11월 ~ 12월 중순쯤 매도하는 전략이 좋습니다.
+                                        배당을 실시한 후인 2월 ~ 3월 배당락으로 주가가 하락하기 때문입니다.
+                                        <br><br>
+                                        고배당주의 경우 시가배당률 만큼 배당락이 일어나기 때문에 단기간 배당수익률을 노린 투자는 실제 수익률 면에서는 그리 높지 않습니다.
+                                        그러나 고배당주에 대한 장기투자를 선호하는 투자자는 주가 급등락에 관계없이
+                                        지속 보유하는 전략이 더 좋습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>3-5</i>배당성향 & 시가배당률</h2>
+                                <p class="sub_title">- “배당주 투자는 배당성향이 높고, 일정한 기업이 좋다"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  배당성향 & 시가배당률 -->
+                                        <div id="BICchart_temp16" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">기업의 배당성향과 시가배당률을 알 수 있는 차트입니다.<br>
+                                        배당성향(%)은 (배당금÷순이익)*100으로 구합니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        배당주에 장기 투자할 투자자라면, 배당성향이 높고 일정한 회사에 투자하는 것이 좋습니다.<br>
+                                        배당성향이 일정하면, 이익 성장률에 따라 배당금도 오릅니다.<br>
+                                        아래 차트를 통해 장기간의 배당성향을 확인해 보고, 배당투자 매력도를 판단하면 좋습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>4-1</i>ROE와 PBR</h2>
+                                <p class="sub_title">- “ROE가 높고, PBR이 낮은 기업은 싸고 좋은 기업"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  자기자본이익률(ROE) & 주가순자산배수(PBR) -->
+                                        <div id="BICchart_temp17" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">자기자본이익률(ROE)과 주가순자산배수(PBR)를 비교해 저평가 기업을 찾을 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        ROE와 PBR은 정의 관계를 갖고 있습니다. 즉, ROE가 오르면 일반적으로 PBR도 함께 상승합니다.
+                                        <br><br>
+                                        ROE가 오르면 기업의 수익가치가 상승한다는 뜻입니다. 이에 따라 가격지표인 PBR도 상승하는 것이 일반적입니다.
+                                        <br><br>
+                                        그러나 ROE 개선에도 불구하고 PBR이 상승하지 않는 경우가 있습니다. 이때가 좋은 기업을 싸게 살 수 있는 좋은 기회입니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>4-2</i>자기자본이익률(듀퐁분석)</h2>
+                                <p class="sub_title">- “듀퐁분석을 통해 ROE 상승 원인을 찾아라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  자기자본이익률(듀퐁분석) -->
+                                        <div id="BICchart_temp18" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">자기자본이익률(ROE)을 3가지 세부 요인으로 나눠 분석함으로써, ROE 상승 원인을 찾는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        ROE를 3가지 세부 요인으로 나눠 분석하는 것을 듀퐁분석이라고 부릅니다.
+                                        <br><br>
+                                        자기자본이익률은 (순이익률 × 총자산회전율 × 재무레버리지) 로 나눠 분석할 수 있습니다.
+                                        <br><br>
+                                        이것을 다른 말로 표현하면 (마진 × 매출성장률 × 부채활용 능력)으로 나타낼 수 있습니다.즉, 부채를 적절히 활용해 많은 매출과 마진율을
+                                        높이는 기업이 ROE가 높다는 것을 의미합니다.
+                                        <br><br>
+                                        듀퐁분석을 통해 같은 업종 내 경쟁 기업과 비교하면, 어떤 부분의 효율성을 높여야 하는 지를 확인할 수 있을 뿐 아니라 타사 대비 경쟁력을
+                                        확인할 수 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>4-3</i>ROA & ROIC & ROE</h2>
+                                <p class="sub_title">- “3개 이익률을 종합적으로 판단하자"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  ROA & ROIC & ROE -->
+                                        <div id="BICchart_temp19" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">ROA, ROIC, ROE 3개의 이익률 지표를 한 눈에 비교할 수 있는 차트입니다.<br>
+                                        ROA는 (순이익÷자산총계)100 으로 계산합니다.<br>
+                                        ROIC는 (세후 영업이익÷투하자본)100 으로 계산합니다.<br>
+                                        ROE는 (순이익÷자본총계)100 으로 계산합니다.
+                                    </p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        ROA, ROIC, ROE 모두 수익성을 나타내는 지표로, 높을수록 수익성이 좋다는 뜻입니다.<br>
+                                        ROA는 총자산에 대한 수익률을, ROIC는 투하자본 대비 수익률을, ROE는 주주자본에 대한 수익률을 말합니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>4-4</i>운전자본 회전일수</h2>
+                                <p class="sub_title">- “회전일수가 낮으면 현금이 잘 도는 기업"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  운전자본 회전일수 -->
+                                        <div id="BICchart_temp20" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">
+                                        기업의 운전자본인 매출채권, 재고자산, 매입채무에 대한 회전일수를 확인할 수 있는 차트입니다.<br>
+                                        * 제조업이 아닌, <b>서비스를 제공하는 업체일 경우 재고자산이 없으므로, 재고자산회전일수가 계산되지 않습니다. 매출채권 회전일수에 대한
+                                            기준만 참조하시면 됩니다.</b>
+                                    </p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        매출채권 회전일수는 제품을 판매한 후, 현금으로 회수하는 데 걸리는 기간입니다.<br>
+                                        재고자산 회전일수는 원재료를 구입해 제품을 판매할 때까지 걸리는 기간입니다.<br>
+                                        따라서 매출채권과 재고자산 회전일수는 낮을수록 빨리 팔리고, 빨리 현금이 회수된다는 의미입니다. 회전일수가 낮을수록 우량 기업입니다.
+                                        <br><br>
+                                        우량기업의 절대적인 회전일수 기준외에 같은 업종내 평균이나 경쟁기업과 비교,판단하면 더욱 유용합니다
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>4-5</i> 현금회전일수</h2>
+                                <p class="sub_title">- “현금회전일수 낮아질수록 우량 기업"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!--  현금회전일수(CCC:Cash Conversion Cycle) -->
+                                        <div id="BICchart_temp21" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">운전자본에 소요되는 현금잠김일수를 알 수 있는 차트입니다.<br>
+                                        현금회전일수는 매출채권 회전일수 + 재고자산 회전일수 - 매입채무 회전일수로 계산합니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        현금회전일수의 절대적인 값 보다는 추세를 확인하는 방법이 더 유용합니다.<br>
+                                        현금회전일수가 낮아질수록 영업활동을 위해 필요한 현금 소요량이 적어진다는 뜻이며, 현금회전일수가 계속 높아질 경우 현금이 부족해 차입금 등을
+                                        통한 외부조달이 필요하게 됩니다. 차입금 차트나
+                                        현금흐름표 차트와 함께 활용하면 좋습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>5-1</i>현금흐름</h2>
+                                <p class="sub_title">- “영업 (-), 투자 (-), 재무 (+) 기업은 투자에 유의하자"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 현금흐름 -->
+                                        <div id="BICchart_temp22" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">현금흐름표를 한 눈에 확인할 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        현금흐름은 각 활동별 부호를 잘 확인해야 합니다.<br>
+                                        현금흐름 부호에 따라 우량기업 또는 부실기업으로 나눌 수 있습니다.<br>
+                                        특히 장기적으로 영업 (-), 투자 (-), 재무 (+) 인 기업은 가급적 투자하지 않는 것이 좋습니다. 성장기 또는 성숙기의 현금흐름을
+                                        나타내는 기업이 투자 대상으로 좋습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>5-2</i>잉여현금흐름 & 순이익</h2>
+                                <p class="sub_title">- “잉여현금흐름이 플러스인 기업을 찾아라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 잉여현금흐름(FCF) & 순이익 -->
+                                        <div id="BICchart_temp23" class="BICchart_style"></div>
                                     </div>
                                 </div>
                                 <!-- //chart_wrap -->
                                 <div class="right">
                                     <h4 class="title">차트설명</h4>
                                     <p class="txt">기업의 운전자본인 매출채권, 재고자산, 매입채무에 대한 회전일수를 확인할 수 있는 차트입니다.
-                                        * 제조업이 아닌, 서비스를 제공하는 업체일 경우 재고자산이 없으므로, 재고자산회전일수가 계산되지 않습니다. 매출채권 회전일수에 대한 기준만
+                                        * 제조업이 아닌, 서비스를 제공하는 업체일 경우 재고자산이 없으므로, 재고자산회전일수가 계산되지 않습니다. 매출채권 회전일수에 대한
+                                        기준만
                                         참조하시면 됩니다.</p>
                                     <h4 class="title">실전활용법</h4>
-                                    <p class="txt">매출채권 회전일수는 제품을 판매한 후, 현금으로 회수하는 데 걸리는 기간입니다. 재고자산 회전일수는 원재료를 구입해 제품을
+                                    <p class="txt">매출채권 회전일수는 제품을 판매한 후, 현금으로 회수하는 데 걸리는 기간입니다. 재고자산 회전일수는 원재료를 구입해
+                                        제품을
                                         판매할 때까지 걸리는
                                         기간입니다. 따라서 매출채권과 재고자산 회전일수는 낮을수록 빨리 팔리고, 빨리 현금이 회수된다는 의미입니다. 회전일수가 낮을수록 우량
                                         기업입니다.</p>
@@ -319,31 +1127,160 @@
                             <!-- //con_box -->
                         </div>
                         <!-- //chart_line -->
-
                         <div class="chart_line">
                             <div class="title_box">
-                                <h2 class="title"><i>3</i>매출액 이익차트</h2>
-                                <p class="sub_title">- “매출액과 이익이 꾸준히 늘어나는 기업이 좋다"</p>
+                                <h2 class="title"><i>5-3</i>매출액 잉여현금흐름 비율</h2>
+                                <p class="sub_title">- “꾸준히 10%를 넘는 기업을 주목하라"</p>
                             </div>
                             <!-- //title_box -->
 
                             <div class="con_box">
                                 <div class="left">
-                                    <img src="../img/temp_chart.png" alt="">
+                                    <div class="chart_BIC">
+                                        <!-- 매출액 잉여현금흐름 비율 -->
+                                        <div id="BICchart_temp24" class="BICchart_style"></div>
+                                    </div>
                                 </div>
-                                <!-- //chart_wrap -->
+                                <!-- //left -->
                                 <div class="right">
                                     <h4 class="title">차트설명</h4>
-                                    <p class="txt">기업의 운전자본인 매출채권, 재고자산, 매입채무에 대한 회전일수를 확인할 수 있는 차트입니다.
-                                        * 제조업이 아닌, 서비스를 제공하는 업체일 경우 재고자산이 없으므로, 재고자산회전일수가 계산되지 않습니다. 매출채권 회전일수에 대한 기준만
-                                        참조하시면 됩니다.</p>
+                                    <p class="txt">매출액 대비 잉여현금흐름 비율을 알 수 있는 차트입니다.</p>
+
                                     <h4 class="title">실전활용법</h4>
-                                    <p class="txt">매출채권 회전일수는 제품을 판매한 후, 현금으로 회수하는 데 걸리는 기간입니다. 재고자산 회전일수는 원재료를 구입해 제품을
-                                        판매할 때까지 걸리는
-                                        기간입니다. 따라서 매출채권과 재고자산 회전일수는 낮을수록 빨리 팔리고, 빨리 현금이 회수된다는 의미입니다. 회전일수가 낮을수록 우량
-                                        기업입니다.</p>
+                                    <p class="txt">
+                                        매출액 잉여현금흐름 비율은 매출액에서 기업이 어느 정도 잉여현금흐름을 만들었는지를 나타내는 지표입니다. 만약 A란 기업의 매출액이 1억원이고
+                                        잉여현금흐름비율이 10%라면, 기업이 영업활동과 영업외활동을 통해
+                                        벌어들인 수익에 투자 등을 제외한 잉여현금이 1000만원이란 뜻입니다.
+                                        <br><br>
+                                        잉여현금흐름 비율은 순이익률 보다 더 보수적이고 실제적인 지표로, 매출액 대비 잉여현금흐름 비율이 꾸준히 10%를 넘는 기업은 잉여현금 창출
+                                        능력이 매우 뛰어난 기업입니다.
+                                    </p>
                                 </div>
-                                <!-- //chart_exp -->
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>6-1</i>가치평가지표 PER</h2>
+                                <p class="sub_title">- “PER이 낮은 기업에 투자하라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 가치평가지표 PER -->
+                                        <div id="BICchart_temp25" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">시가총액이 순이익의 몇 배에 거래되고 있는 지 알 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        10년 동안 일별 PER 차트로 장기적인 PER 범위를 통해 기업의 적정주가 수준을 파악하는 데 유용합니다.<br>
+                                        우량 기업의 경우 PER 10 이하에서 거래되면 저평가 됐다고 판단합니다. 그러나 기업의 적정 PER는 순이익의 안정성과 성장성에 따라 달라지는
+                                        만큼, 사업보고서 등을 분석하고 종합적으로 판단하는 것이
+                                        좋습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>6-2</i>주가 & 주당순이익</h2>
+                                <p class="sub_title">- “주가와 주당순이익이 반대로 움직이면 매매타이밍"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 주가 & 주당순이익 -->
+                                        <div id="BICchart_temp26" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">주가와 주당순이익의 관계를 한 눈에 확인할 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        일반적으로 이익이 증가하면 주가도 상승합니다.<br>
+                                        그러나 이익이 늘어도 주가는 횡보하거나 오히려 하락하는 경우도 있습니다.<br>
+                                        주가와 주당순이익이 반대로 움직이면 매수 또는 매도 타이밍이 됩니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>6-3</i>가치평가지수 PBR</h2>
+                                <p class="sub_title">- “PBR이 낮은 기업에 투자하라"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 가치평가지수 PBR -->
+                                        <div id="BICchart_temp27" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">시가총액이 자본총계의 몇 배에 거래되고 있는지를 알 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        10년 동안 월별 PBR 차트로 장기적인 PBR 범위를 통해 기업의 적정주가 수준을 파악하는 데 유용합니다.
+                                        <br><br>
+                                        한편 PBR은 ROE에 따라 달라집니다. 따라서 ROE와 함께 비교해보면 더욱 유용합니다. 일반적으로 ROE가 높으면 PBR도 높아집니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+                        <div class="chart_line">
+                            <div class="title_box">
+                                <h2 class="title"><i>6-4</i>주가 & 주당순자산</h2>
+                                <p class="sub_title">- “주가와 주당순자산 성장률이 반대로 움직이면 매매타이밍"</p>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 주가 & 주당순자산 -->
+                                        <div id="BICchart_temp28" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">주가와 주당순자산의 관계를 한 눈에 확인할 수 있는 차트입니다.</p>
+
+                                    <h4 class="title">실전활용법</h4>
+                                    <p class="txt">
+                                        주당순자산 성장률이 높아질수록, 일반적으로 주가 또한 상승합니다. 그러나 때때로 주당순자산 성장률이 높아지고 있는데도 주가가 상승하지 않는
+                                        경우가 있습니다. 이때가 좋은 매수기회가 될 수 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
                             </div>
                             <!-- //con_box -->
                         </div>
@@ -355,12 +1292,7 @@
         </div>
         <!-- //container -->
 
-        <div id="footer" class="f_main">
-            <div class="w_box">
-                <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
-            </div>
-            <!-- //w_box -->
-        </div>
+        <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->
