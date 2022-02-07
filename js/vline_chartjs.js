@@ -288,8 +288,6 @@ $(document).ready(function () {
         });
     }
 
-
-
     //재무분석 BIC 차트 - 매출액 & 이익차트
     if ($('#BICchart_temp01').length) {    
         var reflowchart01 = Highcharts.chart('BICchart_temp01', {
@@ -2951,9 +2949,10 @@ $(document).ready(function () {
     
     // 차트 리사이즈 버튼
     $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
+        $('.chart_BIC .BICchart_style').toggleClass('simple');        
         $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggle(0, function(){
             reflowchart01.reflow();
-            reflowchart02.reflow();
+            // reflowchart02.reflow();
             reflowchart03.reflow();
             reflowchart04.reflow();
             reflowchart05.reflow();
@@ -2982,6 +2981,596 @@ $(document).ready(function () {
             reflowchart28.reflow();
         });
     });    
+
+    //종목발굴 BIC 차트 - 주가 & 순이익지수
+    if ($('#BICchart_ptn01').length) {    
+        Highcharts.chart('BICchart_ptn01', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 90,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 순이익지수<br><span>삼성전자 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주가[좌]',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '순이익지수[우]',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                                                
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_ptn02').length) {    
+        Highcharts.chart('BICchart_ptn02', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 90,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 순이익지수<br><span>대신증권 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주가[좌]',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '순이익지수[우]',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                                                
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_ptn03').length) {    
+        Highcharts.chart('BICchart_ptn03', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 90,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 순이익지수<br><span>대신증권 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주가[좌]',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '순이익지수[우]',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                                                
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_ptn04').length) {    
+        Highcharts.chart('BICchart_ptn04', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 90,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '주가 & 순이익지수<br><span>대신증권 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주가[좌]',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '순이익지수[우]',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                                                
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    //종목발굴 BIC 차트 - 안전마진지수
+    if ($('#BICchart_ptngra01').length) {    
+        Highcharts.chart('BICchart_ptngra01', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 90,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '안전마진지수<br><span>대신증권 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '순운전',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '그레이엄매수가',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],                
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '시가총액',                                               
+                data: [242, 252, 257, 269, 297, 211, 242, 252, 257, 269, 297, 211],                
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                                                
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    if ($('#BICchart_ptngra02').length) {    
+        Highcharts.chart('BICchart_ptngra02', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',                
+                backgroundColor: {                    
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 90,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '안전마진지수<br><span>현대비앤지스틸 (005930)</span>',                
+                y: 20,                
+            },
+
+            tooltip: {
+                shared: true,                
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+            
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}억',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '순운전',                                               
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '그레이엄매수가',                                               
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],                
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }, {
+                name: '시가총액',                                               
+                data: [242, 252, 257, 269, 297, 211, 242, 252, 257, 269, 297, 211],                
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',                                                
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });         
+    } 
+    
+
+
+
+
+
+
+
+
+
+    
 
     //MRI 스파이더 차트 테스트
     if ($('#containerfinancials1_1').length) {

@@ -510,13 +510,35 @@
 
 // BIC 차트 패턴
 #container .M_right .contents .excavation_area.pattern {    
-    .tab_content {
-        display: flex;
-        justify-content: space-between;	
+    .tab_content {        
 
-        .containerfinance1 {            
-            width: calc(100% / 2 - 2px);
-            height: 220px;     
+        .BICchart_ptnStyle {                                
+            display: inline-block;
+            background-color: #f7f7f8;
+            width: calc(100% / 2 - 10px);
+            margin-bottom: 10px;
+            height: 340px;     
+            &:nth-child(2n) {
+                float: right;
+            }
+
+            .highcharts-title {
+                font-family: "Spoqa Han Sans Neo";
+                font-size: 15px !important;
+                font-weight: $f_sizeB;                        
+                letter-spacing: -0.85px;
+                text-align: center;                        
+                color: #222 !important;                                     
+                fill: #222 !important;           
+                tspan {                        
+                    display: block;    
+                    font-size: 12px;
+                    font-weight: normal;                            
+                    letter-spacing: -0.6px;                            
+                    fill: #3655d6;
+                    color: #3655d6;
+                }
+            }
         }
 
         .thead2_table {

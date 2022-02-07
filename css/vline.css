@@ -1957,7 +1957,7 @@ input[type='radio']:checked:before {
   border-bottom-right-radius: 8px;
   border: 1px solid #e8eaf1;
   background: #fff;
-  z-index: 70;
+  z-index: 51;
 }
 
 #container .M_right .page_drop ul li {
@@ -4592,13 +4592,18 @@ input[type='radio']:checked:before {
   height: 340px;
 }
 
+#container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style.simple {
+  height: 420px;
+}
+
 #container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style .highcharts-title {
   font-family: "Spoqa Han Sans Neo";
-  font-size: 17px;
+  font-size: 17px !important;
   font-weight: 700;
   letter-spacing: -0.85px;
   text-align: center;
-  color: #222;
+  color: #222 !important;
+  fill: #222 !important;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style .highcharts-title tspan {
@@ -5365,18 +5370,35 @@ input[type='radio']:checked:before {
   border-bottom: 1px solid #e7eaf2;
 }
 
-#container .M_right .contents .excavation_area.pattern .tab_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#container .M_right .contents .excavation_area.pattern .tab_content .BICchart_ptnStyle {
+  display: inline-block;
+  background-color: #f7f7f8;
+  width: calc(100% / 2 - 10px);
+  margin-bottom: 10px;
+  height: 340px;
 }
 
-#container .M_right .contents .excavation_area.pattern .tab_content .containerfinance1 {
-  width: calc(100% / 2 - 2px);
-  height: 220px;
+#container .M_right .contents .excavation_area.pattern .tab_content .BICchart_ptnStyle:nth-child(2n) {
+  float: right;
+}
+
+#container .M_right .contents .excavation_area.pattern .tab_content .BICchart_ptnStyle .highcharts-title {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 15px !important;
+  font-weight: 700;
+  letter-spacing: -0.85px;
+  text-align: center;
+  color: #222 !important;
+  fill: #222 !important;
+}
+
+#container .M_right .contents .excavation_area.pattern .tab_content .BICchart_ptnStyle .highcharts-title tspan {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  fill: #3655d6;
+  color: #3655d6;
 }
 
 #container .M_right .contents .excavation_area.pattern .tab_content .thead2_table {
