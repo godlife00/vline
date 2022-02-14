@@ -288,7 +288,7 @@ $(document).ready(function () {
         });
     }
 
-    //재무분석 BIC 차트 - 매출액 & 이익차트
+    //재무분석 BIC 차트 - 매출액과 이익
     if ($('#BICchart_temp01').length) {    
         var reflowchart01 = Highcharts.chart('BICchart_temp01', {
             chart: {
