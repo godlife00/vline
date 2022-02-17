@@ -288,10 +288,88 @@ $(document).ready(function () {
         });
     }
 
+    //재무분석 주식MRI 차트
+    if ($('#MRIchart_analy01').length) {
+
+        Highcharts.chart('MRIchart_analy01', {
+            chart: {
+                polar: true,
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+            },
+            colors: ["#3c55ce"],
+            title: {
+                text: null,
+            },
+            tooltip: {
+                shared: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            pane: {
+                startAngle: 0,
+                endAngle: 360
+            },
+            xAxis: {
+                categories: ['밸류에이션', '수익<br>성장성', '사업<br>독점력', '재무<br>안전성', '현금<br>창출력'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0,
+                max: 5,
+                labels: {
+                    allowOverlap: true,
+                    style: {
+                        color: '#656d7e',
+                        fontSize: '14px',
+                    }
+                }
+            },
+            yAxis: {
+                gridLineInterpolation: 'polygon',
+                minorGridLineColor: '#E0E0E0',
+                tickInterval: 1.07,
+                min: 0,
+                max: 5,
+                labels: {
+                    enabled: false
+                }
+            },
+            exporting: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                type: 'area',
+                name: '데이터1',
+                data: [4, 5, 5, 4.5, 5],
+                pointPlacement: 'on',
+                marker: {
+                    enabled: true,
+                }
+            }],
+            plotOptions: {
+                series: {
+                    lineWidth: 1,
+                    fillOpacity: 0.3,
+                    marker: {
+                        enabled: false,
+                    }
+                },
+            },
+        });
+    }
+
     //재무분석 BIC 차트 - 매출액과 이익
     if ($('#BICchart_profit01').length) {
-        var reflowchart01 = Highcharts.chart('BICchart_profit01', {
-            chart: {
+        var reflowchart01 = new Highcharts.chart('BICchart_profit01', {
+            chart: {                
                 type: 'spline',
                 zoomType: 'xy',
                 backgroundColor: {
@@ -322,9 +400,16 @@ $(document).ready(function () {
                 shared: true,
             },
 
-            xAxis: [{
-                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
-                crosshair: true
+            xAxis: [{    
+                categories: ['2012.03','2012.06','2012.09','2012.12','2013.03','2013.06','2013.09','2013.12','2014.03','2014.06','2014.09','2014.12','2015.03','2015.06','2015.09','2015.12','2016.03','2016.06','2016.09','2016.12','2017.03','2017.06','2017.09','2017.12','2018.03','2018.06','2018.09','2018.12','2019.03','2019.06','2019.09','2019.12','2020.03','2020.06','2020.09','2020.12','2021.03','2021.06','2021.09',],  
+                type: 'datetime',                
+                labels: {
+                    formatter: function() {
+                        return Highcharts.dateFormat('%y', this.value);
+                    },
+                    step: 4
+                },                
+                crosshair: true        
             }],
 
 
@@ -363,25 +448,20 @@ $(document).ready(function () {
             series: [{
                 name: '매출액(좌)',
                 type: 'column',
-                yAxis: 0,
-                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                data: [1732872.71,1814453.96,1923487.01,2011036.13,2087011.91,2185686.6,2254748.89,2286926.67,2294998.98,2243886.79,2127524.9,2062059.87,1996485.79,1958328.89,2000681.51,2006534.82,2033178.16,2057173.97,2018504.58,2018667.45,2026320.19,2126954.36,2269287.04,2395753.76,2495915.64,2470736.85,2504847.77,2437714.15,2355932.47,2332376.93,2297811.71,2304008.81,2333405.13,2301795.51,2351402.4,2368069.88,2468703.13,2575757.56,2645907.83,],
                 tooltip: {
-                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}억원</b><br/>'
                 },
             }, {
                 name: '영업이익(우)',
+                type: 'line',
                 yAxis: 1,
-                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
-                tooltip: {
-                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
-                },
+                data: [184854.75,211053.27,248073.4,290493.38,321921.67,353293.86,374996.33,367850.13,364943.54,341509.94,280479.22,250250.71,225156.39,222262.53,255591.04,264134.42,271098.87,283559,261626.16,292406.72,324632.21,383858.18,477188.88,536450.38,593888.47,601913.35,632330.41,588866.69,494777.81,412058.11,314088.38,277685.09,279825.72,295317.99,341071.45,359938.76,389293.99,433498.52,468141.45,],                
             }, {
-                name: '지배지분 순이익(우)',
+                name: '지배지분순이익(우)',
+                type: 'line',
                 yAxis: 1,
-                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
-                tooltip: {
-                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
-                },
+                data: [155288.94,171209.8,202456.95,231853.75,253013.99,278273.73,294520.38,298212.15,303289.77,289304.67,250163.52,230824.99,201171.42,195673.7,207380.52,186946.28,194388.11,196382.55,187409.41,224156.55,246406.81,296144.45,362454.26,413445.69,454678.7,456494.75,475771.32,438908.77,373865.34,314695.17,246071.28,215050.54,212871.63,217115.97,248733.72,260908.46,282940.33,322557.45,350461.38,],                
             }],
 
             plotOptions: {
@@ -389,11 +469,11 @@ $(document).ready(function () {
                     marker: {
                         enabled: true,
                         fillColor: '#FFFFFF',
-                        lineWidth: 2,
+                        lineWidth: 1,
                         lineColor: null,
-                        // symbol: 'circle'
+                        radius: 3
                     }
-                }
+                },                
             },
         });
     }
@@ -4881,6 +4961,7 @@ $(document).ready(function () {
 
     // 차트 리사이즈 버튼
     $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
+        console.log("차트에서클릭");
 
         $('.chart_BIC .BICchart_style').toggleClass('simple');
         $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggle(0);
@@ -5490,8 +5571,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_1').length) {
         Highcharts.chart('containerfinancials1_1', {
             chart: {
-                type: 'column',
-                renderTo: 'containerfinancials1_1',
+                type: 'column',                
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -5593,8 +5673,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_2').length) {
         Highcharts.chart('containerfinancials1_2', {
             chart: {
-                type: 'column',
-                renderTo: 'containerfinancials1_2',
+                type: 'column',                
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -5696,8 +5775,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_3').length) {
         Highcharts.chart('containerfinancials1_3', {
             chart: {
-                type: 'column',
-                renderTo: 'containerfinancials1_3',
+                type: 'column',                
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -5799,8 +5877,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_4').length) {
         Highcharts.chart('containerfinancials1_4', {
             chart: {
-                type: 'column',
-                renderTo: 'containerfinancials1_4',
+                type: 'column',                
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -5875,6 +5952,822 @@ $(document).ready(function () {
             }, {
                 name: '전체평균',
                 data: [34]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials2_1').length) {
+        Highcharts.chart('containerfinancials2_1', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials2_2').length) {
+        Highcharts.chart('containerfinancials2_2', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials3_1').length) {
+        Highcharts.chart('containerfinancials3_1', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials3_2').length) {
+        Highcharts.chart('containerfinancials3_2', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials4_1').length) {
+        Highcharts.chart('containerfinancials4_1', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials4_2').length) {
+        Highcharts.chart('containerfinancials4_2', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials5_1').length) {
+        Highcharts.chart('containerfinancials5_1', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials5_2').length) {
+        Highcharts.chart('containerfinancials5_2', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
             }],
 
             plotOptions: {
@@ -6441,108 +7334,4 @@ $(document).ready(function () {
             }]
         });
     }
-
-
-    // 차트 버리는곳
-    if ($('#BICchart_temp06').length) {
-        var reflowchart06 = Highcharts.chart('BICchart_temp06', {
-            chart: {
-                type: 'spline',
-                zoomType: 'xy',
-                backgroundColor: {
-                    stops: [
-                        [0, '#ffffff'],
-                        [1, '#ffffff']
-                    ]
-                },
-                style: {
-                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
-                },
-                marginTop: 60,
-                marginBottom: 90,
-                plotBorderColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-            },
-
-            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
-
-            title: {
-                text: '주가 & 순이익지수 <span>삼성전자 (005930)</span>',
-                y: 20,
-            },
-
-            tooltip: {
-                shared: true,
-            },
-
-            xAxis: [{
-                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
-                crosshair: true
-            }],
-
-
-            yAxis: [{ // 1
-                title: {
-                    text: null,
-                },
-                labels: {
-                    format: '{value}원',
-                    style: {
-                        color: ["#656d7e"],
-                    }
-                },
-            }, {// 2
-                title: {
-                    text: null,
-                },
-                labels: {
-                    format: '{value}',
-                    style: {
-                        color: ["#656d7e"],
-                    }
-                },
-                opposite: true
-            }],
-
-
-            credits: {
-                enabled: false
-            },
-
-            exporting: {
-                enabled: false
-            },
-
-            series: [{
-                name: '주가[좌]',
-                yAxis: 0,
-                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
-                tooltip: {
-                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
-                },
-            }, {
-                name: '순이익지수[우]',
-                yAxis: 1,
-                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
-                tooltip: {
-                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f}</b><br/>'
-                },
-            }],
-
-            plotOptions: {
-                series: {
-                    marker: {
-                        enabled: true,
-                        fillColor: '#FFFFFF',
-                        lineWidth: 2,
-                        lineColor: null,
-                        // symbol: 'circle'
-                    }
-                }
-            },
-        });
-    }
-
-
 });

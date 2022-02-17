@@ -170,32 +170,179 @@
     margin-top: -8px;    
     .top_spider {
         padding: 0;
+        padding-bottom: 30px;
+        box-sizing: border-box;
         background-color: #f7f9fd;
         display: flex;
         justify-content: space-between;	
         flex-wrap: nowrap;
-        .left {
-            width: 380px;                                
-            flex-grow: 1;                
-            .containercharm1 {
-                width: 100%;
-                height: 290px;
-                padding: 30px 30px;                
+        .left {                        
+            width: 430px; 
+            padding: 30px 40px 0;
+            box-sizing: border-box;                           
+            flex-grow: 1;                  
+            .MRIchart_style {
+                width: 98%;
+                height: 98%;                
+                margin: 0 auto;                
                 box-sizing: border-box;
                 .highcharts-axis-labels {
                     text {
                         @include font-family;
                         font-size: 14px !important;
+                        color: #656d7e !important;                        
+                        fill: #656d7e !important;
                     }
                 }
             }
         }
-        .right {
-            background-color: #fff;
-            width: calc(100% - 380px);            
-            margin: 30px 30px;            
-        }
+        .right {            
+            width: calc(100% - 430px);            
+            margin: 30px 30px 0 0;            
 
+            .chart_area.diagnosis {                                                
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                background-color: #fff;
+                box-sizing: border-box;
+                padding: 12px 10px;
+                position: relative;            
+                display: flex;
+	            flex-wrap: wrap;
+                justify-content: space-between;
+            }            
+            .chart_area.diagnosis .chartData {
+                display: inline-block;
+                border-right: 1px solid #e7eaf2;
+                vertical-align: top;
+                text-align: center;
+                padding: 12px 0;
+                min-height: 103px;                
+                box-sizing: border-box;              
+                flex: 1;                  
+            }            
+            .chart_area.diagnosis .chartData .charm {                
+                position: relative;
+                font-size: 12px;                
+                line-height: 1.5;                                
+                color: #656d7e;
+                .txt_guide {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: inline-block;                    
+                    padding: 10px 10px;                    
+                    cursor: pointer;
+                }
+            }            
+            .chart_area.diagnosis .chartData .charm strong {
+                font-weight: $f_sizeB;                
+            }            
+            .chart_area.diagnosis .chartData .charm_num {
+                font-size: 32px;
+                font-weight: $f_sizeB;                
+                line-height: 1.47;                
+                text-align: center;
+                color: #222;
+                padding-bottom: 10px;
+            }            
+            
+            .chart_area.diagnosis .difference {                
+                box-sizing: border-box;
+                padding: 5px 10px 10px;                
+                flex-basis: 260px;
+            }            
+            .chart_area.diagnosis .difference .dt {
+                font-size: 18px;                                
+                text-align: left;
+                color: #333;
+            }            
+            .chart_area.diagnosis .difference .dt:nth-child(3) {                
+                font-size: 12px;                
+                line-height: 1.5;                
+                color: #656d7e;
+                margin-top: 10px;
+            }            
+            .chart_area.diagnosis .difference .dt strong {
+                display: inline-block;
+                color: #3655d6;
+            }
+            
+            .chart_area.diagnosis .difference .dd {
+                font-size: 10px;
+                letter-spacing: normal;
+                color: #b1b9cb;
+                vertical-align: top;
+            }            
+            .chart_area.diagnosis .data_attainment {                
+                width: 100%;
+                border-top: 1px solid #e7eaf2;
+                padding: 12px 5px 0;
+                position: relative;                                
+            }            
+            .chart_area.diagnosis .data_attainment ul {                                
+                display: flex;                
+                justify-content: space-between;
+            }            
+            .chart_area.diagnosis .data_attainment ul li {
+                display: inline-block;
+                font-size: 11px;                
+                line-height: 1.18;                
+                color: #656d7e;                
+            }            
+            .chart_area.diagnosis .data_attainment ul li span {
+                color: #333;
+                font-weight: 500;
+                padding-left: 7px;
+            }
+            
+            .chart_area.diagnosis .data_attainment ul li b {
+                color: #333;
+                font-weight: 300;
+                padding-left: 1px;
+            }
+            .chart_table {
+                position: relative;
+                width: 100%;
+                padding: 15px 20px;                
+                box-sizing: border-box;
+                background-color: #eaedf5;                  
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;                
+                &::before {
+                    content: '';                    
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 18px;
+                    background-image: linear-gradient(to bottom, #dbdfea, #eaedf5);
+                }
+
+            }
+            .chart_table .tableRanking.table_alloca {
+                width: 100%;
+                td {
+                    vertical-align: middle;
+                    padding: 3px 0;
+                }
+                .star_area.w12 .starR.on {
+                    background-position: 0 0;
+                }
+                .star_area.w12 .starR {
+                    background-position: -14px 0;
+                }
+            }
+            .chart_table .tableRanking.table_alloca .title {
+                span {
+                    font-size: 12px;                                
+                    letter-spacing: -0.6px;
+                    text-align: left;
+                    color: #656d7e;                
+                }                
+            }
+        }
     }
     .mid_column {        
         .report_title {
@@ -216,19 +363,22 @@
                 border-bottom: none;
             }
             .left {
-                width: 380px;                                
-                flex-grow: 1;                            
-                .alloca_star {                    
-                    .alloca_box {
+                width: 400px;                                
+                flex-grow: 1;                               
+                .alloca_star {    
+                    flex-wrap: wrap;                
+                    display: flex;
+                    justify-content: space-between;
+                    .alloca_box {                        
+                        flex: 1;
                         display: inline-block;
                         vertical-align: bottom;
-                        margin-left: 19px;
-                        padding-left: 19px;
-                        border-left: 1px solid #e7eaf2;     
+                        flex-basis: auto;
+                        // margin-left: 19px;
+                        padding-left: 19px;                        
                         
                         .small_star {
-                            .title {
-                                display: inline-block;
+                            .title {                                
                                 padding-bottom: 8px;                                
                                 font-size: 14px;    
                                 font-weight: $f_sizeN;                            
@@ -236,6 +386,8 @@
                                 color: #656d7e;
                             }
                             .star_area {
+                                display: inline-block;
+                                overflow: hidden;
                                 .starRev {
                                     .starR {
                                         width: 12px;
@@ -243,20 +395,20 @@
                                         
                                     }
                                 }
-
                             }
                         }
 
-                        &:first-child {
-                            border-left: none;
+                        &:first-child {                                                        
                             margin-left: 0;
-                            padding-left: 0;
+                            padding-left: 0;                            
+                            flex-basis: 190px;
+                            border-right: 1px solid #e7eaf2;     
                             .title {
                                 padding-bottom: 7px;                                
                                 font-size: 15px;
                                 font-weight: $f_sizeB;
                                 letter-spacing: -0.75px;                                
-                                color: #333;                                                                    
+                                color: #333;                                           
                             }
                             .star_area {
                                 .starRev {
@@ -269,32 +421,41 @@
                         }
                     }
                     .txt {
+                        flex-wrap: wrap;
                         margin-top: 44px;
                         font-size: 13px;            
                         line-height: 1.54;            
+                        color: #656d7e;                        
+                    }
+                    .leader_num {
+                        clear: both;
+                        display: inline-block;
+                        font-size: 11px;                        
+                        text-align: left;
+                        padding-left: 10px;                        
                         color: #656d7e;                        
                     }
                 }
             }
             .right {
                 background-color: #fff;                
-                width: calc(100% - 380px);                            
-                margin-left: 30px;
+                width: calc(100% - 400px);                            
+                margin-left: 20px;
+                display: flex;
+	            flex-wrap: wrap;
                 .containerfinancials1 {
                     display: inline-block;
-                    width: calc(100% / 2 - 2px);
-                    height: 180px;                    
-                    // rect.highcharts-color-0,
-                    // rect.highcharts-color-1,
-                    // rect.highcharts-color-2 {
-                    //  width: 16px;                        
-                    // }
+                    width: 100%;
+                    height: 180px;        
+                    flex: 1 1 30%;                    
                 }
-                .chart_legend {                    
+                .chart_legend {    
+                    flex-wrap: wrap;                
                     display: block;
+                    width: 100%;
                     border-radius: 5px;
                     margin-bottom: 17px;
-                    text-align: right;
+                    text-align: center;
                 }
                 
                 .chart_legend li {

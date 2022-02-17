@@ -156,20 +156,20 @@ $(document).ready(function () {
     $(function () {
         //input을 datepicker로 선언
         $("#datepicker1, #datepicker2 ").datepicker({
-            dateFormat: 'yy-mm' //달력 날짜 형태
+            dateFormat: 'yymm' //달력 날짜 형태
             , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
             , showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서            
             , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
             , changeMonth: true
             , changeYear: true
-            , buttonImage: "../img/datepicker.gif" //버튼 이미지 경로
+            , buttonImage: "/img/datepicker.gif" //버튼 이미지 경로
             , buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함            
             , yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
             , monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
             , minDate: "-10Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-            , maxDate: "+10Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                      
+            , maxDate: "+0Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                      
             , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
-            , closeText: '닫기'  // 닫기 버튼 패널
+            , closeText: '확인'  // 닫기 버튼 패널
             , currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널
             onClose: function(dateText, inst) { 
                 $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
@@ -276,7 +276,11 @@ $(document).ready(function () {
     //
     $('#container .M_right .page_drop ul').hide();
     $('#container .M_right .page_drop .select_active').on('click', function () {
-        $('#container .M_right .page_drop ul').slideToggle('fast');
+        var saleft = $('#container .M_right .page_drop .select_active').position();        
+        $('#container .M_right .page_drop ul').slideToggle('fast').css({
+            left : saleft.left,
+            right : saleft.left,
+        });
     });
 
     // 종목발굴 우량주 정렬 박스
@@ -387,5 +391,16 @@ $(document).ready(function () {
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');
+    });
+    
+    //가이드 레이어 툴팁
+    $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {        
+        $('.guide_layer').css({ 'z-index': 80 });
+        $('.guide_box').show(300);
+    });
+    //가이드 툴팁 clse
+    $('.guide_box .clse').on("click", function () {
+        $('.guide_layer').css({ 'z-index': -1 });
+        $('.guide_box').hide(300);
     });
 });
