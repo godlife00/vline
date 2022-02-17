@@ -2571,6 +2571,14 @@ input[type='radio']:checked:before {
   background-color: #6a6a6a;
 }
 
+.guide_box .txt {
+  font-size: 12px;
+  line-height: 1.42;
+  color: #6a6a6a;
+  text-align: left;
+  margin-bottom: 13px;
+}
+
 .valueline #wrap #container {
   padding-top: calc(30px + 42px);
 }
