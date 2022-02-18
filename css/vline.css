@@ -6880,6 +6880,258 @@ input[type='radio']:checked:before {
   margin-top: 30px;
 }
 
+#container .M_right .contents .ML_banner {
+  background-color: #dbdfed;
+  margin-top: 60px;
+}
+
+#container .M_right .contents .ML_banner a, #container .M_right .contents .ML_banner img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #e7eaf2;
+  padding: 13px 0;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li:last-child {
+  border-bottom: 1px solid #e7eaf2;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .category {
+  position: relative;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .category::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 6px;
+  display: inline-block;
+  width: 1px;
+  height: 17px;
+  background-color: #e7eaf2;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .category span {
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  text-align: center;
+  color: #3655d6;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .iTitle {
+  padding-left: 24px;
+  -ms-flex-preferred-size: 640px;
+      flex-basis: 640px;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .iTitle a {
+  vertical-align: middle;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #222;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .iTitle a:hover {
+  text-decoration: underline;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .iTitle .file {
+  display: inline-block;
+  line-height: 16px;
+  vertical-align: sub;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .iTitle .file img {
+  display: inline-block;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .iTitle .re_cmt {
+  vertical-align: middle;
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  color: #656d7e;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li.lock .iTitle a {
+  padding-left: 24px;
+  background: url("/img/icon_lock.svg") no-repeat 0 4px;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .regDay {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  padding: 0 9px;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#container .M_right .contents .inform_area.list .listWrap li .regDay span {
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  color: #b1b9cb;
+}
+
+#container .M_right .contents .inform_area.view {
+  margin-top: 18px;
+  padding: 0 23px;
+}
+
+#container .M_right .contents .inform_area.view .top {
+  border-bottom: 1px solid #e7eaf2;
+  padding: 8px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#container .M_right .contents .inform_area.view .top .category {
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #3655d6;
+}
+
+#container .M_right .contents .inform_area.view .top .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #222;
+}
+
+#container .M_right .contents .inform_area.view .top .wtr_info {
+  width: 100px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#container .M_right .contents .inform_area.view .top .wtr_info .day {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.35px;
+  text-align: right;
+  color: #b1b9cb;
+}
+
+#container .M_right .contents .inform_area.view .mid {
+  border-bottom: 1px solid #F4F4F5;
+  color: #333;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+#container .M_right .contents .inform_area.view .mid address, #container .M_right .contents .inform_area.view .mid caption, #container .M_right .contents .inform_area.view .mid em, #container .M_right .contents .inform_area.view .mid var {
+  font-style: italic;
+}
+
+#container .M_right .contents .inform_area.view .mid ol {
+  list-style: decimal;
+  padding-left: 15px;
+}
+
+#container .M_right .contents .inform_area.view .mid ol li {
+  list-style: list-item;
+}
+
+#container .M_right .contents .inform_area.view .mid blockquote:before,
+#container .M_right .contents .inform_area.view .mid blockquote:after,
+#container .M_right .contents .inform_area.view .mid q:before,
+#container .M_right .contents .inform_area.view .mid q:after {
+  content: '';
+}
+
+#container .M_right .contents .inform_area.view .mid blockquote {
+  margin: 20px 0 20px 15px;
+  padding: 5px 15px;
+  border-left: 3px solid #ccc;
+}
+
+#container .M_right .contents .inform_area.view .mid a {
+  color: #527bea;
+  text-decoration: underline;
+}
+
+#container .M_right .contents .inform_area.view .mid ul li {
+  font-size: 0.875rem;
+  padding-left: 13px;
+  line-height: 22px;
+  position: relative;
+}
+
+#container .M_right .contents .inform_area.view .mid ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #333;
+  border-radius: 50%;
+}
+
+#container .M_right .contents .inform_area.view .mid p, #container .M_right .contents .inform_area.view .mid div {
+  color: #333;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+#container .M_right .contents .inform_area.view .mid img {
+  display: inline-block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+#container .M_right .contents .inform_area.view .mid .iframe_video {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+#container .M_right .contents .inform_area.view .mid .iframe_video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .modal {
   z-index: 99;
   padding: 0;
