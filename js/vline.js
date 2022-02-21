@@ -403,4 +403,19 @@ $(document).ready(function () {
         $('.guide_layer').css({ 'z-index': -1 });
         $('.guide_box').hide(300);
     });
+
+    // 댓글입력
+    function textarealength() {
+        $('.comment_inbox_text').keyup(function () {
+            let content = $(this).val(); // 글자수
+            if (content.length > 300) { // 200자까지만 타이밍 가능
+                $(this).val($(this).val().substring(0, 300));
+                alert('글자수는 200자까지 입력 가능합니다.');
+            };
+        });
+    }
+    textarealength();
+
+    
+
 });
