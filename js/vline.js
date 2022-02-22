@@ -404,6 +404,7 @@ $(document).ready(function () {
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');
     });
+
     
     //가이드 레이어 툴팁
     $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {        
