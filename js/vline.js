@@ -24,12 +24,14 @@ $(document).ready(function () {
         $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
             $(this).toggleClass('active');
         });
-
-        $('#header .bgWrap .premium .loginId .login').on('click', function () {
+        
+        $('#header .bgWrap .premium .loginId .login, .comment_attach.login .comment_inbox_text').on('click', function () {
+            // 로그인, 댓글입력시 로그인
             $('.login_form').modal({
                 fadeDuration: 100
             });
         });
+
         $('.modal a.open_step02').on('click', function () {
             $('.terms_form').modal({
                 fadeDuration: 100
@@ -273,6 +275,16 @@ $(document).ready(function () {
         $("#container .M_right .contents_header .data_filter .set_box").toggle();
     });
 
+    // 댓글 삭제 숨기기,보이기
+    $("#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box").hide();
+    $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_article .button').on('click', function () {                
+        $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box').hide();
+        $(this).parent().siblings('.report_set').children('.set_box').toggle();        
+    });
+    $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box .set_filter .top .clse img').on('click', function () {
+        $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box').fadeOut();
+    });
+
     //
     $('#container .M_right .page_drop ul').hide();
     $('#container .M_right .page_drop .select_active').on('click', function () {
@@ -408,9 +420,9 @@ $(document).ready(function () {
     function textarealength() {
         $('.comment_inbox_text').keyup(function () {
             let content = $(this).val(); // 글자수
-            if (content.length > 300) { // 200자까지만 타이밍 가능
+            if (content.length > 300) { // 300자까지만 타이밍 가능
                 $(this).val($(this).val().substring(0, 300));
-                alert('글자수는 200자까지 입력 가능합니다.');
+                alert('글자수는 300자까지 입력 가능합니다.');
             };
         });
     }

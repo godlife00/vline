@@ -88,7 +88,7 @@
             span {
                 font-size: 14px;                                
                 letter-spacing: -0.35px;                
-                color: #b1b9cb;                
+                color: $col300;                
             }            
         }
         
@@ -132,7 +132,7 @@
                         font-size: 14px;                
                         line-height: 1;
                         letter-spacing: -0.35px;                    
-                        color: #b1b9cb;  
+                        color: $col300;  
                     }                         
                 }
             }
@@ -228,7 +228,7 @@
                         text-decoration: none;
                         display: inline-block;                
                         overflow: hidden;
-                        border: solid 1px #b1b9cb;
+                        border: solid 1px $col300;
                         padding: 7px 50px 0 30px;
                         box-sizing: border-box;
                         height: 35px;
@@ -305,14 +305,14 @@
                         padding-left: 3px;
                         font-size: 12px;                        
                         letter-spacing: -0.3px;                        
-                        color: #b1b9cb;
+                        color: $col300;
                     }                    
 
                 }
                 .attention_box {
                     display: inline-block;
                     position: relative;
-                    padding-left: 24px;                
+                    padding-left: 24px;                                    
                     .attention {
                         // 하트 크기
                         @mixin whpx {
@@ -323,6 +323,7 @@
                         position: absolute;
                         top: 10px;
                         left: 10px;
+                        cursor: pointer;
                         @include whpx;                    
                         -webkit-transform: rotate(-45deg);
                         transform: rotate(-45deg);
@@ -359,7 +360,12 @@
                             background-color: #ff6f6f;
                         }
                     }
-                    em {
+                    .attention + em {
+                        font-size: 14px;                        
+                        letter-spacing: -0.35px;                        
+                        color: $col300;                                                
+                    }
+                    .attention.on + em {
                         font-size: 14px;                        
                         letter-spacing: -0.35px;                        
                         color: #ff6f6f;                                                
@@ -387,10 +393,164 @@
                         font-size: 12px;                        
                         line-height: 0.83;
                         letter-spacing: -0.6px;                        
-                        color: #b1b9cb;
+                        color: $col300;
                     }
-
                 }
+                .report_set {
+                    overflow: hidden;                    
+                    .set_box {
+                        z-index: 50;
+                        display: none;                    
+                        position: absolute;    
+                        top: 30px;            
+                        left: auto;                        
+                        right: -8px;
+                        margin-top: 2px;                    
+                        width: 300px;                        
+                        border-radius: 5px;
+                        border: solid 1px #e7eaf2;
+                        background-color: #fff;             
+                        box-shadow: 0px 0px 8px 0px #93add3;       
+                        
+                        .set_filter {       
+                            input.input_txt {
+                                width: 90px;
+                                font-size: 13px;
+                                letter-spacing: -0.33px;                            
+                                color: #656d7e;                            
+                            }                        
+                            .top {
+                                display: flex;
+                                justify-content: space-between;	
+                                padding: 11px 16px 0;
+                                background-color: #f4f6fa;
+                                .title {
+                                    font-size: 14px;
+                                    font-weight: $f_sizeB;
+                                    line-height: 0.71;
+                                    letter-spacing: -0.7px;
+                                    color: #3655d6;                                
+                                }
+                                .clse {
+                                    display: inline-block;                                                    
+                                    cursor: pointer;
+                                    img {
+                                        display: inline-block;
+                                        width: 14px;
+                                        height: 14px;
+                                    }
+                                }
+                            }
+                            .mid {
+                                padding: 10px 16px 5px;        
+                                & > div {
+                                    display: flex;
+                                    justify-content: space-between;                                    
+                                    flex-wrap: wrap;
+                                }                    
+                                
+                                .title {
+                                    font-size: 13px;                            
+                                    letter-spacing: -0.65px;                            
+                                    color: #656d7e;                            
+                                    display: inline-block;
+                                    width: 95px;
+                                }
+                                label {
+                                    &:nth-child(2n) {
+                                        margin-left: 30px;
+                                    }
+                                    flex: 1 1 calc(50% - 30px);
+                                    padding: 7px 0;
+                                    cursor: pointer;                                    
+                                    font-size: 13px;
+                                    letter-spacing: -0.65px;
+                                    color: #656d7e;
+                                    span {
+                                        padding-left: 5px;
+                                        font-size: 13px;                                                                    
+                                        letter-spacing: -0.65px;                            
+                                        color: #656d7e;   
+                                    }
+                                }
+                                .sort_box {          
+                                    height: auto;                      
+                                    margin-top: 14px;
+                                    padding-top: 12px;
+                                    border-top: 1px solid #e7eaf2;
+                                    .mid_title {
+                                        font-size: 14px;
+                                        font-weight: $f_sizeB;
+                                        letter-spacing: -0.7px;                                    
+                                        color: #3655d6;                                    
+                                    }
+                                    .sort {
+                                        margin-top: 15px;
+                                        margin-bottom: 6px;
+                                        display: flex;
+                                        justify-content: space-between;	
+                                        align-items: center;
+                                        li {
+                                            flex: 1;                                                                                
+                                            height: 46px;
+                                            padding-top: 7px;                                        
+                                            box-sizing: border-box;
+                                            vertical-align: middle;
+                                            margin-left: 3px;
+                                            display: inline-block;                                        
+                                            border-radius: 2px;
+                                            border: 1px solid #e8eaf1;
+                                            background-color: #fff;                                        
+                                            text-align: center;               
+                                            cursor: pointer;                         
+    
+                                            span {
+                                                display: inline-block;
+                                                line-height: 15px;             
+                                                font-size: 12px;                                                                       
+                                                letter-spacing: -0.6px;                                        
+                                                color: #656d7e;
+                                            }
+                                            &:nth-child(1), &:nth-child(5) {
+                                                padding-top: 8px;
+                                            }
+                                            &:first-child {
+                                                margin-left: 0;
+                                                span {
+                                                    font-weight: $f_sizeB;
+                                                }
+                                            }
+                                            &.active {
+                                                background-color: #3655d6;
+                                                span {
+                                                    color: #fff;
+                                                }                                            
+                                            }
+                                        }
+                                    }
+                                }                            
+                            }
+                            .btm {                            
+                                overflow: hidden;
+                                padding: 5px 16px 15px;
+                                margin-top: 10px;
+                                .btn_submit {
+                                    float: right;
+                                    cursor: pointer;
+                                    border: none;                            
+                                    border-radius: 5px;
+                                    background-color: #374b9d;
+                                    padding: 3px 20px;
+                                    color: #fff;
+                                }
+                                .btn_submit.btn_cncl {
+                                    background-color: #bdc8d8;                                                                        
+                                    margin-right: 8px;
+                                }
+                            }    
+                        }
+                    }
+                }                
 
                 .commentWriter {
                     border: 1px solid #98acd0;
@@ -426,12 +586,20 @@
                                 font-size: 14px;                                
                                 line-height: 1.43;
                                 letter-spacing: -0.35px;                                
-                                color: #b1b9cb;                                
+                                color: $col300;                                
                             }
                         }
                         .register_box {
                             margin-top: 25px;
                             text-align: right;            
+                        }
+                        &.login {
+                            .register_box .btn_register {
+                                background-color: $colpmr500;                
+                                cursor: not-allowed;
+                                opacity: 0.35;
+                            }
+
                         }
                         .register_box .btn_register {
                             @include one_btn;                                    
