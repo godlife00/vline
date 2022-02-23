@@ -220,7 +220,7 @@ body {
             position: relative;                            
             background-color: #fff;           
             visibility:visible;                        
-        }      
+        }              
         
         tbody {
             .fix {
@@ -362,17 +362,27 @@ body {
 	white-space:nowrap;	
 }
 
-.clone {
+.fix_table.clone {    
 	position:absolute;
-	top:0;
+    top: 0;	
 	left:0;
 	pointer-events:none;
-}
-.clone th, .clone td {
-	visibility:hidden
-}
-.clone tbody th {
-	visibility:visible;
+    th, td {
+        visibility:hidden
+    }
+    tbody th {
+        visibility:visible;
+    }
+    // thead {        
+    //     overflow: hidden;
+    //     z-index: 99;
+    //     th, td, tr {
+    //         background-color: blanchedalmond !important;
+    //     }
+    //     th, td {
+    //         visibility:initial;
+    //     }
+    // }    
 }
 
 .paginate{

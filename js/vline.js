@@ -395,10 +395,35 @@ $(document).ready(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    });
+    });    
 
     // table 좌측 고정
-    $(".fix_table").clone(true).appendTo('#table-scroll').addClass('clone');
+    $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
+    
+    var cloneHeight = $(".fix_table.clone thead").innerHeight();     
+        
+    // $(window).scroll(function () {
+    //     var jbOffset = $(".contents.sub_con").offset();        
+
+    //     if ($(document).scrollTop() >= jbOffset.top) {            
+    //         $('.fix_table.clone').css({        
+    //             'top': cloneHeight,                
+    //         });
+    //         $('.clone thead').css({
+    //             'position' : 'fixed',
+    //             'top': '42px',
+    //         });
+    //     } else {
+    //         $('.fix_table.clone').css({        
+    //             'top': 0,                
+    //         });
+    //         $('.clone thead').css({
+    //             'position' : 'relative',                
+    //             'top': '0'
+    //         });
+    //     }
+    // });
+
 
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {

@@ -2855,6 +2855,9 @@ $(document).ready(function () {
                         lineColor: null,
                         // symbol: 'circle'
                     }
+                },
+                column: {
+                    stacking: 'normal'
                 }
             },
         });
@@ -2964,6 +2967,9 @@ $(document).ready(function () {
                         lineColor: null,
                         // symbol: 'circle'
                     }
+                },
+                column: {
+                    stacking: 'normal'
                 }
             },
         });

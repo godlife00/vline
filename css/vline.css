@@ -564,18 +564,18 @@ body .numCunt::before {
   white-space: nowrap;
 }
 
-.clone {
+.fix_table.clone {
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
 }
 
-.clone th, .clone td {
+.fix_table.clone th, .fix_table.clone td {
   visibility: hidden;
 }
 
-.clone tbody th {
+.fix_table.clone tbody th {
   visibility: visible;
 }
 
