@@ -362,10 +362,11 @@ body {
 	white-space:nowrap;	
 }
 
-.fix_table.clone {    
+.fix_table.clone {        
 	position:absolute;
     top: 0;	
 	left:0;
+    right: 0;
 	pointer-events:none;
     th, td {
         visibility:hidden
@@ -373,14 +374,16 @@ body {
     tbody th {
         visibility:visible;
     }
-    thead {        
-        overflow: hidden;
-        z-index: 99;
+    thead {                
+        z-index: 81;
         th, td, tr {
             background-color: blanchedalmond !important;
         }
         th, td {
             visibility:initial;
+        }
+        .fix {            
+            background-color: red;
         }
     }    
 }

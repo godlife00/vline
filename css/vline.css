@@ -568,6 +568,7 @@ body .numCunt::before {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   pointer-events: none;
 }
 
@@ -580,8 +581,7 @@ body .numCunt::before {
 }
 
 .fix_table.clone thead {
-  overflow: hidden;
-  z-index: 99;
+  z-index: 81;
 }
 
 .fix_table.clone thead th, .fix_table.clone thead td, .fix_table.clone thead tr {
@@ -590,6 +590,10 @@ body .numCunt::before {
 
 .fix_table.clone thead th, .fix_table.clone thead td {
   visibility: initial;
+}
+
+.fix_table.clone thead .fix {
+  background-color: red;
 }
 
 .paginate {

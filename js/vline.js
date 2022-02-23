@@ -399,27 +399,34 @@ $(document).ready(function () {
 
     // table 좌측 고정
     $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
-    
-    var cloneHeight = $(".fix_table.clone thead").innerHeight();     
-        
-    $(window).scroll(function () {
-        var jbOffset = $(".contents.sub_con").offset();        
 
-        if ($(document).scrollTop() >= jbOffset.top) {            
-            $('.fix_table.clone').css({        
-                'top': cloneHeight,                
-            });
+    // table 스크롤 위치        
+    $(".fix_wrap").on("scroll", function () {        
+        var positionLeft =  new $(".fix_wrap").scrollLeft();           
+        console.log("positionLeft = " + positionLeft);
+        $('.clone thead').css({
+            'position' : 'relative',            
+            'left' : 0 - positionLeft
+        });
+        $('.fix_table.clone thead .fix').css({
+            'left' : 0 + positionLeft
+        });
+    });
+    $(window).scroll(function () {
+        var jbOffset = $(".table.fix_table").offset();                                
+        var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                    
+        
+        console.log("positionTop = " + positionTop);
+
+        if ($(document).scrollTop() >= jbOffset.top - 44) {                        
             $('.clone thead').css({
-                'position' : 'fixed',
-                'top': '42px',
+                'position' : 'relative',
+                'top': positionTop,
             });
-        } else {
-            $('.fix_table.clone').css({        
-                'top': 0,                
-            });
+        } else {            
             $('.clone thead').css({
-                'position' : 'relative',                
-                'top': '0'
+                'position' : 'relative',
+                'top': '0',                
             });
         }
     });
