@@ -373,16 +373,16 @@ body {
     tbody th {
         visibility:visible;
     }
-    // thead {        
-    //     overflow: hidden;
-    //     z-index: 99;
-    //     th, td, tr {
-    //         background-color: blanchedalmond !important;
-    //     }
-    //     th, td {
-    //         visibility:initial;
-    //     }
-    // }    
+    thead {        
+        overflow: hidden;
+        z-index: 99;
+        th, td, tr {
+            background-color: blanchedalmond !important;
+        }
+        th, td {
+            visibility:initial;
+        }
+    }    
 }
 
 .paginate{

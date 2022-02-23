@@ -579,6 +579,19 @@ body .numCunt::before {
   visibility: visible;
 }
 
+.fix_table.clone thead {
+  overflow: hidden;
+  z-index: 99;
+}
+
+.fix_table.clone thead th, .fix_table.clone thead td, .fix_table.clone thead tr {
+  background-color: blanchedalmond !important;
+}
+
+.fix_table.clone thead th, .fix_table.clone thead td {
+  visibility: initial;
+}
+
 .paginate {
   text-align: center;
   margin-top: 40px;
