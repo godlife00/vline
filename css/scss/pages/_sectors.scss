@@ -16,16 +16,17 @@
 
     .thead2_table {           
         td.bdr_r {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background: #fff url("../img/gray_tdline.gif") repeat-y right top;
-            }            
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }             
         }
 
         th, td {
@@ -224,16 +225,17 @@
         border-top: none;       
         border-top: 2px solid $colpmr;           
         td.bdr_r {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background: #fff url("../img/gray_tdline.gif") repeat-y right top;
-            }            
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }           
         }
 
         thead {    

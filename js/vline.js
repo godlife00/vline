@@ -401,16 +401,27 @@ $(document).ready(function () {
     $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
 
     // table 스크롤 위치        
-    $(".fix_wrap").on("scroll", function () {        
+    var agent = navigator.userAgent.toLowerCase();    
+    $(".fix_wrap").on("scroll", function () {     
         var positionLeft =  new $(".fix_wrap").scrollLeft();           
         console.log("positionLeft = " + positionLeft);
         $('.clone thead').css({
             'position' : 'relative',            
             'left' : 0 - positionLeft
-        });
-        $('.fix_table.clone thead .fix').css({
-            'left' : 0 + positionLeft
-        });
+        });        
+
+        if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+            // ie일 경우
+            $('.clone thead .fix').css({
+                'left' : 0
+            });
+        } else{
+            // ie가 아닐 경우
+            $('.clone thead .fix').css({
+                'left' : 0 + positionLeft
+            });
+        }
+        
     });
     $(window).scroll(function () {
         var jbOffset = $(".table.fix_table").offset();                                
@@ -423,10 +434,22 @@ $(document).ready(function () {
                 'position' : 'relative',
                 'top': positionTop,
             });
+            $('.fix_table.clone thead td').css({
+                'visibility' : 'visible',                
+            });
+            $('.clone thead th, .clone thead td, .clone thead tr').css({
+                'background-color' : '#fff !important',                
+            });
         } else {            
             $('.clone thead').css({
                 'position' : 'relative',
                 'top': '0',                
+            });
+            $('.fix_table.clone thead').css({
+                'visibility' : 'hidden',                
+            });
+            $('.clone thead th, .clone thead td, .clone thead tr').css({
+                'background-color' : '#fff',                
             });
         }
     });

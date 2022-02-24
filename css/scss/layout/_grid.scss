@@ -308,17 +308,17 @@ body {
         }     
         
         td.bdr_r {
-            position: relative;
-            &::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background: #fff url('/img/gray_tdline.gif') repeat-y right top;                
-                
-            }            
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }          
         }
         
         tbody {
@@ -375,15 +375,13 @@ body {
         visibility:visible;
     }
     thead {                
-        z-index: 81;
-        th, td, tr {
-            background-color: blanchedalmond !important;
-        }
+        z-index: 80;
+        
         th, td {
             visibility:initial;
         }
         .fix {            
-            background-color: red;
+            // background-color: red;
         }
     }    
 }

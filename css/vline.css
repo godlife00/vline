@@ -520,17 +520,7 @@ body .numCunt::before {
 }
 
 .table.table_oneview td.bdr_r {
-  position: relative;
-}
-
-.table.table_oneview td.bdr_r::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
+  border-right: 1px solid #e7eaf2;
 }
 
 .table.table_oneview tbody td.txt_name {
@@ -581,19 +571,11 @@ body .numCunt::before {
 }
 
 .fix_table.clone thead {
-  z-index: 81;
-}
-
-.fix_table.clone thead th, .fix_table.clone thead td, .fix_table.clone thead tr {
-  background-color: blanchedalmond !important;
+  z-index: 80;
 }
 
 .fix_table.clone thead th, .fix_table.clone thead td {
   visibility: initial;
-}
-
-.fix_table.clone thead .fix {
-  background-color: red;
 }
 
 .paginate {
@@ -5344,17 +5326,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area .thead2_table td.bdr_r {
-  position: relative;
-}
-
-#container .M_right .contents .excavation_area .thead2_table td.bdr_r::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
+  border-right: 1px solid #e7eaf2;
 }
 
 #container .M_right .contents .excavation_area .thead2_table thead tr:nth-child(2) td {
@@ -6561,17 +6533,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area .thead2_table td.bdr_r {
-  position: relative;
-}
-
-#container .M_right .contents .sectors_area .thead2_table td.bdr_r::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  border-right: 1px solid #e7eaf2;
 }
 
 #container .M_right .contents .sectors_area .thead2_table th, #container .M_right .contents .sectors_area .thead2_table td {
@@ -6755,17 +6717,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table td.bdr_r {
-  position: relative;
-}
-
-#container .M_right .contents .sectors_area.ratio .thead2_table td.bdr_r::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  border-right: 1px solid #e7eaf2;
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table thead th, #container .M_right .contents .sectors_area.ratio .thead2_table thead td {
