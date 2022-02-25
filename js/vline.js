@@ -424,34 +424,36 @@ $(document).ready(function () {
         
     });
     $(window).scroll(function () {
-        var jbOffset = $(".table.fix_table").offset();                                
-        var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                    
-        
-        console.log("positionTop = " + positionTop);
+        if ($('.table.fix_table').length) {
+            var jbOffset = $(".table.fix_table").offset();                                
+            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                    
+            
+            console.log("positionTop = " + positionTop);
 
-        if ($(document).scrollTop() >= jbOffset.top - 44) {                        
-            $('.clone thead').css({
-                'position' : 'relative',
-                'top': positionTop,
-            });
-            $('.fix_table.clone thead td').css({
-                'visibility' : 'visible',                
-            });
-            $('.clone thead th, .clone thead td, .clone thead tr').css({
-                'background-color' : '#fff !important',                
-            });
-        } else {            
-            $('.clone thead').css({
-                'position' : 'relative',
-                'top': '0',                
-            });
-            $('.fix_table.clone thead').css({
-                'visibility' : 'hidden',                
-            });
-            $('.clone thead th, .clone thead td, .clone thead tr').css({
-                'background-color' : '#fff',                
-            });
-        }
+            if ($(document).scrollTop() >= jbOffset.top - 44) {                        
+                $('.clone thead').css({
+                    'position' : 'relative',
+                    'top': positionTop,
+                });
+                $('.fix_table.clone thead td').css({
+                    'visibility' : 'visible',                
+                });
+                $('.clone thead th, .clone thead td, .clone thead tr').css({
+                    'background-color' : '#fff !important',                
+                });
+            } else {            
+                $('.clone thead').css({
+                    'position' : 'relative',
+                    'top': '0',                
+                });
+                $('.fix_table.clone thead').css({
+                    'visibility' : 'hidden',                
+                });
+                $('.clone thead th, .clone thead td, .clone thead tr').css({
+                    'background-color' : '#fff',                
+                });
+            }
+        }        
     });
 
 

@@ -307,7 +307,49 @@ $(document).ready(function () {
             },
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                useHTML: true,
+                formatter: function () {
+                    var imgOne = '<img src = "../img/startol_one.png" height="10" width="10"/>'  /* 1점 */
+                    var imgZero = '<img src = "../img/startol_zero.png" height="10" width="10"/>'  /* 0점 */
+                    var imgHalf = '<img src = "../img/startol_half.png" height="10" width="10"/>'  /* 0.5점 */
+                    var s = '<b>' + this.x + '</b>';
+                    $.each(this.points, function (i, point) {
+                        if (point.y == '5') {
+                            s += imgOne + imgOne + imgOne + imgOne + imgOne + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '4.5') {
+                            s += imgOne + imgOne + imgOne + imgOne + imgHalf + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '4') {
+                            s += imgOne + imgOne + imgOne + imgOne + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '3.5') {
+                            s += imgOne + imgOne + imgOne + imgHalf + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '3') {
+                            s += imgOne + imgOne + imgOne + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '2.5') {
+                            s += imgOne + imgOne + imgHalf + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '2') {
+                            s += imgOne + imgOne + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '1.5') {
+                            s += imgOne + imgHalf + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '1') {
+                            s += imgOne + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '0.5') {
+                            s += imgHalf + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else {
+                            s += imgZero + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                    });
+                    return s;
+                },
             },
             pane: {
                 startAngle: 0,
@@ -3293,6 +3335,9 @@ $(document).ready(function () {
                         lineColor: null,
                         // symbol: 'circle'
                     }
+                },
+                column: {
+                    stacking: 'normal'
                 }
             },
         });
@@ -5562,17 +5607,6 @@ $(document).ready(function () {
         });
     }
 
-
-
-
-
-
-
-
-
-
-
-
     //MRI 스파이더 차트 테스트
     if ($('#containerfinancials1_1').length) {
         Highcharts.chart('containerfinancials1_1', {
@@ -5982,6 +6016,108 @@ $(document).ready(function () {
             },
         });
     }
+    if ($('#containerfinancials1_5').length) {
+        Highcharts.chart('containerfinancials1_5', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['예상영업익성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [45]
+            }, {
+                name: '영업평균',
+                data: [24]
+            }, {
+                name: '전체평균',
+                data: [34]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
     if ($('#containerfinancials2_1').length) {
         Highcharts.chart('containerfinancials2_1', {
             chart: {
@@ -6086,6 +6222,108 @@ $(document).ready(function () {
     }
     if ($('#containerfinancials2_2').length) {
         Highcharts.chart('containerfinancials2_2', {
+            chart: {
+                type: 'column',                
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            tooltip: {
+                shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            xAxis: [{
+                categories: ['매출액성장률(%)'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#939393',
+                        fontSize: '0.85rem'
+                    }
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                lineColor: null,
+                minorGridLineWidth: 1,
+                gridLineWidth: 0,
+                lineWidth: 1,
+                plotLines: [{
+                    color: '#c8c8c8',
+                    width: 1,
+                    value: 0
+                }],
+                alternateGridColor: null,
+                showFirstLabel: false,
+                breaks: [{
+                    from: 0,
+                    to: 100
+                }],
+                labels: {
+                    enabled: false
+                }
+            },
+            title: {
+                text: null,
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                name: '종목',
+                data: [97]
+            }, {
+                name: '영업평균',
+                data: [85]
+            }, {
+                name: '전체평균',
+                data: [25]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        color: '#656d7e',
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                        style: {
+                            fontWeight: 'normal'
+                        },
+                    }
+                }
+            },
+        });
+    }
+    if ($('#containerfinancials2_3').length) {
+        Highcharts.chart('containerfinancials2_3', {
             chart: {
                 type: 'column',                
                 backgroundColor: {

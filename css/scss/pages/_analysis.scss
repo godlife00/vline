@@ -181,9 +181,11 @@
             padding: 30px 40px 0;
             box-sizing: border-box;                           
             flex-grow: 1;                  
-            .MRIchart_style {
-                width: 98%;
-                height: 98%;                
+            .MRIchart_style {                
+                width: 330px;
+                height: 260px;
+                // width: 98%;                
+                // height: 98%;                
                 margin: 0 auto;                
                 box-sizing: border-box;
                 .highcharts-axis-labels {
@@ -446,9 +448,26 @@
                 .containerfinancials1 {
                     display: inline-block;
                     width: 100%;
-                    height: 180px;        
-                    flex: 1 1 30%;                    
+                    height: 180px;                            
+                    flex: 1 1 50%;                     
                 }
+                .containerfinancials1:first-of-type:nth-last-of-type(1),
+                .containerfinancials1:first-of-type:nth-last-of-type(1) ~ .containerfinancials1,
+                .containerfinancials1:first-of-type:nth-last-of-type(2),
+                .containerfinancials1:first-of-type:nth-last-of-type(2) ~ .containerfinancials1,
+                .containerfinancials1:first-of-type:nth-last-of-type(4),
+                .containerfinancials1:first-of-type:nth-last-of-type(4) ~ .containerfinancials1 {                    
+                    flex: 1 1 50%;                                                             
+                }                
+                .containerfinancials1:first-of-type:nth-last-of-type(3),
+                .containerfinancials1:first-of-type:nth-last-of-type(3) ~ .containerfinancials1 {                    
+                    flex: 1 1 30%;                                         
+                }
+                .containerfinancials1:first-of-type:nth-last-of-type(5),
+                .containerfinancials1:first-of-type:nth-last-of-type(5) ~ .containerfinancials1 {                    
+                    flex: 1 1 30%;                     
+                }
+                
                 .chart_legend {    
                     flex-wrap: wrap;                
                     display: block;
