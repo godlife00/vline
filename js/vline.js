@@ -152,7 +152,22 @@ $(document).ready(function () {
             $(this).addClass('active');
         });
     }        
-    header_Function();        
+    header_Function(); 
+    
+    // 리스트내 종목 검색
+    $('.data_filter .table_search .searchInput').on("focusout", function () {                    
+        console.log("포커스");
+        $('.data_filter .table_search .AutoComplete').hide();
+    });
+    $('.data_filter .table_search .searchInput').on("keydown", function () {            
+        console.log("키다운");
+        $('.data_filter .table_search .AutoComplete').show();
+    });
+    $('.data_filter .table_search .AutoComplete li').removeClass('_on');
+    $('.data_filter .table_search .AutoComplete li').on("mouseover", function () {            
+        $('.data_filter .table_search .AutoComplete li').removeClass('_on')
+        $(this).addClass('_on');
+    });
 
     // 달력
     $(function () {
@@ -180,6 +195,20 @@ $(document).ready(function () {
 
         //초기값을 오늘 날짜로 설정해줘야 합니다.
         $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
+    });
+
+    // paginate
+    $(function () {
+        $('.paginate a img').each(function () {        
+            if ($(this).children().last().is('img').length == 0) {
+                // console.log("페이징에 넘김 없는 경우");                    
+            } else {                    
+                // 페이징에 넘김 있는 경우
+                $(this).parent().css({
+                    border : '1px solid #fff',                
+                });
+            }
+        });
     });
 
     //tabs
@@ -426,11 +455,10 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($('.table.fix_table').length) {
             var jbOffset = $(".table.fix_table").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                    
-            
-            console.log("positionTop = " + positionTop);
+            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                                
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {                        
+            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+                $('.data_filter .table_search .AutoComplete').hide();         
                 $('.clone thead').css({
                     'position' : 'relative',
                     'top': positionTop,

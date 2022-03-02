@@ -375,7 +375,7 @@ body {
         visibility:visible;
     }
     thead {                
-        z-index: 80;
+        z-index: 50;
         
         th, td {
             visibility:initial;
@@ -406,6 +406,10 @@ body {
         border-radius: 3px;
         border: 1px solid #e8eaf1;
         background-color: #fff;
+        img {
+            display: inline-block;
+            vertical-align: middle;            
+        }
     }
     strong, a:hover {   
         color: #7389af;     
@@ -415,32 +419,6 @@ body {
     }
     a:hover {        
         font-size: 14px;        
-    }
-    .cb_pre, .cb_next {
-        position: relative;
-        font-size: 0 !important;
-        border: none !important;
-        &::after {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-top: 1px solid #7788ac;
-            border-right: 1px solid #7788ac;
-            display: inline-block;                        
-            position: absolute;
-            right: 15px;
-            top: 11px;            
-        }        
-    }
-    .cb_pre {        
-        &::after {            
-            transform: rotate(225deg);            
-        }        
-    }
-    .cb_next {        
-        &::after {            
-            transform: rotate(45deg);            
-        }        
     }
 }
 
