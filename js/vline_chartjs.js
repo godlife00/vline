@@ -7381,8 +7381,9 @@ $(document).ready(function () {
                 pointFormat: '<span style="color:#656d7e">PBR={point.x}배, ROE={point.y}%</span>'
             },
             xAxis: {
+                enabled: true,
                 title: {
-                    text: null,
+                    text: "ROE",
                 },
                 startOnTick: true,
                 endOnTick: true,
@@ -7390,7 +7391,7 @@ $(document).ready(function () {
             },
             yAxis: {
                 title: {
-                    text: null,
+                    text: "PBR",
                 },                                
             },
             exporting: {

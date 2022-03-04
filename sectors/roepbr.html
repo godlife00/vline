@@ -112,12 +112,12 @@
                     <div class="data_filter">
                         <div class="data">
                             <ul>
-                                <li>코스피</li>
-                                <li>업종 전체</li>
-                                <li>시가총액 전체</li>
-                                <li>이익 흑자기업</li>
+                                <li>전체</li>
+                                <li>업종 화장품,의류,완구</li>
+                                <li>시가총액 1,000억원이상</li>
+                                <li>이익 전체</li>
                             </ul>
-                            <span class="set"><img src="../img/settings.png" alt="설정"></span>
+                            <span class="set"><img src="/img/settings.png" alt="설정"></span>
                         </div>
 
                         <div class="table_search">
@@ -154,31 +154,56 @@
                                         <div class="">
                                             <span class="title">업종</span>
                                             <div class="selectBoxList">
-                                                <select style="width: 89px;">
-                                                    <option selected>전체</option>
-                                                    <option>옵션1</option>
-                                                    <option>옵션2</option>
-                                                    <option>옵션3</option>
+                                                <select>                                                    
+                                                    <option value="" selected="">전체</option>
+                                                    <option value="WI800">유틸리티</option>
+                                                    <option value="WI700">통신서비스</option>
+                                                    <option value="WI640">디스플레이</option>
+                                                    <option value="WI630">IT가전</option>
+                                                    <option value="WI620">반도체</option>
+                                                    <option value="WI610">IT하드웨어</option>
+                                                    <option value="WI600">소프트웨어</option>
+                                                    <option value="WI520">보험</option>
+                                                    <option value="WI510">증권</option>
+                                                    <option value="WI500">은행</option>
+                                                    <option value="WI410">건강관리</option>
+                                                    <option value="WI400">필수소비재</option>
+                                                    <option value="WI340">소매(유통)</option>
+                                                    <option value="WI330">미디어,교육</option>
+                                                    <option value="WI320">호텔,레저서비스</option>
+                                                    <option value="WI310">화장품,의류,완구</option>
+                                                    <option value="WI300">자동차</option>
+                                                    <option value="WI260">운송</option>
+                                                    <option value="WI250">상사,자본재</option>
+                                                    <option value="WI240">조선</option>
+                                                    <option value="WI230">기계</option>
+                                                    <option value="WI220">건설,건축관련</option>
+                                                    <option value="WI210">철강</option>
+                                                    <option value="WI200">비철,목재등</option>
+                                                    <option value="WI110">화학</option>
+                                                    <option value="WI100">에너지</option>
                                                 </select>
                                             </div>
                                             &nbsp;~&nbsp;
                                             <div class="selectBoxList">
-                                                <select style="width: 89px;">
+                                                <select>
                                                     <option selected>전체</option>
-                                                    <option>옵션1</option>
-                                                    <option>옵션2</option>
-                                                    <option>옵션3</option>
+                                                    <option value="WI31040">완구,레저용품</option>
+                                                    <option value="WI31030">문구,가정용품</option>
+                                                    <option value="WI31020">의류</option>
+                                                    <option value="WI31010">화장품</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="">
                                             <span class="title">시가총액</span>
                                             <div class="selectBoxList">
-                                                <select style="width: 170px;">
-                                                    <option selected>전체</option>
-                                                    <option>옵션1</option>
-                                                    <option>옵션2</option>
-                                                    <option>옵션3</option>
+                                                <select>
+                                                    <option value="" selected="">전체</option>
+                                                    <option value="1">1조원이상</option>
+                                                    <option value="2">5,000억원 ~ 1조원 미만</option>
+                                                    <option value="3">1,000억원 ~ 5,000억원 미만</option>
+                                                    <option value="4">1,000억원 이하</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -242,14 +267,7 @@
 
                 <div class="contents sub_con">
                     <div class="sectors_area matrix">
-                        <div id="tab2" class="tab_content">
-                            
-                            <h2>ROE & PBR 매트릭스</h2>
-                            <div id="scatterchart_01" class="scatterchart_style"></div>
-                            
-                        </div>
-
-                        <div id="tab1" class="tab_content">
+                        <div id="tab1" class="tab_content" style="display: none;">
 
                             <span class="table_update">(* 현재 ROE 높은 순)</span>
                             <div id="table-scroll" class="table-scroll">
@@ -374,7 +392,10 @@
                             </div>
                             
                         </div>
-                        
+                        <div id="tab2" class="tab_content" style="display: block;">                            
+                            <h2>ROE & PBR 매트릭스</h2>
+                            <div id="scatterchart_01" class="scatterchart_style"></div>                            
+                        </div>
                     </div>
                     <!-- //sectors_area -->
                 </div>

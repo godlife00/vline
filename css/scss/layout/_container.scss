@@ -708,17 +708,22 @@
 
 
         .contents_header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;            
+
             position: relative;                        
             margin-top: 28px;
-            &::after {
-                content: "";
-                display: table;
-                table-layout: fixed;
-                clear: both;
-            }
+            // &::after {
+            //     content: "";
+            //     display: table;
+            //     table-layout: fixed;
+            //     clear: both;
+            // }
 
             .data_filter {            
-                float: left;                
+                padding-bottom: 10px;                
+                // float: left;                
                 position: relative;
                 .data {
                     display: inline-block;
@@ -899,6 +904,8 @@
                             }
                         }
                         .mid {
+                            display: flex;
+                            flex-wrap: wrap;                            
                             padding: 10px 16px 5px;                            
                             & > div {                                     
                                 height: 38px;           
@@ -923,6 +930,12 @@
                                 color: #656d7e;                            
                                 display: inline-block;
                                 width: 95px;
+                            }
+                            select {
+                                min-width: 90px;
+                                width: auto;
+                                padding-right: 20px;
+                                box-sizing: border-box;
                             }
                             label {
                                 cursor: pointer;
@@ -1015,7 +1028,7 @@
     
             .table_filter {
                 float: right;         
-                margin-left: 15px;       
+                // margin-left: 15px;       
 
                 .term {
                     display: inline-block;

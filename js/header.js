@@ -176,4 +176,15 @@ $(document).ready(function () {
     $('#footer').load(urlRoute + 'common/footer.html', function () {        
     });
 
+    //연환산,연간,분기 테이블 탭
+    $("#container .M_right .contents .tab_content").hide();
+    $("#container .M_right .contents .tab_content:first").show();
+    $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
+        $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
+        $(this).addClass("active");
+        $("#container .M_right .contents .tab_content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).show();
+    });
+
 });

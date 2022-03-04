@@ -104,7 +104,12 @@
 
     .tab_content  {
         .scatterchart_style {
-                        
+            .highcharts-axis text {                                
+                color: #656d7e !important;                
+                font-size: 13px !important;
+                fill: #656d7e !important;
+                font-weight: $f_sizeB;
+            }                        
         }
     }
     

@@ -576,6 +576,7 @@ body .numCunt::before {
 
 .fix_table.clone thead th, .fix_table.clone thead td {
   visibility: initial;
+  background-color: #fff;
 }
 
 .paginate {
@@ -616,16 +617,6 @@ body .numCunt::before {
 
 .paginate a:hover {
   font-size: 14px;
-}
-
-.paginate .cb_pre, .paginate .cb_next {
-  position: relative;
-  border: none !important;
-}
-
-.paginate .cb_next img {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
@@ -2021,19 +2012,20 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   margin-top: 28px;
 }
 
-#container .M_right .contents_header::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
-}
-
 #container .M_right .contents_header .data_filter {
-  float: left;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -2263,6 +2255,11 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents_header .data_filter .set_box .set_filter .mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 10px 16px 5px;
 }
 
@@ -2291,6 +2288,14 @@ input[type='radio']:checked:before {
   color: #656d7e;
   display: inline-block;
   width: 95px;
+}
+
+#container .M_right .contents_header .data_filter .set_box .set_filter .mid select {
+  min-width: 90px;
+  width: auto;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #container .M_right .contents_header .data_filter .set_box .set_filter .mid label {
@@ -2399,7 +2404,6 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents_header .table_filter {
   float: right;
-  margin-left: 15px;
 }
 
 #container .M_right .contents_header .table_filter .term {
@@ -6682,6 +6686,13 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .sectors_area .thead2_table tbody tr:last-child {
   border-bottom: 1px solid #e7eaf2;
+}
+
+#container .M_right .contents .sectors_area .tab_content .scatterchart_style .highcharts-axis text {
+  color: #656d7e !important;
+  font-size: 13px !important;
+  fill: #656d7e !important;
+  font-weight: 700;
 }
 
 .top_swbox {

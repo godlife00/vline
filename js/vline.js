@@ -242,15 +242,27 @@ $(document).ready(function () {
     });
 
     //연환산,연간,분기 테이블 탭
-    $("#container .M_right .contents .tab_content").hide();
-    $("#container .M_right .contents .tab_content:first").show();
+    // $("#container .M_right .contents .tab_content").hide();
+    // $("#container .M_right .contents .tab_content:first").show();
     $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
         $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
         $(this).addClass("active");
-        $("#container .M_right .contents .tab_content").hide();
-        var activeTab = $(this).attr("rel");
-        $("#" + activeTab).show();
+        // $("#container .M_right .contents .tab_content").hide();
+        // var activeTab = $(this).attr("rel");
+        // $("#" + activeTab).show();
     });
+
+    // 업종분석 매트릭스 차트 보이게 하는 버튼            
+    // $(function () {        
+    //     var loc = window.location.href; // returns the full URL            
+    //     if (/keyword/.test(loc)) {
+    //         console.log("test");            
+    //         $(".table_filter .term span").removeClass("active");
+    //         $(".table_filter .term span:nth-child(2)").addClass("active");
+    //         $(".tab_content:nth-child(1)").hide();
+    //         $(".tab_content:nth-child(2)").fadeIn();
+    //     } 
+    // });
 
     // 
     $('#container .M_right .contents_header .data_filter .set_box .set_filter .top .clse img').on('click', function () {
@@ -467,7 +479,7 @@ $(document).ready(function () {
                     'visibility' : 'visible',                
                 });
                 $('.clone thead th, .clone thead td, .clone thead tr').css({
-                    'background-color' : '#fff !important',                
+                    // 'background-color' : '#fff !important',                
                 });
             } else {            
                 $('.clone thead').css({
@@ -478,7 +490,7 @@ $(document).ready(function () {
                     'visibility' : 'hidden',                
                 });
                 $('.clone thead th, .clone thead td, .clone thead tr').css({
-                    'background-color' : '#fff',                
+                    // 'background-color' : '#fff',                
                 });
             }
         }        
