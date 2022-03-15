@@ -2314,6 +2314,9 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents_header .data_filter .set_box .set_filter .mid .sort_box {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   height: auto;
   margin-top: 14px;
   padding-top: 12px;
