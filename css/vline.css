@@ -2139,7 +2139,7 @@ input[type='radio']:checked:before {
   height: 14px;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu {
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: none;
@@ -2161,43 +2161,43 @@ input[type='radio']:checked:before {
           box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete .no_result {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete .no_result, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu .no_result {
   font-size: 15px;
   letter-spacing: -0.33px;
   color: #656d7e;
   padding: 5px 10px;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li {
   line-height: 1;
   padding: 5px 10px;
   padding-bottom: 5px;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li a {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li a, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li a {
   display: block;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li a strong {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li a strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li a strong {
   font-weight: 700;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li:nth-child(2n) {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li:nth-child(2n), #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li:nth-child(2n) {
   background: #f4f6fa;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li .schCode {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li .schCode, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li .schCode {
   padding-right: 7px;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on {
   background-color: #273986;
 }
 
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on a, #container .M_right .contents_header .data_filter .table_search .AutoComplete li._on strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete li._on span {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on a, #container .M_right .contents_header .data_filter .table_search .AutoComplete li._on strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete li._on span, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on a, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on span {
   color: #fff;
 }
 
@@ -6870,6 +6870,7 @@ input[type='radio']:checked:before {
   background-image: url("/img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
+  background-color: #fff;
 }
 
 #container .M_right .contents .sectors_area.ratio .thead2_table tbody td {

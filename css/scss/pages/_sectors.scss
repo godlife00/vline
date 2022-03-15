@@ -294,12 +294,12 @@
                 }             
             }       
             
-            tr:nth-child(3) {          
-                                
+            tr:nth-child(3) {                                          
                 td {
                     background-image: url('/img/gray_tdline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
+                    background-color: #fff;
                 }             
             }   
         }

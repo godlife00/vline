@@ -157,15 +157,15 @@ $(document).ready(function () {
     // 리스트내 종목 검색
     $('.data_filter .table_search .searchInput').on("focusout", function () {                    
         console.log("포커스");
-        $('.data_filter .table_search .AutoComplete').hide();
+        $('.data_filter .table_search .AutoComplete_indu').hide();
     });
     $('.data_filter .table_search .searchInput').on("keydown", function () {            
         console.log("키다운");
-        $('.data_filter .table_search .AutoComplete').show();
+        $('.data_filter .table_search .AutoComplete_indu').show();
     });
-    $('.data_filter .table_search .AutoComplete li').removeClass('_on');
-    $('.data_filter .table_search .AutoComplete li').on("mouseover", function () {            
-        $('.data_filter .table_search .AutoComplete li').removeClass('_on')
+    $('.data_filter .table_search .AutoComplete_indu li').removeClass('_on');
+    $('.data_filter .table_search .AutoComplete_indu li').on("mouseover", function () {            
+        $('.data_filter .table_search .AutoComplete_indu li').removeClass('_on')
         $(this).addClass('_on');
     });
 
