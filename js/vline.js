@@ -305,10 +305,10 @@ $(document).ready(function () {
         }
     });
 
-    // 쇼핑리스트 리셋
-    $('.form_resetBtn').on('click', function () {
-        $("#shopping_form")[0].reset();
-    });
+    // // 쇼핑리스트 리셋
+    // $('.form_resetBtn').on('click', function () {
+    //     $("#shopping_form")[0].reset();
+    // });
 
     // 테이블 필터링 숨기기,보이기
     $("#container .M_right .contents_header .data_filter .set_box").hide();
