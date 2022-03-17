@@ -25,7 +25,7 @@ $(document).ready(function () {
             $(this).toggleClass('active');
         });
         
-        $('#header .bgWrap .premium .loginId .login, .comment_attach.login .comment_inbox_text').on('click', function () {
+        $('#header .bgWrap .premium .loginId .login, .comment_attach.login .comment_inbox_text, .btn_joinPop').on('click', function () {
             // 로그인, 댓글입력시 로그인
             $('.login_form').modal({
                 fadeDuration: 100
@@ -42,16 +42,12 @@ $(document).ready(function () {
                 fadeDuration: 100
             });
         });
-        $('#header .bgWrap .premium a.join').on('click', function () {
+        $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
         });
-        $('#header .bgWrap .premium a.join').on('click', function () {
-            $('.premium_join').modal({
-                fadeDuration: 100
-            });
-        });
+
 
         // 밸류라인 프리미엄 가입 - 가입방법 열기
         $('.modal a.open_payment').on('click', function () {
@@ -100,6 +96,15 @@ $(document).ready(function () {
         $('.payment_note .note_chk .txt').on("click", function () {
             $(this).toggleClass("active");
         });
+
+        // 프로모션 이벤트 배너
+        $('.event_pop').on('click', function () {
+            // $('.premium_join').modal({
+            //     fadeDuration: 100
+            // });
+            $('.premium_join').modal('show');
+        });
+
 
         //select
         $(function () {
@@ -153,6 +158,12 @@ $(document).ready(function () {
         });
     }        
     header_Function(); 
+
+    // a태그 페이지 상단 이동 막기
+    $('.btn_freePop, .btn_joinPop').on('click', function () {
+        console.log("상단이동제한");
+        return false;
+    });
     
     // 리스트내 종목 검색
     $('.data_filter .table_search .searchInput').on("focusout", function () {                    

@@ -905,6 +905,23 @@ input[type='radio']:checked:before {
   font-size: 14px;
 }
 
+/* 텍스트 필터 */
+.valueline .remark {
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.valueline .remark i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  opacity: 0.67;
+  border-radius: 50%;
+  background-color: #999;
+  margin: 0 2px 2px;
+  border: none !important;
+}
+
 /* 헤더 header */
 #header .bgWrap .title {
   display: inline-block;
@@ -1121,16 +1138,20 @@ input[type='radio']:checked:before {
   top: -2px;
 }
 
-#header .bgWrap .premium .loginId .login {
+#header .bgWrap .premium .loginId .login, #header .bgWrap .premium .loginId .my_info {
+  display: inline-block;
+}
+
+#header .bgWrap .premium .loginId .login span, #header .bgWrap .premium .loginId .my_info span {
+  font-size: 12px;
+  letter-spacing: -0.35px;
+  color: #fff;
+}
+
+#header .bgWrap .premium .loginId .login img, #header .bgWrap .premium .loginId .my_info img {
   display: inline-block;
   width: 24px;
   height: 24px;
-}
-
-#header .bgWrap .premium .loginId .login img {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
 }
 
 /* 푸터 footer */
@@ -1306,6 +1327,13 @@ input[type='radio']:checked:before {
 }
 
 #container .M_left .detail_box .data_area .name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #222;
+}
+
+#container .M_left .detail_box .data_area .name a {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -8177,7 +8205,7 @@ input[type='radio']:checked:before {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #374b9d url("/img/bg_premium_top.svg") no-repeat 93% bottom;
+  background: #374b9d url("/img/bg_premium_top.svg") no-repeat right bottom;
 }
 
 .modal.premium_join .pop_header .pop_title {

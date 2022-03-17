@@ -700,3 +700,20 @@ input[type='radio']:checked:before {
         font-size: 14px;        
     }
 }
+
+/* 텍스트 필터 */
+.valueline .remark {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.valueline .remark i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    opacity: 0.67;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 2px 2px;
+    border: none !important;
+}

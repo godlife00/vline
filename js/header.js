@@ -61,7 +61,7 @@ $(document).ready(function () {
                 fadeDuration: 100
             });
         });
-        $('#header .bgWrap .premium a.join').on('click', function () {
+        $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
@@ -118,6 +118,14 @@ $(document).ready(function () {
         // 결제동의하기 체크
         $('.payment_note .note_chk .txt').on("click", function () {
             $(this).toggleClass("active");
+        });
+
+        // 프로모션 이벤트 배너
+        $('.event_pop').on('click', function () {
+            // $('.premium_join').modal({
+            //     fadeDuration: 100
+            // });
+            $('.premium_join').modal('show');
         });
 
         //select
