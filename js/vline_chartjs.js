@@ -117,7 +117,7 @@ $(document).ready(function () {
         });
     }
 
-    //메인 마켓차트
+    //메인 마켓차트 업종
     if ($('#main_treemap01').length) {
 
         Highcharts.chart('main_treemap01', {
@@ -199,6 +199,258 @@ $(document).ready(function () {
                         name: 'LG디스플레이 <br> 12.45%',
                         value: 2,
                         colorValue: 2
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 1,
+                        colorValue: 1
+                    }]
+            }],
+
+        });
+
+    }
+    //메인 마켓차트 상위 100 종목
+    if ($('#main_treemapTop100').length) {
+
+        Highcharts.chart('main_treemapTop100', {
+
+            chart: {
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+            },
+
+            colorAxis: {
+                min: 1,
+                max: 3,
+                minColor: '#1E51F5',
+                maxColor: '#C5D0E2'
+            },
+
+            title: {
+                text: null
+            },
+
+            credits: {
+                enabled: false,
+            },
+
+            legend: {
+                enabled: false,
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            tooltip: {
+                enabled: false
+            },
+
+            series: [{
+                type: 'treemap',
+                layoutAlgorithm: 'squarified',
+                data: [
+                    {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 6,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%C',
+                        value: 3,
+                        colorValue: 3
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 4,
+                        colorValue: 3
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 2,
+                        colorValue: 2
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 1,
+                        colorValue: 1
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%C',
+                        value: 3,
+                        colorValue: 3
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 4,
+                        colorValue: 3
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 2,
+                        colorValue: 2
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 1,
+                        colorValue: 1
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%C',
+                        value: 3,
+                        colorValue: 3
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 4,
+                        colorValue: 3
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 2,
+                        colorValue: 2
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 5,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 1,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 3,
+                        color: '#d30000'
+                    }, {
+                        name: '삼성전자 <br> 20.28%',
+                        value: 3,
+                        colorValue: 1,
+                    }, {
+                        name: 'LG디스플레이 <br> 12.45%',
+                        value: 4,
+                        color: '#d30000'
                     }, {
                         name: 'LG디스플레이 <br> 12.45%',
                         value: 1,
@@ -5062,8 +5314,12 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
-                crosshair: true
+                // type: 'datetime',
+                labels: {
+                    format: '{value}'
+                },
+                // categories: [18,18,18,19,19,19,19,19,19,19,19,19,19,19,19,20,20,20,20,20,20,20,20,20,20,20,20,21,21,21,21,21,21,21,21,21,21,21,21,22,22,],
+                // crosshair: true
             }],
 
 
@@ -5100,28 +5356,59 @@ $(document).ready(function () {
 
             series: [{
                 name: '주가[좌]',
-                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                data: [
+                    [3,23.15],
+                    [4,23.01],
+                    [5,22.73],
+                    [6,22.83],
+                    [7,22.56],
+                    [8,22.88],
+                    [9,22.88],
+                    [10,22.88],
+                    [11,22.88],
+                    [12,22.88],                    
+                ],
+                // data: [[1584624600000, 20000],16600,17200,14500,15000,19250,17450,14550,16750,12950,12200,11350,12150,11300,12400,11200,10050,7750,10650,13350,12200,12850,12700,13200,12600,12000,13750,16500,16600,16350,16600,15850,16200,15700,14700,13500,12750,12100,24700,24300,26000,],
                 yAxis: 0,
                 tooltip: {
-                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                    // pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
                 },
             }, {
                 name: '순이익지수[우]',
-                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                data: [
+                    [03,23.15],
+                    [03,23.01],
+                    [03,22.73],
+                    [04,22.83],
+                    [04,22.56],
+                    [04,22.88],
+                    [05,22.79],
+                    [05,23.50],
+                    [05,23.50],
+                    [06,23.74],
+                    [06,23.74],
+                    [06,23.74],
+                    [07,23.72],
+                    [07,23.72],
+                    [07,23.72],
+                    [08,23.15],
+                    [08,23.15],
+                    [08,22.65],
+                    [12,23.15],
+                    [12,23.15],
+                    [12,22.65],
+                ],
+                // data: [0.00,0.00,0.00,0.00,0.00,0.00,0.00,720.73,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,100.00,133.26,64.64,-4.61,-5.42,-59.72,-24.94,22.30,],
                 yAxis: 1,
                 tooltip: {
-                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                    // pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
                 },
             }],
 
             plotOptions: {
                 series: {
                     marker: {
-                        enabled: true,
-                        fillColor: '#FFFFFF',
-                        lineWidth: 2,
-                        lineColor: null,
-                        // symbol: 'circle'
+                        enabled: false,
                     }
                 }
             },
