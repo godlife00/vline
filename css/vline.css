@@ -541,6 +541,10 @@ body .numCunt::before {
   box-sizing: border-box;
 }
 
+.table.data_txtR tbody td {
+  text-align: right;
+}
+
 .table.txtInt td span.deci {
   display: none;
 }
@@ -4502,8 +4506,11 @@ input[type='radio']:checked:before {
   height: 100%;
 }
 
+.valueline #wrap #container .left .btm_banner {
+  margin-top: 20px;
+}
+
 .valueline #wrap #container .resultdata_area {
-  background-color: red;
   margin-top: 25px;
   margin-bottom: 65px;
   background-color: #fff;
@@ -4773,6 +4780,10 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans.bk_check span {
   border: 1px solid #d30000;
   color: #d30000;
+}
+
+.valueline #wrap #container .resultdata_area + .indices_area + .btm_layBox {
+  margin-top: 0;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line {

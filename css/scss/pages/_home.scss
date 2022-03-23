@@ -1229,10 +1229,12 @@
             height: 100%;
         }
     }
+    .left .btm_banner {            
+        margin-top: 20px;      
+    }
 
     // 메인 시즌
-    .resultdata_area {
-        background-color: red;
+    .resultdata_area {                
         margin-top: 25px;
         margin-bottom: 65px;
         background-color: #fff;
@@ -1485,6 +1487,9 @@
             }
 
         }
-    }
 
+        & + .indices_area + .btm_layBox {
+            margin-top: 0;        
+        }
+    }
 }

@@ -340,6 +340,12 @@ body {
         }
     }    
 
+    &.data_txtR {        
+        tbody td {            
+            text-align: right;
+        }
+    }
+
     &.txtInt {
         td span.deci {
             display: none;            
