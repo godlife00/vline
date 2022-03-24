@@ -46,21 +46,6 @@ $(document).ready(function () {
             $(this).toggleClass('active');
         });
 
-        $('#header .bgWrap .premium .loginId .login').on('click', function () {
-            $('.login_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step02').on('click', function () {
-            $('.terms_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step03').on('click', function () {
-            $('.sign_complete').modal({
-                fadeDuration: 100
-            });
-        });
         $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
@@ -72,36 +57,7 @@ $(document).ready(function () {
             });
         });
 
-        // 밸류라인 프리미엄 가입 - 가입방법 열기
-        $('.modal a.open_payment').on('click', function () {
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.payment_step01').on('click', function () {
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 결제하기 열기
-        $('.modal a.payment_step02').on('click', function () {
-            $('.payment_step.pay02').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 결제완료 열기
-        $('.modal a.payment_step03').on('click', function () {
-            $('.payment_step.pay03').modal({
-                fadeDuration: 100
-            });
-        });
-
-        // 마이페이지
-        $('#header .bgWrap .premium .my_info').on('click', function () {
-            $('.mypage_info').modal({
-                fadeDuration: 100
-            });
-        });
+                
         // 회원탈퇴
         $('.modal.mypage_info .pop_con .open_withdrawal').on('click', function () {
             $('.withdrawal_sum').modal({

@@ -7768,6 +7768,15 @@ input[type='radio']:checked:before {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal.win_pop {
+  display: block !important;
+  z-index: 81;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .modal .pop_header {
   width: calc(100% - 64px);
   margin: 0 auto;

@@ -12,6 +12,15 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     background-color: #fff;
 
+    &.win_pop {                
+        display: block !important;
+        z-index: 81;
+        box-shadow: none;        
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+
     .pop_header {
         width: calc(100% - 64px);
         margin: 0 auto;
