@@ -123,8 +123,19 @@ $(document).ready(function () {
         });
 
         // 결제동의하기 체크
-        $('.payment_note .note_chk .txt').on("click", function () {
+        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt').on("click", function () {
             $(this).toggleClass("active");
+        });
+
+        // 결제동의하기 전체약관동의 체크
+        $('.payment_note .top .agree').on("click", function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass('active');
+                $('.agree_chk .txt').removeClass('active');
+            } else {
+                $(this).addClass('active');
+                $('.agree_chk .txt').addClass('active');
+            }
         });
 
         // 프로모션 이벤트 배너

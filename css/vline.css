@@ -10069,6 +10069,7 @@ input[type='radio']:checked:before {
 }
 
 /* 가입 - 카드정보 입력 step 02 */
+/* 가입 - 카드정보 입력 step 02 */
 .pay_info {
   padding: 15px 0;
 }
@@ -10283,6 +10284,7 @@ input[type='radio']:checked:before {
 }
 
 .payment_note .top .agree i {
+  cursor: pointer;
   display: inline-block;
   vertical-align: top;
   width: 20px;
@@ -10297,6 +10299,16 @@ input[type='radio']:checked:before {
   background-size: 20px 20px;
 }
 
+.agree_chk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+
 .agree_chk .txt {
   color: #939393;
   font-size: 0.84rem;
@@ -10307,6 +10319,7 @@ input[type='radio']:checked:before {
 }
 
 .agree_chk .txt i {
+  cursor: pointer;
   display: inline-block;
   vertical-align: top;
   width: 20px;
@@ -10322,14 +10335,21 @@ input[type='radio']:checked:before {
 }
 
 .agree_chk .age_link {
-  float: right;
-  display: inline-block;
-  padding: 11px 5px;
-  background: url("/img/more_Black.png") no-repeat center center;
+  position: relative;
+  padding: 11px 10px;
   font-size: 0;
-  width: 7px;
-  height: 12px;
-  background-size: 7px 12px;
+  cursor: pointer;
+}
+
+.agree_chk .age_link::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #939393;
+  border-right: 1px solid #939393;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: inline-block;
 }
 
 .payment_chk {
@@ -10348,6 +10368,7 @@ input[type='radio']:checked:before {
 }
 
 .payment_chk .txt i {
+  cursor: pointer;
   position: absolute;
   left: 5px;
   top: -1px;
