@@ -9155,6 +9155,37 @@ input[type='radio']:checked:before {
   top: 20px;
 }
 
+.modal.age_popbox01 .pop_con, .modal.age_popbox02 .pop_con, .modal.age_popbox03 .pop_con {
+  overflow: auto;
+  height: 500px;
+  background-color: #fff;
+  padding: 15px 30px;
+}
+
+.modal.age_popbox01 .pop_con .txt, .modal.age_popbox02 .pop_con .txt, .modal.age_popbox03 .pop_con .txt {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+  letter-spacing: -0.8px;
+  color: #656d7e;
+}
+
+.modal.age_popbox01 .pop_con ul, .modal.age_popbox01 .pop_con ol, .modal.age_popbox02 .pop_con ul, .modal.age_popbox02 .pop_con ol, .modal.age_popbox03 .pop_con ul, .modal.age_popbox03 .pop_con ol {
+  margin-top: 20px;
+}
+
+.modal.age_popbox01 .pop_con dd, .modal.age_popbox01 .pop_con dt, .modal.age_popbox01 .pop_con li, .modal.age_popbox02 .pop_con dd, .modal.age_popbox02 .pop_con dt, .modal.age_popbox02 .pop_con li, .modal.age_popbox03 .pop_con dd, .modal.age_popbox03 .pop_con dt, .modal.age_popbox03 .pop_con li {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+  letter-spacing: -0.8px;
+  color: #656d7e;
+}
+
+.modal.age_popbox01 .pop_con dt, .modal.age_popbox02 .pop_con dt, .modal.age_popbox03 .pop_con dt {
+  font-weight: bold;
+}
+
 /* 가입 - 가입방법 선택 step 01 */
 .serviceStep .step_top {
   padding: 25px 5px 5px;

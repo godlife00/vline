@@ -1115,10 +1115,39 @@
                 }
             }
         }  
+    } 
 
-        // 결제하기
+    // 나이스페이 전자금융거래 이용약관
+    &.age_popbox01, &.age_popbox02, &.age_popbox03 {
 
-        // 결제완료
+        // 가입방법 선택
+        .pop_con {           
+            overflow: auto;
+            height: 500px;
+            background-color: #fff;            
+            padding: 15px 30px;           
+            .txt {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.7;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }             
+            
+            ul, ol {
+                margin-top: 20px;
+            }
+            dd, dt, li {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.7;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }
+            dt {
+                font-weight: bold;
+            }
+        }  
     } 
 }
 
