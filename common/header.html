@@ -693,10 +693,188 @@
 
             <div class="btnArea modBtn">
                 <a href="#" class="btn btn_cncl payment_step01">결제 취소</a>
-                <a href="#" class="btn btn_save payment_step03">결제하기</a>
+                <a href="#" class="btn btn_save payment_step02_card">결제하기</a>
             </div>
 
 
+        </div>
+    </div>
+</div>
+
+<!-- 밸류라인 프리미엄 가입 - 나이스페이 카드 선택 -->
+<div class="modal payment_step pay02_card">
+    <div class="pop_con">
+        <div class="pay_info">
+            <div class="top">
+                <h2 class="logo"><img src="../img/nicepay_logo.png" alt="나이스페이"></h2>
+                <span class="card">신용카드</span>
+            </div>
+            <div class="info">
+                <ul>
+                    <li><strong>상품명</strong>밸류라인 프리미엄 - 월정기</li>
+                    <!-- <li>
+                        <strong>월결제금액</strong>3,300원 <span>(부가세포함)</span>
+                        <span class="event_pay">* 둘째 달 부터 정상가(33,000원)로 결제됩니다</span>
+                        <span class="event_pay"><b>* 약정 기간 없이 언제든 해지 가능합니다.</b></span>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <!-- //pay_info -->
+
+        <!-- 신용카드정보 입력 -->
+        <div class="card_info">
+            <h3 class="title">신용카드 카드인증</h3>
+            <p class="guide">본인 소유의 신용카드 정보를 정확하게 입력해 주시기 바랍니다.</p>
+            <div class="payment_guide">
+                <div class="mapage_form">
+                    <fieldset>
+                        <div class="form_table">
+                            <table border="1" class="">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">카드번호</th>
+                                        <td>
+
+                                            <div class="item mod_coupon">
+                                                <input type="number" name="cardno_1" id="cardno_1"
+                                                    onkeyup="javascript:numberCheck(this, '카드번호는');"
+                                                    class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                    inputmode="numeric" min="0">
+                                                <input type="number" name="cardno_2" id="cardno_2"
+                                                    onkeyup="javascript:numberCheck(this, '카드번호는');"
+                                                    class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                    inputmode="numeric" min="0">
+                                                <input type="number" name="cardno_3" id="cardno_3"
+                                                    onkeyup="javascript:numberCheck(this, '카드번호는');"
+                                                    class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                    inputmode="numeric" min="0">
+                                                <input type="number" name="cardno_4" id="cardno_4"
+                                                    onkeyup="javascript:numberCheck(this, '카드번호는');"
+                                                    class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                    inputmode="numeric" min="0">
+                                                <p class="i_dsc">결제카드 : 신한</p>
+
+                                                <!--<p class="i_dsc coupon">입력하신 신용카드정보가 일치하지 않습니다. 정확하게 다시 입력해
+                                                    주세요.</p>-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">유효기간</th>
+                                        <td>
+                                            <div class="item mod_coupon">
+                                                <div class="selectbox" style="width: 80px;">
+                                                    <label for="select_mon">1월</label>
+                                                    <select name="select_mon" id="select_mon">
+                                                        <option value="01" selected="">1월</option>
+                                                        <option value="02">2월</option>
+                                                        <option value="03">3월</option>
+                                                        <option value="04">4월</option>
+                                                        <option value="05">5월</option>
+                                                        <option value="06">6월</option>
+                                                        <option value="07">7월</option>
+                                                        <option value="08">8월</option>
+                                                        <option value="09">9월</option>
+                                                        <option value="10">10월</option>
+                                                        <option value="11">11월</option>
+                                                        <option value="12">12월</option>
+                                                    </select>
+                                                </div>
+                                                <div class="selectbox" style="width: 120px;">
+                                                    <label for="select_year">2021년</label>
+                                                    <select name="select_year" id="select_year">
+                                                        <option value="21" selected="">2021년</option>
+                                                        <option value="22">2022년</option>
+                                                        <option value="23">2023년</option>
+                                                        <option value="24">2024년</option>
+                                                        <option value="25">2025년</option>
+                                                        <option value="26">2026년</option>
+                                                        <option value="27">2027년</option>
+                                                        <option value="28">2028년</option>
+                                                        <option value="29">2029년</option>
+                                                        <option value="30">2030년</option>
+                                                        <option value="31">2031년</option>
+                                                        <option value="32">2032년</option>
+                                                        <option value="33">2033년</option>
+                                                        <option value="34">2034년</option>
+                                                        <option value="35">2035년</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">비밀번호</th>
+                                        <td>
+                                            <div class="item mod_coupon">
+                                                <input type="password" name="cardpw" id="cardpw"
+                                                    onkeyup="javascript:numberCheck(this, '비밀번호는');"
+                                                    class="coupon_mod" maxlength="2" pattern="[0-9]*"
+                                                    inputmode="numeric" min="0"
+                                                    style="-webkit-text-security:disc;">
+                                                <span class="pw">** (비밀번호 앞2자리)</span>
+                                                <!-- <p class="i_dsc coupon">입력하신 신용카드정보가 일치하지 않습니다. 정확하게 다시 입력해
+                                                    주세요.</p> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">생년월일</th>
+                                        <td>
+                                            <div class="item mod_coupon">
+                                                <input type="tel" name="auth_no" id="auth_no"
+                                                    onkeyup="javascript:numberCheck(this, 'authno');"
+                                                    class="by_mod" maxlength="6" pattern="[0-9]*"
+                                                    inputmode="numeric" min="0">
+                                                <span class="pw" id="auth_no_length">(6자리)</span>
+                                                <span class="bns_num"
+                                                    onclick="javascript:authNoCheck();"><i></i>사업자등록번호</span>
+                                                <!-- <p class="i_dsc coupon">입력하신 신용카드정보가 일치하지 않습니다. 정확하게 다시 입력해
+                                                    주세요.</p> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+        <!-- //card_info -->
+
+        <div class="payment_note">
+            <div class="top">
+                <h4 class="h4_title">이용약관</h4>
+                <span class="agree"><i></i>전체 약관 동의</span>
+            </div>
+            <div class="agree_chk">
+                <p class="txt"><i></i>(필수)전자금융거래 약관 동의</p>
+                <span class="age_link age_pop01">더보기</span>
+            </div>
+            <div class="agree_chk">
+                <p class="txt"><i></i>(필수)개인정보 수집 및 이용에 대한 동의</p>
+                <span class="age_link age_pop02">더보기</span>
+            </div>
+            <div class="agree_chk">
+                <p class="txt"><i></i>(필수)개인정보 제 3자 제공약관 동의</p>
+                <span class="age_link age_pop03">더보기</span>
+            </div>
+        </div>
+        <!-- //payment_note -->
+
+        <div class="payment_chk">
+            <p class="txt"><i></i>상기 결제 내용을 확인하였습니다.</p>
+        </div>
+
+        <a href="http://help.nicepay.co.kr" class="help_nicepay" target="_blank">결제창 오류 문의
+            http://help.nicepay.co.kr</a>
+
+        <div class="btnArea modBtn">
+            <a href="#" class="btn btn_cncl payment_step02">결제 취소</a>
+            <a href="#" class="btn btn_save payment_step03">결제하기</a>
         </div>
     </div>
 </div>

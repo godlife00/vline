@@ -66,6 +66,12 @@ $(document).ready(function () {
                 fadeDuration: 100
             });
         });
+        // 밸류라인 프리미엄 가입 - 나이스페이 열기
+        $('.modal a.payment_step02_card').on('click', function () {            
+            $('.payment_step.pay02_card').modal({
+                fadeDuration: 100
+            });
+        });
         // 밸류라인 프리미엄 가입 - 결제완료 열기
         $('.modal a.payment_step03').on('click', function () {
             $('.payment_step.pay03').modal({
