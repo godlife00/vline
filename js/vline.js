@@ -29,15 +29,8 @@ $(document).ready(function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
-        });
+        });        
         
-        // 회원탈퇴
-        $('.modal.mypage_info .pop_con .open_withdrawal').on('click', function () {
-            $('.withdrawal_sum').modal({
-                fadeDuration: 100
-            });
-        });
-
         //결제
         $('.serviceStep .step_box').on("click", function () {
             $('.serviceStep .step_box').removeClass("active");
