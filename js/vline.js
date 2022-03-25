@@ -49,6 +49,7 @@ $(document).ready(function () {
             $(this).toggleClass("active");
         });
 
+        // 결제동의하기 전체약관동의 체크
         $('.payment_note .top .agree').on("click", function () {
             if ($(this).hasClass("active")) {
                 $(this).removeClass('active');
