@@ -45,8 +45,18 @@ $(document).ready(function () {
         });
 
         // 결제동의하기 체크
-        $('.payment_note .note_chk .txt').on("click", function () {
+        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt').on("click", function () {
             $(this).toggleClass("active");
+        });
+
+        $('.payment_note .top .agree').on("click", function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass('active');
+                $('.agree_chk .txt').removeClass('active');
+            } else {
+                $(this).addClass('active');
+                $('.agree_chk .txt').addClass('active');
+            }
         });
 
         // 프로모션 이벤트 배너
@@ -56,6 +66,25 @@ $(document).ready(function () {
             // });
             $('.premium_join').modal('show');
         });
+
+        // 나이스페이 전자금융거래 이용약관
+        $('.age_pop01').on('click', function () {
+            $('.age_popbox01').modal({
+                fadeDuration: 100
+            });            
+        });  
+        // 나이스페이 전자금융거래 이용약관
+        $('.age_pop02').on('click', function () {
+            $('.age_popbox02').modal({
+                fadeDuration: 100
+            });            
+        }); 
+        // 나이스페이 전자금융거래 이용약관
+        $('.age_pop03').on('click', function () {
+            $('.age_popbox03').modal({
+                fadeDuration: 100
+            });            
+        });           
 
 
         //select

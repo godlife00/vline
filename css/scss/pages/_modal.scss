@@ -1129,6 +1129,39 @@
 
         // 결제완료
     } 
+
+    // 나이스페이 전자금융거래 이용약관
+    &.age_popbox01, &.age_popbox02, &.age_popbox03 {
+
+        // 가입방법 선택
+        .pop_con {           
+            overflow: auto;
+            height: 500px;
+            background-color: #fff;            
+            padding: 15px 30px;           
+            .txt {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.7;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }             
+            
+            ul, ol {
+                margin-top: 20px;
+            }
+            dd, dt, li {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.7;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }
+            dt {
+                font-weight: bold;
+            }
+        }  
+    } 
 }
 
 
@@ -2090,6 +2123,7 @@
 	line-height:20px;
 }
 .payment_note .top .agree i {
+    cursor: pointer;
 	display:inline-block;
 	vertical-align:top;
 	width:20px;
@@ -2102,7 +2136,11 @@
 	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
-.agree_chk {}
+.agree_chk {    
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
 .agree_chk .txt {
 	color:#939393;
 	font-size:0.84rem;
@@ -2112,6 +2150,7 @@
 	width:calc(100% - 47px);
 }
 .agree_chk .txt i {
+    cursor: pointer;
 	display:inline-block;
 	vertical-align:top;
 	width:20px;
@@ -2125,14 +2164,20 @@
 	background-size:20px 20px;
 }
 .agree_chk .age_link {
-	float:right;
-	display:inline-block;
-	padding:11px 5px;
-	background:url('/img/more_Black.png') no-repeat center center;
-	font-size:0;
-	width:7px;
-	height:12px;
-	background-size:7px 12px;
+    position: relative;
+	padding:11px 10px;
+	font-size:0;	
+    cursor: pointer;
+
+    &::after {
+        content: '';    
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid #939393;
+        border-right: 1px solid #939393;        
+        transform: rotate(45deg);
+        display: inline-block;        
+    }
 }
 .payment_chk {
 	background:#e6e7f4;
@@ -2148,6 +2193,7 @@
 	position:relative;
 }
 .payment_chk .txt i {
+    cursor: pointer;
 	position:absolute;
 	left:5px;
 	top:-1px;
