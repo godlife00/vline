@@ -122,6 +122,25 @@ $(document).ready(function () {
             $('.premium_join').modal('show');
         });
 
+        // 나이스페이 전자금융거래 이용약관
+        $('.age_pop01').on('click', function () {
+            $('.age_popbox01').modal({
+                fadeDuration: 100
+            });            
+        });  
+        // 나이스페이 전자금융거래 이용약관
+        $('.age_pop02').on('click', function () {
+            $('.age_popbox02').modal({
+                fadeDuration: 100
+            });            
+        }); 
+        // 나이스페이 전자금융거래 이용약관
+        $('.age_pop03').on('click', function () {
+            $('.age_popbox03').modal({
+                fadeDuration: 100
+            });            
+        });          
+
 
         //select
         $(function () {
