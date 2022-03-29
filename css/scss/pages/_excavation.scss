@@ -541,10 +541,11 @@
             }
         }
 
-        .thead2_table {
-            border-top: none;                  
+        .thead2_table {            
+            border-top: none;                              
             
-            thead {                
+            thead {               
+                background-color: greenyellow; 
                 th, td {                    
                     padding:8.5px 3px;                                                                          
                 }

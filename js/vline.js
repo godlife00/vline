@@ -481,6 +481,8 @@ $(document).ready(function () {
             }
         }        
     });
+    
+    // $('.table_oneview')
 
 
     // 소수점 체크

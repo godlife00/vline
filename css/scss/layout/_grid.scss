@@ -241,8 +241,7 @@ body {
             }            
         }
 
-        &.thead2_table {
-            // border-top: 1px solid #757A83 ;
+        &.thead2_table {            
             width: 1400px;
             .score_line {
                 background-color: #7489af;                    
@@ -297,7 +296,7 @@ body {
         }
     }   
     
-    &.table_oneview {
+    &.table_oneview {        
         th, td {                
             padding: 8.5px 4px;
             a {
@@ -307,18 +306,12 @@ body {
             }
         }     
         
-        td.bdr_r {
-            // position: relative;
+        td.bdr_r {            
             border-right: 1px solid #e7eaf2;
-            // &::before {
-            //     content: "";
-            //     position: absolute;
-            //     right: 0;
-            //     top: 0;
-            //     bottom: 0;
-            //     width: 1px;
-            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
-            // }          
+        }
+
+        thead {
+            background-color: red;
         }
         
         tbody {
