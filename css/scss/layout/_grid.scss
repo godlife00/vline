@@ -311,7 +311,8 @@ body {
         }
 
         thead {
-            background-color: red;
+            background-color: #fff;
+            z-index: 50;
         }
         
         tbody {
@@ -373,15 +374,19 @@ body {
     tbody th {
         visibility:visible;
     }
+    tbody th.fix,
+    tbody td.fix {                
+        pointer-events: all;
+    }
     thead {                
-        z-index: 50;
+        z-index: 50;        
         
         th, td {
             visibility:initial;
             background-color: #fff;            
         }
         .fix {            
-            // background-color: red;
+            
         }
     }    
 }

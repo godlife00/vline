@@ -479,11 +479,44 @@ $(document).ready(function () {
                     // 'background-color' : '#fff',                
                 });
             }
-        }        
-    });
-    
-    // $('.table_oneview')
+        }   
+        
+        if ($('.table.table_oneview').length) {
+            console.log("test");
+            var jbOffset = $(".table.table_oneview").offset();                                
+            var positionTop = $(window).scrollTop() - $(".table.table_oneview").offset().top + 42;                                
 
+            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+                $('.table.table_oneview thead').css({
+                    'position' : 'relative',
+                    'top': positionTop,
+                });                
+            } else {            
+                $('.table.table_oneview thead').css({
+                    'position' : 'relative',
+                    'top': '0',                
+                });                
+            }
+        }  
+
+        if ($('.excavation_area.pattern .tab_content .thead2_table').length) {
+            console.log("test");
+            var jbOffset = $(".table.thead2_table").offset();                                
+            var positionTop = $(window).scrollTop() - $(".table.thead2_table").offset().top + 42;                                
+
+            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+                $('.table.thead2_table thead').css({
+                    'position' : 'relative',
+                    'top': positionTop,
+                });                
+            } else {            
+                $('.table.thead2_table thead').css({
+                    'position' : 'relative',
+                    'top': '0',                
+                });                
+            }
+        }  
+    });
 
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {

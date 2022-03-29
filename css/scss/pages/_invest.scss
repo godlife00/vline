@@ -220,6 +220,10 @@
             // border-right: 1px solid #e7eaf2;
         }
 
+        thead .fix::before {
+            display: none;
+        }
+
         thead {                
             th, td {                
                 padding:8.5px 8px;                         

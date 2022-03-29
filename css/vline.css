@@ -524,7 +524,8 @@ body .numCunt::before {
 }
 
 .table.table_oneview thead {
-  background-color: red;
+  background-color: #fff;
+  z-index: 50;
 }
 
 .table.table_oneview tbody td.txt_name {
@@ -576,6 +577,11 @@ body .numCunt::before {
 
 .fix_table.clone tbody th {
   visibility: visible;
+}
+
+.fix_table.clone tbody th.fix,
+.fix_table.clone tbody td.fix {
+  pointer-events: all;
 }
 
 .fix_table.clone thead {
@@ -1126,7 +1132,6 @@ input[type='radio']:checked:before {
   font-weight: bold;
   letter-spacing: -0.35px;
   padding-left: 20px;
-  margin-left: 20px;
   color: #fff;
   position: relative;
   vertical-align: top;
@@ -5932,7 +5937,8 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .excavation_area.pattern .tab_content .thead2_table thead {
-  background-color: greenyellow;
+  background-color: #fff;
+  z-index: 50;
 }
 
 #container .M_right .contents .excavation_area.pattern .tab_content .thead2_table thead th, #container .M_right .contents .excavation_area.pattern .tab_content .thead2_table thead td {
@@ -6220,6 +6226,10 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .invest_area.buffett .thead2_table {
   border-top: none;
+}
+
+#container .M_right .contents .invest_area.buffett .thead2_table thead .fix::before {
+  display: none;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table thead th, #container .M_right .contents .invest_area.buffett .thead2_table thead td {

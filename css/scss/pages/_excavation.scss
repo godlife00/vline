@@ -545,7 +545,8 @@
             border-top: none;                              
             
             thead {               
-                background-color: greenyellow; 
+                background-color: #fff; 
+                z-index: 50;        
                 th, td {                    
                     padding:8.5px 3px;                                                                          
                 }
