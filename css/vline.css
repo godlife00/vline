@@ -574,6 +574,12 @@ body .numCunt::before {
   visibility: visible;
 }
 
+.fix_table.clone tbody th.fix,
+.fix_table.clone tbody td.fix {
+  background-color: red;
+  pointer-events: all;
+}
+
 .fix_table.clone tbody td.bdr_r {
   border-right: none !important;
 }

@@ -383,8 +383,13 @@ body {
     tbody th {
         visibility:visible;
     }   
+    tbody th.fix,
+    tbody td.fix {        
+        background-color: red;                
+        pointer-events: all;
+    }
     tbody td.bdr_r {        
-        border-right: none !important;
+        border-right: none !important;        
     }
      
     thead {                
