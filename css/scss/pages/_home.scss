@@ -530,7 +530,7 @@
 
         // PER
         .perListing_table {
-            @include newListingTable_style;                          
+            @include newListingTable_style;                                      
             float: left;
             width: calc(100% / 2 - 20px);                        
 
@@ -539,8 +539,16 @@
                     padding-bottom: 6px !important;         
                 }
             }  
-            tbody {
+            tbody {                
                 td {
+                    &.txt_c,
+                    &.up .price,
+                    &.down .price {                    
+                        font-size: 13px;
+                        padding: 0 2px;
+                        box-sizing: border-box;
+                    }
+                    
                     &.name {                        
                         width: 110px;
                         max-width: 110px;                                                    
@@ -652,8 +660,7 @@
                                     color: #656d7e;                                    
                                     padding: 5px 0;
                                     padding-right: 5px;
-                                    box-sizing: border-box;
-                                    text-align: right;
+                                    box-sizing: border-box;                                    
 
                                     &.name {                        
                                         width: 150px;

@@ -563,10 +563,7 @@
 
                     .form_table {
                         tr {
-                            border-bottom: 1px solid #e7eaf2;
-                            &:last-child {
-                                border-bottom: none;
-                            }
+                            border-bottom: 1px solid #e7eaf2;                            
                         }
                         th, td {
                             vertical-align: top;                   
@@ -608,6 +605,7 @@
                                 position: relative;
                                 font-size: 12px;
                                 letter-spacing: -0.6px;                                
+                                padding-top: 2px;
                                 padding-left: 16px;
                                 margin-top: 3px;
                                 color: #3655d6;
@@ -672,6 +670,64 @@
                                 }
                             }    
                         }                    
+                    }
+
+                    .inUse_box {
+                        margin-top: 15px;                                 
+                        margin-bottom: 15px;
+                        .title {
+                            padding-left: 0;
+                            font-size: 13px;
+                            letter-spacing: -0.65px;
+                            color: #575757;                
+                        }
+                        .use_service {
+                            margin-top: 15px;
+                            ul {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;                    
+                            }
+                            li {
+                                padding: 8px 5px;                    
+                                border-top: 1px solid #e5e5e5;
+                                box-sizing: border-box;
+                                flex: 1;
+                                font-size: 13px;                    
+                                letter-spacing: -0.5px;                    
+                                color: #222;                                
+                                
+                                &.th {                                    
+                                    background-color: #f4f6fa;                                                
+                                    padding-left: 15px;                                    
+                                    .cunt {
+                                        display: inline-block;
+                                        padding-right: 7px;
+                                        font-size: 13px;                                        
+                                        letter-spacing: -0.65px;                                        
+                                        color: #3655d6;
+                                    }
+                                }
+                                &.td {                        
+                                    padding-left: 10px;
+                                    text-align: right;
+                                    font-size: 13px;                                                                        
+                                    letter-spacing: -0.65px;
+                                    color: #656d7e;                                    
+
+                                    .method {                            
+                                        display: inline-block;                            
+                                        width: 45px;                      
+                                        text-align: center;
+                                        color: #575757;
+                                    }
+                                }
+                            }
+                            &:last-child {                        
+                                flex: 1;
+                                border-bottom: 1px solid #e5e5e5;
+                            }
+                        }
                     }
 
                     .agree_area {

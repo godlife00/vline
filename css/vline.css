@@ -334,7 +334,7 @@ body .numCunt::before {
 }
 
 .table th.txt_L, .table td.txt_L {
-  text-align: left;
+  text-align: left !important;
 }
 
 .table th.va_cen, .table td.va_cen {
@@ -572,6 +572,10 @@ body .numCunt::before {
 
 .fix_table.clone tbody th {
   visibility: visible;
+}
+
+.fix_table.clone tbody td.bdr_r {
+  border-right: none !important;
 }
 
 .fix_table.clone thead {
@@ -3748,6 +3752,15 @@ input[type='radio']:checked:before {
   padding-bottom: 6px !important;
 }
 
+.valueline #wrap #container .new_listing .perListing_table tbody td.txt_c,
+.valueline #wrap #container .new_listing .perListing_table tbody td.up .price,
+.valueline #wrap #container .new_listing .perListing_table tbody td.down .price {
+  font-size: 13px;
+  padding: 0 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .valueline #wrap #container .new_listing .perListing_table tbody td.name {
   width: 110px;
   max-width: 110px;
@@ -3866,7 +3879,6 @@ input[type='radio']:checked:before {
   padding-right: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  text-align: right;
 }
 
 .valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table tbody td.name {
@@ -8434,10 +8446,6 @@ input[type='radio']:checked:before {
   border-bottom: 1px solid #e7eaf2;
 }
 
-.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table tr:last-child {
-  border-bottom: none;
-}
-
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table th, .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td {
   vertical-align: top;
   text-align: left;
@@ -8488,6 +8496,7 @@ input[type='radio']:checked:before {
   position: relative;
   font-size: 12px;
   letter-spacing: -0.6px;
+  padding-top: 2px;
   padding-left: 16px;
   margin-top: 3px;
   color: #3655d6;
@@ -8559,6 +8568,82 @@ input[type='radio']:checked:before {
   text-align: center;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .title {
+  padding-left: 0;
+  font-size: 13px;
+  letter-spacing: -0.65px;
+  color: #575757;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service {
+  margin-top: 15px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service li {
+  padding: 8px 5px;
+  border-top: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  color: #222;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service li.th {
+  background-color: #f4f6fa;
+  padding-left: 15px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service li.th .cunt {
+  display: inline-block;
+  padding-right: 7px;
+  font-size: 13px;
+  letter-spacing: -0.65px;
+  color: #3655d6;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service li.td {
+  padding-left: 10px;
+  text-align: right;
+  font-size: 13px;
+  letter-spacing: -0.65px;
+  color: #656d7e;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service li.td .method {
+  display: inline-block;
+  width: 45px;
+  text-align: center;
+  color: #575757;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .txt {

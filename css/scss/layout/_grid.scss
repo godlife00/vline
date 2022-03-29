@@ -119,7 +119,7 @@ body {
             padding-left: 1px;
         }
         &.txt_L {
-            text-align: left;
+            text-align: left !important;
         }
         &.va_cen {
             vertical-align: middle;
@@ -239,6 +239,9 @@ body {
                     opacity: 0.75;                    
                 }
             }            
+            td {
+                // text-align: right;                
+            }
         }
 
         &.thead2_table {
@@ -379,7 +382,11 @@ body {
     }
     tbody th {
         visibility:visible;
+    }   
+    tbody td.bdr_r {        
+        border-right: none !important;
     }
+     
     thead {                
         z-index: 50;
         
