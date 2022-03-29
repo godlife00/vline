@@ -1,6 +1,7 @@
 /* 헤더 header */
 #header {
     .bgWrap {        
+        background-color: #374b9d;
         .title {            
             display: inline-block;
             width: 18%;
@@ -143,11 +144,12 @@
             vertical-align: top;
             margin-top: 12px;            
             a.join {                
-                display: inline-block;
+                display: inline-block;                
                 font-size: 14px;
                 font-weight: bold;            
                 letter-spacing: -0.35px;            
                 padding-left: 20px;
+                margin-left: 20px;
                 color: #fff;
                 position: relative;
                 vertical-align: top;
@@ -168,7 +170,7 @@
                 display: inline-block;                                                
                 position: relative;
                 top: -2px;
-                .login, .my_info {
+                .login, .my_info {                    
                     display: inline-block;                                                            
                     span {
                         font-size: 12px;                        
