@@ -488,7 +488,7 @@ $(document).ready(function () {
                 endAngle: 360
             },
             xAxis: {
-                categories: ['미래성장성', '사업<br>독점력', '현금<br>창출력', '수익<br>성장성', '재무<br>안전성'],
+                categories: ['밸류에이션', '독점력', '성장성', '안전성', '현금창출'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
                 max: 5,
@@ -608,7 +608,126 @@ $(document).ready(function () {
                 endAngle: 360
             },
             xAxis: {
-                categories: ['밸류에이션', '수익<br>성장성', '사업<br>독점력', '재무<br>안전성', '현금<br>창출력'],
+                categories: ['미래성장성', '사업<br>독점력', '현금<br>창출력', '수익<br>성장성', '재무<br>안전성'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0,
+                max: 5,
+                labels: {
+                    allowOverlap: true,
+                    style: {
+                        color: '#656d7e',
+                        fontSize: '14px',
+                    }
+                }
+            },
+            yAxis: {
+                gridLineInterpolation: 'polygon',
+                minorGridLineColor: '#E0E0E0',
+                tickInterval: 1.07,
+                min: 0,
+                max: 5,
+                labels: {
+                    enabled: false
+                }
+            },
+            exporting: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [{
+                type: 'area',
+                name: '데이터1',
+                data: [4, 5, 5, 4.5, 5],
+                pointPlacement: 'on',
+                marker: {
+                    enabled: true,
+                }
+            }],
+            plotOptions: {
+                series: {
+                    lineWidth: 1,
+                    fillOpacity: 0.3,
+                    marker: {
+                        enabled: false,
+                    }
+                },
+            },
+        });
+    }
+    //종목발굴 우량주 주식MRI 차트
+    if ($('#MRIchart_analy01_1').length) {
+
+        Highcharts.chart('MRIchart_analy01_1', {
+            chart: {
+                polar: true,
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+            },
+            colors: ["#3c55ce"],
+            title: {
+                text: null,
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                formatter: function () {
+                    var imgOne = '<img src = "../img/startol_one.png" height="10" width="10"/>'  /* 1점 */
+                    var imgZero = '<img src = "../img/startol_zero.png" height="10" width="10"/>'  /* 0점 */
+                    var imgHalf = '<img src = "../img/startol_half.png" height="10" width="10"/>'  /* 0.5점 */
+                    var s = '<b>' + this.x + '</b>';
+                    $.each(this.points, function (i, point) {
+                        if (point.y == '5') {
+                            s += imgOne + imgOne + imgOne + imgOne + imgOne + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '4.5') {
+                            s += imgOne + imgOne + imgOne + imgOne + imgHalf + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '4') {
+                            s += imgOne + imgOne + imgOne + imgOne + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '3.5') {
+                            s += imgOne + imgOne + imgOne + imgHalf + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '3') {
+                            s += imgOne + imgOne + imgOne + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '2.5') {
+                            s += imgOne + imgOne + imgHalf + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '2') {
+                            s += imgOne + imgOne + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '1.5') {
+                            s += imgOne + imgHalf + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '1') {
+                            s += imgOne + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else if (point.y >= '0.5') {
+                            s += imgHalf + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                        else {
+                            s += imgZero + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
+                        }
+                    });
+                    return s;
+                },
+            },
+            pane: {
+                startAngle: 0,
+                endAngle: 360
+            },
+            xAxis: {
+                categories: ['밸류에이션', '독점력', '현금창출', '성장성', '안전성'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
                 max: 5,
