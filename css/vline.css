@@ -6013,7 +6013,7 @@ input[type='radio']:checked:before {
 .top_invest .sum_txt {
   padding: 2px 7px 0;
   font-size: 13px;
-  line-height: 1.54;
+  line-height: 1.35;
   letter-spacing: -0.33px;
   color: #656d7e;
 }
@@ -6348,7 +6348,7 @@ input[type='radio']:checked:before {
 .top_invest .sum_txt {
   padding: 2px 7px 0;
   font-size: 13px;
-  line-height: 1.54;
+  line-height: 1.35;
   letter-spacing: -0.33px;
   color: #656d7e;
 }
@@ -6574,9 +6574,19 @@ input[type='radio']:checked:before {
 }
 
 .top_invest.greenblatt .stand_standard .cen ul li {
+  position: relative;
   font-size: 13px;
   line-height: 1.62;
   letter-spacing: -0.33px;
+  color: #656d7e;
+  padding-left: 16px;
+}
+
+.top_invest.greenblatt .stand_standard .cen ul li i {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-style: normal;
   color: #656d7e;
 }
 
