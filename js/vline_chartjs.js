@@ -686,7 +686,7 @@ $(document).ready(function () {
             colors: ["#DBDFED", "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
 
             title: {
-                text: '매출액과 이익 <span>삼성전자 (005930)</span>',
+                text: '매출과 이익 <span>삼성전자 (005930)</span>',
                 y: 20,
             },
 

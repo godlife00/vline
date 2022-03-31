@@ -4964,6 +4964,7 @@ input[type='radio']:checked:before {
   letter-spacing: -0.33px;
   color: #656d7e;
   padding-bottom: 17px;
+  word-break: break-all;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line .con_box .right .txt span {
