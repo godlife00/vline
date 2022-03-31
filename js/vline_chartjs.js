@@ -821,6 +821,7 @@ $(document).ready(function () {
                         color: ["#656d7e"],
                     }
                 },
+                max: 100,
             }],
 
 
