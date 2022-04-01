@@ -539,6 +539,61 @@
                     }
 
                 }
+
+                .AutoComplete, .AutoComplete_indu {  
+                    border-bottom-left-radius: 5px;          
+                    border-bottom-left-radius: 5px;                          
+                    display: none;                                    
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                    top:36px;
+                    background: #fff;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border:1px solid #ececec;
+                    z-index: 81;
+                    width: 300px;
+                    max-height: 185px;
+                    overflow: auto;
+                    overflow-x: hidden;                
+                    box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.09);
+                
+                    .no_result {
+                        font-size: 15px;                                                
+                        letter-spacing: -0.33px;                        
+                        color: #656d7e;                        
+                        padding: 5px 10px;
+                    }
+                    
+                    li {                    
+                        line-height: 1;
+                        padding: 5px 10px;
+                        padding-bottom: 5px;
+                        a {
+                            display: block;
+                            font-size: 13px;                                                
+                            letter-spacing: -0.33px;                        
+                            color: #656d7e;
+                            strong {
+                                font-weight: $f_sizeB;
+                            }
+                        }         
+                        &:nth-child(2n) {
+                            background: #f4f6fa;
+                        }
+                        .schCode {
+                            padding-right: 7px;
+                        }
+                        &._on {
+                            background-color: #273986;
+                            a, strong, span {                            
+                                color: #fff;
+                            }                        
+                        }                    
+                    }        
+                }
+
             }
         }
 
