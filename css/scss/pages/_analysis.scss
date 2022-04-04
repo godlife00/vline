@@ -156,6 +156,29 @@
                     color: #656d7e;
                     padding: 0;        
                 }
+                .table_sum {
+                    width: 100%;                    
+                    th, td {
+                        padding: 2px 2px;
+                        border: 1px solid #bdc8d8;
+                        font-size: 13px;
+                        text-align: center;
+                        letter-spacing: -0.33px;
+                        color: #656d7e;
+                    }
+                    thead {
+                        th {
+                            padding: 3px 2px;
+                            background-color: #7489af;
+                            color: #fff;
+                        }
+                    }
+                    tbody {
+                        th, td {
+                            font-size: 12px;                            
+                        }
+                    }
+                } 
             }
             &::after {
                 content: "";
