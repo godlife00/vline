@@ -3174,8 +3174,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .newListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
+  width: 140px;
+  max-width: 140px;
 }
 
 .valueline #wrap #container .new_listing .newListing_table tbody td.name a {
@@ -3187,7 +3187,7 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 16px;
@@ -3275,8 +3275,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .alloListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
+  width: 140px;
+  max-width: 140px;
 }
 
 .valueline #wrap #container .new_listing .alloListing_table tbody td.name a {
@@ -3288,7 +3288,7 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 16px;
@@ -3376,8 +3376,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .hotListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
+  width: 140px;
+  max-width: 140px;
 }
 
 .valueline #wrap #container .new_listing .hotListing_table tbody td.name a {
@@ -3389,7 +3389,7 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 16px;
@@ -3428,13 +3428,13 @@ input[type='radio']:checked:before {
   width: 8px;
   height: 8px;
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+          transform: rotate(-45deg);
   -webkit-animation-name: beat;
-  animation-name: beat;
+          animation-name: beat;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:after {
@@ -3529,8 +3529,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .turnListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
+  width: 140px;
+  max-width: 140px;
 }
 
 .valueline #wrap #container .new_listing .turnListing_table tbody td.name a {
@@ -3542,7 +3542,7 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 16px;
@@ -3597,7 +3597,27 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(2) {
+  padding: 5px 0;
   padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 5px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(2) .price {
+  min-width: 100px;
+}
+
+.valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(2) .per {
+  text-align: left;
+  width: 44px;
 }
 
 .valueline #wrap #container .new_listing .mriListing_table {
@@ -3662,8 +3682,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .mriListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
+  width: 140px;
+  max-width: 140px;
 }
 
 .valueline #wrap #container .new_listing .mriListing_table tbody td.name a {
@@ -3675,7 +3695,7 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 16px;
@@ -3782,8 +3802,8 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .new_listing .perListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
+  width: 140px;
+  max-width: 140px;
 }
 
 .valueline #wrap #container .new_listing .perListing_table tbody td.name a {
@@ -3795,7 +3815,7 @@ input[type='radio']:checked:before {
   white-space: nowrap;
   display: table-cell;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 16px;
@@ -4292,12 +4312,17 @@ input[type='radio']:checked:before {
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down {
   text-align: right;
   padding-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price {
   font-size: 14px;
   letter-spacing: -0.4px;
   color: #222;
+  min-width: 76px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .per, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
@@ -4305,6 +4330,8 @@ input[type='radio']:checked:before {
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #d30000;
+  text-align: left;
+  width: 44px;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
@@ -5196,12 +5223,21 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .mri_chartbox .top_spider .right .chart_area.diagnosis .chartData .charm_num {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.47;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #222;
+  padding-bottom: 10px;
+}
+
+#container .M_right .contents .mri_chartbox .top_spider .right .chart_area.diagnosis .chartData .charm_num strong {
   font-size: 32px;
   font-weight: 700;
   line-height: 1.47;
   text-align: center;
   color: #222;
-  padding-bottom: 10px;
 }
 
 #container .M_right .contents .mri_chartbox .top_spider .right .chart_area.diagnosis .difference {
