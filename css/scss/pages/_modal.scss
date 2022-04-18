@@ -557,20 +557,26 @@
                         font-size: 16px;
                         letter-spacing: -0.4px;
                         text-align: center;                        
-                        color: #222;
-                        padding: 16px 0 7px;
+                        color: #222;          
+                        padding: 16px 0 7px;              
                         border-bottom: 2px solid #e7eaf2;                        
                         &.active {                            
                             font-weight: $f_sizeB;
                             color: #3655d6;
                             border-color: #3655d6;                            
                         }
-
+                        a {                            
+                            display: inline-block;
+                            width: 100%;                            
+                        }
                     }
                 }
                 .mapage_form {
 
                     .form_table {
+                        table {
+                            width: 100%;
+                        }
                         tr {
                             border-bottom: 1px solid #e7eaf2;                            
                         }
@@ -647,10 +653,8 @@
                                     }
                                 }
                             }        
-                            .mod_phone {                
-                                display: none;
-                                .txt_info {
-                                    margin-top: 15px;
+                            .mod_phone {                                                                                
+                                .txt_info {                                    
                                     color: #656d7e;
                                 }                
                                 .phone_mod {
@@ -1519,13 +1523,14 @@
 	margin-top:6px;
 }
 .mapage_form .form_table td .i_dsc i {
-	position:relative;
-	top:2px;
-	margin-right:5px;
-	display:inline-block;
-	width:14px;
-	height:14px;
-	background:url('/img/bg_x.png') no-repeat 0 0;
+    display: none;
+	// position:relative;
+	// top:2px;
+	// margin-right:5px;
+	// display:inline-block;
+	// width:14px;
+	// height:14px;
+	// background:url('/img/bg_x.png') no-repeat 0 0;
 }
 .mapage_form .form_table td .i_dsc.phone {
 	color:#ff0200;

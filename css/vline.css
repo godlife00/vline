@@ -8604,6 +8604,15 @@ input[type='radio']:checked:before {
   border-color: #3655d6;
 }
 
+.modal.mypage_info .pop_con .mapage_area .tab_area ul li a {
+  display: inline-block;
+  width: 100%;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table table {
+  width: 100%;
+}
+
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table tr {
   border-bottom: 1px solid #e7eaf2;
 }
@@ -8691,12 +8700,7 @@ input[type='radio']:checked:before {
   top: 5px;
 }
 
-.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_phone {
-  display: none;
-}
-
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_phone .txt_info {
-  margin-top: 15px;
   color: #656d7e;
 }
 
@@ -9779,13 +9783,7 @@ input[type='radio']:checked:before {
 }
 
 .mapage_form .form_table td .i_dsc i {
-  position: relative;
-  top: 2px;
-  margin-right: 5px;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: url("/img/bg_x.png") no-repeat 0 0;
+  display: none;
 }
 
 .mapage_form .form_table td .i_dsc.phone {

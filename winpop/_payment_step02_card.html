@@ -92,23 +92,28 @@
                                                 <tr>
                                                     <th scope="row">카드번호</th>
                                                     <td>
+
                                                         <div class="item mod_coupon">
                                                             <input type="number" name="cardno_1" id="cardno_1"
                                                                 onkeyup="javascript:numberCheck(this, '카드번호는');"
-                                                                class="coupon_mod" maxlength="4" pattern="\d*">
+                                                                class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                                inputmode="numeric" min="0">
                                                             <input type="number" name="cardno_2" id="cardno_2"
                                                                 onkeyup="javascript:numberCheck(this, '카드번호는');"
-                                                                class="coupon_mod" maxlength="4" pattern="\d*">
+                                                                class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                                inputmode="numeric" min="0">
                                                             <input type="number" name="cardno_3" id="cardno_3"
                                                                 onkeyup="javascript:numberCheck(this, '카드번호는');"
-                                                                class="coupon_mod" maxlength="4" pattern="\d*">
+                                                                class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                                inputmode="numeric" min="0">
                                                             <input type="number" name="cardno_4" id="cardno_4"
                                                                 onkeyup="javascript:numberCheck(this, '카드번호는');"
-                                                                class="coupon_mod" maxlength="4" pattern="\d*">
-                                                            <p class="i_dsc">결제카드 : 롯데</p>
+                                                                class="coupon_mod" maxlength="4" pattern="[0-9]*"
+                                                                inputmode="numeric" min="0">
+                                                            <p class="i_dsc">결제카드 : 신한</p>
 
                                                             <!--<p class="i_dsc coupon">입력하신 신용카드정보가 일치하지 않습니다. 정확하게 다시 입력해
-																주세요.</p>-->
+                                                                주세요.</p>-->
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -134,9 +139,10 @@
                                                                 </select>
                                                             </div>
                                                             <div class="selectbox" style="width: 120px;">
-                                                                <label for="select_year">2022년</label>
+                                                                <label for="select_year">2021년</label>
                                                                 <select name="select_year" id="select_year">
-                                                                    <option value="22" selected="">2022년</option>
+                                                                    <option value="21" selected="">2021년</option>
+                                                                    <option value="22">2022년</option>
                                                                     <option value="23">2023년</option>
                                                                     <option value="24">2024년</option>
                                                                     <option value="25">2025년</option>
@@ -150,7 +156,6 @@
                                                                     <option value="33">2033년</option>
                                                                     <option value="34">2034년</option>
                                                                     <option value="35">2035년</option>
-                                                                    <option value="36">2036년</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -162,11 +167,12 @@
                                                         <div class="item mod_coupon">
                                                             <input type="password" name="cardpw" id="cardpw"
                                                                 onkeyup="javascript:numberCheck(this, '비밀번호는');"
-                                                                class="coupon_mod" maxlength="2" pattern="\d*"
+                                                                class="coupon_mod" maxlength="2" pattern="[0-9]*"
+                                                                inputmode="numeric" min="0"
                                                                 style="-webkit-text-security:disc;">
                                                             <span class="pw">** (비밀번호 앞2자리)</span>
                                                             <!-- <p class="i_dsc coupon">입력하신 신용카드정보가 일치하지 않습니다. 정확하게 다시 입력해
-																주세요.</p> -->
+                                                                주세요.</p> -->
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -176,12 +182,13 @@
                                                         <div class="item mod_coupon">
                                                             <input type="tel" name="auth_no" id="auth_no"
                                                                 onkeyup="javascript:numberCheck(this, 'authno');"
-                                                                class="by_mod" maxlength="6" pattern="\d*">
+                                                                class="by_mod" maxlength="6" pattern="[0-9]*"
+                                                                inputmode="numeric" min="0">
                                                             <span class="pw" id="auth_no_length">(6자리)</span>
                                                             <span class="bns_num"
                                                                 onclick="javascript:authNoCheck();"><i></i>사업자등록번호</span>
                                                             <!-- <p class="i_dsc coupon">입력하신 신용카드정보가 일치하지 않습니다. 정확하게 다시 입력해
-																주세요.</p> -->
+                                                                주세요.</p> -->
                                                         </div>
                                                     </td>
                                                 </tr>
