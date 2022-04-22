@@ -1521,6 +1521,38 @@
             }
         }  
     } 
+    
+    // 이용약관, 개인정보처리방침
+    &.modal.terms, &.modal.policy {                
+        max-width: 900px;
+
+        .pop_con {            
+            .sub_terms {
+                overflow: auto;
+                overflow-x: hidden;
+                max-height: 500px;
+                padding: 38px 32px 48px;  
+
+                
+                color: #333;
+                font-size: 15px;                
+                word-break: break-all;
+                word-wrap: break-word;
+
+                .txt_B, .terms_title {
+                    font-weight: $f_sizeB;
+                }
+                .terms_sum {
+                    margin-top: 20px;                    
+                }
+                .terms_sum {
+                    color: #333;                    
+                    font-weight: 700;
+                    padding-bottom: 10px;
+                }
+            }      
+        }
+    }
 }
 
 

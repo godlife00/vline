@@ -105,6 +105,22 @@ $(document).ready(function () {
             });
         });
 
+        // 이용약관
+        $('.btn_terms').on('click', function () {
+            console.log("이용약관");
+            $('.modal.terms').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
+        // 개인정보처리방침
+        $('.btn_policy').on('click', function () {
+            console.log("개인정보처리방침");
+            $('.modal.policy').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
 
         //select
         $(function () {
@@ -160,7 +176,7 @@ $(document).ready(function () {
     header_Function(); 
 
     // a태그 페이지 상단 이동 막기
-    $('.btn_freePop, .btn_joinPop').on('click', function () {
+    $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
         console.log("상단이동제한");
         return false;
     });

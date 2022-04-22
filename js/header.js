@@ -56,7 +56,6 @@ $(document).ready(function () {
                 fadeDuration: 100
             });
         });
-
                 
         // 회원탈퇴
         $('.modal.mypage_info .pop_con .open_withdrawal').on('click', function () {
@@ -83,6 +82,21 @@ $(document).ready(function () {
             // });
             $('.premium_join').modal('show');
         });
+
+        // 이용약관
+        $('.btn_terms').on('click', function () {
+            $('.modal.terms').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
+        // 개인정보처리방침
+        $('.btn_policy').on('click', function () {
+            $('.modal.policy').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
 
         //select
         $(function () {

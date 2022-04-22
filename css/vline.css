@@ -1654,6 +1654,11 @@ input[type='radio']:checked:before {
   margin-bottom: 8px;
 }
 
+#container .M_left .serviceBanner_area .box img {
+  display: inline-block;
+  width: 100%;
+}
+
 #container .M_right {
   border-radius: 5px;
   padding: 17px 24px 20px;
@@ -9903,6 +9908,35 @@ input[type='radio']:checked:before {
 
 .modal.age_popbox01 .pop_con dt, .modal.age_popbox02 .pop_con dt, .modal.age_popbox03 .pop_con dt {
   font-weight: bold;
+}
+
+.modal.modal.terms, .modal.modal.policy {
+  max-width: 900px;
+}
+
+.modal.modal.terms .pop_con .sub_terms, .modal.modal.policy .pop_con .sub_terms {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+  padding: 38px 32px 48px;
+  color: #333;
+  font-size: 15px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.modal.modal.terms .pop_con .sub_terms .txt_B, .modal.modal.terms .pop_con .sub_terms .terms_title, .modal.modal.policy .pop_con .sub_terms .txt_B, .modal.modal.policy .pop_con .sub_terms .terms_title {
+  font-weight: 700;
+}
+
+.modal.modal.terms .pop_con .sub_terms .terms_sum, .modal.modal.policy .pop_con .sub_terms .terms_sum {
+  margin-top: 20px;
+}
+
+.modal.modal.terms .pop_con .sub_terms .terms_sum, .modal.modal.policy .pop_con .sub_terms .terms_sum {
+  color: #333;
+  font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .setting_pop {

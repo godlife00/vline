@@ -339,6 +339,10 @@
             .box {
                 display: block;
                 margin-bottom: 8px;
+                img {
+                    display: inline-block;
+                    width: 100%;
+                }
             }
         }
     }    
