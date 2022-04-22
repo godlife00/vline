@@ -69,6 +69,23 @@ body {
     }
 }
 
+// 서비스안내
+.sub_service {
+    .service_wrap {
+        position: relative;
+        .service_bg {
+            position: absolute;        
+            right: -24px;
+            top: 25px;
+            width: 33%;            
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }    
+}
+
 // 테이블
 .fix_wrap {
     width: 100%;                

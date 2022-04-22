@@ -72,28 +72,30 @@
                             </ul>
                         </div>
                         <!-- //tab_area -->                                                
+
                         <div class="mapage_service">
-                            <div class="left">
-                                <h3 class="title">밸류라인 프리미엄</h3>
-                                <p class="day">2020. 06/01 ~ 2020. 06/03</p>
-                            </div>
-                            <div class="right">
-                                <h4 class="title">월자동결제</h4>
-                                <a href="../winpop/payment_step02_card.html" class="card_ch">변경</a>
-                                <table cellspacing="0" border="0" class="card_table">
+                            <table border="1" class="service_table">
+                                <tbody>
                                     <tr>
-                                        <th class="num">카드번호</th>
-                                        <td><b>********8823</b></td>
+                                        <th class="service">프리미엄 서비스:</th>
+                                        <td class="day">
+                                            2020.09/18 ~ 2030.10/18
+                                            (월 정기결제)</td>
                                     </tr>
                                     <tr>
-                                        <th class="num">결제일</th>
-                                        <td><b>22</b>일</td>
+                                        <th rowspan="2" class="system"><span>월정기결제</span>
+                                            <a href="#pay_cncl" class="btn_payCan show_pop02 auto_cncl">정기결제취소</a>
+            
+                                        </th>
+                                        <td class="num"><span>ㆍ카드번호</span> <strong>*********3423</strong><a
+                                                href="../winpop/payment_step02_card.html" class="card_ch">변경</a></td>
                                     </tr>
-                                </table>
-                                <!-- //card_table -->
-                            </div>
+                                    <tr>
+                                        <td class="num"><span>ㆍ결제일</span> <strong>19일</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- //mapage_service -->
 
                         <div class="history_area">
                             <table cellspacing="0" border="0" class="history_table">
@@ -159,5 +161,179 @@
     </div>
     <!-- //wrap -->
 </body>
+
+<!-- 결제취소, 환불 팝업 들 -->
+<!-- 월자동결제 결제취소 팝업 -->
+<div class="modal login_form">
+    <div class="pop_header">
+        <h1 class="pop_title">결제취소 <span id="now_time">2022.3/14 9:48</span> </h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+
+    <div class="pop_con">
+        <div class="mapage_form">
+            <form name="payForm" method="post">
+                <fieldset>
+                    <div class="form_table">
+                        <table border="1" class="">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">서비스</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_srv_name">밸류라인 (월자동)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_srv_price">990원</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사용일수</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_use_day">543일</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_refund_price">0원</p>
+                                            <p class="i_dsc phone" id="pay_free_price"></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_card_no">신용카드(****23)</p>
+                                        </div>
+                                        <div class="certification_area">
+                                            <p class="txt">결제취소는 신청 즉시(또는 영업일 기준 D+2 이내) 처리되며, 가상계좌/계좌이체 결제금액은
+                                                D+7 이내 등록하신 환불계좌로 입금처리됩니다.</p>
+                                            <a href="#" class="go_link" target="_blank">환불정책 바로가기</a>
+                                        </div>
+                                        <!-- //certification_area -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="label_chk"><i></i>위 내용을 확인했으며, 결제취소를 신청합니다.</p>
+                    </div>
+                    <!-- //form_table -->
+                    <div class="btnArea edtBtn">
+                        <a href="" class="btn btn_save">결제취소</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- 기간결제 해지/환불 팝업 -->
+<div class="modal refund">
+    <div class="pop_header">
+        <h1 class="pop_title">서비스 해지/환불 <span>2019.12/23 12:24</span> </h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+
+    <div class="pop_con">
+        <p class="pop_sum">이용중인 <strong>‘초이스스탁US’</strong> 서비스 해지와 환불을 신청합니다.</p>
+        <div class="mapage_form">
+            <form action="" method="post">
+                <fieldset>
+                    <div class="form_table">
+                        <table border="1" class="">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">서비스</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info">초이스스탁 (기간결제)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info">35,000원</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이용일수</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info"><strong>20</strong>일 <span>/ 31일</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info"><strong>15,000</strong>원</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불계좌</th>
+                                    <td>
+                                        <div class="item">
+                                            <div class="selectbox" style="width: 180px;">
+                                                <label for="select">은행 선택</label>
+                                                <select id="select">
+                                                    <option selected>신한은행</option>
+                                                    <option>농협은행</option>
+                                                    <option>국민은행</option>
+                                                    <option>우리은행</option>
+                                                    <option>신한은행</option>
+                                                </select>
+                                            </div>
+                                            <input type="number" placeholder="계좌번호 입력" name="" id="" class="tr_num">
+                                        </div>
+                                        
+
+                                        <div class="certification_area">
+                                            <h3 class="service_title"><strong>[환불 안내]</strong></h3>
+                                            <p class="txt">해지일로부터 이용일수에 해당하는 금액과 환불처리에 발생하는 수수료 및
+                                                기타 제반 비용(환불대상 서비스 결제금액의 3.5%)을 결제금액에서 차감 후 환불합니다.
+                                                단, 유료 서비스 이용 개시일로부터 3일 이내에 해지를 요구하는 경우
+                                                이용일수에 해당하는 금액만을 차감하여 환불합니다</p>
+                                            <p class="txt">환불 요청 시 상거래보호법에 따른 거래내역 보존 필요에 따라 5년~10년간
+                                                아이디와 함께 정보가 보관됩니다. </p>
+                                        </div>
+                                        <!-- //certification_area -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="label_chk"><i></i>서비스 해지 및 환불에 관한 내용을 모두 확인했습니다.</p>
+                    </div>
+                    <!-- //form_table -->
+                </fieldset>
+            </form>
+        </div>
+        <div class="btnArea edtBtn">
+            <a href="#" class="btn btn_save">서비스 해지 및 환불요청</a>
+        </div>
+    </div>
+    
+
+</div>
 
 </html>

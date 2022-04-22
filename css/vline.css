@@ -273,6 +273,22 @@ body .numCunt::before {
   padding: 0 15px;
 }
 
+.sub_service .service_wrap {
+  position: relative;
+}
+
+.sub_service .service_wrap .service_bg {
+  position: absolute;
+  right: -24px;
+  top: 25px;
+  width: 33%;
+}
+
+.sub_service .service_wrap .service_bg img {
+  display: block;
+  width: 100%;
+}
+
 .fix_wrap {
   width: 100%;
   overflow: auto;
@@ -1627,6 +1643,15 @@ input[type='radio']:checked:before {
 
 #container .M_left .service_box li:nth-child(3) a {
   background-position-y: calc(100% - 4px);
+}
+
+#container .M_left .serviceBanner_area {
+  padding-top: 95px;
+}
+
+#container .M_left .serviceBanner_area .box {
+  display: block;
+  margin-bottom: 8px;
 }
 
 #container .M_right {
@@ -8248,6 +8273,237 @@ input[type='radio']:checked:before {
   font-weight: 700;
 }
 
+.modal.login_form .pop_header #now_time, .modal.refund .pop_header #now_time {
+  color: #939393;
+  font-size: 15px;
+  font-weight: normal;
+  padding-left: 25px;
+}
+
+.modal.login_form .pop_con, .modal.refund .pop_con {
+  padding: 10px 15px 20px;
+}
+
+.modal.login_form .pop_con .pop_sum, .modal.refund .pop_con .pop_sum {
+  padding: 5px 0 15px;
+  color: #c22e06;
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 1px solid #E0E4E9;
+  line-height: 1.4;
+}
+
+.modal.login_form .pop_con .pop_sum strong, .modal.refund .pop_con .pop_sum strong {
+  color: #c22e06;
+  font-weight: 700;
+}
+
+.modal.login_form .pop_con .mapage_form, .modal.refund .pop_con .mapage_form {
+  padding-top: 10px;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table th, .modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th, .modal.refund .pop_con .mapage_form .form_table table td {
+  padding: 7px 0;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.65px;
+  color: #898989;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table tr, .modal.refund .pop_con .mapage_form .form_table table tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table th, .modal.refund .pop_con .mapage_form .form_table table th {
+  font-weight: normal;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .item, .modal.refund .pop_con .mapage_form .form_table table .item {
+  padding-left: 25px;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .item .txt_info strong, .modal.refund .pop_con .mapage_form .form_table table .item .txt_info strong {
+  color: #c22e06;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .certification_area, .modal.refund .pop_con .mapage_form .form_table table .certification_area {
+  overflow: auto;
+  max-height: 180px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: -90px;
+  padding: 15px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .certification_area .service_title, .modal.refund .pop_con .mapage_form .form_table table .certification_area .service_title {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .certification_area .txt, .modal.refund .pop_con .mapage_form .form_table table .certification_area .txt {
+  color: #575757;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .certification_area .go_link, .modal.refund .pop_con .mapage_form .form_table table .certification_area .go_link {
+  margin-top: 5px;
+  display: block;
+  text-decoration: underline;
+  color: #527bea;
+  text-align: right;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .tr_num, .modal.refund .pop_con .mapage_form .form_table table .tr_num {
+  border: none;
+  font-size: 16px;
+  letter-spacing: -0.8px;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 8px 13px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .tr_num:focus, .modal.refund .pop_con .mapage_form .form_table table .tr_num:focus {
+  border: none;
+  outline: none;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .tr_num::-webkit-input-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::-webkit-input-placeholder {
+  color: #333;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .tr_num:-ms-input-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num:-ms-input-placeholder {
+  color: #333;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .tr_num::-ms-input-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::-ms-input-placeholder {
+  color: #333;
+}
+
+.modal.login_form .pop_con .mapage_form .form_table table .tr_num::placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::placeholder {
+  color: #333;
+}
+
+.modal.login_form .pop_con .mapage_form .label_chk, .modal.refund .pop_con .mapage_form .label_chk {
+  margin-top: 15px;
+  font-size: 0.875rem;
+  letter-spacing: -0.7px;
+  color: #222;
+}
+
+.modal.login_form .pop_con .mapage_form .label_chk i, .modal.refund .pop_con .mapage_form .label_chk i {
+  display: inline-block;
+  vertical-align: top;
+  width: 18px;
+  height: 18px;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  margin-right: 7px;
+}
+
+.modal.login_form .pop_con .mapage_form .label_chk.active i, .modal.refund .pop_con .mapage_form .label_chk.active i {
+  background-position: 0 0;
+}
+
+.modal.login_form .pop_con .mapage_form .btnArea.edtBtn, .modal.refund .pop_con .mapage_form .btnArea.edtBtn {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 13px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-top: 40px;
+  background-color: #7389af;
+  color: #fff;
+  font-weight: normal;
+}
+
+.modal.login_form .pop_con .mapage_form .btnArea.edtBtn::before, .modal.refund .pop_con .mapage_form .btnArea.edtBtn::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.modal.login_form .pop_con .mapage_form .btnArea.edtBtn b, .modal.refund .pop_con .mapage_form .btnArea.edtBtn b {
+  color: #ff8d5a;
+  font-weight: 700;
+}
+
+.modal.login_form .pop_con .mapage_form .btnArea.edtBtn a, .modal.refund .pop_con .mapage_form .btnArea.edtBtn a {
+  font-size: 0.9375rem;
+  letter-spacing: -0.38px;
+  color: #fff;
+  border: none;
+}
+
+.modal.login_form .btnArea.edtBtn, .modal.refund .btnArea.edtBtn {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 13px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #fff;
+  background-color: #c22e06;
+  border: none;
+  margin-top: 15px;
+}
+
+.modal.login_form .btnArea.edtBtn::before, .modal.refund .btnArea.edtBtn::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.modal.login_form .btnArea.edtBtn b, .modal.refund .btnArea.edtBtn b {
+  color: #ff8d5a;
+  font-weight: 700;
+}
+
+.modal.login_form .btnArea.edtBtn a, .modal.refund .btnArea.edtBtn a {
+  color: #fff;
+}
+
 .modal.sign_complete .pop_con .loign_com .login_title {
   padding: 35px 33px;
   background: #fff url("/img/bg_premium_top.svg") no-repeat 90% 70%;
@@ -9017,6 +9273,126 @@ input[type='radio']:checked:before {
   font-weight: normal;
 }
 
+.modal.mypage_info .pop_con .mapage_service {
+  padding: 20px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 8px 0 12px;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .box:last-child {
+  border-left: 1px solid #e5e5e5;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .service {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.47;
+  letter-spacing: -0.75px;
+  color: #3655d6;
+  width: 120px;
+  padding-bottom: 10px;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .day {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #575757;
+  padding-left: 5px;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .system {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #222;
+  margin-right: 3px;
+  text-align: center;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .num {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #575757;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .num span {
+  display: inline-block;
+  padding: 3px 0 2px;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .btn_payCan, .modal.mypage_info .pop_con .mapage_service .service_table .btn_payRefund {
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #3c55ce;
+  background-color: transparent;
+  padding: 1px 5px;
+  font-size: 10px;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #3655d6;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .card_ch {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 3px;
+  border: solid 1px #3c55ce;
+  width: 36px;
+  height: 17px;
+  padding: 0 4px;
+  margin-left: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #3655d6;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .card_num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1px 10px;
+  padding-top: 6px;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .card_num p {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  color: #222;
+}
+
+.modal.mypage_info .pop_con .mapage_service .service_table .card_num p span {
+  display: inline-block;
+  color: #575757;
+  padding-right: 3px;
+  width: 46px;
+}
+
 .modal.mypage_info .pop_con .history_area {
   overflow: auto;
   max-height: 300px;
@@ -9410,6 +9786,94 @@ input[type='radio']:checked:before {
   top: 20px;
 }
 
+.modal.card_reg {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  margin-left: -250px;
+  opacity: 1;
+  display: inline-block;
+}
+
+.modal.card_reg .bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.card_reg .setting_area {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  width: 500px;
+  margin-left: -250px;
+  opacity: 1;
+  display: inline-block;
+  z-index: 99;
+}
+
+.modal.card_reg .pop_con {
+  text-align: center;
+  background: #F4F4F5;
+  padding: 25px 30px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+  letter-spacing: -0.8px;
+  color: #656d7e;
+}
+
+.modal.card_reg .pop_con .btnArea.edtBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+.modal.card_reg .pop_con .btnArea.edtBtn .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 13px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #fff;
+}
+
+.modal.card_reg .pop_con .btnArea.edtBtn .btn:first-child {
+  border: solid 1px #3b4b98;
+  background-color: #fff;
+  color: #374b9d;
+}
+
+.modal.card_reg .pop_con .btnArea.edtBtn .btn:last-child {
+  margin-left: 10px;
+}
+
+.modal.card_reg .pop_con .btnArea.edtBtn .btn {
+  padding: 7px 0;
+}
+
 .modal.age_popbox01 .pop_con, .modal.age_popbox02 .pop_con, .modal.age_popbox03 .pop_con {
   overflow: auto;
   height: 500px;
@@ -9439,6 +9903,14 @@ input[type='radio']:checked:before {
 
 .modal.age_popbox01 .pop_con dt, .modal.age_popbox02 .pop_con dt, .modal.age_popbox03 .pop_con dt {
   font-weight: bold;
+}
+
+.setting_pop {
+  background-color: red;
+}
+
+.setting_pop .setting_area {
+  background-color: gray;
 }
 
 /* 가입 - 가입방법 선택 step 01 */
@@ -9563,7 +10035,8 @@ input[type='radio']:checked:before {
 }
 
 .serviceStep .step_box .payRight .pay02 .pay_sale {
-  display: block;
+  display: inline-block;
+  padding-left: 4px;
   color: #939393;
   font-size: 0.8rem;
   font-weight: normal;
@@ -10114,6 +10587,10 @@ input[type='radio']:checked:before {
   border-top: none;
 }
 
+.payment_guide .mapage_form .form_table table {
+  width: 100%;
+}
+
 .payment_guide .mapage_form .form_table tr {
   border-bottom: 1px solid #E0E4E9;
 }
@@ -10497,6 +10974,7 @@ input[type='radio']:checked:before {
 }
 
 .card_info span.bns_num {
+  cursor: pointer;
   color: #939393;
   font-size: 0.84rem;
   display: inline-block;

@@ -21,9 +21,9 @@ $(document).ready(function () {
         $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function () {
             $(this).toggleClass('active');
         });
-        $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
-            $(this).toggleClass('active');
-        });
+        // $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
+        //     $(this).toggleClass('active');
+        // });
         
         $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
             $('.premium_join').modal({
@@ -38,7 +38,7 @@ $(document).ready(function () {
         });
 
         // 결제동의하기 체크
-        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt').on("click", function () {
+        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt, .card_info span.bns_num, .mapage_form .label_chk').on("click", function () {
             $(this).toggleClass("active");
         });
 
@@ -61,6 +61,13 @@ $(document).ready(function () {
             $('.premium_join').modal('show');
         });
 
+        // 나이스페이 카드정보
+        $('.cardreg_pop01').on('click', function () {
+            $('.card_reg').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop01').on('click', function () {
             $('.age_popbox01').modal({
@@ -78,7 +85,25 @@ $(document).ready(function () {
             $('.age_popbox03').modal({
                 fadeDuration: 100
             });            
-        });           
+        });          
+        
+        // 월자동결제 서비스 변경 팝업
+        $('.btn_payCan').on('click', function () {
+            $('.login_form').modal({
+                fadeDuration: 100
+            });
+        });
+        $('.btn_payRefund').on('click', function () {
+            $('.refund').modal({
+                fadeDuration: 100
+            });
+        });
+        // 나이스페이 진행중인 결제 취소
+        $('.s_stokes #wrap #container.sub_payment .payment_area.nicepay .btnArea.payBtn a.btn_cncl').on('click', function () {
+            $('.paymentCancel').modal({
+                fadeDuration: 100
+            });
+        });
 
 
         //select
