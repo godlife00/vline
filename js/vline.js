@@ -105,23 +105,6 @@ $(document).ready(function () {
             });
         });
 
-        // 이용약관
-        $('.btn_terms').on('click', function () {
-            console.log("이용약관");
-            $('.modal.terms').modal({
-                fadeDuration: 100
-            });            
-        }); 
-
-        // 개인정보처리방침
-        $('.btn_policy').on('click', function () {
-            console.log("개인정보처리방침");
-            $('.modal.policy').modal({
-                fadeDuration: 100
-            });            
-        }); 
-
-
         //select
         $(function () {
             var selectTarget = $('.selectbox select');

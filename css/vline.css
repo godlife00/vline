@@ -10293,6 +10293,11 @@ input[type='radio']:checked:before {
   display: none;
 }
 
+.mapage_form .form_table td .i_dsc.phone_premium {
+  float: left;
+  margin-top: 6px;
+}
+
 .mapage_form .form_table td .i_dsc.phone {
   color: #ff0200;
   margin-top: 0;

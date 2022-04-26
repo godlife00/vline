@@ -46,7 +46,7 @@ $(document).ready(function () {
             $(this).toggleClass('active');
         });
 
-        $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
+        $('#header .bgWrap .premium a.join, a.btn_freePop, .btn_joinPop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
@@ -83,19 +83,7 @@ $(document).ready(function () {
             $('.premium_join').modal('show');
         });
 
-        // 이용약관
-        $('.btn_terms').on('click', function () {
-            $('.modal.terms').modal({
-                fadeDuration: 100
-            });            
-        }); 
-
-        // 개인정보처리방침
-        $('.btn_policy').on('click', function () {
-            $('.modal.policy').modal({
-                fadeDuration: 100
-            });            
-        }); 
+        
 
 
         //select
@@ -152,6 +140,24 @@ $(document).ready(function () {
     });
 
     $('#footer').load(urlRoute + 'common/footer.html', function () {        
+        // a태그 페이지 상단 이동 막기
+        $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
+            console.log("상단이동제한");
+            return false;
+        });
+        // 이용약관
+        $('.btn_terms').on('click', function () {
+            $('.modal.terms').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
+        // 개인정보처리방침
+        $('.btn_policy').on('click', function () {
+            $('.modal.policy').modal({
+                fadeDuration: 100
+            });            
+        }); 
     });
 
     //연환산,연간,분기 테이블 탭
