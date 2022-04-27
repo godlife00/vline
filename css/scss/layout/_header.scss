@@ -50,7 +50,14 @@
         }        
         .searchArea {
             position: relative;
-            margin-left: 40px;
+            margin-left: 20px;            
+            @media (min-width: 767px) and (max-width: 768px) {                
+                margin-left: 20px;
+            }
+            @media (min-width: 1138px) {                
+                margin-left: 40px;
+            }
+
             display: inline-block;
             vertical-align: top;  
             margin-top: 7px;                   

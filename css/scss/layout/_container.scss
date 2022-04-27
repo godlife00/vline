@@ -15,6 +15,7 @@
                 position: relative;
 
                 .attention {
+                    cursor: pointer;
                     $w: 10px;
                     $h: 10px;
                     background-color: #bfc8d6;
@@ -93,6 +94,14 @@
                         font-weight: $f_sizeB;                        
                         letter-spacing: -0.85px;                        
                         color: #222;
+                        .btn_joinPop {                                                        
+                            .remark i {
+                                width: 12px;
+                                height: 12px;
+                                background-color: #222;
+                                vertical-align: middle;
+                            }
+                        }
                     }
                     .gap,
                     .per {
@@ -1179,6 +1188,11 @@
                     text-align: center;
                     color: #3655d6;
                     cursor: pointer;
+                    &.disabled {
+                        border: 1px solid #B1B9CB;                                            
+                        color: #B1B9CB;
+                        cursor: not-allowed;
+                    }
                 }
             }
         }
@@ -1324,4 +1338,44 @@
     color: #6a6a6a;
     text-align: left;
     margin-bottom: 13px;
+}
+
+.free_sampleBox { 
+    position: relative;   
+    display: flex;
+    align-items: center;
+    justify-content: center;        
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;                
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .btn_freePop {
+        @include one_btn;
+        &::before {
+            display: none;            
+        }
+        position: absolute;
+        display: block;       
+        width: 45%;        
+        margin: 0 auto;         
+        padding: 30px 30px;
+        box-sizing: border-box;        
+        background-color: #404fc3;
+        opacity: 0.8;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        color: #fff;
+    }
 }

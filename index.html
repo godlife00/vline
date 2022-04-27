@@ -1960,7 +1960,7 @@
         <!-- //container -->
 
         <div id="footer" class="f_main">
-            
+
         </div>
         <!-- //footer -->
     </div>
@@ -1975,7 +1975,7 @@
             </a>
         </div>
         <div class="pop_con">
-            <div class="sub_terms">                
+            <div class="sub_terms">
                 <h3 class="terms_sum">제 1 조 목적</h3>
                 <p class="txt">본 약관은 서비스 이용자가 주식회사 데이터히어로(이하 “회사")가 제공하는 온라인상의 인터넷 서비스(이하 “서비스")에 회원으로 가입하고 이를 이용함에 있어
                     회사와
@@ -2338,7 +2338,7 @@
                     수도 있습니다. 다만, 쿠키 설치를 거부할 경우 웹 사용이 불편해지며, 로그인이 필요한 일부 서비스 이용에 어려움이 있을 수 있습니다.<br>
                     <br>
                     <strong>쿠키 설정 변경 방법의 예</strong><br>
-                    ・ Internet Explorer의 경우 :  웹 브라우저 상단의 도구 메뉴 > 인터넷 옵션 > 개인정보 > 설정<br>
+                    ・ Internet Explorer의 경우 : 웹 브라우저 상단의 도구 메뉴 > 인터넷 옵션 > 개인정보 > 설정<br>
                     ・ Chrome의 경우 : 웹 브라우저 우측의 설정 메뉴 > 화면 하단의 고급 설정 표시 > 개인정보의 콘텐츠 설정 버튼 > 쿠키<br>
                 </p>
 
@@ -2371,6 +2371,88 @@
         </div>
     </div>
 
+    <!-- 유료서비스 이전 신청 안내 팝업 -->
+    <div id="layer_pop" class="modal previous_pop" style="display: none;">
+        <div class="pop_header">
+            <h1 class="pop_title"><b>밸류라인 서비스</b> 이전 신청 안내</span></h1>
+            <a href="#" class="clse" rel="modal:close">
+                <!--닫기-->
+            </a>
+        </div>
+
+        <div class="pop_con">
+            <div class="scr_box">
+
+                밸류라인 서비스가 (주)데이터히어로에서 새롭게 시작합니다.
+                <br><br>
+                기존 밸류라인과 동일한 서비스는 물론, 최신트렌트에 맞춘 편의성과 기능을 갖춘 서비스를 제공합니다.
+                투자자의 니즈에 맞춘 다양한 데이터와 서비스도 지속적으로 추가될 예정입니다
+                <br><br>
+                기존 밸류라인 유료 고객께서는, 서비스 이전 절차를 통해 프리미엄(유료)서비스를 동일하게 이용하실 수 있습니다.
+                <br><br>
+                <b>[서비스 이전 절차]</b>
+                <br>
+                1.신규 밸류라인 사이트 회원가입 <br> 2.서비스 이전 신청 <br> 3. 이전 완료 및 안내문자 발송
+                <br>
+                <span class="day">- 이전 신청기간 : ~ 2022년 5월 31일까지</span>
+                <br><br>
+                서비스 이전으로 인해 불편을 드려 죄송합니다.
+                <br>
+                앞으로 더 나은 서비스로 고객분들의 기대에 부응하도록 하겠습니다.
+                <br><br>
+                감사합니다.
+                <br><br>
+                <b>(주)데이터히어로</b>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="pop_foot">
+            <a href="https://forms.gle/mcKsz7jWWPRPPPcM6" class="join_btn open_payment" target="_blank">서비스 이전 신청</a>
+            <div class="today_check">
+                <label for="pop_today" class="btn_day" style="display: none;">
+                    <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
+                </label>
+                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지 않기</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 오늘 하루 열지 않기 -->
+    <script language="Javascript" type="text/javascript">
+        cookiedata = document.cookie;
+
+        function setCookie(name, value, expirehours) {
+            var todayDate = new Date();
+            todayDate.setHours(todayDate.getHours() + expirehours);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+        function closeWin() {
+            if (document.getElementById("pop_today").checked) {                
+                setCookie("ncookie_vline", "done", 24);
+            }
+            document.getElementById('layer_pop').style.display = "none";
+            $('.blocker').hide();
+            console.log("오늘하루닫기");
+
+        }
+
+        if (cookiedata.indexOf("ncookie_vline=done") < 0) {
+            console.log("쿠키없음");
+            $('.modal.previous_pop').modal({
+                fadeDuration: 100
+            });
+            // document.getElementById('layer_pop').style.display = "inline";
+        } else {
+            console.log("쿠키있음");
+            // $('.modal.previous_pop').modal({
+            //     fadeDuration: 100
+            // });  
+            // $('.modal.previous_pop').modal('hide');
+        }
+
+    </script>
+    <!-- 서비스 이전 공지 2022년 5월 31일까지 -->
 
 </body>
 

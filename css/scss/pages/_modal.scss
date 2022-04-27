@@ -1553,6 +1553,97 @@
             }      
         }
     }
+
+    // 유료서비스 이전 신청 안내
+    &.previous_pop {
+        // max-width: 700px;
+        .pop_header {
+            padding: 20px 30px;
+            margin: 0; width: 100%; box-sizing: border-box;            
+            background: $colpmr;
+            b {
+                color: #ff8d5a;
+            }
+            .pop_title {
+                font-size: 24px;
+                font-weight: $f_sizeB;
+                letter-spacing: -1.2px;
+                color: #fff;
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 14px;                                        
+                    letter-spacing: -0.7px;                    
+                    color: #fff;
+                    opacity: 0.55;
+                }                
+            }
+            .clse {         
+                &::before, &::after {                    
+                    background-color: #fff;
+                }
+            }
+        }
+        .pop_con {
+            .scr_box {
+                padding: 15px 33px;    
+                overflow: auto;            
+                overflow-x: hidden;
+                max-height: 400px;
+                box-sizing: border-box;
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 1.6;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            } 
+            .day {              
+                color: #656d7e;  
+                font-weight: normal;                
+                text-decoration: underline;                
+            }
+        }
+        .pop_foot {
+            padding: 24px 33px;
+            background-color: #edf3ff;
+            .join_btn {                        
+                @include one_btn;
+            }
+            .link_menu {
+                margin-top: 12px;
+                text-align: center;
+                li a {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 14px;                    
+                    letter-spacing: -0.7px;
+                    color: #656d7e;        
+                    text-decoration: underline;            
+                    &::before {
+                        content: '';
+                        width: 5px;
+                        height: 5px;
+                        border-top: 1px solid #656d7e;
+                        border-right: 1px solid #656d7e;
+                        display: inline-block;                                
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 7px;                                
+                        right: -12px;
+                    }
+                }                
+            }
+            .today_check {
+                margin-top: 15px;
+                text-align: right;
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 1.6;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }
+        }
+    } 
 }
 
 
