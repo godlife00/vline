@@ -176,13 +176,6 @@ $(document).ready(function () {
             fadeDuration: 100
         });            
     }); 
-
-    // 유료서비스 이전 신청 안내 팝업
-    // $('.btn_policy').on('click', function () {
-        // $('.modal.previous_pop').modal({
-        //     fadeDuration: 100
-        // });            
-    // });
     
     // 리스트내 종목 검색
     $('.data_filter .table_search .searchInput, .stocks_filter .form_box .searchInput').on("focusout", function () {                    
