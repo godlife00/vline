@@ -1565,7 +1565,7 @@
                 color: #ff8d5a;
             }
             .pop_title {
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: $f_sizeB;
                 letter-spacing: -1.2px;
                 color: #fff;
@@ -1589,9 +1589,9 @@
                 padding: 15px 33px;    
                 overflow: auto;            
                 overflow-x: hidden;
-                max-height: 400px;
+                max-height: 404px;
                 box-sizing: border-box;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: normal;
                 line-height: 1.6;
                 letter-spacing: -0.8px;
@@ -1604,10 +1604,16 @@
             }
         }
         .pop_foot {
-            padding: 24px 33px;
+            padding: 16px 33px 10px;
             background-color: #edf3ff;
             .join_btn {                        
                 @include one_btn;
+                &::before {
+                    width: 8px;
+                    height: 8px;                    
+                    top: 18px;                        
+                }
+                font-size: 14px;
             }
             .link_menu {
                 margin-top: 12px;
@@ -1615,7 +1621,7 @@
                 li a {
                     position: relative;
                     display: inline-block;
-                    font-size: 14px;                    
+                    font-size: 12px;                    
                     letter-spacing: -0.7px;
                     color: #656d7e;        
                     text-decoration: underline;            
@@ -1636,7 +1642,7 @@
             .today_check {
                 margin-top: 15px;
                 text-align: right;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: normal;
                 line-height: 1.6;
                 letter-spacing: -0.8px;

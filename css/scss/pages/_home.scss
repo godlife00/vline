@@ -512,7 +512,7 @@
                         }
                         .per {                            
                             text-align: left;
-                            width: 44px;
+                            width: auto;
                         }
                     }
                 }            
@@ -981,7 +981,7 @@
                                         letter-spacing: -0.3px;                                
                                         color: #d30000;
                                         text-align: left;
-                                        width: 44px;
+                                        width: 44px;                                        
                                     }
                                 }
                                 &.down {
@@ -1038,7 +1038,7 @@
             // top: 0;
 
             // 상승종목, 하락종목
-            .updown_tabs {                
+            .updown_tabs {                 
                 .tab_area {
                     ul {
                         display: flex;                                      
@@ -1121,6 +1121,8 @@
                                 color: #656d7e;
                             }                        
                             .per {
+                                display: inline-block;                                
+                                box-sizing: border-box;                                
                                 padding-left: 2px;
                                 font-size: 12px;                            
                                 letter-spacing: -0.25px;

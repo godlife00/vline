@@ -414,13 +414,6 @@ body {
     th, td {
         visibility:hidden
     }
-    tbody th {
-        visibility:visible;
-    }
-    tbody th.fix,
-    tbody td.fix {                
-        pointer-events: all;
-    }
     thead {                
         z-index: 50;        
         
@@ -431,7 +424,18 @@ body {
         .fix {            
             
         }
-    }    
+    }   
+    tbody th {
+        visibility:visible;
+    }
+    tbody th.fix,
+    tbody td.fix {                
+        pointer-events: all;
+    }
+    tbody td.bdr_r {
+        border-right: none !important;
+    }
+     
 }
 
 .paginate{
