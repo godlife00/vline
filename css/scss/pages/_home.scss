@@ -373,8 +373,20 @@
                 @include box_style;                
                 .turn_tabs {
                     .tab_area {                
-                        @include tabarea;                    
-                    }                
+                        @include tabarea;                                            
+                    }           
+                    .tab_content {
+                        position: relative;
+                        .tabs_info {
+                            position: absolute;
+                            right: 0;
+                            top: -42px;
+                            font-size: 12px;                            
+                            letter-spacing: -0.3px;
+                            text-align: right;
+                            color: #b1b9cb;
+                        }
+                    }                         
                 }
                 
             }
@@ -915,6 +927,9 @@
                             &.txt_c {
                                 text-align: center;
                             }   
+                            &.txt_R {
+                                text-align: right;
+                            } 
                         }
                         thead {
                             th {
@@ -981,7 +996,8 @@
                                         letter-spacing: -0.3px;                                
                                         color: #d30000;
                                         text-align: left;
-                                        width: 44px;                                        
+                                        // width: 44px;   
+                                        width: auto;                                     
                                     }
                                 }
                                 &.down {

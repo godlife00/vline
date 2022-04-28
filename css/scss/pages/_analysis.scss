@@ -1,4 +1,21 @@
 // 재무분석
+#container .M_right .contents.sub_con {
+    .tab_content {
+        position: relative;
+
+        .table_update {
+            position: absolute;
+            right: 0;
+            top: -22px;
+            font-size: 12px;
+            line-height: 2.5;
+            letter-spacing: -0.3px;
+            text-align: right;
+            color: #b1b9cb;
+        }
+    }
+}
+
 // BIC 차트
 #container .M_right .contents .bic_chartbox {
     

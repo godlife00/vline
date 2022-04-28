@@ -8119,7 +8119,7 @@ $(document).ready(function () {
                 plotBorderWidth: null,
                 plotShadow: false
             },
-            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            colors: ["#3655d6", "#3655d6", "#3655d6"],
             tooltip: {
                 shared: true,
                 crosshairs: true,
@@ -8221,7 +8221,7 @@ $(document).ready(function () {
                 plotBorderWidth: null,
                 plotShadow: false
             },
-            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            colors: ["#3655d6", "#3655d6", "#3655d6"],
             tooltip: {
                 shared: true,
                 crosshairs: true,

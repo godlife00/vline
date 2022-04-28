@@ -1535,6 +1535,7 @@ input[type='radio']:checked:before {
 }
 
 #container .M_left .update_acc {
+  display: none;
   margin-top: 8px;
   padding: 3px 5px;
   border-radius: 4px;
@@ -3290,6 +3291,20 @@ input[type='radio']:checked:before {
   color: #3655d6;
 }
 
+.valueline #wrap #container .new_listing .right .top .turn_tabs .tab_content {
+  position: relative;
+}
+
+.valueline #wrap #container .new_listing .right .top .turn_tabs .tab_content .tabs_info {
+  position: absolute;
+  right: 0;
+  top: -42px;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #b1b9cb;
+}
+
 .valueline #wrap #container .new_listing .right .btm {
   margin-top: 15px;
   padding: 20px 30px;
@@ -4464,6 +4479,10 @@ input[type='radio']:checked:before {
   text-align: center;
 }
 
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table th.txt_R, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table td.txt_R {
+  text-align: right;
+}
+
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table thead th {
   padding-bottom: 5px;
   font-size: 12px;
@@ -4540,7 +4559,7 @@ input[type='radio']:checked:before {
   letter-spacing: -0.3px;
   color: #d30000;
   text-align: left;
-  width: 44px;
+  width: auto;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
@@ -5109,6 +5128,21 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .resultdata_area + .indices_area + .btm_layBox {
   margin-top: 0;
+}
+
+#container .M_right .contents.sub_con .tab_content {
+  position: relative;
+}
+
+#container .M_right .contents.sub_con .tab_content .table_update {
+  position: absolute;
+  right: 0;
+  top: -22px;
+  font-size: 12px;
+  line-height: 2.5;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #b1b9cb;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line {
@@ -6079,7 +6113,19 @@ input[type='radio']:checked:before {
 .top_shopping .shopping_list .form_box .set_filter .mid {
   position: relative;
   float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px 22px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 20px;
   width: calc(100% - 170px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .top_shopping .shopping_list .form_box .set_filter .mid::after {
@@ -6091,20 +6137,6 @@ input[type='radio']:checked:before {
   width: 1px;
   background-color: #45a528;
   opacity: 0.1;
-}
-
-.top_shopping .shopping_list .form_box .set_filter .mid .box {
-  display: inline-block;
-  margin-right: 22px;
-  margin-bottom: 16px;
-}
-
-.top_shopping .shopping_list .form_box .set_filter .mid .box:nth-child(n + 6) {
-  margin-bottom: 0;
-}
-
-.top_shopping .shopping_list .form_box .set_filter .mid .box:last-child {
-  margin-right: 0;
 }
 
 .top_shopping .shopping_list .form_box .set_filter .mid .box .th {
@@ -6325,7 +6357,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .excavation_area.pattern .paginate {
@@ -6610,7 +6642,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 49px;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td {
@@ -6656,7 +6688,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td .check {
@@ -6947,7 +6979,7 @@ input[type='radio']:checked:before {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table th, #container .M_right .contents .invest_area.greenblatt .thead2_table td {

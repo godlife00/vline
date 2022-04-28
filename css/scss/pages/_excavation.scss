@@ -344,8 +344,14 @@
     
                 .mid {                
                     position: relative;
-                    float: left;
+                    float: left;                    
+                    display: flex;
+                    gap: 16px 22px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding-right: 20px;
                     width: calc(100% - 170px);
+                    box-sizing: border-box;
                     &::after {
                         content: '';
                         position: absolute;
@@ -358,16 +364,9 @@
                     } 
     
                     .box {
-                        display: inline-block;                    
-                        margin-right: 22px;
-                        margin-bottom: 16px;
-                        
-                        &:nth-child(n + 6) {                        
-                            margin-bottom: 0;                                       
-                        }
-                        &:last-child {                        
-                            margin-right: 0;                        
-                        }
+                        // display: inline-block;                    
+                        // margin-right: 22px;
+                        // margin-bottom: 16px;
     
                         .th {
                             font-size: 14px;

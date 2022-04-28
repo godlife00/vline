@@ -149,6 +149,9 @@
         }
 
         .update_acc {
+            // 종목상세 좌측 라벨
+            // 21.2Q 업데이트 - 주요계정 (개발 완료 전까지 숨김처리)
+            display: none;
             margin-top: 8px;
             padding: 3px 5px;
             border-radius: 4px;
