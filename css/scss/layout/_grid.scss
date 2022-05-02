@@ -53,15 +53,18 @@ body {
             }            
             padding: 24px 15px;
             margin: 23px auto 0;
-            text-align: center;            
+            text-align: center;        
+            b {
+                color: #FFA57D;
+            }    
             i {                
                 content: '';                
                 display: inline-block;                    
                 transform: rotate(45deg);                
                 width: 6px;
                 height: 6px;
-                border-top: 2px solid #ff8d5a;
-                border-right: 2px solid #ff8d5a;                                
+                border-top: 2px solid #FFA57D;
+                border-right: 2px solid #FFA57D;                                
                 position: relative;
                 top: -1px;
             }
@@ -163,6 +166,9 @@ body {
         }
         &.txt_L {
             text-align: left;
+        }
+        &.txt_R {
+            text-align: right;
         }
         &.va_cen {
             vertical-align: middle;
@@ -433,6 +439,9 @@ body {
         pointer-events: all;
     }
     tbody td.bdr_r {
+        border-right: none !important;
+    }
+    tbody td {
         border-right: none !important;
     }
      

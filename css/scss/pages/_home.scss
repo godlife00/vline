@@ -71,7 +71,7 @@
                         color: #222;
                     }
                 }
-                &.up, &.down {
+                &.up, &.down, &.same {
                     .price {
                         font-size: 16px;                            
                         letter-spacing: -0.4px;                            
@@ -87,6 +87,11 @@
                 &.down {
                     .per {                            
                         color: #0052ff;
+                    }                        
+                }
+                &.same {
+                    .per {                            
+                        color: #444;
                     }                        
                 }
             }
@@ -227,6 +232,16 @@
                         color: #0052ff;
                     }                    
                 }
+                &.up {
+                    .gap, .per {                                            
+                        color: $colup;
+                    }
+                }
+                &.same {
+                    .gap, .per {                                            
+                        color: #222;
+                    }                    
+                }
             }
         }
     }
@@ -290,6 +305,13 @@
                                 font-size: 12px;                                
                                 letter-spacing: -0.3px;
                                 color: #0052ff;
+                            }                    
+                        }
+                        &.same {
+                            .per {                                            
+                                font-size: 12px;                                
+                                letter-spacing: -0.3px;
+                                color: #444;
                             }                    
                         }
                     }
@@ -978,7 +1000,7 @@
                                         color: #222;
                                     }
                                 }                                
-                                &.up, &.down {                                    
+                                &.up, &.down, &.same {                                    
                                     text-align: right;
                                     padding-right: 5px;
                                     display: flex;
@@ -1003,6 +1025,12 @@
                                 &.down {
                                     .per {                            
                                         color: #0052ff;
+                                    }                        
+                                }
+                                &.same {
+                                    .per {                            
+                                        padding-left: 5px;
+                                        color: #444;
                                     }                        
                                 }
                                 &.cpson {
@@ -1220,6 +1248,11 @@
                         &.down {
                             .per {                                            
                                 color: #0052ff;
+                            }                    
+                        }
+                        &.same {
+                            .per {                                            
+                                color: #222;
                             }                    
                         }
                     }
@@ -1470,7 +1503,7 @@
                                 color: #222;
                             }
                         }
-                        &.up, &.down {
+                        &.up, &.down, &.same {
                             .price {
                                 font-size: 16px;                                
                                 letter-spacing: -0.4px;                                
@@ -1486,6 +1519,12 @@
                         &.down {
                             .per {                            
                                 color: #0052ff;
+                            }                        
+                        }
+                        &.same {
+                            .per {           
+                                padding-left: 5px;                 
+                                color: #444;
                             }                        
                         }
                         &.cpson {

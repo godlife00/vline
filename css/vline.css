@@ -289,6 +289,10 @@ body .numCunt::before {
   display: none;
 }
 
+#container .M_right .freeInfo_box b {
+  color: #FFA57D;
+}
+
 #container .M_right .freeInfo_box i {
   content: '';
   display: inline-block;
@@ -296,8 +300,8 @@ body .numCunt::before {
           transform: rotate(45deg);
   width: 6px;
   height: 6px;
-  border-top: 2px solid #ff8d5a;
-  border-right: 2px solid #ff8d5a;
+  border-top: 2px solid #FFA57D;
+  border-right: 2px solid #FFA57D;
   position: relative;
   top: -1px;
 }
@@ -414,6 +418,10 @@ body .numCunt::before {
 
 .table th.txt_L, .table td.txt_L {
   text-align: left;
+}
+
+.table th.txt_R, .table td.txt_R {
+  text-align: right;
 }
 
 .table th.va_cen, .table td.va_cen {
@@ -673,6 +681,10 @@ body .numCunt::before {
 }
 
 .fix_table.clone tbody td.bdr_r {
+  border-right: none !important;
+}
+
+.fix_table.clone tbody td {
   border-right: none !important;
 }
 
@@ -1502,6 +1514,11 @@ input[type='radio']:checked:before {
 #container .M_left .detail_box .data_area .detail.down .gap,
 #container .M_left .detail_box .data_area .detail.down .per {
   color: #26ABFF;
+}
+
+#container .M_left .detail_box .data_area .detail.same .gap,
+#container .M_left .detail_box .data_area .detail.same .per {
+  color: #222;
 }
 
 #container .M_left .detail_box .data_area .dtcon {
@@ -3107,6 +3124,14 @@ input[type='radio']:checked:before {
   color: #0052ff;
 }
 
+.valueline #wrap #container .attention_area .data_area .detail.up .gap, .valueline #wrap #container .attention_area .data_area .detail.up .per {
+  color: #d30000;
+}
+
+.valueline #wrap #container .attention_area .data_area .detail.same .gap, .valueline #wrap #container .attention_area .data_area .detail.same .per {
+  color: #222;
+}
+
 .valueline #wrap #container .indices_area {
   margin-top: 35px;
   display: -webkit-box;
@@ -3177,6 +3202,12 @@ input[type='radio']:checked:before {
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #0052ff;
+}
+
+.valueline #wrap #container .indices_area .table_box .indices_table tbody td.same .per {
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #444;
 }
 
 .valueline #wrap #container .indices_area .table_box .table_unitdate {
@@ -3421,13 +3452,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.up .price, .valueline #wrap #container .new_listing .newListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .newListing_table tbody td.up .price, .valueline #wrap #container .new_listing .newListing_table tbody td.down .price, .valueline #wrap #container .new_listing .newListing_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .newListing_table tbody td.up .per, .valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .newListing_table tbody td.up .per, .valueline #wrap #container .new_listing .newListing_table tbody td.down .per, .valueline #wrap #container .new_listing .newListing_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.25px;
@@ -3436,6 +3467,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .newListing_table tbody td.same .per {
+  color: #444;
 }
 
 .valueline #wrap #container .new_listing .alloListing_table {
@@ -3522,13 +3557,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .alloListing_table tbody td.up .price, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .alloListing_table tbody td.up .price, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .price, .valueline #wrap #container .new_listing .alloListing_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .alloListing_table tbody td.up .per, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .alloListing_table tbody td.up .per, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .per, .valueline #wrap #container .new_listing .alloListing_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.25px;
@@ -3537,6 +3572,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .alloListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .alloListing_table tbody td.same .per {
+  color: #444;
 }
 
 .valueline #wrap #container .new_listing .hotListing_table {
@@ -3623,13 +3662,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.up .price, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.up .price, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .price, .valueline #wrap #container .new_listing .hotListing_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .hotListing_table tbody td.up .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .hotListing_table tbody td.up .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.25px;
@@ -3638,6 +3677,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .hotListing_table tbody td.same .per {
+  color: #444;
 }
 
 .valueline #wrap #container .new_listing .hotListing_table .attention_box {
@@ -3776,13 +3819,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .turnListing_table tbody td.up .price, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .turnListing_table tbody td.up .price, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .price, .valueline #wrap #container .new_listing .turnListing_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .turnListing_table tbody td.up .per, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .turnListing_table tbody td.up .per, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .per, .valueline #wrap #container .new_listing .turnListing_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.25px;
@@ -3791,6 +3834,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .turnListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .turnListing_table tbody td.same .per {
+  color: #444;
 }
 
 .valueline #wrap #container .new_listing .turnListing_table:last-child {
@@ -3929,13 +3976,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .mriListing_table tbody td.up .price, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .mriListing_table tbody td.up .price, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .price, .valueline #wrap #container .new_listing .mriListing_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .mriListing_table tbody td.up .per, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .mriListing_table tbody td.up .per, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .per, .valueline #wrap #container .new_listing .mriListing_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.25px;
@@ -3944,6 +3991,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .mriListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .mriListing_table tbody td.same .per {
+  color: #444;
 }
 
 .valueline #wrap #container .new_listing .mriListing_table:last-child {
@@ -4049,13 +4100,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .perListing_table tbody td.up .price, .valueline #wrap #container .new_listing .perListing_table tbody td.down .price {
+.valueline #wrap #container .new_listing .perListing_table tbody td.up .price, .valueline #wrap #container .new_listing .perListing_table tbody td.down .price, .valueline #wrap #container .new_listing .perListing_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .new_listing .perListing_table tbody td.up .per, .valueline #wrap #container .new_listing .perListing_table tbody td.down .per {
+.valueline #wrap #container .new_listing .perListing_table tbody td.up .per, .valueline #wrap #container .new_listing .perListing_table tbody td.down .per, .valueline #wrap #container .new_listing .perListing_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.25px;
@@ -4064,6 +4115,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .new_listing .perListing_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .new_listing .perListing_table tbody td.same .per {
+  color: #444;
 }
 
 .valueline #wrap #container .new_listing .perListing_table thead th {
@@ -4538,7 +4593,7 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down {
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.same {
   text-align: right;
   padding-right: 5px;
   display: -webkit-box;
@@ -4547,14 +4602,14 @@ input[type='radio']:checked:before {
   gap: 3px;
 }
 
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price {
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.same .price {
   font-size: 14px;
   letter-spacing: -0.4px;
   color: #222;
   min-width: 76px;
 }
 
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .per, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .per, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.3px;
@@ -4565,6 +4620,11 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.same .per {
+  padding-left: 5px;
+  color: #444;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson {
@@ -4803,6 +4863,10 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail.same .per {
+  color: #222;
 }
 
 .valueline #wrap #container .btm_layBox .right .spider_area .perlist_area {
@@ -5073,13 +5137,13 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .price, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .price {
+.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .price, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .price, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.same .price {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .per, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per {
+.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .per, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.same .per {
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.3px;
@@ -5088,6 +5152,11 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per {
   color: #0052ff;
+}
+
+.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.same .per {
+  padding-left: 5px;
+  color: #444;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.cpson {

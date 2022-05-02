@@ -120,6 +120,12 @@
                         .per {
                             color: $coldown;                            
                         }                        
+                    }
+                    &.same {
+                        .gap,
+                        .per {
+                            color: #222;                            
+                        }                        
                     }                    
                 }
 
