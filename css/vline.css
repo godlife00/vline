@@ -5215,6 +5215,10 @@ input[type='radio']:checked:before {
   color: #b1b9cb;
 }
 
+#container .M_right .contents.sub_con .fix_table.clone thead th, #container .M_right .contents.sub_con .fix_table.clone thead td {
+  pointer-events: all;
+}
+
 #container .M_right .contents .bic_chartbox .chart_line {
   margin-top: 56px;
 }

@@ -14,6 +14,13 @@
             color: #b1b9cb;
         }
     }
+    .fix_table.clone {
+        thead {                
+            th, td {
+                pointer-events: all;          
+            }
+        }  
+    }
 }
 
 // BIC 차트
