@@ -332,6 +332,12 @@ $(document).ready(function () {
     // $('.form_resetBtn').on('click', function () {
     //     $("#shopping_form")[0].reset();
     // });
+    // 종목쇼핑 오름내림 차순 
+    $('.order span').on('click', function () {
+        console.log("test");
+        $(this).parent().children().removeClass('active');
+        $(this).addClass('active');        
+    });
 
     // 테이블 필터링 숨기기,보이기
     $("#container .M_right .contents_header .data_filter .set_box").hide();

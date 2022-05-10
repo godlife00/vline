@@ -1553,7 +1553,6 @@ input[type='radio']:checked:before {
 }
 
 #container .M_left .update_acc {
-  display: none;
   margin-top: 8px;
   padding: 3px 5px;
   border-radius: 4px;
@@ -4600,6 +4599,9 @@ input[type='radio']:checked:before {
   display: -ms-flexbox;
   display: flex;
   gap: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.same .price {
@@ -4768,10 +4770,25 @@ input[type='radio']:checked:before {
   color: #656d7e;
 }
 
+.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .up, .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .up .price, .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .price {
   font-size: 14px;
   letter-spacing: -0.35px;
   color: #656d7e;
+  min-width: 50px;
+  text-align: right;
 }
 
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .up .per, .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .per {
@@ -4782,6 +4799,7 @@ input[type='radio']:checked:before {
   font-size: 12px;
   letter-spacing: -0.25px;
   color: #d30000;
+  min-width: 50px;
 }
 
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .per {
@@ -5024,27 +5042,26 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .resultdata_area .season_data {
   padding: 25px 30px;
-}
-
-.valueline #wrap #container .resultdata_area .season_data::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 60px;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
   position: relative;
-  width: calc(50% - 2.5%);
+  width: 100%;
+  max-width: calc(50% - 30px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3), .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) {
-  margin-top: 60px;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3)::before, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4)::before {
+.valueline #wrap #container .resultdata_area .season_data .season_table::before {
   content: '';
   display: inline-block;
   position: absolute;
@@ -5055,22 +5072,21 @@ input[type='radio']:checked:before {
   border-top: 1px solid #e7eaf2;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) thead, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) thead {
+.valueline #wrap #container .resultdata_area .season_data .season_table thead {
   visibility: collapse;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) thead th, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) thead td, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) thead th, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) thead td {
+.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(1)::before, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(2)::before {
+  display: none;
+}
+
+.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(1) thead, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(2) thead {
+  visibility: visible;
+}
+
+.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(1) thead th, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(1) thead td, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(2) thead th, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(2) thead td {
   padding: 0;
   height: 0;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(1), .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) {
-  float: left;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(2), .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) {
-  float: left;
-  margin-left: 5%;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table th, .valueline #wrap #container .resultdata_area .season_data .season_table td {
@@ -5083,6 +5099,11 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .resultdata_area .season_data .season_table th.txt_c, .valueline #wrap #container .resultdata_area .season_data .season_table td.txt_c {
   text-align: center;
+}
+
+.valueline #wrap #container .resultdata_area .season_data .season_table th.txt_R, .valueline #wrap #container .resultdata_area .season_data .season_table td.txt_R {
+  text-align: right;
+  padding-right: 10px;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table thead th {
@@ -5098,7 +5119,6 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.dvsion {
   display: inline-block;
-  vertical-align: sub;
   border-radius: 3px;
   padding: 1px 5px;
   background-color: #d9e6ff;
@@ -5107,6 +5127,8 @@ input[type='radio']:checked:before {
   letter-spacing: -0.5px;
   text-align: center;
   color: #656d7e;
+  position: relative;
+  top: -2px;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.dvsion.all {
@@ -5137,17 +5159,37 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
+.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.same {
+  padding-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .price, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .price, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.same .price {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
+  text-align: right;
+  min-width: 72px;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .per, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.same .per {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding-left: 2px;
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #d30000;
+  text-align: left;
 }
 
 .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per {
@@ -6312,6 +6354,36 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .excavation_area.shopping .thead2_table thead th.fix::before {
   display: none;
+}
+
+#container .M_right .contents .excavation_area.shopping .thead2_table thead .order {
+  margin-top: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 5px;
+}
+
+#container .M_right .contents .excavation_area.shopping .thead2_table thead .order span {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #e7eaf2;
+  width: 16px;
+  height: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  letter-spacing: -0.25px;
+}
+
+#container .M_right .contents .excavation_area.shopping .thead2_table thead .order span.high.active, #container .M_right .contents .excavation_area.shopping .thead2_table thead .order span.lower.active {
+  background-color: #3655d6;
+  color: #fff;
 }
 
 #container .M_right .contents .excavation_area.shopping .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.shopping .thead2_table tbody tr:first-child td {

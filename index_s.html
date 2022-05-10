@@ -46,13 +46,14 @@
     <!-- css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/vline.css" />
-    <!-- js -->    
+    <!-- js -->
     <script src="js/header.js"></script>
     <script src="js/vline.js"></script>
 </head>
 
 <body class="valueline">
-    <div style="background-color: blanchedalmond; position: fixed; left: 0; top: 150px; display: inline-block; padding: 15px 15px;">
+    <div
+        style="background-color: blanchedalmond; position: fixed; left: 0; top: 150px; display: inline-block; padding: 15px 15px;">
         <ul>
             <li><a href="index_s.html"><strong>시즌</strong></a></li>
             <li><a href="index.html">비시즌</a></li>
@@ -86,7 +87,7 @@
                 <div class="season">
                     <div class="box">
                         <h2 class="title">2021.2Q</h2>
-                        <p class="txt">실적 재무데이터 업데이트 <span class="update">기준 21,08/21</span></p>                        
+                        <p class="txt">실적 재무데이터 업데이트 <span class="update">기준 21,08/21</span></p>
                     </div>
                     <div class="box">
                         <h3 class="sub_title import">주요 계정과목</h3>
@@ -111,7 +112,71 @@
                             <tr>
                                 <th class="">구분</th>
                                 <th class="">종목</th>
-                                <th class="">주가</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">전년대비</th>
+                                <th class="txt_c">순이익(억원)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion import">주요</td>
+                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                <td class="up">
+                                    <span class="price">50,000</span>
+                                    <span class="per">+1.38%</span>
+                                </td>
+                                <td class="deficit cpson">87.77%</td>
+                                <td class="txt_R">50,888</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check cpson">-87.77%</td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion import">주요</td>
+                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                <td class="same">
+                                    <span class="price">9,000</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <!-- 상승인 경우 up, 하락은 down, 보합은 same -->
+                                <td class="deficit trans"><span>적자지속</span></td>
+                                <td class="txt_R">350,888</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
                                 <th class="txt_c">전년대비</th>
                                 <th class="txt_c">순이익(억원)</th>
                             </tr>
@@ -125,8 +190,8 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit cpson">87.77%</td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
+                                <td class="txt_R">9,350,888</td>
+                            </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
                                 <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
@@ -135,7 +200,7 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
                             </tr>
                             <tr>
                                 <td class="dvsion import">주요</td>
@@ -145,17 +210,7 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
-                                </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">9,350,888</td>
                             </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
@@ -165,7 +220,17 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                                <td class="txt_R">98</td>
                             </tr>
                         </tbody>
                     </table>
@@ -188,8 +253,8 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit cpson">87.77%</td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
+                                <td class="txt_R">9,350,888</td>
+                            </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
                                 <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
@@ -198,7 +263,7 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
                             </tr>
                             <tr>
                                 <td class="dvsion import">주요</td>
@@ -208,17 +273,7 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
-                                </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">9,350,888</td>
                             </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
@@ -228,7 +283,17 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                                <td class="txt_R">98</td>
                             </tr>
                         </tbody>
                     </table>
@@ -251,8 +316,8 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit cpson">87.77%</td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
+                                <td class="txt_R">9,350,888</td>
+                            </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
                                 <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
@@ -261,7 +326,7 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
                             </tr>
                             <tr>
                                 <td class="dvsion import">주요</td>
@@ -271,17 +336,7 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
-                                </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">9,350,888</td>
                             </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
@@ -291,10 +346,20 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                                <td class="txt_R">98</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>                    
                     <table cellspacing="0" border="0" class="season_table">
                         <thead>
                             <tr>
@@ -314,8 +379,8 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit cpson">87.77%</td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
+                                <td class="txt_R">9,350,888</td>
+                            </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
                                 <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
@@ -324,7 +389,7 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
                             </tr>
                             <tr>
                                 <td class="dvsion import">주요</td>
@@ -334,17 +399,7 @@
                                     <span class="per">+1.38%</span>
                                 </td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_c">9,350,888</td>
-                            </tr>                            
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
-                                </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">9,350,888</td>
                             </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
@@ -354,11 +409,21 @@
                                     <span class="per">-1.38%</span>
                                 </td>
                                 <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_c">98</td>
+                                <td class="txt_R">98</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="down">
+                                    <span class="price">9,350,000</span>
+                                    <span class="per">-1.38%</span>
+                                </td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                                <td class="txt_R">98</td>
                             </tr>
                         </tbody>
-                    </table>
-                    
+                    </table>   
+
                 </div>
             </div>
             <!-- //resultdata_area -->
@@ -428,9 +493,280 @@
             <!-- //indices_area -->
 
 
+
+
             <!-- 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트 -->
             <div class="btm_layBox">
                 <div class="left">
+
+                    <!-- 업종별 재무비율 -->
+                    <div class="ratio_box">
+                        <div class="line_swbox">
+                            <div class="swiper-container ratio_boxboxswiper">
+                                <h2 class="title">업종별 재무비율</h2>
+                                <span class="table_update">기준 : 2021. 3Q 단위 : 억</span>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="table_div">
+                                            <table cellspacing="0" border="0" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">&nbsp;</th>
+                                                        <th class="">매출액</th>
+                                                        <th class="">영업이익</th>
+                                                        <th class="">순이익</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_div -->
+                                        <div class="table_div">
+                                            <table cellspacing="0" border="0" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">&nbsp;</th>
+                                                        <th class="">매출액</th>
+                                                        <th class="">영업이익</th>
+                                                        <th class="">순이익</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>69,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>9.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>69.043</td>
+                                                        <td>2,043</td>
+                                                        <td>2,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_div -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="table_div">
+                                            <table cellspacing="0" border="0" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">&nbsp;</th>
+                                                        <th class="">매출액</th>
+                                                        <th class="">영업이익</th>
+                                                        <th class="">순이익</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_div -->
+                                        <div class="table_div">
+                                            <table cellspacing="0" border="0" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">&nbsp;</th>
+                                                        <th class="">매출액</th>
+                                                        <th class="">영업이익</th>
+                                                        <th class="">순이익</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>69,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>9.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>69.043</td>
+                                                        <td>2,043</td>
+                                                        <td>2,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_div -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="table_div">
+                                            <table cellspacing="0" border="0" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">&nbsp;</th>
+                                                        <th class="">매출액</th>
+                                                        <th class="">영업이익</th>
+                                                        <th class="">순이익</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_div -->
+                                        <div class="table_div">
+                                            <table cellspacing="0" border="0" class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">&nbsp;</th>
+                                                        <th class="">매출액</th>
+                                                        <th class="">영업이익</th>
+                                                        <th class="">순이익</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>2,569.043</td>
+                                                        <td>69,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>9.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">독립전력생산및에너지거래</a>
+                                                        </td>
+                                                        <td>69.043</td>
+                                                        <td>2,043</td>
+                                                        <td>2,043</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="name"><a href="sectors/ratio.html">기계</a></td>
+                                                        <td>2,569.043</td>
+                                                        <td>2,569,043</td>
+                                                        <td>2,569,043</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table_div -->
+                                    </div>
+                                </div>
+                                <!-- //swiper-wrapper -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <!-- //line_swbox -->
+
+                    </div>
+                    <!-- //ratio_box -->
 
                     <!-- 마켓차트 -->
                     <div class="market_box" style="display: none;">
@@ -470,38 +806,38 @@
                         <div id="tabcon_up" class="tab_content">
                             <ul>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/340440" class="name">세림B&amp;G</a>
                                     <div class="up">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">3,170</span>
+                                        <span class="per">+29.92%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/002150" class="name">도화엔지니어링</a>
                                     <div class="up">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">11,650</span>
+                                        <span class="per">+29.73%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/016385" class="name">KG스틸우</a>
                                     <div class="up">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">426,000</span>
+                                        <span class="per">+22.06%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/016880" class="name">웅진</a>
                                     <div class="up">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">2,225</span>
+                                        <span class="per">+20.92%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
-                                    <div class="down">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                    <a href="/finance/income/050760" class="name">에스폴리텍</a>
+                                    <div class="up">
+                                        <span class="price">4,560</span>
+                                        <span class="per">+17.68%</span>
                                     </div>
                                 </li>
                             </ul>
@@ -511,38 +847,38 @@
                         <div id="tabcon_down" class="tab_content">
                             <ul>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/091810" class="name">티웨이항공</a>
                                     <div class="down">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">2,725</span>
+                                        <span class="per">-12.1%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/060230" class="name">소니드</a>
                                     <div class="down">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">1,110</span>
+                                        <span class="per">-11.9%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/031860" class="name">엔에스엔</a>
                                     <div class="down">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">1,605</span>
+                                        <span class="per">-11.81%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/336060" class="name">웨이버스</a>
                                     <div class="down">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">2,200</span>
+                                        <span class="per">-11.65%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
-                                    <div class="up">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                    <a href="/finance/income/160550" class="name">NEW</a>
+                                    <div class="down">
+                                        <span class="price">8,400</span>
+                                        <span class="per">-11.21%</span>
                                     </div>
                                 </li>
                             </ul>
