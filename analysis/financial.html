@@ -1,0 +1,2626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>밸류라인 : 현명한 투자자를 위한 최고의 선택</title>
+    <meta name="robots" content="밸류라인 : 현명한 투자자를 위한 최고의 선택">
+    <meta name="description" content="밸류라인 content">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2A3979">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="밸류라인 content" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="밸류라인 content">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+    <!-- jquery 최신버전 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="../js/vline_chartjs.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/vline.css" />
+    <!-- js -->
+    <script src="../js/header.js"></script>
+    <script src="../js/vline.js"></script>
+
+</head>
+
+<body class="valueline">
+    <div id="wrap">
+
+        <!-- 헤더 -->
+        <div id="header" class="main_hdr"></div>
+
+        <div id="container">
+            <!-- 좌측메뉴 -->
+            <div class="M_left">
+                <div class="detail_box">
+                    <div class="data_area">
+                        <h2 class="name">삼성전자</h2>
+                        <div class="code_line">
+                            <span class="code">005930</span>
+                            <span class="code category">코스피</span>
+                        </div>
+                        <i class="attention on">
+                            <!-- 관심종목인 경우 class on -->
+                        </i>
+
+                        <!-- 상승인 경우 up, 하락은 down -->
+                        <div class="detail up">
+                            <span class="price">80,600</span>
+                            <span class="gap">1,100</span>
+                            <span class="per">(+1.38%)</span>
+                        </div>
+
+                        <div class="dtcon">
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dt>시가총액</dt>
+                                        <dd>4,751,946억</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>주식수</dt>
+                                        <dd>9,946만</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>PER</dt>
+                                        <dd>17.01</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>PBR</dt>
+                                        <dd>1.81</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>ROE</dt>
+                                        <dd>10.65</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>결산월</dt>
+                                        <dd>12월</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- //data_area -->
+
+                </div>
+                <!-- //detail_box -->
+
+                <div class="sub_nav">
+                    <ul class="depth_1">
+                        <li class="active"><span class="title open"><a href="bill.html">10년 재무제표</a></span>
+                            <!-- 2뎁스 메뉴인 경우 open -->
+                            <ul class="depth_2">
+                                <li><a href="bill.html">손익계산서</a></li>
+                                <li class="active"><a href="financial.html">재무상태표</a></li>
+                                <li><a href="cash.html">현금흐름표</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><span class="title"><a href="investment.html">투자지표</a></span></li>
+                        <li class=""><span class="title"><a href="bic.html">재무 차트(BIC차트)</a></span></li>
+                    </ul>
+                </div>
+                <!-- //sub_nav -->
+
+                <div class="service_box">
+                    <ul>
+                        <li class="uses"><a href="">서비스활용법</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                                target="_black">업데이트 소식</a></li>
+                        <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
+                    </ul>
+                </div>
+                <!-- //service_box -->
+
+            </div>
+
+            <!-- 우측 컨텐츠_메인 -->
+            <div class="M_right">
+                <!-- 페이지 위치 -->
+                <div class="path_area">
+                    <ul>
+                        <li>재무분석</li>
+                        <li>10년 재무제표</li>
+                        <li>손익계산서</li>
+                    </ul>
+                </div>
+
+                <div class="group_nav">
+                    <ul>
+                        <li><a href="bill.html">손익계산서</a></li>
+                        <li class="active"><a href="financial.html">재무상태표</a></li>
+                        <li><a href="cash.html">현금흐름표</a></li>
+                        <li><a href="investment.html">투자지표</a></li>
+                        <li><a href="bic.html">재무차트</a></li>
+                        <li><a href="mri.html">종목진단</a></li>
+                        <li><a href="turnaround.html">턴어라운드</a></li>
+                    </ul>
+                </div>
+                <div class="sum_box small">
+                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
+                    <span class="more">자세히</span>
+                    <p>
+                        재무상태표를 통해 회사 설립시 직접 투자한 돈(자본)과 외부에서 빌린 돈(부채)을 투자해 얼마나 재산(자산)을 모았는지를 알 수 있습니다. 또한 기업이 잘 갚아나갈 수 있는 수준의 부채를 갖고 있는지도                        
+                        투자자가 꼭 확인해야 할 사항입니다. 일반적으로 부채의 큰 증가 없이 자본과 자산이 크게 증가하고 있는 기업이 우량 기업일 가능성이 높습니다.                    
+                    </p>
+                </div>
+                <!-- //sum_box -->
+
+                <div class="contents_header">
+                    <div class="data_filter">
+                        <div class="data">
+                            <ul>
+                                <li>데이터</li>
+                                <li>연결 재무제표</li>
+                                <li>국제회계</li>
+                            </ul>
+                            <span class="set"><img src="../img/settings.png" alt="설정"></span>
+                        </div>
+                        <div class="set_box" style="display: none;">
+                            <form action="">
+                                <div class="set_filter">
+                                    <div class="top">
+                                        <p class="title">보기</p>
+                                        <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+                                    </div>
+                                    <div class="mid">
+                                        <div class="">
+                                            <span class="title">재무제표</span>
+                                            <label>
+                                                <input name="line_01" type="radio" checked><span>연결</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_01" type="radio"><span>개별</span>
+                                            </label>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">회계</span>
+                                            <label>
+                                                <input name="line_02" type="radio" checked><span>국제회계(IFRS)</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_02" type="radio"><span>일반회계(GAAP)</span>
+                                            </label>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">보기</span>
+                                            <label>
+                                                <input name="line_03" type="radio" checked><span>데이터</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_03" type="radio"><span>구성비율</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_03" type="radio"><span>성장률</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="btm">
+                                        <input type="submit" value="확인" name="" id="" class="btn_submit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- //set_box -->
+                    </div>
+                    <!-- //data_filter -->
+
+                    <div class="table_filter">
+                        <div class="term">
+                            <span class="active" rel="tab1">연환산</span>
+                            <span rel="tab2">연간</span>
+                        </div>
+                        <div class="detail">
+                            <span class="table_view"><i></i>세부항목</span>
+                            <span class="table_int active"><i></i>소수점</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 재무분석 -->
+                <div class="contents sub_con">
+                    <div id="tab1" class="tab_content">
+                        <span class="table_update">단위 : 억원</span>
+                        <div id="table-scroll" class="table-scroll">
+                            <div class="fix_wrap">
+                                <table cellspacing="0" border="0" class="table fix_table data_txtR">
+                                    <thead>
+                                        <tr>
+                                            <th class="fix txt_L"><strong>재무상태표</strong></th>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                            <td class=""><strong>2021/09</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>당좌자산</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>243</td>
+                                            <td>243</td>
+                                            <td>243</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">현금및현금성자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">단기금융자산</th>
+                                            <td>043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>,043</td>
+                                            <td>,043</td>
+                                            <td>,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">단기금융상품</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">단기매매금융자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">단기매도가능금융자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">당기손익인식(지정)금융자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">매출채권및기타채권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">매출채권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">미수금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">단기미청구공사</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L"><strong>재고자산</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">원재료</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">재공품</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">반제품</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">제품</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">상품</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">저장품</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">용지</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">완성건물</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">미완성건물,공사</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타유동자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">선급법인세</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">선급금등</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">선급비용</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">유동생물자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">매각예정자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">비유동자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L"><strong>투자자산</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">관계기업등지분관련</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">관계기업투자(지분법)</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">종속기업투자</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">장기매도가능금융자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">주식</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">수익증권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">채권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">장기만기보유금융자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">당기손익인식금융자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L"><strong>유형자산</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">토지</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">건물</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">구축물</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기계장치</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">중장비,선박,항공기</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">중장비</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">선박</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>                                            
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_4 fix txt_L">항공기</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">건설중인자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">임대자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L"><strong>무형자산</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">영업권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">특허권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">개발비</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">산업재산권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">컴퓨터소프트웨어</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">브랜드</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">비유동생물자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">투자부동산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">토지</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">건물</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">이연법인세자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타금융업자산</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>자산총계</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">자산총계(지분법적용, 주석)</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>유동부채</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">매입채무및기타채무</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">매입채무</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">미지급금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">미지급비용</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">미지급배당금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">예수금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">부가세예수금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">초과청구공사</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">단기차입금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">단기사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">유동성장기부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">유동성사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">유동성장기차입금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">유동성외화장기차입금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">단기금융부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">단기충당부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">당기법인세부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">선수금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">선수수익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">매각예정부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>비유동부채</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">회사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">전환사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">신주인수권부사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">교환사채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">장기차입금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">장기금융부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">장기충당부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">장기매입채무및기타채무</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">장기매입채무</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">장기미지급금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">장기미지급비용</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">장기선수금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">장기선수수익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">이연법인세부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">퇴직급여충당부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">기타금융업부채</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>부채총계</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">부채총계(지분법적용, 주석)</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>지배주주지분</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">자본금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">보통주자본금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">우선주자본금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">자본잉여금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">주식발행초과금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">자기주식처분이익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">감자차익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">이익잉여금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타자본</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">자기주식</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">자기주식처분손실</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">감자차손</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">기타포괄이익누계액</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">금융자산평가손익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">매도가능금융자산평가손익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">관계기업등기타포괄이익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">해외사업환산손익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">보험수리적손익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">현금흐름위험회피평가손익</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">재평가잉여금</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_3 fix txt_L">기타</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_2 fix txt_L">신종자본증권</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>비지배주주지분</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L"><strong>자본총계</strong></th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">자본총계(지분법적용, 주석)</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">주당순자산(지배)</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">시가총액</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">주가</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="depth_1 fix txt_L">주가순자산배수</th>
+                                            <td>2,569.043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                            <td>2,569,043</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <!-- //fix_wrap -->
+                        </div>
+                        <!-- //table-scroll -->
+                    </div>
+                    <!-- //tab_content -->
+
+                    <div id="tab2" class="tab_content">
+                        연간
+                    </div>
+                    <div id="tab3" class="tab_content">
+                        분기
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="w_box">
+                <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+            </div>
+            <!-- //w_box -->
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

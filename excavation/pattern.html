@@ -47,6 +47,7 @@
     <!-- js -->
     <script src="../js/header.js"></script>
     <script src="../js/vline.js"></script>
+
 </head>
 
 <body class="valueline">
@@ -60,10 +61,10 @@
             <div class="M_left">
                 <div class="sub_nav">
                     <ul class="depth_1">
-                        <li><span class="title"><a href="blue_stocks.html">우량주</a></span></li>
+                        <li><span class="title"><a href="blue_stocks.html">종목진단(주식MRI)</a></span></li>
                         <li><span class="title"><a href="ex_turnaround.html">턴 어라운드</a></span></li>
                         <li><span class="title"><a href="result.html">실적분석</a></span></li>
-                        <li class=""><span class="title"><a href="shopping.html">마이쇼핑</a></span></li>
+                        <li class=""><span class="title"><a href="shopping.html">종목쇼핑</a></span></li>
                         <li class="active"><span class="title open"><a href="pattern.html">BIC 차트 패턴</a></span>
                             <ul class="depth_2">
                                 <li class="active"><a href="pattern.html">이익증가 미반영</a></li>
@@ -77,8 +78,9 @@
                 <div class="service_box">
                     <ul>
                         <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="">업데이트 소식</a></li>
-                        <li class="question"><a href="">카카오톡 문의</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                                target="_black">업데이트 소식</a></li>
+                        <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
                 </div>
                 <!-- //service_box -->
@@ -104,8 +106,11 @@
                 <div class="sum_box small">
                     <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
                     <span class="more">자세히</span>
-                    <p>자체 개발한 '주식MRI(Midas Real-time Investigator)분석 시스템'을 통해 기업에 대한 투자 매력도를 한 눈에 확인할 수 있습니다. 특히 사업독점력을
-                        통해 현재 수익을 얼마나 유지할 수 있을지, 밸류에이션을 통해선 현재 주가가 매수하기에 매력적인 수준인지 여부를 바로 확인할 수 있습니다.</p>
+                    <p>
+                        최근 이익 성장률에 비해 주가 상승률이 낮은 기업을 찾아 드립니다. 표출 순위는 괴리율(이익 성장률 - 주가 상승률), PER, PBR, ROE 등의 순위를 합산한 값이 낮은 순으로 보여 드립니다.
+                        <br>
+                        종합순위가 높을수록 투자 우선 검토 대상 기업입니다.
+                    </p>
                 </div>
                 <!-- //sum_box -->
 
@@ -213,8 +218,8 @@
 
                     <div class="table_filter">
                         <div class="term">
-                            <span class="active" rel="tab1">차트</span>
-                            <span rel="tab2">데이터</span>
+                            <span class="active" rel="tab1">데이터</span>
+                            <span rel="tab2">차트</span>
                         </div>
                     </div>
                 </div>
@@ -223,13 +228,6 @@
                     <div class="excavation_area pattern">
 
                         <div id="tab1" class="tab_content">
-                            <div id="containersummary1" class="containerfinance1"></div>
-                            <div id="containersummary2" class="containerfinance1"></div>
-                            <div id="containersummary3" class="containerfinance1"></div>
-                            <div id="containersummary4" class="containerfinance1"></div>
-                            <div id="containersummary5" class="containerfinance1"></div>
-                        </div>
-                        <div id="tab2" class="tab_content">
                             <span class="table_update">Update 2021. 7&#47;16</span>
                             <table cellspacing="0" border="0" class="table thead2_table">
                                 <thead>
@@ -249,128 +247,581 @@
                                     <tr>
                                         <td class="">1</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">2</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">3</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">4</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">5</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">6</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">7</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">8</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">9</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                     <tr>
                                         <td class="">10</td>
                                         <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>5.7%</td>
+                                        <td>5.7</td>
                                         <td>0</td>
-                                        <td>6874억</td>
-                                        <td>5.7%</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">1</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">2</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">3</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">4</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">5</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">6</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">7</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">8</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">9</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">10</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">1</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">2</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">3</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">4</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">5</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">6</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">7</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">8</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">9</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">10</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">1</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">2</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">3</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">4</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">5</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">6</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">7</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">8</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">9</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">10</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">1</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">2</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">3</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">4</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">5</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">6</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">7</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">8</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">9</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">10</td>
+                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성전자엘지</a></td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>5.7</td>
+                                        <td>0</td>
+                                        <td>87</td>
+                                        <td>5.7</td>
                                         <td>0</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+
+                        <div id="tab2" class="tab_content">
+                            <div class="free_sampleBox">
+                                <img src="../img/sample_profit.jpg" alt="샘플화면입니다">
+                                <a href="#" class="btn_freePop">샘플화면입니다.</a>                                                                
+                            </div>
+                            <!-- //free_sampleBox -->   
+                            <div id="BICchart_ptn01" class="BICchart_ptnStyle"></div>
+                            <div id="BICchart_ptn02" class="BICchart_ptnStyle"></div>
+                            <div id="BICchart_ptn03" class="BICchart_ptnStyle"></div>
+                            <div id="BICchart_ptn04" class="BICchart_ptnStyle"></div>
+                        </div>
+                        
                         <div class="paginate">
                             <a href="#" class="cb_pre">이전</a>
-                            <strong>1</strong>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
-                            <a href="#">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
+                            <strong>41</strong>
+                            <a href="#">42</a>
+                            <a href="#">43</a>
+                            <a href="#">44</a>
+                            <a href="#">45</a>
+                            <a href="#">46</a>
+                            <a href="#">47</a>
+                            <a href="#">48</a>
+                            <a href="#">49</a>
+                            <a href="#">50</a>
                             <a href="#" class="cb_next">다음</a>
                         </div>
                     </div>

@@ -3,19 +3,19 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>밸류라인 : 현명한 투자자를 위한 최고의 선택</title>
-    <meta name="robots" content="밸류라인 : 현명한 투자자를 위한 최고의 선택">
-    <meta name="description" content="밸류라인 content">
+    <title>재무분석 - 손익계산서 | 밸류라인</title>
+    <meta name="robots" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스">
+    <meta name="description" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#2A3979">
     <!-- 오픈 그래프 -->
-    <meta property="og:title" content="밸류라인 content" />
+    <meta property="og:title" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="밸류라인 content">
-    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:description" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스">
+    <meta property="og:image" content="http://godlife.ivyro.net/vline/img/og_choicestockVline.png">
     <meta property="og:image:width" content="410" />
     <meta property="og:image:height" content="210" />
-    <meta property="og:url" content="www.choicestock.co.kr">
+    <meta property="og:url" content="url">
     <!-- 파비콘 favicon -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
     <!-- jquery 최신버전 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
@@ -42,11 +42,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../css/vline.css" />
-    <!-- js -->
+    <!-- js -->    
+    <script src="../js/vline.js"></script>    
+    <!-- 로컬에서만 사용되는 코드 시작 -->
     <script src="../js/header.js"></script>
-    <script src="../js/vline.js"></script>
+    <!-- 로컬에서만 사용되는 코드 종료 -->
 </head>
 
 <body class="valueline">
@@ -54,13 +56,15 @@
 
         <!-- 헤더 -->
         <div id="header" class="main_hdr"></div>
-        
+
         <div id="container">
             <!-- 좌측메뉴 -->
             <div class="M_left">
                 <div class="detail_box">
                     <div class="data_area">
-                        <h2 class="name">삼성전자</h2>
+                        <h2 class="name">
+                            <a href="#">LG에너지솔루션</a>
+                        </h2>
                         <div class="code_line">
                             <span class="code">005930</span>
                             <span class="code category">코스피</span>
@@ -119,30 +123,137 @@
 
                     </div>
                     <!-- //data_area -->
+                </div>
+                <!-- //detail_box -->
+                <br>
+                <div class="detail_box">                    
+                    <div class="data_area">
+                        <h2 class="name">
+                            <a href="#" class="btn_joinPop">
+                                로긴<span class="remark"><i></i><i></i><i></i><i></i></span>
+                            </a>
+                        </h2>
+                        <div class="code_line">
+                            <span class="code">
+                                <a href="#" class="btn_joinPop">
+                                    <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                </a>
+                            </span>
+                            <span class="code category">코스피</span>
+                        </div>
+
+                        <i class="attention on">
+                            <!-- 관심종목인 경우 class on -->
+                        </i>
+
+                        <!-- 상승인 경우 up, 하락은 down, 보합은 same -->
+                        <div class="detail same">
+                            <span class="price">
+                                <a href="#" class="btn_joinPop">
+                                    <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                </a>
+                            </span>
+                            <span class="gap">1,100</span>
+                            <span class="per">(0%)</span>
+                        </div>
+
+                        <div class="dtcon">
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dt>시가총액</dt>
+                                        <dd>
+                                            <a href="#" class="btn_joinPop">
+                                                <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>주식수</dt>
+                                        <dd>
+                                            <a href="#" class="btn_joinPop">
+                                                <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>PER</dt>
+                                        <dd>
+                                            <a href="#" class="btn_joinPop">
+                                                <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>PBR</dt>
+                                        <dd>
+                                            <a href="#" class="btn_joinPop">
+                                                <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>ROE</dt>
+                                        <dd>
+                                            <a href="#" class="btn_joinPop">
+                                                <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>결산월</dt>
+                                        <dd>
+                                            <a href="#" class="btn_joinPop">
+                                                <span class="remark"><i></i><i></i><i></i><i></i></span>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- //data_area -->
 
                 </div>
                 <!-- //detail_box -->
+                
+
+                <div class="update_acc">
+                    <p class="">21.2Q 업데이트 - <strong>주요계정</strong></p>
+                </div>
 
                 <div class="sub_nav">
                     <ul class="depth_1">
-                        <li class="active"><span class="title open"><a href="">10년 재무제표</a></span> <!-- 2뎁스 메뉴인 경우 open -->
+                        <li class="active"><span class="title open"><a href="bill.html">10년 재무제표</a></span>
+                            <!-- 2뎁스 메뉴인 경우 open -->
                             <ul class="depth_2">
-                                <li class=""><a href="">손익계산서</a></li>
-                                <li><a href="">재무상태표</a></li>
-                                <li><a href="">현금흐름표</a></li>
+                                <li class="active"><a href="bill.html">손익계산서</a></li>
+                                <li><a href="financial.html">재무상태표</a></li>
+                                <li><a href="cash.html">현금흐름표</a></li>
                             </ul>
                         </li>
-                        <li class=""><span class="title"><a href="">투자지표</a></span></li>
-                        <li class=""><span class="title"><a href="">BIC 차트</a></span></li>
+                        <li class=""><span class="title"><a href="investment.html">투자지표</a></span></li>
+                        <li class=""><span class="title"><a href="bic.html">재무 차트(BIC차트)</a></span></li>
                     </ul>
                 </div>
                 <!-- //sub_nav -->
 
                 <div class="service_box">
                     <ul>
-                        <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="">업데이트 소식</a></li>
-                        <li class="question"><a href="">카카오톡 문의</a></li>
+                        <li class="uses"><a href="https://rhetorical-roast-73f.notion.site/FAQ-b104eb10192c41dd88a0574b1bef23ad" target="_black">서비스활용법</a></li>
+                        <li class="update"><a href="../inform/inform_list.html">알립니다</a></li>
+                        <!-- <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li> -->
                     </ul>
                 </div>
                 <!-- //service_box -->
@@ -150,7 +261,7 @@
             </div>
 
             <!-- 우측 컨텐츠_메인 -->
-            <div class="M_right">
+            <div class="M_right">                
                 <!-- 페이지 위치 -->
                 <div class="path_area">
                     <ul>
@@ -160,17 +271,34 @@
                     </ul>
                 </div>
 
+                <!-- 비회원 샘플 화면인 경우 보여주는 안내 문구 -->
+                <div class="freeInfo_box">
+                    <a href="#" class="btn_freePop">비회원 샘플 화면입니다. <b>프리미엄 서비스</b>로 종목발굴 서비스와 데이터를 무제한으로 이용하세요. <b> [ 프리미엄 가입하기 <i></i> ] </b></a>
+                </div>
+                <!-- //freeInfo_box -->
+                <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
+
                 <div class="group_nav">
                     <ul>
                         <li class="active"><a href="bill.html">손익계산서</a></li>
-                        <li><a href="">재무상태표</a></li>
-                        <li><a href="">현금흐름표</a></li>
-                        <li><a href="">투자지표</a></li>
-                        <li><a href="bic.html">BIC 차트</a></li>
-                        <li><a href="mri.html">주식MRI</a></li>
+                        <li><a href="financial.html">재무상태표</a></li>
+                        <li><a href="cash.html">현금흐름표</a></li>
+                        <li><a href="investment.html">투자지표</a></li>                        
+                        <li><a href="bic.html">재무차트</a></li>                        
+                        <li><a href="mri.html">종목진단</a></li>
                         <li><a href="turnaround.html">턴어라운드</a></li>
                     </ul>
                 </div>
+                <div class="sum_box small">
+                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
+                    <span class="more">자세히</span>
+                    <p>
+                        손익계산서를 통해 매출액과 비용 그리고 이익(손실) 규모를 알 수 있습니다. 기업의 매출액에서 모든 비용을 제외하고 남는 돈을 순이익이라고 합니다. 순이익이 많을 수록 기업가치는 높아지게 됩니다.
+                        <br>
+                        손익계산서를 볼 때는 '많이 팔고 많이 남기는 회사'를 찾으면 됩니다. 경쟁 기업에 비해 매출액 규모가 크고, 순이익을 많이 남기면 경쟁우위에 있는 기업이라고 할 수 있습니다.
+                    </p>
+                </div>
+                <!-- //sum_box -->
 
                 <div class="contents_header">
                     <div class="data_filter">
@@ -208,6 +336,19 @@
                                                 <input name="line_02" type="radio"><span>일반회계(GAAP)</span>
                                             </label>
                                         </div>
+
+                                        <div class="">
+                                            <span class="title">기준(분기)</span>
+                                            <label>
+                                                <input name="line_04" type="radio"><span>일반</span>
+                                            </label>
+                                            <label>
+                                                <input name="line_04" type="radio" checked><span>보고서값</span>
+                                            </label>
+                                        </div>
+
+
+
                                         <div class="">
                                             <span class="title">보기</span>
                                             <label>
@@ -243,13 +384,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- 재무분석 -->
                 <div class="contents sub_con">
                     <div id="tab1" class="tab_content">
+                        <span class="table_update">단위 : 억원</span>
                         <div id="table-scroll" class="table-scroll">
                             <div class="fix_wrap">
-                                <table cellspacing="0" border="0" class="table fix_table">
+                                <!-- 소수점 숨김처리 인 경우 class = txtInt -->
+                                <table cellspacing="0" border="0" class="table fix_table data_txtR txtInt">
                                     <thead>
                                         <tr>
                                             <th class="fix txt_L"><strong>손익계산서</strong></th>
@@ -270,11 +413,11 @@
                                     <tbody>
                                         <tr>
                                             <th class="depth_1 fix txt_L"><strong>매출액(수익)</strong></th>
-                                            <td>2,569.043</td>
-                                            <td>2,569,043</td>
-                                            <td>2,569,043</td>
-                                            <td>2,569,043</td>
-                                            <td>2,569,043</td>
+                                            <!-- 숨김 처리되는 소수점은 class = deci -->
+                                            <td>90<span class="deci">.043</span></td>
+                                            <td>69,043<span class="deci">.043</span></td>
+                                            <td>2,569<span class="deci">.043</span></td>
+                                            <td><span class="remark"><i></i><i></i><i></i><i></i></span></td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
@@ -450,7 +593,7 @@
                                             <td>2,569,043</td>
                                         </tr>
                                         <tr>
-                                            <th class="depth_1 fix txt_L"><strong>판매비와관리비</strong></th>
+                                            <th class="depth_1 fix txt_L">판매비와관리비</th>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
@@ -780,7 +923,7 @@
                                             <td>2,569,043</td>
                                         </tr>
                                         <tr>
-                                            <th class="depth_1 fix txt_L">영업이익</th>
+                                            <th class="depth_1 fix txt_L"><strong>영업이익</strong></th>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
@@ -1155,7 +1298,7 @@
                                             <td>9,043</td>
                                         </tr>
                                         <tr>
-                                            <th class="depth_1 fix txt_L">기타영업외손익</th>
+                                            <th class="depth_1 fix txt_L"><strong>기타영업외손익</strong></th>
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
@@ -1651,7 +1794,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
@@ -1679,7 +1822,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_3 fix txt_L">기타자산처분손실</th>
@@ -1695,7 +1838,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">파생상품손실</th>
@@ -1711,7 +1854,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">자산손상차손</th>
@@ -1727,7 +1870,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">자산평가손실</th>
@@ -1743,7 +1886,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">지분법손실</th>
@@ -1759,7 +1902,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">사채상환손실</th>
@@ -1775,7 +1918,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">기타</th>
@@ -1791,7 +1934,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_1 fix txt_L">종속기업및관계기업관련손익</th>
@@ -1807,7 +1950,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">지분법손익</th>
@@ -1823,7 +1966,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">지분법이익</th>
@@ -1839,7 +1982,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">지분법손실</th>
@@ -1855,7 +1998,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">지분법적용투자주식손상차손</th>
@@ -1871,7 +2014,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">기타</th>
@@ -1887,7 +2030,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">관계기업처분손익</th>
@@ -1903,7 +2046,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">관계기업처분이익</th>
@@ -1919,7 +2062,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">관계기업처분손실</th>
@@ -1935,7 +2078,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">관계기업손상차손</th>
@@ -1951,7 +2094,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">기타</th>
@@ -1967,7 +2110,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">종속기업관련손익</th>
@@ -1983,7 +2126,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">종속기업처분이익</th>
@@ -1999,7 +2142,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">종속기업처분손실</th>
@@ -2015,7 +2158,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">종속기업손상차손</th>
@@ -2031,7 +2174,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_3 fix txt_L">기타</th>
@@ -2047,7 +2190,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">기타</th>
@@ -2063,7 +2206,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_1 fix txt_L">법인세비용차감전계속사업이익</th>
@@ -2079,7 +2222,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_1 fix txt_L">법인세비용</th>
@@ -2095,7 +2238,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_1 fix txt_L">중단사업이익</th>
@@ -2111,10 +2254,10 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
-                                            <th class="depth_1 fix txt_L">당기순이익</th>
+                                            <th class="depth_1 fix txt_L"><strong>당기순이익</strong></th>
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
@@ -2127,7 +2270,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_2 fix txt_L">지배지분 순이익</th>
@@ -2143,7 +2286,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_2 fix txt_L">비지배지분 순이익</th>
@@ -2159,7 +2302,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_2 fix txt_L">*지배지분 연결순이익</th>
@@ -2175,7 +2318,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
                                             <th class="depth_1 fix txt_L">기타포괄이익</th>
@@ -2191,7 +2334,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">금융자산평가손익</th>
@@ -2207,7 +2350,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">매도가능금융자산평가손익</th>
@@ -2223,7 +2366,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">관계기업등기타포괄이익</th>
@@ -2239,7 +2382,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">해외사업환산손익</th>
@@ -2255,7 +2398,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">현금흐름위험회피적립금</th>
@@ -2271,7 +2414,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">재평가손익</th>
@@ -2287,7 +2430,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">기타포괄이익관련법인세</th>
@@ -2303,7 +2446,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">기타</th>
@@ -2319,10 +2462,10 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr>
-                                            <th class="depth_1 fix txt_L">총포괄이익</th>
+                                            <th class="depth_1 fix txt_L"><strong>총포괄이익</strong></th>
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
@@ -2335,7 +2478,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">지배지분 총포괄이익</th>
@@ -2351,7 +2494,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_2 fix txt_L">비지배지분 총포괄이익</th>
@@ -2367,7 +2510,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_1 fix txt_L">주당순이익(지분법적용,주석)</th>
@@ -2383,7 +2526,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_1 fix txt_L">시가총액</th>
@@ -2399,7 +2542,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_1 fix txt_L">주가</th>
@@ -2415,7 +2558,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                         <tr class="hide_line">
                                             <th class="depth_1 fix txt_L">주가수익배수</th>
@@ -2431,7 +2574,7 @@
                                             <td>9,043</td>
                                             <td>9,043</td>
                                             <td>9,043</td>
-                                        
+
                                         </tr>
                                     </tbody>
                                 </table>
@@ -2443,9 +2586,10 @@
                     <!-- //tab_content -->
 
                     <div id="tab2" class="tab_content">
+                        연간
                     </div>
                     <div id="tab3" class="tab_content">
-
+                        분기
                     </div>
 
                 </div>
@@ -2453,12 +2597,7 @@
         </div>
         <!-- //container -->
 
-        <div id="footer" class="f_main">
-            <div class="w_box">
-                <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
-            </div>
-            <!-- //w_box -->
-        </div>
+        <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->

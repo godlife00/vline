@@ -3,8 +3,8 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>밸류라인 : 현명한 투자자를 위한 최고의 선택</title>
-    <meta name="robots" content="밸류라인 : 현명한 투자자를 위한 최고의 선택">
+    <title>종목발굴 - 종목진단(주식MRI) | 밸류라인</title>
+    <meta name="robots" content="종목발굴 - 종목진단(주식MRI) | 밸류라인">
     <meta name="description" content="밸류라인 content">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#2A3979">
@@ -15,7 +15,7 @@
     <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
     <meta property="og:image:width" content="410" />
     <meta property="og:image:height" content="210" />
-    <meta property="og:url" content="www.choicestock.co.kr">
+    <meta property="og:url" content="url">
     <!-- 파비콘 favicon -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -47,6 +47,7 @@
     <!-- js -->
     <script src="../js/header.js"></script>
     <script src="../js/vline.js"></script>
+
 </head>
 
 <body class="valueline">
@@ -60,14 +61,14 @@
             <div class="M_left">
                 <div class="sub_nav">
                     <ul class="depth_1">
-                        <li class="active"><span class="title"><a href="blue_stocks.html">우량주</a></span></li>
+                        <li class="active"><span class="title"><a href="blue_stocks.html">종목진단(주식MRI)</a></span></li>
                         <li><span class="title"><a href="ex_turnaround.html">턴 어라운드</a></span></li>
                         <li class=""><span class="title"><a href="result.html">실적분석</a></span></li>
-                        <li><span class="title"><a href="shopping.html">마이쇼핑</a></span></li>
+                        <li><span class="title"><a href="shopping.html">종목쇼핑</a></span></li>
                         <li class=""><span class="title open"><a href="pattern.html">BIC 차트 패턴</a></span>
                             <ul class="depth_2">
-                                <li class=""><a href="">이익증가 미반영</a></li>
-                                <li><a href="">그레이엄 만족형</a></li>
+                                <li class=""><a href="pattern.html">이익증가 미반영</a></li>
+                                <li><a href="pattern_gra.html">그레이엄 만족형</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -77,8 +78,9 @@
                 <div class="service_box">
                     <ul>
                         <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="">업데이트 소식</a></li>
-                        <li class="question"><a href="">카카오톡 문의</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                                target="_black">업데이트 소식</a></li>
+                        <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
                 </div>
                 <!-- //service_box -->
@@ -91,20 +93,19 @@
                 <div class="path_area">
                     <ul>
                         <li>종목발굴</li>
-                        <li>우량주</li>
+                        <li>종목진단(주식MRI)</li>
                     </ul>
                 </div>
 
                 <div class="group_nav">
                     <ul>
-                        <li class="active"><a href="#">우량주</a></li>
+                        <li class="active"><a href="#">종목진단(주식MRI)</a></li>
                     </ul>
                 </div>
                 <div class="sum_box small">
                     <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
                     <span class="more">자세히</span>
-                    <p>자체 개발한 '주식MRI(Midas Real-time Investigator)분석 시스템'을 통해 기업에 대한 투자 매력도를 한 눈에 확인할 수 있습니다. 특히 사업독점력을
-                        통해 현재 수익을 얼마나 유지할 수 있을지, 밸류에이션을 통해선 현재 주가가 매수하기에 매력적인 수준인지 여부를 바로 확인할 수 있습니다.</p>
+                    <p>자체 개발한 AI 종목진단 분석 시스템을 통해 기업의 투자 매력을 진단해 드립니다. 종목진단 세부 5개 항목이 각 5점 만점으로 25점이 만점입니다.</p>
                 </div>
                 <!-- //sum_box -->
 
@@ -127,6 +128,43 @@
                                     <input type="image" src="../img/search_btn_blue.svg" alt="검색" class="searchBtn">
                                 </fieldset>
                             </form>
+                            <!-- 검색어 자동완성 -->
+                            <div class="AutoComplete_indu">
+                                <!-- //자동완성 결과 노출 class : _show -->
+                                <ul id="autocomplete_list_indu">
+                                    <li><a href="#" class="_on">
+                                            <span class="schCode">207940</span>
+                                            <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                        </a></li>
+                                    <li><a href="#" class="_on">
+                                            <span class="schCode">207940</span>
+                                            <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                        </a></li>
+                                    <li><a href="#" class="_on">
+                                            <span class="schCode">207940</span>
+                                            <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                        </a></li>
+                                    <li><a href="#" class="_on">
+                                            <span class="schCode">207940</span>
+                                            <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                        </a></li>
+                                    <li><a href="#" class="_on">
+                                            <span class="schCode">207940</span>
+                                            <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                        </a></li>
+                                </ul>
+                                <div class="no_result" style="display: none;">
+                                    <p>"<strong></strong>"에 대한 검색결과가 없습니다.</p>
+                                </div>
+                                <!--<ul>
+                                    <li>
+                                        <a href="">
+                                            <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
+                                        </a>
+                                    </li>
+                                </ul>-->
+                            </div>
+                            <!-- //AutoComplete 검색어 자동완성 끝 -->
                         </div>
                         <!-- //table_search -->
 
@@ -199,11 +237,11 @@
                                             <h3 class="mid_title">정렬</h3>
                                             <ul class="sort">
                                                 <li class="active"><span>종합</span></li>
-                                                <li class=""><span>미래<br>성장성</span></li>
-                                                <li class=""><span>사업<br>독점력</span></li>
-                                                <li class=""><span>재무<br>안전성</span></li>
-                                                <li class=""><span>수익성</span></li>
-                                                <li class=""><span>현금<br>창출력</span></li>
+                                                <li class=""><span>밸류에이션</span></li>
+                                                <li class=""><span>독점력</span></li>
+                                                <li class=""><span>성장성</span></li>
+                                                <li class=""><span>안전성</span></li>
+                                                <li class=""><span>현금창출</span></li>
                                             </ul>
                                         </div>
                                         <!-- //sort_box -->
@@ -220,7 +258,7 @@
                     <!-- //data_filter -->
 
                     <div class="table_filter">
-                        <input type="button" value="엑셀다운로드" class="save_excel">
+                        <input type="button" value="엑셀다운로드" class="save_excel disabled btn_freePop">
                     </div>
                     <!-- //table_filter -->
 
@@ -232,190 +270,1844 @@
 
                         <div id="table-scroll" class="table-scroll">
                             <div class="fix_wrap table-wrap">
-                                <table cellspacing="0" border="0" class="table fix_table main-table thead2_table" style="width: 1000px;">
+                                <table cellspacing="0" border="0" class="table fix_table main-table thead2_table"
+                                    style="width: 900px;">
                                     <thead>
                                         <tr>
                                             <th rowspan="2" class="fix va_cen"><strong>순위</strong></th>
                                             <td rowspan="2" class="fix va_cen"><strong>종목</strong></td>
                                             <td colspan="6" class="bdr_r"><strong>주식MRI분석</strong></td>
                                             <td colspan="3" class="bdr_r"><strong>가치지표</strong></td>
-                                            <td colspan="3" class=""><strong>분기 주당순이익(EPS)</strong></td>
+                                            <td colspan="5" class=""><strong>분기 주당순이익(EPS)</strong>(원)</td>
                                         </tr>
                                         <tr class="">
                                             <td class=""><strong>종합점수</strong></td>
                                             <td class="">밸류에이션</td>
-                                            <td class="">사업독점력</td>
-                                            <td class="">수익성장성</td>
-                                            <td class="">재무안전성</td>
-                                            <td class="bdr_r">현금창출력</td>
-                                            <td class="">PER</td>
-                                            <td class="">PBR</td>
-                                            <td class="bdr_r">ROE</td>
+                                            <td class="">독점력</td>
+                                            <td class="">성장성</td>
+                                            <td class="">안전성</td>
+                                            <td class="bdr_r">현금창출</td>
+                                            <td class="">PER<span class="unit">(배)</span></td>
+                                            <td class="">PBR<span class="unit">(배)</span></td>
+                                            <td class="bdr_r">ROE<span class="unit">(%)</span></td>
                                             <td class="">21.03</td>
                                             <td class="">20.12</td>
                                             <td class="">20.12</td>
+                                            <td class="">20.11</td>
+                                            <td class="">20.10</td>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td class="fix va_cen bdr_r">1</td>
-                                            <td class="fix txt_L txt_name"><a href="blue_search.html">카카오삼성전자엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="blue_search.html">휴마시스</a></td>
+                                            <td>99</td>
+                                            <td>20</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td class="txt_R">4.20</td>
+                                            <td class="txt_R">3.14</td>
+                                            <td class="txt_R bdr_r">74.85</td>
+                                            <td class="txt_R">2,201</td>
+                                            <td class="txt_R">1,646</td>
+                                            <td class="txt_R">278</td>
+                                            <td class="txt_R">294</td>
+                                            <td class="txt_R">369</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">2</td>
-                                            <td class="fix txt_L txt_name"><a href="blue_search.html">삼성전자</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="blue_search.html">SK바이오사이언스</a>
+                                            </td>
+                                            <td>91</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td class="txt_R bdr_r">16</td>
+                                            <td class="txt_R">32.46</td>
+                                            <td class="txt_R">7.20</td>
+                                            <td class="txt_R bdr_r">22.18</td>
+                                            <td class="txt_R">2,405</td>
+                                            <td class="txt_R">999</td>
+                                            <td class="txt_R">690</td>
+                                            <td class="txt_R">649</td>
+                                            <td class="txt_R">161</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">3</td>
-                                            <td class="fix txt_L txt_name"><a href="blue_search.html">엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="blue_search.html">스틱인베스트먼트</a>
+                                            </td>
+                                            <td>90</td>
+                                            <td>20</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>7.22</td>
+                                            <td>1.82</td>
+                                            <td class="bdr_r">25.15</td>
+                                            <td>512</td>
+                                            <td>271</td>
+                                            <td>513</td>
+                                            <td>95</td>
+                                            <td>112</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">4</td>
-                                            <td class="fix txt_L txt_name"><a href="blue_search.html">엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="blue_search.html">유비쿼스</a></td>
+                                            <td>90</td>
+                                            <td>20</td>
+                                            <td>17</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>8.04</td>
+                                            <td>1.82</td>
+                                            <td class="bdr_r">22.59</td>
+                                            <td>773</td>
+                                            <td>555</td>
+                                            <td>786</td>
+                                            <td>697</td>
+                                            <td>317</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">5</td>
-                                            <td class="fix txt_L txt_name"><a href="blue_search.html">엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="blue_search.html">LX세미콘</a></td>
+                                            <td>88</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>8.06</td>
+                                            <td>2.99</td>
+                                            <td class="bdr_r">37.04</td>
+                                            <td>4,196</td>
+                                            <td>6,423</td>
+                                            <td>4,482</td>
+                                            <td>3,125</td>
+                                            <td>985</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">6</td>
-                                            <td class="fix txt_L txt_name"><a href="#">카카오삼성전자엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="blue_search.html">남화산업</a></td>
+                                            <td>88</td>
+                                            <td>20</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>13.14</td>
+                                            <td>1.19</td>
+                                            <td class="bdr_r">9.04</td>
+                                            <td>93</td>
+                                            <td>232</td>
+                                            <td>250</td>
+                                            <td>93</td>
+                                            <td>104</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">7</td>
-                                            <td class="fix txt_L txt_name"><a href="#">삼성전자</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/093520">매커스</a></td>
+                                            <td>87</td>
+                                            <td>16</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>7.77</td>
+                                            <td>2.43</td>
+                                            <td class="bdr_r">31.34</td>
+                                            <td>659</td>
+                                            <td>-66</td>
+                                            <td>668</td>
+                                            <td>283</td>
+                                            <td>136</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">8</td>
-                                            <td class="fix txt_L txt_name"><a href="#">엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/068760">셀트리온제약</a></td>
+                                            <td>86</td>
+                                            <td>20</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>107.35</td>
+                                            <td>11.18</td>
+                                            <td class="bdr_r">10.42</td>
+                                            <td>135</td>
+                                            <td>237</td>
+                                            <td>352</td>
+                                            <td>194</td>
+                                            <td>287</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">9</td>
-                                            <td class="fix txt_L txt_name"><a href="#">엘지</a></td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/078070">유비쿼스홀딩스</a>
+                                            </td>
+                                            <td>86</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>16</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>15.43</td>
+                                            <td>1.37</td>
+                                            <td class="bdr_r">8.91</td>
+                                            <td>283</td>
+                                            <td>205</td>
+                                            <td>356</td>
+                                            <td>228</td>
+                                            <td>76</td>
                                         </tr>
                                         <tr>
                                             <td class="fix va_cen bdr_r">10</td>
-                                            <td class="fix txt_L txt_name"><a href="#">엘지</a></td>
-                                            <td>5.7%</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/206640">바디텍메드</a></td>
+                                            <td>86</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>9.37</td>
+                                            <td>2.75</td>
+                                            <td class="bdr_r">29.36</td>
+                                            <td>242</td>
+                                            <td>608</td>
+                                            <td>549</td>
+                                            <td>489</td>
+                                            <td>740</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">11</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/259960">크래프톤</a></td>
+                                            <td>86</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>25.77</td>
+                                            <td>2.91</td>
+                                            <td class="bdr_r">11.28</td>
+                                            <td>127</td>
+                                            <td>3,811</td>
+                                            <td>3,276</td>
+                                            <td>4,535</td>
+                                            <td>1,001</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">12</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/058430">포스코강판</a></td>
+                                            <td>85</td>
+                                            <td>20</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>3.08</td>
+                                            <td>0.98</td>
+                                            <td class="bdr_r">31.83</td>
+                                            <td>2,363</td>
+                                            <td>6,982</td>
+                                            <td>5,980</td>
+                                            <td>1,744</td>
+                                            <td>106</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">13</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/067160">아프리카TV</a></td>
+                                            <td>85</td>
+                                            <td>12</td>
+                                            <td>18</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>23.18</td>
+                                            <td>7.86</td>
+                                            <td class="bdr_r">33.93</td>
+                                            <td>1,464</td>
+                                            <td>1,719</td>
+                                            <td>1,647</td>
+                                            <td>1,349</td>
+                                            <td>845</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">14</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/009970">영원무역홀딩스</a>
+                                            </td>
+                                            <td>84</td>
+                                            <td>20</td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>3.26</td>
+                                            <td>0.44</td>
+                                            <td class="bdr_r">13.56</td>
+                                            <td>5,497</td>
+                                            <td>5,159</td>
+                                            <td>2,803</td>
+                                            <td>2,732</td>
+                                            <td>1,301</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">15</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/011780">금호석유</a></td>
+                                            <td>84</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>2.38</td>
+                                            <td>0.92</td>
+                                            <td class="bdr_r">38.68</td>
+                                            <td>9,031</td>
+                                            <td>18,053</td>
+                                            <td>17,408</td>
+                                            <td>14,199</td>
+                                            <td>6,252</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">16</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/035900">JYP Ent.</a>
+                                            </td>
+                                            <td>84</td>
+                                            <td>12</td>
+                                            <td>17</td>
+                                            <td>16</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>30.26</td>
+                                            <td>8.28</td>
+                                            <td class="bdr_r">27.35</td>
+                                            <td>960</td>
+                                            <td>465</td>
+                                            <td>136</td>
+                                            <td>339</td>
+                                            <td>164</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">17</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/089970">에이피티씨</a></td>
+                                            <td>84</td>
+                                            <td>12</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>11.63</td>
+                                            <td>4.74</td>
+                                            <td class="bdr_r">40.72</td>
+                                            <td>344</td>
+                                            <td>424</td>
+                                            <td>228</td>
+                                            <td>973</td>
+                                            <td>452</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">18</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/216050">인크로스</a></td>
+                                            <td>84</td>
+                                            <td>20</td>
+                                            <td>15</td>
+                                            <td>14</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>16.43</td>
+                                            <td>3.73</td>
+                                            <td class="bdr_r">22.70</td>
+                                            <td>1,025</td>
+                                            <td>666</td>
+                                            <td>538</td>
+                                            <td>391</td>
+                                            <td>463</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">19</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/268280">미원에스씨</a></td>
+                                            <td>84</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>12.51</td>
+                                            <td>3.06</td>
+                                            <td class="bdr_r">24.47</td>
+                                            <td>2,992</td>
+                                            <td>5,384</td>
+                                            <td>4,031</td>
+                                            <td>3,261</td>
+                                            <td>721</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">20</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/332370">아이디피</a></td>
+                                            <td>84</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>12.21</td>
+                                            <td>1.26</td>
+                                            <td class="bdr_r">10.34</td>
+                                            <td>197</td>
+                                            <td>175</td>
+                                            <td>144</td>
+                                            <td>125</td>
+                                            <td>-4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">21</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/024830">세원물산</a></td>
+                                            <td>83</td>
+                                            <td>20</td>
+                                            <td>10</td>
+                                            <td>17</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>2.26</td>
+                                            <td>0.24</td>
+                                            <td class="bdr_r">10.48</td>
+                                            <td>N/A</td>
+                                            <td>113</td>
+                                            <td>1,158</td>
+                                            <td>549</td>
+                                            <td>964</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">22</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/039340">한국경제TV</a></td>
+                                            <td>83</td>
+                                            <td>16</td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>6.54</td>
+                                            <td>1.07</td>
+                                            <td class="bdr_r">16.36</td>
+                                            <td>107</td>
+                                            <td>313</td>
+                                            <td>351</td>
+                                            <td>332</td>
+                                            <td>206</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">23</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/068270">셀트리온</a></td>
+                                            <td>83</td>
+                                            <td>20</td>
+                                            <td>19</td>
+                                            <td>7</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>41.71</td>
+                                            <td>6.09</td>
+                                            <td class="bdr_r">14.59</td>
+                                            <td>856</td>
+                                            <td>963</td>
+                                            <td>893</td>
+                                            <td>1,379</td>
+                                            <td>695</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">24</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/179290">엠아이텍</a></td>
+                                            <td>83</td>
+                                            <td>12</td>
+                                            <td>15</td>
+                                            <td>17</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>22.09</td>
+                                            <td>4.18</td>
+                                            <td class="bdr_r">18.91</td>
+                                            <td>112</td>
+                                            <td>107</td>
+                                            <td>98</td>
+                                            <td>74</td>
+                                            <td>59</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">25</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/319660">피에스케이</a></td>
+                                            <td>83</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td>11</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>9.68</td>
+                                            <td>2.57</td>
+                                            <td class="bdr_r">26.54</td>
+                                            <td>678</td>
+                                            <td>1,369</td>
+                                            <td>1,696</td>
+                                            <td>1,454</td>
+                                            <td>-170</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">26</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/000990">DB하이텍</a></td>
+                                            <td>82</td>
+                                            <td>12</td>
+                                            <td>19</td>
+                                            <td>15</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>10.73</td>
+                                            <td>3.07</td>
+                                            <td class="bdr_r">28.65</td>
+                                            <td>2,637</td>
+                                            <td>2,082</td>
+                                            <td>1,326</td>
+                                            <td>1,074</td>
+                                            <td>305</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">27</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/017650">대림제지</a></td>
+                                            <td>82</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">15</td>
+                                            <td>4.52</td>
+                                            <td>0.47</td>
+                                            <td class="bdr_r">10.37</td>
+                                            <td>622</td>
+                                            <td>419</td>
+                                            <td>541</td>
+                                            <td>810</td>
+                                            <td>418</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">28</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/036540">SFA반도체</a></td>
+                                            <td>82</td>
+                                            <td>20</td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>22.05</td>
+                                            <td>2.92</td>
+                                            <td class="bdr_r">13.22</td>
+                                            <td>80</td>
+                                            <td>102</td>
+                                            <td>73</td>
+                                            <td>66</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">29</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/039030">이오테크닉스</a></td>
+                                            <td>82</td>
+                                            <td>20</td>
+                                            <td>12</td>
+                                            <td>18</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>18.82</td>
+                                            <td>2.83</td>
+                                            <td class="bdr_r">15.03</td>
+                                            <td>859</td>
+                                            <td>1,921</td>
+                                            <td>1,691</td>
+                                            <td>1,363</td>
+                                            <td>-1,024</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">30</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/039490">키움증권</a></td>
+                                            <td>82</td>
+                                            <td>20</td>
+                                            <td>17</td>
+                                            <td>9</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>2.75</td>
+                                            <td>0.63</td>
+                                            <td class="bdr_r">22.82</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">31</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/041830">인바디</a></td>
+                                            <td>82</td>
+                                            <td>16</td>
+                                            <td>19</td>
+                                            <td>9</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>11.04</td>
+                                            <td>2.04</td>
+                                            <td class="bdr_r">18.52</td>
+                                            <td>627</td>
+                                            <td>517</td>
+                                            <td>609</td>
+                                            <td>734</td>
+                                            <td>459</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">32</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/058470">리노공업</a></td>
+                                            <td>82</td>
+                                            <td>12</td>
+                                            <td>17</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>26.90</td>
+                                            <td>6.69</td>
+                                            <td class="bdr_r">24.85</td>
+                                            <td>1,386</td>
+                                            <td>1,894</td>
+                                            <td>1,926</td>
+                                            <td>1,605</td>
+                                            <td>475</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">33</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/110790">크리스에프앤씨</a>
+                                            </td>
+                                            <td>82</td>
+                                            <td>20</td>
+                                            <td>17</td>
+                                            <td>14</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>7.51</td>
+                                            <td>1.68</td>
+                                            <td class="bdr_r">22.30</td>
+                                            <td>2,231</td>
+                                            <td>1,223</td>
+                                            <td>1,719</td>
+                                            <td>656</td>
+                                            <td>1,442</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">34</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/128660">피제이메탈</a></td>
+                                            <td>82</td>
+                                            <td>20</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">11</td>
+                                            <td>7.79</td>
+                                            <td>2.44</td>
+                                            <td class="bdr_r">31.30</td>
+                                            <td>245</td>
+                                            <td>204</td>
+                                            <td>179</td>
+                                            <td>112</td>
+                                            <td>92</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">35</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/214180">민앤지</a></td>
+                                            <td>82</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>13</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>10.86</td>
+                                            <td>1.76</td>
+                                            <td class="bdr_r">16.20</td>
+                                            <td>N/A</td>
+                                            <td>511</td>
+                                            <td>238</td>
+                                            <td>418</td>
+                                            <td>536</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">36</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/038070">서린바이오</a></td>
+                                            <td>81</td>
+                                            <td>20</td>
+                                            <td>13</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>9.32</td>
+                                            <td>1.94</td>
+                                            <td class="bdr_r">20.82</td>
+                                            <td>-75</td>
+                                            <td>1,540</td>
+                                            <td>195</td>
+                                            <td>175</td>
+                                            <td>175</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">37</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/071050">한국금융지주</a></td>
+                                            <td>81</td>
+                                            <td>20</td>
+                                            <td>17</td>
+                                            <td>8</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>2.40</td>
+                                            <td>0.57</td>
+                                            <td class="bdr_r">23.85</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">38</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/234340">세틀뱅크</a></td>
+                                            <td>81</td>
+                                            <td>12</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>12.98</td>
+                                            <td>2.02</td>
+                                            <td class="bdr_r">15.59</td>
+                                            <td>554</td>
+                                            <td>506</td>
+                                            <td>772</td>
+                                            <td>388</td>
+                                            <td>319</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">39</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/950130">엑세스바이오</a></td>
+                                            <td>81</td>
+                                            <td>20</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>3.69</td>
+                                            <td>2.44</td>
+                                            <td class="bdr_r">66.19</td>
+                                            <td>1,890</td>
+                                            <td>549</td>
+                                            <td>-576</td>
+                                            <td>3,361</td>
+                                            <td>1,294</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">40</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/003240">태광산업</a></td>
+                                            <td>80</td>
+                                            <td>20</td>
+                                            <td>11</td>
+                                            <td>18</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">11</td>
+                                            <td>3.64</td>
+                                            <td>0.30</td>
+                                            <td class="bdr_r">8.16</td>
+                                            <td>21,810</td>
+                                            <td>83,355</td>
+                                            <td>105,494</td>
+                                            <td>74,688</td>
+                                            <td>6,939</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">41</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/065710">서호전기</a></td>
+                                            <td>80</td>
+                                            <td>16</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>6.31</td>
+                                            <td>1.30</td>
+                                            <td class="bdr_r">20.52</td>
+                                            <td>1,415</td>
+                                            <td>964</td>
+                                            <td>18</td>
+                                            <td>978</td>
+                                            <td>232</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">42</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/081150">티플랙스</a></td>
+                                            <td>80</td>
+                                            <td>20</td>
+                                            <td>9</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>13.96</td>
+                                            <td>1.00</td>
+                                            <td class="bdr_r">7.20</td>
+                                            <td>78</td>
+                                            <td>200</td>
+                                            <td>88</td>
+                                            <td>64</td>
+                                            <td>61</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">43</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/089790">제이티</a></td>
+                                            <td>80</td>
+                                            <td>20</td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">15</td>
+                                            <td>6.32</td>
+                                            <td>1.91</td>
+                                            <td class="bdr_r">30.21</td>
+                                            <td>504</td>
+                                            <td>332</td>
+                                            <td>351</td>
+                                            <td>162</td>
+                                            <td>179</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">44</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/096530">씨젠</a></td>
+                                            <td>80</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td>3</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>5.13</td>
+                                            <td>2.55</td>
+                                            <td class="bdr_r">49.62</td>
+                                            <td>3,134</td>
+                                            <td>1,776</td>
+                                            <td>2,211</td>
+                                            <td>3,152</td>
+                                            <td>3,571</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">45</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/192650">드림텍</a></td>
+                                            <td>80</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td>19</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">9</td>
+                                            <td>10.93</td>
+                                            <td>2.23</td>
+                                            <td class="bdr_r">20.45</td>
+                                            <td>294</td>
+                                            <td>357</td>
+                                            <td>118</td>
+                                            <td>297</td>
+                                            <td>190</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">46</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/232140">와이아이케이</a></td>
+                                            <td>80</td>
+                                            <td>16</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">10</td>
+                                            <td>9.98</td>
+                                            <td>1.60</td>
+                                            <td class="bdr_r">16.04</td>
+                                            <td>62</td>
+                                            <td>212</td>
+                                            <td>169</td>
+                                            <td>107</td>
+                                            <td>99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">47</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/263720">디앤씨미디어</a></td>
+                                            <td>80</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>25.57</td>
+                                            <td>5.63</td>
+                                            <td class="bdr_r">22.04</td>
+                                            <td>191</td>
+                                            <td>506</td>
+                                            <td>247</td>
+                                            <td>286</td>
+                                            <td>248</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">48</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/001940">KISCO홀딩스</a>
+                                            </td>
+                                            <td>79</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>2.80</td>
+                                            <td>0.34</td>
+                                            <td class="bdr_r">11.99</td>
+                                            <td>1,690</td>
+                                            <td>1,801</td>
+                                            <td>2,085</td>
+                                            <td>579</td>
+                                            <td>-545</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">49</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/004360">세방</a></td>
+                                            <td>79</td>
+                                            <td>20</td>
+                                            <td>11</td>
+                                            <td>17</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>4.29</td>
+                                            <td>0.25</td>
+                                            <td class="bdr_r">5.86</td>
+                                            <td>-68</td>
+                                            <td>550</td>
+                                            <td>1,168</td>
+                                            <td>630</td>
+                                            <td>-199</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">50</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/010040">한국내화</a></td>
+                                            <td>79</td>
+                                            <td>16</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>26.01</td>
+                                            <td>0.58</td>
+                                            <td class="bdr_r">2.24</td>
+                                            <td>-17</td>
+                                            <td>10</td>
+                                            <td>77</td>
+                                            <td>130</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">51</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/010050">우리종금</a></td>
+                                            <td>79</td>
+                                            <td>12</td>
+                                            <td>17</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>9.56</td>
+                                            <td>1.27</td>
+                                            <td class="bdr_r">13.32</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">52</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/029780">삼성카드</a></td>
+                                            <td>79</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>7</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>6.75</td>
+                                            <td>0.50</td>
+                                            <td class="bdr_r">7.33</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">53</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/039420">케이엘넷</a></td>
+                                            <td>79</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>15.09</td>
+                                            <td>2.11</td>
+                                            <td class="bdr_r">14.00</td>
+                                            <td>N/A</td>
+                                            <td>69</td>
+                                            <td>39</td>
+                                            <td>75</td>
+                                            <td>66</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">54</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/049070">인탑스</a></td>
+                                            <td>79</td>
+                                            <td>16</td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">15</td>
+                                            <td>7.94</td>
+                                            <td>1.22</td>
+                                            <td class="bdr_r">15.40</td>
+                                            <td>N/A</td>
+                                            <td>1,058</td>
+                                            <td>906</td>
+                                            <td>1,629</td>
+                                            <td>1,143</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">55</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/160980">싸이맥스</a></td>
+                                            <td>79</td>
+                                            <td>12</td>
+                                            <td>15</td>
+                                            <td>18</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>8.60</td>
+                                            <td>1.42</td>
+                                            <td class="bdr_r">16.51</td>
+                                            <td>202</td>
+                                            <td>359</td>
+                                            <td>778</td>
+                                            <td>894</td>
+                                            <td>405</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">56</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/192400">쿠쿠홀딩스</a></td>
+                                            <td>79</td>
+                                            <td>20</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">15</td>
+                                            <td>4.40</td>
+                                            <td>0.73</td>
+                                            <td class="bdr_r">16.52</td>
+                                            <td>N/A</td>
+                                            <td>1,163</td>
+                                            <td>1,148</td>
+                                            <td>1,152</td>
+                                            <td>553</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">57</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/194480">데브시스터즈</a></td>
+                                            <td>79</td>
+                                            <td>20</td>
+                                            <td>11</td>
+                                            <td>17</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">11</td>
+                                            <td>12.38</td>
+                                            <td>4.52</td>
+                                            <td class="bdr_r">36.54</td>
+                                            <td>1,519</td>
+                                            <td>541</td>
+                                            <td>1,402</td>
+                                            <td>1,823</td>
+                                            <td>-620</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">58</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/195870">해성디에스</a></td>
+                                            <td>79</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>16</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>12.69</td>
+                                            <td>3.07</td>
+                                            <td class="bdr_r">24.21</td>
+                                            <td>1,431</td>
+                                            <td>1,349</td>
+                                            <td>864</td>
+                                            <td>548</td>
+                                            <td>132</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">59</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/357780">솔브레인</a></td>
+                                            <td>79</td>
+                                            <td>12</td>
+                                            <td>18</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>12.80</td>
+                                            <td>2.99</td>
+                                            <td class="bdr_r">23.38</td>
+                                            <td>4,583</td>
+                                            <td>5,316</td>
+                                            <td>3,876</td>
+                                            <td>5,319</td>
+                                            <td>3,378</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">60</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/004000">롯데정밀화학</a></td>
+                                            <td>78</td>
+                                            <td>16</td>
+                                            <td>15</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>3.45</td>
+                                            <td>0.92</td>
+                                            <td class="bdr_r">26.63</td>
+                                            <td>8,757</td>
+                                            <td>7,946</td>
+                                            <td>4,419</td>
+                                            <td>1,570</td>
+                                            <td>2,582</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">61</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/037460">삼지전자</a></td>
+                                            <td>78</td>
+                                            <td>12</td>
+                                            <td>16</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>6.73</td>
+                                            <td>0.77</td>
+                                            <td class="bdr_r">11.39</td>
+                                            <td>574</td>
+                                            <td>634</td>
+                                            <td>323</td>
+                                            <td>343</td>
+                                            <td>306</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">62</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/046440">KG모빌리언스</a>
+                                            </td>
+                                            <td>78</td>
+                                            <td>20</td>
+                                            <td>15</td>
+                                            <td>7</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>12.69</td>
+                                            <td>1.29</td>
+                                            <td class="bdr_r">10.16</td>
+                                            <td>-118</td>
+                                            <td>350</td>
+                                            <td>269</td>
+                                            <td>249</td>
+                                            <td>130</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">63</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/052400">코나아이</a></td>
+                                            <td>78</td>
+                                            <td>20</td>
+                                            <td>10</td>
+                                            <td>12</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>8.39</td>
+                                            <td>2.70</td>
+                                            <td class="bdr_r">32.14</td>
+                                            <td>N/A</td>
+                                            <td>993</td>
+                                            <td>771</td>
+                                            <td>543</td>
+                                            <td>322</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">64</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/096240">크레버스</a></td>
+                                            <td>78</td>
+                                            <td>20</td>
+                                            <td>11</td>
+                                            <td>15</td>
+                                            <td>15</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>22.38</td>
+                                            <td>4.66</td>
+                                            <td class="bdr_r">20.80</td>
+                                            <td>N/A</td>
+                                            <td>952</td>
+                                            <td>662</td>
+                                            <td>727</td>
+                                            <td>91</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">65</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/144510">지씨셀</a></td>
+                                            <td>78</td>
+                                            <td>20</td>
+                                            <td>15</td>
+                                            <td>15</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">10</td>
+                                            <td>37.41</td>
+                                            <td>2.30</td>
+                                            <td class="bdr_r">6.15</td>
+                                            <td>1,190</td>
+                                            <td>762</td>
+                                            <td>155</td>
+                                            <td>485</td>
+                                            <td>58</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">66</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/178920">PI첨단소재</a></td>
+                                            <td>78</td>
+                                            <td>20</td>
+                                            <td>15</td>
+                                            <td>8</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>21.02</td>
+                                            <td>4.13</td>
+                                            <td class="bdr_r">19.64</td>
+                                            <td>549</td>
+                                            <td>533</td>
+                                            <td>544</td>
+                                            <td>553</td>
+                                            <td>362</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">67</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/214150">클래시스</a></td>
+                                            <td>78</td>
+                                            <td>8</td>
+                                            <td>17</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>29.76</td>
+                                            <td>9.15</td>
+                                            <td class="bdr_r">30.73</td>
+                                            <td>N/A</td>
+                                            <td>194</td>
+                                            <td>186</td>
+                                            <td>148</td>
+                                            <td>204</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">68</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/217500">러셀</a></td>
+                                            <td>78</td>
+                                            <td>16</td>
+                                            <td>10</td>
+                                            <td>18</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>26.26</td>
+                                            <td>3.25</td>
+                                            <td class="bdr_r">12.39</td>
+                                            <td>67</td>
+                                            <td>46</td>
+                                            <td>3</td>
+                                            <td>78</td>
+                                            <td>-56</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">69</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/273640">와이엠텍</a></td>
+                                            <td>78</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>0.00</td>
+                                            <td>3.79</td>
+                                            <td class="bdr_r">13.18</td>
+                                            <td>350</td>
+                                            <td>305</td>
+                                            <td>346</td>
                                             <td>0</td>
-                                            <td>5.7%</td>
                                             <td>0</td>
-                                            <td>6874억</td>
-                                            <td class="bdr_r">5.7%</td>
-                                            <td>0</td>
-                                            <td>5.7%</td>
-                                            <td class="bdr_r">0</td>
-                                            <td>6874억</td>
-                                            <td>5.7%</td>
-                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">70</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/900340">윙입푸드</a></td>
+                                            <td>78</td>
+                                            <td>20</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>2.76</td>
+                                            <td>0.40</td>
+                                            <td class="bdr_r">14.55</td>
+                                            <td>N/A</td>
+                                            <td>169</td>
+                                            <td>88</td>
+                                            <td>105</td>
+                                            <td>101</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">71</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/002030">아세아</a></td>
+                                            <td>77</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>3.24</td>
+                                            <td>0.38</td>
+                                            <td class="bdr_r">11.56</td>
+                                            <td>14,306</td>
+                                            <td>11,104</td>
+                                            <td>15,229</td>
+                                            <td>7,300</td>
+                                            <td>8,010</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">72</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/003960">사조대림</a></td>
+                                            <td>77</td>
+                                            <td>20</td>
+                                            <td>15</td>
+                                            <td>14</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>4.19</td>
+                                            <td>0.62</td>
+                                            <td class="bdr_r">14.82</td>
+                                            <td>781</td>
+                                            <td>2,416</td>
+                                            <td>2,170</td>
+                                            <td>1,472</td>
+                                            <td>377</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">73</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/008420">문배철강</a></td>
+                                            <td>77</td>
+                                            <td>20</td>
+                                            <td>10</td>
+                                            <td>18</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">11</td>
+                                            <td>4.10</td>
+                                            <td>0.73</td>
+                                            <td class="bdr_r">17.75</td>
+                                            <td>271</td>
+                                            <td>193</td>
+                                            <td>451</td>
+                                            <td>322</td>
+                                            <td>157</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">74</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/017480">삼현철강</a></td>
+                                            <td>77</td>
+                                            <td>20</td>
+                                            <td>12</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">6</td>
+                                            <td>4.11</td>
+                                            <td>0.59</td>
+                                            <td class="bdr_r">14.42</td>
+                                            <td>363</td>
+                                            <td>401</td>
+                                            <td>441</td>
+                                            <td>412</td>
+                                            <td>202</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">75</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/031330">에스에이엠티</a></td>
+                                            <td>77</td>
+                                            <td>8</td>
+                                            <td>18</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>7.02</td>
+                                            <td>1.35</td>
+                                            <td class="bdr_r">19.27</td>
+                                            <td>139</td>
+                                            <td>195</td>
+                                            <td>149</td>
+                                            <td>119</td>
+                                            <td>126</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">76</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/036200">유니셈</a></td>
+                                            <td>77</td>
+                                            <td>12</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>9.36</td>
+                                            <td>1.95</td>
+                                            <td class="bdr_r">20.85</td>
+                                            <td>159</td>
+                                            <td>287</td>
+                                            <td>386</td>
+                                            <td>413</td>
+                                            <td>45</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">77</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/039860">나노엔텍</a></td>
+                                            <td>77</td>
+                                            <td>12</td>
+                                            <td>11</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">19</td>
+                                            <td>27.35</td>
+                                            <td>3.83</td>
+                                            <td class="bdr_r">13.99</td>
+                                            <td>47</td>
+                                            <td>35</td>
+                                            <td>73</td>
+                                            <td>118</td>
+                                            <td>33</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">78</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/041510">에스엠</a></td>
+                                            <td>77</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>17</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>13.53</td>
+                                            <td>2.93</td>
+                                            <td class="bdr_r">21.67</td>
+                                            <td>3,953</td>
+                                            <td>655</td>
+                                            <td>598</td>
+                                            <td>436</td>
+                                            <td>-2,153</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">79</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/095610">테스</a></td>
+                                            <td>77</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>8</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>7.28</td>
+                                            <td>1.83</td>
+                                            <td class="bdr_r">25.09</td>
+                                            <td>923</td>
+                                            <td>360</td>
+                                            <td>1,050</td>
+                                            <td>1,410</td>
+                                            <td>253</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">80</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/143160">아이디스</a></td>
+                                            <td>77</td>
+                                            <td>16</td>
+                                            <td>11</td>
+                                            <td>17</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>10.99</td>
+                                            <td>1.37</td>
+                                            <td class="bdr_r">12.44</td>
+                                            <td>368</td>
+                                            <td>455</td>
+                                            <td>968</td>
+                                            <td>374</td>
+                                            <td>-118</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">81</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/236200">슈프리마</a></td>
+                                            <td>77</td>
+                                            <td>12</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>8.29</td>
+                                            <td>1.13</td>
+                                            <td class="bdr_r">13.64</td>
+                                            <td>922</td>
+                                            <td>1,010</td>
+                                            <td>413</td>
+                                            <td>803</td>
+                                            <td>-34</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">82</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/263860">지니언스</a></td>
+                                            <td>77</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>15</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>18.13</td>
+                                            <td>2.72</td>
+                                            <td class="bdr_r">15.01</td>
+                                            <td>366</td>
+                                            <td>108</td>
+                                            <td>125</td>
+                                            <td>54</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">83</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/287410">제이시스메디칼</a>
+                                            </td>
+                                            <td>77</td>
+                                            <td>8</td>
+                                            <td>17</td>
+                                            <td>15</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>43.70</td>
+                                            <td>12.70</td>
+                                            <td class="bdr_r">29.07</td>
+                                            <td>113</td>
+                                            <td>88</td>
+                                            <td>81</td>
+                                            <td>-89</td>
+                                            <td>21</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">84</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/290650">엘앤씨바이오</a></td>
+                                            <td>77</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">8</td>
+                                            <td>55.18</td>
+                                            <td>8.97</td>
+                                            <td class="bdr_r">16.25</td>
+                                            <td>369</td>
+                                            <td>77</td>
+                                            <td>81</td>
+                                            <td>87</td>
+                                            <td>255</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">85</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/001800">오리온홀딩스</a></td>
+                                            <td>76</td>
+                                            <td>20</td>
+                                            <td>17</td>
+                                            <td>3</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>10.27</td>
+                                            <td>0.42</td>
+                                            <td class="bdr_r">4.10</td>
+                                            <td>348</td>
+                                            <td>552</td>
+                                            <td>151</td>
+                                            <td>321</td>
+                                            <td>226</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">86</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/012620">원일특강</a></td>
+                                            <td>76</td>
+                                            <td>20</td>
+                                            <td>10</td>
+                                            <td>18</td>
+                                            <td>16</td>
+                                            <td class="bdr_r">12</td>
+                                            <td>3.33</td>
+                                            <td>0.45</td>
+                                            <td class="bdr_r">13.60</td>
+                                            <td>-362</td>
+                                            <td>2,903</td>
+                                            <td>965</td>
+                                            <td>760</td>
+                                            <td>-369</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">87</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/014580">태경비케이</a></td>
+                                            <td>76</td>
+                                            <td>20</td>
+                                            <td>7</td>
+                                            <td>13</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>14.04</td>
+                                            <td>0.86</td>
+                                            <td class="bdr_r">6.15</td>
+                                            <td>31</td>
+                                            <td>96</td>
+                                            <td>96</td>
+                                            <td>116</td>
+                                            <td>55</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">88</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/030210">KTB투자증권</a>
+                                            </td>
+                                            <td>76</td>
+                                            <td>20</td>
+                                            <td>10</td>
+                                            <td>6</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>2.02</td>
+                                            <td>0.43</td>
+                                            <td class="bdr_r">21.51</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">89</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/036570">엔씨소프트</a></td>
+                                            <td>76</td>
+                                            <td>12</td>
+                                            <td>18</td>
+                                            <td>12</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">15</td>
+                                            <td>25.56</td>
+                                            <td>3.22</td>
+                                            <td class="bdr_r">12.60</td>
+                                            <td>5,551</td>
+                                            <td>4,544</td>
+                                            <td>4,300</td>
+                                            <td>3,684</td>
+                                            <td>3,670</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">90</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/077500">유니퀘스트</a></td>
+                                            <td>76</td>
+                                            <td>16</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">9</td>
+                                            <td>4.96</td>
+                                            <td>1.03</td>
+                                            <td class="bdr_r">20.73</td>
+                                            <td>973</td>
+                                            <td>485</td>
+                                            <td>416</td>
+                                            <td>415</td>
+                                            <td>507</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">91</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/080010">이상네트웍스</a></td>
+                                            <td>76</td>
+                                            <td>12</td>
+                                            <td>10</td>
+                                            <td>18</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>11.07</td>
+                                            <td>0.68</td>
+                                            <td class="bdr_r">6.12</td>
+                                            <td>268</td>
+                                            <td>129</td>
+                                            <td>269</td>
+                                            <td>51</td>
+                                            <td>-125</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">92</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/091700">파트론</a></td>
+                                            <td>76</td>
+                                            <td>16</td>
+                                            <td>15</td>
+                                            <td>12</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">15</td>
+                                            <td>8.78</td>
+                                            <td>1.39</td>
+                                            <td class="bdr_r">15.86</td>
+                                            <td>243</td>
+                                            <td>644</td>
+                                            <td>125</td>
+                                            <td>324</td>
+                                            <td>83</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">93</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/092730">네오팜</a></td>
+                                            <td>76</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>4</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">20</td>
+                                            <td>11.58</td>
+                                            <td>1.57</td>
+                                            <td class="bdr_r">13.59</td>
+                                            <td>578</td>
+                                            <td>378</td>
+                                            <td>504</td>
+                                            <td>698</td>
+                                            <td>638</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">94</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/099430">바이오플러스</a></td>
+                                            <td>76</td>
+                                            <td>8</td>
+                                            <td>14</td>
+                                            <td>20</td>
+                                            <td>18</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>39.47</td>
+                                            <td>5.19</td>
+                                            <td class="bdr_r">13.16</td>
+                                            <td>N/A</td>
+                                            <td>-21</td>
+                                            <td>303</td>
+                                            <td>318</td>
+                                            <td>239</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">95</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/145720">덴티움</a></td>
+                                            <td>76</td>
+                                            <td>16</td>
+                                            <td>18</td>
+                                            <td>14</td>
+                                            <td>12</td>
+                                            <td class="bdr_r">16</td>
+                                            <td>16.66</td>
+                                            <td>2.96</td>
+                                            <td class="bdr_r">17.78</td>
+                                            <td>N/A</td>
+                                            <td>1,271</td>
+                                            <td>1,295</td>
+                                            <td>773</td>
+                                            <td>1,024</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">96</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/189690">포시에스</a></td>
+                                            <td>76</td>
+                                            <td>12</td>
+                                            <td>11</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">14</td>
+                                            <td>12.04</td>
+                                            <td>1.18</td>
+                                            <td class="bdr_r">9.78</td>
+                                            <td>443</td>
+                                            <td>58</td>
+                                            <td>207</td>
+                                            <td>12</td>
+                                            <td>281</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">97</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/205100">엑셈</a></td>
+                                            <td>76</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td>20</td>
+                                            <td class="bdr_r">18</td>
+                                            <td>15.22</td>
+                                            <td>1.92</td>
+                                            <td class="bdr_r">12.58</td>
+                                            <td>176</td>
+                                            <td>54</td>
+                                            <td>74</td>
+                                            <td>5</td>
+                                            <td>74</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">98</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/214450">파마리서치</a></td>
+                                            <td>76</td>
+                                            <td>16</td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">13</td>
+                                            <td>19.64</td>
+                                            <td>3.00</td>
+                                            <td class="bdr_r">15.29</td>
+                                            <td>957</td>
+                                            <td>1,314</td>
+                                            <td>1,134</td>
+                                            <td>1,223</td>
+                                            <td>1,011</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">99</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/230360">에코마케팅</a></td>
+                                            <td>76</td>
+                                            <td>8</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">17</td>
+                                            <td>21.77</td>
+                                            <td>3.86</td>
+                                            <td class="bdr_r">17.73</td>
+                                            <td>N/A</td>
+                                            <td>186</td>
+                                            <td>241</td>
+                                            <td>234</td>
+                                            <td>162</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fix va_cen bdr_r">100</td>
+                                            <td class="fix txt_L txt_name"><a href="/finance/mri/272290">이녹스첨단소재</a>
+                                            </td>
+                                            <td>76</td>
+                                            <td>16</td>
+                                            <td>18</td>
+                                            <td>13</td>
+                                            <td>19</td>
+                                            <td class="bdr_r">10</td>
+                                            <td>12.73</td>
+                                            <td>3.31</td>
+                                            <td class="bdr_r">25.98</td>
+                                            <td>1,237</td>
+                                            <td>1,302</td>
+                                            <td>982</td>
+                                            <td>568</td>
+                                            <td>231</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -425,18 +2117,16 @@
                         <!-- //table-scroll -->
 
                         <div class="paginate">
-                            <a href="#" class="cb_pre">이전</a>
+                            <a href="/industry/roepbr/20?"><img src="/img/cb_prev_page.png" alt="마지막페이지"></a>
+                            <a href="/industry/roepbr/2?"><img src="/img/cb_prev.png" alt="다음"></a>
                             <strong>1</strong>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
-                            <a href="#">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
-                            <a href="#" class="cb_next">다음</a>
+                            <a href="/industry/roepbr/2?">2</a>
+                            <a href="/industry/roepbr/3?">3</a>
+                            <a href="/industry/roepbr/4?">4</a>
+                            <a href="/industry/roepbr/5?">5</a>
+                            <a href="/industry/roepbr/6?">6</a>
+                            <a href="/industry/roepbr/2?"><img src="/img/cb_next.png" alt="다음"></a>
+                            <a href="/industry/roepbr/20?"><img src="/img/cb_next_page.png" alt="마지막페이지"></a>
                         </div>
                     </div>
                     <!-- //excavation_area -->

@@ -38,12 +38,12 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
     margin: 0 auto;  
     box-sizing: border-box;
     min-width: 1000px;
-    max-width: 1138px;
+    max-width: 1138px;    
     padding: 0 15px;
 }
 @mixin white-space {
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     // width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;

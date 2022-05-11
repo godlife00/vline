@@ -16,17 +16,17 @@
             padding: 0 10px;                        
         }
         td.bdr_r {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background: #fff url('../img/gray_tdline.gif') repeat-y right top;                
-                
-            }            
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }            
         }
         thead {                        
             tr:nth-child(2) {
@@ -38,22 +38,26 @@
         tbody {
             td {                                
                 &.txt_name a {
-                    color: #527bea;                          
+                    color: #527bea;               
+                    @include white-space;     
+                    max-width: 100px;         
+                                                   
                 } 
             }            
         }
-    }   
+    }
+    
 }
 
 // 우량주
 #container .M_right .contents .excavation_area.blue_box {           
     .thead2_table {               
-        background: url('../img/gray_tdline.gif') repeat-x left bottom;                 
+        background: url('/img/gray_tdline.gif') repeat-x left bottom;                 
         thead {    
-            background: #fff url('../img/gray_thline.gif') repeat-x left top;                    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         &::before {
                             height: 68px;
@@ -64,7 +68,7 @@
 
             tr:nth-child(2) {
                 th, td {
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top !important;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
                 }                    
                 td {                                        
                     &:first-child {
@@ -87,13 +91,13 @@
         tbody {
             tr:first-child {
                 th, td {
-                    background-image: url('../img/gray_thline.gif');
+                    background-image: url('/img/gray_thline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }                    
             }  
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                    
                 height: 34px;                
@@ -136,7 +140,7 @@
 
             tr:nth-child(2) {
                 th, td {
-                    background-image: url('../img/gray_tdline.gif');
+                    background-image: url('/img/gray_tdline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                          
                 }                    
@@ -152,7 +156,7 @@
         }  
         tbody {            
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                          
                 height: 34px;                
@@ -196,10 +200,10 @@
             padding: 8.5px 12px;
         }        
         thead {    
-            background: #fff url('../img/gray_thline.gif') repeat-x left top;                    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: 60px;
                         &::before {
@@ -212,7 +216,7 @@
             tr:nth-child(2) {
                 th, td {
                     padding: 4px 3px;
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top !important;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
                 }                                    
             }         
             
@@ -227,13 +231,13 @@
         tbody {
             tr:first-child {
                 th, td {
-                    background-image: url('../img/gray_thline.gif');
+                    background-image: url('/img/gray_thline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }                    
             }  
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                    
                 height: 34px;                
@@ -281,7 +285,7 @@
                 top: 0;
                 width: 16px;
                 height: 100%;
-                background: url('../img/icon_shop.svg') no-repeat 0 5px;
+                background: url('/img/icon_shop.svg') no-repeat 0 5px;
             }
         }
         .shop_radio {
@@ -334,14 +338,20 @@
                         top: 2px;
                         width: 12px;
                         height: 12px;
-                        background: url('../img/icon_help.svg') no-repeat 0 0;                    
+                        background: url('/img/icon_help.svg') no-repeat 0 0;                    
                     }     
                 }
     
                 .mid {                
                     position: relative;
-                    float: left;
+                    float: left;                    
+                    display: flex;
+                    gap: 16px 22px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding-right: 20px;
                     width: calc(100% - 170px);
+                    box-sizing: border-box;
                     &::after {
                         content: '';
                         position: absolute;
@@ -354,16 +364,9 @@
                     } 
     
                     .box {
-                        display: inline-block;                    
-                        margin-right: 22px;
-                        margin-bottom: 16px;
-                        
-                        &:nth-child(n + 6) {                        
-                            margin-bottom: 0;                                       
-                        }
-                        &:last-child {                        
-                            margin-right: 0;                        
-                        }
+                        // display: inline-block;                    
+                        // margin-right: 22px;
+                        // margin-bottom: 16px;
     
                         .th {
                             font-size: 14px;
@@ -436,15 +439,16 @@
         }
     }
     
-    .thead2_table {               
+    
+    .thead2_table {                       
         th, td {
             padding: 8.5px 12px;
         }        
         thead {    
-            background: #fff url('../img/gray_thline.gif') repeat-x left top;                    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: 60px;
                         &::before {
@@ -457,7 +461,7 @@
             tr:nth-child(2) {
                 th, td {
                     padding: 4px 3px;
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top !important;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
                 }                                    
             }         
             
@@ -468,17 +472,40 @@
                     }
                 }
             }
+            .order {                               
+                margin-top: 1px; 
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 5px;
+                span {
+                    display: inline-block;
+                    cursor: pointer;
+                    border: 1px solid #e7eaf2;                    
+                    width: 16px;
+                    height: 16px;                    
+                    box-sizing: border-box;
+                    font-size: 10px;
+                    letter-spacing: -0.25px;                    
+                    &.high, &.lower {
+                        &.active {
+                            background-color: #3655d6;
+                            color: #fff;
+                        }
+                    }
+                }                
+            }
         }  
         tbody {
             tr:first-child {
                 th, td {
-                    background-image: url('../img/gray_thline.gif');
+                    background-image: url('/img/gray_thline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }                    
             }  
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                    
                 height: 34px;                
@@ -500,25 +527,50 @@
                 border-bottom: 1px solid #e7eaf2;
             }
             
-        }        
+        }     
+
     }
 }
 
 // BIC 차트 패턴
 #container .M_right .contents .excavation_area.pattern {    
-    .tab_content {
-        display: flex;
-        justify-content: space-between;	
+    .tab_content {        
+        
+        .BICchart_ptnStyle {                                
+            display: inline-block;
+            background-color: #f7f7f8;
+            width: calc(100% / 2 - 10px);
+            margin-bottom: 10px;
+            height: 340px;     
+            &:nth-of-type(2n) {
+                float: right;
+            }
 
-        .containerfinance1 {
-            width: 100%;            
-            height: 160px;     
+            .highcharts-title {
+                font-family: "Spoqa Han Sans Neo";
+                font-size: 15px !important;
+                font-weight: $f_sizeB;                        
+                letter-spacing: -0.85px;
+                text-align: center;                        
+                color: #222 !important;                                     
+                fill: #222 !important;           
+                tspan {                        
+                    display: block;    
+                    font-size: 12px;
+                    font-weight: normal;                            
+                    letter-spacing: -0.6px;                            
+                    fill: #3655d6;
+                    color: #3655d6;
+                }
+            }
         }
 
-        .thead2_table {
-            border-top: none;                  
+        .thead2_table {            
+            border-top: none;                              
             
-            thead {                
+            thead {               
+                background-color: #fff; 
+                z-index: 50;        
                 th, td {                    
                     padding:8.5px 3px;                                                                          
                 }
@@ -547,9 +599,12 @@
                     &:nth-child(2n) {
                         background-color: #fff
                     }
-                    &.txt_name {
+                    &.txt_name {                        
                         position: relative;
                         padding-left: 10px;
+                        a {
+                            max-width: 180px;                                                        
+                        }
                         &::after {
                             content: "";
                             position: absolute;
@@ -570,4 +625,9 @@
         margin-top: 30px;
     }
     
+}
+#container .M_right .contents .excavation_area.pattern_gra {    
+  .tab_content .thead2_table tbody td.txt_name a {
+      max-width: 100px;
+  }
 }

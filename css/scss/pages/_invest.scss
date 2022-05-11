@@ -9,7 +9,7 @@
     .sum_txt {
         padding: 2px 7px 0;               
         font-size: 13px;            
-        line-height: 1.54;
+        line-height: 1.35;
         letter-spacing: -0.33px;            
         color: #656d7e;
     }
@@ -24,17 +24,21 @@
         &.face_buffett {
             background:#fff url('../img/face_buffett.svg') no-repeat left bottom;
         }
-        &.face_graham {
-            background:#fff url('../img/face_graham.svg') no-repeat left bottom;
+        &.face_graham {            
+            background:#fff url('/img/face_graham.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
         &.face_templeton {
-            background:#fff url('../img/face_templeton.svg') no-repeat left bottom;
+            background:#fff url('/img/face_templeton.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
         &.face_lynch {
-            background:#fff url('../img/face_lynch.svg') no-repeat left bottom;
+            background:#fff url('/img/face_lynch.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
         &.face_greenblatt {
-            background:#fff url('../img/face_greenblatt.svg') no-repeat left bottom;
+            background:#fff url('/img/face_greenblatt.png') no-repeat left bottom;
+            background-size: 102px auto;            
         }
 
         .left {                
@@ -108,7 +112,7 @@
                                         display: inline-block;
                                         width:14px;
                                         height: 14px;                                
-                                        background: url('../img/icon_agreecheck.svg') no-repeat right 0;
+                                        background: url('/img/icon_agreecheck.svg') no-repeat right 0;
                                     }
                                 }
                                 &:checked + label {
@@ -176,7 +180,7 @@
                         top: 2px;
                         width: 12px;
                         height: 12px;
-                        background: url('../img/icon_help.svg') no-repeat 0 0;                    
+                        background: url('/img/icon_help.svg') no-repeat 0 0;                    
                     }     
                 }
                 
@@ -195,7 +199,7 @@
         @include top_invest;
 
         &.buffett {
-            // 워렌버핏 전용            
+            // 워런 버핏 전용            
         }       
     }
     .table_update {
@@ -211,7 +215,11 @@
     .thead2_table {
         border-top: none;                  
         td.bdr_r {
-            border-right: 1px solid #e7eaf2;
+            // border-right: 1px solid #e7eaf2;
+        }
+
+        thead .fix::before {
+            display: none;
         }
 
         thead {                
@@ -237,13 +245,16 @@
             }
             tr:last-child {
                 th, td {
-                    padding: 3.5px 5px;
-                    letter-spacing: -1px;                    
+                    strong {
+                        font-size: 12px;                                                
+                    }                    
+                    // padding: 3.5px 5px;
+                    // letter-spacing: -1px;                    
                 }
                 td { 
                                        
                     &:nth-child(n + 3) {
-                        font-size: 10px;                                                
+                        font-size: 12px;                                                
                     }
                     &:nth-child(2) {
                         position: relative;                                                
@@ -265,14 +276,14 @@
         }
         tbody {
             td {                                                    
-                padding:8.5px 3px;                                                                          
+                padding:8.5px 8px;                                                            
                 &:nth-child(2n + 1) {
                     background-color: #f7f9fc;
                 }
                 &:first-child {
                     width: 40px;
                     box-sizing: border-box;
-                    padding:8.5px 3px;                                                                          
+                    padding:8.5px 8px;
                 }
                 &:first-child,
                 &:nth-child(2n) {
@@ -283,6 +294,9 @@
                     padding:8.5px 12px 8.5px 7px;                                                                          
                     a {
                         color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
                     }                    
                     &::after {
                         content: "";
@@ -299,7 +313,8 @@
                     display: inline-block;
                     width: 16px;
                     height: 12px;                    
-                    background: url('../img/icon_check.svg') no-repeat 0 0;
+                    background: url('/img/icon_check.svg') no-repeat center center;
+                    background-size: 12px auto;
                 }             
             }            
         }
@@ -340,10 +355,19 @@
                     ul {
                         margin-top: 5px;
                         li {
+                            position: relative;
                             font-size: 13px;                        
                             line-height: 1.62;
                             letter-spacing: -0.33px;                        
-                            color: #656d7e;                        
+                            color: #656d7e;     
+                            padding-left: 16px;
+                            i {
+                                position: absolute;
+                                left: 0;
+                                top: 1px;
+                                font-style: normal;
+                                color: #656d7e;     
+                            }                   
                         }
                     }
                 }
@@ -381,10 +405,10 @@
             padding: 8.5px 12px;
         }        
         thead {    
-            background: #fff url('../img/gray_thline.gif') repeat-x left top;                    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: 60px;
                         &::before {
@@ -397,7 +421,7 @@
             tr:nth-child(2) {
                 th, td {
                     padding: 4px 3px;
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top !important;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
                 }                                    
             }         
             
@@ -412,13 +436,13 @@
         tbody {
             tr:first-child {
                 th, td {
-                    background-image: url('../img/gray_thline.gif');
+                    background-image: url('/img/gray_thline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }                    
             }  
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                    
                 height: 34px;                
@@ -438,7 +462,10 @@
                 &.txt_name {                    
                     a {
                         color: #527bea;           
-                    }                                        
+                        @include white-space;     
+                        max-width: 100px;         
+                        
+                    }                           
                 }    
             }    
                               

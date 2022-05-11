@@ -1,9 +1,16 @@
 $(document).ready(function () {
 
-    // $('#header').load('/common/header.html');  // 해더
-    // $("#footers").load("/common/footer.html");  // 푸터
-    $('#header').load('../common/header.html', function () {
+    if (window.location.href.indexOf("index") > -1) {
+        var urlRoute = './';
+        var htmlRoute = 'header_index.html';
+    } else {
+        var urlRoute = '../';
+        var htmlRoute = 'header.html';
+    }
 
+    $('#header').load(urlRoute + 'common/' + htmlRoute, function () {
+
+        console.log("로컬해더js");
         $(function () {
             $('.gnb ul li').removeClass('active'); //재무분석
             var loc = window.location.href; // returns the full URL            
@@ -17,31 +24,29 @@ $(document).ready(function () {
                 $('.gnb ul li.sectors').addClass('active'); // 업종분석
             }
         });
+        
+        // 상단 검색바
+        $('.searchArea form .searchInput').on("focusout", function () {            
+            $('.searchArea .AutoComplete').hide();
+        });
+        $('.searchArea form .searchInput').on("keydown", function () {            
+            $('.searchArea .AutoComplete').show();
+        });
+        $('.searchArea .AutoComplete li').removeClass('_on');
+        $('.searchArea .AutoComplete li').on("mouseover", function () {            
+            $('.searchArea .AutoComplete li').removeClass('_on')
+            $(this).addClass('_on');
+        });
 
         // active
-        $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function() {     
-            $(this).toggleClass('active');        
+        $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function () {
+            $(this).toggleClass('active');
         });
-        $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function() {     
-            $(this).toggleClass('active');        
-        });        
+        $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
+            $(this).toggleClass('active');
+        });
 
-        $('#header .bgWrap .premium .loginId .login').on('click', function () {
-            $('.login_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step02').on('click', function () {            
-            $('.terms_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step03').on('click', function () {            
-            $('.sign_complete').modal({
-                fadeDuration: 100
-            });
-        });     
-        $('#header .bgWrap .premium a.join').on('click', function () {
+        $('#header .bgWrap .premium a.join, a.btn_freePop, .btn_joinPop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
@@ -51,43 +56,13 @@ $(document).ready(function () {
                 fadeDuration: 100
             });
         });
-
-        // 밸류라인 프리미엄 가입 - 가입방법 열기
-        $('.modal a.open_payment').on('click', function () {            
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });     
-        $('.modal a.payment_step01').on('click', function () {            
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });     
-        // 밸류라인 프리미엄 가입 - 결제하기 열기
-        $('.modal a.payment_step02').on('click', function () {            
-            $('.payment_step.pay02').modal({
-                fadeDuration: 100
-            });
-        });     
-        // 밸류라인 프리미엄 가입 - 결제완료 열기
-        $('.modal a.payment_step03').on('click', function () {            
-            $('.payment_step.pay03').modal({
-                fadeDuration: 100
-            });
-        });     
-
-        // 마이페이지
-        $('#header .bgWrap .premium .my_info').on('click', function () {
-            $('.mypage_info').modal({
-                fadeDuration: 100
-            });
-        });
+                
         // 회원탈퇴
         $('.modal.mypage_info .pop_con .open_withdrawal').on('click', function () {
             $('.withdrawal_sum').modal({
                 fadeDuration: 100
             });
-        });        
+        });
 
         //결제
         $('.serviceStep .step_box').on("click", function () {
@@ -99,6 +74,17 @@ $(document).ready(function () {
         $('.payment_note .note_chk .txt').on("click", function () {
             $(this).toggleClass("active");
         });
+
+        // 프로모션 이벤트 배너
+        $('.event_pop').on('click', function () {
+            // $('.premium_join').modal({
+            //     fadeDuration: 100
+            // });
+            $('.premium_join').modal('show');
+        });
+
+        
+
 
         //select
         $(function () {
@@ -122,11 +108,11 @@ $(document).ready(function () {
         });
 
         // 스크롤 끝 감지해서 스타일 수정
-        $(".modal.mypage_info .pop_con .history_area").scroll(function () {            
+        $(".modal.mypage_info .pop_con .history_area").scroll(function () {
             var scrollTop = $(this).scrollTop();
             var innerHeight = $(this).innerHeight();
             var scrollHeight = $(this).prop('scrollHeight');
-    
+
             if (scrollTop + innerHeight >= scrollHeight) {
                 $(".modal.mypage_info .pop_con .history_area").css('border', 'none');
             } else {
@@ -135,7 +121,7 @@ $(document).ready(function () {
         });
 
         // 내정보 - 회원정보 - 휴대폰 번호 변경
-        $('.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_btn').on('click', function() {
+        $('.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_btn').on('click', function () {
             $('.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_phone').slideDown();
         });
         $(".modal.mypage_info .pop_con .mapage_area .tab_area ul li").on('click', function () {
@@ -146,12 +132,43 @@ $(document).ready(function () {
             $("#" + activeTab).show();
         });
 
-        
+
         $('#header .bgWrap .gnb ul li').on('click', function () {
             $(this).addClass('active');
         });
 
     });
 
+    $('#footer').load(urlRoute + 'common/footer.html', function () {        
+        // a태그 페이지 상단 이동 막기
+        $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
+            console.log("상단이동제한");
+            return false;
+        });
+        // 이용약관
+        $('.btn_terms').on('click', function () {
+            $('.modal.terms').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
+        // 개인정보처리방침
+        $('.btn_policy').on('click', function () {
+            $('.modal.policy').modal({
+                fadeDuration: 100
+            });            
+        }); 
+    });
+
+    //연환산,연간,분기 테이블 탭
+    $("#container .M_right .contents .tab_content").hide();
+    $("#container .M_right .contents .tab_content:first").show();
+    $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
+        $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
+        $(this).addClass("active");
+        $("#container .M_right .contents .tab_content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).show();
+    });
 
 });

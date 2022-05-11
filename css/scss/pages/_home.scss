@@ -31,10 +31,10 @@
             vertical-align: middle;
             font-size: 16px;                
             letter-spacing: -0.4px;                
-            color: #222;               
+            color: #222;                                       
             &.txt_c {
                 text-align: center;
-            }   
+            }               
         }
         thead {
             th {
@@ -54,15 +54,15 @@
         tbody {
             td {
                 padding: 5px 0;
-                &.name {                        
-                    width: 190px;
-                    max-width: 190px;                                                    
+                &.name {      
+                    width: 140px;
+                    max-width: 140px;                                                    
 
                     a {
                         @include white-space;
                         display: table-cell;
                         width: 100%;
-                        max-width: 180px;                                                    
+                        max-width: 160px;                                                    
                         padding-right: 20px;
                         box-sizing: border-box;
                         font-size: 16px;
@@ -71,7 +71,7 @@
                         color: #222;
                     }
                 }
-                &.up, &.down {
+                &.up, &.down, &.same {
                     .price {
                         font-size: 16px;                            
                         letter-spacing: -0.4px;                            
@@ -79,7 +79,7 @@
                     }                        
                     .per {
                         padding-left: 2px;
-                        font-size: 10px;                            
+                        font-size: 12px;                            
                         letter-spacing: -0.25px;
                         color: #d30000;
                     }
@@ -87,6 +87,11 @@
                 &.down {
                     .per {                            
                         color: #0052ff;
+                    }                        
+                }
+                &.same {
+                    .per {                            
+                        color: #444;
                     }                        
                 }
             }
@@ -227,6 +232,16 @@
                         color: #0052ff;
                     }                    
                 }
+                &.up {
+                    .gap, .per {                                            
+                        color: $colup;
+                    }
+                }
+                &.same {
+                    .gap, .per {                                            
+                        color: #222;
+                    }                    
+                }
             }
         }
     }
@@ -292,9 +307,23 @@
                                 color: #0052ff;
                             }                    
                         }
+                        &.same {
+                            .per {                                            
+                                font-size: 12px;                                
+                                letter-spacing: -0.3px;
+                                color: #444;
+                            }                    
+                        }
                     }
                 }
     
+            }
+            .table_unitdate {
+                font-size: 12px;                
+                line-height: 2.5;
+                letter-spacing: -0.3px;
+                text-align: right;
+                color: #b1b9cb;                
             }
         }
         
@@ -315,7 +344,7 @@
         @mixin tabarea {
             ul {
                 display: flex;
-                background: url('../img/dot_gray.png') repeat-x left calc(100% + 1px);
+                background: url('/img/dot_gray.png') repeat-x left calc(100% + 1px);
                 li {                                    
                     cursor: pointer;
                     font-size: 20px;
@@ -366,8 +395,20 @@
                 @include box_style;                
                 .turn_tabs {
                     .tab_area {                
-                        @include tabarea;                    
-                    }                
+                        @include tabarea;                                            
+                    }           
+                    .tab_content {
+                        position: relative;
+                        .tabs_info {
+                            position: absolute;
+                            right: 0;
+                            top: -42px;
+                            font-size: 12px;                            
+                            letter-spacing: -0.3px;
+                            text-align: right;
+                            color: #b1b9cb;
+                        }
+                    }                         
                 }
                 
             }
@@ -383,7 +424,7 @@
                     font-size: 16px;                    
                     letter-spacing: -0.4px;                    
                     color: #222;                    
-                    background: #eceff5 url('../img/icon_chartFill.svg') no-repeat 13px center;
+                    background: #eceff5 url('/img/icon_chartFill.svg') no-repeat 13px center;
                     strong {
                         color: #3655d6; 
                         font-weight: $f_sizeB;
@@ -395,37 +436,42 @@
                 }
             }
         }
-
                
-        margin-top: 45px;
+        margin-top: 15px;
         display: flex;        
-        justify-content: space-between;        
-
+        justify-content: space-between;     
+        
         // 신규상장
+        .newListing_table {
+            @include newListingTable_style;                                                                      
+        }
+
+        // 배당배력
+        .alloListing_table {
+            @include newListingTable_style;                                 
+        }
+
+        // 인기종목
         .hotListing_table {
-            @include newListingTable_style;                        
+            @include newListingTable_style;                    
 
             .attention_box {
                 position: relative;
-                padding-left: 12px;                
+                padding-left: 14px;                
                 .attention {
                     // 하트 크기
                     @mixin whpx {
-                        width: 6px;
-                        height: 6px;                        
+                        width: 8px;
+                        height: 8px;                        
                     }
                     background-color: #bfc8d6;
                     position: absolute;
-                    top: 10px;
+                    top: 8px;
                     left: 0;
-                    @include whpx;                    
-                    -webkit-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
-                    -webkit-animation-name: beat;
-                    animation-name: beat;
-                    -webkit-animation-duration: 1s;
-                    animation-duration: 1s;
-                    -webkit-animation-iteration-count: infinite;
+                    @include whpx;                                        
+                    transform: rotate(-45deg);                    
+                    animation-name: beat;                    
+                    animation-duration: 1s;                    
                     animation-iteration-count: infinite;
 
                     &:after {
@@ -435,7 +481,7 @@
                         position: absolute;
                         @include whpx;                    
                         top: 0px;
-                        left: 3px;
+                        left: 4px;
                     }
 
                     &:before {
@@ -444,7 +490,7 @@
                         border-radius: 50%;
                         position: absolute;
                         @include whpx;                    
-                        top: -3px;
+                        top: -4px;
                         left: 0px;
                     }
 
@@ -455,15 +501,11 @@
                     }
                 }
             }
+            td.txt_L {
+                text-align: left;
+            }
         }
-        // 배당배력
-        .alloListing_table {
-            @include newListingTable_style;                                                     
-        }
-        // 주당배당금
-        .newListing_table {
-            @include newListingTable_style;                        
-        }
+        
         // 턴어라운드
         .turnListing_table {
             @include newListingTable_style;                        
@@ -480,6 +522,35 @@
                     }                    
                 }   
             }    
+        }
+
+        .new_tabs {                        
+            tbody {
+                td {                    
+                    padding: 0 12px;
+                    box-sizing: border-box;
+                    text-align: right;                
+                    &:nth-child(1) {
+                        padding: 5px 0;
+                    }
+                    &:nth-child(2) {
+                        padding: 5px 0;
+                        padding-right: 30px;                                                
+                        display: flex;                        
+                        justify-content: flex-start;
+                        gap: 5px;
+                        align-items: flex-end;
+
+                        .price {                            
+                            min-width: 100px;                            
+                        }
+                        .per {                            
+                            text-align: left;
+                            width: auto;
+                        }
+                    }
+                }            
+            }  
         }
 
         // MRI
@@ -502,7 +573,7 @@
 
         // PER
         .perListing_table {
-            @include newListingTable_style;                          
+            @include newListingTable_style;                       
             float: left;
             width: calc(100% / 2 - 20px);                        
 
@@ -513,6 +584,13 @@
             }  
             tbody {
                 td {
+                    &.txt_c {
+                        font-size: 14px;
+                        padding: 0 2px;
+                        .price {
+                            font-size: 14px;                            
+                        }
+                    }
                     &.name {                        
                         width: 110px;
                         max-width: 110px;                                                    
@@ -546,8 +624,8 @@
         }
     }
 
-    // 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트
-    .btm_layBox {
+    // 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트, 최신 실적 재무데이터
+    .btm_layBox {        
         clear: both;
         position: relative;
         margin-top: 55px;
@@ -559,11 +637,11 @@
             clear: both;
         }
         
-        // 업종별 재무비율, 마켓차트
+        // 업종별 재무비율, 마켓차트, 최신 실적 재무데이터
         .left {            
             min-height: 100px;
             float: left;            
-            width: calc(100% - 254px - 26px);
+            width: calc(100% - 254px - 26px);            
             // 업종별 재무비율
             .ratio_box {                
                 margin-bottom: 55px;
@@ -578,12 +656,12 @@
                     .table_update {
                         position: absolute;
                         right: 0;
-                        top: 13px;
-                        display: block;            
-                        font-size: 10px;
-                        letter-spacing: -0.25px;
+                        top: 10px;
+                        font-size: 12px;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
                         text-align: right;
-                        color: #b1b9cb;            
+                        color: #b1b9cb;              
                     } 
                     .table_div {                        
                         position: relative;
@@ -623,6 +701,8 @@
                                     letter-spacing: -0.35px;
                                     color: #656d7e;                                    
                                     padding: 5px 0;
+                                    padding-right: 5px;
+                                    box-sizing: border-box;
 
                                     &.name {                        
                                         width: 150px;
@@ -670,13 +750,24 @@
             // 마켓차트
             .market_box {                
                 // margin-top: 55px;
+                position: relative;
                 .title {
                     display: inline-block;
                     font-size: 20px;
                     font-weight: $f_sizeB;
                     letter-spacing: -0.5px;                    
                     color: #222;
-                }                   
+                }  
+                .table_update {
+                    position: absolute;
+                    right: 0;
+                    top: 13px;
+                    font-size: 12px;
+                    line-height: 2.5;
+                    letter-spacing: -0.3px;
+                    text-align: right;
+                    color: #b1b9cb;        
+                }                 
 
                 .chart_stand {
                     display: inline-block;                    
@@ -698,9 +789,285 @@
 
                 .line_swbox {
                     border-top: 2px solid #7389af;                    
-                    margin-top: 17px;
+                    margin-top: 15px;
                     .treemap_style {
-                        height: 555px;                        
+                        height: 555px;           
+                        text {                   
+                            font-size: 14px !important;                                     
+                            color: #fff !important;
+                            fill: #fff !important;
+                            font-weight: bold;
+                            text-shadow: none;
+                            tspan {                                
+                                stroke: none;                                                   
+                            }
+                            .highcharts-br {
+                                background-color: red;
+                            }
+                        }             
+                    }
+                }
+            }
+            // 최신 실적 재무데이터
+            .result_box {                
+                margin-top: 45px;                
+                // margin-bottom: 55px;
+                .title {
+                    font-size: 20px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;                    
+                    color: #3655d6;                    
+                }
+                .line_swbox {                    
+                    position: relative;                    
+                    .table_update {
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        font-size: 12px;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
+                        text-align: right;
+                        color: #b1b9cb;              
+                    } 
+                    .table_div {                        
+                        position: relative;
+                        float: left;
+                        width: calc(100% / 2 - 20px);                        
+                        
+                        &:last-child {                                                
+                            float: right;                            
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: -20px;                    
+                                top: 47px;
+                                width: 1px;
+                                height: 106px;                    
+                                background-color: #e7eaf2;                    
+                            }      
+                        }
+                        
+                        .table {                    
+                            width: 100%;
+                            th, td {
+                                padding: 9px 0 6px;
+                                background: none;                                
+                            }
+                            thead {
+                                th {
+                                    font-size: 12px;
+                                    font-weight: normal;                                    
+                                    letter-spacing: -0.3px;                                    
+                                    color: #b1b9cb;                                    
+                                }
+                            }
+                            tbody {
+                                td {                                                     
+                                    font-size: 14px;                                                                        
+                                    letter-spacing: -0.35px;
+                                    color: #656d7e;                                    
+                                    padding: 5px 0;
+
+                                    &.name {                        
+                                        width: 150px;
+                                        max-width: 150px;                                                   
+                                        a {
+                                            @include white-space;
+                                            display: table-cell;
+                                            width: 100%;
+                                            max-width: 150px;                                                    
+                                            padding-right: 20px;
+                                            box-sizing: border-box;
+                                            font-size: 14px;
+                                            font-weight: $f_sizeB;
+                                            letter-spacing: -0.35px;                                
+                                            color: #222;
+                                        }
+                                    }                                    
+                                }
+                            }                                                        
+                        } 
+                    }
+                    .result_boxswiper .swiper-wrapper .swiper-slide {                        
+                        border-top: 2px solid #7389af;
+                        border-bottom: 1px solid #bdc8d8;
+                        padding-bottom: 10px;
+                        margin-top: 15px;
+                    }
+                    .swiper-container-horizontal > .swiper-pagination-bullets {
+                        top: 6px;                        
+                        bottom: auto;
+                        text-align: left;
+                        padding-left: 185px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet {                        
+                        width: 10px;
+                        height: 10px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet-active {
+                        width: 30px;
+                        border-radius: 90px;
+                    }
+                    
+                }
+
+                // 최신 실적 재무데이터
+                .season_data {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 9px 0 0;                                 
+                    &::after {            
+                        content: "";
+                        display: table;
+                        table-layout: fixed;
+                        clear: both;
+                    }
+                    .season_table {        
+                        position: relative;                            
+                        width: 100%;                        
+                        box-sizing: border-box;                        
+                        &:nth-child(2) {
+                            margin-left: 30px;                            
+                        }
+                        &:first-child::after {
+                            content: '';
+                            position: absolute;                            
+                            right: -12px;
+                            bottom: 5px;
+                            width: 1px;                        
+                            height: 107px;                            
+                            background-color: #e7eaf2;
+                        }
+
+                        th, td {
+                            text-align: left;                
+                            vertical-align: middle;
+                            font-size: 16px;                    
+                            letter-spacing: -0.4px;                    
+                            color: #222;
+                            &.txt_c {
+                                text-align: center;
+                            }   
+                            &.txt_R {
+                                text-align: right;
+                            } 
+                        }
+                        thead {
+                            th {
+                                padding-bottom: 5px;
+                                font-size: 12px;                    
+                                letter-spacing: -0.3px;                    
+                                color: #b1b9cb;
+                            }
+                        }   
+                        tbody {
+                            td {
+                                padding: 5px 2px;
+                                font-size: 14px;                                
+                                &.dvsion {
+                                    display: inline-block;                                    
+                                    border-radius: 3px;
+                                    padding: 1px 5px;
+                                    // background-color: #d9e6ff;
+                                    background-color: red;
+                                    font-size: 10px;
+                                    font-weight: $f_sizeS;                            
+                                    letter-spacing: -0.5px;
+                                    text-align: center;
+                                    vertical-align: bottom;
+                                    color: #656d7e;                                                
+                                    &.result {
+                                        color: #fff;
+                                        background-color: #b1b9cb;                                
+                                    }                
+                                }
+                                &.name {               
+                                    padding-left: 10px;                                    
+                                    width: 80px;                                             
+                                    max-width: 80px;                                                    
+
+                                    a {
+                                        @include white-space;
+                                        display: table-cell;
+                                        width: 100%;
+                                        max-width: 95px;                                                    
+                                        padding-right: 20px;
+                                        box-sizing: border-box;
+                                        font-size: 14px;
+                                        font-weight: $f_sizeB;
+                                        letter-spacing: -0.4px;                                
+                                        color: #222;
+                                    }
+                                }                                
+                                &.up, &.down, &.same {                                    
+                                    text-align: right;
+                                    padding-right: 5px;
+                                    display: flex;
+                                    gap: 3px;
+                                    align-items: center;
+                                    
+                                    .price {
+                                        font-size: 14px;                                
+                                        letter-spacing: -0.4px;                                
+                                        color: #222;
+                                        min-width: 76px;
+                                    }                        
+                                    .per {
+                                        padding-left: 2px;                                
+                                        font-size: 12px;                                
+                                        letter-spacing: -0.3px;                                
+                                        color: #d30000;
+                                        text-align: left;
+                                        // width: 44px;   
+                                        width: auto;                                     
+                                    }
+                                }
+                                &.down {
+                                    .per {                            
+                                        color: #0052ff;
+                                    }                        
+                                }
+                                &.same {
+                                    .per {                            
+                                        padding-left: 5px;
+                                        color: #444;
+                                    }                        
+                                }
+                                &.cpson {
+                                    text-align: center;                            
+                                    font-size: 12px;                                                        
+                                    letter-spacing: -0.35px;
+                                    &.deficit {
+                                        color: #d30000;
+                                    }        
+                                    &.bk_check {
+                                        color: #0052ff;
+                                    }                    
+                                }
+                                &.trans {
+                                    text-align: center;
+                                    span {
+                                        display: inline-block;
+                                        padding: 1px 3px;
+                                        font-size: 12px;                            
+                                        letter-spacing: -0.5px;
+                                        text-align: center;
+                                        border-radius: 3px;                            
+                                    }
+                                    &.deficit {
+                                        span {                                            
+                                            color: #0052ff;
+                                        }                                        
+                                    }        
+                                    &.bk_check {
+                                        span {                                            
+                                            color: #d30000;
+                                        }
+                                    }           
+                                }                                
+                            }
+                        }
                     }
                 }
             }
@@ -716,15 +1083,15 @@
             // top: 0;
 
             // 상승종목, 하락종목
-            .updown_tabs {                
+            .updown_tabs {                 
                 .tab_area {
                     ul {
                         display: flex;                                      
-                        background: url('../img/dot_gray.png') repeat-x left bottom;
+                        background: url('/img/dot_gray.png') repeat-x left bottom;
                         li {                
                             flex: 1;
                             cursor: pointer;                            
-                            padding: 7px 0 10px;
+                            padding: 7px 0 8px;
                             text-align: center;                                      
                             font-size: 18px;                            
                             letter-spacing: -0.45px;                            
@@ -737,7 +1104,7 @@
                                     height: 22px;
                                     padding: 3px 3px;
                                     box-sizing: border-box;                                
-                                    background: url('../img/tabcon_up.svg') no-repeat center bottom;                                                                    
+                                    background: url('/img/tabcon_up.svg') no-repeat center bottom;                                                                    
                                     filter: grayscale(100%);
                                 }
                                 &.active {                   
@@ -757,7 +1124,7 @@
                                     height: 22px;
                                     padding: 3px 3px;
                                     box-sizing: border-box;                                
-                                    background: url('../img/tabcon_down.svg') no-repeat center bottom;                                                                    
+                                    background: url('/img/tabcon_down.svg') no-repeat center bottom;                                                                    
                                     background-size: 12px 13px;
                                     filter: grayscale(100%);
                                 }
@@ -792,17 +1159,26 @@
                             color: #656d7e;
                         }
                         
-                        .up, .down {
+                        .up, .down {                            
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 3px;
                             .price {
                                 font-size: 14px;                                
                                 letter-spacing: -0.35px;                                
                                 color: #656d7e;
+                                min-width: 50px;
+                                text-align: right;
                             }                        
                             .per {
+                                display: inline-block;                                
+                                box-sizing: border-box;                                
                                 padding-left: 2px;
-                                font-size: 10px;                            
+                                font-size: 12px;                            
                                 letter-spacing: -0.25px;
                                 color: #d30000;
+                                min-width: 50px;
                             }
                         }
                         .down {
@@ -882,6 +1258,11 @@
                                 color: #0052ff;
                             }                    
                         }
+                        &.same {
+                            .per {                                            
+                                color: #222;
+                            }                    
+                        }
                     }
                 }
 
@@ -889,6 +1270,7 @@
                     border-top: 1px solid #dbdfed;                    
                     padding: 10px 0 0;
                     margin: 0 15px;
+                    
                     .perListing_table {
                         width: 100%;                
                         th, td {
@@ -916,24 +1298,25 @@
                     }                    
                 }
             }            
-
         }
-
     }    
 
     // 하단 배너    
     .btm_banner {
         background-color: #dbdfed;
-        margin-top: 30px;
+        // margin-top: 60px;
         a, img {
             display: inline-block;
             width: 100%;
             height: 100%;
         }
     }
+    .left .btm_banner {            
+        margin-top: 20px;      
+    }
 
     // 메인 시즌
-    .resultdata_area {
+    .resultdata_area {                
         margin-top: 25px;
         margin-bottom: 65px;
         background-color: #fff;
@@ -960,7 +1343,7 @@
                         top: 0;
                         width: 83px;
                         height: 100%;
-                        background: $colpmr url('../img/bg_filechart.svg') no-repeat center center;
+                        background: $colpmr url('/img/bg_filechart.svg') no-repeat center center;
                     }
                 }
                 
@@ -1027,48 +1410,45 @@
 
         // 실적 재무데이터 업데이트 테이블
         .season_data {
-            padding: 25px 30px;                
-            &::after {            
-                content: "";
-                display: table;
-                table-layout: fixed;
-                clear: both;
-            }
-            .season_table {        
+            padding: 25px 30px;                            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            
+            .season_table { 
+                flex: 1 1 40%;                                           
                 position: relative;    
-                width: calc(50% - 2.5%);                            
+                width: 100%;
+                max-width: calc(50% - 30px);
                 box-sizing: border-box;
 
-                &:nth-child(3),
-                &:nth-child(4) {
-                    margin-top: 60px;                    
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: -30px;
+                    width: 100%;
+                    height: 1px;
+                    border-top: 1px solid #e7eaf2;
+                }
+
+                thead {                    
+                    visibility: collapse;                    
+                } 
+
+                &:nth-child(1),
+                &:nth-child(2) {          
                     &::before {
-                        content: '';
-                        display: inline-block;
-                        position: absolute;
-                        left: 0;
-                        top: -30px;
-                        width: 100%;
-                        height: 1px;
-                        border-top: 1px solid #e7eaf2;
+                        display: none;
                     }
                     thead {                    
-                        visibility: collapse;
+                        visibility: visible;
                         th, td {
                             padding: 0;                        
                             height: 0;
                         }                    
                     }  
-                }
-
-                &:nth-child(1),
-                &:nth-child(3) {                    
-                    float: left;
-                }
-                &:nth-child(2),
-                &:nth-child(4)  {                    
-                    float: left;
-                    margin-left: 5%;
                 }
 
                 th, td {
@@ -1080,6 +1460,10 @@
                     &.txt_c {
                         text-align: center;
                     }   
+                    &.txt_R {
+                        text-align: right;
+                        padding-right: 10px;
+                    } 
                 }
                 thead {
                     th {
@@ -1093,8 +1477,7 @@
                     td {
                         padding: 5px 0;
                         &.dvsion {
-                            display: inline-block;
-                            vertical-align: sub;
+                            display: inline-block;                            
                             border-radius: 3px;
                             padding: 1px 5px;
                             background-color: #d9e6ff;
@@ -1103,6 +1486,8 @@
                             letter-spacing: -0.5px;
                             text-align: center;
                             color: #656d7e;            
+                            position: relative;
+                            top: -2px;
                             &.import { 
 
                             }                
@@ -1128,22 +1513,38 @@
                                 color: #222;
                             }
                         }
-                        &.up, &.down {
+                        &.up, &.down, &.same {                                                        
+                            padding-right: 5px;                            
+                            display: flex;                            
+                            align-items: center;
+                            gap: 3px;
+
                             .price {
+                                flex: 1;
                                 font-size: 16px;                                
                                 letter-spacing: -0.4px;                                
                                 color: #222;
+                                text-align: right;                                
+                                min-width: 72px;
                             }                        
                             .per {
+                                flex: 1;
                                 padding-left: 2px;                                
                                 font-size: 12px;                                
                                 letter-spacing: -0.3px;                                
                                 color: #d30000;
+                                text-align: left;
                             }
                         }
                         &.down {
                             .per {                            
                                 color: #0052ff;
+                            }                        
+                        }
+                        &.same {
+                            .per {           
+                                padding-left: 5px;                 
+                                color: #444;
                             }                        
                         }
                         &.cpson {
@@ -1169,17 +1570,15 @@
                             }
                             &.deficit {
                                 span {
-                                    border: 1px solid #d30000;
-                                    color: #d30000;
-                                }
-                                
-                            }        
-                            &.bk_check {
-                                span {
                                     border: 1px solid #1e51f5;
                                     color: #0052ff;
                                 }
-                                
+                            }        
+                            &.bk_check {
+                                span {
+                                    border: 1px solid #d30000;
+                                    color: #d30000;
+                                }                               
                             }      
                                           
                         }
@@ -1188,6 +1587,9 @@
             }
 
         }
-    }
 
+        & + .indices_area + .btm_layBox {
+            margin-top: 0;        
+        }
+    }
 }

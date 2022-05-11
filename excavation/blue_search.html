@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>밸류라인 : 현명한 투자자를 위한 최고의 선택</title>
+    <title>삼성전자(005930) - 손익계산서 | 밸류라인</title>
     <meta name="robots" content="밸류라인 : 현명한 투자자를 위한 최고의 선택">
     <meta name="description" content="밸류라인 content">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,6 +47,7 @@
     <!-- js -->
     <script src="../js/header.js"></script>
     <script src="../js/vline.js"></script>
+    
 </head>
 
 <body class="valueline">
@@ -125,10 +126,10 @@
                 
                 <div class="sub_nav">
                     <ul class="depth_1">
-                        <li class="active"><span class="title"><a href="blue_stocks.html">우량주</a></span></li>
+                        <li class="active"><span class="title"><a href="blue_stocks.html">종목진단(주식MRI)</a></span></li>
                         <li><span class="title"><a href="ex_turnaround.html">턴 어라운드</a></span></li>
                         <li class=""><span class="title"><a href="result.html">실적분석</a></span></li>
-                        <li><span class="title"><a href="shopping.html">마이쇼핑</a></span></li>
+                        <li><span class="title"><a href="shopping.html">종목쇼핑</a></span></li>
                         <li class=""><span class="title open"><a href="pattern.html">BIC 차트 패턴</a></span>
                             <ul class="depth_2">
                                 <li class=""><a href="">이익증가 미반영</a></li>
@@ -142,8 +143,8 @@
                 <div class="service_box">
                     <ul>
                         <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="">업데이트 소식</a></li>
-                        <li class="question"><a href="">카카오톡 문의</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502" target="_black">업데이트 소식</a></li>
+                        <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
                 </div>
                 <!-- //service_box -->
@@ -156,14 +157,14 @@
                 <div class="path_area">
                     <ul>
                         <li>종목발굴</li>
-                        <li>우량주</li>
+                        <li>종목진단(주식MRI)</li>
                     </ul>
                 </div>
 
                 <div class="blue_stocks_area">
                     <div class="left">
                         <ul>
-                            <li class="active"><a href="#">우량주</a></li>
+                            <li class="active"><a href="#">종목진단(주식MRI)</a></li>
                         </ul>
                         <div class="blue_stocks">
                             <div class="name">삼성전자</div>
@@ -171,8 +172,8 @@
                     </div>
                     
                     <div class="stocks_filter">
-                        <span class="path">10년 재무제표</span>
-                        <span class="path">수익성, 안정성 차트</span>                        
+                        <a href="../analysis/bill.html" class="path">10년 재무제표</a>
+                        <a href="../analysis/bic.html" class="path">수익성, 안정성 차트</a>                        
                         <form action="" class="form_box">
                             <fieldset>
                                 <input type="text" placeholder="다른 종목 보기" class="searchInput">
@@ -180,32 +181,204 @@
                             </fieldset>
                         </form>                                                    
                         <!-- //form_box -->
+                        <!-- 검색어 자동완성 -->
+                        <div class="AutoComplete_indu">
+                            <!-- //자동완성 결과 노출 class : _show -->
+                            <ul id="autocomplete_list_indu">
+                                <li><a href="#" class="_on">
+                                        <span class="schCode">207940</span>
+                                        <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                    </a></li>
+                                <li><a href="#" class="_on">
+                                        <span class="schCode">207940</span>
+                                        <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                    </a></li>
+                                <li><a href="#" class="_on">
+                                        <span class="schCode">207940</span>
+                                        <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                    </a></li>
+                                <li><a href="#" class="_on">
+                                        <span class="schCode">207940</span>
+                                        <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                    </a></li>
+                                <li><a href="#" class="_on">
+                                        <span class="schCode">207940</span>
+                                        <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                                    </a></li>
+                            </ul>
+                            <div class="no_result" style="display: none;">
+                                <p>"<strong></strong>"에 대한 검색결과가 없습니다.</p>
+                            </div>
+                            <!--<ul>
+                                <li>
+                                    <a href="">
+                                        <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
+                                    </a>
+                                </li>
+                            </ul>-->
+                        </div>
+                        <!-- //AutoComplete 검색어 자동완성 끝 -->
+
                     </div>                    
                     <!-- //stocks_filter -->
                 </div>
                 <!-- //blue_stocks_area -->
 
+                <!-- 재무분석 -->
                 <div class="contents sub_con">
-                    <div class="excavation_area mri_chartbox">
+                    <div class="analysis mri_chartbox">
                         <div class="top_spider">
                             <div class="left">
-                                <div id="containercharm_test" class="containercharm1"></div>
+                                <div id="MRIchart_analy01" class="MRIchart_style"></div>
                             </div>
                             <!-- //left -->
                             <div class="right">
-                                <h2>투자매력</h2>
+                                <div class="chart_area diagnosis">
+                                    <div class="chartData">
+                                        <dl>
+                                            <dt class="charm">진단점수
+                                                <span class="txt_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>                                                
+                                                <div class="guide_box">
+                                                    <span class="clse">닫기</span>   
+                                                    <p class="txt"><strong>종목진단 점수</strong>는 해당 종목의 우량주 여부를 판단하는데 도움을 드립니다.</p>
+                                                    <p class="txt">10년 이상의 금융 빅데이터에서 우량주 발굴을 위해 22개 요인(Factor)을 종목별로 분석하고, 동종업종내 경쟁사와 비교합니다.</p>
+                                                    <ul>
+                                                        <li class="list_txt">종목진단 점수는 높을수록 매력적인 기업이며, 15점(상위 20%) 이상이면 우량 기업으로 판단합니다.</li>
+                                                        <li class="list_txt">종목진단 세부 항목인 밸류에이션, 독점력, 안전성, 현금창출력, 미래성장성으로 별점(★) 5점 만점에 3점 이상이면 각 항목을 통과한 것으로 판단합니다.</li>
+                                                        <li class="list_txt">세부 항목 평가에서 별점 0~1점을 받았다면 위험 요인으로, 투자 판단시 유의해서 봐야 합니다.</li>                                                                                                
+                                                    </ul>
+                                                </div>
+                                            </dt>
+                                            <dd class="charm_num"><strong>17</strong> / 25점</dd>
+                                            <dd class="charm">전월대비 <strong>+5</strong></dd>
+                                        </dl>
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="difference">
+                                        <p class="dt">전체 <strong>356</strong>위, 상위 <strong>15%</strong></p>
+                                        <span class="dd">(2,277개 평가기업 중)</span>
+                                        <p class="dt">동일업종 21위, 상위 20%</p>
+                                        <span class="dd">(업종 - 화학)</span>
+                                    </div>
+                                    <!-- //difference -->
+
+                                    <div class="data_attainment">
+                                        <ul>
+                                            <li>PER<span>27.80</span><b>배</b></li>
+                                            <li>PBR<span>27.80</span><b>배</b></li>
+                                            <li>ROE<span>27.80</span><b>%</b></li>
+                                            <li>DY<span>27.80</span><b>%</b></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="chart_table">
+                                    <table cellspacing="0" border="1" class="tableRanking table_alloca">
+                                        <tbody>
+                                            <tr>
+                                                <td class="title">
+                                                    <span>밸류에이션</span>
+                                                </td>
+                                                <td>
+                                                    <div class="star_area w12">
+                                                        <div class="starRev">
+                                                            <span class="starR on">별1</span>
+                                                            <!-- class = starR on 인 경우 별표시-->
+                                                            <span class="starR half">별2</span>
+                                                            <span class="starR">별3</span>
+                                                            <span class="starR">별4</span>
+                                                            <span class="starR">별5</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //star_area -->
+                                                </td>
+                                                <td class="title">
+                                                    <span>독점력</span>
+                                                </td>
+                                                <td>
+                                                    <div class="star_area w12">
+                                                        <div class="starRev">
+                                                            <span class="starR on">별1</span>
+                                                            <!-- class = starR on 인 경우 별표시-->
+                                                            <span class="starR half">별2</span>
+                                                            <span class="starR">별3</span>
+                                                            <span class="starR">별4</span>
+                                                            <span class="starR">별5</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //star_area -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">
+                                                    <span>성장성</span>
+                                                </td>
+                                                <td>
+                                                    <div class="star_area w12">
+                                                        <div class="starRev">
+                                                            <span class="starR on">별1</span>
+                                                            <!-- class = starR on 인 경우 별표시-->
+                                                            <span class="starR half">별2</span>
+                                                            <span class="starR">별3</span>
+                                                            <span class="starR">별4</span>
+                                                            <span class="starR">별5</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //star_area -->
+                                                </td>
+                                                <td class="title">
+                                                    <span>안전성</span>
+                                                </td>
+                                                <td>
+                                                    <div class="star_area w12">
+                                                        <div class="starRev">
+                                                            <span class="starR on">별1</span>
+                                                            <!-- class = starR on 인 경우 별표시-->
+                                                            <span class="starR on">별2</span>
+                                                            <span class="starR half">별3</span>
+                                                            <span class="starR">별4</span>
+                                                            <span class="starR">별5</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //star_area -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">
+                                                    <span>현금창출</span>
+                                                </td>
+                                                <td>
+                                                    <div class="star_area w12">
+                                                        <div class="starRev">
+                                                            <span class="starR on">별1</span>
+                                                            <!-- class = starR on 인 경우 별표시-->
+                                                            <span class="starR half">별2</span>
+                                                            <span class="starR">별3</span>
+                                                            <span class="starR">별4</span>
+                                                            <span class="starR">별5</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //star_area -->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //chart_table -->
+
                             </div>
                             <!-- //right -->
                         </div>
 
                         <div class="mid_column">
-                            <h2 class="report_title">우량주 분석 결과 보고서</h2>
+                            <h2 class="report_title">종목진단 결과 보고서</h2>
                             <div class="con">
                                 <div class="left">
                                     <div class="alloca_star">
                                         <div class="alloca_box">
                                             <div class="small_star">
-                                                <h2 class="title">미래성장성</h2>
+                                                <h2 class="title">밸류에이션</h2>
                                                 <div class="star_area">
                                                     <div class="starRev">
                                                         <span class="starR on">별1</span>
@@ -215,6 +388,7 @@
                                                         <span class="starR">별1</span>
                                                     </div>
                                                 </div>
+                                                <span class="leader_num">상위 12.24%</span>
                                             </div>
                                         </div>
                                         <!-- //alloca_box -->
@@ -259,7 +433,18 @@
                                 </div>
                                 <!-- //left -->
                                 <div class="right">
-                                    <div id="containerfinancials1_1" class="containerfinancials1"></div>                                    
+                                    <div id="containerfinancials1_1" class="containerfinancials1"></div>
+                                    <script></script><script></script><script></script>
+                                    <script></script>
+                                    <div id="containerfinancials1_2" class="containerfinancials1"></div>
+                                    <div id="containerfinancials1_3" class="containerfinancials1"></div>
+                                    <div id="containerfinancials1_4" class="containerfinancials1"></div>
+                                    <div id="containerfinancials1_5" class="containerfinancials1"></div>
+                                    <ul class="chart_legend">
+                                        <li><span><i></i>종목</span></li>
+                                        <li><span><i></i>업종평균</span></li>
+                                        <li><span><i></i>전체평균</span></li>
+                                    </ul>
                                 </div>
                                 <!-- //right -->
                             </div>
@@ -268,7 +453,7 @@
                                     <div class="alloca_star">
                                         <div class="alloca_box">
                                             <div class="small_star">
-                                                <h2 class="title">사업독점력</h2>
+                                                <h2 class="title">독점력</h2>
                                                 <div class="star_area">
                                                     <div class="starRev">
                                                         <span class="starR on">별1</span>
@@ -278,6 +463,7 @@
                                                         <span class="starR">별1</span>
                                                     </div>
                                                 </div>
+                                                <span class="leader_num">상위 12.24%</span>
                                             </div>
                                         </div>
                                         <!-- //alloca_box -->
@@ -322,7 +508,14 @@
                                 </div>
                                 <!-- //left -->
                                 <div class="right">
-                                    <div id="containerfinancials1_2" class="containerfinancials1"></div>                                    
+                                    <div id="containerfinancials2_1" class="containerfinancials1"></div>
+                                    <div id="containerfinancials2_2" class="containerfinancials1"></div>
+                                    <div id="containerfinancials2_3" class="containerfinancials1"></div>
+                                    <ul class="chart_legend">
+                                        <li><span><i></i>종목</span></li>
+                                        <li><span><i></i>업종평균</span></li>
+                                        <li><span><i></i>전체평균</span></li>
+                                    </ul>
                                 </div>
                                 <!-- //right -->
                             </div>
@@ -331,7 +524,7 @@
                                     <div class="alloca_star">
                                         <div class="alloca_box">
                                             <div class="small_star">
-                                                <h2 class="title">재무안전성</h2>
+                                                <h2 class="title">성장성</h2>
                                                 <div class="star_area">
                                                     <div class="starRev">
                                                         <span class="starR on">별1</span>
@@ -341,6 +534,7 @@
                                                         <span class="starR">별1</span>
                                                     </div>
                                                 </div>
+                                                <span class="leader_num">상위 12.24%</span>
                                             </div>
                                         </div>
                                         <!-- //alloca_box -->
@@ -385,19 +579,164 @@
                                 </div>
                                 <!-- //left -->
                                 <div class="right">
-                                    <div id="containerfinancials1_3" class="containerfinancials1"></div>                                    
+                                    <div id="containerfinancials3_1" class="containerfinancials1"></div>
+                                    <ul class="chart_legend">
+                                        <li><span><i></i>종목</span></li>
+                                        <li><span><i></i>업종평균</span></li>
+                                        <li><span><i></i>전체평균</span></li>
+                                    </ul>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <div class="con">
+                                <div class="left">
+                                    <div class="alloca_star">
+                                        <div class="alloca_box">
+                                            <div class="small_star">
+                                                <h2 class="title">안전성</h2>
+                                                <div class="star_area">
+                                                    <div class="starRev">
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR half">별1</span>
+                                                        <span class="starR">별1</span>
+                                                    </div>
+                                                </div>
+                                                <span class="leader_num">상위 12.24%</span>
+                                            </div>
+                                        </div>
+                                        <!-- //alloca_box -->
+
+                                        <div class="alloca_box">
+                                            <div class="small_star">
+                                                <h2 class="title">동일업종 평균</h2>
+                                                <div class="star_area">
+                                                    <div class="starRev">
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR half">별1</span>
+                                                        <span class="starR">별1</span>
+                                                        <span class="starR">별1</span>
+                                                        <span class="starR">별1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //alloca_box -->
+
+                                        <div class="alloca_box">
+                                            <div class="small_star">
+                                                <h2 class="title">전체기업 평균</h2>
+                                                <div class="star_area">
+                                                    <div class="starRev">
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR">별1</span>
+                                                        <span class="starR">별1</span>
+                                                    </div>
+                                                </div>
+                                                <!-- //star_area -->
+                                            </div>
+                                        </div>
+                                        <!-- //alloca_box -->
+                                        <p class="txt">미래성장성이 평균 이상인 기업입니다. 미래 성장률이 작년의 매출과 이익성장률 보다 높게 나타나면 향후 성장성 평가에서
+                                            더 높은 점수를 받을 수 있어 성장주 후보군에 속합니다. 다만, 이 기업은 향후 매출액과 영업이익 성장률이 상승 또는 하락하고 있는지
+                                            추세를 확인하는 것이 중요합니다. 미래성장성은 과거 실적과 향후 예상 실적을 추정해 종합적으로 평가합니다.</p>
+                                    </div>
+                                    <!-- //alloca_star -->
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <div id="containerfinancials4_1" class="containerfinancials1"></div>
+                                    <div id="containerfinancials4_2" class="containerfinancials1"></div>
+                                    <ul class="chart_legend">
+                                        <li><span><i></i>종목</span></li>
+                                        <li><span><i></i>업종평균</span></li>
+                                        <li><span><i></i>전체평균</span></li>
+                                    </ul>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <div class="con">
+                                <div class="left">
+                                    <div class="alloca_star">
+                                        <div class="alloca_box">
+                                            <div class="small_star">
+                                                <h2 class="title">현금창출</h2>
+                                                <div class="star_area">
+                                                    <div class="starRev">
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR half">별1</span>
+                                                        <span class="starR">별1</span>
+                                                    </div>
+                                                </div>
+                                                <span class="leader_num">상위 12.24%</span>
+                                            </div>
+                                        </div>
+                                        <!-- //alloca_box -->
+
+                                        <div class="alloca_box">
+                                            <div class="small_star">
+                                                <h2 class="title">동일업종 평균</h2>
+                                                <div class="star_area">
+                                                    <div class="starRev">
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR half">별1</span>
+                                                        <span class="starR">별1</span>
+                                                        <span class="starR">별1</span>
+                                                        <span class="starR">별1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //alloca_box -->
+
+                                        <div class="alloca_box">
+                                            <div class="small_star">
+                                                <h2 class="title">전체기업 평균</h2>
+                                                <div class="star_area">
+                                                    <div class="starRev">
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR on">별1</span>
+                                                        <span class="starR">별1</span>
+                                                        <span class="starR">별1</span>
+                                                    </div>
+                                                </div>
+                                                <!-- //star_area -->
+                                            </div>
+                                        </div>
+                                        <!-- //alloca_box -->
+                                        <p class="txt">미래성장성이 평균 이상인 기업입니다. 미래 성장률이 작년의 매출과 이익성장률 보다 높게 나타나면 향후 성장성 평가에서
+                                            더 높은 점수를 받을 수 있어 성장주 후보군에 속합니다. 다만, 이 기업은 향후 매출액과 영업이익 성장률이 상승 또는 하락하고 있는지
+                                            추세를 확인하는 것이 중요합니다. 미래성장성은 과거 실적과 향후 예상 실적을 추정해 종합적으로 평가합니다.</p>
+                                    </div>
+                                    <!-- //alloca_star -->
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <div id="containerfinancials5_1" class="containerfinancials1"></div>
+                                    <div id="containerfinancials5_2" class="containerfinancials1"></div>
+                                    <ul class="chart_legend">
+                                        <li><span><i></i>종목</span></li>
+                                        <li><span><i></i>업종평균</span></li>
+                                        <li><span><i></i>전체평균</span></li>
+                                    </ul>
                                 </div>
                                 <!-- //right -->
                             </div>
                         </div>
 
                     </div>
-                    <!-- //excavation_area -->                    
+                    <!-- //mri_chartbox -->
                 </div>
             </div>
         </div>
         <!-- //container -->
-
+        
         <div id="footer" class="f_main">
             <div class="w_box">
                 <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>

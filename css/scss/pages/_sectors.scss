@@ -16,26 +16,27 @@
 
     .thead2_table {           
         td.bdr_r {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background: #fff url("../img/gray_tdline.gif") repeat-y right top;
-            }            
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }             
         }
 
         th, td {
             padding: 8.5px 12px;
         }        
         thead {    
-            background: #fff url('../img/gray_thline.gif') repeat-x left top;                    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
             tr:first-child {
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: 60px;
                         &::before {
@@ -48,7 +49,7 @@
             tr:nth-child(2) {
                 th, td {
                     padding: 4px 3px;
-                    background: #fff url('../img/gray_tdline.gif') repeat-x left top !important;        
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
                 }                                    
             }         
             
@@ -63,13 +64,13 @@
         tbody {
             tr:first-child {
                 th, td {
-                    background-image: url('../img/gray_thline.gif');
+                    background-image: url('/img/gray_thline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
                 }                    
             }  
             th, td {                
-                background-image: url('../img/gray_tdline.gif');
+                background-image: url('/img/gray_tdline.gif');
                 background-position: left top;
                 background-repeat: repeat-x;                    
                 height: 34px;                
@@ -89,20 +90,36 @@
                 &.txt_name {                    
                     a {
                         color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
                     }                                        
                 } 
             }                      
             tr:last-child {
                 border-bottom: 1px solid #e7eaf2;
-            }
-            
+            }            
         }        
-    }
-           
+    }           
 
     .tab_content  {
-        .containerscatter1 {
-                        
+        .scatterchart_style {
+            .highcharts-axis text {                                
+                color: #656d7e !important;                
+                font-size: 13px !important;
+                fill: #656d7e !important;
+                font-weight: $f_sizeB;
+            }                        
+        }
+    }
+
+    &.matrix {
+        h2 {            
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.45px;            
+            color: #656d7e;
+            padding-bottom: 30px;
         }
     }
     
@@ -193,18 +210,18 @@
             display: inline-block;
             width: 56px;
             .ascend, .descend {
-                cursor: pointer;
+                // cursor: pointer;
                 display: inline-block;
                 width: 24px;            
-                i {
-                    vertical-align: middle;
-                    margin-left: 2px;
-                    display: inline-block;
-                    width: 0;
-                    height: 0;                
-                    border-left: 3px solid transparent;
-                    border-right: 3px solid transparent;
-                }            
+                // i {
+                //     vertical-align: middle;
+                //     margin-left: 2px;
+                //     display: inline-block;
+                //     width: 0;
+                //     height: 0;                
+                //     border-left: 3px solid transparent;
+                //     border-right: 3px solid transparent;
+                // }            
             }
             .ascend {
                 margin-right: 3px;
@@ -221,16 +238,17 @@
         border-top: none;       
         border-top: 2px solid $colpmr;           
         td.bdr_r {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background: #fff url("../img/gray_tdline.gif") repeat-y right top;
-            }            
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }           
         }
 
         thead {    
@@ -241,7 +259,7 @@
             }            
             tr:first-child {                                
                 th, td {
-                    background: #fff url('../img/gray_thline.gif') repeat-x left top;        
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
                         height: auto;
                         &::before {
@@ -286,12 +304,12 @@
                 }             
             }       
             
-            tr:nth-child(3) {          
-                                
+            tr:nth-child(3) {                                          
                 td {
-                    background-image: url('../img/gray_tdline.gif');
+                    background-image: url('/img/gray_tdline.gif');
                     background-position: left top;
                     background-repeat: repeat-x;                    
+                    background-color: #fff;
                 }             
             }   
         }
@@ -307,13 +325,16 @@
                     padding:8.5px 12px 8.5px 7px;                                  
                     a {
                         color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
                     }                                        
                 }        
                 .check {
                     display: inline-block;
                     width: 16px;
                     height: 12px;                    
-                    background: url('../img/icon_check.svg') no-repeat 0 0;
+                    background: url('/img/icon_check.svg') no-repeat 0 0;
                 }             
             }            
         }

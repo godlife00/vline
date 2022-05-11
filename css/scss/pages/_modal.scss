@@ -12,6 +12,15 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     background-color: #fff;
 
+    &.win_pop {                
+        display: block !important;
+        z-index: 81;
+        box-shadow: none;        
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+
     .pop_header {
         width: calc(100% - 64px);
         margin: 0 auto;
@@ -87,7 +96,7 @@
                                 top: 3px;
                                 width: 22px;                            
                                 height: 22px;
-                                background: url('../img/sns_n.svg') no-repeat 0 0;    
+                                background: url('/img/sns_n.svg') no-repeat 0 0;    
                             }     
                         }                        
                         
@@ -96,7 +105,7 @@
                             span {                                
                                 color: #fff;
                                 &::before {                                    
-                                    background: url('../img/sns_n.svg') no-repeat 0 0;                                
+                                    background: url('/img/sns_n.svg') no-repeat 0 0;                                
                                 }                        
                             }  
                         }
@@ -106,7 +115,7 @@
                             span {                                
                                 color: #333;
                                 &::before {                                    
-                                    background: url('../img/sns_k.svg') no-repeat 0 0;                                
+                                    background: url('/img/sns_k.svg') no-repeat 0 0;                                
                                 }                        
                             }  
                         }
@@ -123,7 +132,7 @@
         }        
 
         .pop_foot {
-            background-color: #f4f6fa;
+            background-color: #f5f6fa;
             padding: 27px 30px;
 
             .sub_title {
@@ -194,7 +203,7 @@
                     margin-top: 8px;
                     position: relative;
                     border-radius: 5px;
-                    background-color: #f4f6fa;
+                    background-color: #f5f6fa;
                     padding: 15px 85px 15px 36px;
                     box-sizing: border-box;
 
@@ -215,7 +224,7 @@
                             left: -21px;
                             width:14px;
                             height:14px;
-                            background: url('../img/icon_agreecheck.svg') no-repeat 100% 100%;
+                            background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
                             margin-right:7px;
                         }
                         &.active {
@@ -255,6 +264,148 @@
             }
         }        
     }
+    // 월자동결제 서비스 변경, 기간결제 해지/환불 팝업
+    &.login_form, &.refund {
+        .pop_header {
+            #now_time {
+                color: #939393;
+                font-size: 15px;
+                font-weight: normal;
+                padding-left: 25px;                
+            }            
+        }
+
+        .pop_con {
+            .pop_sum {
+                padding: 5px 0 15px;
+                color: #c22e06;
+                font-size: 15px;
+                text-align: center;
+                border-bottom: 1px solid #E0E4E9;
+                line-height: 1.4;                
+                strong {
+                    color: #c22e06;
+                    font-weight: $f_sizeB;;
+                }
+            }
+            padding: 10px 15px 20px;        
+            .mapage_form {
+                padding-top: 10px;
+                .form_table {
+                    table {                        
+                        th, td {
+                            padding: 7px 0;
+                            text-align: left;                            
+                            font-size: 14px;
+                            font-weight: $f_sizeB;                
+                            letter-spacing: -0.65px;                
+                            color: #898989;
+                        }
+                        tr {
+                            border-bottom: 1px solid #e5e5e5;
+                        }                        
+                        th {                            
+                            font-weight: normal;
+                        }
+                        .item {
+                            padding-left: 25px;        
+                            .txt_info {
+                                strong {
+                                    color: #c22e06;
+                                }                                
+                            }                    
+                        }
+                        .certification_area {
+                            overflow: auto;
+                            max-height: 180px;
+                            background: #f5f5f5;
+                            border-radius: 5px;
+                            margin-top: 10px;
+                            margin-left: -90px;                            
+                            padding: 15px 15px;
+                            box-sizing: border-box;                            
+                            .service_title {
+                                display: block;;
+                                padding-bottom: 5px;
+                                font-size: 14px;                              
+                            }                            
+                            .txt {
+                                color: #575757;
+                            }
+                            .go_link {
+                                margin-top: 5px;
+                                display: block;
+                                text-decoration: underline;             
+                                color: $collonk;                   
+                                text-align: right;
+                            }
+                        }
+                        .tr_num {
+                            border: none;
+                            font-size: 16px;
+                            letter-spacing: -0.8px;
+                            color: #333;
+                            background-color: #f5f5f5;
+                            padding: 8px 13px;
+                            width: 100%;
+                            box-sizing: border-box;
+                            border-radius: 5px;  
+                            &:focus {
+                                border: none;
+                                outline: none;
+                            }                          
+                            &::placeholder {
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+                .label_chk {
+                    margin-top: 15px;
+                    font-size: 0.875rem;
+                    letter-spacing: -0.7px;                    
+                    color: #222;                    
+                }
+                .label_chk i {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 18px;
+                    height: 18px;
+                    background: url('/img/icon_agreecheck.svg') no-repeat 100% 0;
+                    margin-right: 7px;
+                }
+                .label_chk.active i {                                        
+                    background-position: 0 0;
+                }                
+                .btnArea.edtBtn {                    
+                    @include one_btn;
+                    border: none;
+                    margin-top: 20px;                    
+                    border-radius: 5px;                                        
+                    margin-top: 40px;
+                    background-color: #7389af;
+                    color: #fff;
+                    font-weight: normal;
+                    
+                    a {
+                        font-size: 0.9375rem;
+                        letter-spacing: -0.38px;
+                        color: #fff;
+                        border: none;
+                    }                                        
+                }
+            }            
+        }    
+        .btnArea.edtBtn {
+            @include one_btn;
+            background-color: #c22e06;
+            border: none;
+            margin-top: 15px;            
+            a {
+                color: #fff;                
+            }            
+        }    
+    }
 
     // 초이스스탁 통합회원 로그인 스탭3
     &.sign_complete {
@@ -275,7 +426,7 @@
                 }
 
                 .prm_guide {
-                    background-color: #f4f6fa;                   
+                    background-color: #f5f6fa;                   
                     padding: 29px 31px;
                         .title {
                             font-size: 16px;
@@ -344,7 +495,7 @@
         .pop_header {
             padding: 25px 30px 30px;
             margin: 0; width: 100%; box-sizing: border-box;            
-            background: $colpmr url('../img/bg_premium_top.svg') no-repeat 93% bottom;
+            background: $colpmr url('/img/bg_premium_top.svg') no-repeat right bottom;
             .pop_title {
                 font-size: 24px;
                 font-weight: $f_sizeB;
@@ -445,7 +596,7 @@
                                 display: inline-block;
                                 width: 16px;
                                 height: 12px;
-                                background: url('../img/com_select.svg') no-repeat 0 0;
+                                background: url('/img/com_select.svg') no-repeat 0 0;
                             }
                         }
                     }
@@ -507,25 +658,28 @@
                         font-size: 16px;
                         letter-spacing: -0.4px;
                         text-align: center;                        
-                        color: #222;
-                        padding: 16px 0 7px;
+                        color: #222;          
+                        padding: 16px 0 7px;              
                         border-bottom: 2px solid #e7eaf2;                        
                         &.active {                            
                             font-weight: $f_sizeB;
                             color: #3655d6;
                             border-color: #3655d6;                            
                         }
-
+                        a {                            
+                            display: inline-block;
+                            width: 100%;                            
+                        }
                     }
                 }
                 .mapage_form {
 
                     .form_table {
+                        table {
+                            width: 100%;
+                        }
                         tr {
-                            border-bottom: 1px solid #e7eaf2;
-                            &:last-child {
-                                border-bottom: none;
-                            }
+                            border-bottom: 1px solid #e7eaf2;                            
                         }
                         th, td {
                             vertical-align: top;                   
@@ -570,32 +724,38 @@
                                 padding-left: 16px;
                                 margin-top: 3px;
                                 color: #3655d6;
+                                // background-color: blanchedalmond;
+
                                 &::before {
                                     content: '';
                                     display:inline-block;
                                     vertical-align:top;
                                     position: absolute;
-                                    top:2px;
+                                    top:0;
                                     left: 0;                                    
                                     width:12px;
                                     height:12px;                                    
-                                    background: url('../img/icon_preinfo.svg') no-repeat 0 0;
+                                    background: url('/img/icon_preinfo.svg') no-repeat 0 0;
                                 }
                                 &.error {
+                                    margin-top: 8px;
                                     color: #ff0200;                                                     
                                     &::before {                                        
                                         width:12px;
                                         height:12px;                                    
-                                        background: url('../img/bg_error.png') no-repeat 0 0;
+                                        background: url('/img/bg_error.png') no-repeat 0 0;
                                         background-size: 12px 12px;
                                     }
                                     
                                 }
+                                &.phone {                                    
+                                    &::before {                                        
+                                        top:5px;
+                                    }
+                                }
                             }        
-                            .mod_phone {                
-                                display: none;
-                                .txt_info {
-                                    margin-top: 15px;
+                            .mod_phone {                                                                                
+                                .txt_info {                                    
                                     color: #656d7e;
                                 }                
                                 .phone_mod {
@@ -620,7 +780,7 @@
                                     vertical-align: top;
                                     height: 28px;                                                               
                                     margin-top: 5px;
-                                    padding: 5px 10px;
+                                    padding: 2px 10px;
                                     box-sizing:border-box;
                                     background:$colpmr;
                                     font-size: 12px;
@@ -631,6 +791,64 @@
                                 }
                             }    
                         }                    
+                    }
+
+                    .inUse_box {
+                        margin-top: 15px;                                 
+                        margin-bottom: 15px;
+                        .title {
+                            padding-left: 0;
+                            font-size: 13px;
+                            letter-spacing: -0.65px;
+                            color: #575757;                
+                        }
+                        .use_service {
+                            margin-top: 15px;
+                            ul {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;                    
+                            }
+                            li {
+                                padding: 8px 5px;                    
+                                border-top: 1px solid #e5e5e5;
+                                box-sizing: border-box;
+                                flex: 1;
+                                font-size: 13px;                    
+                                letter-spacing: -0.5px;                    
+                                color: #222;                                
+                                
+                                &.th {                                    
+                                    background-color: #f5f6fa;                                                
+                                    padding-left: 15px;                                    
+                                    .cunt {
+                                        display: inline-block;
+                                        padding-right: 7px;
+                                        font-size: 13px;                                        
+                                        letter-spacing: -0.65px;                                        
+                                        color: #3655d6;
+                                    }
+                                }
+                                &.td {                        
+                                    padding-left: 10px;
+                                    text-align: right;
+                                    font-size: 13px;                                                                        
+                                    letter-spacing: -0.65px;
+                                    color: #656d7e;                                    
+
+                                    .method {                            
+                                        display: inline-block;                            
+                                        width: 45px;                      
+                                        text-align: center;
+                                        color: #575757;
+                                    }
+                                }
+                            }
+                            &:last-child {                        
+                                flex: 1;
+                                border-bottom: 1px solid #e5e5e5;
+                            }
+                        }
                     }
 
                     .agree_area {
@@ -648,7 +866,7 @@
                             margin-top: 8px;
                             position: relative;
                             border-radius: 5px;
-                            background-color: #f4f6fa;
+                            background-color: #f5f6fa;
                             padding: 15px 35px;
                             box-sizing: border-box;
         
@@ -669,7 +887,7 @@
                                     left: -21px;
                                     width:14px;
                                     height:14px;
-                                    background: url('../img/icon_agreecheck.svg') no-repeat 100% 100%;
+                                    background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
                                     margin-right:7px;
                                 }
                                 &.active {
@@ -723,7 +941,7 @@
             .mapage_service {                       
                 overflow: hidden;                                
                 box-sizing: border-box;
-                background: #f4f6fa; 
+                background: #f5f6fa; 
                 border-bottom: 1px solid #757a83;
                 .left {
                     float: left;                    
@@ -800,6 +1018,105 @@
                     }
                 }
             }  
+
+            // 서비스/결제내역
+            .mapage_service {
+                // background:#faf6f2;
+                // margin: 0 15px;                
+                padding:20px 15px;
+                box-sizing:border-box;
+            }
+            .mapage_service .service_table {
+                width:100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .box {
+                    flex: 1;
+                    padding: 0 8px 0 12px;
+                    &:last-child {
+                        border-left: 1px solid #e5e5e5;
+                    }
+                }
+                .service {
+                    font-size: 15px;
+                    font-weight: $f_sizeB;            
+                    line-height: 1.47;
+                    letter-spacing: -0.75px;            
+                    color: #3655d6;            
+                    width: 120px;
+                    padding-bottom: 10px;
+                }
+                .day {
+                    margin-top: 5px;
+                    font-size: 12px;             
+                    color: #575757;
+                    padding-left: 5px;
+                }
+                .system {
+                    font-size: 12px;
+                    font-weight: $f_sizeB;            
+                    line-height: 1.5;            
+                    color: #222;            
+                    margin-right: 3px;
+                    text-align: center;
+                }
+                .num {
+                    margin-top: 5px;
+                    font-size: 12px;
+                    color: #575757;
+                    span {
+                        display: inline-block;
+                        padding: 3px 0 2px;
+                    }
+                }
+                .btn_payCan, .btn_payRefund {
+                    cursor: pointer;            
+                    border-radius: 3px;
+                    border: 1px solid #3c55ce;
+                    background-color: transparent;
+                    padding: 1px 5px;
+                    font-size: 10px;
+                    letter-spacing: -0.6px;
+                    text-align: center;
+                    color: #3655d6;
+                }
+                .card_ch {
+                    display: inline-block;
+                    vertical-align: top;
+                    border-radius: 3px;
+                    border: solid 1px #3c55ce;                        
+                    width: 36px;
+                    height: 17px;
+                    padding: 0 4px;
+                    margin-left: 8px;                        
+                    box-sizing: border-box;
+                    font-size: 10px;                        
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    color: #3655d6;
+                }
+                .card_num {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1px 10px;
+                    padding-top: 6px;
+                    p {
+                        font-size: 12px;            
+                        line-height: 1.5;
+                        letter-spacing: -0.6px;                        
+                        color: #222;
+                        span {
+                            display: inline-block;
+                            color: #575757;
+                            padding-right: 3px;
+                            width: 46px;
+                        }
+                    }    
+                }
+            }
+
+
             .history_area {
                 overflow: auto;
                 max-height: 300px;
@@ -921,7 +1238,7 @@
                             font-size: 13px;                            
                             letter-spacing: -0.65px;                            
                             color: #222;
-                            background-color: #f4f6fa;                        
+                            background-color: #f5f6fa;                        
                             .cunt {                              
                                 display: inline-block;  
                                 margin-right: 10px;
@@ -1074,14 +1391,234 @@
                 }
             }
         }  
+    } 
 
-        // 결제하기
+    // 카드정보확인
+    &.card_reg {        
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        margin-left: -250px;
+        opacity: 1;
+        display: inline-block;        
+        .bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;            
+            padding: 20px;
+            box-sizing: border-box;            
+            text-align: center;        
+            z-index: 98;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .setting_area {
+            position: fixed;
+            left: 50%;
+            top: 40%;
+            width: 500px;
+            margin-left: -250px;
+            opacity: 1;
+            display: inline-block;        
+            z-index: 99;
+        }
+        .pop_con {
+            text-align: center;
+            background: #F4F4F5;
+            padding: 25px 30px;
+            font-size: 1rem;
+            font-weight: normal;
+            line-height: 1.7;
+            letter-spacing: -0.8px;
+            color: #656d7e;
+            .btnArea.edtBtn {
+                @include two_btn;
+                margin-top: 25px;
+                .btn {
+                    padding: 7px 0;
+                }                
+            }
+            .btnArea.edtBtn {
+                
+            }
+        }
+    }
 
-        // 결제완료
+    // 나이스페이 전자금융거래 이용약관    
+    &.age_popbox01, &.age_popbox02, &.age_popbox03 {
+
+        // 가입방법 선택
+        .pop_con {           
+            overflow: auto;
+            height: 500px;
+            background-color: #fff;            
+            padding: 15px 30px;           
+            .txt {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.7;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }             
+            
+            ul, ol {
+                margin-top: 20px;
+            }
+            dd, dt, li {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.7;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }
+            dt {
+                font-weight: bold;
+            }
+        }  
+    } 
+    
+    // 이용약관, 개인정보처리방침
+    &.modal.terms, &.modal.policy {                
+        max-width: 900px;
+
+        .pop_con {            
+            .sub_terms {
+                overflow: auto;
+                overflow-x: hidden;
+                max-height: 500px;
+                padding: 38px 32px 48px;  
+
+                
+                color: #333;
+                font-size: 15px;                
+                word-break: break-all;
+                word-wrap: break-word;
+
+                .txt_B, .terms_title {
+                    font-weight: $f_sizeB;
+                }
+                .terms_sum {
+                    margin-top: 20px;                    
+                }
+                .terms_sum {
+                    color: #333;                    
+                    font-weight: 700;
+                    padding-bottom: 10px;
+                }
+            }      
+        }
+    }
+
+    // 유료서비스 이전 신청 안내
+    &.previous_pop {
+        // max-width: 700px;
+        .pop_header {
+            padding: 20px 30px;
+            margin: 0; width: 100%; box-sizing: border-box;            
+            background: $colpmr;
+            b {
+                color: #ff8d5a;
+            }
+            .pop_title {
+                font-size: 18px;
+                font-weight: $f_sizeB;
+                letter-spacing: -1.2px;
+                color: #fff;
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 14px;                                        
+                    letter-spacing: -0.7px;                    
+                    color: #fff;
+                    opacity: 0.55;
+                }                
+            }
+            .clse {         
+                &::before, &::after {                    
+                    background-color: #fff;
+                }
+            }
+        }
+        .pop_con {
+            .scr_box {
+                padding: 15px 33px;    
+                overflow: auto;            
+                overflow-x: hidden;
+                max-height: 404px;
+                box-sizing: border-box;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.6;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            } 
+            .day {              
+                color: #656d7e;  
+                font-weight: normal;                
+                text-decoration: underline;                
+            }
+        }
+        .pop_foot {
+            padding: 16px 33px 10px;
+            background-color: #edf3ff;
+            .join_btn {                        
+                @include one_btn;
+                &::before {
+                    width: 8px;
+                    height: 8px;                    
+                    top: 18px;                        
+                }
+                font-size: 14px;
+            }
+            .link_menu {
+                margin-top: 12px;
+                text-align: center;
+                li a {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 12px;                    
+                    letter-spacing: -0.7px;
+                    color: #656d7e;        
+                    text-decoration: underline;            
+                    &::before {
+                        content: '';
+                        width: 5px;
+                        height: 5px;
+                        border-top: 1px solid #656d7e;
+                        border-right: 1px solid #656d7e;
+                        display: inline-block;                                
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 7px;                                
+                        right: -12px;
+                    }
+                }                
+            }
+            .today_check {
+                margin-top: 15px;
+                text-align: right;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.6;
+                letter-spacing: -0.8px;
+                color: #656d7e;
+            }
+        }
     } 
 }
 
 
+// 카드정보 확인
+.setting_pop {
+    background-color: red;
+    .setting_area {
+        background-color: gray;
+    }
+}
 
 
 /* 가입 - 가입방법 선택 step 01 */
@@ -1121,7 +1658,7 @@
 	content:'';
 	width:16px;
 	height:16px;
-	background:url('../img/icon_checkmark.png') no-repeat 100% 0;
+	background:url('/img/icon_checkmark.png') no-repeat 100% 0;
 	position:absolute;
 	right:12px;
 	top:13px;
@@ -1189,7 +1726,9 @@
 	font-weight:normal;
 }
 .serviceStep .step_box .payRight .pay02 .pay_sale {
-	display:block;
+	// display:block;
+    display: inline-block;
+    padding-left: 4px;    
 	color:#939393;
 	font-size:0.8rem;
 	font-weight:normal;
@@ -1300,7 +1839,7 @@
 	display:inline-block;
 	width:5px;
 	height:10px;
-	background:url('../img/icon_moreL.png') no-repeat 0 0;
+	background:url('/img/icon_moreL.png') no-repeat 0 0;
 	background-size:cover;
 }
 .payBtn .btn_save i {
@@ -1310,7 +1849,7 @@
 	display:inline-block;
 	width:5px;
 	height:10px;
-	background:url('../img/icon_moreRR.png') no-repeat 0 0;
+	background:url('/img/icon_moreRR.png') no-repeat 0 0;
 	background-size:cover;
 }
 .step_box .pay_line {
@@ -1377,13 +1916,18 @@
 	margin-top:6px;
 }
 .mapage_form .form_table td .i_dsc i {
-	position:relative;
-	top:2px;
-	margin-right:5px;
-	display:inline-block;
-	width:14px;
-	height:14px;
-	background:url('../img/bg_x.png') no-repeat 0 0;
+    display: none;
+	// position:relative;
+	// top:2px;
+	// margin-right:5px;
+	// display:inline-block;
+	// width:14px;
+	// height:14px;
+	// background:url('/img/bg_x.png') no-repeat 0 0;
+}
+.mapage_form .form_table td .i_dsc.phone_premium {
+    float: left;    
+    margin-top: 6px;
 }
 .mapage_form .form_table td .i_dsc.phone {
 	color:#ff0200;
@@ -1487,7 +2031,7 @@
 	top:-2px;
 	width:16px;
 	height:16px;
-	background:url('../img/icon_agreecheck.png') no-repeat 0 100%;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
 	margin-right:7px;
 }
 .sub_freeguide .agree_area .agree_from .label .label_chk strong {
@@ -1555,7 +2099,7 @@
 	display:inline-block;
 	width:5px;
 	height:10px;
-	background:url('../img/icon_moreRR.png') no-repeat 0 0;
+	background:url('/img/icon_moreRR.png') no-repeat 0 0;
 	background-size: cover;
 }
 /* 가입 - 결제하기 step 02 */
@@ -1649,7 +2193,7 @@
 	display:inline-block;
 	width:13px;
 	height:13px;
-	background:url('../img/icon_sale.png') no-repeat 0 0;
+	background:url('/img/icon_sale.png') no-repeat 0 0;
 	margin-right:5px;
 }
 .payment_guide .mapage_form {
@@ -1658,6 +2202,9 @@
 }
 .payment_guide .mapage_form .form_table {
 	border-top:none;
+    table {
+        width: 100%;
+    }
 }
 .payment_guide .mapage_form .form_table tr {
 	border-bottom:1px solid #E0E4E9;
@@ -1697,7 +2244,7 @@
 	display:inline-block;
 	width:14px;
 	height:14px;
-	background:url('../img/bg_x.png') no-repeat 0 0;
+	background:url('/img/bg_x.png') no-repeat 0 0;
 }
 .payment_guide .mapage_form .form_table td .i_dsc.coupon {
 	color:#ff0200;
@@ -1852,7 +2399,7 @@
 	vertical-align:top;
 	width:16px;
 	height:16px;
-	background:url('../img/icon_agreecheck.png') no-repeat 0 100%;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
 	margin-right:7px;
 }
 .payment_note .note_chk .txt.active i {
@@ -1984,6 +2531,7 @@
 	margin-left:3px;
 }
 .card_info span.bns_num {
+    cursor: pointer;
 	color:#939393;
 	font-size:0.84rem;
 	display:inline-block;
@@ -2000,7 +2548,7 @@
 	vertical-align:top;
 	width:16px;
 	height:16px;
-	background:url('../img/icon_agreecheck.png') no-repeat 0 100%;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
 	margin-right:7px;
 }
 .card_info span.bns_num.active i {
@@ -2040,19 +2588,24 @@
 	line-height:20px;
 }
 .payment_note .top .agree i {
+    cursor: pointer;
 	display:inline-block;
 	vertical-align:top;
 	width:20px;
 	height:20px;
-	background:url('../img/select_on.png') no-repeat 0 100%;
+	background:url('/img/select_on.png') no-repeat 0 100%;
 	background-size:20px 20px;
 	margin-right:7px;
 }
 .payment_note .top .agree.active i {
-	background:url('../img/select.png') no-repeat 0 100%;
+	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
-.agree_chk {}
+.agree_chk {    
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
 .agree_chk .txt {
 	color:#939393;
 	font-size:0.84rem;
@@ -2062,27 +2615,34 @@
 	width:calc(100% - 47px);
 }
 .agree_chk .txt i {
+    cursor: pointer;
 	display:inline-block;
 	vertical-align:top;
 	width:20px;
 	height:20px;
-	background:url('../img/select_on.png') no-repeat 0 100%;
+	background:url('/img/select_on.png') no-repeat 0 100%;
 	background-size:20px 20px;
 	margin-right:7px;
 }
 .agree_chk .txt.active i {
-	background:url('../img/select.png') no-repeat 0 100%;
+	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
 .agree_chk .age_link {
-	float:right;
-	display:inline-block;
-	padding:11px 5px;
-	background:url('../img/more_Black.png') no-repeat center center;
-	font-size:0;
-	width:7px;
-	height:12px;
-	background-size:7px 12px;
+    position: relative;
+	padding:11px 10px;
+	font-size:0;	
+    cursor: pointer;
+
+    &::after {
+        content: '';    
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid #939393;
+        border-right: 1px solid #939393;        
+        transform: rotate(45deg);
+        display: inline-block;        
+    }
 }
 .payment_chk {
 	background:#e6e7f4;
@@ -2098,6 +2658,7 @@
 	position:relative;
 }
 .payment_chk .txt i {
+    cursor: pointer;
 	position:absolute;
 	left:5px;
 	top:-1px;
@@ -2105,12 +2666,12 @@
 	vertical-align:top;
 	width:20px;
 	height:20px;
-	background:url('../img/select_on.png') no-repeat 0 100%;
+	background:url('/img/select_on.png') no-repeat 0 100%;
 	background-size:20px 20px;
 	margin-right:7px;
 }
 .payment_chk .txt.active i {
-	background:url('../img/select.png') no-repeat 0 100%;
+	background:url('/img/select.png') no-repeat 0 100%;
 	background-size:20px 20px;
 }
 .help_nicepay {
@@ -2201,7 +2762,7 @@
 	width:12.5px;
 	height:15.5px;
 	margin-right:3px;
-	background:url('../img/banner/icon_alarm2.png') no-repeat 0 0;
+	background:url('/img/banner/icon_alarm2.png') no-repeat 0 0;
 	background-size:12.5px 15.5px;
 	position:relative;
 	top:2px;
@@ -2235,14 +2796,14 @@
 	height:6px;
 	padding:0 1px;
 	margin-right:3px;
-	background:url('../img/more_Black.png') no-repeat 0 0;
+	background:url('/img/more_Black.png') no-repeat 0 0;
 	background-size:3px 6px;
 	position:relative;
 	top: -2px;
 }
 /* 가입 - 결제완료 step 03 */
 .pay03 .step_top {
-	background:#fff url('../img/bg_payment_com.png') no-repeat 105% 22px;
+	background:#fff url('/img/bg_payment_com.png') no-repeat 105% 22px;
 	min-height:175px;
 	box-sizing:border-box;
 }
