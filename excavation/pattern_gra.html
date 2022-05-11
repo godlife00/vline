@@ -47,7 +47,7 @@
     <!-- js -->
     <script src="../js/header.js"></script>
     <script src="../js/vline.js"></script>
-    
+
 </head>
 
 <body class="valueline">
@@ -61,10 +61,10 @@
             <div class="M_left">
                 <div class="sub_nav">
                     <ul class="depth_1">
-                        <li><span class="title"><a href="blue_stocks.html">우량주</a></span></li>
+                        <li><span class="title"><a href="blue_stocks.html">종목진단(주식MRI)</a></span></li>
                         <li><span class="title"><a href="ex_turnaround.html">턴 어라운드</a></span></li>
                         <li><span class="title"><a href="result.html">실적분석</a></span></li>
-                        <li class=""><span class="title"><a href="shopping.html">마이쇼핑</a></span></li>
+                        <li class=""><span class="title"><a href="shopping.html">종목쇼핑</a></span></li>
                         <li class="active"><span class="title open"><a href="pattern.html">BIC 차트 패턴</a></span>
                             <ul class="depth_2">
                                 <li><a href="pattern.html">이익증가 미반영</a></li>
@@ -78,7 +78,8 @@
                 <div class="service_box">
                     <ul>
                         <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502" target="_black">업데이트 소식</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                                target="_black">업데이트 소식</a></li>
                         <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
                 </div>
@@ -105,13 +106,17 @@
                 <div class="sum_box small">
                     <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
                     <span class="more">자세히</span>
-                    <p>워렌 버핏의 스승이자 가치투자의 창시자인 벤저민 그레이엄은 시가총액이 순운전자본의 2/3 이하면 좋은 매수 기회라고 말했습니다.
+                    <p>
+                        벤저민 그레이엄은 시가총액이 순운전자본의 2/3 이하면 좋은 매수 기회로 판단했습니다. 이는 시총/순운전자본 비율이 0.67이하인 기업입니다. 
                         <br>
-                        그레이엄은 이들 기업을 매수해 50% 이상 오르면 매도하거나, 2년이 지나면 수익률에 관계 없이 매도하는 투자전략을 운영했습니다.
-                        <br>
-                        아래 메뉴에서 시총/순운전자본 비율이 1.0 미만인 기업은 시가총액이 순운전자본(유동자산-유동부채)에 미달하는 기업입니다. 이들 기업 중 재무적으로 안전한 기업을 고르면, 안전하면서 이익이 나는 기업을
-                        염가에 살 수 있는 기회를 줍니다. 염가에 팔리는 만큼 재무적으로 위험 수위에 있는 기업도 있는 만큼, 무엇보다 재무 안전성 지표를 꼼꼼히 체크한 후에 종목을 고르는 것이 좋습니다. 그레이엄 만족형은
-                        순이익이 매년 증가하는 성장주를 선호 하는 분들께는 다소 답답한 투자전략이 될 수 있으니, 포트폴리오 운영에 참고하시기 바랍니다.
+                        - 매수 시점 : 시가총액 < 순운전자본 2/3 (순운전자본=유동 자산 - 유동 부채)<br>
+                            - 매도 시점 : 매수 후 50% 오르거나, 2년이 지나면 수익률에 관계 없이 매도<br>
+                            <br>
+                            아래 메뉴에서 시총/순운전자본 비율이 1.0 미만인 기업은 시가총액이 순운전자본(유동자산-유동부채)에 미달하는 기업입니다.
+                            <br>
+                            저가에 팔리는 만큼 재무적으로 위험 수위에 있는 기업도 있는 만큼, 무엇보다 재무 안전성 지표를 꼼꼼히 체크한 후에 종목을 고르는 것이 좋습니다.
+                            <br>
+                            그레이엄 만족형은 순이익이 매년 증가하는 성장주를 선호 하는 분들께는 다소 답답한 투자전략이 될 수 있으니, 포트폴리오 운영에 참고하시기 바랍니다.
                     </p>
                 </div>
                 <!-- //sum_box -->
@@ -220,8 +225,8 @@
 
                     <div class="table_filter">
                         <div class="term">
-                            <span class="active" rel="tab1">차트</span>
-                            <span rel="tab2">데이터</span>
+                            <span class="active" rel="tab1">데이터</span>
+                            <span rel="tab2">차트</span>
                         </div>
                     </div>
                 </div>
@@ -230,789 +235,213 @@
                     <div class="excavation_area pattern pattern_gra">
 
                         <div id="tab1" class="tab_content">
-                            <div id="BICchart_ptngra01" class="BICchart_ptnStyle"></div>
-                            <div id="BICchart_ptngra02" class="BICchart_ptnStyle"></div>                                                        
-                            <div id="BICchart_ptngra03" class="BICchart_ptnStyle"></div>                                                        
-                            <div id="BICchart_ptngra04" class="BICchart_ptnStyle"></div>      
-                        </div>
-                        <div id="tab2" class="tab_content">
                             <span class="table_update">Update 2021. 7&#47;16</span>
-                            <table cellspacing="0" border="0" class="table thead2_table">
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2" class=""><strong>순위</strong></th>
-                                        <td rowspan="2" class=""><strong>종목</strong></td>
-                                        <td class=""><strong>시총/순운전자본</strong></td>                                        
-                                        <td class=""><strong>유동자산</strong></td>                                        
-                                        <td class=""><strong>유동부채</strong></td>                                        
-                                        <td class=""><strong>순운전자본</strong></td>                                        
-                                        <td class=""><strong>시가총액</strong></td>                                        
-                                        <td class=""><strong>매출액</strong></td>                                        
-                                        <td class=""><strong>영업이익</strong></td>                                        
-                                        <td class=""><strong>순이익</strong></td>                                        
-                                        <td class=""><strong>PER</strong>(배)</td>                                        
-                                        <td class=""><strong>PBR</strong>(배)</td>                                        
-                                        <td class=""><strong>ROE</strong>(%)</td>                                                                                
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="">1</td>
-                                        <td class="txt_L txt_name">
-                                            <a href="#" class="btn_joinPop">
-                                                로긴<span class="remark"><i></i><i></i><i></i><i></i></span>
-                                            </a>
-                                        </td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지카카오삼성엘지카카오삼성엘지카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">3</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">4</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">5</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">6</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">7</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">8</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">9</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">10</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">1</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">3</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">4</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">5</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">6</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">7</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">8</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">9</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">10</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">1</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">3</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">4</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">5</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">6</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">7</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">8</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">9</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">10</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">1</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">3</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">4</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">5</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">6</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">7</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">8</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">9</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">10</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">1</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">3</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">4</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">5</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">6</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">7</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">8</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">9</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">50</td>
-                                        <td class="txt_L txt_name"><a href="/analysis/bic.html">카카오삼성엘지</a></td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                        <td>5.7</td>
-                                        <td>0</td>
-                                        <td>87</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div id="table-scroll" class="table-scroll">
+                                <div class="fix_wrap">
+                                    <table cellspacing="0" border="0" class="table fix_table thead2_table" style="width: 1200px;">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" class="fix"><strong>순위</strong></th>
+                                                <td rowspan="2" class="fix"><strong>종목</strong></td>
+                                                <td class=""><strong>시총/순운전자본</strong></td>
+                                                <td class=""><strong>유동자산</strong></td>
+                                                <td class=""><strong>유동부채</strong></td>
+                                                <td class=""><strong>순운전자본</strong></td>
+                                                <td class=""><strong>시가총액</strong></td>
+                                                <td class=""><strong>매출액</strong></td>
+                                                <td class=""><strong>영업이익</strong></td>
+                                                <td class=""><strong>순이익</strong></td>
+                                                <td class=""><strong>PER</strong>(배)</td>
+                                                <td class=""><strong>PBR</strong>(배)</td>
+                                                <td class=""><strong>ROE</strong>(%)</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">1</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/003060">에이프로젠제약</a></td>
+                                                <td>0.99</td>
+                                                <td class="txt_R">3,535</td>
+                                                <td class="txt_R">94</td>
+                                                <td class="txt_R">3,440</td>
+                                                <td class="txt_R">3,412</td>
+                                                <td class="txt_R">565</td>
+                                                <td class="txt_R">-3,799</td>
+                                                <td class="txt_R">81</td>
+                                                <td class="txt_R">42.11</td>
+                                                <td class="txt_R">0.67</td>
+                                                <td class="txt_R">1.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fix">100</td>
+                                                <td class="txt_L fix txt_name"><a href="/finance/income/900280">골든센츄리</a></td>
+                                                <td>0.37</td>
+                                                <td>2,321</td>
+                                                <td>364</td>
+                                                <td>1,957</td>
+                                                <td>719</td>
+                                                <td>1,361</td>
+                                                <td>31,344</td>
+                                                <td>171</td>
+                                                <td>4.19</td>
+                                                <td>0.25</td>
+                                                <td>6.03</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //fix_wrap -->
+                            </div>
+                            <!-- //table-scroll -->
                         </div>
+
+                        <div id="tab2" class="tab_content">
+                            <div class="free_sampleBox">
+                                <img src="../img/sample_graham.jpg" alt="샘플화면입니다">
+                                <a href="#" class="btn_freePop">샘플화면입니다.</a>                                                                
+                            </div>
+                            <!-- //free_sampleBox -->   
+                            <div id="BICchart_ptngra01" class="BICchart_ptnStyle"></div>
+                            <div id="BICchart_ptngra02" class="BICchart_ptnStyle"></div>
+                            <div id="BICchart_ptngra03" class="BICchart_ptnStyle"></div>
+                            <div id="BICchart_ptngra04" class="BICchart_ptnStyle"></div>
+                        </div>
+                        
                         <div class="paginate">
                             <a href="#" class="cb_pre">이전</a>
                             <strong>41</strong>

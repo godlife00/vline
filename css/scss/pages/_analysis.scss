@@ -1,4 +1,28 @@
 // 재무분석
+#container .M_right .contents.sub_con {
+    .tab_content {
+        position: relative;
+
+        .table_update {
+            position: absolute;
+            right: 0;
+            top: -22px;
+            font-size: 12px;
+            line-height: 2.5;
+            letter-spacing: -0.3px;
+            text-align: right;
+            color: #b1b9cb;
+        }
+    }
+    .fix_table.clone {
+        thead {                
+            th, td {
+                pointer-events: all;          
+            }
+        }  
+    }
+}
+
 // BIC 차트
 #container .M_right .contents .bic_chartbox {
     
@@ -127,6 +151,7 @@
                     letter-spacing: -0.33px;                    
                     color: #656d7e;
                     padding-bottom: 17px;                                        
+                    word-break: break-all;
                     span {
                         color: #656d7e;
                     }
@@ -155,6 +180,29 @@
                     color: #656d7e;
                     padding: 0;        
                 }
+                .table_sum {
+                    width: 100%;                    
+                    th, td {
+                        padding: 2px 2px;
+                        border: 1px solid #bdc8d8;
+                        font-size: 13px;
+                        text-align: center;
+                        letter-spacing: -0.33px;
+                        color: #656d7e;
+                    }
+                    thead {
+                        th {
+                            padding: 3px 2px;
+                            background-color: #7489af;
+                            color: #fff;
+                        }
+                    }
+                    tbody {
+                        th, td {
+                            font-size: 12px;                            
+                        }
+                    }
+                } 
             }
             &::after {
                 content: "";
@@ -241,11 +289,20 @@
                 font-weight: $f_sizeB;                
             }            
             .chart_area.diagnosis .chartData .charm_num {
-                font-size: 32px;
-                font-weight: $f_sizeB;                
+                font-size: 14px;
+                font-weight: normal;
                 line-height: 1.47;                
+                letter-spacing: -1px;
                 text-align: center;
-                color: #222;
+                color: rgb(147, 147, 147);
+                strong {
+                    font-size: 26px;
+                    font-weight: $f_sizeB;                
+                    line-height: 1.47;                
+                    text-align: center;
+                    color: #222;
+                }
+                
                 padding-bottom: 10px;
             }            
             

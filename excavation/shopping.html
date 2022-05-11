@@ -47,7 +47,7 @@
     <!-- js -->
     <script src="../js/header.js"></script>
     <script src="../js/vline.js"></script>
-    
+
 </head>
 
 <body class="valueline">
@@ -61,10 +61,10 @@
             <div class="M_left">
                 <div class="sub_nav">
                     <ul class="depth_1">
-                        <li><span class="title"><a href="blue_stocks.html">우량주</a></span></li>
+                        <li><span class="title"><a href="blue_stocks.html">종목진단(주식MRI)</a></span></li>
                         <li><span class="title"><a href="ex_turnaround.html">턴 어라운드</a></span></li>
                         <li><span class="title"><a href="result.html">실적분석</a></span></li>
-                        <li class="active"><span class="title"><a href="shopping.html">마이쇼핑</a></span></li>
+                        <li class="active"><span class="title"><a href="shopping.html">종목쇼핑</a></span></li>
                         <li class=""><span class="title open"><a href="pattern.html">BIC 차트 패턴</a></span>
                             <ul class="depth_2">
                                 <li class=""><a href="">이익증가 미반영</a></li>
@@ -78,7 +78,8 @@
                 <div class="service_box">
                     <ul>
                         <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502" target="_black">업데이트 소식</a></li>
+                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                                target="_black">업데이트 소식</a></li>
                         <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
                 </div>
@@ -92,20 +93,21 @@
                 <div class="path_area">
                     <ul>
                         <li>종목발굴</li>
-                        <li>마이쇼핑</li>
+                        <li>종목쇼핑</li>
                     </ul>
                 </div>
 
                 <div class="group_nav">
                     <ul>
-                        <li class="active"><a href="#">마이쇼핑</a></li>
+                        <li class="active"><a href="#">종목쇼핑</a></li>
                     </ul>
                 </div>
                 <div class="sum_box small">
                     <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
                     <span class="more">자세히</span>
-                    <p>자체 개발한 '주식MRI(Midas Real-time Investigator)분석 시스템'을 통해 기업에 대한 투자 매력도를 한 눈에 확인할 수 있습니다. 특히 사업독점력을
-                        통해 현재 수익을 얼마나 유지할 수 있을지, 밸류에이션을 통해선 현재 주가가 매수하기에 매력적인 수준인지 여부를 바로 확인할 수 있습니다.</p>
+                    <p>
+                        투자지표 조건에 맞는 종목을 찾아 드립니다. 어떤 값을 넣어야 할지 모르겠다면, ⊙추천조건을 선택하면 밸류라인 추천 조건에 맞는 종목을 보여 드립니다.
+                    </p>
                 </div>
                 <!-- //sum_box -->
 
@@ -113,7 +115,10 @@
                     <h2 class="shop_title">나만의 쇼핑 리스트를 찾아보세요.</h2>
                     <div class="shop_radio">
                         <label>
-                            <input name="shoplabel_01" type="radio" checked=""><span>최근 검색 조건</span>
+                            <input name="shoplabel_01" type="radio" checked=""><span>전체</span>
+                        </label>
+                        <label>
+                            <input name="shoplabel_01" type="radio"><span>최근 검색 조건</span>
                         </label>
                         <label>
                             <input name="shoplabel_01" type="radio"><span>추천 조건</span>
@@ -123,13 +128,13 @@
 
                     <div class="shopping_list">
                         <form action="" id="shopping_form" class="form_box">
-                            <div class="set_filter">     
+                            <div class="set_filter">
                                 <span class="help_box pop_open">도움말</span>
 
                                 <div class="mid">
                                     <div class="box">
                                         <div class="">
-                                            <strong class="th">PER</strong>
+                                            <strong class="th">현재 PER</strong>
                                             <span class="sum">주가수익배수</span>
                                         </div>
                                         <label>
@@ -139,7 +144,27 @@
                                     </div>
                                     <div class="box">
                                         <div class="">
-                                            <strong class="th">PBR</strong>
+                                            <strong class="th">5년 PER</strong>
+                                            <span class="sum">주가수익배수</span>
+                                        </div>
+                                        <label>
+                                            <input type="text" class="input_txt"> ~ <input type="text"
+                                                class="input_txt">
+                                        </label>
+                                    </div>
+                                    <div class="box">
+                                        <div class="">
+                                            <strong class="th">현재 PBR</strong>
+                                            <span class="sum">주가순자산배수</span>
+                                        </div>
+                                        <label>
+                                            <input type="text" class="input_txt"> ~ <input type="text"
+                                                class="input_txt">
+                                        </label>
+                                    </div>
+                                    <div class="box">
+                                        <div class="">
+                                            <strong class="th">5년 PBR</strong>
                                             <span class="sum">주가순자산배수</span>
                                         </div>
                                         <label>
@@ -169,7 +194,17 @@
                                     </div>
                                     <div class="box">
                                         <div class="">
-                                            <strong class="th">ROE</strong>
+                                            <strong class="th">현재 ROE</strong>
+                                            <span class="sum">자기자본이익률</span>
+                                        </div>
+                                        <label>
+                                            <input type="text" class="input_txt"> ~ <input type="text"
+                                                class="input_txt">
+                                        </label>
+                                    </div>
+                                    <div class="box">
+                                        <div class="">
+                                            <strong class="th">5년 ROE</strong>
                                             <span class="sum">자기자본이익률</span>
                                         </div>
                                         <label>
@@ -186,7 +221,7 @@
                                             <input type="text" class="input_txt"> ~ <input type="text"
                                                 class="input_txt">
                                         </label>
-                                    </div>                                    
+                                    </div>
                                     <div class="box">
                                         <div class="">
                                             <strong class="th">DY</strong>
@@ -237,7 +272,7 @@
                             <ul>
                                 <li>코스피</li>
                                 <li>업종 전체</li>
-                                <li>시가총액 전체</li>                                
+                                <li>시가총액 전체</li>
                             </ul>
                             <span class="set"><img src="../img/settings.png" alt="설정"></span>
                         </div>
@@ -260,7 +295,7 @@
                                         <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
                                     </div>
                                     <!-- //top -->
-                                    <div class="mid">                
+                                    <div class="mid">
                                         <div class="">
                                             <span class="title">재무제표</span>
                                             <label>
@@ -283,7 +318,7 @@
                                                 <input name="line_01" type="radio"><span>코스닥</span>
                                             </label>
                                         </div>
-                                        
+
                                         <div class="">
                                             <span class="title">업종</span>
                                             <div class="selectBoxList">
@@ -339,20 +374,61 @@
                         <span class="table_update">Update 2021. 7&#47;16</span>
                         <div id="table-scroll" class="table-scroll">
                             <div class="fix_wrap">
-                                <table cellspacing="0" border="0" class="table fix_table thead2_table" style="width: 900px;">
+                                <table cellspacing="0" border="0" class="table fix_table thead2_table"
+                                    style="width: 900px;">
                                     <thead>
                                         <tr>
                                             <th rowspan="2" class="fix va_cen"><strong>순위</strong></th>
                                             <td rowspan="2" class="fix va_cen"><strong>종목</strong></td>
                                             <td rowspan="2" class="va_cen"><strong>회계<br>기준</strong></td>
-                                            <td rowspan="2" class="va_cen active"><strong>PER<br></strong>(배)</td>
-                                            <td rowspan="2" class="va_cen"><strong>PBR<br></strong>(배)</td>
-                                            <td rowspan="2" class="va_cen"><strong>PSR<br></strong>(배)</td>
-                                            <td rowspan="2" class="va_cen"><strong>PCR<br></strong>(배)</td>
-                                            <td rowspan="2" class="va_cen"><strong>ROE<br></strong>(%)</td>
-                                            <td rowspan="2" class="va_cen"><strong>ROA<br></strong>(%)</td>
-                                            <td rowspan="2" class="va_cen"><strong>영업이익<br></strong>(억원)</td>
-                                            <td rowspan="2" class="va_cen bdr_r"><strong>순이익<br></strong>(억원)</td>
+                                            <td rowspan="2" class="va_cen"><strong>PER<br></strong>(배)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen"><strong>PBR<br></strong>(배)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen"><strong>PSR<br></strong>(배)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen"><strong>PCR<br></strong>(배)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen"><strong>ROE<br></strong>(%)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen"><strong>ROA<br></strong>(%)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen"><strong>영업이익<br></strong>(억원)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2" class="va_cen bdr_r"><strong>순이익<br></strong>(억원)
+                                                <div class="order">
+                                                    <span class="high" title="높은순">높</span>
+                                                    <span class="lower active" title="낮은순">낮</span>
+                                                </div>
+                                            </td>
                                             <td colspan="5" class=""><strong>분기 주당순이익(EPS)</strong>(원)</td>
                                         </tr>
                                         <tr class="">
@@ -1309,7 +1385,7 @@
 </body>
 
 <!-- 도움말 팝업 -->
-<div class="layer_pop">    
+<div class="layer_pop">
     <div class="pop_top">
         <p class="title">도움말</p>
         <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
@@ -1329,7 +1405,7 @@
         </ul>
         <p class="txt_guide">검색된 종목은 종목추천이 아닌 투자 참고용으로만 활용하시기 바랍니다 </p>
     </div>
-    <!-- //mid -->                                        
+    <!-- //mid -->
 </div>
 <!-- //layer_pop -->
 

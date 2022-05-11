@@ -344,8 +344,14 @@
     
                 .mid {                
                     position: relative;
-                    float: left;
+                    float: left;                    
+                    display: flex;
+                    gap: 16px 22px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding-right: 20px;
                     width: calc(100% - 170px);
+                    box-sizing: border-box;
                     &::after {
                         content: '';
                         position: absolute;
@@ -358,16 +364,9 @@
                     } 
     
                     .box {
-                        display: inline-block;                    
-                        margin-right: 22px;
-                        margin-bottom: 16px;
-                        
-                        &:nth-child(n + 6) {                        
-                            margin-bottom: 0;                                       
-                        }
-                        &:last-child {                        
-                            margin-right: 0;                        
-                        }
+                        // display: inline-block;                    
+                        // margin-right: 22px;
+                        // margin-bottom: 16px;
     
                         .th {
                             font-size: 14px;
@@ -440,7 +439,8 @@
         }
     }
     
-    .thead2_table {               
+    
+    .thead2_table {                       
         th, td {
             padding: 8.5px 12px;
         }        
@@ -471,6 +471,29 @@
                         display: none;
                     }
                 }
+            }
+            .order {                               
+                margin-top: 1px; 
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 5px;
+                span {
+                    display: inline-block;
+                    cursor: pointer;
+                    border: 1px solid #e7eaf2;                    
+                    width: 16px;
+                    height: 16px;                    
+                    box-sizing: border-box;
+                    font-size: 10px;
+                    letter-spacing: -0.25px;                    
+                    &.high, &.lower {
+                        &.active {
+                            background-color: #3655d6;
+                            color: #fff;
+                        }
+                    }
+                }                
             }
         }  
         tbody {
@@ -504,7 +527,8 @@
                 border-bottom: 1px solid #e7eaf2;
             }
             
-        }        
+        }     
+
     }
 }
 
@@ -541,10 +565,12 @@
             }
         }
 
-        .thead2_table {
-            border-top: none;                  
+        .thead2_table {            
+            border-top: none;                              
             
-            thead {                
+            thead {               
+                background-color: #fff; 
+                z-index: 50;        
                 th, td {                    
                     padding:8.5px 3px;                                                                          
                 }

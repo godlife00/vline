@@ -488,7 +488,7 @@ $(document).ready(function () {
                 endAngle: 360
             },
             xAxis: {
-                categories: ['미래성장성', '사업<br>독점력', '현금<br>창출력', '수익<br>성장성', '재무<br>안전성'],
+                categories: ['밸류에이션', '독점력', '성장성', '안전성', '현금창출'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
                 max: 5,
@@ -540,7 +540,7 @@ $(document).ready(function () {
         });
     }
 
-    //재무분석 주식MRI 차트
+    //재무분석 주식MRI 차트, 종목발굴 우량주 주식MRI 차트
     if ($('#MRIchart_analy01').length) {
 
         Highcharts.chart('MRIchart_analy01', {
@@ -608,7 +608,7 @@ $(document).ready(function () {
                 endAngle: 360
             },
             xAxis: {
-                categories: ['밸류에이션', '수익<br>성장성', '사업<br>독점력', '재무<br>안전성', '현금<br>창출력'],
+                categories: ['미래성장성', '사업<br>독점력', '현금<br>창출력', '수익<br>성장성', '재무<br>안전성'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
                 max: 5,
@@ -686,7 +686,7 @@ $(document).ready(function () {
             colors: ["#DBDFED", "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
 
             title: {
-                text: '매출액과 이익 <span>삼성전자 (005930)</span>',
+                text: '매출과 이익 <span>삼성전자 (005930)</span>',
                 y: 20,
             },
 
@@ -821,6 +821,7 @@ $(document).ready(function () {
                         color: ["#656d7e"],
                     }
                 },
+                max: 100,
             }],
 
 
@@ -5262,6 +5263,1019 @@ $(document).ready(function () {
         });
     }
 
+    if ($('#BICchart_valuation11').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation11', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '부채비율&재무레버리지 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }, { // 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}배',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '부채비율(좌)',
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '재무레버리지(우)',
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 1,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });
+    }
+
+    if ($('#BICchart_valuation12').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation12', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자산구조 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '자산총계',
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '운용자산',
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '유가증권',
+                data: [242, 252, 257, 269, 297, 211, 242, 252, 257, 269, 297, 211],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '대출채권',
+                data: [342, 352, 357, 369, 397, 311, 342, 352, 357, 369, 397, 311],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '투자부동산',
+                data: [442, 452, 457, 469, 497, 411, 442, 452, 457, 469, 497, 411],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });
+    }
+
+    if ($('#BICchart_valuation13').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation13', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '유가증권 투자내역 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '유가증권',
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '주식',
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '국공채',
+                data: [242, 252, 257, 269, 297, 211, 242, 252, 257, 269, 297, 211],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '회사채',
+                data: [342, 352, 357, 369, 397, 311, 342, 352, 357, 369, 397, 311],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }, {
+                name: '수익증권',
+                data: [442, 452, 457, 469, 497, 411, 442, 452, 457, 469, 497, 411],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });
+    }
+    if ($('#BICchart_valuation14').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation14', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: ["#DBDFED", "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '유가증권 투자비율 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '주식',
+                type: 'column',
+                data: [97, 11],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '국공채',
+                type: 'column',
+                data: [197, 111],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '회사채',
+                type: 'column',
+                data: [197, 111],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '수익증권',
+                type: 'column',
+                data: [142, 152],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '기타 유가증권',
+                type: 'column',
+                data: [142, 152],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                },
+                column: {
+                    stacking: 'normal'
+                }
+            },
+        });
+    }
+    if ($('#BICchart_valuation15').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation15', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자금조달 구조 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '예수금',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '차입금',
+                type: 'column',
+                data: [97, 31],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '자기자본',
+                type: 'column',
+                data: [97, 31],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '기타',
+                type: 'column',
+                data: [97, 41],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                },
+                column: {
+                    stacking: 'normal'
+                }
+            },
+        });
+    }
+    if ($('#BICchart_valuation16').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation16', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자금조달 구조 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '차입금',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '회사채',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '자기자본',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '기타',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                },
+                column: {
+                    stacking: 'normal'
+                }
+            },
+        });
+    }
+    if ($('#BICchart_valuation17').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation17', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자금운용 구조 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '카드자산',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '대출채권',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '유가증권',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '리스자산',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '현금 및 예치금',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '유형자산',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '기타',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                },
+                column: {
+                    stacking: 'normal'
+                }
+            },
+        });
+    }
+    if ($('#BICchart_valuation18').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation18', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자금조달 구조 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '부채',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '자본금',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '자본잉여금',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '이익잉여금',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '기타',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                },
+                column: {
+                    stacking: 'normal'
+                }
+            },
+        });
+    }
+    if ($('#BICchart_valuation19').length) {
+        var reflowchart28 = Highcharts.chart('BICchart_valuation19', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '자금운용 구조 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '창업투자자산',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '현금성자산',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '유가증권',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '유형자산',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }, {
+                name: '기타',
+                type: 'column',
+                data: [97, 21],
+                yAxis: 0,
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                },
+                column: {
+                    stacking: 'normal'
+                }
+            },
+        });
+    }
+
     // 차트 리사이즈 버튼
     $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
         console.log("차트에서클릭");
@@ -7105,7 +8119,7 @@ $(document).ready(function () {
                 plotBorderWidth: null,
                 plotShadow: false
             },
-            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            colors: ["#3655d6", "#3655d6", "#3655d6"],
             tooltip: {
                 shared: true,
                 crosshairs: true,
@@ -7207,7 +8221,7 @@ $(document).ready(function () {
                 plotBorderWidth: null,
                 plotShadow: false
             },
-            colors: ["#3655d6", "#656d7e", "#bdc8d8"],
+            colors: ["#3655d6", "#3655d6", "#3655d6"],
             tooltip: {
                 shared: true,
                 crosshairs: true,

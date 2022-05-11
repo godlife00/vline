@@ -21,77 +21,16 @@ $(document).ready(function () {
         $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function () {
             $(this).toggleClass('active');
         });
-        $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
-            $(this).toggleClass('active');
-        });
+        // $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
+        //     $(this).toggleClass('active');
+        // });
         
-        $('#header .bgWrap .premium .loginId .login, .comment_attach.login .comment_inbox_text, .btn_joinPop').on('click', function () {
-            // 로그인, 댓글입력시 로그인
-            $('.login_form').modal({
-                fadeDuration: 100
-            });
-        });
-
-        $('.modal a.open_step02').on('click', function () {
-            $('.terms_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step03').on('click', function () {
-            $('.sign_complete').modal({
-                fadeDuration: 100
-            });
-        });
-        $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
+        $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
-        });
-
-
-        // 밸류라인 프리미엄 가입 - 가입방법 열기
-        $('.modal a.open_payment').on('click', function () {
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.payment_step01').on('click', function () {
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 결제하기 열기
-        $('.modal a.payment_step02').on('click', function () {
-            $('.payment_step.pay02').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 나이스페이 열기
-        $('.modal a.payment_step02_card').on('click', function () {            
-            $('.payment_step.pay02_card').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 결제완료 열기
-        $('.modal a.payment_step03').on('click', function () {
-            $('.payment_step.pay03').modal({
-                fadeDuration: 100
-            });
-        });
-
-        // 마이페이지
-        $('#header .bgWrap .premium .my_info').on('click', function () {
-            $('.mypage_info').modal({
-                fadeDuration: 100
-            });
-        });
-        // 회원탈퇴
-        $('.modal.mypage_info .pop_con .open_withdrawal').on('click', function () {
-            $('.withdrawal_sum').modal({
-                fadeDuration: 100
-            });
-        });
-
+        });        
+        
         //결제
         $('.serviceStep .step_box').on("click", function () {
             $('.serviceStep .step_box').removeClass("active");
@@ -99,7 +38,7 @@ $(document).ready(function () {
         });
 
         // 결제동의하기 체크
-        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt').on("click", function () {
+        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt, .card_info span.bns_num, .mapage_form .label_chk').on("click", function () {
             $(this).toggleClass("active");
         });
 
@@ -122,6 +61,13 @@ $(document).ready(function () {
             $('.premium_join').modal('show');
         });
 
+        // 나이스페이 카드정보
+        $('.cardreg_pop01').on('click', function () {
+            $('.card_reg').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop01').on('click', function () {
             $('.age_popbox01').modal({
@@ -140,7 +86,24 @@ $(document).ready(function () {
                 fadeDuration: 100
             });            
         });          
-
+        
+        // 월자동결제 서비스 변경 팝업
+        $('.btn_payCan').on('click', function () {
+            $('.login_form').modal({
+                fadeDuration: 100
+            });
+        });
+        $('.btn_payRefund').on('click', function () {
+            $('.refund').modal({
+                fadeDuration: 100
+            });
+        });
+        // 나이스페이 진행중인 결제 취소
+        $('.s_stokes #wrap #container.sub_payment .payment_area.nicepay .btnArea.payBtn a.btn_cncl').on('click', function () {
+            $('.paymentCancel').modal({
+                fadeDuration: 100
+            });
+        });
 
         //select
         $(function () {
@@ -196,23 +159,36 @@ $(document).ready(function () {
     header_Function(); 
 
     // a태그 페이지 상단 이동 막기
-    $('.btn_freePop, .btn_joinPop').on('click', function () {
+    $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
         console.log("상단이동제한");
         return false;
     });
+    // 이용약관
+    $('.btn_terms').on('click', function () {
+        $('.modal.terms').modal({
+            fadeDuration: 100
+        });            
+    }); 
+
+    // 개인정보처리방침
+    $('.btn_policy').on('click', function () {
+        $('.modal.policy').modal({
+            fadeDuration: 100
+        });            
+    }); 
     
     // 리스트내 종목 검색
-    $('.data_filter .table_search .searchInput').on("focusout", function () {                    
+    $('.data_filter .table_search .searchInput, .stocks_filter .form_box .searchInput').on("focusout", function () {                    
         console.log("포커스");
-        $('.data_filter .table_search .AutoComplete_indu').hide();
+        $('.data_filter .table_search .AutoComplete_indu, .stocks_filter .AutoComplete_indu').hide();
     });
-    $('.data_filter .table_search .searchInput').on("keydown", function () {            
+    $('.data_filter .table_search .searchInput,  .stocks_filter .form_box .searchInput').on("keydown", function () {            
         console.log("키다운");
-        $('.data_filter .table_search .AutoComplete_indu').show();
+        $('.data_filter .table_search .AutoComplete_indu, .stocks_filter .AutoComplete_indu').show();
     });
-    $('.data_filter .table_search .AutoComplete_indu li').removeClass('_on');
-    $('.data_filter .table_search .AutoComplete_indu li').on("mouseover", function () {            
-        $('.data_filter .table_search .AutoComplete_indu li').removeClass('_on')
+    $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').removeClass('_on');
+    $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').on("mouseover", function () {            
+        $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').removeClass('_on')
         $(this).addClass('_on');
     });
 
@@ -356,6 +332,12 @@ $(document).ready(function () {
     // $('.form_resetBtn').on('click', function () {
     //     $("#shopping_form")[0].reset();
     // });
+    // 종목쇼핑 오름내림 차순 
+    $('.order span').on('click', function () {
+        console.log("test");
+        $(this).parent().children().removeClass('active');
+        $(this).addClass('active');        
+    });
 
     // 테이블 필터링 숨기기,보이기
     $("#container .M_right .contents_header .data_filter .set_box").hide();
@@ -486,27 +468,27 @@ $(document).ready(function () {
     });    
 
     // table 좌측 고정
-    $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
+    // $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
 
     // table 스크롤 위치        
     var agent = navigator.userAgent.toLowerCase();    
     $(".fix_wrap").on("scroll", function () {     
-        var positionLeft =  new $(".fix_wrap").scrollLeft();           
-        console.log("positionLeft = " + positionLeft);
-        $('.clone thead').css({
-            'position' : 'relative',            
-            'left' : 0 - positionLeft
+        // var positionLeft =  new $(".fix_wrap").scrollLeft();           
+        // console.log("positionLeft = " + positionLeft);
+        $('.fix_table thead').css({
+            // 'position' : 'relative',            
+            // 'left' : 0 - positionLeft
         });        
 
         if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
             // ie일 경우
-            $('.clone thead .fix').css({
-                'left' : 0
+            $('.fix_table thead .fix').css({
+                // 'left' : 0
             });
         } else{
             // ie가 아닐 경우
-            $('.clone thead .fix').css({
-                'left' : 0 + positionLeft
+            $('.fix_table thead .fix').css({
+                // 'left' : 0 + positionLeft
             });
         }
         
@@ -518,32 +500,81 @@ $(document).ready(function () {
 
             if ($(document).scrollTop() >= jbOffset.top - 44) {               
                 $('.data_filter .table_search .AutoComplete').hide();         
-                $('.clone thead').css({
+                $('.fix_table thead').css({
                     'position' : 'relative',
                     'top': positionTop,
                 });
-                $('.fix_table.clone thead td').css({
+                $('.fix_table. thead td').css({
                     'visibility' : 'visible',                
                 });
-                $('.clone thead th, .clone thead td, .clone thead tr').css({
+                $('.fix_table thead th, .fix_table thead td, .fix_table thead tr').css({
                     // 'background-color' : '#fff !important',                
                 });
             } else {            
-                $('.clone thead').css({
+                $('.fix_table thead').css({
                     'position' : 'relative',
                     'top': '0',                
                 });
-                $('.fix_table.clone thead').css({
-                    'visibility' : 'hidden',                
-                });
-                $('.clone thead th, .clone thead td, .clone thead tr').css({
-                    // 'background-color' : '#fff',                
-                });
+                // $('.fix_table thead').css({
+                //     'visibility' : 'hidden',                
+                // });
+                // $('.clone thead th, .clone thead td, .clone thead tr').css({
+                //     // 'background-color' : '#fff',                
+                // });
             }
-        }        
+        }   
+        
+        if ($('.table.table_oneview').length) {
+            console.log("test");
+            var jbOffset = $(".table.table_oneview").offset();                                
+            var positionTop = $(window).scrollTop() - $(".table.table_oneview").offset().top + 42;                                
+
+            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+                $('.table.table_oneview thead').css({
+                    'position' : 'relative',
+                    'top': positionTop,
+                });                
+            } else {            
+                $('.table.table_oneview thead').css({
+                    'position' : 'relative',
+                    'top': '0',                
+                });                
+            }
+        }          
+
+        if ($('.excavation_area.pattern .tab_content .thead2_table').length) {
+            console.log("test");
+            var jbOffset = $(".table.thead2_table").offset();                                
+            var positionTop = $(window).scrollTop() - $(".table.thead2_table").offset().top + 42;                                
+
+            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+                $('.table.thead2_table thead').css({
+                    'position' : 'relative',
+                    'top': positionTop,
+                });                
+            } else {            
+                $('.table.thead2_table thead').css({
+                    'position' : 'relative',
+                    'top': '0',                
+                });                
+            }
+        }  
     });
 
-
+    $(function () {
+        $('.fix_wrap').scroll(function () {
+            
+            var fix01 = $('tbody .fix:nth-child(1)').outerWidth();
+            var fix02 = $('tbody .fix:nth-child(2)').outerWidth();
+            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();
+            console.log(fix01,fix02,fix03);
+            
+            $('.fix:nth-child(1)').css('left', '0');
+            $('.fix:nth-child(2)').css('left', fix01);
+            $('.fix:nth-child(3)').css('left', fix02);
+        });
+    });
+    
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');

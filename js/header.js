@@ -46,22 +46,7 @@ $(document).ready(function () {
             $(this).toggleClass('active');
         });
 
-        $('#header .bgWrap .premium .loginId .login').on('click', function () {
-            $('.login_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step02').on('click', function () {
-            $('.terms_form').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.open_step03').on('click', function () {
-            $('.sign_complete').modal({
-                fadeDuration: 100
-            });
-        });
-        $('#header .bgWrap .premium a.join, a.btn_freePop').on('click', function () {
+        $('#header .bgWrap .premium a.join, a.btn_freePop, .btn_joinPop').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
@@ -71,44 +56,7 @@ $(document).ready(function () {
                 fadeDuration: 100
             });
         });
-
-        // 밸류라인 프리미엄 가입 - 가입방법 열기
-        $('.modal a.open_payment').on('click', function () {
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });
-        $('.modal a.payment_step01').on('click', function () {
-            $('.payment_step.pay01').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 결제하기 열기
-        $('.modal a.payment_step02').on('click', function () {
-            $('.payment_step.pay02').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 나이스페이 열기
-        $('.modal a.payment_step02_card').on('click', function () {
-            console.log("나이스페이열기");
-            $('.payment_step.pay02_card').modal({
-                fadeDuration: 100
-            });
-        });
-        // 밸류라인 프리미엄 가입 - 결제완료 열기
-        $('.modal a.payment_step03').on('click', function () {
-            $('.payment_step.pay03').modal({
-                fadeDuration: 100
-            });
-        });
-
-        // 마이페이지
-        $('#header .bgWrap .premium .my_info').on('click', function () {
-            $('.mypage_info').modal({
-                fadeDuration: 100
-            });
-        });
+                
         // 회원탈퇴
         $('.modal.mypage_info .pop_con .open_withdrawal').on('click', function () {
             $('.withdrawal_sum').modal({
@@ -123,19 +71,8 @@ $(document).ready(function () {
         });
 
         // 결제동의하기 체크
-        $('.payment_note .note_chk .txt, .payment_note .agree_chk .txt, .payment_chk .txt').on("click", function () {
+        $('.payment_note .note_chk .txt').on("click", function () {
             $(this).toggleClass("active");
-        });
-
-        // 결제동의하기 전체약관동의 체크
-        $('.payment_note .top .agree').on("click", function () {
-            if ($(this).hasClass("active")) {
-                $(this).removeClass('active');
-                $('.agree_chk .txt').removeClass('active');
-            } else {
-                $(this).addClass('active');
-                $('.agree_chk .txt').addClass('active');
-            }
         });
 
         // 프로모션 이벤트 배너
@@ -146,24 +83,8 @@ $(document).ready(function () {
             $('.premium_join').modal('show');
         });
 
-        // 나이스페이 전자금융거래 이용약관
-        $('.age_pop01').on('click', function () {
-            $('.age_popbox01').modal({
-                fadeDuration: 100
-            });            
-        });  
-        // 나이스페이 전자금융거래 이용약관
-        $('.age_pop02').on('click', function () {
-            $('.age_popbox02').modal({
-                fadeDuration: 100
-            });            
-        }); 
-        // 나이스페이 전자금융거래 이용약관
-        $('.age_pop03').on('click', function () {
-            $('.age_popbox03').modal({
-                fadeDuration: 100
-            });            
-        });          
+        
+
 
         //select
         $(function () {
@@ -219,6 +140,24 @@ $(document).ready(function () {
     });
 
     $('#footer').load(urlRoute + 'common/footer.html', function () {        
+        // a태그 페이지 상단 이동 막기
+        $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
+            console.log("상단이동제한");
+            return false;
+        });
+        // 이용약관
+        $('.btn_terms').on('click', function () {
+            $('.modal.terms').modal({
+                fadeDuration: 100
+            });            
+        }); 
+
+        // 개인정보처리방침
+        $('.btn_policy').on('click', function () {
+            $('.modal.policy').modal({
+                fadeDuration: 100
+            });            
+        }); 
     });
 
     //연환산,연간,분기 테이블 탭
