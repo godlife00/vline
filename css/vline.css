@@ -236,6 +236,9 @@ body .numCunt::before {
   float: left;
   width: 200px;
   margin-right: 13px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 42px;
 }
 
 #container .M_right {
@@ -1336,8 +1339,47 @@ input[type='radio']:checked:before {
   font-weight: 700;
 }
 
+#footer .w_box .info {
+  margin-top: 20px;
+}
+
+#footer .w_box .info .info_tel_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#footer .w_box .info .info_tel_box span {
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+}
+
 #footer .w_box .foot_info {
-  margin-top: 45px;
+  margin-top: 35px;
+  width: 100%;
+}
+
+#footer .w_box .foot_info .info_tel_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#footer .w_box .foot_info .info_tel_box span {
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  color: #656d7e;
 }
 
 #footer .w_box .foot_info .copyright, #footer .w_box .foot_info .copyright a {

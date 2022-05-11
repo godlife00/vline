@@ -17,7 +17,8 @@
         justify-content: space-between;
     }
     .terms_list {
-        padding: 15px 0 0;        
+        padding: 15px 0 0;      
+
         .terms {
             display: flex;
             gap: 18px;
@@ -34,9 +35,39 @@
             }
         }
     }
+    .info {        
+        margin-top: 20px;
+        .info_tel_box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span {
+                font-size: 13px;
+                line-height: 1.54;
+                letter-spacing: -0.33px;
+                color: #656d7e;
+            }
+            
+
+        }
+    }
     .foot_info {
-        margin-top: 45px;
-        .copyright, .copyright a {
+        margin-top: 35px;
+        width: 100%;
+        .info_tel_box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span {
+                font-size: 13px;
+                line-height: 1.54;
+                letter-spacing: -0.33px;
+                color: #656d7e;
+            }
+            
+
+        }
+        .copyright, .copyright a {            
             font-size: 13px;            
             line-height: 1.54;
             letter-spacing: -0.33px;
@@ -52,7 +83,8 @@
         }
 
     }
-    .family_site {                
+    .family_site {     
+        
         .title {
             display: inline-block;
             font-family: 'SpoqaHanSansNeo';
