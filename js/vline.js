@@ -468,7 +468,7 @@ $(document).ready(function () {
     });    
 
     // table 좌측 고정
-    $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
+    // $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
 
     // table 스크롤 위치        
     var agent = navigator.userAgent.toLowerCase();    
