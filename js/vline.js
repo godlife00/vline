@@ -540,7 +540,7 @@ $(document).ready(function () {
                     'top': '0',                
                 });                
             }
-        }  
+        }          
 
         if ($('.excavation_area.pattern .tab_content .thead2_table').length) {
             console.log("test");
@@ -561,6 +561,20 @@ $(document).ready(function () {
         }  
     });
 
+    $(function () {
+        $('.fix_wrap').scroll(function () {
+            
+            var fix01 = $('tbody .fix:nth-child(1)').outerWidth();
+            var fix02 = $('tbody .fix:nth-child(2)').outerWidth();
+            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();
+            console.log(fix01,fix02,fix03);
+            
+            $('.fix:nth-child(1)').css('left', '0');
+            $('.fix:nth-child(2)').css('left', fix01);
+            $('.fix:nth-child(3)').css('left', fix02);
+        });
+    });
+    
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');

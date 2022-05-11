@@ -238,7 +238,7 @@ body .numCunt::before {
   margin-right: 13px;
   position: -webkit-sticky;
   position: sticky;
-  top: 42px;
+  top: 52px;
 }
 
 #container .M_right {
@@ -393,7 +393,8 @@ body .numCunt::before {
   display: none;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   text-align: center;
   font-size: 13px;
   font-weight: normal;
@@ -405,45 +406,57 @@ body .numCunt::before {
   background: #fff url("/img/gray_tdline.gif") repeat-x left bottom;
 }
 
-.table th strong, .table td strong {
+.table th strong,
+.table td strong {
   font-size: 13px;
   font-weight: 700;
 }
 
-.table th .deci, .table td .deci {
+.table th .deci,
+.table td .deci {
   display: inline-block;
 }
 
-.table th .unit, .table td .unit {
+.table th .unit,
+.table td .unit {
   opacity: 0.9;
   padding-left: 1px;
 }
 
-.table th.txt_L, .table td.txt_L {
+.table th.txt_L,
+.table td.txt_L {
   text-align: left;
 }
 
-.table th.txt_R, .table td.txt_R {
+.table th.txt_R,
+.table td.txt_R {
   text-align: right;
 }
 
-.table th.va_cen, .table td.va_cen {
+.table th.va_cen,
+.table td.va_cen {
   vertical-align: middle;
 }
 
-.table th.depth_1, .table th.depth_2, .table th.depth_3, .table th.depth_4, .table td.depth_1, .table td.depth_2, .table td.depth_3, .table td.depth_4 {
+.table th.depth_1, .table th.depth_2, .table th.depth_3, .table th.depth_4,
+.table td.depth_1,
+.table td.depth_2,
+.table td.depth_3,
+.table td.depth_4 {
   display: block;
   min-width: 130px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.table th.depth_2, .table td.depth_2 {
+.table th.depth_2,
+.table td.depth_2 {
   position: relative;
   padding-left: 16px !important;
 }
 
-.table th.depth_2::after, .table td.depth_2::after {
+.table th.depth_2::after,
+.table td.depth_2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -454,12 +467,14 @@ body .numCunt::before {
   background-color: #edf3ff;
 }
 
-.table th.depth_3, .table td.depth_3 {
+.table th.depth_3,
+.table td.depth_3 {
   position: relative;
   padding-left: 24px !important;
 }
 
-.table th.depth_3::after, .table td.depth_3::after {
+.table th.depth_3::after,
+.table td.depth_3::after {
   content: "";
   position: absolute;
   left: 0;
@@ -470,12 +485,14 @@ body .numCunt::before {
   background-color: #edf3ff;
 }
 
-.table th.depth_4, .table td.depth_4 {
+.table th.depth_4,
+.table td.depth_4 {
   position: relative;
   padding-left: 32px !important;
 }
 
-.table th.depth_4::after, .table td.depth_4::after {
+.table th.depth_4::after,
+.table td.depth_4::after {
   content: "";
   position: absolute;
   left: 0;
@@ -486,18 +503,21 @@ body .numCunt::before {
   background-color: #edf3ff;
 }
 
-.table thead th, .table thead td {
+.table thead th,
+.table thead td {
   font-size: 12px;
   color: #7389af;
   text-align: center;
   background: url("/img/gray_thline.gif") repeat-x left bottom;
 }
 
-.table thead th span, .table thead td span {
+.table thead th span,
+.table thead td span {
   color: #7389af;
 }
 
-.table thead th strong, .table thead td strong {
+.table thead th strong,
+.table thead td strong {
   color: #7389af;
   font-size: 13px;
   font-weight: 700;
@@ -532,8 +552,8 @@ body .numCunt::before {
   position: relative;
   background-color: #fff;
   visibility: visible;
-  position: -webkit-sticky;
-  position: sticky;
+  position: -webkit-sticky !important;
+  position: sticky !important;
   left: 0;
   z-index: 49;
 }
@@ -542,7 +562,8 @@ body .numCunt::before {
   z-index: 50;
 }
 
-.table.fix_table thead th, .table.fix_table thead td {
+.table.fix_table thead th,
+.table.fix_table thead td {
   visibility: initial;
   background-color: #fff;
 }
@@ -609,15 +630,18 @@ body .numCunt::before {
   background-color: #fff;
 }
 
-.table.fix_table.thead2_table tbody .va_cen, .table.fix_table.thead2_table tbody td:nth-child(2n - 1) {
+.table.fix_table.thead2_table tbody .va_cen,
+.table.fix_table.thead2_table tbody td:nth-child(2n - 1) {
   background-color: #f7f9fc;
 }
 
-.table.table_oneview th, .table.table_oneview td {
+.table.table_oneview th,
+.table.table_oneview td {
   padding: 8.5px 4px;
 }
 
-.table.table_oneview th a, .table.table_oneview td a {
+.table.table_oneview th a,
+.table.table_oneview td a {
   color: #527bea;
   padding: 8.5px 4px;
 }
@@ -662,7 +686,8 @@ body .numCunt::before {
   overflow: hidden;
 }
 
-.table-scroll th, .table-scroll td {
+.table-scroll th,
+.table-scroll td {
   white-space: nowrap;
 }
 
@@ -671,7 +696,8 @@ body .numCunt::before {
   margin-top: 40px;
 }
 
-.paginate a, .paginate strong {
+.paginate a,
+.paginate strong {
   display: inline-block;
   _position: relative;
   -webkit-box-sizing: border-box;
@@ -690,12 +716,14 @@ body .numCunt::before {
   background-color: #fff;
 }
 
-.paginate a img, .paginate strong img {
+.paginate a img,
+.paginate strong img {
   display: inline-block;
   vertical-align: middle;
 }
 
-.paginate strong, .paginate a:hover {
+.paginate strong,
+.paginate a:hover {
   color: #7389af;
   font-size: 16px;
   font-weight: 700;
@@ -706,7 +734,9 @@ body .numCunt::before {
   font-size: 14px;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
   outline: none;
 }
 
