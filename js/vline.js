@@ -345,6 +345,19 @@ $(document).ready(function () {
         $("#container .M_right .contents_header .data_filter .set_box").toggle();
     });
 
+    // 테이블 스크롤시 좌측 고정
+    $(function () {
+        $('.fix_wrap').scroll(function () {            
+            var fix01 = $('tbody .fix:nth-child(1)').outerWidth();
+            var fix02 = $('tbody .fix:nth-child(2)').outerWidth();
+            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();                        
+            $('.fix:nth-child(1)').css('left', '0');
+            $('.fix:nth-child(2)').css('left', fix01);
+            $('.fix:nth-child(3)').css('left', fix02);
+            $('.fix:nth-child(4)').css('left', fix03);
+        });
+    });
+
     // 댓글 삭제 숨기기,보이기
     $("#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box").hide();
     $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_article .button').on('click', function () {                
@@ -560,20 +573,7 @@ $(document).ready(function () {
             }
         }  
     });
-
-    $(function () {
-        $('.fix_wrap').scroll(function () {
-            
-            var fix01 = $('tbody .fix:nth-child(1)').outerWidth();
-            var fix02 = $('tbody .fix:nth-child(2)').outerWidth();
-            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();
-            console.log(fix01,fix02,fix03);
-            
-            $('.fix:nth-child(1)').css('left', '0');
-            $('.fix:nth-child(2)').css('left', fix01);
-            $('.fix:nth-child(3)').css('left', fix02);
-        });
-    });
+    
     
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
