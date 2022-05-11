@@ -271,7 +271,19 @@ body {
             position: relative;                            
             background-color: #fff;           
             visibility:visible;                        
-        }              
+            position: sticky;
+            left: 0;            
+            z-index: 49;
+    }    
+        
+        thead {                
+            z-index: 50;        
+            
+            th, td {
+                visibility:initial;
+                background-color: #fff;            
+            }
+        }
         
         tbody {
             .fix {
@@ -413,41 +425,6 @@ body {
 	white-space:nowrap;	
 }
 
-.fix_table.clone {        
-	position:absolute;
-    top: 0;	
-	left:0;
-    right: 0;
-	pointer-events:none;    
-    th, td {
-        visibility:hidden;
-    }
-    thead {                
-        z-index: 50;        
-        
-        th, td {
-            visibility:initial;
-            background-color: #fff;            
-        }
-        .fix {            
-            
-        }
-    }   
-    tbody th {
-        visibility:visible;
-    }
-    tbody th.fix,
-    tbody td.fix {                
-        pointer-events: all;
-    }
-    tbody td.bdr_r {
-        border-right: none !important;
-    }
-    tbody td {
-        border-right: none !important;
-    }
-     
-}
 
 .paginate{
     text-align:center;

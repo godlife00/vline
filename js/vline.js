@@ -473,22 +473,22 @@ $(document).ready(function () {
     // table 스크롤 위치        
     var agent = navigator.userAgent.toLowerCase();    
     $(".fix_wrap").on("scroll", function () {     
-        var positionLeft =  new $(".fix_wrap").scrollLeft();           
-        console.log("positionLeft = " + positionLeft);
-        $('.clone thead').css({
-            'position' : 'relative',            
-            'left' : 0 - positionLeft
+        // var positionLeft =  new $(".fix_wrap").scrollLeft();           
+        // console.log("positionLeft = " + positionLeft);
+        $('.fix_table thead').css({
+            // 'position' : 'relative',            
+            // 'left' : 0 - positionLeft
         });        
 
         if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
             // ie일 경우
-            $('.clone thead .fix').css({
-                'left' : 0
+            $('.fix_table thead .fix').css({
+                // 'left' : 0
             });
         } else{
             // ie가 아닐 경우
-            $('.clone thead .fix').css({
-                'left' : 0 + positionLeft
+            $('.fix_table thead .fix').css({
+                // 'left' : 0 + positionLeft
             });
         }
         
@@ -500,27 +500,27 @@ $(document).ready(function () {
 
             if ($(document).scrollTop() >= jbOffset.top - 44) {               
                 $('.data_filter .table_search .AutoComplete').hide();         
-                $('.clone thead').css({
+                $('.fix_table thead').css({
                     'position' : 'relative',
                     'top': positionTop,
                 });
-                $('.fix_table.clone thead td').css({
+                $('.fix_table. thead td').css({
                     'visibility' : 'visible',                
                 });
-                $('.clone thead th, .clone thead td, .clone thead tr').css({
+                $('.fix_table thead th, .fix_table thead td, .fix_table thead tr').css({
                     // 'background-color' : '#fff !important',                
                 });
             } else {            
-                $('.clone thead').css({
+                $('.fix_table thead').css({
                     'position' : 'relative',
                     'top': '0',                
                 });
-                $('.fix_table.clone thead').css({
-                    'visibility' : 'hidden',                
-                });
-                $('.clone thead th, .clone thead td, .clone thead tr').css({
-                    // 'background-color' : '#fff',                
-                });
+                // $('.fix_table thead').css({
+                //     'visibility' : 'hidden',                
+                // });
+                // $('.clone thead th, .clone thead td, .clone thead tr').css({
+                //     // 'background-color' : '#fff',                
+                // });
             }
         }   
         
