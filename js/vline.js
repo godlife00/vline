@@ -25,7 +25,7 @@ $(document).ready(function () {
         //     $(this).toggleClass('active');
         // });
         
-        $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop').on('click', function () {
+        $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop, .inform_area.list .listWrap li.lock').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });

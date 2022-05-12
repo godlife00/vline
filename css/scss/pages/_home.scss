@@ -968,15 +968,13 @@
                                 &.dvsion {
                                     display: inline-block;                                    
                                     border-radius: 3px;
-                                    padding: 1px 5px;
-                                    // background-color: #d9e6ff;
-                                    background-color: red;
+                                    padding: 2px 7px;                                    
                                     font-size: 10px;
                                     font-weight: $f_sizeS;                            
                                     letter-spacing: -0.5px;
                                     text-align: center;
                                     vertical-align: bottom;
-                                    color: #656d7e;                                                
+                                    color: #656d7e;                                       
                                     &.result {
                                         color: #fff;
                                         background-color: #b1b9cb;                                
@@ -1479,7 +1477,7 @@
                         &.dvsion {
                             display: inline-block;                            
                             border-radius: 3px;
-                            padding: 1px 5px;
+                            padding: 2px 7px;
                             background-color: #d9e6ff;
                             font-size: 10px;
                             font-weight: $f_sizeS;                            
@@ -1495,6 +1493,10 @@
                                 color: #fff;
                                 background-color: #97a3c9;                                
                             }                
+                            &.result {
+                                color: #fff;
+                                background-color: #b1b9cb;                                
+                            }
                         }
                         &.name {                        
                             width: 110px;
