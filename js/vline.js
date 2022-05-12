@@ -333,10 +333,14 @@ $(document).ready(function () {
     //     $("#shopping_form")[0].reset();
     // });
     // 종목쇼핑 오름내림 차순 
-    $('.order span').on('click', function () {
-        console.log("test");
-        $(this).parent().children().removeClass('active');
-        $(this).addClass('active');        
+    $('.thead2_table thead td.order').on('click', function () {
+        if ($(this).hasClass("high") === true) {
+            console.log("높");
+            $(this).removeClass('high').addClass('lower');
+        } else if ($(this).hasClass("lower") === true) {
+            console.log("낮");
+            $(this).removeClass('lower').addClass('high');
+        }
     });
 
     // 테이블 필터링 숨기기,보이기
