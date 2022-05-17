@@ -1460,7 +1460,7 @@
                     }   
                     &.txt_R {
                         text-align: right;
-                        padding-right: 10px;
+                        padding-right: 16px;                        
                     } 
                 }
                 thead {
@@ -1469,6 +1469,13 @@
                         font-size: 12px;                    
                         letter-spacing: -0.3px;                    
                         color: #b1b9cb;
+                        box-sizing: border-box;
+                        &:nth-child(1) {
+                            padding-left: 3px;
+                        }
+                        &:nth-child(2) {
+                            padding-left: 32px;
+                        }
                     }
                 }   
                 tbody {
@@ -1499,14 +1506,15 @@
                             }
                         }
                         &.name {                        
-                            width: 110px;
-                            max-width: 110px;                                                    
+                            width: 130px;
+                            max-width: 130px;                                                    
+                            text-indent: 5px;                            
 
                             a {
                                 @include white-space;
                                 display: table-cell;
                                 width: 100%;
-                                max-width: 110px;                                                    
+                                width: 130px;                                                    
                                 padding-right: 20px;
                                 box-sizing: border-box;
                                 font-size: 16px;
@@ -1515,28 +1523,29 @@
                                 color: #222;
                             }
                         }
-                        &.up, &.down, &.same {                                                        
-                            padding-right: 5px;                            
+                        &.up, &.down, &.same {                                                                                    
                             display: flex;                            
                             align-items: center;
-                            gap: 3px;
+                            gap: 5px;                                                        
+                            justify-content: space-between;
+                            width: 150px;
+                            box-sizing: border-box;                            
 
-                            .price {
-                                flex: 1;
+                            .price {                                
                                 font-size: 16px;                                
                                 letter-spacing: -0.4px;                                
                                 color: #222;
-                                text-align: right;                                
-                                min-width: 72px;
+                                text-align: right;                                                                
+                                width: 77px;                                
                             }                        
-                            .per {
-                                flex: 1;
+                            .per {                                
                                 padding-left: 2px;                                
                                 font-size: 12px;                                
                                 letter-spacing: -0.3px;                                
                                 color: #d30000;
                                 text-align: left;
-                            }
+                                width: 55px;                                
+                            }                            
                         }
                         &.down {
                             .per {                            
@@ -1552,7 +1561,8 @@
                         &.cpson {
                             text-align: center;                            
                             font-size: 14px;                                                        
-                            letter-spacing: -0.35px;
+                            letter-spacing: -0.35px;                            
+                            width: 100px;
                             &.deficit {
                                 color: #d30000;
                             }        
@@ -1561,7 +1571,8 @@
                             }                    
                         }
                         &.trans {
-                            text-align: center;
+                            text-align: center;                                                        
+                            width: 100px;
                             span {
                                 display: inline-block;
                                 padding: 1px 3px;
@@ -1569,6 +1580,8 @@
                                 letter-spacing: -0.5px;
                                 text-align: center;
                                 border-radius: 3px;                            
+                                width: 43px;
+                                box-sizing: border-box;
                             }
                             &.deficit {
                                 span {
