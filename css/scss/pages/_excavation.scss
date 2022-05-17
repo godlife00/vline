@@ -490,17 +490,48 @@
                         width: 0;
                         height: 0;
                         border-left: 4px solid transparent;
-                        border-right: 4px solid transparent;                                                                   
+                        border-right: 4px solid transparent;                                                                        
+                    }
+                    &.disabled {
+                        span.order_disabled {            
+                            opacity: 0.4;
+                            font-size: 0;
+                            line-height: 0;
+                            letter-spacing: 0;
+                            position: absolute;
+                            top: calc(50% + 3px);
+                            right: 7px;                        
+                            vertical-align: middle;
+                            margin-left: 2px;
+                            display: inline-block;                
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;        
+                            border-top: 7px solid #97a3c9;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: -4px;
+                                top: -16px;
+                                vertical-align: middle;
+                                margin-left: 2px;
+                                display: inline-block;                
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;        
+                                border-bottom: 7px solid #97a3c9;
+                            }                                                                                           ;
+                        }                                   
                     }
                     &.high {             
                         span.order_arow {
-                            top: calc(50% + 2px);                            
+                            top: calc(50% + 2px);                      
+                            border-bottom: none;      
                             border-top: 7px solid #97a3c9;                            
                         }           
                     }                    
                     &.lower { 
                         span.order_arow {                                                        
                             border-bottom: 7px solid #97a3c9;
+                            border-top: none;      
                         }                         
                         
                     } 
