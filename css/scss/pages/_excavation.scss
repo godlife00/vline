@@ -310,20 +310,20 @@
              
         }
         
-        .shopping_list {        
-            margin-top: 8px;
-            border-radius: 10px;
-            padding: 20px 24px;
-            background-color: #f5faf3;
+        .shopping_list {                    
+            border-radius: 10px;            
     
             .form_box .set_filter {
                 position: relative;
+                margin-top: 8px;
+                background-color: #f5faf3;
+                padding: 20px 24px;            
     
                 .help_box {
                     cursor: pointer;
                     position: absolute;
-                    right: 0;
-                    top: 0;
+                    right: 24px;
+                    top: 20px;
                     font-size: 10px;                
                     letter-spacing: -0.5px;                                
                     padding-bottom: 1px;
@@ -403,8 +403,8 @@
                     text-align: right;
                     width: 170px;                           
                     position: absolute;
-                    right: 0;                
-                    bottom: 0;
+                    right: 24px;                
+                    bottom: 20px;
                     .btn_submit {                    
                         cursor: pointer;
                         border: none;

@@ -5,14 +5,14 @@ $(document).ready(function () {
 
         console.log("해더js");
         // 상단 검색바
-        $('.searchArea form .searchInput').on("focusout", function () {            
+        $('.searchArea form .searchInput').on("focusout", function () {
             $('.searchArea .AutoComplete').hide();
         });
-        $('.searchArea form .searchInput').on("keydown", function () {            
+        $('.searchArea form .searchInput').on("keydown", function () {
             $('.searchArea .AutoComplete').show();
         });
         $('.searchArea .AutoComplete li').removeClass('_on');
-        $('.searchArea .AutoComplete li').on("mouseover", function () {            
+        $('.searchArea .AutoComplete li').on("mouseover", function () {
             $('.searchArea .AutoComplete li').removeClass('_on')
             $(this).addClass('_on');
         });
@@ -24,13 +24,13 @@ $(document).ready(function () {
         // $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
         //     $(this).toggleClass('active');
         // });
-        
+
         $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop, .inform_area.list .listWrap li.lock').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
-        });        
-        
+        });
+
         //결제
         $('.serviceStep .step_box').on("click", function () {
             $('.serviceStep .step_box').removeClass("active");
@@ -65,28 +65,28 @@ $(document).ready(function () {
         $('.cardreg_pop01').on('click', function () {
             $('.card_reg').modal({
                 fadeDuration: 100
-            });            
-        }); 
+            });
+        });
 
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop01').on('click', function () {
             $('.age_popbox01').modal({
                 fadeDuration: 100
-            });            
-        });  
+            });
+        });
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop02').on('click', function () {
             $('.age_popbox02').modal({
                 fadeDuration: 100
-            });            
-        }); 
+            });
+        });
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop03').on('click', function () {
             $('.age_popbox03').modal({
                 fadeDuration: 100
-            });            
-        });          
-        
+            });
+        });
+
         // 월자동결제 서비스 변경 팝업
         $('.btn_payCan').on('click', function () {
             $('.login_form').modal({
@@ -155,8 +155,8 @@ $(document).ready(function () {
         $('#header .bgWrap .gnb ul li').on('click', function () {
             $(this).addClass('active');
         });
-    }        
-    header_Function(); 
+    }
+    header_Function();
 
     // a태그 페이지 상단 이동 막기
     $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
@@ -167,68 +167,99 @@ $(document).ready(function () {
     $('.btn_terms').on('click', function () {
         $('.modal.terms').modal({
             fadeDuration: 100
-        });            
-    }); 
+        });
+    });
 
     // 개인정보처리방침
     $('.btn_policy').on('click', function () {
         $('.modal.policy').modal({
             fadeDuration: 100
-        });            
-    }); 
-    
+        });
+    });
+
     // 리스트내 종목 검색
-    $('.data_filter .table_search .searchInput, .stocks_filter .form_box .searchInput').on("focusout", function () {                    
+    $('.data_filter .table_search .searchInput, .stocks_filter .form_box .searchInput').on("focusout", function () {
         console.log("포커스");
         $('.data_filter .table_search .AutoComplete_indu, .stocks_filter .AutoComplete_indu').hide();
     });
-    $('.data_filter .table_search .searchInput,  .stocks_filter .form_box .searchInput').on("keydown", function () {            
+    $('.data_filter .table_search .searchInput,  .stocks_filter .form_box .searchInput').on("keydown", function () {
         console.log("키다운");
         $('.data_filter .table_search .AutoComplete_indu, .stocks_filter .AutoComplete_indu').show();
     });
     $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').removeClass('_on');
-    $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').on("mouseover", function () {            
+    $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').on("mouseover", function () {
         $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').removeClass('_on')
         $(this).addClass('_on');
     });
 
     // 달력
-    $(function () {
-        //input을 datepicker로 선언
-        $("#datepicker1, #datepicker2 ").datepicker({
-            dateFormat: 'yymm' //달력 날짜 형태
-            , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-            , showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서            
-            , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
-            , changeMonth: true
-            , changeYear: true
-            , buttonImage: "/img/datepicker.gif" //버튼 이미지 경로
-            , buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함            
-            , yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
-            , monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
-            , minDate: "-10Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-            , maxDate: "+0Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                      
-            , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
-            , closeText: '확인'  // 닫기 버튼 패널
-            , currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널
-            onClose: function(dateText, inst) { 
-                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
-            }
-        });
+    // $(function () {
+    //     //input을 datepicker로 선언
+    //     $("#datepicker1, #datepicker2").datepicker({
+    //         dateFormat: "yy-mm-dd" // 텍스트 필드에 입력되는 날짜 형식.
+    //         , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+    //         , showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서            
+    //         , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+    //         , changeMonth: true
+    //         , changeYear: true
+    //         , buttonImage: "/img/datepicker.gif" //버튼 이미지 경로
+    //         , buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함            
+    //         , yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+    //         , monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
+    //         , minDate: "-10Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+    //         , maxDate: "+0Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                                  
+    //         , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
+    //         , closeText: '확인'  // 닫기 버튼 패널
+    //         , currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널
+    //         onClose: function(dateText, inst) { 
+    //             $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+    //         },
+    //         onSelect: function() { 
+    //             var dateObject = $(this).datepicker('getDate'); 
+    //         }
+    //     });
 
-        //초기값을 오늘 날짜로 설정해줘야 합니다.
-        $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
+    //     //초기값을 오늘 날짜로 설정해줘야 합니다.  
+    //     $("#datepicker").datepicker().val() //2014-4-15      
+    //     // $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)                            
+    // });
+
+    $("#datepicker1, #datepicker2").datepicker({
+        dateFormat: "yymmdd" // 텍스트 필드에 입력되는 날짜 형식.
+        , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+        , showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서            
+        , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+        , changeMonth: true
+        , changeYear: true
+        , buttonImage: "/img/datepicker.gif" //버튼 이미지 경로
+        , buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함            
+        , yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+        , monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
+        // , minDate: "-10Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+        , maxDate: "+0Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                                  
+        , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
+        , closeText: '확인'  // 닫기 버튼 패널
+        , currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널  
+        onClose: function(dateText, inst) { 
+            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+        },   
+    });    
+
+    $("#datepicker1, #datepicker2").each(function () {
+        var dataVal = $(this).val();
+        var dataVal2 = dataVal + '01';
+        $(this).datepicker('setDate', dataVal2);
     });
 
     // paginate
     $(function () {
-        $('.paginate a img').each(function () {        
+        $('.paginate a img').each(function () {
             if ($(this).children().last().is('img').length == 0) {
                 // console.log("페이징에 넘김 없는 경우");                    
-            } else {                    
+            } else {
                 // 페이징에 넘김 있는 경우
                 $(this).parent().css({
-                    border : '1px solid #fff',                
+                    border: '1px solid #fff',
                 });
             }
         });
@@ -302,11 +333,11 @@ $(document).ready(function () {
     });
     $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
         // $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide'); 차트 리사이즈 버튼, 차트js에 넣어서 여기선 주석처리   
-    })    
-    
-    $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function() {
-        $('.highcharts-root').append( "<div>Handler for .resize() called.</div>" );
-      });
+    })
+
+    $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function () {
+        $('.highcharts-root').append("<div>Handler for .resize() called.</div>");
+    });
 
 
     // 자세히보기 열기닫기
@@ -332,16 +363,6 @@ $(document).ready(function () {
     // $('.form_resetBtn').on('click', function () {
     //     $("#shopping_form")[0].reset();
     // });
-    // 종목쇼핑 오름내림 차순 
-    $('.thead2_table thead td.order').on('click', function () {
-        if ($(this).hasClass("high") === true) {
-            console.log("높");
-            $(this).removeClass('high').addClass('lower');
-        } else if ($(this).hasClass("lower") === true) {
-            console.log("낮");
-            $(this).removeClass('lower').addClass('high');
-        }
-    });
 
     // 테이블 필터링 숨기기,보이기
     $("#container .M_right .contents_header .data_filter .set_box").hide();
@@ -351,10 +372,10 @@ $(document).ready(function () {
 
     // 테이블 스크롤시 좌측 고정
     $(function () {
-        $('.fix_wrap').scroll(function () {            
+        $('.fix_wrap').scroll(function () {
             var fix01 = $('tbody .fix:nth-child(1)').outerWidth();
             var fix02 = $('tbody .fix:nth-child(2)').outerWidth();
-            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();                        
+            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();
             $('.fix:nth-child(1)').css('left', '0');
             $('.fix:nth-child(2)').css('left', fix01);
             $('.fix:nth-child(3)').css('left', fix02);
@@ -364,9 +385,9 @@ $(document).ready(function () {
 
     // 댓글 삭제 숨기기,보이기
     $("#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box").hide();
-    $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_article .button').on('click', function () {                
+    $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_article .button').on('click', function () {
         $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box').hide();
-        $(this).parent().siblings('.report_set').children('.set_box').toggle();        
+        $(this).parent().siblings('.report_set').children('.set_box').toggle();
     });
     $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box .set_filter .top .clse img').on('click', function () {
         $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box').fadeOut();
@@ -375,10 +396,10 @@ $(document).ready(function () {
     //
     $('#container .M_right .page_drop ul').hide();
     $('#container .M_right .page_drop .select_active').on('click', function () {
-        var saleft = $('#container .M_right .page_drop .select_active').position();        
+        var saleft = $('#container .M_right .page_drop .select_active').position();
         $('#container .M_right .page_drop ul').slideToggle('fast').css({
-            left : saleft.left,
-            right : saleft.left,
+            left: saleft.left,
+            right: saleft.left,
         });
     });
 
@@ -482,55 +503,55 @@ $(document).ready(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    });    
+    });
 
     // table 좌측 고정
     // $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
 
     // table 스크롤 위치        
-    var agent = navigator.userAgent.toLowerCase();    
-    $(".fix_wrap").on("scroll", function () {     
+    var agent = navigator.userAgent.toLowerCase();
+    $(".fix_wrap").on("scroll", function () {
         // var positionLeft =  new $(".fix_wrap").scrollLeft();           
         // console.log("positionLeft = " + positionLeft);
         $('.fix_table thead').css({
             // 'position' : 'relative',            
             // 'left' : 0 - positionLeft
-        });        
+        });
 
-        if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+        if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
             // ie일 경우
             $('.fix_table thead .fix').css({
                 // 'left' : 0
             });
-        } else{
+        } else {
             // ie가 아닐 경우
             $('.fix_table thead .fix').css({
                 // 'left' : 0 + positionLeft
             });
         }
-        
+
     });
     $(window).scroll(function () {
         if ($('.table.fix_table').length) {
-            var jbOffset = $(".table.fix_table").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                                
+            var jbOffset = $(".table.fix_table").offset();
+            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {               
-                $('.data_filter .table_search .AutoComplete').hide();         
+            if ($(document).scrollTop() >= jbOffset.top - 44) {
+                $('.data_filter .table_search .AutoComplete').hide();
                 $('.fix_table thead').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': positionTop,
                 });
                 $('.fix_table. thead td').css({
-                    'visibility' : 'visible',                
+                    'visibility': 'visible',
                 });
                 $('.fix_table thead th, .fix_table thead td, .fix_table thead tr').css({
                     // 'background-color' : '#fff !important',                
                 });
-            } else {            
+            } else {
                 $('.fix_table thead').css({
-                    'position' : 'relative',
-                    'top': '0',                
+                    'position': 'relative',
+                    'top': '0',
                 });
                 // $('.fix_table thead').css({
                 //     'visibility' : 'hidden',                
@@ -539,54 +560,54 @@ $(document).ready(function () {
                 //     // 'background-color' : '#fff',                
                 // });
             }
-        }   
-        
+        }
+
         if ($('.table.table_oneview').length) {
             console.log("test");
-            var jbOffset = $(".table.table_oneview").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.table_oneview").offset().top + 42;                                
+            var jbOffset = $(".table.table_oneview").offset();
+            var positionTop = $(window).scrollTop() - $(".table.table_oneview").offset().top + 42;
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+            if ($(document).scrollTop() >= jbOffset.top - 44) {
                 $('.table.table_oneview thead').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': positionTop,
-                });                
-            } else {            
+                });
+            } else {
                 $('.table.table_oneview thead').css({
-                    'position' : 'relative',
-                    'top': '0',                
-                });                
+                    'position': 'relative',
+                    'top': '0',
+                });
             }
-        }          
+        }
 
         if ($('.excavation_area.pattern .tab_content .thead2_table').length) {
             console.log("test");
-            var jbOffset = $(".table.thead2_table").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.thead2_table").offset().top + 42;                                
+            var jbOffset = $(".table.thead2_table").offset();
+            var positionTop = $(window).scrollTop() - $(".table.thead2_table").offset().top + 42;
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+            if ($(document).scrollTop() >= jbOffset.top - 44) {
                 $('.table.thead2_table thead').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': positionTop,
-                });                
-            } else {            
+                });
+            } else {
                 $('.table.thead2_table thead').css({
-                    'position' : 'relative',
-                    'top': '0',                
-                });                
+                    'position': 'relative',
+                    'top': '0',
+                });
             }
-        }  
+        }
     });
-    
-    
+
+
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');
     });
 
-    
+
     //가이드 레이어 툴팁
-    $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {        
+    $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {
         $('.guide_layer').css({ 'z-index': 80 });
         $('.guide_box').show(300);
     });
@@ -608,6 +629,6 @@ $(document).ready(function () {
     }
     textarealength();
 
-    
+
 
 });
