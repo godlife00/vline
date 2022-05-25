@@ -5453,6 +5453,10 @@ input[type='radio']:checked:before {
   color: #3655d6;
 }
 
+#container .M_right .contents .bic_chartbox .chart_line .con_box .left .chart_BIC .BICchart_style .highcharts-point {
+  stroke-width: 1;
+}
+
 #container .M_right .contents .bic_chartbox .chart_line .con_box .right {
   width: calc(100% - 540px);
   padding-right: 5px;
