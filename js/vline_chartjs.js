@@ -6293,6 +6293,22 @@ $(document).ready(function () {
         };
         chartReflow();
     });
+    if ($('#container .M_right .contents_header .table_filter .detail span.simple').hasClass('active')) {        
+        console.log("샘플버튼 활성화 된 상태라면");
+
+        $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggle(0);
+        var LeftWidth = $('#container .M_right .contents .bic_chartbox .chart_line .con_box .left').width();
+        var LeftHeight = $('#container .M_right .contents .bic_chartbox .chart_line .con_box .left').height();
+
+        function chartReflow() {
+            reflowchart01.setSize(LeftWidth, LeftHeight);
+            reflowchart02.setSize(LeftWidth, LeftHeight);
+            reflowchart03.setSize(LeftWidth, LeftHeight);
+            reflowchart04.setSize(LeftWidth, LeftHeight);
+        };
+        chartReflow();
+    }
+
 
     //종목발굴 BIC 차트 - 주가 & 순이익지수
     if ($('#BICchart_ptn01').length) {

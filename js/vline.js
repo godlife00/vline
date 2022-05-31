@@ -300,14 +300,13 @@ $(document).ready(function () {
     $('#container .M_right .contents_header .table_filter .detail span.table_view').on('click', function () {
         $('.table tr.hide_line').toggle();
     });
-    $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
-        // $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide'); 차트 리사이즈 버튼, 차트js에 넣어서 여기선 주석처리   
-    })
-
+    if ($('#container .M_right .contents_header .table_filter .detail span.table_view').hasClass('active')) {
+        $('.table tr.hide_line').show();
+    }
     $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function () {
         $('.highcharts-root').append("<div>Handler for .resize() called.</div>");
     });
-
+    
 
     // 자세히보기 열기닫기
     $('#container .M_right .sum_box .more').on('click', function () {
@@ -573,6 +572,11 @@ $(document).ready(function () {
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');
     });
+    if ($('#container .M_right .contents_header .table_filter .detail span.table_int').hasClass('active')) {        
+        $('.table.fix_table').removeClass('txtInt');
+    } else {        
+        $('.table.fix_table').addClass('txtInt');
+    }
 
 
     //가이드 레이어 툴팁
