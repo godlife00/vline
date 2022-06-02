@@ -80,6 +80,8 @@
                             <span class="per">(+1.38%)</span>
                         </div>
 
+                        <span class="table_update">기준 : 04/29 13:23</span>                        
+
                         <div class="dtcon">
                             <ul>
                                 <li>
@@ -125,6 +127,9 @@
                     <!-- //data_area -->
                 </div>
                 <!-- //detail_box -->
+                <div class="update_acc">
+                    <p class="">21.2Q 업데이트 - <strong>주요계정</strong></p>
+                </div>
                 <br>
                 <div class="detail_box">                    
                     <div class="data_area">
@@ -315,55 +320,52 @@
                                 <div class="set_filter">
                                     <div class="top">
                                         <p class="title">보기</p>
-                                        <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+                                        <span class="clse"><img src="/img/clse.png" alt="닫기"></span>
                                     </div>
                                     <div class="mid">
                                         <div class="">
                                             <span class="title">재무제표</span>
                                             <label>
-                                                <input name="line_01" type="radio" checked><span>연결</span>
+                                                <input name="master_chk" type="radio" value="C" checked=""><span>연결</span>
                                             </label>
                                             <label>
-                                                <input name="line_01" type="radio"><span>개별</span>
+                                                <input name="master_chk" type="radio" value="P"><span>개별</span>
                                             </label>
                                         </div>
                                         <div class="">
                                             <span class="title">회계</span>
                                             <label>
-                                                <input name="line_02" type="radio" checked><span>국제회계(IFRS)</span>
+                                                <input name="accounts_chk" type="radio" value="I" checked=""><span>국제회계(IFRS)</span>
                                             </label>
                                             <label>
-                                                <input name="line_02" type="radio"><span>일반회계(GAAP)</span>
+                                                <input name="accounts_chk" type="radio" value="G"><span>일반회계(GAAP)</span>
                                             </label>
                                         </div>
-
-                                        <div class="">
-                                            <span class="title">기준(분기)</span>
-                                            <label>
-                                                <input name="line_04" type="radio"><span>일반</span>
-                                            </label>
-                                            <label>
-                                                <input name="line_04" type="radio" checked><span>보고서값</span>
-                                            </label>
-                                        </div>
-
-
-
                                         <div class="">
                                             <span class="title">보기</span>
                                             <label>
-                                                <input name="line_03" type="radio" checked><span>데이터</span>
+                                                <input name="view_chk" type="radio" value="D" checked=""><span>데이터</span>
+                                            </label>
+                                
+                                            <label>
+                                                <input name="view_chk" type="radio" value="C"><span>구성비율</span>
                                             </label>
                                             <label>
-                                                <input name="line_03" type="radio"><span>구성비율</span>
+                                                <input name="view_chk" type="radio" value="G"><span>성장률</span>
+                                            </label>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">정렬기준</span>
+                                            <label>
+                                                <input name="year_chk" type="radio" value="D" checked=""><span>최근년도순</span>
                                             </label>
                                             <label>
-                                                <input name="line_03" type="radio"><span>성장률</span>
+                                                <input name="year_chk" type="radio" value="G"><span>과거년도순</span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="btm">
-                                        <input type="submit" value="확인" name="" id="" class="btn_submit">
+                                        <input type="submit" value="확인" name="" id="search_btn" onclick="javascript:fnFormSubmit('search_form', 'mrt', '');" class="btn_submit">
                                     </div>
                                 </div>
                             </form>

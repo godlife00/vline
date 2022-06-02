@@ -1566,6 +1566,14 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
+#container .M_left .detail_box .data_area .table_update {
+  display: block;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: -0.3px;
+  color: #656d7e;
+}
+
 #container .M_left .detail_box .data_area .dtcon {
   margin-top: 16px;
 }
@@ -3196,10 +3204,6 @@ input[type='radio']:checked:before {
   width: 100%;
 }
 
-.valueline #wrap #container .indices_area .table_box .indices_table th, .valueline #wrap #container .indices_area .table_box .indices_table td {
-  text-align: center;
-}
-
 .valueline #wrap #container .indices_area .table_box .indices_table thead th {
   border-bottom: 2px solid #7389af;
   padding-bottom: 6px;
@@ -3207,6 +3211,7 @@ input[type='radio']:checked:before {
   font-weight: normal;
   letter-spacing: -0.3px;
   color: #7389af;
+  text-align: center;
 }
 
 .valueline #wrap #container .indices_area .table_box .indices_table thead .title {
@@ -3218,11 +3223,12 @@ input[type='radio']:checked:before {
 
 .valueline #wrap #container .indices_area .table_box .indices_table tbody td {
   border-bottom: 1px solid #e7eaf2;
-  padding: 10px 5px;
+  padding: 10px 8px 10px 5px;
   font-size: 14px;
   font-weight: normal;
   letter-spacing: -0.35px;
   color: #222;
+  text-align: right;
 }
 
 .valueline #wrap #container .indices_area .table_box .indices_table tbody td:first-child {
@@ -7429,6 +7435,10 @@ input[type='radio']:checked:before {
   letter-spacing: -0.45px;
   color: #656d7e;
   padding-bottom: 30px;
+}
+
+#container .M_right .contents .sectors_area.matrix .table_update {
+  top: -28px;
 }
 
 .top_swbox {
