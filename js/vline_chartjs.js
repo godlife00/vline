@@ -6924,7 +6924,7 @@ $(document).ready(function () {
                     style: {
                         color: '#939393',
                         fontSize: '0.85rem'
-                    }
+                    },
                 }
             }],
             yAxis: {
@@ -6964,25 +6964,27 @@ $(document).ready(function () {
             },
             series: [{
                 name: '종목',
-                data: [97]
+                data: [28.10]
             }, {
                 name: '영업평균',
-                data: [85]
+                data: [13.01]
             }, {
                 name: '전체평균',
-                data: [25]
+                data: [10.66]
             }],
 
             plotOptions: {
                 series: {
                     marker: {
                         enabled: false,
-                    }
+                    },                    
                 },
                 column: {
                     minPointLength: 5,
+                    
                     dataLabels: {
                         enabled: true,
+                        allowOverlap : true,
                         crop: false,
                         color: '#656d7e',
                         overflow: 'none',
