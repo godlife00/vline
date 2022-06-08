@@ -794,14 +794,19 @@
                     margin-top: 15px;
                     .treemap_style {
                         height: 555px;           
-                        text {                   
+                        text, a  {                   
                             font-size: 14px !important;                                     
                             color: #fff !important;
                             fill: #fff !important;
                             font-weight: bold;
                             text-shadow: none;
                             tspan {                                
-                                stroke: none;                                                   
+                                stroke: none;       
+                                font-size: 14px !important;                                     
+                                color: #fff !important;
+                                fill: #fff !important;
+                                font-weight: bold;
+                                text-shadow: none;                                            
                             }
                             .highcharts-br {
                                 background-color: red;

@@ -131,8 +131,8 @@ $(document).ready(function () {
             colorAxis: {
                 min: 1,
                 max: 3,
-                minColor: '#1E51F5',
-                maxColor: '#C5D0E2'
+                minColor: '#475EBF',
+                maxColor: '#BE2F23'
             },
 
             title: {
@@ -157,53 +157,114 @@ $(document).ready(function () {
 
             series: [{
                 type: 'treemap',
-                layoutAlgorithm: 'squarified',
+                layoutAlgorithm: 'squarified',                                
                 data: [
                     {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 6,
-                        colorValue: 1,
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3916177,
+                        color: '#BE2F23',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG에너지솔루션 <br> 0% </a>',
+                        value: 1012050,
+                        color: '#656D7E',
                     }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 1,
-                        colorValue: 1,
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">SK하이닉스 <br> 0% </a>',
+                        value: 771683,
+                        color: '#656D7E',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">삼성바이오로직스 <br> 2% 이상 </a>',
+                        value: 591456,
+                        color: '#D97B72',
                     }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자우 <br> 1% 이상 </a>',
+                        value: 490440,
+                        color: '#F7BDB8',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">NAVER <br> 0% </a>',
+                        value: 453596,
+                        color: '#656D7E',
                     }, {
-                        name: '삼성전자 <br> 20.28%C',
-                        value: 3,
-                        colorValue: 3
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">LG화학 <br> -3% 이상 </a>',
+                        value: 400259,
+                        color: '#475EBF',
                     }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 4,
-                        colorValue: 3
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">현대차 <br> -2% 이상</a>',
+                        value: 391013,
+                        color: '#8AB4F7',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성SDI <br> -1% 이상</a>',
+                        value: 377517,
+                        color: '#C5D6F2',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 2,
-                        colorValue: 2
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">카카오 <br> 3% 이상 </a>',
+                        value: 363708,
+                        color: '#BE2F23',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 1,
-                        colorValue: 1
-                    }]
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">기아 <br> 2% 이상 </a>',
+                        value: 336857,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">POSCO홀딩스 <br> 1% 이상 </a>',
+                        value: 250662,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">KB금융 <br> 0% </a>',
+                        value: 235453,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">셀트리온 <br> -3% 이상 </a>',
+                        value: 227340,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">SK이노베이션 <br> -2% 이상</a>',
+                        value: 222380,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성물산 <br> -1% 이상</a>',
+                        value: 218658,
+                        color: '#C5D6F2',
+                    },  {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">신한지주 <br> -1% 이상</a>',
+                        value: 214150,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">현대모비스 <br> -1% 이상</a>',
+                        value: 204278,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">카카오뱅크 <br> -1% 이상</a>',
+                        value: 190028,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">SK <br> -1% 이상</a>',
+                        value: 182037,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">LG전자 <br> -1% 이상</a>',
+                        value: 168557,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">한국전력 <br> -1% 이상</a>',
+                        value: 148615,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">HMM <br> -1% 이상</a>',
+                        value: 147201,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">하나금융지주 <br> -1% 이상</a>',
+                        value: 138483,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">크래프톤 <br> -1% 이상</a>',
+                        value: 134536,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">S-Oil <br> -1% 이상</a>',
+                        value: 133967,
+                        color: '#C5D6F2',
+                    },
+                ]
             }],
 
         });
@@ -223,8 +284,8 @@ $(document).ready(function () {
             colorAxis: {
                 min: 1,
                 max: 3,
-                minColor: '#1E51F5',
-                maxColor: '#C5D0E2'
+                minColor: '#475EBF',
+                maxColor: '#BE2F23'
             },
 
             title: {
@@ -244,218 +305,468 @@ $(document).ready(function () {
             },
 
             tooltip: {
-                enabled: false
+                enabled: false 
             },
 
             series: [{
                 type: 'treemap',
-                layoutAlgorithm: 'squarified',
+                layoutAlgorithm: 'squarified',                                
                 data: [
                     {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 6,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 1,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
                         value: 3,
-                        color: '#d30000'
+                        color: '#BE2F23',
                     }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%C',
-                        value: 3,
-                        colorValue: 3
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 4,
-                        colorValue: 3
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
                         value: 2,
-                        colorValue: 2
+                        color: '#D97B72',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
                         value: 1,
-                        colorValue: 1
+                        color: '#F7BDB8',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
                         value: 1,
-                        colorValue: 1,
+                        color: '#656D7E',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%C',
-                        value: 3,
-                        colorValue: 3
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 4,
-                        colorValue: 3
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
                         value: 1,
-                        colorValue: 1,
+                        color: '#656D7E',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
                         value: 3,
-                        color: '#d30000'
+                        color: '#475EBF',
                     }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
                         value: 2,
-                        colorValue: 2
+                        color: '#8AB4F7',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
                         value: 1,
-                        colorValue: 1
+                        color: '#C5D6F2',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 1,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
                         value: 3,
-                        color: '#d30000'
+                        color: '#BE2F23',
                     }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 1,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%C',
-                        value: 3,
-                        colorValue: 3
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 1,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 4,
-                        colorValue: 3
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
                         value: 2,
-                        colorValue: 2
+                        color: '#D97B72',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 5,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
                         value: 1,
-                        colorValue: 1,
+                        color: '#F7BDB8',
                     }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 3,
-                        color: '#d30000'
-                    }, {
-                        name: '삼성전자 <br> 20.28%',
-                        value: 3,
-                        colorValue: 1,
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
-                        value: 4,
-                        color: '#d30000'
-                    }, {
-                        name: 'LG디스플레이 <br> 12.45%',
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
                         value: 1,
-                        colorValue: 1
-                    }]
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    },     
+                    {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
+                        value: 3,
+                        color: '#BE2F23',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> 2% 이상 </a>',
+                        value: 2,
+                        color: '#D97B72',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 1% 이상 </a>',
+                        value: 1,
+                        color: '#F7BDB8',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 0% </a>',
+                        value: 1,
+                        color: '#656D7E',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -3% 이상 </a>',
+                        value: 3,
+                        color: '#475EBF',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG디스플레이 <br> -2% 이상</a>',
+                        value: 2,
+                        color: '#8AB4F7',
+                    }, {
+                        name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> -1% 이상</a>',
+                        value: 1,
+                        color: '#C5D6F2',
+                    },                    
+                ]          
             }],
 
         });

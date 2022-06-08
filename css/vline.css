@@ -4403,7 +4403,7 @@ input[type='radio']:checked:before {
   height: 555px;
 }
 
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text {
+.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text, .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style a {
   font-size: 14px !important;
   color: #fff !important;
   fill: #fff !important;
@@ -4411,11 +4411,16 @@ input[type='radio']:checked:before {
   text-shadow: none;
 }
 
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text tspan {
+.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text tspan, .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style a tspan {
   stroke: none;
+  font-size: 14px !important;
+  color: #fff !important;
+  fill: #fff !important;
+  font-weight: bold;
+  text-shadow: none;
 }
 
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text .highcharts-br {
+.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text .highcharts-br, .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style a .highcharts-br {
   background-color: red;
 }
 
