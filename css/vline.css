@@ -4447,16 +4447,25 @@ input[type='radio']:checked:before {
 }
 
 .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text, .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style a {
+  font-size: 1rem;
   color: #fff !important;
   fill: #fff !important;
-  text-shadow: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px;
 }
 
 .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text tspan, .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style a tspan {
-  stroke: none;
   color: #fff !important;
   fill: #fff !important;
-  text-shadow: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px;
+  stroke: none;
 }
 
 .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text .highcharts-br, .valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style a .highcharts-br {
