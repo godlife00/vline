@@ -3301,6 +3301,10 @@ input[type='radio']:checked:before {
           box-sizing: border-box;
 }
 
+.valueline #wrap #container .new_listing .left .new_tabs tbody td:nth-child(2) {
+  padding-right: 0;
+}
+
 .valueline #wrap #container .new_listing .left .new_tabs .tab_area ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7407,10 +7411,6 @@ input[type='radio']:checked:before {
 
 #container .M_right .contents .sectors_area .thead2_table thead tr:first-child th.fix, #container .M_right .contents .sectors_area .thead2_table thead tr:first-child td.fix {
   height: 60px;
-}
-
-#container .M_right .contents .sectors_area .thead2_table thead tr:first-child th.fix::before, #container .M_right .contents .sectors_area .thead2_table thead tr:first-child td.fix::before {
-  height: 59px;
 }
 
 #container .M_right .contents .sectors_area .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .sectors_area .thead2_table thead tr:nth-child(2) td {

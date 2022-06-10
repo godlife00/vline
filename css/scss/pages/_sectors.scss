@@ -40,7 +40,7 @@
                     &.fix {
                         height: 60px;
                         &::before {
-                            height: 59px;
+                            // height: 59px;
                         }
                     }
                 }                    
@@ -123,7 +123,7 @@
         }
         .table_update {            
             top: -28px;            
-        }  
+        }          
     }
     
 }
