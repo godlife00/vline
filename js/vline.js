@@ -263,29 +263,26 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).show();
     });
-
-    //연환산,연간,분기 테이블 탭
-    // $("#container .M_right .contents .tab_content").hide();
-    // $("#container .M_right .contents .tab_content:first").show();
-    $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
-        $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
-        $(this).addClass("active");
-        // $("#container .M_right .contents .tab_content").hide();
-        // var activeTab = $(this).attr("rel");
-        // $("#" + activeTab).show();
+    // 메인 마켓차트 업종,상위100종목 탭
+    $(".chart_tabs .tab_content").hide();
+    $(".chart_tabs .tab_content:first").show();
+    $(".chart_tabs .tab_area ul li").on('click', function () {
+        $(".chart_tabs .tab_area ul li").removeClass("active");
+        $(this).addClass("active");        
+        $(".chart_tabs .tab_content").hide();                
+    });
+    $(".chart_tabs .tab_area ul li:first-child").on('click', function () {        
+        $(".chart_tabs .tab_content#tabcon_sec").show();                
+    });
+    $(".chart_tabs .tab_area ul li:last-child").on('click', function () {        
+        $(".chart_tabs .tab_content#tabcon_top").show();                
     });
 
-    // 업종분석 매트릭스 차트 보이게 하는 버튼            
-    // $(function () {        
-    //     var loc = window.location.href; // returns the full URL            
-    //     if (/keyword/.test(loc)) {
-    //         console.log("test");            
-    //         $(".table_filter .term span").removeClass("active");
-    //         $(".table_filter .term span:nth-child(2)").addClass("active");
-    //         $(".tab_content:nth-child(1)").hide();
-    //         $(".tab_content:nth-child(2)").fadeIn();
-    //     } 
-    // });
+    //연환산,연간,분기 테이블 탭    
+    $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
+        $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
+        $(this).addClass("active");        
+    });
 
     // 
     $('#container .M_right .contents_header .data_filter .set_box .set_filter .top .clse img').on('click', function () {
@@ -326,11 +323,6 @@ $(document).ready(function () {
             $('#container .M_right .sum_box .more').text("자세히");
         }
     });
-
-    // // 쇼핑리스트 리셋
-    // $('.form_resetBtn').on('click', function () {
-    //     $("#shopping_form")[0].reset();
-    // });
 
     // 테이블 필터링 숨기기,보이기
     $("#container .M_right .contents_header .data_filter .set_box").hide();
@@ -392,13 +384,8 @@ $(document).ready(function () {
 
         console.log("divTop = " + divTop);
 
-        // 레이어가 화면 크기를 벗어나면 위치를 바꾸어 배치한다.
+        
         if (divLeft + oWidth > sWidth) divLeft -= oWidth;
-        // if( divTop + oHeight > sHeight ) divTop -= oHeight;
-
-        // 레이어 위치를 바꾸었더니 상단기준점(0,0) 밖으로 벗어난다면 상단기준점(0,0)에 배치하자.
-        // if( divLeft < 0 ) divLeft = 0;
-        // if( divTop < 0 ) divTop = 0;
 
         $('.layer_pop').css({
             "top": divTop,
@@ -521,12 +508,6 @@ $(document).ready(function () {
                     'position': 'relative',
                     'top': '0',
                 });
-                // $('.fix_table thead').css({
-                //     'visibility' : 'hidden',                
-                // });
-                // $('.clone thead th, .clone thead td, .clone thead tr').css({
-                //     // 'background-color' : '#fff',                
-                // });
             }
         }
 

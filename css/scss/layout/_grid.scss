@@ -775,7 +775,7 @@ input[type='radio']:checked:before {
 
 
 /* select */
-.selectbox {
+.selectbox {    
     position: relative;
     width: 70%;
     height: 26px;
@@ -791,7 +791,9 @@ input[type='radio']:checked:before {
 
 /* 가상 선택자를 활용 화살표 대체 */
 .selectbox:before {
+    cursor: pointer;
     content: "";
+    display: inline-block;
     position: absolute;
     top: 0;
     right: 0;

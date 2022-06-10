@@ -612,8 +612,7 @@
                         }
     
                         &.mid_td {
-                            tr:first-child {
-                                background: red;
+                            tr:first-child {                                
                                 td {
                                     padding-top: 50px;
                                 }                            
@@ -763,7 +762,7 @@
                                 font-size: 12px;
                                 letter-spacing: -0.6px;                                
                                 padding-left: 16px;
-                                margin-top: 3px;
+                                margin-top: 6px;
                                 color: #3655d6;
                                 // background-color: blanchedalmond;
 
@@ -790,9 +789,9 @@
                                     
                                 }
                                 &.phone {                                    
-                                    &::before {                                        
-                                        top:5px;
-                                    }
+                                    // &::before {                                        
+                                    //     top:5px;
+                                    // }
                                 }
                             }        
                             .mod_phone {                                                                                
@@ -802,8 +801,7 @@
                                 .phone_mod {
                                     box-sizing: border-box;
                                     vertical-align: top;
-                                    height: 28px;                                                               
-                                    margin-top: 5px;
+                                    height: 28px;                                                                                                   
                                     padding: 7px 0 7px 7px;
                                     border-top-left-radius:3px;
                                     border-bottom-left-radius:3px;
@@ -817,10 +815,10 @@
                                     }                                   
                                 }
                                 .certifi_btn {         
+                                    cursor: pointer;
                                     display: inline-block;                                    
                                     vertical-align: top;
-                                    height: 28px;                                                               
-                                    margin-top: 5px;
+                                    height: 28px;                                                                                                   
                                     padding: 2px 10px;
                                     box-sizing:border-box;
                                     background:$colpmr;
@@ -1654,8 +1652,7 @@
 
 
 // 카드정보 확인
-.setting_pop {
-    background-color: red;
+.setting_pop {    
     .setting_area {
         background-color: gray;
     }
@@ -1947,24 +1944,61 @@
 .mapage_form .form_table td {
 	color:#333;
 	font-size:0.9375rem;
+    .item {        
+        display: flex;
+        // gap: 6px;
+        flex-wrap: wrap;
+        .i_dsc {
+            width: 100%;
+        }        
+    }
 }
-.mapage_form .form_table td .i_dsc {
-	clear:both;
-	float:none;
+.mapage_form .form_table td .i_dsc {	
 	color:#3655d6;
 	font-size:0.75rem;
-	line-height:14px;
-	margin-top:6px;
+	line-height:14px;	
+    padding-left: 16px;        
+    position: relative;
+    &::before {
+        content: '';
+        display:inline-block;
+        vertical-align:top;
+        position: absolute;        
+        top:0;
+        left: 0;                                                
+        background: url('/img/icon_preinfo.svg') no-repeat 0 0;
+        width:12px;
+        height:12px;                                    
+    }
+    &.pass {
+        &::before {            
+            top:0;
+            left: 0;                                                
+            background: url('/img/icon_preinfo.svg') no-repeat 0 0;
+        }
+    }    
+    &.coupon {
+        color: #ff0200 !important;                                                     
+        &::before {            
+            top:6px;
+            left: 0;                                                
+            background: url('/img/icon_preinfo.svg') no-repeat 0 0;
+        }        
+    }
+    &.error {
+        margin-top: 8px;
+        color: #ff0200 !important;                                                     
+        &::before {                
+            top:0;
+            left: 0;                                                
+            background: url('/img/bg_error.png') no-repeat 0 0;
+            background-size: 12px 12px;
+        }
+        
+    }
 }
 .mapage_form .form_table td .i_dsc i {
     display: none;
-	// position:relative;
-	// top:2px;
-	// margin-right:5px;
-	// display:inline-block;
-	// width:14px;
-	// height:14px;
-	// background:url('/img/bg_x.png') no-repeat 0 0;
 }
 .mapage_form .form_table td .i_dsc.phone_premium {
     float: left;    
@@ -1973,7 +2007,7 @@
 .mapage_form .form_table td .i_dsc.phone {
 	color:#ff0200;
 	margin-top:0;
-	padding-top:6px;
+	// padding-top:6px;
 }
 .mapage_form .form_table td .i_dsc.phone i {
 	background-position:0 100%;
@@ -2012,8 +2046,9 @@
 }
 .mapage_form .form_table td .certification_area .certifi_btn,
 .mapage_form .form_table td .certifi_btn {
-	float:left;
-	vertical-align:top;
+	// float:left;
+    cursor: pointer;
+    background-color: yellow;	
 	background:#3655d6;
 	color:#fff;
 	font-size:0.75rem;
@@ -2025,9 +2060,7 @@
 	border-bottom-right-radius:5px;
 }
 .mapage_form .form_table td .certification_area .phone_mod,
-.mapage_form .form_table td .phone_mod {
-	float:left;
-	vertical-align:top;
+.mapage_form .form_table td .phone_mod {    	
 	border:none;
 	height:25px;
 	line-height:25px;
@@ -2270,9 +2303,7 @@
 	color:#333;
 	font-size:0.9375rem;
 }
-.payment_guide .mapage_form .form_table td .i_dsc {
-	clear:both;
-	float:none;
+.payment_guide .mapage_form .form_table td .i_dsc {	
 	color:#3655d6;
 	font-size:0.75rem;
 	line-height:14px;
@@ -2299,12 +2330,13 @@
 	display:inline-block;
 	border:1px solid #3655d6;
 	border-radius:3px;
-	width:100px;
+	width:auto;
 	color:#3655d6;
 	font-size:0.75rem;
 	text-align:center;
-	padding:5px 3px;
+	padding: 1px 9px;;
 	box-sizing:border-box;
+    margin-left: 10px;
 }
 .payment_guide .mapage_form .form_table td .mod_coupon .txt_info {
 	display:inline-block;
@@ -2319,8 +2351,9 @@
 }
 .payment_guide .mapage_form .form_table td .certification_area .certifi_btn,
 .payment_guide .mapage_form .form_table td .certifi_btn {
-	float:left;
-	vertical-align:top;
+	// float:left;
+	// vertical-align:top;
+    cursor: pointer;
 	background:#3655d6;
 	color:#fff;
 	font-size:0.75rem;

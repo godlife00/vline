@@ -558,6 +558,30 @@
         // MRI
         .mriListing_table {
             @include newListingTable_style;                        
+            td {
+                &.txt_c {
+                    padding: 0 10px !important;
+                }                
+                &.up, &.down, &.same {                                                                            
+                    display: flex;
+                    gap: 3px;
+                    align-items: center;
+                    justify-content: center;                                        
+                    margin: 0 auto;                    
+                    
+                    .price {        
+                        display: inline-block;
+                        text-align: right;                
+                        width: 30px;
+                    }                        
+                    .per {                   
+                        display: inline-block;     
+                        text-align: left;                                                
+                        width: 30px;
+                    }
+                }
+                
+            }
             &:last-child {        
                 margin-top: 15px;        
                 &::before {
@@ -772,8 +796,19 @@
                 }                 
 
                 .chart_stand {
-                    display: inline-block;                    
-                    padding-left: 25px;
+                    // display: inline-block;                    
+                    // width: 100%;
+                    // padding-left: 25px;
+                    .tab_area {           
+                        position: absolute;
+                        left: 60px;
+                        top: 3px;
+                        display: inline-block;             
+                        padding-left: 25px;
+                        ul li {
+                            display: inline-block;
+                        }                        
+                    }
 
                     label {
                         cursor: pointer;
@@ -795,17 +830,17 @@
                     .treemap_style {
                         height: 555px;           
                         text, a  {                   
-                            font-size: 14px !important;                                     
+                            // font-size: 12px !important;                                     
                             color: #fff !important;
                             fill: #fff !important;
-                            font-weight: bold;
+                            // font-weight: bold;
                             text-shadow: none;
                             tspan {                                
                                 stroke: none;       
-                                font-size: 14px !important;                                     
+                                // font-size: 12px !important;                                     
                                 color: #fff !important;
                                 fill: #fff !important;
-                                font-weight: bold;
+                                // font-weight: bold;
                                 text-shadow: none;                                            
                             }
                             .highcharts-br {

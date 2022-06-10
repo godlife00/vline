@@ -131,8 +131,56 @@
                                                             </select>
                                                         </div>
                                                         <div class="item mod_coupon">
-                                                            <p class="i_dsc coupon">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
-                                                            <p class="i_dsc">결제카드 : 롯데, 삼성, 신한, 현대, NH</p><!-- ㄱㄴㄷ순 -->
+                                                            <p class="i_dsc error">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
+                                                            <p class="i_dsc pass">결제카드 : 롯데, 삼성, 신한, 현대, NH</p><!-- ㄱㄴㄷ순 -->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">휴대폰번호</th>
+                                                    <td>
+                                                        <div class="item mod_phone">
+                                                            <p class="txt_info" id="phone_number">010-4754-9624</p>
+                                                            <span class="mod_btn"><a href="#">휴대폰 번호 변경</a></span>
+                                                            <p class="i_guide">프리미엄 회원에게는 휴대폰으로 서비스 주요 업데이트 정보가 제공됩니다.</p>
+                                                            <p class="i_dsc pass">현재 사용중인 휴대폰번호 입니다</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">휴대폰번호</th>
+                                                    <td>
+                                                        <div class="item mod_phone">
+                                                            <input type="number" name="" id="" class="phone_mod">
+                                                            <span class="certifi_btn">인증문자 전송</span>
+                                                            <p class="i_guide">프리미엄 회원에게는 휴대폰으로 서비스 주요 업데이트 정보가 제공됩니다.</p>
+                                                            <p class="i_dsc error">현재 사용중인 휴대폰번호 입니다</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">신규 휴대폰번호</th>
+                                                    <td>
+                                                        <div class="item mod_phone">
+                                                            <input type="number" name="" id="" class="phone_mod">
+                                                            <span class="certifi_btn">인증문자 전송</span>
+                                                            <p class="i_guide">프리미엄 회원에게는 휴대폰으로 서비스 주요 업데이트 정보가 제공됩니다.</p>
+                                                            <p class="i_dsc pass">현재 사용중인 휴대폰번호 입니다</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">인증코드 입력</th>
+                                                    <td>
+                                                        <div class="item mod_phone">
+                                                            <input type="number" class="phone_mod" name="auth-token"
+                                                                inputmode="numeric" pattern="[0-9]*"
+                                                                autocomplete="one-time-code" placeholder="인증번호를 입력해주세요">
+                                                            <span class="certifi_btn">확인</span>
+                                                            <p class="i_dsc pass">인증완료!</p>
+                                                            <p class="i_dsc pass">제한시간 내 입력해주세요. - 2분 49초</p>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -167,7 +215,7 @@
                             </ul>
 
                             <div class="note_chk">
-                                <p class="txt"><i></i>결제금액과 결제유의사항을 확인했습니다.</p>
+                                <p class="txt">결제금액과 결제유의사항을 확인했습니다.</p>
                             </div>
                         </div>
                         <!-- //payment_note -->

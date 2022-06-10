@@ -128,13 +128,6 @@ $(document).ready(function () {
                 },
             },
 
-            colorAxis: {
-                min: 1,
-                max: 3,
-                minColor: '#475EBF',
-                maxColor: '#BE2F23'
-            },
-
             title: {
                 text: null
             },
@@ -279,13 +272,6 @@ $(document).ready(function () {
                 style: {
                     fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
                 },
-            },
-
-            colorAxis: {
-                min: 1,
-                max: 3,
-                minColor: '#475EBF',
-                maxColor: '#BE2F23'
             },
 
             title: {
