@@ -1914,32 +1914,46 @@
                     <!-- //ratio_box -->
 
                     <!-- 마켓차트 -->
-                    <div class="market_box" style="display: none;">
+                    <div class="market_box">
                         <h2 class="title">마켓차트</h2>
                         <span class="table_update">기준 08/30 / 시가총액상위</span>
-                        <div class="chart_stand">
-                            <form action="">
-                                <label>
-                                    <input name="market_radio" type="radio" checked=""><span>업종</span>
-                                </label>
-                                <label>
-                                    <input name="market_radio" type="radio"><span>상위 100 종목</span>
-                                </label>
-                            </form>
-                        </div>
-                        <!-- //chart_stand -->
+                        <!-- 차트 탭 -->
+                        <div class="chart_stand chart_tabs">
+                            <div class="tab_area">
+                                <form action="">
+                                    <ul>
+                                        <li rel="tabcon_turn" class="active"><label>
+                                            <input name="market_radio" type="radio" checked=""><span>업종</span>
+                                        </label></li>
+                                        <li rel="tabcon_mri"><label>
+                                            <input name="market_radio" type="radio"><span>상위 100 종목</span>
+                                        </label></li>
+                                    </ul>                                                                               
+                                </form>                                    
+                            </div>
 
-                        <div class="line_swbox">
-                            <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
-                        </div>
+                            <!-- 업종 -->
+                            <div id="tabcon_sec" class="tab_content">
+                                <div class="line_swbox">
+                                    <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
+                                </div>
+                                                                
+                            </div>
 
+                            <!-- 상위 100 종목 -->
+                            <div id="tabcon_top" class="tab_content">
+                                <div class="line_swbox">                                        
+                                    <div id="main_treemapTop100" class="treemap_style" style="padding: 0;"></div>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <!-- //chart_stand chart_tabs -->
                     </div>
-                    <!-- //market_box -->
+                    <!-- //market_box -->     
 
                     <!-- 하단 롱 배너 -->
                     <div class="btm_banner">
-                        <a href="inform/inform_list.html"><img src="img/banner/main_btmbannner.jpg"
-                                alt="밸류라인 100% 활용하기 서비스가이드에서 데이터 활용한 종목발굴 팁까지~"></a>
+                        <a href="inform/inform_list.html"><img src="img/banner/main_btmbannner.jpg" alt="밸류라인 100% 활용하기 서비스가이드에서 데이터 활용한 종목발굴 팁까지~"></a>
                     </div>
 
                 </div>
