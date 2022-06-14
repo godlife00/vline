@@ -523,6 +523,7 @@ body {
 
 // input
 input[type=text],
+input[type=tel],
 input[type=password],
 input[type=email] {
     &:focus {

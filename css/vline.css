@@ -733,6 +733,7 @@ body .numCunt::before {
 }
 
 input[type=text]:focus,
+input[type=tel]:focus,
 input[type=password]:focus,
 input[type=email]:focus {
   outline: none;
@@ -8865,7 +8866,9 @@ input[type='radio']:checked:before {
   padding-top: 10px;
 }
 
-.modal.login_form .pop_con .mapage_form .form_table table th, .modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th, .modal.refund .pop_con .mapage_form .form_table table td {
+.modal.login_form .pop_con .mapage_form .form_table table th,
+.modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th,
+.modal.refund .pop_con .mapage_form .form_table table td {
   padding: 7px 0;
   text-align: left;
   font-size: 14px;
@@ -9240,7 +9243,8 @@ input[type='radio']:checked:before {
   width: 100%;
 }
 
-.modal.premium_join .pop_con .tableRanking.type_compare th, .modal.premium_join .pop_con .tableRanking.type_compare td {
+.modal.premium_join .pop_con .tableRanking.type_compare th,
+.modal.premium_join .pop_con .tableRanking.type_compare td {
   text-align: center;
 }
 
@@ -9432,7 +9436,8 @@ input[type='radio']:checked:before {
   border-bottom: 1px solid #e7eaf2;
 }
 
-.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table th, .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td {
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table th,
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td {
   vertical-align: top;
   text-align: left;
 }
@@ -9548,6 +9553,173 @@ input[type='radio']:checked:before {
   text-align: center;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form {
+  display: none;
+  background-color: #f5f6fa;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .box {
+  display: block;
+  padding: 0 15px 0 35px;
+  background: #f5f6fa;
+  position: relative;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .box:first-child {
+  margin-top: 0;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .box:last-child {
+  display: none;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput,
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out {
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  letter-spacing: -0.8px;
+  padding: 8px 13px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ececef;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput {
+  color: #333;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput:focus {
+  border: none;
+  outline: none;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .dsc_error {
+  text-align: right;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #f2333a;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 6px;
+  width: 81px;
+  height: 25px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #404fc3;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #424fbc;
+  background-color: #fff;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  color: #333;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out:focus {
+  border: none;
+  outline: none;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput::-webkit-input-placeholder,
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput:-ms-input-placeholder,
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput::-ms-input-placeholder,
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput::placeholder,
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pin_countDown {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+  text-align: center;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pin_countDown span {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pin_completion {
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 6px;
+  width: 81px;
+  height: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #404fc3;
+  background-color: #404fc3;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .txt_reject {
+  text-align: right;
+  color: #3655d6;
+  font-size: 0.75rem;
+  line-height: 14px;
+  margin-top: 7px;
 }
 
 .modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box {
@@ -9808,7 +9980,8 @@ input[type='radio']:checked:before {
   color: #3655d6;
 }
 
-.modal.mypage_info .pop_con .mapage_service .right .card_table th, .modal.mypage_info .pop_con .mapage_service .right .card_table td {
+.modal.mypage_info .pop_con .mapage_service .right .card_table th,
+.modal.mypage_info .pop_con .mapage_service .right .card_table td {
   padding: 1px 0;
   font-size: 12px;
   font-weight: normal;
@@ -9816,12 +9989,14 @@ input[type='radio']:checked:before {
   color: #656d7e;
 }
 
-.modal.mypage_info .pop_con .mapage_service .right .card_table th.num, .modal.mypage_info .pop_con .mapage_service .right .card_table td.num {
+.modal.mypage_info .pop_con .mapage_service .right .card_table th.num,
+.modal.mypage_info .pop_con .mapage_service .right .card_table td.num {
   color: #222;
   padding-right: 8px;
 }
 
-.modal.mypage_info .pop_con .mapage_service .right .card_table th b, .modal.mypage_info .pop_con .mapage_service .right .card_table td b {
+.modal.mypage_info .pop_con .mapage_service .right .card_table th b,
+.modal.mypage_info .pop_con .mapage_service .right .card_table td b {
   display: inline-block;
   padding: 0 2px;
   font-weight: normal;
@@ -9894,7 +10069,8 @@ input[type='radio']:checked:before {
   padding: 3px 0 2px;
 }
 
-.modal.mypage_info .pop_con .mapage_service .service_table .btn_payCan, .modal.mypage_info .pop_con .mapage_service .service_table .btn_payRefund {
+.modal.mypage_info .pop_con .mapage_service .service_table .btn_payCan,
+.modal.mypage_info .pop_con .mapage_service .service_table .btn_payRefund {
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid #3c55ce;
@@ -9977,7 +10153,8 @@ input[type='radio']:checked:before {
   border-bottom: 1px solid #e7eaf2;
 }
 
-.modal.mypage_info .pop_con .history_area .history_table th, .modal.mypage_info .pop_con .history_area .history_table td {
+.modal.mypage_info .pop_con .history_area .history_table th,
+.modal.mypage_info .pop_con .history_area .history_table td {
   text-align: center;
 }
 
@@ -10103,33 +10280,38 @@ input[type='radio']:checked:before {
   margin-top: 11px;
 }
 
-.modal.withdrawal_sum .withdrawal_com .att_service .service_list th, .modal.withdrawal_sum .withdrawal_com .att_service .service_list td {
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list th,
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list td {
   padding: 8px 10px;
   border-top: 1px solid #e7eaf2;
   border-bottom: 1px solid #e7eaf2;
 }
 
-.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.th, .modal.withdrawal_sum .withdrawal_com .att_service .service_list td.th {
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.th,
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list td.th {
   font-size: 13px;
   letter-spacing: -0.65px;
   color: #222;
   background-color: #f5f6fa;
 }
 
-.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.th .cunt, .modal.withdrawal_sum .withdrawal_com .att_service .service_list td.th .cunt {
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.th .cunt,
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list td.th .cunt {
   display: inline-block;
   margin-right: 10px;
   color: #3655d6;
 }
 
-.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.td, .modal.withdrawal_sum .withdrawal_com .att_service .service_list td.td {
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.td,
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list td.td {
   text-align: right;
   font-size: 13px;
   letter-spacing: -0.65px;
   color: #656d7e;
 }
 
-.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.td span, .modal.withdrawal_sum .withdrawal_com .att_service .service_list td.td span {
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list th.td span,
+.modal.withdrawal_sum .withdrawal_com .att_service .service_list td.td span {
   display: inline-block;
   min-width: 50px;
   padding-left: 4px;
@@ -10443,11 +10625,20 @@ input[type='radio']:checked:before {
   color: #656d7e;
 }
 
-.modal.age_popbox01 .pop_con ul, .modal.age_popbox01 .pop_con ol, .modal.age_popbox02 .pop_con ul, .modal.age_popbox02 .pop_con ol, .modal.age_popbox03 .pop_con ul, .modal.age_popbox03 .pop_con ol {
+.modal.age_popbox01 .pop_con ul,
+.modal.age_popbox01 .pop_con ol, .modal.age_popbox02 .pop_con ul,
+.modal.age_popbox02 .pop_con ol, .modal.age_popbox03 .pop_con ul,
+.modal.age_popbox03 .pop_con ol {
   margin-top: 20px;
 }
 
-.modal.age_popbox01 .pop_con dd, .modal.age_popbox01 .pop_con dt, .modal.age_popbox01 .pop_con li, .modal.age_popbox02 .pop_con dd, .modal.age_popbox02 .pop_con dt, .modal.age_popbox02 .pop_con li, .modal.age_popbox03 .pop_con dd, .modal.age_popbox03 .pop_con dt, .modal.age_popbox03 .pop_con li {
+.modal.age_popbox01 .pop_con dd,
+.modal.age_popbox01 .pop_con dt,
+.modal.age_popbox01 .pop_con li, .modal.age_popbox02 .pop_con dd,
+.modal.age_popbox02 .pop_con dt,
+.modal.age_popbox02 .pop_con li, .modal.age_popbox03 .pop_con dd,
+.modal.age_popbox03 .pop_con dt,
+.modal.age_popbox03 .pop_con li {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.7;
@@ -10474,7 +10665,9 @@ input[type='radio']:checked:before {
   word-wrap: break-word;
 }
 
-.modal.modal.terms .pop_con .sub_terms .txt_B, .modal.modal.terms .pop_con .sub_terms .terms_title, .modal.modal.policy .pop_con .sub_terms .txt_B, .modal.modal.policy .pop_con .sub_terms .terms_title {
+.modal.modal.terms .pop_con .sub_terms .txt_B,
+.modal.modal.terms .pop_con .sub_terms .terms_title, .modal.modal.policy .pop_con .sub_terms .txt_B,
+.modal.modal.policy .pop_con .sub_terms .terms_title {
   font-weight: 700;
 }
 
@@ -11123,28 +11316,28 @@ input[type='radio']:checked:before {
   font-size: 0.9375rem;
 }
 
-.sub_freeguide .agree_area .agree_from {
+.sub_freeguide {
   margin-top: 20px;
 }
 
-.sub_freeguide .agree_area .agree_from .label {
+.sub_freeguide .label {
   background: #fff;
   border-radius: 9px;
   padding: 14px 20px 14px 12px;
 }
 
-.sub_freeguide .agree_area .agree_from .label:first-child,
-.sub_freeguide .agree_area .agree_from .label:nth-child(2) {
+.sub_freeguide .label:first-child,
+.sub_freeguide .label:nth-child(2) {
   margin-bottom: 9px;
 }
 
-.sub_freeguide .agree_area .agree_from .label .label_chk {
+.sub_freeguide .label .label_chk {
   color: #333;
   font-size: 0.82rem;
   display: inline-block;
 }
 
-.sub_freeguide .agree_area .agree_from .label .label_chk i {
+.sub_freeguide .label .label_chk i {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -11155,25 +11348,25 @@ input[type='radio']:checked:before {
   margin-right: 7px;
 }
 
-.sub_freeguide .agree_area .agree_from .label .label_chk strong {
+.sub_freeguide .label .label_chk strong {
   text-decoration: underline;
 }
 
-.sub_freeguide .agree_area .agree_from .label.active .label_chk i {
+.sub_freeguide .label.active .label_chk i {
   background-position: 0 0;
 }
 
-.sub_freeguide .agree_area .agree_from .label .label_chk.sub_label {
+.sub_freeguide .label .label_chk.sub_label {
   padding-left: 15px;
   padding-top: 10px;
   opacity: 0.5;
 }
 
-.sub_freeguide .agree_area .agree_from .label.active .label_chk.sub_label {
+.sub_freeguide .label.active .label_chk.sub_label {
   opacity: 1;
 }
 
-.sub_freeguide .agree_area .agree_from .label .terms_btn {
+.sub_freeguide .label .terms_btn {
   float: right;
   vertical-align: top;
   position: relative;
@@ -11190,29 +11383,29 @@ input[type='radio']:checked:before {
           box-sizing: border-box;
 }
 
-.sub_freeguide .agree_area .agree_from .label.free_label {
+.sub_freeguide .label.free_label {
   margin: 0;
 }
 
-.sub_freeguide .agree_area .agree_from .label.free_label:first-child {
+.sub_freeguide .label.free_label:first-child {
   padding-bottom: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.sub_freeguide .agree_area .agree_from .label.free_label:nth-child(2) {
+.sub_freeguide .label.free_label:nth-child(2) {
   padding-top: 5px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.sub_freeguide .agree_area .agree_from .payBtn {
+.sub_freeguide .payBtn {
   text-align: center;
   margin-top: 30px;
   padding: 0 15px;
 }
 
-.sub_freeguide .agree_area .agree_from .btn {
+.sub_freeguide .btn {
   color: #3655d6;
   font-size: 0.9375rem;
   border-radius: 5px;
@@ -11220,12 +11413,12 @@ input[type='radio']:checked:before {
   width: calc(100% / 2 + 60px);
 }
 
-.sub_freeguide .agree_area .agree_from .btn_save {
+.sub_freeguide .btn_save {
   color: #fff;
   background: #3655d6;
 }
 
-.sub_freeguide .agree_area .agree_from .btn_save i {
+.sub_freeguide .btn_save i {
   position: absolute;
   right: 18px;
   top: 15px;
@@ -12120,6 +12313,186 @@ input[type='radio']:checked:before {
   padding: 5px 3px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.agree_area .agree_from .label.phone_label {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 18px;
+}
+
+.agree_area .agree_from .label.phone_label .label_chk {
+  width: 100%;
+}
+
+.agree_area .agree_from .label.phone_label .guide_txt {
+  padding-top: 5px;
+  font-size: 0.75rem;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #939393;
+  line-height: 1.2;
+}
+
+.agree_area .agree_from .phonePin_form .box {
+  padding: 0 35px 10px;
+  background: #f5f6fa;
+  position: relative;
+}
+
+.agree_area .agree_from .phonePin_form .box:first-child {
+  margin-top: 0;
+}
+
+.agree_area .agree_from .phonePin_form .box:last-child {
+  display: none;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput,
+.agree_area .agree_from .phonePin_form .pinInput_out {
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  letter-spacing: -0.8px;
+  padding: 8px 13px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ececef;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput {
+  color: #333;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput:focus {
+  border: none;
+  outline: none;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.agree_area .agree_from .phonePin_form .dsc_error {
+  text-align: right;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #f2333a;
+}
+
+.agree_area .agree_from .phonePin_form .pinBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 42px;
+  top: 6px;
+  width: 81px;
+  height: 25px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #404fc3;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #424fbc;
+  background-color: #fff;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput_out {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  color: #333;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput_out:focus {
+  border: none;
+  outline: none;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput::-webkit-input-placeholder,
+.agree_area .agree_from .phonePin_form .pinInput_out::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput:-ms-input-placeholder,
+.agree_area .agree_from .phonePin_form .pinInput_out:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput::-ms-input-placeholder,
+.agree_area .agree_from .phonePin_form .pinInput_out::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput::placeholder,
+.agree_area .agree_from .phonePin_form .pinInput_out::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.agree_area .agree_from .phonePin_form .pinInput_out:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.agree_area .agree_from .phonePin_form .pin_countDown {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+  text-align: center;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.agree_area .agree_from .phonePin_form .pin_countDown span {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+}
+
+.agree_area .agree_from .phonePin_form .pin_completion {
+  cursor: pointer;
+  position: absolute;
+  right: 42px;
+  top: 6px;
+  width: 81px;
+  height: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #404fc3;
+  background-color: #404fc3;
+}
+
+.agree_area .agree_from .txt_reject {
+  text-align: right;
+  color: #3655d6;
+  font-size: 0.75rem;
+  line-height: 14px;
+  margin-top: 7px;
 }
 
 body {
