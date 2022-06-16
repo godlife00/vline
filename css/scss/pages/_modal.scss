@@ -949,11 +949,10 @@
 
                             &.phonePin_form {
                                 display: none;
-                                background-color: #f5f6fa;
+                                background-color: #fff;
                                 .box {
-                                    display: block;
-                                    padding: 0 15px 0 35px;
-                                    background: #f5f6fa;
+                                    display: block;                                    
+                                    background-color: #fff;
                                     position: relative;
                                 }
 
@@ -1002,7 +1001,7 @@
                                 .pinBtn {
                                     cursor: pointer;
                                     position: absolute;
-                                    right: 22px;
+                                    right: 9px;
                                     top: 6px;
                                     width: 81px;
                                     height: 25px;
@@ -1061,7 +1060,7 @@
                                 .pin_completion {
                                     cursor: pointer;
                                     position: absolute;
-                                    right: 22px;
+                                    right: 9px;
                                     top: 6px;
                                     width: 81px;
                                     height: 25px;
