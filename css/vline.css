@@ -5160,6 +5160,10 @@ input[type='radio']:checked:before {
   color: #3655d6;
 }
 
+.valueline #wrap #container .resultdata_area .season .box .subject dt.same {
+  color: #444;
+}
+
 .valueline #wrap #container .resultdata_area .season .box .subject dt .num {
   font-size: 14px;
   letter-spacing: -0.35px;
@@ -6694,7 +6698,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .excavation_area.pattern .paginate {
@@ -6979,7 +6983,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 49px;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td {
@@ -7025,7 +7029,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td .check {
@@ -7316,7 +7320,7 @@ input[type='radio']:checked:before {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table th, #container .M_right .contents .invest_area.greenblatt .thead2_table td {

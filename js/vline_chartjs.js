@@ -1939,6 +1939,93 @@ $(document).ready(function () {
             },
         });
     }
+    if ($('#BICchart_profit12').length) {
+        var reflowchart05 = Highcharts.chart('BICchart_profit12', {
+            chart: {
+                type: 'spline',
+                zoomType: 'xy',
+                backgroundColor: {
+                    stops: [
+                        [0, '#ffffff'],
+                        [1, '#ffffff']
+                    ]
+                },
+                style: {
+                    fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
+                },
+                marginTop: 60,
+                marginBottom: 90,
+                plotBorderColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+
+            title: {
+                text: '매출지수와 순이익지수 <span>삼성전자 (005930)</span>',
+                y: 20,
+            },
+
+            tooltip: {
+                shared: true,
+            },
+
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
+            }],
+
+
+            yAxis: [{ // 1
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+            }],
+
+
+            credits: {
+                enabled: false
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series: [{
+                name: '매출지수',
+                yAxis: 0,
+                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }, {
+                name: '순이익지수',
+                data: [142, 152, 157, 169, 197, 111, 142, 152, 157, 169, 197, 111],
+                tooltip: {
+                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}</b><br/>'
+                },
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true,
+                        fillColor: '#FFFFFF',
+                        lineWidth: 2,
+                        lineColor: null,
+                        // symbol: 'circle'
+                    }
+                }
+            },
+        });
+    }
 
 
     if ($('#BICchart_safety01').length) {

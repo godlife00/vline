@@ -1447,6 +1447,9 @@
                         font-weight: $f_sizeB;
                         letter-spacing: -0.55px;
                         color: #3655d6;
+                        &.same {
+                            color: #444;
+                        }
                         .num {
                             font-size: 14px;                            
                             letter-spacing: -0.35px;                            
