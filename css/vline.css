@@ -6698,7 +6698,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("/img/fix_shadow.svg") repeat-y 0 0;
+  background: url("../img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .excavation_area.pattern .paginate {
@@ -6983,7 +6983,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 49px;
-  background: url("/img/fix_shadow.svg") repeat-y 0 0;
+  background: url("../img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td {
@@ -7029,7 +7029,7 @@ input[type='radio']:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("/img/fix_shadow.svg") repeat-y 0 0;
+  background: url("../img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td .check {
@@ -7320,7 +7320,7 @@ input[type='radio']:checked:before {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
 }
 
 #container .M_right .contents .invest_area.greenblatt .thead2_table th, #container .M_right .contents .invest_area.greenblatt .thead2_table td {
@@ -9568,6 +9568,7 @@ input[type='radio']:checked:before {
   display: block;
   background-color: #fff;
   position: relative;
+  padding-bottom: 10px;
 }
 
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .box:first-child {
@@ -9606,8 +9607,10 @@ input[type='radio']:checked:before {
 }
 
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .dsc_error {
+  clear: both;
+  float: none;
   text-align: right;
-  margin-top: 6px;
+  padding-top: 6px;
   font-size: 0.75rem;
   line-height: 1.3;
   color: #f2333a;
@@ -9618,7 +9621,7 @@ input[type='radio']:checked:before {
   position: absolute;
   right: 9px;
   top: 6px;
-  width: 81px;
+  width: 70px;
   height: 25px;
   font-size: 0.75rem;
   font-weight: normal;
@@ -9628,6 +9631,20 @@ input[type='radio']:checked:before {
   outline: none;
   padding: 4px 8px;
   border-radius: 3px;
+  border: solid 1px #424fbc;
+  background-color: #fff;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinBtn.pin_req {
+  display: block;
+  color: #fff;
+  border: solid 1px #424fbc;
+  background-color: #424fbc;
+}
+
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinBtn.pin_reqAgain {
+  display: none;
+  color: #424fbc;
   border: solid 1px #424fbc;
   background-color: #fff;
 }
@@ -9701,7 +9718,7 @@ input[type='radio']:checked:before {
   position: absolute;
   right: 9px;
   top: 6px;
-  width: 81px;
+  width: 70px;
   height: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12319,6 +12336,7 @@ input[type='radio']:checked:before {
 }
 
 .agree_area .agree_from .label.phone_label {
+  display: block;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding-bottom: 18px;
@@ -12330,6 +12348,7 @@ input[type='radio']:checked:before {
 
 .agree_area .agree_from .label.phone_label .guide_txt {
   padding-top: 5px;
+  padding-left: 24px;
   font-size: 0.75rem;
   letter-spacing: -0.6px;
   text-align: left;
@@ -12339,8 +12358,8 @@ input[type='radio']:checked:before {
 
 .agree_area .agree_from .phonePin_form .box {
   padding: 0 35px 10px;
-  background: #f5f6fa;
   position: relative;
+  background-color: #f5f6fa;
 }
 
 .agree_area .agree_from .phonePin_form .box:first-child {
@@ -12391,17 +12410,31 @@ input[type='radio']:checked:before {
   position: absolute;
   right: 42px;
   top: 6px;
-  width: 81px;
+  width: 70px;
   height: 25px;
   font-size: 0.75rem;
   font-weight: normal;
   letter-spacing: -0.6px;
   text-align: center;
-  color: #404fc3;
+  color: #C22E06;
   outline: none;
   padding: 4px 8px;
   border-radius: 3px;
-  border: solid 1px #424fbc;
+  border: solid 1px #C22E06;
+  background-color: #fff;
+}
+
+.agree_area .agree_from .phonePin_form .pinBtn.pin_req {
+  display: block;
+  color: #fff;
+  border: solid 1px #404fc3;
+  background-color: #404fc3;
+}
+
+.agree_area .agree_from .phonePin_form .pinBtn.pin_reqAgain {
+  display: none;
+  color: #404fc3;
+  border: solid 1px #404fc3;
   background-color: #fff;
 }
 
@@ -12474,7 +12507,7 @@ input[type='radio']:checked:before {
   position: absolute;
   right: 42px;
   top: 6px;
-  width: 81px;
+  width: 70px;
   height: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12492,7 +12525,7 @@ input[type='radio']:checked:before {
 
 .agree_area .agree_from .txt_reject {
   text-align: right;
-  color: #3655d6;
+  color: #898989;
   font-size: 0.75rem;
   line-height: 14px;
   margin-top: 7px;
