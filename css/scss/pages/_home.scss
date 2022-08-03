@@ -1023,10 +1023,17 @@
                                     text-align: center;
                                     vertical-align: bottom;
                                     color: #656d7e;                                       
+                                    &.import { 
+                                        background-color: #d9e6ff;
+                                    }                
+                                    &.all {
+                                        color: #fff;
+                                        background-color: #97a3c9;                                
+                                    }                
                                     &.result {
                                         color: #fff;
                                         background-color: #b1b9cb;                                
-                                    }                
+                                    }                    
                                 }
                                 &.name {               
                                     padding-left: 10px;                                    
@@ -1554,7 +1561,7 @@
                             position: relative;
                             top: -2px;
                             &.import { 
-
+                                // background-color: #d9e6ff;
                             }                
                             &.all {
                                 color: #fff;
@@ -1563,7 +1570,7 @@
                             &.result {
                                 color: #fff;
                                 background-color: #b1b9cb;                                
-                            }
+                            }                            
                         }
                         &.name {                        
                             width: 130px;

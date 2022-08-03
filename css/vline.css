@@ -4675,6 +4675,15 @@ input[type='radio']:checked:before {
   color: #656d7e;
 }
 
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion.import {
+  background-color: #d9e6ff;
+}
+
+.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion.all {
+  color: #fff;
+  background-color: #97a3c9;
+}
+
 .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion.result {
   color: #fff;
   background-color: #b1b9cb;
