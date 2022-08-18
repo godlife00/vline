@@ -2527,12 +2527,10 @@
     </div>
 
     <!-- 유료서비스 이전 신청 안내 팝업 -->
-    <div id="layer_pop" class="modal previous_pop" style="display: none;">
+    <!-- <div id="layer_pop" class="modal previous_pop" style="display: block;">
         <div class="pop_header">
             <h1 class="pop_title"><b>밸류라인 서비스</b> 이전 신청 안내</span></h1>
-            <a href="#" class="clse" rel="modal:close">
-                <!--닫기-->
-            </a>
+            <a href="#" class="clse" rel="modal:close"></a>
         </div>
 
         <div class="pop_con">
@@ -2560,21 +2558,44 @@
                 <br><br>
             </div>
         </div>
-
         <div class="pop_foot">
-            <a href="https://forms.gle/mcKsz7jWWPRPPPcM6" class="join_btn open_payment" target="_blank">서비스 이전 신청</a>
+            <a href="https://value.choicestock.co.kr/member/notify_view/11" class="join_btn open_payment">자세히 보기</a>
             <div class="today_check">
                 <label for="pop_today" class="btn_day" style="display: none;">
                     <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
                 </label>
-                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지 않기</span></a>
+                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지
+                        않기</span></a>
+            </div>
+        </div>
+    </div> -->
 
+    <div id="layer_pop" class="modal previous_pop" style="display: none;">
+        <div class="pop_header" style="padding: 0; background-color: #Fff; border:none;">            
+            <a href="#" class="clse" rel="modal:close"></a>
+        </div>
+
+        <div class="pop_con">
+            <div class="scr_box" style="padding: 0; max-height: 495px; overflow: inherit;">
+                <a href="https://value.choicestock.co.kr/member/notify_view/11" class="join_btn open_payment"><img
+                        src="img/banner/valueline_popup.png" alt="[밸류라인 X 매일경제] '감이 아닌 데이터로 투자하자!' 밸류라인 100% 활용하기"
+                        style="display: block; width: 100%; height: 100%;"> </a>
+            </div>
+        </div>
+
+        <div class="pop_foot" style="padding: 0 20px 10px; background-color: #Fff;">            
+            <div class="today_check">
+                <label for="pop_today" class="btn_day" style="display: none;">
+                    <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
+                </label>
+                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지
+                        않기</span></a>
             </div>
         </div>
     </div>
 
     <!-- 오늘 하루 열지 않기 -->
-    <!-- <script language="Javascript" type="text/javascript">
+    <script language="Javascript" type="text/javascript">
         cookiedata = document.cookie;
 
         function setCookie(name, value, expirehours) {
@@ -2583,7 +2604,7 @@
             document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
         }
         function closeWin() {
-            if (document.getElementById("pop_today").checked) {                
+            if (document.getElementById("pop_today").checked) {
                 setCookie("ncookie_vline", "done", 24);
             }
             document.getElementById('layer_pop').style.display = "none";
@@ -2591,15 +2612,15 @@
             $('body').removeAttr("style");
         }
 
-        if (cookiedata.indexOf("ncookie_vline=done") < 0) {            
+        if (cookiedata.indexOf("ncookie_vline=done") < 0) {
             $('.modal.previous_pop').modal({
                 fadeDuration: 100
-            });            
+            });
         } else {
-            
+
         }
 
-    </script> -->
+    </script>
     <!-- 서비스 이전 공지 2022년 5월 31일까지 -->
 
 </body>

@@ -323,6 +323,24 @@ $(document).ready(function () {
             $('#container .M_right .sum_box .more').text("자세히");
         }
     });
+     // 자세히보기 열기닫기 (워런버핏)
+     $('#container .M_right .top_invest.buffett .invest_box .more').on('click', function () {
+        // div 사이즈는 big, small        
+        if ($(this).parent('div').hasClass("small")) {
+            $(this).next('p').animate({
+                height: '100%'
+            }, 0);
+            $(this).parent('div').removeClass('small').addClass('big');
+            $('#container .M_right .invest_box .more').text("접기 ");
+
+        } else {
+            $(this).next('p').animate({
+                height: '90px'
+            }, 0);
+            $(this).parent('div').removeClass('big').addClass('small');
+            $('#container .M_right .invest_box .more').text("자세히");
+        }
+    });
 
     // 테이블 필터링 숨기기,보이기
     $("#container .M_right .contents_header .data_filter .set_box").hide();
