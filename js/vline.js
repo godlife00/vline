@@ -160,7 +160,12 @@ $(document).ready(function () {
 
     // 시가총액 직접 입력 아닌, 옵션선택 <input type="number" class="input_txt"> 에 해당 값 입력하는 스크립트    
     function user_inputBox() {
-        $('.user_inputBox').hide();                                                
+        $('.user_inputBox').hide();                        
+        if ($('.set_filter .mid select[name=mkt_val]').val() == "user_input") {
+            $('.user_inputBox').show();
+        } else {
+            console.log("옵션선택한 경우");
+        }                        
         $("select[name=mkt_val]").on("change", function () {                                                  
             $(".set_filter input.input_txt").val('');
             $('.user_inputBox').hide();
