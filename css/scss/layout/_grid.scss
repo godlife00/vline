@@ -584,7 +584,7 @@ input[type='radio']:checked:before {
         right: 7px;
         top: 9px;
         z-index: 99;
-    }
+    }   
 
     select {
         position: relative;
@@ -621,6 +621,14 @@ input[type='radio']:checked:before {
         display: none;
     }
 
+}
+
+.user_inputBox {    
+    .selectBoxList::after {
+        background-color: yellow;
+        display: none;
+    }
+    
 }
 
 /* 별점 */

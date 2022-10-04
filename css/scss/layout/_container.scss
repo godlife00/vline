@@ -1006,7 +1006,7 @@
                             flex-wrap: wrap;                            
                             padding: 10px 16px 5px;                            
                             & > div {                                     
-                                height: 38px;           
+                                min-height: 38px;           
                                 line-height: 38px;                               
                                 box-sizing: border-box;
                                 &::after {
@@ -1030,6 +1030,7 @@
                                 width: 95px;
                             }
                             select {
+                                position: relative;
                                 min-width: 90px;
                                 width: auto;
                                 padding-right: 20px;

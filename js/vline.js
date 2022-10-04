@@ -158,11 +158,27 @@ $(document).ready(function () {
     }
     header_Function();
 
+    // 시가총액 직접 입력 아닌, 옵션선택 <input type="number" class="input_txt"> 에 해당 값 입력하는 스크립트    
+    function user_inputBox() {
+        $('.user_inputBox').hide();                                                
+        $("select[name=mkt_val]").on("change", function () {                                                  
+            $(".set_filter input.input_txt").val('');
+            $('.user_inputBox').hide();
+            if ($(this).val() == "user_input") {
+                $('.user_inputBox').show();
+            } else {
+                console.log("옵션선택한 경우");
+            }
+        });
+    }
+    user_inputBox();
+
     // a태그 페이지 상단 이동 막기
     $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
         console.log("상단이동제한");
         return false;
     });
+
     // 이용약관
     $('.btn_terms').on('click', function () {
         $('.modal.terms').modal({
