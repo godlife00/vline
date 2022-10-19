@@ -503,7 +503,7 @@
                 background-color: #fff;                
                 width: calc(100% - 400px);                            
                 margin-left: 20px;
-                display: flex;
+                display: inline-flex;
 	            flex-wrap: wrap;
                 .containerfinancials1 {
                     display: inline-block;
@@ -520,13 +520,40 @@
                     flex: 1 1 50%;                                                             
                 }                
                 .containerfinancials1:first-of-type:nth-last-of-type(3),
-                .containerfinancials1:first-of-type:nth-last-of-type(3) ~ .containerfinancials1 {                    
-                    flex: 1 1 30%;                                         
-                }
+                .containerfinancials1:first-of-type:nth-last-of-type(3) ~ .containerfinancials1,
                 .containerfinancials1:first-of-type:nth-last-of-type(5),
                 .containerfinancials1:first-of-type:nth-last-of-type(5) ~ .containerfinancials1 {                    
-                    flex: 1 1 30%;                     
+                    flex: auto;
+                    flex-basis: 135px;
+                    width: 135px;
+                }                
+                
+                .containerfinancials5 {                    
+                    width: calc(100% / 3);
+                    height: 180px;                                            
                 }
+                .containerfinancials5:first-of-type:nth-last-of-type(1),
+                .containerfinancials5:first-of-type:nth-last-of-type(1) ~ .containerfinancials5 {
+                    width: 100%;                    
+                }
+                .containerfinancials5:first-of-type:nth-last-of-type(2),
+                .containerfinancials5:first-of-type:nth-last-of-type(2) ~ .containerfinancials5 {
+                    width: calc(100% / 2);                    
+                }                
+                .containerfinancials5:first-of-type:nth-last-of-type(3),
+                .containerfinancials5:first-of-type:nth-last-of-type(3) ~ .containerfinancials5 {
+                    width: calc(100% / 3);                    
+                }                
+                .containerfinancials5:first-of-type:nth-last-of-type(4),
+                .containerfinancials5:first-of-type:nth-last-of-type(4) ~ .containerfinancials5 {
+                    width: calc(100% / 2);                    
+                }                
+                .containerfinancials5:nth-of-type(4),
+                .containerfinancials5:nth-of-type(5) {
+                    display: inline-block;
+                    width: calc(100% / 2);
+                    height: 180px;                        
+                }                
                 
                 .chart_legend {    
                     flex-wrap: wrap;                

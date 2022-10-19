@@ -6017,9 +6017,9 @@ input[type='radio']:checked:before {
   background-color: #fff;
   width: calc(100% - 400px);
   margin-left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -6045,17 +6045,47 @@ input[type='radio']:checked:before {
 }
 
 #container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1:first-of-type:nth-last-of-type(3),
-#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1:first-of-type:nth-last-of-type(3) ~ .containerfinancials1 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%;
-}
-
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1:first-of-type:nth-last-of-type(3) ~ .containerfinancials1,
 #container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1:first-of-type:nth-last-of-type(5),
 #container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1:first-of-type:nth-last-of-type(5) ~ .containerfinancials1 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%;
+      -ms-flex: auto;
+          flex: auto;
+  -ms-flex-preferred-size: 135px;
+      flex-basis: 135px;
+  width: 135px;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5 {
+  width: calc(100% / 3);
+  height: 180px;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(1),
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(1) ~ .containerfinancials5 {
+  width: 100%;
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(2),
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(2) ~ .containerfinancials5 {
+  width: calc(100% / 2);
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(3),
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(3) ~ .containerfinancials5 {
+  width: calc(100% / 3);
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(4),
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:first-of-type:nth-last-of-type(4) ~ .containerfinancials5 {
+  width: calc(100% / 2);
+}
+
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:nth-of-type(4),
+#container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials5:nth-of-type(5) {
+  display: inline-block;
+  width: calc(100% / 2);
+  height: 180px;
 }
 
 #container .M_right .contents .mri_chartbox .mid_column .con .right .chart_legend {
