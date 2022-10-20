@@ -2,7 +2,8 @@
 
 #container {
     // 좌측메뉴
-    .M_left {        
+    .M_left {                
+        z-index: 51;
 
         .detail_box {
             border-radius: 5px;
@@ -159,6 +160,97 @@
                         }                        
                     }                    
                 }
+
+                // 좌측 기업개요
+                .summary {                    
+                    position: relative;                    
+                    .summary_txtShow {
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;                        
+                        margin-top: 5px;
+                        padding: 4px 22px 4px 12px;
+                        box-sizing: border-box;
+                        background: #fff;
+                        border-radius: 5px;
+                        border: 1px solid #dcdfec;
+                        font-size: 12px;                        
+                        letter-spacing: -0.33px;
+                        text-align: center;
+                        color: #222;
+                        cursor: pointer;
+                        &::after {
+                            content: '';
+                            width: 6px;
+                            height: 6px;
+                            border-top: 1px solid #7389AF;
+                            border-right: 1px solid #7389AF;
+                            -webkit-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                            display: inline-block;
+                            position: absolute;
+                            right: 10px;
+                            top: 9px;
+                        }
+                    }
+                    .txtBox {                        
+                        display: none;
+                        position: absolute;
+                        top: 40px;
+                        left: 0;
+                        right: 0;                        
+                        min-width: 320px;                        
+                        border-radius: 5px;
+                        overflow: hidden;
+                        padding: 0;
+                        box-sizing: border-box;
+                        border: solid 1px #e7eaf2;
+                        background-color: #fff;
+                        -webkit-box-shadow: 0px 0px 8px 0px #93add3;
+                        box-shadow: 0px 0px 8px 0px #93add3;                                               
+                        z-index: 1;
+                        .top {      
+                            display: flex;                            
+                            justify-content: space-between;                      
+                            padding: 11px 16px 0;
+                            background-color: #f4f6fa;
+                            .title {
+                                font-size: 14px;    
+                                font-weight: $f_sizeB;                            
+                                line-height: 0.71;
+                                letter-spacing: -0.7px;
+                                color: #3655d6;
+                                display: block;
+                                padding-bottom: 7px;
+                                word-break: break-all;
+                                word-wrap: break-word;
+                            }
+                        }
+                        .mid {
+                            padding: 15px 16px;
+                            font-size: 13px;        
+                            line-height: 20px;                
+                            letter-spacing: -0.65px;
+                            color: #656d7e;                        
+                            word-break: break-all;
+                            word-wrap: break-word;
+                        }
+                        
+
+                        .clse {
+                            display: inline-block;
+                            cursor: pointer;
+                            img {
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                        
+                    }
+                }
+
+
             }
             
         }
@@ -376,6 +468,7 @@
         border-radius: 5px;
         padding: 17px 24px 20px;
         box-sizing: border-box;
+        z-index: 50;
         
         .path_area {
             li {
@@ -970,7 +1063,7 @@
                     border-radius: 5px;
                     border: solid 1px #e7eaf2;
                     background-color: #fff;             
-                    box-shadow: 0px 0px 8px 0px #93add3;       
+                    box-shadow: 0px 0px 8px 0px #93add3;                           
                     
                     .set_filter {                               
                         input.input_txt {

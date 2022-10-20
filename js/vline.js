@@ -369,6 +369,26 @@ $(document).ready(function () {
         $("#container .M_right .contents_header .data_filter .set_box").toggle();
     });
 
+    // 좌측 메뉴, 기업개요 레이어 팝업 보이기, 숨기기
+    $("#container .M_left .detail_box .data_area .summary .txtBox").hide();    
+    $('#container .M_left .detail_box .data_area .summary .summary_txtShow').on('click', function () {
+        $("#container .M_left .detail_box .data_area .summary .txtBox").toggle();
+    });
+    $('html').click(function(e) {   
+        if(!$(e.target).is('.txtBox, .summary_txtShow, .summary .title, .txtBox .mid, .txtBox .top')) {            
+            clseTxtBox();
+        }
+    });        
+    $('#container .M_left .detail_box .data_area .summary .txtBox .clse img').on('click', function () {        
+        console.log("dfdf");
+        clseTxtBox();
+    });
+    // 기업개요 박스 숨기기 함수 clseTxtBox();
+    function clseTxtBox() {        
+        $('#container .M_left .detail_box .data_area .summary .txtBox').fadeOut(150);
+    }
+    
+
     // 테이블 스크롤시 좌측 고정
     $(function () {
         $('.fix_wrap').scroll(function () {
