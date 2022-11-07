@@ -105,6 +105,62 @@ $(document).ready(function () {
             });
         });
 
+        $('.btn_guide_pop').on('click', function (e) {
+            if(!$(e.target).hasClass("close")) {                
+                $('.guidePop_box').removeClass('on');
+                $('.guide_pop').modal({
+                    fadeDuration: 100,
+                });
+                popConSwiper();
+                guidePop_open(); //서비스 활용 가이드 보기 닫기                        
+                
+            } else {                
+                console.log("닫기");                
+            }
+        });                     
+
+        // 서비스 가이드 슬라이드
+        function popConSwiper() {            
+            var swiper = new Swiper('.popConSwiper', {    
+                observer: true,
+                observeParents: true,                                
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }              
+
+        // 서비스 활용 가이드 보기 
+        $(window).load(function () {            
+            setTimeout(function () {
+                $('.guidePop_box').addClass('on');
+            }, 400);
+        });
+
+        //서비스 활용 가이드 보기 열기
+        function guidePop_open() {
+            $('.modal .pop_header .clse, .blocker').on('click', function () {
+                $('.guidePop_box').addClass('on');
+            });
+    
+        }        
+        // 서비스 활용 가이드 보기 닫기
+        function guidePop_close() {
+            $('.guidePop_box .close').on('click', function () {
+                $('.guidePop_box').removeClass('on');
+            });
+        }        
+        guidePop_open();   //서비스 활용 가이드 보기 열기
+        guidePop_close(); //서비스 활용 가이드 보기 닫기
+
+
+        
         //select
         $(function () {
             var selectTarget = $('.selectbox select');
@@ -157,6 +213,8 @@ $(document).ready(function () {
         });
     }
     header_Function();
+
+    
 
     // 시가총액 직접 입력 아닌, 옵션선택 <input type="number" class="input_txt"> 에 해당 값 입력하는 스크립트    
     function user_inputBox() {

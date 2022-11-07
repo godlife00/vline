@@ -2029,6 +2029,137 @@
             }
         }
     }
+
+    &.guide_pop {                   
+        max-width: 1000px;
+        .pop_header {
+            border: none;
+            padding: 0;            
+        }
+        .pop_con {
+            display: flex;        
+            gap: 18px;            
+            .clse {
+                cursor: pointer;
+                position: absolute;
+                display: inline-block;
+                padding: 4px;
+                width: 17px;
+                height: 17px;
+                right: 14px;
+                top: 14px;
+                z-index: 99;                
+    
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 7px;
+                    top: 0;
+                    height: 17px;
+                    width: 1px;
+                    background-color: $colpmr500;
+                }
+    
+                &::before {
+                    transform: rotate(45deg);
+                }
+    
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .pop_con .left {                   
+            width: 600px;     
+            height: 600px;
+            padding: 40px 15px 80px 25px;
+            box-sizing: border-box;
+            display: flex;        
+            flex-wrap: wrap;
+            align-items: flex-start;            
+            gap: 10px;
+            background-color: #F4F4F5;
+            border-right: 1px solid #f7f9fc;
+            border-top: 1px solid #f7f9fc;
+            img {
+                display: inline-block;
+                width: 100%;
+                height: 100%;                
+            }
+        }
+        .pop_con .right {                      
+            position: relative;  
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 55px 25px 100px 10px;
+            width: 400px;            
+            height: 600px;
+            box-sizing: border-box;
+            h2 {
+                font-weight: $f_sizeB;
+                text-align: left;
+                color: #222;
+                word-break: break-all;
+                word-wrap: break-word;
+            }
+            .tip {                                       
+                overflow:auto;
+                overflow-x: hidden;
+                max-height: 420px;
+                margin-top: 12px;
+                color: #333;
+                font-size: 0.9375rem;
+                line-height: 1.6;
+                word-break: break-all;
+                word-wrap: break-word;                
+            }            
+            .btn_box {
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                right: 25px;                
+            }
+            .btn.open_notify {
+                display: block;                
+                text-align: right;
+                font-size: 16px;
+                letter-spacing: -0.7px;
+                color: #656d7e;
+                font-weight: $f_sizeB;
+                text-decoration: underline;                                
+                padding-right: 16px;
+                &::before {
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    border-top: 1px solid #656d7e;
+                    border-right: 1px solid #656d7e;
+                    display: inline-block;                    
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 9px;
+                    right: 0;
+                  }
+            }
+            
+        }   
+        
+        .swiper-pagination {
+            left: -200px;
+        }
+        .swiper-pagination .swiper-pagination-bullet {            
+            width: 8px;
+            height: 8px;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet-active {            
+            width: 22px;
+        }
+          
+                
+    }
 }
 
 
