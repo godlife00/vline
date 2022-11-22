@@ -150,80 +150,80 @@ $(document).ready(function () {
 
             series: [{
                 type: 'treemap',
-                layoutAlgorithm: 'squarified',                                
+                layoutAlgorithm: 'squarified',
                 data: [
                     {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
                         value: 3916177,
                         color: '#f3243b',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '24px',
                             }
-                        }                        
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG에너지솔루션 <br> 0% </a>',
                         value: 1012050,
-                        color: '#414654',       
-                        dataLabels: {                                                        
-                            style: {                                
+                        color: '#414654',
+                        dataLabels: {
+                            style: {
                                 fontSize: '24px',
                             }
-                        }                 
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">SK하이닉스 <br> 0% </a>',
                         value: 771683,
                         color: '#414654',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '24px',
                             }
                         }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">삼성바이오로직스 <br> 2% 이상 </a>',
                         value: 591456,
-                        color: '#bd3945',  
-                        dataLabels: {                                                        
-                            style: {                                
+                        color: '#bd3945',
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        }                      
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자우 <br> 1% 이상 </a>',
                         value: 490440,
                         color: '#8a414e',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        }                      
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">NAVER <br> 0% </a>',
                         value: 453596,
                         color: '#414654',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        }                      
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">LG화학 <br> -3% 이상 </a>',
                         value: 400259,
                         color: '#4b87ff',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        }                      
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">현대차 <br> -2% 이상</a>',
                         value: 391013,
                         color: '#4675f0',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        }  
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성SDI <br> -1% 이상</a>',
                         value: 377517,
@@ -256,7 +256,7 @@ $(document).ready(function () {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성물산 <br> -1% 이상</a>',
                         value: 218658,
                         color: '#4162c4',
-                    },  {
+                    }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">신한지주 <br> -1% 이상</a>',
                         value: 214150,
                         color: '#4162c4',
@@ -331,94 +331,94 @@ $(document).ready(function () {
             },
 
             tooltip: {
-                enabled: false 
+                enabled: false
             },
 
             series: [{
                 type: 'treemap',
-                layoutAlgorithm: 'squarified',                                
+                layoutAlgorithm: 'squarified',
                 data: [
                     {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',
                         value: 3916177,
                         color: '#f3243b',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '22px',
                             }
-                        }                        
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">LG에너지솔루션 <br> 0% </a>',
                         value: 1012050,
-                        color: '#414654',       
-                        dataLabels: {                                                        
-                            style: {                                
+                        color: '#414654',
+                        dataLabels: {
+                            style: {
                                 fontSize: '22px',
                             }
-                        }                          
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">SK하이닉스 <br> 0% </a>',
                         value: 771683,
                         color: '#414654',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '22px',
                             }
-                        }          
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">삼성바이오로직스 <br> 2% 이상 </a>',
                         value: 591456,
-                        color: '#bd3945',  
-                        dataLabels: {                                                        
-                            style: {                                
+                        color: '#bd3945',
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        }                      
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자우 <br> 1% 이상 </a>',
                         value: 490440,
                         color: '#8a414e',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        } 
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">NAVER <br> 0% </a>',
                         value: 453596,
                         color: '#414654',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        } 
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">LG화학 <br> -3% 이상 </a>',
                         value: 400259,
                         color: '#4b87ff',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        } 
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/034220">현대차 <br> -2% 이상</a>',
                         value: 391013,
                         color: '#4675f0',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        } 
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성SDI <br> -1% 이상</a>',
                         value: 377517,
                         color: '#4162c4',
-                        dataLabels: {                                                        
-                            style: {                                
+                        dataLabels: {
+                            style: {
                                 fontSize: '14px',
                             }
-                        } 
+                        }
                     }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">카카오 <br> 3% 이상 </a>',
                         value: 363708,
@@ -447,7 +447,7 @@ $(document).ready(function () {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성물산 <br> -1% 이상</a>',
                         value: 218658,
                         color: '#4162c4',
-                    },  {
+                    }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">신한지주 <br> -1% 이상</a>',
                         value: 214150,
                         color: '#4162c4',
@@ -555,7 +555,7 @@ $(document).ready(function () {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성물산 <br> -1% 이상</a>',
                         value: 218658,
                         color: '#4162c4',
-                    },  {
+                    }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">신한지주 <br> -1% 이상</a>',
                         value: 214150,
                         color: '#4162c4',
@@ -615,7 +615,7 @@ $(document).ready(function () {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성물산 <br> -1% 이상</a>',
                         value: 218658,
                         color: '#4162c4',
-                    },  {
+                    }, {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">신한지주 <br> -1% 이상</a>',
                         value: 214150,
                         color: '#4162c4',
@@ -656,8 +656,8 @@ $(document).ready(function () {
                         value: 133967,
                         color: '#4162c4',
                     }
-                                    
-                ]          
+
+                ]
             }],
 
         });
@@ -865,7 +865,7 @@ $(document).ready(function () {
     //재무분석 BIC 차트 - 매출액과 이익
     if ($('#BICchart_profit01').length) {
         var reflowchart01 = new Highcharts.chart('BICchart_profit01', {
-            chart: {                
+            chart: {
                 type: 'spline',
                 zoomType: 'xy',
                 backgroundColor: {
@@ -896,16 +896,16 @@ $(document).ready(function () {
                 shared: true,
             },
 
-            xAxis: [{    
-                categories: ['2012.03','2012.06','2012.09','2012.12','2013.03','2013.06','2013.09','2013.12','2014.03','2014.06','2014.09','2014.12','2015.03','2015.06','2015.09','2015.12','2016.03','2016.06','2016.09','2016.12','2017.03','2017.06','2017.09','2017.12','2018.03','2018.06','2018.09','2018.12','2019.03','2019.06','2019.09','2019.12','2020.03','2020.06','2020.09','2020.12','2021.03','2021.06','2021.09',],  
-                type: 'datetime',                
+            xAxis: [{
+                categories: ['2012.03', '2012.06', '2012.09', '2012.12', '2013.03', '2013.06', '2013.09', '2013.12', '2014.03', '2014.06', '2014.09', '2014.12', '2015.03', '2015.06', '2015.09', '2015.12', '2016.03', '2016.06', '2016.09', '2016.12', '2017.03', '2017.06', '2017.09', '2017.12', '2018.03', '2018.06', '2018.09', '2018.12', '2019.03', '2019.06', '2019.09', '2019.12', '2020.03', '2020.06', '2020.09', '2020.12', '2021.03', '2021.06', '2021.09',],
+                type: 'datetime',
                 labels: {
-                    formatter: function() {
+                    formatter: function () {
                         return Highcharts.dateFormat('%y', this.value);
                     },
                     step: 4
-                },                
-                crosshair: true        
+                },
+                crosshair: true
             }],
 
 
@@ -944,7 +944,7 @@ $(document).ready(function () {
             series: [{
                 name: '매출액(좌)',
                 type: 'column',
-                data: [1732872.71,1814453.96,1923487.01,2011036.13,2087011.91,2185686.6,2254748.89,2286926.67,2294998.98,2243886.79,2127524.9,2062059.87,1996485.79,1958328.89,2000681.51,2006534.82,2033178.16,2057173.97,2018504.58,2018667.45,2026320.19,2126954.36,2269287.04,2395753.76,2495915.64,2470736.85,2504847.77,2437714.15,2355932.47,2332376.93,2297811.71,2304008.81,2333405.13,2301795.51,2351402.4,2368069.88,2468703.13,2575757.56,2645907.83,],
+                data: [1732872.71, 1814453.96, 1923487.01, 2011036.13, 2087011.91, 2185686.6, 2254748.89, 2286926.67, 2294998.98, 2243886.79, 2127524.9, 2062059.87, 1996485.79, 1958328.89, 2000681.51, 2006534.82, 2033178.16, 2057173.97, 2018504.58, 2018667.45, 2026320.19, 2126954.36, 2269287.04, 2395753.76, 2495915.64, 2470736.85, 2504847.77, 2437714.15, 2355932.47, 2332376.93, 2297811.71, 2304008.81, 2333405.13, 2301795.51, 2351402.4, 2368069.88, 2468703.13, 2575757.56, 2645907.83,],
                 tooltip: {
                     pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f}억원</b><br/>'
                 },
@@ -952,12 +952,12 @@ $(document).ready(function () {
                 name: '영업이익(우)',
                 type: 'line',
                 yAxis: 1,
-                data: [184854.75,211053.27,248073.4,290493.38,321921.67,353293.86,374996.33,367850.13,364943.54,341509.94,280479.22,250250.71,225156.39,222262.53,255591.04,264134.42,271098.87,283559,261626.16,292406.72,324632.21,383858.18,477188.88,536450.38,593888.47,601913.35,632330.41,588866.69,494777.81,412058.11,314088.38,277685.09,279825.72,295317.99,341071.45,359938.76,389293.99,433498.52,468141.45,],                
+                data: [184854.75, 211053.27, 248073.4, 290493.38, 321921.67, 353293.86, 374996.33, 367850.13, 364943.54, 341509.94, 280479.22, 250250.71, 225156.39, 222262.53, 255591.04, 264134.42, 271098.87, 283559, 261626.16, 292406.72, 324632.21, 383858.18, 477188.88, 536450.38, 593888.47, 601913.35, 632330.41, 588866.69, 494777.81, 412058.11, 314088.38, 277685.09, 279825.72, 295317.99, 341071.45, 359938.76, 389293.99, 433498.52, 468141.45,],
             }, {
                 name: '지배지분순이익(우)',
                 type: 'line',
                 yAxis: 1,
-                data: [155288.94,171209.8,202456.95,231853.75,253013.99,278273.73,294520.38,298212.15,303289.77,289304.67,250163.52,230824.99,201171.42,195673.7,207380.52,186946.28,194388.11,196382.55,187409.41,224156.55,246406.81,296144.45,362454.26,413445.69,454678.7,456494.75,475771.32,438908.77,373865.34,314695.17,246071.28,215050.54,212871.63,217115.97,248733.72,260908.46,282940.33,322557.45,350461.38,],                
+                data: [155288.94, 171209.8, 202456.95, 231853.75, 253013.99, 278273.73, 294520.38, 298212.15, 303289.77, 289304.67, 250163.52, 230824.99, 201171.42, 195673.7, 207380.52, 186946.28, 194388.11, 196382.55, 187409.41, 224156.55, 246406.81, 296144.45, 362454.26, 413445.69, 454678.7, 456494.75, 475771.32, 438908.77, 373865.34, 314695.17, 246071.28, 215050.54, 212871.63, 217115.97, 248733.72, 260908.46, 282940.33, 322557.45, 350461.38,],
             }],
 
             plotOptions: {
@@ -969,7 +969,7 @@ $(document).ready(function () {
                         lineColor: null,
                         radius: 3
                     }
-                },                
+                },
             },
         });
     }
@@ -3846,22 +3846,22 @@ $(document).ready(function () {
                     pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
                 },
             }, {
-                name: '특수채',            
-                type: 'column',    
+                name: '특수채',
+                type: 'column',
                 data: [242, 252],
                 tooltip: {
                     pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
                 },
             }, {
-                name: '회사채',         
-                type: 'column',           
+                name: '회사채',
+                type: 'column',
                 data: [342, 352],
                 tooltip: {
                     pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
                 },
             }, {
-                name: '수익증권',         
-                type: 'column',           
+                name: '수익증권',
+                type: 'column',
                 data: [442, 452],
                 tooltip: {
                     pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
@@ -6582,7 +6582,7 @@ $(document).ready(function () {
         };
         chartReflow();
     });
-    if ($('#container .M_right .contents_header .table_filter .detail span.simple').hasClass('active')) {        
+    if ($('#container .M_right .contents_header .table_filter .detail span.simple').hasClass('active')) {
         console.log("샘플버튼 활성화 된 상태라면");
 
         $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggle(0);
@@ -6635,11 +6635,11 @@ $(document).ready(function () {
             xAxis: [{
                 type: 'datetime',
                 labels: {
-                    format: '{value:%y }'+'년',
-                },                                
-                showFirstLabel:true,
-                showLastLabel:true,
-                min:Date.UTC(2018), //차트 시작 년도                
+                    format: '{value:%y }' + '년',
+                },
+                showFirstLabel: true,
+                showLastLabel: true,
+                min: Date.UTC(2018), //차트 시작 년도                
             }],
 
 
@@ -6676,7 +6676,7 @@ $(document).ready(function () {
 
             series: [{
                 name: '주가[좌]',
-                data: [[Date.UTC(2018, 01,01),20000],[Date.UTC(2018, 11,30),16600],[Date.UTC(2018, 12,28),17200],[Date.UTC(2019, 01,31),14500],[Date.UTC(2019, 02,28),15000],[Date.UTC(2019, 03,29),19250],[Date.UTC(2019, 04,30),17450],[Date.UTC(2019, 05,31),14550],[Date.UTC(2019, 06,28),16750],[Date.UTC(2019, 07,31),12950],[Date.UTC(2019, 08,30),12200],[Date.UTC(2019, 09,30),11350],[Date.UTC(2019, 10,31),12150],[Date.UTC(2019, 11,29),11300],[Date.UTC(2019, 12,30),12400],[Date.UTC(2020, 01,31),11200],[Date.UTC(2020, 02,28),10050],[Date.UTC(2020, 03,31),7750],[Date.UTC(2020, 04,29),10650],[Date.UTC(2020, 05,29),13350],[Date.UTC(2020, 06,30),12200],[Date.UTC(2020, 07,31),12850],[Date.UTC(2020, 08,31),12700],[Date.UTC(2020, 09,29),13200],[Date.UTC(2020, 10,30),12600],[Date.UTC(2020, 11,30),12000],[Date.UTC(2020, 12,30),13750],[Date.UTC(2021, 01,29),16500],[Date.UTC(2021, 02,26),16600],[Date.UTC(2021, 03,31),16350],[Date.UTC(2021, 04,30),16600],[Date.UTC(2021, 05,31),15850],[Date.UTC(2021, 06,30),16200],[Date.UTC(2021, 07,30),15700],[Date.UTC(2021, 08,31),14700],[Date.UTC(2021, 09,30),13500],[Date.UTC(2021, 10,29),12750],[Date.UTC(2021, 11,30),12100],[Date.UTC(2021, 12,30),24700],[Date.UTC(2022, 01,28),24300],[Date.UTC(2022, 02,28),26000]],                
+                data: [[Date.UTC(2018, 01, 01), 20000], [Date.UTC(2018, 11, 30), 16600], [Date.UTC(2018, 12, 28), 17200], [Date.UTC(2019, 01, 31), 14500], [Date.UTC(2019, 02, 28), 15000], [Date.UTC(2019, 03, 29), 19250], [Date.UTC(2019, 04, 30), 17450], [Date.UTC(2019, 05, 31), 14550], [Date.UTC(2019, 06, 28), 16750], [Date.UTC(2019, 07, 31), 12950], [Date.UTC(2019, 08, 30), 12200], [Date.UTC(2019, 09, 30), 11350], [Date.UTC(2019, 10, 31), 12150], [Date.UTC(2019, 11, 29), 11300], [Date.UTC(2019, 12, 30), 12400], [Date.UTC(2020, 01, 31), 11200], [Date.UTC(2020, 02, 28), 10050], [Date.UTC(2020, 03, 31), 7750], [Date.UTC(2020, 04, 29), 10650], [Date.UTC(2020, 05, 29), 13350], [Date.UTC(2020, 06, 30), 12200], [Date.UTC(2020, 07, 31), 12850], [Date.UTC(2020, 08, 31), 12700], [Date.UTC(2020, 09, 29), 13200], [Date.UTC(2020, 10, 30), 12600], [Date.UTC(2020, 11, 30), 12000], [Date.UTC(2020, 12, 30), 13750], [Date.UTC(2021, 01, 29), 16500], [Date.UTC(2021, 02, 26), 16600], [Date.UTC(2021, 03, 31), 16350], [Date.UTC(2021, 04, 30), 16600], [Date.UTC(2021, 05, 31), 15850], [Date.UTC(2021, 06, 30), 16200], [Date.UTC(2021, 07, 30), 15700], [Date.UTC(2021, 08, 31), 14700], [Date.UTC(2021, 09, 30), 13500], [Date.UTC(2021, 10, 29), 12750], [Date.UTC(2021, 11, 30), 12100], [Date.UTC(2021, 12, 30), 24700], [Date.UTC(2022, 01, 28), 24300], [Date.UTC(2022, 02, 28), 26000]],
                 yAxis: 0,
                 tooltip: {
                     headerFormat: '<span style="color:{series.color};">{series.name}</span> : {point.x:%Y-%m-%d}' + '  ',
@@ -6684,7 +6684,7 @@ $(document).ready(function () {
                 },
             }, {
                 name: '순이익지수[우]',
-                data: [[Date.UTC(2007, 03),1000],[Date.UTC(2007, 06),10000],[Date.UTC(2017, 06),10000],[Date.UTC(2019, 01,31),14500],[Date.UTC(2019, 02,28),15000],[Date.UTC(2022, 01,28),24300],[Date.UTC(2022, 02,28),26000]],
+                data: [[Date.UTC(2007, 03), 1000], [Date.UTC(2007, 06), 10000], [Date.UTC(2017, 06), 10000], [Date.UTC(2019, 01, 31), 14500], [Date.UTC(2019, 02, 28), 15000], [Date.UTC(2022, 01, 28), 24300], [Date.UTC(2022, 02, 28), 26000]],
                 yAxis: 1,
                 tooltip: {
                     headerFormat: '<span style="color:{series.color};">{series.name}</span> : {point.x:%Y-%m-%d}' + '  ',
@@ -6693,7 +6693,7 @@ $(document).ready(function () {
             }],
 
             plotOptions: {
-                series: {                    
+                series: {
                     marker: {
                         enabled: false,
                     }
@@ -7185,7 +7185,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_1').length) {
         Highcharts.chart('containerfinancials1_1', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7266,14 +7266,14 @@ $(document).ready(function () {
                 series: {
                     marker: {
                         enabled: false,
-                    },                    
+                    },
                 },
                 column: {
                     minPointLength: 5,
-                    
+
                     dataLabels: {
                         enabled: true,
-                        allowOverlap : true,
+                        allowOverlap: true,
                         crop: false,
                         color: '#656d7e',
                         overflow: 'none',
@@ -7289,7 +7289,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_2').length) {
         Highcharts.chart('containerfinancials1_2', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7391,7 +7391,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_3').length) {
         Highcharts.chart('containerfinancials1_3', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7493,7 +7493,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_4').length) {
         Highcharts.chart('containerfinancials1_4', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7595,7 +7595,7 @@ $(document).ready(function () {
     if ($('#containerfinancials1_5').length) {
         Highcharts.chart('containerfinancials1_5', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7697,7 +7697,7 @@ $(document).ready(function () {
     if ($('#containerfinancials2_1').length) {
         Highcharts.chart('containerfinancials2_1', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7799,7 +7799,7 @@ $(document).ready(function () {
     if ($('#containerfinancials2_2').length) {
         Highcharts.chart('containerfinancials2_2', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -7901,7 +7901,7 @@ $(document).ready(function () {
     if ($('#containerfinancials2_3').length) {
         Highcharts.chart('containerfinancials2_3', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8003,7 +8003,7 @@ $(document).ready(function () {
     if ($('#containerfinancials3_1').length) {
         Highcharts.chart('containerfinancials3_1', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8105,7 +8105,7 @@ $(document).ready(function () {
     if ($('#containerfinancials3_2').length) {
         Highcharts.chart('containerfinancials3_2', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8207,7 +8207,7 @@ $(document).ready(function () {
     if ($('#containerfinancials4_1').length) {
         Highcharts.chart('containerfinancials4_1', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8309,7 +8309,7 @@ $(document).ready(function () {
     if ($('#containerfinancials4_2').length) {
         Highcharts.chart('containerfinancials4_2', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8411,7 +8411,7 @@ $(document).ready(function () {
     if ($('#containerfinancials4_3').length) {
         Highcharts.chart('containerfinancials4_3', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8513,7 +8513,7 @@ $(document).ready(function () {
     if ($('#containerfinancials4_4').length) {
         Highcharts.chart('containerfinancials4_4', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8615,7 +8615,7 @@ $(document).ready(function () {
     if ($('#containerfinancials4_5').length) {
         Highcharts.chart('containerfinancials4_5', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8717,7 +8717,7 @@ $(document).ready(function () {
     if ($('#containerfinancials5_1').length) {
         Highcharts.chart('containerfinancials5_1', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -8819,7 +8819,7 @@ $(document).ready(function () {
     if ($('#containerfinancials5_2').length) {
         Highcharts.chart('containerfinancials5_2', {
             chart: {
-                type: 'column',                
+                type: 'column',
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                     stops: [
@@ -9251,15 +9251,15 @@ $(document).ready(function () {
     if ($('#scatterchart_01').length) {
         Highcharts.chart('scatterchart_01', {
             chart: {
-                type: 'scatter',                
+                type: 'scatter',
             },
             // colors: ["#3c55ce"],
             title: {
                 text: null,
-            },            
+            },
             tooltip: {
                 shared: true,
-                headerFormat: '<b style="color:#656d7e">{series.name}</b><br>',                
+                headerFormat: '<b style="color:#656d7e">{series.name}</b><br>',
                 pointFormat: '<span style="color:#656d7e">PBR={point.x}배, ROE={point.y}%</span>'
             },
             xAxis: {
@@ -9274,7 +9274,7 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: "PBR",
-                },                                
+                },
             },
             exporting: {
                 enabled: false
@@ -9286,41 +9286,41 @@ $(document).ready(function () {
                 enabled: false
             },
             series: [{
-                name: '삼성전자',                   
-                data: [[234.0, 135.6]],          
+                name: '삼성전자',
+                data: [[234.0, 135.6]],
             }, {
-                name: '카카오',                
-                data: [[274.0, 165.6]],                
+                name: '카카오',
+                data: [[274.0, 165.6]],
             }, {
-                name: '쿠팡',                
-                data: [[324.0, 425.6]],                
+                name: '쿠팡',
+                data: [[324.0, 425.6]],
             }, {
-                name: '네이버',                
-                data: [[354.0, 625.6]],                
+                name: '네이버',
+                data: [[354.0, 625.6]],
             }, {
-                name: '카카오',                
-                data: [[284.0, 185.6]],                
+                name: '카카오',
+                data: [[284.0, 185.6]],
             }, {
-                name: '쿠팡',                
-                data: [[344.0, 445.6]],                
+                name: '쿠팡',
+                data: [[344.0, 445.6]],
             }, {
-                name: '네이버',                
-                data: [[364.0, 645.6]],                
+                name: '네이버',
+                data: [[364.0, 645.6]],
             }, {
-                name: '쿠팡',                
-                data: [[364.0, 435.6]],                
+                name: '쿠팡',
+                data: [[364.0, 435.6]],
             }, {
-                name: '네이버',                
-                data: [[364.0, 635.6]],                
+                name: '네이버',
+                data: [[364.0, 635.6]],
             }, {
-                name: '카카오',                
-                data: [[294.0, 195.6]],                
+                name: '카카오',
+                data: [[294.0, 195.6]],
             }, {
-                name: '쿠팡',                
-                data: [[354.0, 455.6]],                
+                name: '쿠팡',
+                data: [[354.0, 455.6]],
             }, {
-                name: '네이버',                
-                data: [[374.0, 655.6]],                
+                name: '네이버',
+                data: [[374.0, 655.6]],
             }],
             plotOptions: {
                 scatter: {
@@ -9339,9 +9339,536 @@ $(document).ready(function () {
                                 enabled: false
                             }
                         }
-                    },                    
+                    },
                 }
             },
+        });
+    }
+
+    //재무분석 개요 탭 캔들 차트
+    if ($('#containeroutline1_2').length) {
+        var value = [[Date.UTC(2022, 4, 09), 118000, 120000, 116500, 119500], [Date.UTC(2022, 4, 10), 118000, 121000, 117500, 121000], [Date.UTC(2022, 4, 11), 121500, 124500, 120000, 122500], [Date.UTC(2022, 4, 12), 122500, 129000, 122500, 127500], [Date.UTC(2022, 4, 13), 127500, 133000, 127000, 133000], [Date.UTC(2022, 4, 16), 134000, 134000, 128000, 131500], [Date.UTC(2022, 4, 17), 133000, 139000, 131000, 138000], [Date.UTC(2022, 4, 18), 139500, 144000, 138500, 141500], [Date.UTC(2022, 4, 19), 142500, 152000, 138000, 149500], [Date.UTC(2022, 4, 20), 150000, 156000, 147500, 155500], [Date.UTC(2022, 4, 23), 156000, 163500, 155000, 156000], [Date.UTC(2022, 4, 24), 156000, 159000, 150000, 153500], [Date.UTC(2022, 4, 25), 153000, 155500, 146000, 150500], [Date.UTC(2022, 4, 26), 150500, 157500, 150000, 156500], [Date.UTC(2022, 4, 27), 156000, 162000, 154500, 160000], [Date.UTC(2022, 4, 30), 160500, 165000, 160500, 164000], [Date.UTC(2022, 4, 31), 163500, 164000, 158000, 159000], [Date.UTC(2022, 5, 02), 159000, 161500, 158000, 159000], [Date.UTC(2022, 5, 03), 159000, 160000, 151000, 154500], [Date.UTC(2022, 5, 07), 154500, 158000, 152500, 157500], [Date.UTC(2022, 5, 08), 157000, 159500, 154500, 158500], [Date.UTC(2022, 5, 09), 158500, 159500, 156000, 157500], [Date.UTC(2022, 5, 10), 157000, 160000, 153500, 157000], [Date.UTC(2022, 5, 13), 156500, 160000, 155000, 159500], [Date.UTC(2022, 5, 14), 159000, 159500, 157000, 158000], [Date.UTC(2022, 5, 15), 157000, 161500, 156500, 160500], [Date.UTC(2022, 5, 16), 161500, 163500, 160000, 163000], [Date.UTC(2022, 5, 17), 162500, 164500, 159500, 162000], [Date.UTC(2022, 5, 20), 160500, 161500, 154500, 154500], [Date.UTC(2022, 5, 21), 154500, 160500, 154000, 158500], [Date.UTC(2022, 5, 22), 158500, 160500, 157500, 158500], [Date.UTC(2022, 5, 23), 158000, 160000, 156500, 157500], [Date.UTC(2022, 5, 24), 157500, 162500, 157500, 161500], [Date.UTC(2022, 5, 27), 162500, 169500, 162000, 169500], [Date.UTC(2022, 5, 28), 171000, 182000, 169500, 182000], [Date.UTC(2022, 5, 29), 182000, 188500, 177500, 182000], [Date.UTC(2022, 5, 30), 182000, 182000, 173000, 180000], [Date.UTC(2022, 6, 01), 177000, 180000, 174000, 177000], [Date.UTC(2022, 6, 04), 176000, 182500, 176000, 182500], [Date.UTC(2022, 6, 05), 181500, 185500, 179500, 184500], [Date.UTC(2022, 6, 06), 184500, 184500, 180000, 182500], [Date.UTC(2022, 6, 07), 182500, 184500, 180000, 181000], [Date.UTC(2022, 6, 08), 182000, 188000, 181500, 182000], [Date.UTC(2022, 6, 11), 181500, 183000, 180000, 182500], [Date.UTC(2022, 6, 12), 182500, 188000, 181500, 184000], [Date.UTC(2022, 6, 13), 183000, 189000, 183000, 185500], [Date.UTC(2022, 6, 14), 187500, 188000, 183500, 186000], [Date.UTC(2022, 6, 15), 186000, 186500, 179500, 185500]];
+        var value5 = [[Date.UTC(2022, 4, 09), 115100], [Date.UTC(2022, 4, 10), 116700], [Date.UTC(2022, 4, 11), 118600], [Date.UTC(2022, 4, 12), 121500], [Date.UTC(2022, 4, 13), 124700], [Date.UTC(2022, 4, 16), 127100], [Date.UTC(2022, 4, 17), 130500], [Date.UTC(2022, 4, 18), 134300], [Date.UTC(2022, 4, 19), 138700], [Date.UTC(2022, 4, 20), 143200], [Date.UTC(2022, 4, 23), 148100], [Date.UTC(2022, 4, 24), 151200], [Date.UTC(2022, 4, 25), 153000], [Date.UTC(2022, 4, 26), 154400], [Date.UTC(2022, 4, 27), 155300], [Date.UTC(2022, 4, 30), 156900], [Date.UTC(2022, 4, 31), 158000], [Date.UTC(2022, 5, 02), 159700], [Date.UTC(2022, 5, 03), 159300], [Date.UTC(2022, 5, 07), 158800], [Date.UTC(2022, 5, 08), 157700], [Date.UTC(2022, 5, 09), 157400], [Date.UTC(2022, 5, 10), 157000], [Date.UTC(2022, 5, 13), 158000], [Date.UTC(2022, 5, 14), 158100], [Date.UTC(2022, 5, 15), 158500], [Date.UTC(2022, 5, 16), 159600], [Date.UTC(2022, 5, 17), 160600], [Date.UTC(2022, 5, 20), 159600], [Date.UTC(2022, 5, 21), 159700], [Date.UTC(2022, 5, 22), 159300], [Date.UTC(2022, 5, 23), 158200], [Date.UTC(2022, 5, 24), 158100], [Date.UTC(2022, 5, 27), 161100], [Date.UTC(2022, 5, 28), 165800], [Date.UTC(2022, 5, 29), 170500], [Date.UTC(2022, 5, 30), 175000], [Date.UTC(2022, 6, 01), 178100], [Date.UTC(2022, 6, 04), 180700], [Date.UTC(2022, 6, 05), 181200], [Date.UTC(2022, 6, 06), 181300], [Date.UTC(2022, 6, 07), 181500], [Date.UTC(2022, 6, 08), 182500], [Date.UTC(2022, 6, 11), 182500], [Date.UTC(2022, 6, 12), 182400], [Date.UTC(2022, 6, 13), 183000], [Date.UTC(2022, 6, 14), 184000], [Date.UTC(2022, 6, 15), 184700]];
+        var value20 = [[Date.UTC(2022, 4, 09), 110725], [Date.UTC(2022, 4, 10), 111475], [Date.UTC(2022, 4, 11), 112150], [Date.UTC(2022, 4, 12), 113100], [Date.UTC(2022, 4, 13), 114325], [Date.UTC(2022, 4, 16), 115425], [Date.UTC(2022, 4, 17), 116900], [Date.UTC(2022, 4, 18), 118550], [Date.UTC(2022, 4, 19), 120600], [Date.UTC(2022, 4, 20), 122950], [Date.UTC(2022, 4, 23), 125225], [Date.UTC(2022, 4, 24), 127375], [Date.UTC(2022, 4, 25), 129475], [Date.UTC(2022, 4, 26), 131825], [Date.UTC(2022, 4, 27), 134250], [Date.UTC(2022, 4, 30), 136800], [Date.UTC(2022, 4, 31), 139100], [Date.UTC(2022, 5, 02), 141400], [Date.UTC(2022, 5, 03), 143475], [Date.UTC(2022, 5, 07), 145500], [Date.UTC(2022, 5, 08), 147450], [Date.UTC(2022, 5, 09), 149275], [Date.UTC(2022, 5, 10), 151000], [Date.UTC(2022, 5, 13), 152600], [Date.UTC(2022, 5, 14), 153850], [Date.UTC(2022, 5, 15), 155300], [Date.UTC(2022, 5, 16), 156550], [Date.UTC(2022, 5, 17), 157575], [Date.UTC(2022, 5, 20), 157825], [Date.UTC(2022, 5, 21), 157975], [Date.UTC(2022, 5, 22), 158100], [Date.UTC(2022, 5, 23), 158300], [Date.UTC(2022, 5, 24), 158850], [Date.UTC(2022, 5, 27), 159500], [Date.UTC(2022, 5, 28), 160600], [Date.UTC(2022, 5, 29), 161500], [Date.UTC(2022, 5, 30), 162550], [Date.UTC(2022, 6, 01), 163450], [Date.UTC(2022, 6, 04), 164850], [Date.UTC(2022, 6, 05), 166200], [Date.UTC(2022, 6, 06), 167400], [Date.UTC(2022, 6, 07), 168575], [Date.UTC(2022, 6, 08), 169825], [Date.UTC(2022, 6, 11), 170975], [Date.UTC(2022, 6, 12), 172275], [Date.UTC(2022, 6, 13), 173525], [Date.UTC(2022, 6, 14), 174675], [Date.UTC(2022, 6, 15), 175850]];
+        var value60 = [[Date.UTC(2022, 4, 09), 106410], [Date.UTC(2022, 4, 10), 106798], [Date.UTC(2022, 4, 11), 107173], [Date.UTC(2022, 4, 12), 107633], [Date.UTC(2022, 4, 13), 108198], [Date.UTC(2022, 4, 16), 108740], [Date.UTC(2022, 4, 17), 109380], [Date.UTC(2022, 4, 18), 110083], [Date.UTC(2022, 4, 19), 110908], [Date.UTC(2022, 4, 20), 111783], [Date.UTC(2022, 4, 23), 112683], [Date.UTC(2022, 4, 24), 113483], [Date.UTC(2022, 4, 25), 114317], [Date.UTC(2022, 4, 26), 115233], [Date.UTC(2022, 4, 27), 116167], [Date.UTC(2022, 4, 30), 117142], [Date.UTC(2022, 4, 31), 118033], [Date.UTC(2022, 5, 02), 118933], [Date.UTC(2022, 5, 03), 119750], [Date.UTC(2022, 5, 07), 120608], [Date.UTC(2022, 5, 08), 121492], [Date.UTC(2022, 5, 09), 122358], [Date.UTC(2022, 5, 10), 123208], [Date.UTC(2022, 5, 13), 124092], [Date.UTC(2022, 5, 14), 124975], [Date.UTC(2022, 5, 15), 125867], [Date.UTC(2022, 5, 16), 126800], [Date.UTC(2022, 5, 17), 127717], [Date.UTC(2022, 5, 20), 128508], [Date.UTC(2022, 5, 21), 129375], [Date.UTC(2022, 5, 22), 130225], [Date.UTC(2022, 5, 23), 131058], [Date.UTC(2022, 5, 24), 131958], [Date.UTC(2022, 5, 27), 133008], [Date.UTC(2022, 5, 28), 134275], [Date.UTC(2022, 5, 29), 135533], [Date.UTC(2022, 5, 30), 136767], [Date.UTC(2022, 6, 01), 137950], [Date.UTC(2022, 6, 04), 139242], [Date.UTC(2022, 6, 05), 140583], [Date.UTC(2022, 6, 06), 141858], [Date.UTC(2022, 6, 07), 143108], [Date.UTC(2022, 6, 08), 144325], [Date.UTC(2022, 6, 11), 145558], [Date.UTC(2022, 6, 12), 146817], [Date.UTC(2022, 6, 13), 148083], [Date.UTC(2022, 6, 14), 149375], [Date.UTC(2022, 6, 15), 150658]];
+
+        Highcharts.setOptions({
+            lang: {
+                thousandsSep: ','
+            }
+        });
+        Highcharts.chart('containeroutline1_2', {
+
+            chart: {
+                borderColor: '#333',
+            },
+
+            title: {
+                text: null
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            legend: {
+                // enabled: false,
+            },
+
+            exporting: {
+                enabled: false,
+            },
+
+            tooltip: {
+                shadow: false,
+                split: false,
+                shared: true,
+                borderColor: "#98ACD0",
+                xDateFormat: '%Y.%m.%d',
+                valueSuffix: ' 원',
+            },
+
+            colors: ["#AA79E2", "#F7C51E", "#66C33C"],
+
+            xAxis: [{
+                title: {
+                    text: null
+                },
+                type: 'datetime',
+                gridLineWidth: 0,
+                lineWidth: 0,
+                tickWidth: 0,
+                lineColor: '#98ACD0',
+                lineWidth: 1,
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat('%m.%d', this.value);
+                    },
+                },
+                crosshair: {
+                    width: 1,
+                    color: '#107070',
+                    dashStyle: 'Dot'
+                },
+            }],
+
+            yAxis: [{// 1
+                title: null,
+                lineColor: '#98ACD0',
+                lineWidth: 1,
+                labels: {                    
+                    style: {
+                        fontSize: 10,
+                    }
+                },
+            }, {// 2                       
+                title: null,
+                gridLineWidth: 0,
+                labels: {                    
+                    style: {
+                        fontSize: 10,
+                    }
+                },
+            }],
+
+            series: [
+                {
+                    type: 'candlestick',
+                    name: '일봉',
+                    data: value,
+                    showInLegend: false,
+                    tooltip: {
+                        useHTML: true,                        
+                        headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.key} </b></span> </br>',
+                        pointFormat: '<b>시가: {point.open}<br/>고가: {point.high}<br/>저가: {point.low}<br/>종가: {point.close}<br/></b>',
+                    },
+                },
+                {
+                    type: 'line',
+                    name: '5일',
+                    data: value5,
+                    tooltip: {
+                        useHTML: true,
+                        headerFormat: '',
+                        pointFormat: '</br><span style="border-top: 1px solid #c8c8c8;">--------------</span></br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
+                    }
+                }, {
+                    type: 'line',
+                    name: '20일',
+                    data: value20,
+                    tooltip: {
+                        useHTML: true,
+                        headerFormat: '',
+                        pointFormat: '</br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
+                    }
+                }, {
+                    type: 'line',
+                    name: '60일',
+                    data: value60,
+                    tooltip: {
+                        useHTML: true,
+                        headerFormat: '',
+                        pointFormat: '</br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
+                    }
+                }
+            ],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,           
+                        symbol: "circle",              
+                    },
+                },
+            },
+        });
+    }
+
+    //재무분석 개요 탭 막대차트
+    if ($('#containerSumfinancials1_1').length) {
+        Highcharts.chart('containerSumfinancials1_1', {
+
+            chart: {
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                },
+            },
+            // 하단 네비게이션 제거
+            navigator: {
+                enabled: false
+            },
+
+            // 스크롤바 제거
+            scrollbar: {
+                enabled: false
+            },
+
+            // 기간범위선택 
+            rangeSelector: {
+                enabled: false,
+                // allButtonsEnabled: true,                
+                // selected: 0,                
+            },
+
+            legend: {
+                enabled: false,
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            tooltip: {
+                enabled: false
+            },
+
+            rangeSelector: {
+                selected: 1
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            title: {
+                style: {
+                    'font-weight': "bold",
+                    color: '#E0E0E3',
+                    textTransform: 'uppercase',
+                    fontSize: '0',
+                },
+                text: ''
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            xAxis: [{
+                categories: ['2018', '2019', '2020', '2021', '2022<br><span style="font-size:9px">(추정)</span>'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#656d7e',
+                        fontSize: '10px'
+                    }
+                }
+            }],
+
+            yAxis: {
+                title: {
+                    text: null
+                },
+                gridLineWidth: 0,
+                labels: {
+                    enabled: false
+                }
+            },
+
+            series: [{
+                type: 'column',
+                name: '매출액',
+                data: [{
+                    y: 97.988,
+                },
+                {
+                    y: 45.988,
+                },
+                {
+                    y: 75.988,
+                },
+                {
+                    y: 85.988,
+                },
+                {
+                    y: 95.988,
+                    className: 'point_color'
+                }]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    pointWidth: 30,
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                    }
+                }
+            },
+
+        });
+    }
+    if ($('#containerSumfinancials1_2').length) {
+        Highcharts.chart('containerSumfinancials1_2', {
+
+            chart: {
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                },
+            },
+            // 하단 네비게이션 제거
+            navigator: {
+                enabled: false
+            },
+
+            // 스크롤바 제거
+            scrollbar: {
+                enabled: false
+            },
+
+            // 기간범위선택 
+            rangeSelector: {
+                enabled: false,
+                // allButtonsEnabled: true,                
+                // selected: 0,                
+            },
+
+            legend: {
+                enabled: false,
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            tooltip: {
+                enabled: false
+            },
+
+            rangeSelector: {
+                selected: 1
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            title: {
+                style: {
+                    'font-weight': "bold",
+                    color: '#E0E0E3',
+                    textTransform: 'uppercase',
+                    fontSize: '0',
+                },
+                text: ''
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            xAxis: [{
+                categories: ['2018', '2019', '2020', '2021', '2022<br><span style="font-size:9px">(추정)</span>'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#656d7e',
+                        fontSize: '10px'
+                    }
+                }
+            }],
+
+            yAxis: {
+                title: {
+                    text: null
+                },
+                gridLineWidth: 0,
+                labels: {
+                    enabled: false
+                }
+            },
+
+            series: [{
+                type: 'column',
+                name: '매출액',
+                data: [{
+                    y: 97.988,
+                },
+                {
+                    y: 45.988,
+                },
+                {
+                    y: 75.988,
+                },
+                {
+                    y: 85.988,
+                },
+                {
+                    y: 95.988,
+                    className: 'point_color'
+                }]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    pointWidth: 30,
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                    }
+                }
+            },
+
+        });
+    }
+    if ($('#containerSumfinancials1_3').length) {
+        Highcharts.chart('containerSumfinancials1_3', {
+
+            chart: {
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                },
+            },
+
+            legend: {
+                enabled: false,
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            tooltip: {
+                enabled: false
+            },
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            title: {
+                style: {
+                    'font-weight': "bold",
+                    color: '#E0E0E3',
+                    textTransform: 'uppercase',
+                    fontSize: '0',
+                },
+                text: ''
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            xAxis: [{
+                categories: ['2018', '2019', '2020', '2021', '2022<br><span style="font-size:9px">(추정)</span>'],
+                crosshair: true,
+                labels: {
+                    style: {
+                        color: '#656d7e',
+                        fontSize: '10px'
+                    }
+                }
+            }],
+
+            yAxis: {
+                title: {
+                    text: null
+                },
+                gridLineWidth: 0,
+                labels: {
+                    enabled: false
+                }
+            },
+
+            series: [{
+                type: 'column',
+                name: '매출액',
+                data: [{
+                    y: 97.988,
+                },
+                {
+                    y: 45.988,
+                },
+                {
+                    y: 75.988,
+                },
+                {
+                    y: 85.988,
+                },
+                {
+                    y: 95.988,
+                    className: 'point_color'
+                }]
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+                column: {
+                    pointWidth: 30,
+                    minPointLength: 5,
+                    dataLabels: {
+                        enabled: true,
+                        crop: false,
+                        overflow: 'none',
+                        format: '{point.y:,.2f}',
+                    }
+                }
+            },
+
         });
     }
 });
