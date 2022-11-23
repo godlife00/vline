@@ -731,14 +731,27 @@
             position: relative;
             padding: 13.5px 70px 13.5px 19px;
             box-sizing: border-box;
-            background-color: #f4f6fa;                        
+            background-color: #f4f6fa;    
+            .sum_title {
+                display: block;
+                font-size: 15px;
+                font-weight: $f_sizeB;
+                letter-spacing: -0.38px;                    
+                color: #222;    
+                margin-bottom: 15px;                
+            }                    
             p {                
                 overflow: hidden;
                 font-size: 13px;                
                 letter-spacing: -0.33px;                
                 color: #656d7e;
                 height: 20px;
-                line-height: 22px;
+                line-height: 22px;                
+            }
+            &.lineView_2 {
+                p {
+                    height: 48px;
+                }
             }
             
             &.small {

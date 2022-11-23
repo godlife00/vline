@@ -9450,6 +9450,7 @@ $(document).ready(function () {
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.key} </b></span> </br>',
                         pointFormat: '<b>시가: {point.open}<br/>고가: {point.high}<br/>저가: {point.low}<br/>종가: {point.close}<br/></b>',
                     },
+                    zIndex: 1
                 },
                 {
                     type: 'line',
@@ -9458,8 +9459,9 @@ $(document).ready(function () {
                     tooltip: {
                         useHTML: true,
                         headerFormat: '',
-                        pointFormat: '</br><span style="border-top: 1px solid #c8c8c8;">--------------</span></br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
-                    }
+                        pointFormat: '</br><span style="border-top: 1px solid #c8c8c8;">---------------</span></br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
+                    },
+                    lineWidth : 1,
                 }, {
                     type: 'line',
                     name: '20일',
@@ -9468,7 +9470,8 @@ $(document).ready(function () {
                         useHTML: true,
                         headerFormat: '',
                         pointFormat: '</br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
-                    }
+                    },
+                    lineWidth : 1,
                 }, {
                     type: 'line',
                     name: '60일',
@@ -9477,7 +9480,8 @@ $(document).ready(function () {
                         useHTML: true,
                         headerFormat: '',
                         pointFormat: '</br><b> <span style="display: block; padding: 5px 0; border-top: 1px solid #c8c8c8;"> {series.name} : <span style="color: #656d7e;"> {point.y} </span></b></span>',
-                    }
+                    },
+                    lineWidth : 1,
                 }
             ],
 

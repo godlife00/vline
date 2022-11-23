@@ -382,6 +382,12 @@ $(document).ready(function () {
     $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function () {
         $('.highcharts-root').append("<div>Handler for .resize() called.</div>");
     });
+
+    // 종목분석 - 개요 차트 기간 선택
+    $('#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs li').on('click', function () {
+        $('#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs li').removeClass('active');
+        $(this).addClass('active')
+    });
     
 
     // 자세히보기 열기닫기
