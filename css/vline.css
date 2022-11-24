@@ -372,7 +372,7 @@ body .numCunt::before {
   background-color: #fff;
   padding: 8.5px 17px;
   box-sizing: border-box;
-  background: #fff url("/img/gray_tdline.gif") repeat-x left bottom;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left bottom;
 }
 .table th strong,
 .table td strong {
@@ -462,7 +462,7 @@ body .numCunt::before {
   font-size: 12px;
   color: #7389af;
   text-align: center;
-  background: url("/img/gray_thline.gif") repeat-x left bottom;
+  background: url("../img/gray_thline.gif") repeat-x left bottom;
 }
 .table thead th span,
 .table thead td span {
@@ -512,7 +512,7 @@ body .numCunt::before {
   background-color: #fff;
 }
 .table.fix_table tbody .fix {
-  background: #fff url("/img/gray_tdline.gif") repeat-x left bottom, #fff url("/img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left bottom, #fff url("../img/gray_tdline.gif") repeat-y right top;
 }
 .table.fix_table tbody .fix::before {
   content: attr(data-content) " any other text you may want";
@@ -523,7 +523,7 @@ body .numCunt::before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("/img/fix_shadow.svg") repeat-y 0 0;
+  background: url("../img/fix_shadow.svg") repeat-y 0 0;
   opacity: 0.75;
 }
 .table.fix_table.thead2_table {
@@ -556,7 +556,7 @@ body .numCunt::before {
   top: 1px;
   bottom: 0;
   width: 12px;
-  background: url("/img/fix_shadow.svg") repeat-y 0 0;
+  background: url("../img/fix_shadow.svg") repeat-y 0 0;
   opacity: 0.75;
 }
 .table.fix_table.thead2_table tbody td:nth-child(2n) {
@@ -752,7 +752,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
 }
 .star_area .starR {
-  background: url("/img/ico_review.svg") no-repeat 50% 0;
+  background: url("../img/ico_review.svg") no-repeat 50% 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;
@@ -889,7 +889,7 @@ input[type=radio]:checked:before {
   right: 0;
   width: 26px;
   height: 26px;
-  background: url("/img/select.png") no-repeat 0 0;
+  background: url("../img/select.png") no-repeat 0 0;
 }
 
 .selectbox label {
@@ -1115,7 +1115,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 10.4px;
   height: 14px;
-  background: url("/img/premium_join_bg.png") no-repeat 0 0;
+  background: url("../img/premium_join_bg.png") no-repeat 0 0;
   background-size: cover;
 }
 #header .bgWrap .premium .loginId {
@@ -1483,7 +1483,7 @@ input[type=radio]:checked:before {
   padding: 3px 5px;
   border-radius: 4px;
   border: solid 1px #dcdfec;
-  background: #fff url("/img/icon_update.svg") no-repeat 10px center;
+  background: #fff url("../img/icon_update.svg") no-repeat 10px center;
 }
 #container .M_left .update_acc p {
   font-size: 12px;
@@ -1568,7 +1568,7 @@ input[type=radio]:checked:before {
   top: 0;
   bottom: 31px;
   width: 1px;
-  background: url("/img/sub_dotline.svg") repeat-y 0 0;
+  background: url("../img/sub_dotline.svg") repeat-y 0 0;
 }
 #container .M_left .sub_nav ul.depth_1 ul.depth_2 li {
   border: none;
@@ -1638,7 +1638,7 @@ input[type=radio]:checked:before {
   line-height: 1.69;
   letter-spacing: -0.33px;
   color: #656d7e;
-  background: url("/img/service_box_icon.svg") no-repeat left top;
+  background: url("../img/service_box_icon.svg") no-repeat left top;
 }
 #container .M_left .service_box li:nth-child(1) a {
   background-position-y: 2px;
@@ -1696,7 +1696,7 @@ input[type=radio]:checked:before {
   position: relative;
   margin-top: 23px;
   padding-bottom: 7px;
-  background: url("/img/dot_gray.png") repeat-x left bottom;
+  background: url("../img/dot_gray.png") repeat-x left bottom;
 }
 #container .M_right .group_nav ul {
   display: flex;
@@ -1725,7 +1725,7 @@ input[type=radio]:checked:before {
   position: relative;
   width: 100%;
   margin-top: 23px;
-  background: url("/img/dot_gray.png") repeat-x left bottom;
+  background: url("../img/dot_gray.png") repeat-x left bottom;
 }
 #container .M_right .blue_stocks_area::after {
   content: "";
@@ -1803,7 +1803,7 @@ input[type=radio]:checked:before {
   padding-right: 23px;
   margin-bottom: 6px;
   margin-right: 15px;
-  background: url("/img/bg_blue.jpg") repeat-x 0 calc(100% + 2px);
+  background: url("../img/bg_blue.jpg") repeat-x 0 calc(100% + 2px);
 }
 #container .M_right .blue_stocks_area .stocks_filter .path::after {
   content: "";
@@ -2442,7 +2442,7 @@ input[type=radio]:checked:before {
   top: 2px;
   width: 14px;
   height: 14px;
-  background: url("/img/check_img.svg") no-repeat 0 100%;
+  background: url("../img/check_img.svg") no-repeat 0 100%;
 }
 #container .M_right .contents_header .table_filter .detail span.active {
   color: #3655d6;
@@ -2948,7 +2948,7 @@ input[type=radio]:checked:before {
 }
 .valueline #wrap #container .new_listing .left .new_tabs .tab_area ul {
   display: flex;
-  background: url("/img/dot_gray.png") repeat-x left calc(100% + 1px);
+  background: url("../img/dot_gray.png") repeat-x left calc(100% + 1px);
 }
 .valueline #wrap #container .new_listing .left .new_tabs .tab_area ul li {
   cursor: pointer;
@@ -2981,7 +2981,7 @@ input[type=radio]:checked:before {
 }
 .valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul {
   display: flex;
-  background: url("/img/dot_gray.png") repeat-x left calc(100% + 1px);
+  background: url("../img/dot_gray.png") repeat-x left calc(100% + 1px);
 }
 .valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul li {
   cursor: pointer;
@@ -3031,7 +3031,7 @@ input[type=radio]:checked:before {
   font-size: 16px;
   letter-spacing: -0.4px;
   color: #222;
-  background: #eceff5 url("/img/icon_chartFill.svg") no-repeat 13px center;
+  background: #eceff5 url("../img/icon_chartFill.svg") no-repeat 13px center;
 }
 .valueline #wrap #container .new_listing .right .btm .title strong {
   color: #3655d6;
@@ -4156,7 +4156,7 @@ input[type=radio]:checked:before {
 }
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul {
   display: flex;
-  background: url("/img/dot_gray.png") repeat-x left bottom;
+  background: url("../img/dot_gray.png") repeat-x left bottom;
 }
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li {
   flex: 1;
@@ -4174,7 +4174,7 @@ input[type=radio]:checked:before {
   height: 22px;
   padding: 3px 3px;
   box-sizing: border-box;
-  background: url("/img/tabcon_up.svg") no-repeat center bottom;
+  background: url("../img/tabcon_up.svg") no-repeat center bottom;
   filter: grayscale(100%);
 }
 .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:first-child.active {
@@ -4192,7 +4192,7 @@ input[type=radio]:checked:before {
   height: 22px;
   padding: 3px 3px;
   box-sizing: border-box;
-  background: url("/img/tabcon_down.svg") no-repeat center bottom;
+  background: url("../img/tabcon_down.svg") no-repeat center bottom;
   background-size: 12px 13px;
   filter: grayscale(100%);
 }
@@ -4396,7 +4396,7 @@ input[type=radio]:checked:before {
   top: 0;
   width: 83px;
   height: 100%;
-  background: #374b9d url("/img/bg_filechart.svg") no-repeat center center;
+  background: #374b9d url("../img/bg_filechart.svg") no-repeat center center;
 }
 .valueline #wrap #container .resultdata_area .season .box .title {
   font-size: 24px;
@@ -5436,11 +5436,11 @@ input[type=radio]:checked:before {
 
 #container .M_right .contents .turn_box .thead2_table thead tr:first-child th,
 #container .M_right .contents .turn_box .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .turn_box .thead2_table thead tr:nth-child(2) th,
 #container .M_right .contents .turn_box .thead2_table thead tr:nth-child(2) td {
-  background: #fff url("/img/gray_tdline.gif") repeat-x left top;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left top;
 }
 #container .M_right .contents .turn_box .thead2_table thead th.fix::before {
   display: none;
@@ -5453,7 +5453,7 @@ input[type=radio]:checked:before {
   bottom: 1px;
   width: 12px;
   height: 58px;
-  background: url("/img/fix_shadow.svg") repeat-y 0 0;
+  background: url("../img/fix_shadow.svg") repeat-y 0 0;
 }
 
 #container .M_right .contents .excavation_area {
@@ -5489,19 +5489,19 @@ input[type=radio]:checked:before {
 }
 
 #container .M_right .contents .excavation_area.blue_box .thead2_table {
-  background: url("/img/gray_tdline.gif") repeat-x left bottom;
+  background: url("../img/gray_tdline.gif") repeat-x left bottom;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child th, #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child th.fix::before, #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:first-child td.fix::before {
   height: 68px;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:nth-child(2) td {
-  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table thead tr:nth-child(2) td:first-child {
   background-color: #edf3ff !important;
@@ -5513,12 +5513,12 @@ input[type=radio]:checked:before {
   display: none;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.blue_box .thead2_table tbody tr:first-child td {
-  background-image: url("/img/gray_thline.gif");
+  background-image: url("../img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 #container .M_right .contents .excavation_area.blue_box .thead2_table tbody th, #container .M_right .contents .excavation_area.blue_box .thead2_table tbody td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -5543,7 +5543,7 @@ input[type=radio]:checked:before {
   display: none;
 }
 #container .M_right .contents .excavation_area.ex_turn .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.ex_turn .thead2_table thead tr:nth-child(2) td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
@@ -5554,7 +5554,7 @@ input[type=radio]:checked:before {
   color: #374b9d;
 }
 #container .M_right .contents .excavation_area.ex_turn .thead2_table tbody th, #container .M_right .contents .excavation_area.ex_turn .thead2_table tbody td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -5580,10 +5580,10 @@ input[type=radio]:checked:before {
   padding: 8.5px 12px;
 }
 #container .M_right .contents .excavation_area.result .thead2_table thead {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child th, #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child th.fix, #container .M_right .contents .excavation_area.result .thead2_table thead tr:first-child td.fix {
   height: 60px;
@@ -5593,18 +5593,18 @@ input[type=radio]:checked:before {
 }
 #container .M_right .contents .excavation_area.result .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.result .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
 }
 #container .M_right .contents .excavation_area.result .thead2_table thead th.fix::before {
   display: none;
 }
 #container .M_right .contents .excavation_area.result .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.result .thead2_table tbody tr:first-child td {
-  background-image: url("/img/gray_thline.gif");
+  background-image: url("../img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 #container .M_right .contents .excavation_area.result .thead2_table tbody th, #container .M_right .contents .excavation_area.result .thead2_table tbody td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -5642,7 +5642,7 @@ input[type=radio]:checked:before {
   top: 0;
   width: 16px;
   height: 100%;
-  background: url("/img/icon_shop.svg") no-repeat 0 5px;
+  background: url("../img/icon_shop.svg") no-repeat 0 5px;
 }
 .top_shopping .shop_radio {
   display: inline-block;
@@ -5690,7 +5690,7 @@ input[type=radio]:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_help.svg") no-repeat 0 0;
+  background: url("../img/icon_help.svg") no-repeat 0 0;
 }
 .top_shopping .shopping_list .form_box .set_filter .mid {
   position: relative;
@@ -5780,10 +5780,10 @@ input[type=radio]:checked:before {
   padding: 8.5px 12px;
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table thead {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child th, #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child th.fix, #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:first-child td.fix {
   height: 60px;
@@ -5793,7 +5793,7 @@ input[type=radio]:checked:before {
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .excavation_area.shopping .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table thead th.fix::before {
   display: none;
@@ -5855,12 +5855,12 @@ input[type=radio]:checked:before {
   border-top: none;
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table tbody tr:first-child th, #container .M_right .contents .excavation_area.shopping .thead2_table tbody tr:first-child td {
-  background-image: url("/img/gray_thline.gif");
+  background-image: url("../img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 #container .M_right .contents .excavation_area.shopping .thead2_table tbody th, #container .M_right .contents .excavation_area.shopping .thead2_table tbody td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -6027,23 +6027,23 @@ input[type=radio]:checked:before {
   border-radius: 10px;
 }
 .top_invest .stand_standard.face_buffett {
-  background: #fff url("/img/face_buffett.png") no-repeat left bottom;
+  background: #fff url("../img/face_buffett.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_graham {
-  background: #fff url("/img/face_graham.png") no-repeat left bottom;
+  background: #fff url("../img/face_graham.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_templeton {
-  background: #fff url("/img/face_templeton.png") no-repeat left bottom;
+  background: #fff url("../img/face_templeton.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_lynch {
-  background: #fff url("/img/face_lynch.png") no-repeat left bottom;
+  background: #fff url("../img/face_lynch.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_greenblatt {
-  background: #fff url("/img/face_greenblatt.png") no-repeat left bottom;
+  background: #fff url("../img/face_greenblatt.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard .left {
@@ -6115,7 +6115,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("/img/icon_agreecheck.svg") no-repeat right 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat right 0;
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox]:checked + label {
   display: inline-block;
@@ -6175,7 +6175,7 @@ input[type=radio]:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_help.svg") no-repeat 0 0;
+  background: url("../img/icon_help.svg") no-repeat 0 0;
 }
 #container .M_right .contents .invest_area.buffett .table_update {
   position: absolute;
@@ -6270,7 +6270,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("/img/icon_check.svg") no-repeat center center;
+  background: url("../img/icon_check.svg") no-repeat center center;
   background-size: 12px auto;
 }
 #container .M_right .contents .invest_area.buffett .paginate {
@@ -6299,23 +6299,23 @@ input[type=radio]:checked:before {
   border-radius: 10px;
 }
 .top_invest .stand_standard.face_buffett {
-  background: #fff url("/img/face_buffett.png") no-repeat left bottom;
+  background: #fff url("../img/face_buffett.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_graham {
-  background: #fff url("/img/face_graham.png") no-repeat left bottom;
+  background: #fff url("../img/face_graham.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_templeton {
-  background: #fff url("/img/face_templeton.png") no-repeat left bottom;
+  background: #fff url("../img/face_templeton.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_lynch {
-  background: #fff url("/img/face_lynch.png") no-repeat left bottom;
+  background: #fff url("../img/face_lynch.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard.face_greenblatt {
-  background: #fff url("/img/face_greenblatt.png") no-repeat left bottom;
+  background: #fff url("../img/face_greenblatt.png") no-repeat left bottom;
   background-size: 102px auto;
 }
 .top_invest .stand_standard .left {
@@ -6387,7 +6387,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("/img/icon_agreecheck.svg") no-repeat right 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat right 0;
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox]:checked + label {
   display: inline-block;
@@ -6447,7 +6447,7 @@ input[type=radio]:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_help.svg") no-repeat 0 0;
+  background: url("../img/icon_help.svg") no-repeat 0 0;
 }
 .top_invest.greenblatt .stand_standard .left {
   width: 100px;
@@ -6510,10 +6510,10 @@ input[type=radio]:checked:before {
   padding: 8.5px 12px;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child th, #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child th.fix, #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:first-child td.fix {
   height: 60px;
@@ -6523,18 +6523,18 @@ input[type=radio]:checked:before {
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .invest_area.greenblatt .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table thead th.fix::before {
   display: none;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table tbody tr:first-child th, #container .M_right .contents .invest_area.greenblatt .thead2_table tbody tr:first-child td {
-  background-image: url("/img/gray_thline.gif");
+  background-image: url("../img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table tbody th, #container .M_right .contents .invest_area.greenblatt .thead2_table tbody td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -6581,28 +6581,28 @@ input[type=radio]:checked:before {
   padding: 8.5px 12px;
 }
 #container .M_right .contents .sectors_area .thead2_table thead {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .sectors_area .thead2_table thead tr:first-child th, #container .M_right .contents .sectors_area .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .sectors_area .thead2_table thead tr:first-child th.fix, #container .M_right .contents .sectors_area .thead2_table thead tr:first-child td.fix {
   height: 60px;
 }
 #container .M_right .contents .sectors_area .thead2_table thead tr:nth-child(2) th, #container .M_right .contents .sectors_area .thead2_table thead tr:nth-child(2) td {
   padding: 4px 3px;
-  background: #fff url("/img/gray_tdline.gif") repeat-x left top !important;
+  background: #fff url("../img/gray_tdline.gif") repeat-x left top !important;
 }
 #container .M_right .contents .sectors_area .thead2_table thead th.fix::before {
   display: none;
 }
 #container .M_right .contents .sectors_area .thead2_table tbody tr:first-child th, #container .M_right .contents .sectors_area .thead2_table tbody tr:first-child td {
-  background-image: url("/img/gray_thline.gif");
+  background-image: url("../img/gray_thline.gif");
   background-position: left top;
   background-repeat: repeat-x;
 }
 #container .M_right .contents .sectors_area .thead2_table tbody th, #container .M_right .contents .sectors_area .thead2_table tbody td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   height: 34px;
@@ -6742,7 +6742,7 @@ input[type=radio]:checked:before {
   background: none;
 }
 #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child th, #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child td {
-  background: #fff url("/img/gray_thline.gif") repeat-x left top;
+  background: #fff url("../img/gray_thline.gif") repeat-x left top;
 }
 #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child th.fix, #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:first-child td.fix {
   height: auto;
@@ -6780,7 +6780,7 @@ input[type=radio]:checked:before {
   height: 64px;
 }
 #container .M_right .contents .sectors_area.ratio .thead2_table thead tr:nth-child(3) td {
-  background-image: url("/img/gray_tdline.gif");
+  background-image: url("../img/gray_tdline.gif");
   background-position: left top;
   background-repeat: repeat-x;
   background-color: #fff;
@@ -6807,7 +6807,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 #container .M_right .contents .sectors_area.ratio .thead2_table .updown {
   display: inline-block;
@@ -6909,7 +6909,7 @@ input[type=radio]:checked:before {
 }
 #container .M_right .contents .inform_area.list .listWrap li.lock .iTitle a {
   padding-left: 24px;
-  background: url("/img/icon_lock.svg") no-repeat 0 4px;
+  background: url("../img/icon_lock.svg") no-repeat 0 4px;
 }
 #container .M_right .contents .inform_area.list .listWrap li .regDay {
   flex-basis: 100px;
@@ -7047,7 +7047,7 @@ input[type=radio]:checked:before {
   height: 35px;
   border-radius: 5px;
   background-color: #fff;
-  background: #fff url("/img/icon_file.svg") no-repeat 10px center;
+  background: #fff url("../img/icon_file.svg") no-repeat 10px center;
   font-size: 14px;
   letter-spacing: -0.35px;
   text-align: left;
@@ -7062,7 +7062,7 @@ input[type=radio]:checked:before {
   top: 0;
   width: 34px;
   height: 34px;
-  background: #B1B9CB url("/img/icon_fileDown.svg") no-repeat center center;
+  background: #B1B9CB url("../img/icon_fileDown.svg") no-repeat center center;
 }
 #container .M_right .contents .inform_area.view .viewWrap .goLink {
   padding: 12px 0;
@@ -7538,7 +7538,7 @@ input[type=radio]:checked:before {
   top: 3px;
   width: 22px;
   height: 22px;
-  background: url("/img/sns_n.svg") no-repeat 0 0;
+  background: url("../img/sns_n.svg") no-repeat 0 0;
 }
 .modal.login_form .pop_con .sns li a.sns_n {
   background-color: #20b703;
@@ -7547,7 +7547,7 @@ input[type=radio]:checked:before {
   color: #fff;
 }
 .modal.login_form .pop_con .sns li a.sns_n span::before {
-  background: url("/img/sns_n.svg") no-repeat 0 0;
+  background: url("../img/sns_n.svg") no-repeat 0 0;
 }
 .modal.login_form .pop_con .sns li a.sns_k {
   margin-top: 16px;
@@ -7557,7 +7557,7 @@ input[type=radio]:checked:before {
   color: #333;
 }
 .modal.login_form .pop_con .sns li a.sns_k span::before {
-  background: url("/img/sns_k.svg") no-repeat 0 0;
+  background: url("../img/sns_k.svg") no-repeat 0 0;
 }
 .modal.login_form .pop_con .guide_txt {
   font-size: 13px;
@@ -7676,7 +7676,7 @@ input[type=radio]:checked:before {
   left: -21px;
   width: 14px;
   height: 14px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 100%;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 100%;
   margin-right: 7px;
 }
 .modal.terms_form .pop_con .agree_area .agree_from .label .label_chk.active::before {
@@ -7838,7 +7838,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 .modal.login_form .pop_con .mapage_form .label_chk.active i, .modal.refund .pop_con .mapage_form .label_chk.active i {
@@ -7927,7 +7927,7 @@ input[type=radio]:checked:before {
 }
 .modal.sign_complete .pop_con .loign_com .login_title {
   padding: 35px 33px;
-  background: #fff url("/img/bg_premium_top.svg") no-repeat 90% 70%;
+  background: #fff url("../img/bg_premium_top.svg") no-repeat 90% 70%;
   text-align: left;
 }
 .modal.sign_complete .pop_con .loign_com .login_title .title {
@@ -8046,7 +8046,7 @@ input[type=radio]:checked:before {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  background: #374b9d url("/img/bg_premium_top.svg") no-repeat right bottom;
+  background: #374b9d url("../img/bg_premium_top.svg") no-repeat right bottom;
 }
 .modal.premium_join .pop_header .pop_title {
   font-size: 24px;
@@ -8132,7 +8132,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 16px;
   height: 12px;
-  background: url("/img/com_select.svg") no-repeat 0 0;
+  background: url("../img/com_select.svg") no-repeat 0 0;
 }
 .modal.premium_join .pop_foot {
   padding: 24px 33px;
@@ -8286,7 +8286,7 @@ input[type=radio]:checked:before {
   left: 0;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_preinfo.svg") no-repeat 0 0;
+  background: url("../img/icon_preinfo.svg") no-repeat 0 0;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .i_dsc.error {
   margin-top: 8px;
@@ -8295,7 +8295,7 @@ input[type=radio]:checked:before {
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .i_dsc.error::before {
   width: 12px;
   height: 12px;
-  background: url("/img/bg_error.png") no-repeat 0 0;
+  background: url("../img/bg_error.png") no-repeat 0 0;
   background-size: 12px 12px;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_phone .txt_info {
@@ -8570,7 +8570,7 @@ input[type=radio]:checked:before {
   left: -21px;
   width: 14px;
   height: 14px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 100%;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 100%;
   margin-right: 7px;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk.active::before {
@@ -9542,7 +9542,7 @@ input[type=radio]:checked:before {
   content: "";
   width: 16px;
   height: 16px;
-  background: url("/img/icon_checkmark.png") no-repeat 100% 0;
+  background: url("../img/icon_checkmark.png") no-repeat 100% 0;
   position: absolute;
   right: 12px;
   top: 13px;
@@ -9749,7 +9749,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("/img/icon_moreL.png") no-repeat 0 0;
+  background: url("../img/icon_moreL.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -9760,7 +9760,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("/img/icon_moreRR.png") no-repeat 0 0;
+  background: url("../img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -9852,14 +9852,14 @@ input[type=radio]:checked:before {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("/img/icon_preinfo.svg") no-repeat 0 0;
+  background: url("../img/icon_preinfo.svg") no-repeat 0 0;
   width: 12px;
   height: 12px;
 }
 .mapage_form .form_table td .i_dsc.pass::before {
   top: 0;
   left: 0;
-  background: url("/img/icon_preinfo.svg") no-repeat 0 0;
+  background: url("../img/icon_preinfo.svg") no-repeat 0 0;
 }
 .mapage_form .form_table td .i_dsc.coupon {
   color: #ff0200 !important;
@@ -9867,7 +9867,7 @@ input[type=radio]:checked:before {
 .mapage_form .form_table td .i_dsc.coupon::before {
   top: 6px;
   left: 0;
-  background: url("/img/icon_preinfo.svg") no-repeat 0 0;
+  background: url("../img/icon_preinfo.svg") no-repeat 0 0;
 }
 .mapage_form .form_table td .i_dsc.error {
   margin-top: 8px;
@@ -9876,7 +9876,7 @@ input[type=radio]:checked:before {
 .mapage_form .form_table td .i_dsc.error::before {
   top: 0;
   left: 0;
-  background: url("/img/bg_error.png") no-repeat 0 0;
+  background: url("../img/bg_error.png") no-repeat 0 0;
   background-size: 12px 12px;
 }
 
@@ -10003,7 +10003,7 @@ input[type=radio]:checked:before {
   top: -2px;
   width: 16px;
   height: 16px;
-  background: url("/img/icon_agreecheck.png") no-repeat 0 100%;
+  background: url("../img/icon_agreecheck.png") no-repeat 0 100%;
   margin-right: 7px;
 }
 
@@ -10083,7 +10083,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("/img/icon_moreRR.png") no-repeat 0 0;
+  background: url("../img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -10195,7 +10195,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("/img/icon_sale.png") no-repeat 0 0;
+  background: url("../img/icon_sale.png") no-repeat 0 0;
   margin-right: 5px;
 }
 
@@ -10253,7 +10253,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("/img/bg_x.png") no-repeat 0 0;
+  background: url("../img/bg_x.png") no-repeat 0 0;
 }
 
 .payment_guide .mapage_form .form_table td .i_dsc.coupon {
@@ -10431,7 +10431,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
   width: 16px;
   height: 16px;
-  background: url("/img/icon_agreecheck.png") no-repeat 0 100%;
+  background: url("../img/icon_agreecheck.png") no-repeat 0 100%;
   margin-right: 7px;
 }
 
@@ -10606,7 +10606,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
   width: 16px;
   height: 16px;
-  background: url("/img/icon_agreecheck.png") no-repeat 0 100%;
+  background: url("../img/icon_agreecheck.png") no-repeat 0 100%;
   margin-right: 7px;
 }
 
@@ -10660,13 +10660,13 @@ input[type=radio]:checked:before {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url("/img/select_on.png") no-repeat 0 100%;
+  background: url("../img/select_on.png") no-repeat 0 100%;
   background-size: 20px 20px;
   margin-right: 7px;
 }
 
 .payment_note .top .agree.active i {
-  background: url("/img/select.png") no-repeat 0 100%;
+  background: url("../img/select.png") no-repeat 0 100%;
   background-size: 20px 20px;
 }
 
@@ -10691,13 +10691,13 @@ input[type=radio]:checked:before {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url("/img/select_on.png") no-repeat 0 100%;
+  background: url("../img/select_on.png") no-repeat 0 100%;
   background-size: 20px 20px;
   margin-right: 7px;
 }
 
 .agree_chk .txt.active i {
-  background: url("/img/select.png") no-repeat 0 100%;
+  background: url("../img/select.png") no-repeat 0 100%;
   background-size: 20px 20px;
 }
 
@@ -10741,13 +10741,13 @@ input[type=radio]:checked:before {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url("/img/select_on.png") no-repeat 0 100%;
+  background: url("../img/select_on.png") no-repeat 0 100%;
   background-size: 20px 20px;
   margin-right: 7px;
 }
 
 .payment_chk .txt.active i {
-  background: url("/img/select.png") no-repeat 0 100%;
+  background: url("../img/select.png") no-repeat 0 100%;
   background-size: 20px 20px;
 }
 
@@ -10847,7 +10847,7 @@ input[type=radio]:checked:before {
   width: 12.5px;
   height: 15.5px;
   margin-right: 3px;
-  background: url("/img/banner/icon_alarm2.png") no-repeat 0 0;
+  background: url("../img/banner/icon_alarm2.png") no-repeat 0 0;
   background-size: 12.5px 15.5px;
   position: relative;
   top: 2px;
@@ -10886,7 +10886,7 @@ input[type=radio]:checked:before {
   height: 6px;
   padding: 0 1px;
   margin-right: 3px;
-  background: url("/img/more_Black.png") no-repeat 0 0;
+  background: url("../img/more_Black.png") no-repeat 0 0;
   background-size: 3px 6px;
   position: relative;
   top: -2px;
@@ -10894,7 +10894,7 @@ input[type=radio]:checked:before {
 
 /* 가입 - 결제완료 step 03 */
 .pay03 .step_top {
-  background: #fff url("/img/bg_payment_com.png") no-repeat 105% 22px;
+  background: #fff url("../img/bg_payment_com.png") no-repeat 105% 22px;
   min-height: 175px;
   box-sizing: border-box;
 }

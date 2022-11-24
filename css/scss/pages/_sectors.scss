@@ -38,7 +38,10 @@
                 th, td {
                     background: #fff url('/img/gray_thline.gif') repeat-x left top;        
                     &.fix {
-                        height: 60px;                        
+                        height: 60px;
+                        &::before {
+                            // height: 59px;
+                        }
                     }
                 }                    
             }            
