@@ -9380,7 +9380,7 @@ $(document).ready(function () {
             },
 
             legend: {
-                // enabled: false,
+                enabled: false,
             },
 
             exporting: {
@@ -9454,7 +9454,7 @@ $(document).ready(function () {
                 },
                 {
                     type: 'line',
-                    name: '5일',
+                    name: '5일', 
                     data: value5,
                     tooltip: {
                         useHTML: true,
@@ -9569,7 +9569,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022<br><span style="font-size:9px">(추정)</span>'],
+                categories: ['2018', '2019', '2020', '2021<br><span style="font-size:9px">(추정)</span>', '2022<br><span style="font-size:9px">(추정)</span>'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -9603,6 +9603,7 @@ $(document).ready(function () {
                 },
                 {
                     y: 85.988,
+                    className: 'point_color'
                 },
                 {
                     y: 95.988,
@@ -9702,7 +9703,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022<br><span style="font-size:9px">(추정)</span>'],
+                categories: ['2018', '2019', '2020', '2021<br><span style="font-size:9px">(추정)</span>', '2022<br><span style="font-size:9px">(추정)</span>'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -9736,6 +9737,7 @@ $(document).ready(function () {
                 },
                 {
                     y: 85.988,
+                    className: 'point_color'
                 },
                 {
                     y: 95.988,
@@ -9814,7 +9816,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022<br><span style="font-size:9px">(추정)</span>'],
+                categories: ['2018', '2019', '2020', '2021<br><span style="font-size:9px">(추정)</span>', '2022<br><span style="font-size:9px">(추정)</span>'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -9848,6 +9850,7 @@ $(document).ready(function () {
                 },
                 {
                     y: 85.988,
+                    className: 'point_color'
                 },
                 {
                     y: 95.988,
