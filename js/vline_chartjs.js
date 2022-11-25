@@ -9357,10 +9357,26 @@ $(document).ready(function () {
                 thousandsSep: ','
             }
         });
-        Highcharts.chart('containeroutline1_2', {
+        Highcharts.stockChart('containeroutline1_2', {
 
             chart: {
-                borderColor: '#333',
+                // borderColor: '#333',
+            },
+
+            // 하단 네비게이션 제거
+            navigator: {
+                enabled: false,                     
+            },
+
+            // 스크롤바 제거
+            scrollbar: {
+                enabled: false
+            },
+
+            // 기간범위선택 
+            rangeSelector: {
+                allButtonsEnabled: true,
+                selected: 2
             },
 
             title: {
@@ -9420,24 +9436,19 @@ $(document).ready(function () {
                 },
             }],
 
-            yAxis: [{// 1
+            yAxis: {
                 title: null,
                 lineColor: '#98ACD0',
                 lineWidth: 1,
                 labels: {                    
                     style: {
                         fontSize: 10,
-                    }
+                    },
+                    align: "left"
                 },
-            }, {// 2                       
-                title: null,
-                gridLineWidth: 0,
-                labels: {                    
-                    style: {
-                        fontSize: 10,
-                    }
-                },
-            }],
+                showFirstLabel: false,
+                showLastLabel: true,
+            },            
 
             series: [
                 {
