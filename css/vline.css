@@ -5364,6 +5364,7 @@ input[type=radio]:checked:before {
   margin-left: 20px;
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 #container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1 {
   display: inline-block;
