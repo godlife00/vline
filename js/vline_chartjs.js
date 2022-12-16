@@ -9401,7 +9401,7 @@ $(document).ready(function () {
                     count: 5,
                     text: '10년',
                 }],
-
+                
                 buttonTheme: {
                     width: 70,
                     style: {
@@ -9493,7 +9493,7 @@ $(document).ready(function () {
                         fontSize: 10,
                     },
                     align: "left",                    
-                    // format: '{value:,.0f}'
+                    format: '{value:,.0f}'
                 },
                 showFirstLabel: false,
                 showLastLabel: true,
