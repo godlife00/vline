@@ -9400,10 +9400,8 @@ $(document).ready(function () {
                     type: 'year',
                     count: 5,
                     text: '10년',
-                }, {
-                    type: 'all',             
-                    text: 'all',
                 }],
+                
                 buttonTheme: {
                     width: 70,
                     style: {
