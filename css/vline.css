@@ -229,7 +229,6 @@ body .numCunt::before {
   float: left;
   width: 200px;
   margin-right: 13px;
-  position: -webkit-sticky;
   position: sticky;
   top: 52px;
 }
@@ -498,7 +497,6 @@ body .numCunt::before {
 .table.fix_table .fix {
   position: relative;
   background-color: #fff;
-  position: -webkit-sticky !important;
   position: sticky !important;
   display: table-cell;
   left: 0;
@@ -1022,10 +1020,6 @@ input[type=radio]:checked:before {
   color: #fff;
   font-size: 12px;
 }
-#header .bgWrap .searchArea form .searchInput:-ms-input-placeholder {
-  color: #fff;
-  font-size: 12px;
-}
 #header .bgWrap .searchArea form .searchInput::placeholder {
   color: #fff;
   font-size: 12px;
@@ -1285,11 +1279,8 @@ input[type=radio]:checked:before {
   width: 10px;
   height: 10px;
   transform: rotate(-45deg);
-  -webkit-animation-name: beat;
   animation-name: beat;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 #container .M_left .detail_box .data_area .attention:after {
@@ -1840,10 +1831,6 @@ input[type=radio]:checked:before {
   color: #b1b9cb;
   font-size: 12px;
 }
-#container .M_right .blue_stocks_area .stocks_filter .form_box .searchInput:-ms-input-placeholder {
-  color: #b1b9cb;
-  font-size: 12px;
-}
 #container .M_right .blue_stocks_area .stocks_filter .form_box .searchInput::placeholder {
   color: #b1b9cb;
   font-size: 12px;
@@ -2157,10 +2144,6 @@ input[type=radio]:checked:before {
   font-size: 12px;
 }
 #container .M_right .contents_header .data_filter .table_search .searchInput::-moz-placeholder {
-  color: #b1b9cb;
-  font-size: 12px;
-}
-#container .M_right .contents_header .data_filter .table_search .searchInput:-ms-input-placeholder {
   color: #b1b9cb;
   font-size: 12px;
 }
@@ -3314,12 +3297,9 @@ input[type=radio]:checked:before {
   width: 8px;
   height: 8px;
   transform: rotate(-45deg);
-  -webkit-animation-name: beat;
-          animation-name: beat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:after {
   background-color: #bfc8d6;
@@ -3884,7 +3864,6 @@ input[type=radio]:checked:before {
   fill: #fff !important;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px;
 }
@@ -3893,7 +3872,6 @@ input[type=radio]:checked:before {
   fill: #fff !important;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px;
   stroke: none;
@@ -4811,6 +4789,16 @@ input[type=radio]:checked:before {
   width: 100%;
   height: 480px;
 }
+#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .BICchart_style .highcharts-button-box {
+  cursor: pointer;
+  flex: 1;
+  padding: 8px 0;
+  border-bottom: 1px solid #000;
+  font-size: 13px;
+  letter-spacing: -0.65px;
+  text-align: center;
+  color: #222;
+}
 #container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .BICchart_style .highcharts-navigator-xaxis {
   font-size: 0;
   opacity: 0;
@@ -5368,6 +5356,7 @@ input[type=radio]:checked:before {
   margin-left: 20px;
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 #container .M_right .contents .mri_chartbox .mid_column .con .right .containerfinancials1 {
   display: inline-block;
@@ -7006,8 +6995,8 @@ input[type=radio]:checked:before {
   border-left: 3px solid #ccc;
 }
 #container .M_right .contents .inform_area.view .viewWrap .mid a {
-  color: #527bea;
-  text-decoration: underline;
+  color: #06c;
+  text-decoration: none;
 }
 #container .M_right .contents .inform_area.view .viewWrap .mid ul li {
   font-size: 0.875rem;
@@ -7147,11 +7136,8 @@ input[type=radio]:checked:before {
   width: 8px;
   height: 8px;
   transform: rotate(-45deg);
-  -webkit-animation-name: beat;
   animation-name: beat;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 #container .M_right .contents .inform_area.view .recmtWrap .commentBox .attention_box .attention:after {
@@ -7393,12 +7379,6 @@ input[type=radio]:checked:before {
   color: #222;
 }
 #container .M_right .contents .inform_area.view .recmtWrap .commentBox .commentWriter .comment_attach .comment_inbox_text::-moz-placeholder {
-  font-size: 14px;
-  line-height: 1.43;
-  letter-spacing: -0.35px;
-  color: #b1b9cb;
-}
-#container .M_right .contents .inform_area.view .recmtWrap .commentBox .commentWriter .comment_attach .comment_inbox_text:-ms-input-placeholder {
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: -0.35px;
@@ -7837,9 +7817,6 @@ input[type=radio]:checked:before {
   outline: none;
 }
 .modal.login_form .pop_con .mapage_form .form_table table .tr_num::-moz-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::-moz-placeholder {
-  color: #333;
-}
-.modal.login_form .pop_con .mapage_form .form_table table .tr_num:-ms-input-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num:-ms-input-placeholder {
   color: #333;
 }
 .modal.login_form .pop_con .mapage_form .form_table table .tr_num::placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::placeholder {
@@ -8437,12 +8414,6 @@ input[type=radio]:checked:before {
   outline: none;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput::-moz-placeholder, .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out::-moz-placeholder {
-  font-size: 16px;
-  font-weight: normal;
-  color: #82929f;
-  letter-spacing: -0.8px;
-}
-.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput:-ms-input-placeholder, .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out:-ms-input-placeholder {
   font-size: 16px;
   font-weight: normal;
   color: #82929f;
@@ -11070,12 +11041,6 @@ input[type=radio]:checked:before {
   outline: none;
 }
 .agree_area .agree_from .phonePin_form .pinInput::-moz-placeholder, .agree_area .agree_from .phonePin_form .pinInput_out::-moz-placeholder {
-  font-size: 16px;
-  font-weight: normal;
-  color: #82929f;
-  letter-spacing: -0.8px;
-}
-.agree_area .agree_from .phonePin_form .pinInput:-ms-input-placeholder, .agree_area .agree_from .phonePin_form .pinInput_out:-ms-input-placeholder {
   font-size: 16px;
   font-weight: normal;
   color: #82929f;
