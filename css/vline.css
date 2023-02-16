@@ -1379,7 +1379,8 @@ input[type=radio]:checked:before {
   display: flex;
   justify-content: space-between;
 }
-#container .M_left .detail_box .data_area .dtcon li dl dt, #container .M_left .detail_box .data_area .dtcon li dl dd {
+#container .M_left .detail_box .data_area .dtcon li dl dt,
+#container .M_left .detail_box .data_area .dtcon li dl dd {
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #222;
@@ -1846,7 +1847,8 @@ input[type=radio]:checked:before {
   width: 14px;
   height: 14px;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu {
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: none;
@@ -1865,36 +1867,48 @@ input[type=radio]:checked:before {
   overflow-x: hidden;
   box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete .no_result, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu .no_result {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete .no_result,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu .no_result {
   font-size: 15px;
   letter-spacing: -0.33px;
   color: #656d7e;
   padding: 5px 10px;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li {
   line-height: 1;
   padding: 5px 10px;
   padding-bottom: 5px;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li a, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li a {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li a,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li a {
   display: block;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li a strong, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li a strong {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li a strong,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li a strong {
   font-weight: 700;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li:nth-child(2n), #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li:nth-child(2n) {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li:nth-child(2n),
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li:nth-child(2n) {
   background: #f4f6fa;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li .schCode, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li .schCode {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li .schCode,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li .schCode {
   padding-right: 7px;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on {
   background-color: #273986;
 }
-#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on a, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on strong, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on span, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on a, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on strong, #container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on span {
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on a,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on strong,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete li._on span,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on a,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on strong,
+#container .M_right .blue_stocks_area .stocks_filter .AutoComplete_indu li._on span {
   color: #fff;
 }
 #container .M_right .sum_box {
@@ -2162,7 +2176,8 @@ input[type=radio]:checked:before {
   width: 14px;
   height: 14px;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu {
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: none;
@@ -2181,36 +2196,48 @@ input[type=radio]:checked:before {
   overflow-x: hidden;
   box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete .no_result, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu .no_result {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete .no_result,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu .no_result {
   font-size: 15px;
   letter-spacing: -0.33px;
   color: #656d7e;
   padding: 5px 10px;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li {
   line-height: 1;
   padding: 5px 10px;
   padding-bottom: 5px;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li a, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li a {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li a,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li a {
   display: block;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li a strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li a strong {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li a strong,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li a strong {
   font-weight: 700;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li:nth-child(2n), #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li:nth-child(2n) {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li:nth-child(2n),
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li:nth-child(2n) {
   background: #f4f6fa;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li .schCode, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li .schCode {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li .schCode,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li .schCode {
   padding-right: 7px;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on {
   background-color: #273986;
 }
-#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on a, #container .M_right .contents_header .data_filter .table_search .AutoComplete li._on strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete li._on span, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on a, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on strong, #container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on span {
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on a,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on strong,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete li._on span,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on a,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on strong,
+#container .M_right .contents_header .data_filter .table_search .AutoComplete_indu li._on span {
   color: #fff;
 }
 #container .M_right .contents_header .data_filter .set_box {
@@ -2503,6 +2530,84 @@ input[type=radio]:checked:before {
   font-weight: 700;
 }
 
+.premiumLock_cunt {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: move;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #c9c9c9;
+  text-align: center;
+  background-color: #Fff;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+  transition: All 0.7s ease;
+  z-index: 97;
+  opacity: 0;
+  right: -300px;
+}
+.premiumLock_cunt.on {
+  right: 30px;
+  opacity: 1;
+}
+.premiumLock_cunt .more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 430px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.33px;
+  text-align: center;
+  color: #3655d6;
+  cursor: default;
+}
+.premiumLock_cunt .go_link {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 13px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #fff;
+  width: 180px;
+  padding: 8px 0;
+  font-size: 15px;
+}
+.premiumLock_cunt .go_link::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.premiumLock_cunt .go_link b {
+  color: #ff8d5a;
+  font-weight: 700;
+}
+.premiumLock_cunt .go_link::before {
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  right: 20px;
+  top: 16px;
+}
+
 .ui-datepicker-div {
   z-index: 11;
 }
@@ -2526,7 +2631,9 @@ input[type=radio]:checked:before {
   padding: 0 3px;
 }
 
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
   border: 1px solid #374b9d;
   background: #374b9d;
   color: #fff;
@@ -2552,7 +2659,8 @@ input[type=radio]:checked:before {
   text-align: left;
   display: none;
 }
-.guide_box li, .guide_box p {
+.guide_box li,
+.guide_box p {
   line-height: 1.6;
 }
 

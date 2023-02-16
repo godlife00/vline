@@ -142,7 +142,7 @@ $(document).ready(function () {
                 $('.guidePop_box').addClass('on');
             }, 400);
         });
-
+        
         //서비스 활용 가이드 보기 열기
         function guidePop_open() {
             $('.modal .pop_header .clse, .blocker').on('click', function () {
@@ -159,7 +159,12 @@ $(document).ready(function () {
         guidePop_open();   //서비스 활용 가이드 보기 열기
         guidePop_close(); //서비스 활용 가이드 보기 닫기
 
-
+        // 비로그인, 무료회원 서비스 
+        $(window).load(function () {            
+            setTimeout(function () {
+                $('.premiumLock_cunt').addClass('on');
+            }, 400);
+        });
         
         //select
         $(function () {
