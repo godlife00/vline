@@ -216,6 +216,22 @@
             .BICchart_style {
                 width: 100%;
                 height: 480px;                             
+                
+                .highcharts-button-box {
+                    cursor: pointer;
+                    flex: 1;
+                    padding: 8px 0;
+                    border-bottom: 1px solid #000;
+                    font-size: 13px;
+                    letter-spacing: -0.65px;
+                    text-align: center;
+                    color: #222;                    
+                }
+
+                .highcharts-navigator-xaxis {
+                    font-size: 0;
+                    opacity: 0;
+                }                
 
                 .highcharts-series-label text {
                     font-size: 0 !important;
