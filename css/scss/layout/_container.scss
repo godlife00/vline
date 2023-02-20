@@ -823,18 +823,17 @@
                 margin-bottom: 15px;
             }
 
-            p {
-                overflow: hidden;
+            p {                
                 font-size: 13px;
                 letter-spacing: -0.33px;
                 color: #656d7e;
-                height: 20px;
                 line-height: 22px;
             }
 
             &.lineView_2 {
                 p {
-                    height: 48px;
+                    word-break: break-all;
+                    word-wrap: break-word;
                 }
             }
 
