@@ -2531,8 +2531,8 @@ input[type=radio]:checked:before {
 
 .premiumLock_cunt {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 25px;
+  right: 25px;
   cursor: move;
   display: block;
   border-radius: 5px;
@@ -2554,10 +2554,10 @@ input[type=radio]:checked:before {
   display: flex;
   align-items: center;
   gap: 10px;
-  min-width: 430px;
-  padding: 10px 15px;
+  min-width: 410px;
+  padding: 12px 15px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.33px;
   text-align: center;
@@ -2580,7 +2580,7 @@ input[type=radio]:checked:before {
   color: #fff;
   width: 180px;
   padding: 8px 0;
-  font-size: 15px;
+  font-size: 14px;
 }
 .premiumLock_cunt .go_link::before {
   content: "";
