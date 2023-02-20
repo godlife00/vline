@@ -188,7 +188,7 @@
             flex: 1;                        
         }
         .mid .left .chart_box {            
-            margin-top: 20px;
+            margin-top: 28px;
             padding: 15px 5px;
             box-sizing: border-box;
             border-radius: 10px;
@@ -262,7 +262,8 @@
                 }
             }
         }                
-        .mid .left .period_Data {            
+        .mid .left .period_Data {       
+            margin-top: 15px;     
             display: flex;
             align-items: center;                
             justify-content: space-between;                        
@@ -300,7 +301,6 @@
         }
 
         .mid .right .chart_box {
-
             display: flex;            
             flex-wrap: wrap;            
             justify-content: space-between;                        

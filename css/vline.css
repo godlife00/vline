@@ -4866,7 +4866,7 @@ input[type=radio]:checked:before {
   flex: 1;
 }
 #container .M_right .contents.sub_con .summary_Box .mid .left .chart_box {
-  margin-top: 20px;
+  margin-top: 28px;
   padding: 15px 5px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -4932,6 +4932,7 @@ input[type=radio]:checked:before {
   stroke: rgb(54, 85, 214);
 }
 #container .M_right .contents.sub_con .summary_Box .mid .left .period_Data {
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;

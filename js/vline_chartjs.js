@@ -9536,23 +9536,6 @@ $(document).ready(function () {
                         color: '#107070',
                         dashStyle: 'Dot'
                     },
-                    plotLines: [
-                        {
-                            color: '#FF0000',
-                            width: 1,
-                            value: Date.UTC(2023, 1, 1), // 20일 전의 datetime 값
-                        },
-                        {
-                            color: '#00FF00',
-                            width: 1,
-                            value: Date.UTC(2022, 11, 22), // 60일 전의 datetime 값
-                        },
-                        {
-                            color: '#0000FF',
-                            width: 1,
-                            value: Date.UTC(2022, 10, 22), // 120일 전의 datetime 값
-                        },
-                    ]
                 }],
     
                 yAxis: {
@@ -9588,6 +9571,7 @@ $(document).ready(function () {
                         type: 'line',
                         name: '주가', 
                         data: value5,
+                        showInLegend: false,                    
                         tooltip: {
                             useHTML: true,
                             headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y,%m/%d}</b></span>',
