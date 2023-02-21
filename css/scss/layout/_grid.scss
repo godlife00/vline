@@ -57,38 +57,34 @@ body {
         .freeInfo_box {
             @include one_btn;
             background-color: #E6E7F4;
-            padding: 24px 15px;
+            padding: 50px 15px;
             margin: 30px auto 0;
             text-align: center;
             p {
-                color: #404FC3;
+                color: #222;
             }
             b {
-                color: #404FC3;                    
+                color: #3655d6;                                    
             }
             a {
                 @include one_btn;                                                
                 margin-top: 15px;                
-                width: 50%;
-                background-color: rgb(64, 79, 195);
-                color: #FFDA0D;
+                width: 30%;
+                background-color: #00d885;             
+                color: #fff;
                 font-size: 16px;
                 font-weight: bold;                
                 &::before {
                     right: 15px;
                     width: 6px;
                     height: 6px;
-                    border-top: 2px solid #FFDA0D;
-                    border-right: 2px solid #FFDA0D;                    
-                }            
-                &:hover {                    
-                    background-color: rgba(64, 79, 195, 0.9);                    
-                    color: #37c60c;                    
-                    &::before {                        
-                        border-top: 2px solid #37c60c;
-                        border-right: 2px solid #37c60c;                    
-                    }            
-                }
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;                    
+                }   
+                &:hover {
+                    background-color: #0a7b44;
+                }         
+                
             }
             &::before {
                 display: none;

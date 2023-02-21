@@ -740,6 +740,13 @@
 
             .join_btn {
                 @include one_btn;
+                background-color: #00d885; 
+                b {
+                    color: #fff;
+                }
+                &:hover {
+                    background-color: #0a7b44;
+                }  
             }
 
             .link_menu {

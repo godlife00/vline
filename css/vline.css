@@ -253,7 +253,7 @@ body .numCunt::before {
   text-align: center;
   color: #fff;
   background-color: #E6E7F4;
-  padding: 24px 15px;
+  padding: 50px 15px;
   margin: 30px auto 0;
   text-align: center;
 }
@@ -274,10 +274,10 @@ body .numCunt::before {
   font-weight: 700;
 }
 #container .M_right .freeInfo_box p {
-  color: #404FC3;
+  color: #222;
 }
 #container .M_right .freeInfo_box b {
-  color: #404FC3;
+  color: #3655d6;
 }
 #container .M_right .freeInfo_box a {
   position: relative;
@@ -294,9 +294,9 @@ body .numCunt::before {
   text-align: center;
   color: #fff;
   margin-top: 15px;
-  width: 50%;
-  background-color: rgb(64, 79, 195);
-  color: #FFDA0D;
+  width: 30%;
+  background-color: #00d885;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
 }
@@ -320,16 +320,11 @@ body .numCunt::before {
   right: 15px;
   width: 6px;
   height: 6px;
-  border-top: 2px solid #FFDA0D;
-  border-right: 2px solid #FFDA0D;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 #container .M_right .freeInfo_box a:hover {
-  background-color: rgba(64, 79, 195, 0.9);
-  color: #37c60c;
-}
-#container .M_right .freeInfo_box a:hover::before {
-  border-top: 2px solid #37c60c;
-  border-right: 2px solid #37c60c;
+  background-color: #0a7b44;
 }
 #container .M_right .freeInfo_box::before {
   display: none;
@@ -8295,6 +8290,7 @@ input[type=radio]:checked:before {
   letter-spacing: -0.9px;
   text-align: center;
   color: #fff;
+  background-color: #00d885;
 }
 .modal.premium_join .pop_foot .join_btn::before {
   content: "";
@@ -8311,6 +8307,12 @@ input[type=radio]:checked:before {
 .modal.premium_join .pop_foot .join_btn b {
   color: #ff8d5a;
   font-weight: 700;
+}
+.modal.premium_join .pop_foot .join_btn b {
+  color: #fff;
+}
+.modal.premium_join .pop_foot .join_btn:hover {
+  background-color: #0a7b44;
 }
 .modal.premium_join .pop_foot .link_menu {
   margin-top: 12px;
