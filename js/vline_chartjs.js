@@ -151,6 +151,14 @@ $(document).ready(function () {
             series: [{
                 type: 'treemap',
                 layoutAlgorithm: 'squarified',
+                // 단계별 칼라셋 정의, 밸류라인, 인베스팅플러스 공통 적용 23.2.20
+                // +3.00% ~ : '#BE2F23';
+                // +2.00% ~ 2.99% : #D97B72';
+                // +0.1% ~ 1.99% : #F7BDB8';
+                // +0.09 ~ -0.09% : #656D7E
+                // -0.1% ~ -1.99% : '#C5D6F2';
+                // -2.00% ~ -2.99% : #8AB4F7';
+                // -3.00%~ : '#475EBF';
                 data: [
                     {
                         name: '<a href="https://value.choicestock.co.kr/finance/income/005930">삼성전자 <br> 3% 이상 </a>',

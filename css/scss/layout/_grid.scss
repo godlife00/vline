@@ -56,37 +56,43 @@ body {
 
         .freeInfo_box {
             @include one_btn;
-            background-color: #7389AF;
-
+            background-color: #E6E7F4;
+            padding: 24px 15px;
+            margin: 30px auto 0;
+            text-align: center;
+            p {
+                color: #404FC3;
+            }
+            b {
+                color: #404FC3;                    
+            }
+            a {
+                @include one_btn;                                                
+                margin-top: 15px;                
+                width: 50%;
+                background-color: rgb(64, 79, 195);
+                color: #FFDA0D;
+                font-size: 16px;
+                font-weight: bold;                
+                &::before {
+                    right: 15px;
+                    width: 6px;
+                    height: 6px;
+                    border-top: 2px solid #FFDA0D;
+                    border-right: 2px solid #FFDA0D;                    
+                }            
+                &:hover {                    
+                    background-color: rgba(64, 79, 195, 0.9);                    
+                    color: #37c60c;                    
+                    &::before {                        
+                        border-top: 2px solid #37c60c;
+                        border-right: 2px solid #37c60c;                    
+                    }            
+                }
+            }
             &::before {
                 display: none;
-            }
-
-            padding: 24px 15px;
-            margin: 23px auto 0;
-            text-align: center;
-
-            b {
-                color: #FFA57D;
-            }
-
-            i {
-                content: '';
-                display: inline-block;
-                transform: rotate(45deg);
-                width: 6px;
-                height: 6px;
-                border-top: 2px solid #FFA57D;
-                border-right: 2px solid #FFA57D;
-                position: relative;
-                top: -1px;
-            }
-
-            .btn_freePop {
-                color: #fff;
-                font-size: 16px;
-                font-weight: normal;
-            }
+            }    
         }
 
         .contents {
@@ -175,6 +181,7 @@ body {
         color: #222;
         background-color: #fff;
         padding: 8.5px 17px;
+        min-width: 70px;        
         box-sizing: border-box;
         background: #fff url('/img/gray_tdline.gif') repeat-x left bottom;
 
@@ -477,7 +484,7 @@ body {
 }
 
 .table-scroll table {
-    width:100%;	
+    width:100%;	    
 }
 
 .paginate {

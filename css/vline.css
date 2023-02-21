@@ -252,9 +252,9 @@ body .numCunt::before {
   letter-spacing: -0.9px;
   text-align: center;
   color: #fff;
-  background-color: #7389AF;
+  background-color: #E6E7F4;
   padding: 24px 15px;
-  margin: 23px auto 0;
+  margin: 30px auto 0;
   text-align: center;
 }
 #container .M_right .freeInfo_box::before {
@@ -273,27 +273,66 @@ body .numCunt::before {
   color: #ff8d5a;
   font-weight: 700;
 }
-#container .M_right .freeInfo_box::before {
-  display: none;
+#container .M_right .freeInfo_box p {
+  color: #404FC3;
 }
 #container .M_right .freeInfo_box b {
-  color: #FFA57D;
+  color: #404FC3;
 }
-#container .M_right .freeInfo_box i {
+#container .M_right .freeInfo_box a {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 13px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #fff;
+  margin-top: 15px;
+  width: 50%;
+  background-color: rgb(64, 79, 195);
+  color: #FFDA0D;
+  font-size: 16px;
+  font-weight: bold;
+}
+#container .M_right .freeInfo_box a::before {
   content: "";
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   display: inline-block;
   transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#container .M_right .freeInfo_box a b {
+  color: #ff8d5a;
+  font-weight: 700;
+}
+#container .M_right .freeInfo_box a::before {
+  right: 15px;
   width: 6px;
   height: 6px;
-  border-top: 2px solid #FFA57D;
-  border-right: 2px solid #FFA57D;
-  position: relative;
-  top: -1px;
+  border-top: 2px solid #FFDA0D;
+  border-right: 2px solid #FFDA0D;
 }
-#container .M_right .freeInfo_box .btn_freePop {
-  color: #fff;
-  font-size: 16px;
-  font-weight: normal;
+#container .M_right .freeInfo_box a:hover {
+  background-color: rgba(64, 79, 195, 0.9);
+  color: #37c60c;
+}
+#container .M_right .freeInfo_box a:hover::before {
+  border-top: 2px solid #37c60c;
+  border-right: 2px solid #37c60c;
+}
+#container .M_right .freeInfo_box::before {
+  display: none;
 }
 #container .M_right .contents {
   padding: 32px 0 0;
@@ -370,6 +409,7 @@ body .numCunt::before {
   color: #222;
   background-color: #fff;
   padding: 8.5px 17px;
+  min-width: 70px;
   box-sizing: border-box;
   background: #fff url("/img/gray_tdline.gif") repeat-x left bottom;
 }

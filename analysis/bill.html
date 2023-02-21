@@ -312,13 +312,6 @@
                     </ul>
                 </div>
 
-                <!-- 비회원 샘플 화면인 경우 보여주는 안내 문구 -->
-                <div class="freeInfo_box">
-                    <a href="#" class="btn_freePop">비회원 샘플 화면입니다. <b>프리미엄 서비스</b>로 종목발굴 서비스와 데이터를 무제한으로 이용하세요. <b> [ 프리미엄 가입하기 <i></i> ] </b></a>
-                </div>
-                <!-- //freeInfo_box -->
-                <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
-
                 <div class="group_nav">
                     <ul>
                         <li><span class="title"><a href="summary.html">개요</a></span></li>
@@ -331,9 +324,7 @@
                         <li><a href="turnaround.html">턴어라운드</a></li>
                     </ul>
                 </div>
-                <div class="sum_box small">
-                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
-                    <span class="more">자세히</span>
+                <div class="sum_box lineView_2">
                     <p>
                         손익계산서를 통해 매출액과 비용 그리고 이익(손실) 규모를 알 수 있습니다. 기업의 매출액에서 모든 비용을 제외하고 남는 돈을 순이익이라고 합니다. 순이익이 많을 수록 기업가치는 높아지게 됩니다.
                         <br>
@@ -341,7 +332,7 @@
                     </p>
                 </div>
                 <!-- //sum_box -->
-
+                
                 <div class="contents_header">
                     <div class="data_filter">
                         <div class="data">
@@ -427,10 +418,9 @@
                 <!-- 재무분석 -->
                 <div class="contents sub_con">
                     <div id="tab1" class="tab_content">
-                        <span class="table_update">단위 : 억원</span>
+                        <span class="table_update">단위 : 억원</span>                        
                         <div id="table-scroll" class="table-scroll">
-                            <div class="fix_wrap">
-                                <!-- 소수점 숨김처리 인 경우 class = txtInt -->
+                            <div class="fix_wrap">                                
                                 <table cellspacing="0" border="0" class="table fix_table data_txtR txtInt">
                                     <thead>
                                         <tr>
@@ -456,7 +446,11 @@
                                             <td>90<span class="deci">.043</span></td>
                                             <td>69,043<span class="deci">.043</span></td>
                                             <td>2,569<span class="deci">.043</span></td>
-                                            <td><span class="remark"><i></i><i></i><i></i><i></i></span></td>
+                                            <td>
+                                                <a href="#" class="btn_joinPop">
+                                                    <span class="remark"><i></i><i></i><i></i></span>
+                                                </a>
+                                            </td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
@@ -2620,7 +2614,8 @@
                             </div>
                             <!-- //fix_wrap -->
                         </div>
-                        <!-- //table-scroll -->
+                        <!-- //table-scroll -->                        
+                        
                     </div>
                     <!-- //tab_content -->
 
@@ -2630,13 +2625,36 @@
                     <div id="tab3" class="tab_content">
                         분기
                     </div>
-
                 </div>
 
-                <div class="premiumLock_cunt on" style="display: block">
+                <!-- 비회원 샘플 화면인 경우 보여주는 안내 문구 -->                
+                <div class="freeInfo_box">
+                    <p><b>20년 재무제표를 한번에!</b> 프리미엄 서비스를 무제한으로 이용하세요. <a href="../winpop/payment_step01.html">프리미엄 가입</a></p>                    
+                </div>                
+                <div class="freeInfo_box">
+                    <p><b>20년 재무제표를 한번에!</b> 실적시즌 혜택! 지금 회원가입하면 종목 재무분석 매일 3건 무료! <a href="../winpop/login.html">회원가입</a></p>                  
+                </div>                
+                <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
+
+                <div class="premiumLock_cunt on"  style="display: block; bottom: 180px;"> <!--  bottom값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
+                    <!-- 실적시즌 > 비 로그인 -->
+                    <div class="more">                                                
+                        실적시즌! 종목 재무분석 매일 3건 무료!</span>
+                        <a href="../winpop/login.html" class="go_link">회원가입</a>
+                    </div>                    
+                </div>
+                <div class="premiumLock_cunt on" style="display: block; bottom: 100px;"> <!--  bottom 값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
+                    <!-- 실적시즌 > 무료회원 > 재무분석 -->
                     <div class="more">                                                
                         재무분석 2건 / <span class="">매일 3건 무료</span>
-                        <a href="/member/service" class="go_link">재무분석이 무제한</a>
+                        <a href="../service.html" class="go_link">재무분석이 무제한</a>
+                    </div>                    
+                </div>
+                <div class="premiumLock_cunt on" style="display: block">
+                    <!--  실적 시즌/비시즌 공통 > 무료회원 > 재무분석 외 메뉴 -->
+                    <div class="more">                                                
+                        밸류라인 서비스를 무제한 이용하세요</span>
+                        <a href="../winpop/payment_step01.html" class="go_link">프리미엄</a>
                     </div>                    
                 </div>
 
