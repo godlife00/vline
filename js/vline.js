@@ -394,6 +394,29 @@ $(document).ready(function () {
         $(this).addClass('active')
     });
     
+    // 재무분석 - 개요 캔들차트 3개월 6개월 1년 3년 10년 탭 선택 스크립트
+    var tabList = document.querySelectorAll('.period_tabs > li');
+    var chartList = document.querySelectorAll('.BICchart_style');    
+    for (let i = 0; i < tabList.length; i++) {
+        var tab = tabList[i];
+        var chart = chartList[i];
+
+        tab.addEventListener('click', function () {
+            // 모든 차트 숨기기
+            for (var c of chartList) {
+                c.style.display = 'none';
+            }
+
+            // 클릭한 탭과 연관된 차트 보이기
+            var target = this.getAttribute('data-target');
+            var targetChart = document.querySelector(target);
+            targetChart.style.display = 'block';
+
+            // 차트 다시 그리기
+            var chartObj = Highcharts.charts.find(chart => chart.renderTo.id === targetChart.id);
+            chartObj.reflow();
+        });
+    }
 
     // 자세히보기 열기닫기
     $('#container .M_right .sum_box .more').on('click', function () {
