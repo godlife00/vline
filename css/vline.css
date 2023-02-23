@@ -8179,6 +8179,10 @@ input[type=radio]:checked:before {
   top: 7px;
   right: -12px;
 }
+.modal.premium_join {
+  width: 70%;
+  max-width: 450px;
+}
 .modal.premium_join .pop_header {
   padding: 25px 30px 30px;
   margin: 0;

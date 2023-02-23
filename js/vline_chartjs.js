@@ -9440,7 +9440,7 @@ $(document).ready(function () {
                     type: 'candlestick',
                     name: '일봉',
                     data: value,
-                    showInLegend: false,                                        
+                    // showInLegend: false,                                        
                     tooltip: {
                         useHTML: true,                        
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y, %m/%d}</b></span> </br>',
@@ -9452,7 +9452,7 @@ $(document).ready(function () {
                     type: 'line',
                     name: '주가', 
                     data: value5,
-                    showInLegend: false,                    
+                    // showInLegend: false,                    
                     tooltip: {
                         useHTML: true,
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y,%m/%d}</b></span>',
@@ -9484,25 +9484,24 @@ $(document).ready(function () {
 
         function getCommonXAxisOptions() {
             return {
-              type: 'datetime',
-              gridLineWidth: 0,
-              lineWidth: 0,
-              tickWidth: 0,
-              lineColor: '#98ACD0',
-              lineWidth: 1,
-              labels: {
-                formatter: function () {
-                  return Highcharts.dateFormat('%m.%d', this.value);
-                },                
-              },
-              crosshair: {
-                width: 1,
-                color: '#107070',
-                dashStyle: 'Dot'
-              }
+                type: 'datetime',
+                gridLineWidth: 0,
+                lineWidth: 0,
+                tickWidth: 0,
+                lineColor: '#98ACD0',
+                lineWidth: 1,
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat('%m.%d', this.value);
+                    },
+                },
+                crosshair: {
+                    width: 1,
+                    color: '#107070',
+                    dashStyle: 'Dot'
+                }
             }
-          }
-          
+        }          
         var xAxisOptions_M3 = Object.assign({}, getCommonXAxisOptions(), {
             min: threeMonthsAgo_M3.getTime()
         });        
@@ -9547,14 +9546,17 @@ $(document).ready(function () {
 
         // 선 차트 생성 (1년)
         var chart_Y1 = Highcharts.chart('containeroutline1_2_Y1', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y1 }));
+        chart_Y1.series[0].setData([]); // 캔들 차트
         chart_Y1.series[1].setData(value5); // 주가 선차트
 
         // 선 차트 생성 (3년)
         var chart_Y3 = Highcharts.chart('containeroutline1_2_Y3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y3 }));
+        chart_Y3.series[0].setData([]); // 캔들 차트
         chart_Y3.series[1].setData(value5); // 주가 선차트
 
         // 선 차트 생성 (10년)
         var chart_Y10 = Highcharts.chart('containeroutline1_2_Y10', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y10 }));
+        chart_Y10.series[0].setData([]); // 주가 선차트
         chart_Y10.series[1].setData(value5); // 주가 선차트
 
     }    

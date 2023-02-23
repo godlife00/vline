@@ -600,6 +600,8 @@
 
     // 벨류라인 프리미엄
     &.premium_join {
+        width: 70%;
+        max-width: 450px;
         .pop_header {
             padding: 25px 30px 30px;
             margin: 0;
