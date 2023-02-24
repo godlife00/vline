@@ -9363,24 +9363,31 @@ $(document).ready(function () {
         // 공통으로 사용할 차트 옵션 설정
         var chartOptions = {
             chart: {
-                margin:[20, 60, 50, 0,],
-                events: {
-                    load: function () {
-                        console.log("차트이벤트적용");                                
-                    },
-                    redraw: function () {
-                        console.log("redraw");                                
-                    }
-                },
+                margin:[20, 60, 50, 0,],                                
+                panning: {
+                    enabled: true,
+                    type: 'x'
+                },                
+                followTouchMove: true,                
             },
 
-            legend: {
-                enabled: true                
+            // 하단 네비게이션 제거
+            navigator: {
+                enabled: false,                
+            },
+
+            // 스크롤바 제거
+            scrollbar: {
+                enabled: false,                                      
             },
 
             // 기간범위선택 
             rangeSelector: {
-                enabled: false,                      
+                enabled: false,                   
+            },
+
+            legend: {
+                enabled: true                
             },
 
             title: {
@@ -9440,7 +9447,10 @@ $(document).ready(function () {
                     type: 'candlestick',
                     name: '일봉',
                     data: value,
-                    // showInLegend: false,                                        
+                    showInLegend: false,                                        
+                    dataGrouping: {
+                        enabled: false
+                    },      
                     tooltip: {
                         useHTML: true,                        
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y, %m/%d}</b></span> </br>',
@@ -9452,7 +9462,10 @@ $(document).ready(function () {
                     type: 'line',
                     name: '주가', 
                     data: value5,
-                    // showInLegend: false,                    
+                    showInLegend: false,              
+                    dataGrouping: {
+                        enabled: false
+                    },      
                     tooltip: {
                         useHTML: true,
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y,%m/%d}</b></span>',
@@ -9466,7 +9479,8 @@ $(document).ready(function () {
                     marker: {
                         enabled: false,           
                         symbol: "circle",              
-                    },                                        
+                    },                         
+                    groupPadding: 0.3    
                 },
             },
         };
@@ -9535,27 +9549,27 @@ $(document).ready(function () {
         
 
         // 캔들 + 선 차트 생성 (3개월)
-        var chart_M3 = Highcharts.chart('containeroutline1_2_M3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M3 }));
+        var chart_M3 = Highcharts.stockChart('containeroutline1_2_M3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M3 }));
         chart_M3.series[0].setData(value); // 캔들 차트
         chart_M3.series[1].setData(value5); // 주가 선차트
 
         // 캔들 + 선 차트 생성 (6개월) 
-        var chart_M6 = Highcharts.chart('containeroutline1_2_M6', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M6 }));
+        var chart_M6 = Highcharts.stockChart('containeroutline1_2_M6', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M6 }));
         chart_M6.series[0].setData(value); // 캔들 차트
         chart_M6.series[1].setData(value5); // 주가 선차트
 
         // 선 차트 생성 (1년)
-        var chart_Y1 = Highcharts.chart('containeroutline1_2_Y1', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y1 }));
+        var chart_Y1 = Highcharts.stockChart('containeroutline1_2_Y1', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y1 }));
         chart_Y1.series[0].setData([]); // 캔들 차트
         chart_Y1.series[1].setData(value5); // 주가 선차트
 
         // 선 차트 생성 (3년)
-        var chart_Y3 = Highcharts.chart('containeroutline1_2_Y3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y3 }));
+        var chart_Y3 = Highcharts.stockChart('containeroutline1_2_Y3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y3 }));
         chart_Y3.series[0].setData([]); // 캔들 차트
         chart_Y3.series[1].setData(value5); // 주가 선차트
 
         // 선 차트 생성 (10년)
-        var chart_Y10 = Highcharts.chart('containeroutline1_2_Y10', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y10 }));
+        var chart_Y10 = Highcharts.stockChart('containeroutline1_2_Y10', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y10 }));
         chart_Y10.series[0].setData([]); // 주가 선차트
         chart_Y10.series[1].setData(value5); // 주가 선차트
 
