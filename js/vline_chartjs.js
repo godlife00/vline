@@ -9454,7 +9454,7 @@ $(document).ready(function () {
                     tooltip: {
                         useHTML: true,                        
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y, %m/%d}</b></span> </br>',
-                        pointFormat: '<b>시가 : {point.open}<br/>고가 : {point.high}<br/>저가 : {point.low}<br/>종가 : {point.close}<br/></b>',
+                        pointFormat: '<b>시가 : {point.open}<br/>고가 : {point.high}<br/>저가 : {point.low}',
                     },
                     zIndex: 1
                 },
@@ -9552,11 +9552,13 @@ $(document).ready(function () {
         var chart_M3 = Highcharts.stockChart('containeroutline1_2_M3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M3 }));
         chart_M3.series[0].setData(value); // 캔들 차트
         chart_M3.series[1].setData(value5); // 주가 선차트
+        chart_M3.series[1].name = '종가'; // 라벨 변경
 
         // 캔들 + 선 차트 생성 (6개월) 
         var chart_M6 = Highcharts.stockChart('containeroutline1_2_M6', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M6 }));
         chart_M6.series[0].setData(value); // 캔들 차트
         chart_M6.series[1].setData(value5); // 주가 선차트
+        chart_M6.series[1].name = '종가'; // 라벨 변경
 
         // 선 차트 생성 (1년)
         var chart_Y1 = Highcharts.stockChart('containeroutline1_2_Y1', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y1 }));
