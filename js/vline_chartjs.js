@@ -9574,7 +9574,6 @@ $(document).ready(function () {
         var chart_Y10 = Highcharts.stockChart('containeroutline1_2_Y10', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y10 }));
         chart_Y10.series[0].setData([]); // 주가 선차트
         chart_Y10.series[1].setData(value5); // 주가 선차트
-
     }    
 
     //재무분석 개요 탭 막대차트
