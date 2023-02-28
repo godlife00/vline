@@ -824,16 +824,16 @@
             }
 
             p {                
-                font-size: 13px;
-                letter-spacing: -0.33px;
+                overflow: hidden;
+                font-size: 13px;                
+                letter-spacing: -0.33px;                
                 color: #656d7e;
-                line-height: 22px;
+                height: 20px;
+                line-height: 22px;                
             }
-
             &.lineView_2 {
                 p {
-                    word-break: break-all;
-                    word-wrap: break-word;
+                    height: auto;
                 }
             }
 

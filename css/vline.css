@@ -1988,14 +1988,15 @@ input[type=radio]:checked:before {
   margin-bottom: 15px;
 }
 #container .M_right .sum_box p {
+  overflow: hidden;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
+  height: 20px;
   line-height: 22px;
 }
 #container .M_right .sum_box.lineView_2 p {
-  word-break: break-all;
-  word-wrap: break-word;
+  height: auto;
 }
 #container .M_right .sum_box.small .more::after {
   transform: rotate(135deg);

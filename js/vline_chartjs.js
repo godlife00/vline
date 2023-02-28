@@ -9584,7 +9584,8 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },
-                margin:[0, 0, 0, 0],
+                marginTop:15,
+                marginBottom: 45                
             },
             // 하단 네비게이션 제거
             navigator: {
@@ -9620,7 +9621,12 @@ $(document).ready(function () {
             },
 
             tooltip: {
-                enabled: false
+                shadow: false,
+                split: false,
+                shared: true,                
+                xDateFormat: '%Y.%m.%d',                
+                useHTML: true,                
+                pointFormat: '<b>{series.name} : {point.y:,.0f} 억원</b></span>',                                                        
             },
 
             rangeSelector: {
@@ -9664,7 +9670,7 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
+                },                
                 gridLineWidth: 0,
                 labels: {
                     enabled: false
@@ -9675,20 +9681,20 @@ $(document).ready(function () {
                 type: 'column',
                 name: '매출액',
                 data: [{
-                    y: 97.988,
+                    y: 2368069,
                 },
                 {
-                    y: 45.988,
+                    y: 2796047,
                 },
                 {
-                    y: 75.988,
+                    y: 3022313,
                 },
                 {
-                    y: 85.988,
+                    y: 2728378,
                     className: 'point_color'
                 },
                 {
-                    y: 95.988,
+                    y: 3077058,
                     className: 'point_color'
                 }]
             }],
@@ -9697,7 +9703,7 @@ $(document).ready(function () {
                 series: {
                     marker: {
                         enabled: false,
-                    }
+                    },                    
                 },
                 column: {
                     pointWidth: 30,
@@ -9705,9 +9711,10 @@ $(document).ready(function () {
                     dataLabels: {
                         enabled: true,
                         crop: false,
-                        overflow: 'none',
-                        format: '{point.y:,.2f}',
-                    }
+                        overflow: 'allow',
+                        format: '{point.y:,.0f}',
+                    },
+                    
                 }
             },
 
@@ -9720,6 +9727,8 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },                
+                marginTop:15,
+                marginBottom: 45                
             },
             // 하단 네비게이션 제거
             navigator: {

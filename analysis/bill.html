@@ -324,7 +324,9 @@
                         <li><a href="turnaround.html">턴어라운드</a></li>
                     </ul>
                 </div>
-                <div class="sum_box lineView_2">
+                <div class="sum_box small">
+                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
+                    <span class="more">자세히</span>
                     <p>
                         손익계산서를 통해 매출액과 비용 그리고 이익(손실) 규모를 알 수 있습니다. 기업의 매출액에서 모든 비용을 제외하고 남는 돈을 순이익이라고 합니다. 순이익이 많을 수록 기업가치는 높아지게 됩니다.
                         <br>
@@ -411,8 +413,14 @@
                         <div class="detail">
                             <span class="table_view"><i></i>세부항목</span>
                             <span class="table_int active"><i></i>소수점</span>
-                            <span style="cursor: not-allowed;">세부항목</span>
-                            <span style="cursor: not-allowed;">소수점</span>
+                            <script>
+                                $(document).ready(function () {
+                                    $('#container .M_right .contents_header .table_filter .detail span.table_view').off('click');                          
+                                    $('#container .M_right .contents_header .table_filter .detail span.table_int').off('click'); 
+                                })
+                            </script>
+                            <span class="table_view" style="cursor: not-allowed;"><i></i>세부항목</span>
+                            <span class="table_int" style="cursor: not-allowed;"><i></i>소수점</span>
                         </div>
                     </div>
                 </div>
@@ -2652,7 +2660,7 @@
                         <a href="../service.html" class="go_link">재무분석이 무제한</a>
                     </div>                    
                 </div>
-                <div class="premiumLock_cunt on" style="display: block">
+                <div class="premiumLock_cunt">
                     <!--  실적 시즌/비시즌 공통 > 무료회원 > 재무분석 외 메뉴 -->
                     <div class="more">                                                
                         밸류라인 서비스를 무제한 이용하세요</span>
