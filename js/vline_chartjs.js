@@ -9454,7 +9454,7 @@ $(document).ready(function () {
                     tooltip: {
                         useHTML: true,                        
                         headerFormat: '<span style="display: block; border-bottom: 1px solid #c8c8c8; padding-bottom: 3px; margin-bottom: 5px;"><b>{point.x:%Y, %m/%d}</b></span> </br>',
-                        pointFormat: '<b>시가 : {point.open}<br/>고가 : {point.high}<br/>저가 : {point.low}',
+                        pointFormat: '<b>시가 : {point.open}<br/>고가 : {point.high}<br/>저가 : {point.low}<br/>종가: {point.close}<br/></b>',
                     },
                     zIndex: 1
                 },
@@ -9551,13 +9551,13 @@ $(document).ready(function () {
         // 캔들 + 선 차트 생성 (3개월)
         var chart_M3 = Highcharts.stockChart('containeroutline1_2_M3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M3 }));
         chart_M3.series[0].setData(value); // 캔들 차트
-        chart_M3.series[1].setData(value5); // 주가 선차트
+        chart_M3.series[1].setData([]); // 주가 선차트
         chart_M3.series[1].name = '종가'; // 라벨 변경
 
         // 캔들 + 선 차트 생성 (6개월) 
         var chart_M6 = Highcharts.stockChart('containeroutline1_2_M6', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M6 }));
         chart_M6.series[0].setData(value); // 캔들 차트
-        chart_M6.series[1].setData(value5); // 주가 선차트
+        chart_M6.series[1].setData([]); // 주가 선차트
         chart_M6.series[1].name = '종가'; // 라벨 변경
 
         // 선 차트 생성 (1년)
@@ -9584,6 +9584,7 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },
+                margin:[0, 0, 0, 0],
             },
             // 하단 네비게이션 제거
             navigator: {
@@ -9718,7 +9719,7 @@ $(document).ready(function () {
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
@@ -9801,20 +9802,21 @@ $(document).ready(function () {
                 gridLineWidth: 0,
                 labels: {
                     enabled: false
-                }
+                },                   
+                
             },
 
             series: [{
                 type: 'column',
-                name: '매출액',
+                name: '매출액',                
                 data: [{
-                    y: 97.988,
+                    y: 927.988,
                 },
                 {
-                    y: 45.988,
+                    y: -45.988,
                 },
                 {
-                    y: 75.988,
+                    y: -175.988,
                 },
                 {
                     y: 85.988,
@@ -9830,7 +9832,9 @@ $(document).ready(function () {
                 series: {
                     marker: {
                         enabled: false,
-                    }
+                    },
+                    visible: true,
+                    minPointLength: 2, // 일정 이상일 때만 표시
                 },
                 column: {
                     pointWidth: 30,

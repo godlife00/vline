@@ -240,41 +240,16 @@ body .numCunt::before {
 }
 #container .M_right .freeInfo_box {
   position: relative;
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 13px 0;
-  box-sizing: border-box;
-  border-radius: 5px;
-  background-color: #374b9d;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.9px;
+  margin: 56px auto;
   text-align: center;
-  color: #fff;
-  background-color: #E6E7F4;
-  padding: 50px 15px;
-  margin: 30px auto 0;
-  text-align: center;
-}
-#container .M_right .freeInfo_box::before {
-  content: "";
-  width: 11px;
-  height: 11px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  display: inline-block;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-#container .M_right .freeInfo_box b {
-  color: #ff8d5a;
-  font-weight: 700;
 }
 #container .M_right .freeInfo_box p {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #E6E7F4;
+  padding: 50px 15px;
   color: #222;
+  z-index: 999;
 }
 #container .M_right .freeInfo_box b {
   color: #3655d6;
@@ -325,6 +300,58 @@ body .numCunt::before {
 }
 #container .M_right .freeInfo_box a:hover {
   background-color: #0a7b44;
+}
+#container .M_right .freeInfo_box.bicchart {
+  min-height: 500px;
+}
+#container .M_right .freeInfo_box.bicchart p {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #E6E7F4;
+  padding: 50px 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 240px;
+  color: #222;
+  z-index: 999;
+}
+#container .M_right .freeInfo_box.bicchart::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 300px;
+  background: url("/img/freeInfo_box_bicchart.jpg") no-repeat 0 top;
+}
+#container .M_right .freeInfo_box.mri {
+  min-height: 380px;
+}
+#container .M_right .freeInfo_box.mri p {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #E6E7F4;
+  padding: 50px 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 170px;
+  color: #222;
+  z-index: 999;
+}
+#container .M_right .freeInfo_box.mri::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 300px;
+  background: url("/img/freeInfo_box_mri.jpg") no-repeat 0 top;
 }
 #container .M_right .freeInfo_box::before {
   display: none;
@@ -5008,7 +5035,7 @@ input[type=radio]:checked:before {
   margin-top: 28px;
 }
 #container .M_right .contents.sub_con .summary_Box .mid .right .chart_box .c_title {
-  margin-top: 15px;
+  margin-top: 25px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: -0.33px;
@@ -5027,8 +5054,7 @@ input[type=radio]:checked:before {
 }
 #container .M_right .contents.sub_con .summary_Box .mid .right .chart_box .financials_style {
   width: 100%;
-  height: 180px;
-  border-bottom: 1px solid #dbdfed;
+  height: 240px;
 }
 #container .M_right .contents.sub_con .summary_Box .mid .right .chart_box .financials_style:last-child {
   border-bottom: none;
@@ -5050,6 +5076,10 @@ input[type=radio]:checked:before {
 #container .M_right .contents.sub_con .summary_Box .mid .right .chart_box .financials_style rect.highcharts-point.point_color {
   fill: #dbdfed !important;
   background: #dbdfed !important;
+}
+#container .M_right .contents.sub_con .summary_Box .mid .right .chart_box .financials_style .highcharts-point.highcharts-negative.highcharts-color-0 {
+  fill: rgba(0, 147, 255, 0.35);
+  background: rgba(0, 147, 255, 0.35);
 }
 
 #container .M_right .contents .bic_chartbox .chart_line {

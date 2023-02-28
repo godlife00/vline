@@ -54,14 +54,18 @@ body {
         background-color: #fff;
         width: calc(100% - 213px);
 
-        .freeInfo_box {
-            @include one_btn;
-            background-color: #E6E7F4;
-            padding: 50px 15px;
-            margin: 30px auto 0;
+        .freeInfo_box {            
+            position: relative;            
+            margin: 56px auto;            
             text-align: center;
+            
             p {
+                overflow: hidden;
+                border-radius: 5px;
+                background-color: #E6E7F4;            
+                padding: 50px 15px;                
                 color: #222;
+                z-index: 999;
             }
             b {
                 color: #3655d6;                                    
@@ -86,6 +90,61 @@ body {
                 }         
                 
             }
+            &.bicchart {
+                min-height: 500px;
+                p {
+                    overflow: hidden;
+                    border-radius: 5px;
+                    background-color: #E6E7F4;            
+                    padding: 50px 15px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 240px;
+                    color: #222;
+                    z-index: 999;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;                
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 300px;
+                    background: url('/img/freeInfo_box_bicchart.jpg') no-repeat 0 top;                      
+                }
+            }
+            &.mri {
+                min-height: 380px;
+                p {
+                    overflow: hidden;
+                    border-radius: 5px;
+                    background-color: #E6E7F4;            
+                    padding: 50px 15px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 170px;
+                    color: #222;
+                    z-index: 999;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;                
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 300px;
+                    background: url('/img/freeInfo_box_mri.jpg') no-repeat 0 top;                      
+                }
+                
+            }
+            
+            
             &::before {
                 display: none;
             }    

@@ -308,7 +308,7 @@
             padding-left: 6px;
             margin-top: 28px;
             .c_title {
-                margin-top: 15px;
+                margin-top: 25px;
                 font-size: 13px;
                 font-weight: $f_sizeB;                                
                 letter-spacing: -0.33px;                
@@ -327,8 +327,8 @@
             }
             .financials_style {
                 width: 100%;
-                height: 180px;                
-                border-bottom: 1px solid #dbdfed;
+                height: 240px;                
+                // border-bottom: 1px solid #dbdfed;
                 &:last-child {
                     border-bottom: none;
                 }
@@ -350,6 +350,11 @@
                         fill: #dbdfed !important;
                         background: #dbdfed !important;
                     }
+                }
+                // 마이나스 데이터인 경우                    
+                .highcharts-point.highcharts-negative.highcharts-color-0 {
+                    fill: rgba(0, 147, 255, 0.35);
+                    background: rgba(0, 147, 255, 0.35);
                 }
             }            
         }        
