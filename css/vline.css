@@ -4933,6 +4933,7 @@ input[type=radio]:checked:before {
   padding: 15px 5px;
   box-sizing: border-box;
   border-radius: 10px;
+  min-height: 579px;
   border: solid 1px #efeff2;
 }
 #container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs {

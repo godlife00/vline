@@ -9363,12 +9363,16 @@ $(document).ready(function () {
         // 공통으로 사용할 차트 옵션 설정
         var chartOptions = {
             chart: {
-                margin:[20, 60, 50, 0,],                                
                 panning: {
                     enabled: true,
                     type: 'x'
                 },                
                 followTouchMove: true,                
+                events: {
+                    load: function () {
+                        console.log("캔들차트 불러옴");                                
+                    }
+                }, 
             },
 
             // 하단 네비게이션 제거
@@ -9422,21 +9426,17 @@ $(document).ready(function () {
             }],
 
             yAxis: {
-                title: null,
+                title: null,				
                 lineColor: '#98ACD0',
-                lineWidth: 1,
-                opposite: true, // yAxis를 차트 오른쪽에 위치시킴
+                lineWidth: 1,                
                 labels: {                                    
                     formatter: function () {
                         return this.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                     },                            
                     style: {
                         fontSize: 10,
-                    },
-                    inside: false,
-                    align: 'right',                        
-                    x: 40,                                            
-                    padding: [0, 0, 0, 30],
+                    },                    
+					align: 'left'
                 },
                 showFirstLabel: false,
                 showLastLabel: true,                    
@@ -9545,8 +9545,7 @@ $(document).ready(function () {
                 }
             },
             min: threeMonthsAgo_Y10.getTime()
-        });
-        
+        });        
 
         // 캔들 + 선 차트 생성 (3개월)
         var chart_M3 = Highcharts.stockChart('containeroutline1_2_M3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M3 }));
@@ -9555,25 +9554,41 @@ $(document).ready(function () {
         chart_M3.series[1].name = '종가'; // 라벨 변경
 
         // 캔들 + 선 차트 생성 (6개월) 
-        var chart_M6 = Highcharts.stockChart('containeroutline1_2_M6', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M6 }));
-        chart_M6.series[0].setData(value); // 캔들 차트
-        chart_M6.series[1].setData([]); // 주가 선차트
-        chart_M6.series[1].name = '종가'; // 라벨 변경
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                var chart_M6 = Highcharts.stockChart('containeroutline1_2_M6', Object.assign({}, chartOptions, { xAxis: xAxisOptions_M6 }));
+                chart_M6.series[0].setData(chart_value); // 캔들 차트
+                chart_M6.series[1].setData([]); // 주가 선차트
+                chart_M6.series[1].name = '종가'; // 라벨 변경
+            }, 1000); // 1초 후에 하이차트를 랜더링합니다.
+        });
 
         // 선 차트 생성 (1년)
-        var chart_Y1 = Highcharts.stockChart('containeroutline1_2_Y1', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y1 }));
-        chart_Y1.series[0].setData([]); // 캔들 차트
-        chart_Y1.series[1].setData(value5); // 주가 선차트
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                var chart_Y1 = Highcharts.stockChart('containeroutline1_2_Y1', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y1 }));
+                chart_Y1.series[0].setData([]); // 캔들 차트
+                chart_Y1.series[1].setData(chart_value5); // 주가 선차트
+            }, 1000); // 1초 후에 하이차트를 랜더링합니다.
+        });
 
         // 선 차트 생성 (3년)
-        var chart_Y3 = Highcharts.stockChart('containeroutline1_2_Y3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y3 }));
-        chart_Y3.series[0].setData([]); // 캔들 차트
-        chart_Y3.series[1].setData(value5); // 주가 선차트
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                var chart_Y3 = Highcharts.stockChart('containeroutline1_2_Y3', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y3 }));
+                chart_Y3.series[0].setData([]); // 캔들 차트
+                chart_Y3.series[1].setData(chart_value5); // 주가 선차트
+            }, 1000); // 1초 후에 하이차트를 랜더링합니다.
+        });
 
         // 선 차트 생성 (10년)
-        var chart_Y10 = Highcharts.stockChart('containeroutline1_2_Y10', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y10 }));
-        chart_Y10.series[0].setData([]); // 주가 선차트
-        chart_Y10.series[1].setData(value5); // 주가 선차트
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                var chart_Y10 = Highcharts.stockChart('containeroutline1_2_Y10', Object.assign({}, chartOptions, { xAxis: xAxisOptions_Y10 }));
+                chart_Y10.series[0].setData([]); // 캔들 차트
+                chart_Y10.series[1].setData(chart_value5); // 주가 선차트
+            }, 1000); // 1초 후에 하이차트를 랜더링합니다.
+        });
     }    
 
     //재무분석 개요 탭 막대차트
@@ -9764,7 +9779,12 @@ $(document).ready(function () {
             },
 
             tooltip: {
-                enabled: false
+                shadow: false,
+                split: false,
+                shared: true,                
+                xDateFormat: '%Y.%m.%d',                
+                useHTML: true,                
+                pointFormat: '<b>{series.name} : {point.y:,.0f} 원</b></span>',                                                        
             },
 
             rangeSelector: {
@@ -9885,8 +9905,14 @@ $(document).ready(function () {
             },
 
             tooltip: {
-                enabled: false
+                shadow: false,
+                split: false,
+                shared: true,                
+                xDateFormat: '%Y.%m.%d',                
+                useHTML: true,                
+                pointFormat: '<b>{series.name} : {point.y:,.0f} %</b></span>',                                                        
             },
+
             lang: {
                 noData: "해당 데이터가 없습니다",
             },
