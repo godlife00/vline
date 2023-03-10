@@ -1153,7 +1153,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
   margin-top: 12px;
 }
-#header .bgWrap .premium a.join {
+#header .bgWrap .premium a.join_pay {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
@@ -1163,7 +1163,7 @@ input[type=radio]:checked:before {
   position: relative;
   vertical-align: top;
 }
-#header .bgWrap .premium a.join::before {
+#header .bgWrap .premium a.join_pay::before {
   content: "";
   position: absolute;
   left: 5px;
