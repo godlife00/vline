@@ -105,67 +105,6 @@ $(document).ready(function () {
             });
         });
 
-        $('.btn_guide_pop').on('click', function (e) {
-            if(!$(e.target).hasClass("close")) {                
-                $('.guidePop_box').removeClass('on');
-                $('.guide_pop').modal({
-                    fadeDuration: 100,
-                });
-                popConSwiper();
-                guidePop_open(); //서비스 활용 가이드 보기 닫기                        
-                
-            } else {                
-                console.log("닫기");                
-            }
-        });                     
-
-        // 서비스 가이드 슬라이드
-        function popConSwiper() {            
-            var swiper = new Swiper('.popConSwiper', {    
-                observer: true,
-                observeParents: true,                                
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-        }              
-
-        // 서비스 활용 가이드 보기 
-        $(window).load(function () {            
-            setTimeout(function () {
-                $('.guidePop_box').addClass('on');
-            }, 400);
-        });
-        
-        //서비스 활용 가이드 보기 열기
-        function guidePop_open() {
-            $('.modal .pop_header .clse, .blocker').on('click', function () {
-                $('.guidePop_box').addClass('on');
-            });
-    
-        }        
-        // 서비스 활용 가이드 보기 닫기
-        function guidePop_close() {
-            $('.guidePop_box .close').on('click', function () {
-                $('.guidePop_box').removeClass('on');
-            });
-        }        
-        guidePop_open();   //서비스 활용 가이드 보기 열기
-        guidePop_close(); //서비스 활용 가이드 보기 닫기
-
-        // 비로그인, 무료회원 서비스 
-        $(window).load(function () {            
-            setTimeout(function () {
-                $('.premiumLock_cunt').addClass('on');
-            }, 400);
-        });
-        
         //select
         $(function () {
             var selectTarget = $('.selectbox select');
@@ -218,8 +157,6 @@ $(document).ready(function () {
         });
     }
     header_Function();
-
-    
 
     // 시가총액 직접 입력 아닌, 옵션선택 <input type="number" class="input_txt"> 에 해당 값 입력하는 스크립트    
     function user_inputBox() {
@@ -387,36 +324,7 @@ $(document).ready(function () {
     $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function () {
         $('.highcharts-root').append("<div>Handler for .resize() called.</div>");
     });
-
-    // 종목분석 - 개요 차트 기간 선택
-    $('#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs li').on('click', function () {
-        $('#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs li').removeClass('active');
-        $(this).addClass('active')
-    });
     
-    // 재무분석 - 개요 캔들차트 3개월 6개월 1년 3년 10년 탭 선택 스크립트
-    var tabList = document.querySelectorAll('.period_tabs > li');
-    var chartList = document.querySelectorAll('.BICchart_style');    
-    for (let i = 0; i < tabList.length; i++) {
-        var tab = tabList[i];
-        var chart = chartList[i];
-
-        tab.addEventListener('click', function () {
-            // 모든 차트 숨기기
-            for (var c of chartList) {
-                c.style.display = 'none';
-            }
-
-            // 클릭한 탭과 연관된 차트 보이기
-            var target = this.getAttribute('data-target');
-            var targetChart = document.querySelector(target);
-            targetChart.style.display = 'block';
-
-            // 차트 다시 그리기
-            var chartObj = Highcharts.charts.find(chart => chart.renderTo.id === targetChart.id);
-            chartObj.reflow();
-        });
-    }
 
     // 자세히보기 열기닫기
     $('#container .M_right .sum_box .more').on('click', function () {
@@ -648,9 +556,9 @@ $(document).ready(function () {
                     'position': 'relative',
                     'top': positionTop,
                 });
-                // $('.fix_table. thead td').css({
-                //     'visibility': 'visible',
-                // });
+                $('.fix_table. thead td').css({
+                    'visibility': 'visible',
+                });
                 $('.fix_table thead th, .fix_table thead td, .fix_table thead tr').css({
                     // 'background-color' : '#fff !important',                
                 });
@@ -734,45 +642,6 @@ $(document).ready(function () {
     }
     textarealength();
 
-    $(window).on("load", function() {
-        // 구글 애드센스 우측 따라다니는 배너                     
-        var floatPosition = parseInt($(".ads-right-box").css('top'));
-        var adsTopSub = $('.ads-top-sub').height() + 92;
-        var adsTopMain = $('.ads-top-main').height() + 92;    
 
-        $(window).scroll(function () {
-            var scrollTop = $(this).scrollTop();
-            var maxScroll = $(document).height() - $(this).height();
-            var newPosition = scrollTop + floatPosition;
-            var adsClass = $(".adsbygoogle").attr("class").split(' ')[1];
-
-            if (adsClass == "ads-top-main") {
-                $(".ads-right-box").stop().animate({
-                    "top": adsTopMain
-                }, 0);
-            } else if (adsClass == "ads-top-sub") {
-                $(".ads-right-box").stop().animate({
-                    "top": adsTopSub
-                }, 0);
-            } 
-            // else if (scrollTop <= adsTopSub) {
-            //     $(".ads-right-box").stop().animate({
-            //         "top": adsTopSub - 20
-            //     }, 300);
-            // } else if (scrollTop >= maxScroll - 330) {
-            //     console.log(scrollTop);
-            //     $(".ads-right-box").stop().animate({
-            //         "top": scrollTop
-            //     }, 300);
-            // } else {
-            //     $(".ads-right-box").stop().animate({
-            //         "top": newPosition
-            //     }, 300);
-            // };
-
-        }).scroll();
-    });
-
-    
 
 });

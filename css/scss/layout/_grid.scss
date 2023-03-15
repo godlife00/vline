@@ -44,8 +44,8 @@ body {
         float: left;
         width: 200px;
         margin-right: 13px;
-        position: sticky;
-        top: 52px;
+        // position: sticky;
+        // top: 52px;
     }
 
     .M_right {
@@ -920,4 +920,59 @@ input[type='radio']:checked:before {
     background-color: #999;
     margin: 0 2px 2px;
     border: none !important;
+}
+.valueline .adsbygoogle {            
+    float: none;
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    position: relative;
+    background-color: blanchedalmond;        
+
+    &.ads-top-main {
+        height: 280px;
+        margin-bottom: 20px;
+    }
+    &.ads-mid-main {
+        margin-top: 20px;
+    }
+    &.ads-right-main {        
+        width: 254px;
+        height: 600px;        
+    }    
+    &.ads-rightBtm-main {
+        margin-top: 20px;                
+    }    
+    &.ads-btm-main {
+        margin-top: 20px;                
+    }    
+    &.ads-top-sub {
+        margin-bottom: 20px;
+        height: 280px;
+    }    
+    &.ads-btm-sub {
+        margin-top: 20px;        
+        height: 280px;
+    }    
+    &.ads-right-sub {        
+        width: 254px;
+        height: 600px;        
+    }    
+    &.ads-left-sub {
+        margin-top: 20px;        
+        height: 600px;
+    }    
+}
+.valueline .ads-right-box {
+    position: absolute;
+    right: -270px;
+    top: 72px;
+    width: 254px;
+    height: 600px;        
+    transition: all 0.35s ease-out;
+}
+.valueline .ads-btm-box {
+    margin: 0 auto;
+    max-width: 1138px;
+    width: 100%;     
 }

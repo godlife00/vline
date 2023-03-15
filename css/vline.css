@@ -229,8 +229,6 @@ body .numCunt::before {
   float: left;
   width: 200px;
   margin-right: 13px;
-  position: sticky;
-  top: 52px;
 }
 #container .M_right {
   position: relative;
@@ -998,6 +996,63 @@ input[type=radio]:checked:before {
   border: none !important;
 }
 
+.valueline .adsbygoogle {
+  float: none;
+  display: table;
+  table-layout: fixed;
+  clear: both;
+  position: relative;
+  background-color: blanchedalmond;
+}
+.valueline .adsbygoogle.ads-top-main {
+  height: 280px;
+  margin-bottom: 20px;
+}
+.valueline .adsbygoogle.ads-mid-main {
+  margin-top: 20px;
+}
+.valueline .adsbygoogle.ads-right-main {
+  width: 254px;
+  height: 600px;
+}
+.valueline .adsbygoogle.ads-rightBtm-main {
+  margin-top: 20px;
+}
+.valueline .adsbygoogle.ads-btm-main {
+  margin-top: 20px;
+}
+.valueline .adsbygoogle.ads-top-sub {
+  margin-bottom: 20px;
+  height: 280px;
+}
+.valueline .adsbygoogle.ads-btm-sub {
+  margin-top: 20px;
+  height: 280px;
+}
+.valueline .adsbygoogle.ads-right-sub {
+  width: 254px;
+  height: 600px;
+}
+.valueline .adsbygoogle.ads-left-sub {
+  margin-top: 20px;
+  height: 600px;
+}
+
+.valueline .ads-right-box {
+  position: absolute;
+  right: -270px;
+  top: 72px;
+  width: 254px;
+  height: 600px;
+  transition: all 0.35s ease-out;
+}
+
+.valueline .ads-btm-box {
+  margin: 0 auto;
+  max-width: 1138px;
+  width: 100%;
+}
+
 /* 헤더 header */
 #header .bgWrap {
   background-color: #374b9d;
@@ -1153,7 +1208,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
   margin-top: 12px;
 }
-#header .bgWrap .premium a.join {
+#header .bgWrap .premium a.join_pay {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
@@ -1163,7 +1218,7 @@ input[type=radio]:checked:before {
   position: relative;
   vertical-align: top;
 }
-#header .bgWrap .premium a.join::before {
+#header .bgWrap .premium a.join_pay::before {
   content: "";
   position: absolute;
   left: 5px;
@@ -1988,14 +2043,15 @@ input[type=radio]:checked:before {
   margin-bottom: 15px;
 }
 #container .M_right .sum_box p {
+  overflow: hidden;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
+  height: 20px;
   line-height: 22px;
 }
 #container .M_right .sum_box.lineView_2 p {
-  word-break: break-all;
-  word-wrap: break-word;
+  height: auto;
 }
 #container .M_right .sum_box.small .more::after {
   transform: rotate(135deg);
@@ -4932,6 +4988,7 @@ input[type=radio]:checked:before {
   padding: 15px 5px;
   box-sizing: border-box;
   border-radius: 10px;
+  min-height: 579px;
   border: solid 1px #efeff2;
 }
 #container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs {

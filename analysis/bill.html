@@ -61,6 +61,7 @@
         <div id="header" class="main_hdr"></div>
 
         <div id="container">
+
             <!-- 좌측메뉴 -->
             <div class="M_left">
                 <div class="detail_box">
@@ -324,7 +325,9 @@
                         <li><a href="turnaround.html">턴어라운드</a></li>
                     </ul>
                 </div>
-                <div class="sum_box lineView_2">
+                <div class="sum_box small">
+                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
+                    <span class="more">자세히</span>
                     <p>
                         손익계산서를 통해 매출액과 비용 그리고 이익(손실) 규모를 알 수 있습니다. 기업의 매출액에서 모든 비용을 제외하고 남는 돈을 순이익이라고 합니다. 순이익이 많을 수록 기업가치는 높아지게 됩니다.
                         <br>
@@ -411,8 +414,14 @@
                         <div class="detail">
                             <span class="table_view"><i></i>세부항목</span>
                             <span class="table_int active"><i></i>소수점</span>
-                            <span style="cursor: not-allowed;">세부항목</span>
-                            <span style="cursor: not-allowed;">소수점</span>
+                            <script>
+                                $(document).ready(function () {
+                                    $('#container .M_right .contents_header .table_filter .detail span.table_view').off('click');                          
+                                    $('#container .M_right .contents_header .table_filter .detail span.table_int').off('click'); 
+                                })
+                            </script>
+                            <span class="table_view" style="cursor: not-allowed;"><i></i>세부항목</span>
+                            <span class="table_int" style="cursor: not-allowed;"><i></i>소수점</span>
                         </div>
                     </div>
                 </div>
@@ -2638,21 +2647,21 @@
                 </div>                
                 <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
 
-                <div class="premiumLock_cunt on"  style="display: block; bottom: 180px;"> <!--  bottom값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
+                <div class="premiumLock_cunt"  style="bottom: 180px;"> <!--  bottom값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
                     <!-- 실적시즌 > 비 로그인 -->
                     <div class="more">                                                
                         실적시즌! 종목 재무분석 매일 3건 무료!</span>
                         <a href="../winpop/login.html" class="go_link">회원가입</a>
                     </div>                    
                 </div>
-                <div class="premiumLock_cunt on" style="display: block; bottom: 100px;"> <!--  bottom 값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
+                <div class="premiumLock_cunt" style="bottom: 100px;"> <!--  bottom 값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
                     <!-- 실적시즌 > 무료회원 > 재무분석 -->
                     <div class="more">                                                
                         재무분석 2건 / <span class="">매일 3건 무료</span>
                         <a href="../service.html" class="go_link">재무분석이 무제한</a>
                     </div>                    
                 </div>
-                <div class="premiumLock_cunt on" style="display: block">
+                <div class="premiumLock_cunt">
                     <!--  실적 시즌/비시즌 공통 > 무료회원 > 재무분석 외 메뉴 -->
                     <div class="more">                                                
                         밸류라인 서비스를 무제한 이용하세요</span>
@@ -2661,8 +2670,36 @@
                 </div>
 
             </div>
+
+            <!-- 서브 우측 (수직형) -->
+            <div class="ads-right-box">
+                <ins class="adsbygoogle ads-right-sub"
+                    style="display:block"
+                    data-ad-client="ca-pub-6864430327621783"
+                    data-ad-slot="6821219711"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>     
+            
         </div>
         <!-- //container -->
+
+        <!-- 서브 하단 (사각형) -->
+        <div class="ads-btm-box">
+            <ins class="adsbygoogle ads-btm-sub"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds --> 
+        </div>        
 
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
