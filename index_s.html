@@ -3,42 +3,42 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>밸류라인 : 현명한 투자자를 위한 최고의 선택</title>
-    <meta name="robots" content="밸류라인 : 현명한 투자자를 위한 최고의 선택">
-    <meta name="description" content="밸류라인 content">
+    <title>밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스</title>
+    <meta name="robots" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스">
+    <meta name="description"
+        content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스, 10년재무제표, 재무분석, 종목발굴, 투자대가, 업종분석, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#2A3979">
     <!-- 오픈 그래프 -->
-    <meta property="og:title" content="밸류라인 content" />
+    <meta property="og:title" content="밸류라인" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="밸류라인 content">
-    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:description"
+        content="투자자를 위한 종목발굴 빅데이터 서비스, 10년재무제표, 재무분석, 종목발굴, 투자대가, 업종분석, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/vline/img/og_choicestockVline.png">
     <meta property="og:image:width" content="410" />
     <meta property="og:image:height" content="210" />
-    <meta property="og:url" content="www.choicestock.co.kr">
+    <meta property="og:url" content="url">
     <!-- 파비콘 favicon -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
-    <!-- jquery 최신버전 -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-    <script src="https://code.highcharts.com/modules/treemap.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="http://godlife.ivyro.net/highcharts/stock/highstock.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/hollowcandlestick.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/no-data-to-display.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/treemap.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/highcharts-more.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/exporting.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/export-data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/accessibility.js"></script>
     <script src="js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -47,8 +47,10 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/vline.css" />
     <!-- js -->
-    <script src="js/header_index.js"></script>
     <script src="js/vline.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료 -->
 </head>
 
 <body class="valueline">
@@ -140,7 +142,8 @@
                 </div>
                 <!-- 브랜드 / 이벤트 배너 영역 -->
                 <div class="banner_top_right">
-                    <a href=""><img src="img/banner/main_toprightbannner.jpg" alt="투자자를 위한 종목발굴 빅데이터 서비스 밸류라인"></a>
+                    <a href="inform/inform_list.html"><img src="img/banner/valueline_season_banner.png"
+                            alt="실적시즌 업데이트. 실적발표 자료 다운로드가 제공됩니다."></a>
                 </div>
             </div>
             <!-- //indices_area -->
@@ -167,9 +170,31 @@
                             <dd>전체 대비 77.3% 완료</dd>
                         </dl>
                     </div>
-
                 </div>
                 <!-- 테이블 -->
+
+                <div class="season">
+                    <div class="box">
+                        <h2 class="title">2021.2Q</h2>
+                        <p class="txt">실적 재무데이터 업데이트 <span class="update">기준 21,08/21</span></p>
+                    </div>
+                    <div class="box">
+                        <h3 class="sub_title import">주요 계정과목</h3>
+                        <dl class="subject">
+                            <dt class="same">0 종목</dt>
+                            <dd>실적마감 익일 완료</dd>
+                        </dl>
+                    </div>
+                    <div class="box">
+                        <h3 class="sub_title all">전체 계정과목</h3>
+                        <dl class="subject">
+                            <dt class="same">0 종목</dt>
+                            <dd>전체 대비 77.3% 완료</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- 테이블 -->
+
                 <div class="season_data">
                     <table cellspacing="0" border="0" class="season_table">
                         <thead>
@@ -177,61 +202,70 @@
                                 <th class="">구분</th>
                                 <th class="">종목</th>
                                 <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
                                 <th class="txt_c">전년대비</th>
-                                <th class="txt_c">순이익(억원)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
-                                <td class="up">
-                                    <span class="price">50,000</span>
-                                    <span class="per">+1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/099750">한국타이어앤테크놀로지한국타이어앤테크놀로지</a>
                                 </td>
-                                <td class="deficit cpson">87.77%</td>
-                                <td class="txt_R">50,888</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
                                 <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                    <span class="price">37,100</span>
+                                    <span class="per">-0.27%</span>
                                 </td>
-                                <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_R">98</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
-                                <td class="same">
-                                    <span class="price">9,000</span>
-                                    <span class="per">0%</span>
-                                </td>
-                                <!-- 상승인 경우 up, 하락은 down, 보합은 same -->
+                                <td class="txt_R">-31</td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_R">350,888</td>
                             </tr>
                             <tr>
                                 <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="name">
+                                    <a href="/finance/income/085620">미래에셋생명</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">3,730</span>
+                                    <span class="per">+0.81%</span>
+                                </td>
+                                <td class="txt_R">176</td>
+                                <td class="deficit cpson">15,515.89%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion import">주요</td>
+                                <td class="name">
+                                    <a href="/finance/income/036570">엔씨소프트</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">421,500</span>
+                                    <span class="per">+0.24%</span>
+                                </td>
+                                <td class="txt_R">1,683</td>
+                                <td class="deficit cpson">108.07%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/109080">옵티시스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">15,200</span>
+                                    <span class="per">+2.01%</span>
+                                </td>
+                                <td class="txt_R">19</td>
+                                <td class="deficit cpson">98.34%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/201490">미투온</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">5,110</span>
+                                    <span class="per">-0.78%</span>
+                                </td>
+                                <td class="txt_R">54</td>
+                                <td class="deficit cpson">72.97%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -241,60 +275,70 @@
                                 <th class="">구분</th>
                                 <th class="">종목</th>
                                 <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
                                 <th class="txt_c">전년대비</th>
-                                <th class="txt_c">순이익(억원)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/037560">LG헬로비전</a>
+                                </td>
                                 <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
+                                    <span class="price">6,110</span>
+                                    <span class="per">+3.04%</span>
                                 </td>
-                                <td class="deficit cpson">87.77%</td>
-                                <td class="txt_R">9,350,888</td>
+                                <td class="txt_R">93</td>
+                                <td class="deficit cpson">48.49%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/000370">한화손해보험</a>
+                                </td>
                                 <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                    <span class="price">4,575</span>
+                                    <span class="per">-2.56%</span>
                                 </td>
-                                <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_R">98</td>
+                                <td class="txt_R">881</td>
+                                <td class="deficit cpson">40.65%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/036560">영풍정밀</a>
+                                </td>
                                 <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
+                                    <span class="price">9,770</span>
+                                    <span class="per">+0.21%</span>
                                 </td>
-                                <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_R">9,350,888</td>
+                                <td class="txt_R">70</td>
+                                <td class="deficit cpson">18.52%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/021240">코웨이</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">72,700</span>
+                                    <span class="per">+2.25%</span>
+                                </td>
+                                <td class="txt_R">1,350</td>
+                                <td class="deficit cpson">7.27%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/096530">씨젠</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">39,350</span>
+                                    <span class="per">+0.9%</span>
+                                </td>
+                                <td class="txt_R">1,657</td>
+                                <td class="deficit cpson">0.66%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -303,61 +347,71 @@
                             <tr>
                                 <th class="">구분</th>
                                 <th class="">종목</th>
-                                <th class="">주가</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
                                 <th class="txt_c">전년대비</th>
-                                <th class="txt_c">순이익(억원)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/032640">LG유플러스</a>
+                                </td>
                                 <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
+                                    <span class="price">13,450</span>
+                                    <span class="per">+0.37%</span>
                                 </td>
-                                <td class="deficit cpson">87.77%</td>
-                                <td class="txt_R">9,350,888</td>
+                                <td class="txt_R">1,704</td>
+                                <td class="bk_check cpson">-13.22%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/003690">코리안리</a>
                                 </td>
-                                <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_R">98</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                 <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
+                                    <span class="price">9,560</span>
+                                    <span class="per">+1.16%</span>
                                 </td>
-                                <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_R">9,350,888</td>
+                                <td class="txt_R">469</td>
+                                <td class="bk_check cpson">-17.04%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/950190">미투젠</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="down">
+                                    <span class="price">17,600</span>
+                                    <span class="per">-0.56%</span>
+                                </td>
+                                <td class="txt_R">60</td>
+                                <td class="bk_check cpson">-37.81%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/051600">한전KPS</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">36,900</span>
+                                    <span class="per">+0.27%</span>
+                                </td>
+                                <td class="txt_R">208</td>
+                                <td class="bk_check cpson">-52.71%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/050760">에스폴리텍</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">4,445</span>
+                                    <span class="per">+0.11%</span>
+                                </td>
+                                <td class="txt_R">10</td>
+                                <td class="bk_check cpson">-66.56%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -366,136 +420,1245 @@
                             <tr>
                                 <th class="">구분</th>
                                 <th class="">종목</th>
-                                <th class="">주가</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
                                 <th class="txt_c">전년대비</th>
-                                <th class="txt_c">순이익(억원)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/032830">삼성생명</a>
+                                </td>
                                 <td class="up">
-                                    <span class="price">9,350,000</span>
+                                    <span class="price">66,100</span>
                                     <span class="per">+1.38%</span>
                                 </td>
-                                <td class="deficit cpson">87.77%</td>
-                                <td class="txt_R">9,350,888</td>
+                                <td class="txt_R">3,022</td>
+                                <td class="bk_check cpson">-72.23%</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/011170">롯데케미칼</a>
                                 </td>
-                                <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_R">98</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                 <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
+                                    <span class="price">197,500</span>
+                                    <span class="per">+2.6%</span>
                                 </td>
+                                <td class="txt_R">1,166</td>
+                                <td class="bk_check cpson">-76.96%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/008600">윌비스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">1,235</span>
+                                    <span class="per">+0.82%</span>
+                                </td>
+                                <td class="txt_R">5</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/011930">신성이엔지</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">1,795</span>
+                                    <span class="per">+0.84%</span>
+                                </td>
+                                <td class="txt_R">-49</td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_R">9,350,888</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/035000">지투알</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="up">
+                                    <span class="price">6,550</span>
+                                    <span class="per">+0.15%</span>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="txt_R">-15</td>
+                                <td class="deficit trans"><span>적자지속</span></td>
                             </tr>
                         </tbody>
-                    </table>                    
+                    </table>
                     <table cellspacing="0" border="0" class="season_table">
                         <thead>
                             <tr>
                                 <th class="">구분</th>
                                 <th class="">종목</th>
-                                <th class="">주가</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
                                 <th class="txt_c">전년대비</th>
-                                <th class="txt_c">순이익(억원)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
-                                <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/079160">CJ CGV</a>
                                 </td>
-                                <td class="deficit cpson">87.77%</td>
-                                <td class="txt_R">9,350,888</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
                                 <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                    <span class="price">26,700</span>
+                                    <span class="per">-0.37%</span>
                                 </td>
-                                <td class="bk_check cpson">-87.77%</td>
-                                <td class="txt_R">98</td>
-                            </tr>
-                            <tr>
-                                <td class="dvsion import">주요</td>
-                                <td class="name"><a href="analysis/bill.html">게임즈</a></td>
-                                <td class="up">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">+1.38%</span>
-                                </td>
+                                <td class="txt_R">-1,114</td>
                                 <td class="deficit trans"><span>적자지속</span></td>
-                                <td class="txt_R">9,350,888</td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/015760">한국전력</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">22,700</span>
+                                    <span class="per">+0.22%</span>
+                                </td>
+                                <td class="txt_R">-59,259</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
                             </tr>
                             <tr>
-                                <td class="dvsion all">전체</td>
-                                <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a></td>
-                                <td class="down">
-                                    <span class="price">9,350,000</span>
-                                    <span class="per">-1.38%</span>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/063080">컴투스홀딩스</a>
                                 </td>
-                                <td class="bk_check trans"><span>흑자전환</span></td>
-                                <td class="txt_R">98</td>
+                                <td class="up">
+                                    <span class="price">63,300</span>
+                                    <span class="per">+0.32%</span>
+                                </td>
+                                <td class="txt_R">-46</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/078340">컴투스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">79,300</span>
+                                    <span class="per">+1.02%</span>
+                                </td>
+                                <td class="txt_R">-44</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/139480">이마트</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">126,000</span>
+                                    <span class="per">+0.8%</span>
+                                </td>
+                                <td class="txt_R">8,058</td>
+                                <td class="deficit cpson">783.10%</td>
                             </tr>
                         </tbody>
-                    </table>   
-
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/000060">메리츠화재</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">37,350</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">2,222</td>
+                                <td class="deficit cpson">70.40%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/030200">KT</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">36,850</span>
+                                    <span class="per">+0.55%</span>
+                                </td>
+                                <td class="txt_R">4,554</td>
+                                <td class="deficit cpson">50.48%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/005830">DB손해보험</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">63,800</span>
+                                    <span class="per">-0.47%</span>
+                                </td>
+                                <td class="txt_R">2,800</td>
+                                <td class="deficit cpson">47.20%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/058610">에스피지</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">15,650</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">69</td>
+                                <td class="deficit cpson">44.89%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/003550">LG</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">75,800</span>
+                                    <span class="per">+1.88%</span>
+                                </td>
+                                <td class="txt_R">13,450</td>
+                                <td class="deficit cpson">29.32%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/259960">크래프톤</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">243,500</span>
+                                    <span class="per">+1.04%</span>
+                                </td>
+                                <td class="txt_R">2,452</td>
+                                <td class="deficit cpson">26.38%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/001450">현대해상</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">31,350</span>
+                                    <span class="per">+0.32%</span>
+                                </td>
+                                <td class="txt_R">1,512</td>
+                                <td class="deficit cpson">19.59%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/001570">금양</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">4,445</span>
+                                    <span class="per">-0.11%</span>
+                                </td>
+                                <td class="txt_R">23</td>
+                                <td class="deficit cpson">11.84%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/005440">현대그린푸드</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">8,820</span>
+                                    <span class="per">+0.68%</span>
+                                </td>
+                                <td class="txt_R">328</td>
+                                <td class="deficit cpson">9.63%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/137310">에스디바이오센서</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">47,150</span>
+                                    <span class="per">+1.29%</span>
+                                </td>
+                                <td class="txt_R">4,749</td>
+                                <td class="deficit cpson">8.68%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="txt_c">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/041830">인바디</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">26,550</span>
+                                    <span class="per">+1.34%</span>
+                                </td>
+                                <td class="txt_R">101</td>
+                                <td class="deficit cpson">0.17%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/033780">KT&amp;G</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">83,700</span>
+                                    <span class="per">+0.24%</span>
+                                </td>
+                                <td class="txt_R">2,634</td>
+                                <td class="bk_check cpson">-3.70%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/000810">삼성화재</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">204,500</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">4,091</td>
+                                <td class="bk_check cpson">-5.19%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/357230">에이치피오</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">11,450</span>
+                                    <span class="per">-2.97%</span>
+                                </td>
+                                <td class="txt_R">44</td>
+                                <td class="bk_check cpson">-21.61%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/006800">미래에셋증권</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">7,840</span>
+                                    <span class="per">+1.42%</span>
+                                </td>
+                                <td class="txt_R">1,971</td>
+                                <td class="bk_check cpson">-32.29%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/352700">씨앤투스성진</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">5,620</span>
+                                    <span class="per">+0.72%</span>
+                                </td>
+                                <td class="txt_R">95</td>
+                                <td class="bk_check cpson">-33.61%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/068270">셀트리온</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">142,500</span>
+                                    <span class="per">+1.06%</span>
+                                </td>
+                                <td class="txt_R">1,212</td>
+                                <td class="bk_check cpson">-37.38%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/095660">네오위즈</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">20,100</span>
+                                    <span class="per">+1.77%</span>
+                                </td>
+                                <td class="txt_R">124</td>
+                                <td class="bk_check cpson">-39.27%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/016360">삼성증권</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">37,650</span>
+                                    <span class="per">+0.94%</span>
+                                </td>
+                                <td class="txt_R">1,518</td>
+                                <td class="bk_check cpson">-47.49%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/263750">펄어비스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">58,100</span>
+                                    <span class="per">+1.04%</span>
+                                </td>
+                                <td class="txt_R">58</td>
+                                <td class="bk_check cpson">-71.91%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/047560">이스트소프트</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">10,800</span>
+                                    <span class="per">+0.93%</span>
+                                </td>
+                                <td class="txt_R">5</td>
+                                <td class="bk_check cpson">-71.98%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/079430">현대리바트</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">13,200</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">21</td>
+                                <td class="bk_check cpson">-72.07%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/049520">유아이엘</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">2,225</span>
+                                    <span class="per">+0.23%</span>
+                                </td>
+                                <td class="txt_R">24</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/053350">이니텍</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">4,425</span>
+                                    <span class="per">-1.01%</span>
+                                </td>
+                                <td class="txt_R">1</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/054450">텔레칩스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">17,850</span>
+                                    <span class="per">+0.28%</span>
+                                </td>
+                                <td class="txt_R">25</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/019570">리더스 기술투자</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">485</span>
+                                    <span class="per">-0.82%</span>
+                                </td>
+                                <td class="txt_R">-78</td>
+                                <td class="deficit trans"><span>적자지속</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/034230">파라다이스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">15,450</span>
+                                    <span class="per">+0.32%</span>
+                                </td>
+                                <td class="txt_R">-360</td>
+                                <td class="deficit trans"><span>적자지속</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/071320">지역난방공사</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">34,950</span>
+                                    <span class="per">-0.43%</span>
+                                </td>
+                                <td class="txt_R">-1,192</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/251270">넷마블</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">73,700</span>
+                                    <span class="per">-0.14%</span>
+                                </td>
+                                <td class="txt_R">-518</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/326030">SK바이오팜</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">88,800</span>
+                                    <span class="per">+0.11%</span>
+                                </td>
+                                <td class="txt_R">-352</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/010660">화천기계</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">3,440</span>
+                                    <span class="per">-5.75%</span>
+                                </td>
+                                <td class="txt_R">7</td>
+                                <td class="deficit cpson">993.55%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/081150">티플랙스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">5,530</span>
+                                    <span class="per">+0.36%</span>
+                                </td>
+                                <td class="txt_R">62</td>
+                                <td class="deficit cpson">300.68%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name">
+                                    <a href="/finance/income/005690">파미셀</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">13,500</span>
+                                    <span class="per">+0.37%</span>
+                                </td>
+                                <td class="txt_R">49</td>
+                                <td class="deficit cpson">160.28%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/122900">아이마켓코리아</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">10,850</span>
+                                    <span class="per">+0.46%</span>
+                                </td>
+                                <td class="txt_R">68</td>
+                                <td class="deficit cpson">153.40%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/037270">YG PLUS</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">6,870</span>
+                                    <span class="per">+0.73%</span>
+                                </td>
+                                <td class="txt_R">78</td>
+                                <td class="deficit cpson">145.44%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/004170">신세계</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">258,000</span>
+                                    <span class="per">+0.39%</span>
+                                </td>
+                                <td class="txt_R">1,509</td>
+                                <td class="deficit cpson">115.67%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/078140">대봉엘에스</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">9,530</span>
+                                    <span class="per">+0.85%</span>
+                                </td>
+                                <td class="txt_R">28</td>
+                                <td class="deficit cpson">94.12%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/005290">동진쎄미켐</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">41,150</span>
+                                    <span class="per">+0.12%</span>
+                                </td>
+                                <td class="txt_R">379</td>
+                                <td class="deficit cpson">55.03%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/036460">한국가스공사</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">44,900</span>
+                                    <span class="per">+1.58%</span>
+                                </td>
+                                <td class="txt_R">7,361</td>
+                                <td class="deficit cpson">43.50%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name">
+                                    <a href="/finance/income/260660">알리코제약</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">7,200</span>
+                                    <span class="per">+1.12%</span>
+                                </td>
+                                <td class="txt_R">29</td>
+                                <td class="deficit cpson">33.99%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/031430">신세계인터내셔날</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">34,200</span>
+                                    <span class="per">+1.63%</span>
+                                </td>
+                                <td class="txt_R">268</td>
+                                <td class="deficit cpson">14.55%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/037710">광주신세계</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">37,100</span>
+                                    <span class="per">+0.68%</span>
+                                </td>
+                                <td class="txt_R">137</td>
+                                <td class="deficit cpson">10.06%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/089600">나스미디어</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">27,400</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">55</td>
+                                <td class="deficit cpson">8.23%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/100090">삼강엠앤티</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">20,000</span>
+                                    <span class="per">+1.01%</span>
+                                </td>
+                                <td class="txt_R">105</td>
+                                <td class="deficit cpson">7.37%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/192080">더블유게임즈</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">43,400</span>
+                                    <span class="per">+0.46%</span>
+                                </td>
+                                <td class="txt_R">332</td>
+                                <td class="deficit cpson">1.69%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/253450">스튜디오드래곤</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">78,300</span>
+                                    <span class="per">-0.63%</span>
+                                </td>
+                                <td class="txt_R">156</td>
+                                <td class="deficit cpson">0.36%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/122870">와이지엔터테인먼트</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">56,100</span>
+                                    <span class="per">+1.63%</span>
+                                </td>
+                                <td class="txt_R">58</td>
+                                <td class="bk_check cpson">-7.17%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/195940">HK이노엔</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">38,950</span>
+                                    <span class="per">-0.26%</span>
+                                </td>
+                                <td class="txt_R">74</td>
+                                <td class="bk_check cpson">-11.06%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/145020">휴젤</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">117,700</span>
+                                    <span class="per">+1.12%</span>
+                                </td>
+                                <td class="txt_R">158</td>
+                                <td class="bk_check cpson">-15.40%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/230360">에코마케팅</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">16,000</span>
+                                    <span class="per">+0.31%</span>
+                                </td>
+                                <td class="txt_R">64</td>
+                                <td class="bk_check cpson">-16.21%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name">
+                                    <a href="/finance/income/000520">삼일제약</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">8,310</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">5</td>
+                                <td class="bk_check cpson">-31.43%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name">
+                                    <a href="/finance/income/186230">그린플러스</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">15,400</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">10</td>
+                                <td class="bk_check cpson">-39.96%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/161390">한국타이어앤테크놀로지</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">36,350</span>
+                                    <span class="per">+2.25%</span>
+                                </td>
+                                <td class="txt_R">1,032</td>
+                                <td class="bk_check cpson">-40.20%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/051900">LG생활건강</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">690,000</span>
+                                    <span class="per">-0.29%</span>
+                                </td>
+                                <td class="txt_R">1,138</td>
+                                <td class="bk_check cpson">-55.37%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/194480">데브시스터즈</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">50,400</span>
+                                    <span class="per">-0.2%</span>
+                                </td>
+                                <td class="txt_R">83</td>
+                                <td class="bk_check cpson">-59.60%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/018880">한온시스템</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">11,200</span>
+                                    <span class="per">+1.36%</span>
+                                </td>
+                                <td class="txt_R">223</td>
+                                <td class="bk_check cpson">-62.15%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/123420">위메이드플레이</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">26,550</span>
+                                    <span class="per">+0.19%</span>
+                                </td>
+                                <td class="txt_R">12</td>
+                                <td class="bk_check cpson">-63.43%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/035760">CJ ENM</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">105,700</span>
+                                    <span class="per">-0.47%</span>
+                                </td>
+                                <td class="txt_R">16</td>
+                                <td class="bk_check cpson">-97.84%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/112040">위메이드</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">65,500</span>
+                                    <span class="per">+0.31%</span>
+                                </td>
+                                <td class="txt_R">4</td>
+                                <td class="bk_check cpson">-98.28%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/004060">SG세계물산</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">719</span>
+                                    <span class="per">+1.13%</span>
+                                </td>
+                                <td class="txt_R">3</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/051500">CJ프레시웨이</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">39,600</span>
+                                    <span class="per">-3.53%</span>
+                                </td>
+                                <td class="txt_R">56</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/101730">위메이드맥스</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">13,100</span>
+                                    <span class="per">-0.38%</span>
+                                </td>
+                                <td class="txt_R">92</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name">
+                                    <a href="/finance/income/204020">그리티</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">3,000</span>
+                                    <span class="per">+0.5%</span>
+                                </td>
+                                <td class="txt_R">0</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/236810">엔비티</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">19,000</span>
+                                    <span class="per">-1.3%</span>
+                                </td>
+                                <td class="txt_R">3</td>
+                                <td class="bk_check trans"><span>흑자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/005430">한국공항</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">45,950</span>
+                                    <span class="per">+0.33%</span>
+                                </td>
+                                <td class="txt_R">-41</td>
+                                <td class="deficit trans"><span>적자지속</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/035250">강원랜드</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">27,600</span>
+                                    <span class="per">+0.18%</span>
+                                </td>
+                                <td class="txt_R">-58</td>
+                                <td class="deficit trans"><span>적자지속</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/114090">GKL</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">14,450</span>
+                                    <span class="per">+0.7%</span>
+                                </td>
+                                <td class="txt_R">-108</td>
+                                <td class="deficit trans"><span>적자지속</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion all">전체</td>
+                                <td class="name">
+                                    <a href="/finance/income/002870">신풍제지</a>
+                                </td>
+                                <td class="same">
+                                    <span class="price">2,120</span>
+                                    <span class="per">0%</span>
+                                </td>
+                                <td class="txt_R">-14</td>
+                                <td class="deficit trans"><span>적자전환</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/043610">지니뮤직</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">4,805</span>
+                                    <span class="per">+2.45%</span>
+                                </td>
+                                <td class="txt_R">29</td>
+                                <td class="deficit trans"><span>N/A</span></td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/082640">동양생명</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">6,100</span>
+                                    <span class="per">+0.16%</span>
+                                </td>
+                                <td class="txt_R">643</td>
+                                <td class="deficit trans"><span>N/A</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" border="0" class="season_table">
+                        <thead>
+                            <tr>
+                                <th class="">구분</th>
+                                <th class="">종목</th>
+                                <th class="txt_c">주가</th>
+                                <th class="txt_c">발표순이익(억원)</th>
+                                <th class="txt_c">전년대비</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/036030">케이티알파</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">6,520</span>
+                                    <span class="per">-0.46%</span>
+                                </td>
+                                <td class="txt_R">68</td>
+                                <td class="deficit cpson">4,898.64%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/067290">JW신약</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">4,100</span>
+                                    <span class="per">+1.11%</span>
+                                </td>
+                                <td class="txt_R">21</td>
+                                <td class="deficit cpson">1,303.28%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/104200">NHN벅스</a>
+                                </td>
+                                <td class="down">
+                                    <span class="price">10,850</span>
+                                    <span class="per">-1.81%</span>
+                                </td>
+                                <td class="txt_R">15</td>
+                                <td class="deficit cpson">361.60%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/016380">KG스틸</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">17,950</span>
+                                    <span class="per">+0.56%</span>
+                                </td>
+                                <td class="txt_R">682</td>
+                                <td class="deficit cpson">143.17%</td>
+                            </tr>
+                            <tr>
+                                <td class="dvsion result">잠정</td>
+                                <td class="name">
+                                    <a href="/finance/income/001060">JW중외제약</a>
+                                </td>
+                                <td class="up">
+                                    <span class="price">25,000</span>
+                                    <span class="per">+0.2%</span>
+                                </td>
+                                <td class="txt_R">112</td>
+                                <td class="deficit cpson">133.49%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- //resultdata_area -->
-
-            
-
-
-
 
             <!-- 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트 -->
             <div class="btm_layBox">
@@ -771,27 +1934,48 @@
                     <!-- //ratio_box -->
 
                     <!-- 마켓차트 -->
-                    <div class="market_box" style="display: none;">
+                    <div class="market_box">
                         <h2 class="title">마켓차트</h2>
                         <span class="table_update">기준 08/30 / 시가총액상위</span>
-                        <div class="chart_stand">
-                            <form action="">
-                                <label>
-                                    <input name="market_radio" type="radio" checked=""><span>업종</span>
-                                </label>
-                                <label>
-                                    <input name="market_radio" type="radio"><span>상위 100 종목</span>
-                                </label>
-                            </form>
-                        </div>
-                        <!-- //chart_stand -->
+                        <!-- 차트 탭 -->
+                        <div class="chart_stand chart_tabs">
+                            <div class="tab_area">
+                                <form action="">
+                                    <ul>
+                                        <li rel="tabcon_turn" class="active"><label>
+                                            <input name="market_radio" type="radio" checked=""><span>업종</span>
+                                        </label></li>
+                                        <li rel="tabcon_mri"><label>
+                                            <input name="market_radio" type="radio"><span>상위 100 종목</span>
+                                        </label></li>
+                                    </ul>                                                                               
+                                </form>                                    
+                            </div>
 
-                        <div class="line_swbox">
-                            <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
-                        </div>
+                            <!-- 업종 -->
+                            <div id="tabcon_sec" class="tab_content">
+                                <div class="line_swbox">
+                                    <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
+                                </div>
+                                                                
+                            </div>
 
+                            <!-- 상위 100 종목 -->
+                            <div id="tabcon_top" class="tab_content">
+                                <div class="line_swbox">                                        
+                                    <div id="main_treemapTop100" class="treemap_style" style="padding: 0;"></div>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <!-- //chart_stand chart_tabs -->
                     </div>
-                    <!-- //market_box -->
+                    <!-- //market_box -->     
+
+                    <!-- 하단 롱 배너 -->
+                    <div class="btm_banner">
+                        <a href="inform/inform_list.html"><img src="img/banner/main_btmbannner.jpg" alt="밸류라인 100% 활용하기 서비스가이드에서 데이터 활용한 종목발굴 팁까지~"></a>
+                    </div>
+
                 </div>
 
                 <div class="right">
@@ -842,12 +2026,82 @@
                                         <span class="per">+17.68%</span>
                                     </div>
                                 </li>
+                                <li>
+                                    <a href="/finance/income/340440" class="name">세림B&amp;G</a>
+                                    <div class="up">
+                                        <span class="price">3,170</span>
+                                        <span class="per">+29.92%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/002150" class="name">도화엔지니어링</a>
+                                    <div class="up">
+                                        <span class="price">11,650</span>
+                                        <span class="per">+29.73%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/016385" class="name">KG스틸우</a>
+                                    <div class="up">
+                                        <span class="price">426,000</span>
+                                        <span class="per">+22.06%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/016880" class="name">웅진</a>
+                                    <div class="up">
+                                        <span class="price">2,225</span>
+                                        <span class="per">+20.92%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/050760" class="name">에스폴리텍</a>
+                                    <div class="up">
+                                        <span class="price">4,560</span>
+                                        <span class="per">+17.68%</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
 
                         <!-- 하락종목 -->
                         <div id="tabcon_down" class="tab_content">
                             <ul>
+                                <li>
+                                    <a href="/finance/income/091810" class="name">티웨이항공</a>
+                                    <div class="down">
+                                        <span class="price">2,725</span>
+                                        <span class="per">-12.1%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/060230" class="name">소니드</a>
+                                    <div class="down">
+                                        <span class="price">1,110</span>
+                                        <span class="per">-11.9%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/031860" class="name">엔에스엔</a>
+                                    <div class="down">
+                                        <span class="price">1,605</span>
+                                        <span class="per">-11.81%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/336060" class="name">웨이버스</a>
+                                    <div class="down">
+                                        <span class="price">2,200</span>
+                                        <span class="per">-11.65%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/160550" class="name">NEW</a>
+                                    <div class="down">
+                                        <span class="price">8,400</span>
+                                        <span class="per">-11.21%</span>
+                                    </div>
+                                </li>
                                 <li>
                                     <a href="/finance/income/091810" class="name">티웨이항공</a>
                                     <div class="down">
@@ -935,11 +2189,6 @@
                     </div>
                     <!-- //spider_area -->
                 </div>
-            </div>
-
-            <!-- 하단 롱 배너 -->
-            <div class="btm_banner">
-                <a href="#"><img src="img/banner/main_topbannner.jpg" alt="벨류라인 투자자를 위한 종목발굴 빅데이터 서비스"></a>
             </div>
         </div>
         <!-- //container -->

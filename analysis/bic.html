@@ -27,16 +27,16 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="http://godlife.ivyro.net/highcharts/stock/highstock.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/hollowcandlestick.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/no-data-to-display.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/treemap.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/highcharts-more.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/exporting.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/export-data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/accessibility.js"></script>
     <script src="../js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -126,6 +126,7 @@
 
                 <div class="sub_nav">
                     <ul class="depth_1">
+                        <li><span class="title"><a href="summary.html">개요</a></span></li>
                         <li><span class="title open"><a href="bill.html">10년 재무제표</a></span>
                             <ul class="depth_2">
                                 <li class=""><a href="">손익계산서</a></li>
@@ -141,8 +142,8 @@
 
                 <div class="service_box">
                     <ul>
-                        <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
+                        <li class="uses"><a href="https://datahero-.notion.site/FAQ-b104eb10192c41dd88a0574b1bef23ad">서비스활용법</a></li>
+                        <li class="update"><a href="https://datahero-.notion.site/FAQ-b104eb10192c41dd88a0574b1bef23ad"
                                 target="_black">업데이트 소식</a></li>
                         <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
                     </ul>
@@ -163,6 +164,7 @@
 
                 <div class="group_nav">
                     <ul>
+                        <li><a href="summary.html">개요</a></li>
                         <li><a href="bill.html">손익계산서</a></li>
                         <li><a href="financial.html">재무상태표</a></li>
                         <li><a href="cash.html">현금흐름표</a></li>
@@ -172,9 +174,7 @@
                         <li><a href="turnaround.html">턴어라운드</a></li>
                     </ul>
                 </div>
-                <div class="sum_box small">
-                    <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
-                    <span class="more">자세히</span>
+                <div class="sum_box small">                    
                     <p>
                         재무제표를 시계열 차트로 보여 드립니다. ‘BIC 차트’ 브랜드명은 3대 재무제표인 재무상태표(Balance sheet), 손익계산서 (Income statement),
                         현금흐름표 (Cashflow
@@ -240,8 +240,9 @@
                                             <span class="title">기간</span>
                                             <form action="">
                                                 <label>
-                                                    <input type="text" class="input_txt" id="datepicker1"> ~ <input
-                                                        type="text" class="input_txt" id="datepicker2">
+                                                    <input type="text" class="input_txt" value="200705" autocomplete="off" id="datepicker1">
+                                                    ~
+                                                    <input type="text" class="input_txt" value="202105"  autocomplete="off" id="datepicker2">
                                                 </label>
                                             </form>
                                         </div>
@@ -309,6 +310,48 @@
 
                         <div class="chart_line">
                             <div class="title_box">
+                                <h2 class="title"><i>2</i>매출지수와 순이익지수</h2>
+                            </div>
+                            <!-- //title_box -->
+
+                            <div class="con_box">
+                                <div class="left">
+                                    <div class="chart_BIC">
+                                        <!-- 매출지수와 순이익지수-->
+                                        <div id="BICchart_profit12" class="BICchart_style"></div>
+                                    </div>
+                                </div>
+                                <!-- //left -->
+                                <div class="right">
+                                    <h4 class="title">차트설명</h4>
+                                    <p class="txt">
+                                        매출액은 기업 성장의 출발점입니다. 매출액 성장률이 물가인상률을 초과하는 기업이 좋습니다. 일반적으로 매출액이 늘면 영업이익과 순이익은 더 큰
+                                        폭으로 증가합니다. 장기적인 이익 추세의 고점과 저점의 차이가
+                                        작을수록 경기 변동 영향을 받지 않는 우량 기업입니다.
+                                        <br><br>
+                                        반면, 경기에 민감한 철강, 화학, 조선, 자동차 산업은 경기 변동에 따라 이익의 변동 폭이 매우 클뿐 아니라 수년간 매출액 감소가 이어지기도
+                                        합니다. 심할 경우 경기 변동에 따라 순이익이 흑자와 적자를
+                                        반복하는 경우도 있습니다.
+                                        <br><br>
+                                        매출액, 영업이익, 순이익 모두 우상향 하는 기업은 주가도 꾸준히 상승합니다. 주가 상승의 출발점이 꾸준한 매출액 증가에서 시작한다는 점을
+                                        기억해야 합니다.
+                                    </p>
+                                </div>
+                                <!-- //right -->
+                            </div>
+                            <!-- //con_box -->
+                        </div>
+                        <!-- //chart_line -->
+
+                        <!-- 비회원 샘플 화면인 경우 보여주는 안내 문구 -->                
+                        <div class="freeInfo_box bicchart">
+                            <p><b>이럴수가@@, 재무제표가 쉬워요!</b> 프리미엄 서비스를 무제한으로 이용하세요.<a href="../winpop/payment_step01.html">프리미엄 가입</a></p>                    
+                        </div>                                        
+                        <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
+
+                        
+                        <div class="chart_line">
+                            <div class="title_box">
                                 <h2 class="title"><i>2</i>이익률</h2>
                             </div>
                             <!-- //title_box -->
@@ -337,6 +380,7 @@
                             <!-- //con_box -->
                         </div>
                         <!-- //chart_line -->
+                        
                         <div class="chart_line">
                             <div class="title_box">
                                 <h2 class="title"><i>3</i>매출원가율</h2>
@@ -434,6 +478,9 @@
                             <!-- //con_box -->
                         </div>
                         <!-- //chart_line -->
+
+                        
+
                         <div class="chart_line">
                             <div class="title_box">
                                 <h2 class="title"><i>TYP=2 6</i>예대마진</h2>
@@ -1716,21 +1763,17 @@
                                 <div class="right">
                                     <h4 class="title">차트설명</h4>
                                     <p class="txt">
-                                        현금흐름표는 일종의 현금출납장입니다. 기업의 활동을 영업, 투자, 재무 활동으로 나누고 각 활동별로 현금의 유출입을 기록한 것입니다.
-                                        현금흐름표에선 현금이 들어오면 플러스(+), 나가면 마이너스(-)로
+                                        현금흐름표는 일종의 현금출납장입니다. 기업의 활동을 영업, 투자, 재무 활동으로 나누고 각 활동별로 현금의 유출입을 기록한 것입니다. 현금흐름표에선 현금이 들어오면 플러스(+), 나가면 마이너스(-)로
                                         표시합니다.
-                                        <br><br>
-                                        영업활동 현금흐름은 순이익을 기본으로 영업활동에서 생긴 현금유출입을 말합니다. 제조업과 달리 은행 및 증권사의 경우 예금 등 조달한
-                                        자금(부채)으로 가계나 기업에 대출을 해주고 이자수익을 얻는 사업 구조
-                                        특성상 대출채권(빌려준 돈)이 예수부채(받은 돈)보다 크면 영업활동 현금흐름이 마이너스(-)가 됩니다. 반면 보험사의 경우 영업활동으로 인한
-                                        현금흐름은 대부분 플러스(+) 입니다.
-                                        <br><br>
-                                        투자활동 현금흐름은 금융자산 거래에서 발생하는 현금유출입을 말합니다. 일반적으로 금융자산 취득시 마이너스(-)로 나타납니다. 주로 투자하는
-                                        금융자산은 회사채, 국공채, 유가증권 등입니다.
-                                        <br><br>
-                                        재무활동 현금흐름은 증자, 차입, 배당을 통해 발생하는 현금유출입을 뜻합니다. 은행 및 증권사와 같은 금융기관의 경우 차입과 사채 발행을 통해
-                                        자금을 조달해 현금이 유입되기 때문에 플러스(+)를 기록합니다.
-                                        반면 보험사는 일반적으로 재무활동 현금흐름이 마이너스(-)를 기록합니다.
+                                        <br><br>                                    
+                                        영업활동 현금흐름은 순이익을 기본으로 영업활동에서 생긴 현금유출입을 말합니다. 우량 기업의 영업활동 현금흐름은 플러스(+)를 꾸준히 유지합니다.
+                                        <br><br>                                    
+                                        투자활동 현금흐름은 기업의 기계 및 공장증설이나 금융자산 거래에서 발생하는 현금유출입을 말합니다. 일반적으로 성장을 위한 투자 집행으로 현금이 유출되기 때문에 마이너스(-)로 나타납니다.
+                                        <br><br>                                    
+                                        재무활동 현금흐름은 증자, 차입, 배당을 통해 발생하는 현금유출입을 뜻합니다. 영업활동으로 충분한 현금을 벌고 있는 기업은 금융기관의 차입금을 갚고, 배당을 지급하는 등 현금이 유출되기 때문에 마이너스(-)를
+                                        기록합니다.
+                                        <br><br>                                    
+                                        특별한 활동이 있는 일시적인 기간을 제외하고 현금흐름표의 장기적인 구성은 영업활동 현금흐름 플러스(+), 투자활동 현금흐름 마이너스(-), 재무활동 현금흐름이 마이너스(-)가 가장 좋습니다.
                                     </p>
                                 </div>
                                 <!-- //right -->
@@ -2140,11 +2183,12 @@
                                     <p class="txt">
                                         증권업의 부채비율과 재무레버리지가 몇 배인지 알 수 있는 차트입니다.
                                         <br><br>                                    
-                                        부채비율은 자본 대비 부채의 비율입니다. 증권업은 제조업과는 달리 부채비율이 높다고 나쁜 것은 아닙니다. <br>                                    
+                                        부채비율은 자본 대비 부채의 비율입니다. 증권업은 제조업과는 달리 부채비율이 높다고 나쁜 것은 아닙니다.
+                                        <br>
                                         부채로 조달한 자금을 수익으로 잘 연결시키는 것이 더 중요합니다. 부채비율과 함께 수익성 지표인 ROA와 ROE를 함께 분석하면 좋습니다.
-                                        <br>                                    <br>                                                                        
-                                        재무레버리지는 자본 대비 자산의 비율입니다. 부채비율과 마찬가지로 재무레버리지가 높다고 나쁜 것은 아닙니다.<br>                                    
-                                        다만, 과도한 레버리지는 금융시장 불안으로 수익성이 훼손될 때 자기자본 비율을 급감시킬 수 있는 위험성도 있는 만큼 꼼꼼한 확인이 필요합니다.                                    
+                                        <br><br>                                    
+                                        재무레버리지는 자본 대비 자산의 비율입니다. 부채비율과 마찬가지로 재무레버리지가 높다고 나쁜 것은 아닙니다.<br>
+                                        다만, 과도한 레버리지는 금융시장 불안으로 수익성이 훼손될 때 자기자본 비율을 급감시킬 수 있는 위험성도 있는 만큼 꼼꼼한 확인이 필요합니다.
                                     </p>
                                 </div>
                                 <!-- //right -->
@@ -2254,17 +2298,19 @@
                                 <div class="right">
                                     <h4 class="title">차트설명</h4>
                                     <p class="txt">
-                                        은행이 자금을 어떻게 조달하는지 확인할 수 있는 차트입니다. <br>
+                                        은행이 자금을 어떻게 조달하는지 확인할 수 있는 차트입니다.
+                                        <br>
                                         자금조달 비용이 낮을 수록 수익성이 높아지는 만큼, 자금조달 구조가 안정적인지 확인해야 합니다.
-                                        <br><br>                                    
-                                        단순 자기자본비율이 10% 미만인 저축은행은 경기 불황시 부채 증가와 자본 감소에 따른 위험성이 있습니다. 자기자본을 제외한 비율 중에는 예수금 비중이 가장 높습니다. 예수금 비중이 높고, 안정적으로 유지하는
-                                        저축은행은 자금조달 비용이 낮아 상대적으로 높은 수익을 올릴 수 있습니다.
-                                        <br><br>                                    
-                                        * 예수금 : 기업 또는 개인으로 부터 이자지급을 조건으로 받은 자금(예금 등)을 말합니다. 일반적으로 예수금에 대한 이자율이 낮아, 예수금 비율이 높을 수록 자금조달 비용이 낮아집니다. 이는 결국 금융업의
-                                        수익성 증가로 이어집니다. <br>
-                                        * 차입금 : 외부 기관으로 부터 빌려온 자금을 말합니다.<br>
-                                        * 자기자본 : 해당 은행의 자본금을 말하는 것으로 자본총계를 뜻합니다.<br>
-                                        * 기타 : 미지급금 등 기타 부채에 해당되는 금액입니다.                                    
+                                        <br><br>
+                                        단순 자기자본비율이 10% 미만인 저축은행은 경기 불황시 부채 증가와 자본 감소에 따른 위험성이 있습니다. 자기자본을 제외한 비율 중에는 예수금 비중이 가장 높습니다. 예수금 비중이 높고, 안정적으로 유지하는 저축은행은 자금조달 비용이 낮아 상대적으로 높은 수익을 올릴 수 있습니다.
+                                        <br><br>
+                                        * 예수금 : 기업 또는 개인으로 부터 이자지급을 조건으로 받은 자금(예금 등)을 말합니다. 일반적으로 예수금에 대한 이자율이 낮아, 예수금 비율이 높을 수록 자금조달 비용이 낮아집니다. 이는 결국 금융업의 수익성 증가로 이어집니다.
+                                        <br>
+                                        * 차입금 : 외부 기관으로 부터 빌려온 자금을 말합니다.
+                                        <br>
+                                        * 자기자본 : 해당 은행의 자본금을 말하는 것으로 자본총계를 뜻합니다.
+                                        <br>
+                                        * 기타 : 미지급금 등 기타 부채에 해당되는 금액입니다.                          
                                     </p>
                                 </div>
                                 <!-- //right -->
@@ -2291,8 +2337,9 @@
                                     <p class="txt">
                                         여신금융사가 자금을 어떻게 조달하는지 알 수 있는 차트입니다.
                                         <br><br>                                    
-                                        여신금융업에는 신용카드업, 리스업, 할부금융업 등이 있습니다. <br>
-                                        여신금융업은 일반적으로 채권이나 차입을 통해 자금을 조달합니다.                                    
+                                        여신금융업에는 신용카드업, 리스업, 할부금융업 등이 있습니다.
+                                        <br>
+                                        여신금융업은 일반적으로 채권이나 차입을 통해 자금을 조달합니다.
                                     </p>
                                 </div>
                                 <!-- //right -->
@@ -2319,8 +2366,9 @@
                                     <p class="txt">
                                         여신금융사가 조달한 자금을 어떻게 운용하고 있는지 확인할 수 있는 차트입니다.
                                         <br><br>                                    
-                                        여신금융사는 카드자산, 리스자산, 대출채권 등을 통해 자금을 운영하고 수익을 올립니다. <br>
-                                        따라서 각 자산이 손익계산서의 이자수익, 대출채권 평가이익, 리스수익으로 연결되는지 확인해야 합니다.
+                                        여신금융사는 카드자산, 리스자산, 대출채권 등을 통해 자금을 운영하고 수익을 올립니다.
+                                        <br>
+                                        따라서 각 자산이 손익계산서의 이자수익, 대출채권 평가이익, 리스수익으로 연결되는지 확인해야 합니다.                                    
                                     </p>
                                 </div>
                                 <!-- //right -->
@@ -2348,7 +2396,7 @@
                                         창투사가 자금을 어떻게 조달하는지 알 수 있는 차트입니다.
                                         <br><br>                                    
                                         창투사는 자금조달을 주로 주주로 부터 합니다. 자금 조달 구조 중 자본금과 자본잉여금이 주주로부터 조달한 자금입니다.
-                                        <br><br>                                    
+                                        <br><br>                                                                        
                                         자본금이 늘면서 이익잉여금이 증가하는 창투사는 수익성이 좋은 회사입니다. 반대로 자본금이 줄거나 이익잉여금이 계속 마이너스를 기록하면 수익성이 나빠진다는 의미입니다.                                    
                                     </p>
                                 </div>
@@ -2389,6 +2437,7 @@
                     </div>
                     <!-- //bic_chartbox -->
                 </div>
+
             </div>
         </div>
         <!-- //container -->

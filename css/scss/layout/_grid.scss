@@ -44,8 +44,8 @@ body {
         float: left;
         width: 200px;
         margin-right: 13px;
-        position: sticky;
-        top: 52px;
+        // position: sticky;
+        // top: 52px;
     }
 
     .M_right {
@@ -54,39 +54,100 @@ body {
         background-color: #fff;
         width: calc(100% - 213px);
 
-        .freeInfo_box {
-            @include one_btn;
-            background-color: #7389AF;
-
-            &::before {
-                display: none;
-            }
-
-            padding: 24px 15px;
-            margin: 23px auto 0;
+        .freeInfo_box {            
+            position: relative;            
+            margin: 56px auto;            
             text-align: center;
-
+            
+            p {
+                overflow: hidden;
+                border-radius: 5px;
+                background-color: #E6E7F4;            
+                padding: 50px 15px;                
+                color: #222;
+                z-index: 999;
+            }
             b {
-                color: #FFA57D;
+                color: #3655d6;                                    
             }
-
-            i {
-                content: '';
-                display: inline-block;
-                transform: rotate(45deg);
-                width: 6px;
-                height: 6px;
-                border-top: 2px solid #FFA57D;
-                border-right: 2px solid #FFA57D;
-                position: relative;
-                top: -1px;
-            }
-
-            .btn_freePop {
+            a {
+                @include one_btn;                                                
+                margin-top: 15px;                
+                width: 30%;
+                background-color: #00d885;             
                 color: #fff;
                 font-size: 16px;
-                font-weight: normal;
+                font-weight: bold;                
+                &::before {
+                    right: 15px;
+                    width: 6px;
+                    height: 6px;
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;                    
+                }   
+                &:hover {
+                    background-color: #0a7b44;
+                }         
+                
             }
+            &.bicchart {
+                min-height: 500px;
+                p {
+                    overflow: hidden;
+                    border-radius: 5px;
+                    background-color: #E6E7F4;            
+                    padding: 50px 15px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 240px;
+                    color: #222;
+                    z-index: 999;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;                
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 300px;
+                    background: url('/img/freeInfo_box_bicchart.jpg') no-repeat 0 top;                      
+                }
+            }
+            &.mri {
+                min-height: 380px;
+                p {
+                    overflow: hidden;
+                    border-radius: 5px;
+                    background-color: #E6E7F4;            
+                    padding: 50px 15px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 170px;
+                    color: #222;
+                    z-index: 999;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;                
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 300px;
+                    background: url('/img/freeInfo_box_mri.jpg') no-repeat 0 top;                      
+                }
+                
+            }
+            
+            
+            &::before {
+                display: none;
+            }    
         }
 
         .contents {
@@ -175,6 +236,7 @@ body {
         color: #222;
         background-color: #fff;
         padding: 8.5px 17px;
+        min-width: 70px;        
         box-sizing: border-box;
         background: #fff url('/img/gray_tdline.gif') repeat-x left bottom;
 
@@ -184,7 +246,7 @@ body {
         }
 
         .deci {
-            display: inline-block;
+            display: inline;
         }
 
         .unit {
@@ -210,8 +272,7 @@ body {
         &.depth_4 {
             display: block;
             min-width: 130px;
-            box-sizing: border-box;
-            // border-right: 1px solid #e7eaf2;                        
+            box-sizing: border-box;            
         }
 
         &.depth_2 {
@@ -315,19 +376,19 @@ body {
     &.fix_table {
         .fix {
             position: relative;
-            background-color: #fff;
-            visibility: visible;
-            position: sticky !important;
+            background-color: #fff;            
+            position: -webkit-sticky !important;            
+            position: sticky !important;            
+            display: table-cell;            
             left: 0;
-            z-index: 49;
+            z-index: 49;            
         }
 
         thead {
             z-index: 50;
 
             th,
-            td {
-                visibility: initial;
+            td {                
                 background-color: #fff;
             }
         }
@@ -397,7 +458,8 @@ body {
                     }
                 }
 
-                th, td {
+                th,
+                td {
                     // border-bottom: 1px solid #e7eaf2 !important;
                 }
             }
@@ -476,47 +538,8 @@ body {
     overflow: hidden;
 }
 
-.table-wrap {
-    // width:100%;
-    // overflow:auto;
-}
-
 .table-scroll table {
-    // width:100%;	
-}
-
-.fix_table.clone {        
-	position:absolute;
-    top: 0;	
-	left:0;
-    right: 0;
-	pointer-events:none;
-    th, td {
-        visibility:hidden
-    }
-    tbody th {
-        visibility:visible;
-    }   
-    tbody th.fix,
-    tbody td.fix {        
-        background-color: red;                
-        pointer-events: all;
-    }
-    tbody td.bdr_r {        
-        border-right: none !important;        
-    }
-     
-    thead {                
-        z-index: 50;
-        
-        th, td {
-            visibility:initial;
-            background-color: #fff;            
-        }
-        .fix {            
-            // background-color: red;
-        }
-    }    
+    width:100%;	    
 }
 
 .paginate {
@@ -562,6 +585,7 @@ body {
 
 // input
 input[type=text],
+input[type=tel],
 input[type=password],
 input[type=email] {
     &:focus {
@@ -622,7 +646,7 @@ input[type='radio']:checked:before {
         right: 7px;
         top: 9px;
         z-index: 99;
-    }
+    }   
 
     select {
         position: relative;
@@ -659,6 +683,14 @@ input[type='radio']:checked:before {
         display: none;
     }
 
+}
+
+.user_inputBox {    
+    .selectBoxList::after {
+        background-color: yellow;
+        display: none;
+    }
+    
 }
 
 /* 별점 */
@@ -814,7 +846,7 @@ input[type='radio']:checked:before {
 
 
 /* select */
-.selectbox {
+.selectbox {    
     position: relative;
     width: 70%;
     height: 26px;
@@ -830,7 +862,9 @@ input[type='radio']:checked:before {
 
 /* 가상 선택자를 활용 화살표 대체 */
 .selectbox:before {
+    cursor: pointer;
     content: "";
+    display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
@@ -886,4 +920,59 @@ input[type='radio']:checked:before {
     background-color: #999;
     margin: 0 2px 2px;
     border: none !important;
+}
+.valueline .adsbygoogle {            
+    float: none;
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    position: relative;
+    background-color: blanchedalmond;        
+
+    &.ads-top-main {
+        height: 280px;
+        margin-bottom: 20px;
+    }
+    &.ads-mid-main {
+        margin-top: 20px;
+    }
+    &.ads-right-main {        
+        width: 254px;
+        height: 600px;        
+    }    
+    &.ads-rightBtm-main {
+        margin-top: 20px;                
+    }    
+    &.ads-btm-main {
+        margin-top: 20px;                
+    }    
+    &.ads-top-sub {
+        margin-bottom: 20px;
+        height: 280px;
+    }    
+    &.ads-btm-sub {
+        margin-top: 20px;        
+        height: 280px;
+    }    
+    &.ads-right-sub {        
+        width: 254px;
+        height: 600px;        
+    }    
+    &.ads-left-sub {
+        margin-top: 20px;        
+        height: 600px;
+    }    
+}
+.valueline .ads-right-box {
+    position: absolute;
+    right: -270px;
+    top: 72px;
+    width: 254px;
+    height: 600px;        
+    transition: all 0.35s ease-out;
+}
+.valueline .ads-btm-box {
+    margin: 0 auto;
+    max-width: 1138px;
+    width: 100%;     
 }

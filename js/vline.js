@@ -5,14 +5,14 @@ $(document).ready(function () {
 
         console.log("해더js");
         // 상단 검색바
-        $('.searchArea form .searchInput').on("focusout", function () {            
+        $('.searchArea form .searchInput').on("focusout", function () {
             $('.searchArea .AutoComplete').hide();
         });
-        $('.searchArea form .searchInput').on("keydown", function () {            
+        $('.searchArea form .searchInput').on("keydown", function () {
             $('.searchArea .AutoComplete').show();
         });
         $('.searchArea .AutoComplete li').removeClass('_on');
-        $('.searchArea .AutoComplete li').on("mouseover", function () {            
+        $('.searchArea .AutoComplete li').on("mouseover", function () {
             $('.searchArea .AutoComplete li').removeClass('_on')
             $(this).addClass('_on');
         });
@@ -24,13 +24,13 @@ $(document).ready(function () {
         // $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
         //     $(this).toggleClass('active');
         // });
-        
-        $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop').on('click', function () {
+
+        $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop, .inform_area.list .listWrap li.lock').on('click', function () {
             $('.premium_join').modal({
                 fadeDuration: 100
             });
-        });        
-        
+        });
+
         //결제
         $('.serviceStep .step_box').on("click", function () {
             $('.serviceStep .step_box').removeClass("active");
@@ -65,28 +65,28 @@ $(document).ready(function () {
         $('.cardreg_pop01').on('click', function () {
             $('.card_reg').modal({
                 fadeDuration: 100
-            });            
-        }); 
+            });
+        });
 
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop01').on('click', function () {
             $('.age_popbox01').modal({
                 fadeDuration: 100
-            });            
-        });  
+            });
+        });
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop02').on('click', function () {
             $('.age_popbox02').modal({
                 fadeDuration: 100
-            });            
-        }); 
+            });
+        });
         // 나이스페이 전자금융거래 이용약관
         $('.age_pop03').on('click', function () {
             $('.age_popbox03').modal({
                 fadeDuration: 100
-            });            
-        });          
-        
+            });
+        });
+
         // 월자동결제 서비스 변경 팝업
         $('.btn_payCan').on('click', function () {
             $('.login_form').modal({
@@ -105,6 +105,67 @@ $(document).ready(function () {
             });
         });
 
+        $('.btn_guide_pop').on('click', function (e) {
+            if(!$(e.target).hasClass("close")) {                
+                $('.guidePop_box').removeClass('on');
+                $('.guide_pop').modal({
+                    fadeDuration: 100,
+                });
+                popConSwiper();
+                guidePop_open(); //서비스 활용 가이드 보기 닫기                        
+                
+            } else {                
+                console.log("닫기");                
+            }
+        });                     
+
+        // 서비스 가이드 슬라이드
+        function popConSwiper() {            
+            var swiper = new Swiper('.popConSwiper', {    
+                observer: true,
+                observeParents: true,                                
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }              
+
+        // 서비스 활용 가이드 보기 
+        $(window).load(function () {            
+            setTimeout(function () {
+                $('.guidePop_box').addClass('on');
+            }, 400);
+        });
+        
+        //서비스 활용 가이드 보기 열기
+        function guidePop_open() {
+            $('.modal .pop_header .clse, .blocker').on('click', function () {
+                $('.guidePop_box').addClass('on');
+            });
+    
+        }        
+        // 서비스 활용 가이드 보기 닫기
+        function guidePop_close() {
+            $('.guidePop_box .close').on('click', function () {
+                $('.guidePop_box').removeClass('on');
+            });
+        }        
+        guidePop_open();   //서비스 활용 가이드 보기 열기
+        guidePop_close(); //서비스 활용 가이드 보기 닫기
+
+        // 비로그인, 무료회원 서비스 
+        $(window).load(function () {            
+            setTimeout(function () {
+                $('.premiumLock_cunt').addClass('on');
+            }, 400);
+        });
+        
         //select
         $(function () {
             var selectTarget = $('.selectbox select');
@@ -155,80 +216,103 @@ $(document).ready(function () {
         $('#header .bgWrap .gnb ul li').on('click', function () {
             $(this).addClass('active');
         });
-    }        
-    header_Function(); 
+    }
+    header_Function();
+
+    
+
+    // 시가총액 직접 입력 아닌, 옵션선택 <input type="number" class="input_txt"> 에 해당 값 입력하는 스크립트    
+    function user_inputBox() {
+        $('.user_inputBox').hide();                        
+        if ($('.set_filter .mid select[name=mkt_val]').val() == "user_input") {
+            $('.user_inputBox').show();
+        } else {
+            console.log("옵션선택한 경우");
+        }                        
+        $("select[name=mkt_val]").on("change", function () {                                                  
+            $(".set_filter input.input_txt").val('');
+            $('.user_inputBox').hide();
+            if ($(this).val() == "user_input") {
+                $('.user_inputBox').show();
+            } else {
+                console.log("옵션선택한 경우");
+            }
+        });
+    }
+    user_inputBox();
 
     // a태그 페이지 상단 이동 막기
     $('.btn_freePop, .btn_joinPop, .btn_terms, .btn_policy').on('click', function () {
         console.log("상단이동제한");
         return false;
     });
+
     // 이용약관
     $('.btn_terms').on('click', function () {
         $('.modal.terms').modal({
             fadeDuration: 100
-        });            
-    }); 
+        });
+    });
 
     // 개인정보처리방침
     $('.btn_policy').on('click', function () {
         $('.modal.policy').modal({
             fadeDuration: 100
-        });            
-    }); 
-    
+        });
+    });
+
     // 리스트내 종목 검색
-    $('.data_filter .table_search .searchInput, .stocks_filter .form_box .searchInput').on("focusout", function () {                    
+    $('.data_filter .table_search .searchInput, .stocks_filter .form_box .searchInput').on("focusout", function () {
         console.log("포커스");
         $('.data_filter .table_search .AutoComplete_indu, .stocks_filter .AutoComplete_indu').hide();
     });
-    $('.data_filter .table_search .searchInput,  .stocks_filter .form_box .searchInput').on("keydown", function () {            
+    $('.data_filter .table_search .searchInput,  .stocks_filter .form_box .searchInput').on("keydown", function () {
         console.log("키다운");
         $('.data_filter .table_search .AutoComplete_indu, .stocks_filter .AutoComplete_indu').show();
     });
     $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').removeClass('_on');
-    $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').on("mouseover", function () {            
+    $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').on("mouseover", function () {
         $('.data_filter .table_search .AutoComplete_indu li, .stocks_filter .AutoComplete_indu li').removeClass('_on')
         $(this).addClass('_on');
     });
 
     // 달력
-    $(function () {
-        //input을 datepicker로 선언
-        $("#datepicker1, #datepicker2 ").datepicker({
-            dateFormat: 'yymm' //달력 날짜 형태
-            , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-            , showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서            
-            , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
-            , changeMonth: true
-            , changeYear: true
-            , buttonImage: "/img/datepicker.gif" //버튼 이미지 경로
-            , buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함            
-            , yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
-            , monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
-            , minDate: "-10Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-            , maxDate: "+0Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                      
-            , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
-            , closeText: '확인'  // 닫기 버튼 패널
-            , currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널
-            onClose: function(dateText, inst) { 
-                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
-            }
-        });
-
-        //초기값을 오늘 날짜로 설정해줘야 합니다.
-        $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
+    $("#datepicker1, #datepicker2").datepicker({
+        dateFormat: "yymmdd" // 텍스트 필드에 입력되는 날짜 형식.
+        , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+        , showMonthAfterYear: true // 월- 년 순서가아닌 년도 - 월 순서            
+        , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+        , changeMonth: true
+        , changeYear: true
+        , buttonImage: "/img/datepicker.gif" //버튼 이미지 경로
+        , buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함            
+        , yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+        , monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
+        // , minDate: "-10Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+        , maxDate: "+0Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                                                  
+        , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
+        , closeText: '확인'  // 닫기 버튼 패널
+        , currentText: '오늘 날짜' , // 오늘 날짜로 이동하는 버튼 패널  
+        onClose: function(dateText, inst) { 
+            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+        },   
+    });    
+    // 달력 value 입력된 날짜로 표시되게 하는 코드
+    $("#datepicker1, #datepicker2").each(function () {
+        var dataVal = $(this).val();
+        var dataVal2 = dataVal + '01';
+        $(this).datepicker('setDate', dataVal2);
     });
 
     // paginate
     $(function () {
-        $('.paginate a img').each(function () {        
+        $('.paginate a img').each(function () {
             if ($(this).children().last().is('img').length == 0) {
                 // console.log("페이징에 넘김 없는 경우");                    
-            } else {                    
+            } else {
                 // 페이징에 넘김 있는 경우
                 $(this).parent().css({
-                    border : '1px solid #fff',                
+                    border: '1px solid #fff',
                 });
             }
         });
@@ -263,29 +347,26 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).show();
     });
-
-    //연환산,연간,분기 테이블 탭
-    // $("#container .M_right .contents .tab_content").hide();
-    // $("#container .M_right .contents .tab_content:first").show();
-    $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
-        $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
-        $(this).addClass("active");
-        // $("#container .M_right .contents .tab_content").hide();
-        // var activeTab = $(this).attr("rel");
-        // $("#" + activeTab).show();
+    // 메인 마켓차트 업종,상위100종목 탭
+    $(".chart_tabs .tab_content").hide();
+    $(".chart_tabs .tab_content:first").show();
+    $(".chart_tabs .tab_area ul li").on('click', function () {
+        $(".chart_tabs .tab_area ul li").removeClass("active");
+        $(this).addClass("active");        
+        $(".chart_tabs .tab_content").hide();                
+    });
+    $(".chart_tabs .tab_area ul li:first-child").on('click', function () {        
+        $(".chart_tabs .tab_content#tabcon_sec").show();                
+    });
+    $(".chart_tabs .tab_area ul li:last-child").on('click', function () {        
+        $(".chart_tabs .tab_content#tabcon_top").show();                
     });
 
-    // 업종분석 매트릭스 차트 보이게 하는 버튼            
-    // $(function () {        
-    //     var loc = window.location.href; // returns the full URL            
-    //     if (/keyword/.test(loc)) {
-    //         console.log("test");            
-    //         $(".table_filter .term span").removeClass("active");
-    //         $(".table_filter .term span:nth-child(2)").addClass("active");
-    //         $(".tab_content:nth-child(1)").hide();
-    //         $(".tab_content:nth-child(2)").fadeIn();
-    //     } 
-    // });
+    //연환산,연간,분기 테이블 탭    
+    $("#container .M_right .contents_header .table_filter .term span").on('click', function () {
+        $("#container .M_right .contents_header .table_filter .term span").removeClass("active");
+        $(this).addClass("active");        
+    });
 
     // 
     $('#container .M_right .contents_header .data_filter .set_box .set_filter .top .clse img').on('click', function () {
@@ -300,14 +381,42 @@ $(document).ready(function () {
     $('#container .M_right .contents_header .table_filter .detail span.table_view').on('click', function () {
         $('.table tr.hide_line').toggle();
     });
-    $('#container .M_right .contents_header .table_filter .detail span.simple').on('click', function () {
-        // $('#container .M_right .contents .bic_chartbox .chart_line .con_box .right').toggleClass('hide'); 차트 리사이즈 버튼, 차트js에 넣어서 여기선 주석처리   
-    })    
-    
-    $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function() {
-        $('.highcharts-root').append( "<div>Handler for .resize() called.</div>" );
-      });
+    if ($('#container .M_right .contents_header .table_filter .detail span.table_view').hasClass('active')) {
+        $('.table tr.hide_line').show();
+    }
+    $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function () {
+        $('.highcharts-root').append("<div>Handler for .resize() called.</div>");
+    });
 
+    // 종목분석 - 개요 차트 기간 선택
+    $('#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs li').on('click', function () {
+        $('#container .M_right .contents.sub_con .summary_Box .mid .left .chart_box .period_tabs li').removeClass('active');
+        $(this).addClass('active')
+    });
+    
+    // 재무분석 - 개요 캔들차트 3개월 6개월 1년 3년 10년 탭 선택 스크립트
+    var tabList = document.querySelectorAll('.period_tabs > li');
+    var chartList = document.querySelectorAll('.BICchart_style');    
+    for (let i = 0; i < tabList.length; i++) {
+        var tab = tabList[i];
+        var chart = chartList[i];
+
+        tab.addEventListener('click', function () {
+            // 모든 차트 숨기기
+            for (var c of chartList) {
+                c.style.display = 'none';
+            }
+
+            // 클릭한 탭과 연관된 차트 보이기
+            var target = this.getAttribute('data-target');
+            var targetChart = document.querySelector(target);
+            targetChart.style.display = 'block';
+
+            // 차트 다시 그리기
+            var chartObj = Highcharts.charts.find(chart => chart.renderTo.id === targetChart.id);
+            chartObj.reflow();
+        });
+    }
 
     // 자세히보기 열기닫기
     $('#container .M_right .sum_box .more').on('click', function () {
@@ -327,16 +436,23 @@ $(document).ready(function () {
             $('#container .M_right .sum_box .more').text("자세히");
         }
     });
+     // 자세히보기 열기닫기 (워런버핏)
+     $('#container .M_right .top_invest.buffett .invest_box .more').on('click', function () {
+        // div 사이즈는 big, small        
+        if ($(this).parent('div').hasClass("small")) {
+            $(this).next('p').animate({
+                height: '100%'
+            }, 0);
+            $(this).parent('div').removeClass('small').addClass('big');
+            $('#container .M_right .invest_box .more').text("접기 ");
 
-    // // 쇼핑리스트 리셋
-    // $('.form_resetBtn').on('click', function () {
-    //     $("#shopping_form")[0].reset();
-    // });
-    // 종목쇼핑 오름내림 차순 
-    $('.order span').on('click', function () {
-        console.log("test");
-        $(this).parent().children().removeClass('active');
-        $(this).addClass('active');        
+        } else {
+            $(this).next('p').animate({
+                height: '90px'
+            }, 0);
+            $(this).parent('div').removeClass('big').addClass('small');
+            $('#container .M_right .invest_box .more').text("자세히");
+        }
     });
 
     // 테이블 필터링 숨기기,보이기
@@ -345,11 +461,44 @@ $(document).ready(function () {
         $("#container .M_right .contents_header .data_filter .set_box").toggle();
     });
 
+    // 좌측 메뉴, 기업개요 레이어 팝업 보이기, 숨기기
+    $("#container .M_left .detail_box .data_area .summary .txtBox").hide();    
+    $('#container .M_left .detail_box .data_area .summary .summary_txtShow').on('click', function () {
+        $("#container .M_left .detail_box .data_area .summary .txtBox").toggle();
+    });
+    $('html').click(function(e) {   
+        if(!$(e.target).is('.txtBox, .summary_txtShow, .summary .title, .txtBox .mid, .txtBox .top')) {            
+            clseTxtBox();
+        }
+    });        
+    $('#container .M_left .detail_box .data_area .summary .txtBox .clse img').on('click', function () {        
+        console.log("dfdf");
+        clseTxtBox();
+    });
+    // 기업개요 박스 숨기기 함수 clseTxtBox();
+    function clseTxtBox() {        
+        $('#container .M_left .detail_box .data_area .summary .txtBox').fadeOut(150);
+    }
+    
+
+    // 테이블 스크롤시 좌측 고정
+    $(function () {
+        $('.fix_wrap').scroll(function () {
+            var fix01 = $('tbody .fix:nth-child(1)').outerWidth();
+            var fix02 = $('tbody .fix:nth-child(2)').outerWidth();
+            var fix03 = $('tbody .fix:nth-child(3)').outerWidth();
+            $('.fix:nth-child(1)').css('left', '0');
+            $('.fix:nth-child(2)').css('left', fix01);
+            $('.fix:nth-child(3)').css('left', fix02);
+            $('.fix:nth-child(4)').css('left', fix03);
+        });
+    });
+
     // 댓글 삭제 숨기기,보이기
     $("#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box").hide();
-    $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_article .button').on('click', function () {                
+    $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_article .button').on('click', function () {
         $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box').hide();
-        $(this).parent().siblings('.report_set').children('.set_box').toggle();        
+        $(this).parent().siblings('.report_set').children('.set_box').toggle();
     });
     $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box .set_filter .top .clse img').on('click', function () {
         $('#container .M_right .contents .inform_area.view .recmtWrap .commentBox .report_set .set_box').fadeOut();
@@ -358,10 +507,10 @@ $(document).ready(function () {
     //
     $('#container .M_right .page_drop ul').hide();
     $('#container .M_right .page_drop .select_active').on('click', function () {
-        var saleft = $('#container .M_right .page_drop .select_active').position();        
+        var saleft = $('#container .M_right .page_drop .select_active').position();
         $('#container .M_right .page_drop ul').slideToggle('fast').css({
-            left : saleft.left,
-            right : saleft.left,
+            left: saleft.left,
+            right: saleft.left,
         });
     });
 
@@ -386,13 +535,8 @@ $(document).ready(function () {
 
         console.log("divTop = " + divTop);
 
-        // 레이어가 화면 크기를 벗어나면 위치를 바꾸어 배치한다.
+        
         if (divLeft + oWidth > sWidth) divLeft -= oWidth;
-        // if( divTop + oHeight > sHeight ) divTop -= oHeight;
-
-        // 레이어 위치를 바꾸었더니 상단기준점(0,0) 밖으로 벗어난다면 상단기준점(0,0)에 배치하자.
-        // if( divLeft < 0 ) divLeft = 0;
-        // if( divTop < 0 ) divTop = 0;
 
         $('.layer_pop').css({
             "top": divTop,
@@ -465,100 +609,94 @@ $(document).ready(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    });    
+    });
 
     // table 좌측 고정
     // $(".fix_table").clone().appendTo('.fix_wrap').addClass('clone');    
 
     // table 스크롤 위치        
-    var agent = navigator.userAgent.toLowerCase();    
-    $(".fix_wrap").on("scroll", function () {     
+    var agent = navigator.userAgent.toLowerCase();
+    $(".fix_wrap").on("scroll", function () {
         // var positionLeft =  new $(".fix_wrap").scrollLeft();           
         // console.log("positionLeft = " + positionLeft);
         $('.fix_table thead').css({
             // 'position' : 'relative',            
             // 'left' : 0 - positionLeft
-        });        
+        });
 
-        if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+        if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
             // ie일 경우
             $('.fix_table thead .fix').css({
                 // 'left' : 0
             });
-        } else{
+        } else {
             // ie가 아닐 경우
             $('.fix_table thead .fix').css({
                 // 'left' : 0 + positionLeft
             });
         }
-        
+
     });
     $(window).scroll(function () {
         if ($('.table.fix_table').length) {
-            var jbOffset = $(".table.fix_table").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;                                
+            var jbOffset = $(".table.fix_table").offset();
+            var positionTop = $(window).scrollTop() - $(".table.fix_table").offset().top + 42;
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {               
-                $('.data_filter .table_search .AutoComplete').hide();         
+            if ($(document).scrollTop() >= jbOffset.top - 44) {
+                $('.data_filter .table_search .AutoComplete').hide();
                 $('.fix_table thead').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': positionTop,
                 });
-                $('.fix_table. thead td').css({
-                    'visibility' : 'visible',                
-                });
+                // $('.fix_table. thead td').css({
+                //     'visibility': 'visible',
+                // });
                 $('.fix_table thead th, .fix_table thead td, .fix_table thead tr').css({
                     // 'background-color' : '#fff !important',                
                 });
-            } else {            
+            } else {
                 $('.fix_table thead').css({
-                    'position' : 'relative',
-                    'top': '0',                
+                    'position': 'relative',
+                    'top': '0',
                 });
-                // $('.fix_table thead').css({
-                //     'visibility' : 'hidden',                
-                // });
-                // $('.clone thead th, .clone thead td, .clone thead tr').css({
-                //     // 'background-color' : '#fff',                
-                // });
             }
-        }   
-        
+        }
+
         if ($('.table.table_oneview').length) {
             console.log("test");
-            var jbOffset = $(".table.table_oneview").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.table_oneview").offset().top + 42;                                
+            var jbOffset = $(".table.table_oneview").offset();
+            var positionTop = $(window).scrollTop() - $(".table.table_oneview").offset().top + 42;
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+            if ($(document).scrollTop() >= jbOffset.top - 44) {
                 $('.table.table_oneview thead').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': positionTop,
-                });                
-            } else {            
+                });
+            } else {
                 $('.table.table_oneview thead').css({
-                    'position' : 'relative',
-                    'top': '0',                
-                });                
+                    'position': 'relative',
+                    'top': '0',
+                });
             }
-        }          
+        }
 
         if ($('.excavation_area.pattern .tab_content .thead2_table').length) {
             console.log("test");
-            var jbOffset = $(".table.thead2_table").offset();                                
-            var positionTop = $(window).scrollTop() - $(".table.thead2_table").offset().top + 42;                                
+            var jbOffset = $(".table.thead2_table").offset();
+            var positionTop = $(window).scrollTop() - $(".table.thead2_table").offset().top + 42;
 
-            if ($(document).scrollTop() >= jbOffset.top - 44) {               
+            if ($(document).scrollTop() >= jbOffset.top - 44) {
                 $('.table.thead2_table thead').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': positionTop,
-                });                
-            } else {            
+                });
+            } else {
                 $('.table.thead2_table thead').css({
-                    'position' : 'relative',
-                    'top': '0',                
-                });                
+                    'position': 'relative',
+                    'top': '0',
+                });
             }
-        }  
+        }
     });
 
     $(function () {
@@ -575,17 +713,19 @@ $(document).ready(function () {
         });
     });
 
-    
-    
-    
     // 소수점 체크
     $('#container .M_right .contents_header .table_filter .detail span.table_int').on('click', function () {
         $('.table.fix_table').toggleClass('txtInt');
     });
+    if ($('#container .M_right .contents_header .table_filter .detail span.table_int').hasClass('active')) {        
+        $('.table.fix_table').removeClass('txtInt');
+    } else {        
+        $('.table.fix_table').addClass('txtInt');
+    }
 
-    
+
     //가이드 레이어 툴팁
-    $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {        
+    $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {
         $('.guide_layer').css({ 'z-index': 80 });
         $('.guide_box').show(300);
     });
@@ -606,6 +746,45 @@ $(document).ready(function () {
         });
     }
     textarealength();
+
+    $(window).on("load", function() {
+        // 구글 애드센스 우측 따라다니는 배너                     
+        var floatPosition = parseInt($(".ads-right-box").css('top'));
+        var adsTopSub = $('.ads-top-sub').height() + 92;
+        var adsTopMain = $('.ads-top-main').height() + 92;    
+
+        $(window).scroll(function () {
+            var scrollTop = $(this).scrollTop();
+            var maxScroll = $(document).height() - $(this).height();
+            var newPosition = scrollTop + floatPosition;
+            var adsClass = $(".adsbygoogle").attr("class").split(' ')[1];
+
+            if (adsClass == "ads-top-main") {
+                $(".ads-right-box").stop().animate({
+                    "top": adsTopMain
+                }, 0);
+            } else if (adsClass == "ads-top-sub") {
+                $(".ads-right-box").stop().animate({
+                    "top": adsTopSub
+                }, 0);
+            } 
+            // else if (scrollTop <= adsTopSub) {
+            //     $(".ads-right-box").stop().animate({
+            //         "top": adsTopSub - 20
+            //     }, 300);
+            // } else if (scrollTop >= maxScroll - 330) {
+            //     console.log(scrollTop);
+            //     $(".ads-right-box").stop().animate({
+            //         "top": scrollTop
+            //     }, 300);
+            // } else {
+            //     $(".ads-right-box").stop().animate({
+            //         "top": newPosition
+            //     }, 300);
+            // };
+
+        }).scroll();
+    });
 
     
 

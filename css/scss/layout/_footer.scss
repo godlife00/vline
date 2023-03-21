@@ -41,14 +41,15 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            span {
+            span, a {                
                 font-size: 13px;
                 line-height: 1.54;
                 letter-spacing: -0.33px;
                 color: #656d7e;
             }
-            
-
+            a {
+                text-decoration: underline;
+            }
         }
     }
     .foot_info {
@@ -58,11 +59,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            span {
+            span, a {
                 font-size: 13px;
                 line-height: 1.54;
                 letter-spacing: -0.33px;
                 color: #656d7e;
+            }
+            a {
+                text-decoration: underline;
             }
             
 

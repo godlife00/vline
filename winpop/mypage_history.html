@@ -27,16 +27,16 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="http://godlife.ivyro.net/highcharts/stock/highstock.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/hollowcandlestick.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/no-data-to-display.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/treemap.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/highcharts-more.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/exporting.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/export-data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/accessibility.js"></script>
     <script src="../js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -166,7 +166,7 @@
 <!-- 월자동결제 결제취소 팝업 -->
 <div class="modal login_form">
     <div class="pop_header">
-        <h1 class="pop_title">결제취소 <span id="now_time">2022.3/14 9:48</span> </h1>
+        <h1 class="pop_title">결제취소 <span id="now_time" style="color: #d30000; font-style: normal;">2022.3/14 9:48</span> </h1>
         <a href="#" class="clse" rel="modal:close">
             <!--닫기-->
         </a>
@@ -207,8 +207,7 @@
                                     <th scope="row">환불금액</th>
                                     <td>
                                         <div class="item">
-                                            <p class="txt_info" id="pay_refund_price">0원</p>
-                                            <p class="i_dsc phone" id="pay_free_price"></p>
+                                            <p class="txt_info" id="pay_refund_price">0원</p>                                            
                                         </div>
                                     </td>
                                 </tr>
@@ -219,7 +218,12 @@
                                             <p class="txt_info" id="pay_card_no">신용카드(****23)</p>
                                         </div>
                                         <div class="certification_area">
-                                            <p class="txt">결제취소는 신청 즉시(또는 영업일 기준 D+2 이내) 처리되며, 가상계좌/계좌이체 결제금액은
+                                            <p class="txt">
+                                                <b>기간결제</b> : 해지일로부터 이용일 수에 해당하는 금액과 수수료 및 제반비용(3.5%)차감후 환불됩니다.
+                                                <br><br>
+                                                <b>월 정기결제</b> : 결제 주기가 종료될 때까지 서비스를 이용할 수 있으며, 결제 금액은 환불되지 않습니다.
+                                                <br><br>
+                                                결제취소는 신청 즉시(또는 영업일 기준 D+2 이내) 처리되며, 가상계좌/계좌이체 결제금액은
                                                 D+7 이내 등록하신 환불계좌로 입금처리됩니다.</p>
                                             <a href="#" class="go_link" target="_blank">환불정책 바로가기</a>
                                         </div>

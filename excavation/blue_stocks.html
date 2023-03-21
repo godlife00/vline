@@ -27,16 +27,16 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="http://godlife.ivyro.net/highcharts/stock/highstock.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/hollowcandlestick.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/no-data-to-display.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/treemap.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/highcharts-more.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/exporting.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/export-data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/accessibility.js"></script>
     <script src="../js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -57,6 +57,19 @@
         <div id="header" class="main_hdr"></div>
 
         <div id="container">
+
+            <!-- 서브 상단 (사각형) -->
+            <ins class="adsbygoogle ads-top-sub"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds --> 
+
             <!-- 좌측메뉴 -->
             <div class="M_left">
                 <div class="sub_nav">
@@ -77,15 +90,26 @@
 
                 <div class="service_box">
                     <ul>
-                        <li class="uses"><a href="">서비스활용법</a></li>
-                        <li class="update"><a href="https://www.notion.so/f160286b2fa848fb92ea6bf20af9f502"
-                                target="_black">업데이트 소식</a></li>
-                        <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li>
+                        <li class="uses"><a href="https://rhetorical-roast-73f.notion.site/FAQ-b104eb10192c41dd88a0574b1bef23ad" target="_black">서비스활용법</a></li>
+                        <li class="update"><a href="../inform/inform_list.html">알립니다</a></li>
+                        <!-- <li class="question"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank">카카오톡 문의</a></li> -->
                     </ul>
                 </div>
                 <!-- //service_box -->
+                
+                <!-- 서브 좌측 (수직형) -->                
+                <ins class="adsbygoogle ads-left-sub"
+                    style="display:block"
+                    data-ad-client="ca-pub-6864430327621783"
+                    data-ad-slot="6821219711"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
 
             </div>
+            
 
             <!-- 우측 컨텐츠_메인 -->
             <div class="M_right">
@@ -93,7 +117,7 @@
                 <div class="path_area">
                     <ul>
                         <li>종목발굴</li>
-                        <li>종목진단(주식MRI)</li>
+                        <li onclick="history.back();">종목진단(주식MRI)</li>
                     </ul>
                 </div>
 
@@ -105,9 +129,10 @@
                 <div class="sum_box small">
                     <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
                     <span class="more">자세히</span>
-                    <p>자체 개발한 AI 종목진단 분석 시스템을 통해 기업의 투자 매력을 진단해 드립니다. 종목진단 세부 5개 항목이 각 5점 만점으로 25점이 만점입니다.</p>
+                    <p>자체 개발한 AI 종목진단 분석 시스템을 통해 기업의 투자 매력을 진단해 드립니다. 종목진단 세부 5개 항목이 각 5점 만점으로 25점이 만점입니다.한 AI 종목진단 분석 시스템을 통해 기업의 투자 매력을 진단해 드립니다. 종목진단 세부 5개 항목이 각 5점 만점으로 25점이 만점입니다.한 AI 종목진단 분석 시스템을 통해 기업의 투자 매력을 진단해 드립니다. 종목진단 세부 5개 항목이 각 5점 만점으로 25점이 만점입니다.</p>
+                    
                 </div>
-                <!-- //sum_box -->
+                <!-- //sum_box -->                
 
                 <div class="contents_header">
                     <div class="data_filter">
@@ -2131,9 +2156,46 @@
                     </div>
                     <!-- //excavation_area -->
                 </div>
-            </div>
+                <div class="guidePop_box" style="display: block">
+                    <div class="btn_guide_pop">
+                        <img src="../img/banner/main_toprightbannner.jpg" alt="" class="img">서비스 활용 가이드 보기
+                        <a href="#" class="close">
+                            <!-- 닫기 -->
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- //btn_guide_pop -->
+            </div>            
+
+            <!-- 서브 우측 (수직형) -->
+            <div class="ads-right-box">
+                <ins class="adsbygoogle ads-right-sub"
+                    style="display:block"
+                    data-ad-client="ca-pub-6864430327621783"
+                    data-ad-slot="6821219711"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>               
         </div>
-        <!-- //container -->
+        <!-- //container -->        
+
+        <!-- 서브 하단 (사각형) -->
+        <div class="ads-btm-box">
+            <ins class="adsbygoogle ads-btm-sub"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds --> 
+        </div>        
 
         <div id="footer" class="f_main">
             <div class="w_box">

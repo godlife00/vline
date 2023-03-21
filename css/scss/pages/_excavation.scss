@@ -310,20 +310,20 @@
              
         }
         
-        .shopping_list {        
-            margin-top: 8px;
-            border-radius: 10px;
-            padding: 20px 24px;
-            background-color: #f5faf3;
+        .shopping_list {                    
+            border-radius: 10px;            
     
             .form_box .set_filter {
                 position: relative;
+                margin-top: 8px;
+                background-color: #f5faf3;
+                padding: 20px 24px;            
     
                 .help_box {
                     cursor: pointer;
                     position: absolute;
-                    right: 0;
-                    top: 0;
+                    right: 24px;
+                    top: 20px;
                     font-size: 10px;                
                     letter-spacing: -0.5px;                                
                     padding-bottom: 1px;
@@ -403,8 +403,8 @@
                     text-align: right;
                     width: 170px;                           
                     position: absolute;
-                    right: 0;                
-                    bottom: 0;
+                    right: 24px;                
+                    bottom: 20px;
                     .btn_submit {                    
                         cursor: pointer;
                         border: none;
@@ -457,7 +457,7 @@
                     }
                 }                    
             }            
-
+            
             tr:nth-child(2) {
                 th, td {
                     padding: 4px 3px;
@@ -472,29 +472,73 @@
                     }
                 }
             }
-            .order {                               
-                margin-top: 1px; 
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                gap: 5px;
-                span {
-                    display: inline-block;
-                    cursor: pointer;
-                    border: 1px solid #e7eaf2;                    
-                    width: 16px;
-                    height: 16px;                    
-                    box-sizing: border-box;
-                    font-size: 10px;
-                    letter-spacing: -0.25px;                    
-                    &.high, &.lower {
-                        &.active {
-                            background-color: #3655d6;
-                            color: #fff;
-                        }
+            td {
+                &.order {                                
+                    position: relative;                  
+                    cursor: pointer;                                       
+                    padding-right: 22px;                              
+                    span.order_arow {
+                        font-size: 0;
+                        line-height: 0;
+                        letter-spacing: 0;
+                        position: absolute;
+                        top: 50%;
+                        right: 9px;                        
+                        vertical-align: middle;
+                        margin-left: 2px;
+                        display: inline-block;
+                        width: 0;
+                        height: 0;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;                                                                        
                     }
-                }                
+                    &.disabled {
+                        span.order_disabled {            
+                            opacity: 0.4;
+                            font-size: 0;
+                            line-height: 0;
+                            letter-spacing: 0;
+                            position: absolute;
+                            top: calc(50% + 3px);
+                            right: 7px;                        
+                            vertical-align: middle;
+                            margin-left: 2px;
+                            display: inline-block;                
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;        
+                            border-top: 7px solid #97a3c9;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: -4px;
+                                top: -16px;
+                                vertical-align: middle;
+                                margin-left: 2px;
+                                display: inline-block;                
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;        
+                                border-bottom: 7px solid #97a3c9;
+                            }                                                                                           ;
+                        }                                   
+                    }
+                    &.high {             
+                        span.order_arow {
+                            top: calc(50% + 2px);                      
+                            border-bottom: none;      
+                            border-top: 7px solid #97a3c9;                            
+                        }           
+                    }                    
+                    &.lower { 
+                        span.order_arow {                                                        
+                            border-bottom: 7px solid #97a3c9;
+                            border-top: none;      
+                        }                         
+                        
+                    } 
+                }
+
             }
+            
         }  
         tbody {
             tr:first-child {

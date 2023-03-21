@@ -21,22 +21,25 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+    <!-- 검색엔진 SEO 최적화 -->
+    <!-- https://value.choicestock.co.kr/finance/income 검색결과 대표 표준 페이지로 지정 -->
+    <link rel="canonical" href="https://value.choicestock.co.kr/finance/income" />
     <!-- jquery 최신버전 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="http://godlife.ivyro.net/highcharts/stock/highstock.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/hollowcandlestick.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/no-data-to-display.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/treemap.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/highcharts-more.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/exporting.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/export-data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/accessibility.js"></script>
     <script src="../js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -58,6 +61,7 @@
         <div id="header" class="main_hdr"></div>
 
         <div id="container">
+
             <!-- 좌측메뉴 -->
             <div class="M_left">
                 <div class="detail_box">
@@ -79,6 +83,24 @@
                             <span class="gap">1,100</span>
                             <span class="per">(+1.38%)</span>
                         </div>
+
+                        <span class="table_update">기준 : 04/29 13:23</span>         
+                        
+                        <!-- 기업 개요 -->
+                        <div class="summary">
+                            <span class="summary_txtShow">기업개요</span>
+                            <div class="txtBox">                                                                
+                                <div class="top">
+                                    <p class="title">기업개요</p>
+                                    <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+                                </div>         
+                                <div class="mid">
+                                    대형가속기 구축 및 EPICS 기반 초정밀 특수제어 시스템 및 장비를 공급하고 있습니다. 포항 4세대 XFEL 가속기의 성능을 좌우하는 핵심 장비인 LLRF SYSTEM과, Undulator 정밀제어 시스템, BPM등을 개발하고 수주 하였으며, EPICS Solution을 기반으로 하는 모터 컨트롤러를 비롯한 다양한 IOC, Driver와 CONTROL들을 개발 납품하고 있습니다. 또한 핵융합 발전 실험 장비인 ITER 프로젝트에도 참여하여 EPICS 기반 중앙 제어시스템, 인터락 제어시스템 및 전원공급장치 정밀 제어 시스템을 공급하고 있습니다.
+                                </div>                                         
+                            </div>
+                            <!-- //txtBox -->                            
+                        </div>
+                        <!-- //summary -->
 
                         <div class="dtcon">
                             <ul>
@@ -125,6 +147,9 @@
                     <!-- //data_area -->
                 </div>
                 <!-- //detail_box -->
+                <div class="update_acc">
+                    <p class="">21.2Q 업데이트 - <strong>주요계정</strong></p>
+                </div>
                 <br>
                 <div class="detail_box">                    
                     <div class="data_area">
@@ -156,6 +181,22 @@
                             <span class="gap">1,100</span>
                             <span class="per">(0%)</span>
                         </div>
+
+                        <!-- 기업 개요 -->
+                        <div class="summary">
+                            <span class="summary_txtShow">기업개요</span>
+                            <div class="txtBox">                                                                
+                                <div class="top">
+                                    <p class="title">기업개요</p>
+                                    <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+                                </div>         
+                                <div class="mid">
+                                    대형가속기 구축 및 EPICS 기반 초정밀 특수제어 시스템 및 장비를 공급하고 있습니다. 포항 4세대 XFEL 가속기의 성능을 좌우하는 핵심 장비인 LLRF SYSTEM과, Undulator 정밀제어 시스템, BPM등을 개발하고 수주 하였으며, EPICS Solution을 기반으로 하는 모터 컨트롤러를 비롯한 다양한 IOC, Driver와 CONTROL들을 개발 납품하고 있습니다. 또한 핵융합 발전 실험 장비인 ITER 프로젝트에도 참여하여 EPICS 기반 중앙 제어시스템, 인터락 제어시스템 및 전원공급장치 정밀 제어 시스템을 공급하고 있습니다.
+                                </div>                                         
+                            </div>
+                            <!-- //txtBox -->                            
+                        </div>
+                        <!-- //summary -->
 
                         <div class="dtcon">
                             <ul>
@@ -234,7 +275,8 @@
                 </div>
 
                 <div class="sub_nav">
-                    <ul class="depth_1">
+                    <ul class="depth_1">              
+                        <li><span class="title"><a href="summary.html">개요</a></span></li>          
                         <li class="active"><span class="title open"><a href="bill.html">10년 재무제표</a></span>
                             <!-- 2뎁스 메뉴인 경우 open -->
                             <ul class="depth_2">
@@ -271,15 +313,9 @@
                     </ul>
                 </div>
 
-                <!-- 비회원 샘플 화면인 경우 보여주는 안내 문구 -->
-                <div class="freeInfo_box">
-                    <a href="#" class="btn_freePop">비회원 샘플 화면입니다. <b>프리미엄 서비스</b>로 종목발굴 서비스와 데이터를 무제한으로 이용하세요. <b> [ 프리미엄 가입하기 <i></i> ] </b></a>
-                </div>
-                <!-- //freeInfo_box -->
-                <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
-
                 <div class="group_nav">
                     <ul>
+                        <li><span class="title"><a href="summary.html">개요</a></span></li>
                         <li class="active"><a href="bill.html">손익계산서</a></li>
                         <li><a href="financial.html">재무상태표</a></li>
                         <li><a href="cash.html">현금흐름표</a></li>
@@ -299,7 +335,7 @@
                     </p>
                 </div>
                 <!-- //sum_box -->
-
+                
                 <div class="contents_header">
                     <div class="data_filter">
                         <div class="data">
@@ -315,55 +351,52 @@
                                 <div class="set_filter">
                                     <div class="top">
                                         <p class="title">보기</p>
-                                        <span class="clse"><img src="../img/clse.png" alt="닫기"></span>
+                                        <span class="clse"><img src="/img/clse.png" alt="닫기"></span>
                                     </div>
                                     <div class="mid">
                                         <div class="">
                                             <span class="title">재무제표</span>
                                             <label>
-                                                <input name="line_01" type="radio" checked><span>연결</span>
+                                                <input name="master_chk" type="radio" value="C" checked=""><span>연결</span>
                                             </label>
                                             <label>
-                                                <input name="line_01" type="radio"><span>개별</span>
+                                                <input name="master_chk" type="radio" value="P"><span>개별</span>
                                             </label>
                                         </div>
                                         <div class="">
                                             <span class="title">회계</span>
                                             <label>
-                                                <input name="line_02" type="radio" checked><span>국제회계(IFRS)</span>
+                                                <input name="accounts_chk" type="radio" value="I" checked=""><span>국제회계(IFRS)</span>
                                             </label>
                                             <label>
-                                                <input name="line_02" type="radio"><span>일반회계(GAAP)</span>
+                                                <input name="accounts_chk" type="radio" value="G"><span>일반회계(GAAP)</span>
                                             </label>
                                         </div>
-
-                                        <div class="">
-                                            <span class="title">기준(분기)</span>
-                                            <label>
-                                                <input name="line_04" type="radio"><span>일반</span>
-                                            </label>
-                                            <label>
-                                                <input name="line_04" type="radio" checked><span>보고서값</span>
-                                            </label>
-                                        </div>
-
-
-
                                         <div class="">
                                             <span class="title">보기</span>
                                             <label>
-                                                <input name="line_03" type="radio" checked><span>데이터</span>
+                                                <input name="view_chk" type="radio" value="D" checked=""><span>데이터</span>
+                                            </label>
+                                
+                                            <label>
+                                                <input name="view_chk" type="radio" value="C"><span>구성비율</span>
                                             </label>
                                             <label>
-                                                <input name="line_03" type="radio"><span>구성비율</span>
+                                                <input name="view_chk" type="radio" value="G"><span>성장률</span>
+                                            </label>
+                                        </div>
+                                        <div class="">
+                                            <span class="title">정렬기준</span>
+                                            <label>
+                                                <input name="year_chk" type="radio" value="D" checked=""><span>최근년도순</span>
                                             </label>
                                             <label>
-                                                <input name="line_03" type="radio"><span>성장률</span>
+                                                <input name="year_chk" type="radio" value="G"><span>과거년도순</span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="btm">
-                                        <input type="submit" value="확인" name="" id="" class="btn_submit">
+                                        <input type="submit" value="확인" name="" id="search_btn" onclick="javascript:fnFormSubmit('search_form', 'mrt', '');" class="btn_submit">
                                     </div>
                                 </div>
                             </form>
@@ -381,6 +414,14 @@
                         <div class="detail">
                             <span class="table_view"><i></i>세부항목</span>
                             <span class="table_int active"><i></i>소수점</span>
+                            <script>
+                                $(document).ready(function () {
+                                    $('#container .M_right .contents_header .table_filter .detail span.table_view').off('click');                          
+                                    $('#container .M_right .contents_header .table_filter .detail span.table_int').off('click'); 
+                                })
+                            </script>
+                            <span class="table_view" style="cursor: not-allowed;"><i></i>세부항목</span>
+                            <span class="table_int" style="cursor: not-allowed;"><i></i>소수점</span>
                         </div>
                     </div>
                 </div>
@@ -388,10 +429,9 @@
                 <!-- 재무분석 -->
                 <div class="contents sub_con">
                     <div id="tab1" class="tab_content">
-                        <span class="table_update">단위 : 억원</span>
+                        <span class="table_update">단위 : 억원</span>                        
                         <div id="table-scroll" class="table-scroll">
-                            <div class="fix_wrap">
-                                <!-- 소수점 숨김처리 인 경우 class = txtInt -->
+                            <div class="fix_wrap">                                
                                 <table cellspacing="0" border="0" class="table fix_table data_txtR txtInt">
                                     <thead>
                                         <tr>
@@ -417,7 +457,11 @@
                                             <td>90<span class="deci">.043</span></td>
                                             <td>69,043<span class="deci">.043</span></td>
                                             <td>2,569<span class="deci">.043</span></td>
-                                            <td><span class="remark"><i></i><i></i><i></i><i></i></span></td>
+                                            <td>
+                                                <a href="#" class="btn_joinPop">
+                                                    <span class="remark"><i></i><i></i><i></i></span>
+                                                </a>
+                                            </td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
                                             <td>2,569,043</td>
@@ -2581,7 +2625,8 @@
                             </div>
                             <!-- //fix_wrap -->
                         </div>
-                        <!-- //table-scroll -->
+                        <!-- //table-scroll -->                        
+                        
                     </div>
                     <!-- //tab_content -->
 
@@ -2591,11 +2636,70 @@
                     <div id="tab3" class="tab_content">
                         분기
                     </div>
-
                 </div>
+
+                <!-- 비회원 샘플 화면인 경우 보여주는 안내 문구 -->                
+                <div class="freeInfo_box">
+                    <p><b>20년 재무제표를 한번에!</b> 프리미엄 서비스를 무제한으로 이용하세요. <a href="../winpop/payment_step01.html">프리미엄 가입</a></p>                    
+                </div>                
+                <div class="freeInfo_box">
+                    <p><b>20년 재무제표를 한번에!</b> 실적시즌 혜택! <br> 지금 회원가입하면 종목 재무분석 매일 3건 무료! <a href="../winpop/login.html">회원가입</a></p>                  
+                </div>                
+                <!-- //비회원 샘플 화면인 경우 보여주는 안내 문구 -->
+
+                <div class="premiumLock_cunt"  style="bottom: 180px;"> <!--  bottom값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
+                    <!-- 실적시즌 > 비 로그인 -->
+                    <div class="more">                                                
+                        실적시즌! 종목 재무분석 매일 3건 무료!</span>
+                        <a href="../winpop/login.html" class="go_link">회원가입</a>
+                    </div>                    
+                </div>
+                <div class="premiumLock_cunt" style="bottom: 100px;"> <!--  bottom 값은 문구 확인용으로 들어간 코드라 실제 반영시는 제거해주세요 -->
+                    <!-- 실적시즌 > 무료회원 > 재무분석 -->
+                    <div class="more">                                                
+                        재무분석 2건 / <span class="">매일 3건 무료</span>
+                        <a href="../service.html" class="go_link">재무분석이 무제한</a>
+                    </div>                    
+                </div>
+                <div class="premiumLock_cunt">
+                    <!--  실적 시즌/비시즌 공통 > 무료회원 > 재무분석 외 메뉴 -->
+                    <div class="more">                                                
+                        밸류라인 서비스를 무제한 이용하세요</span>
+                        <a href="../winpop/payment_step01.html" class="go_link">프리미엄</a>
+                    </div>                    
+                </div>
+
             </div>
+
+            <!-- 서브 우측 (수직형) -->
+            <div class="ads-right-box">
+                <ins class="adsbygoogle ads-right-sub"
+                    style="display:block"
+                    data-ad-client="ca-pub-6864430327621783"
+                    data-ad-slot="6821219711"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>     
+            
         </div>
         <!-- //container -->
+
+        <!-- 서브 하단 (사각형) -->
+        <div class="ads-btm-box">
+            <ins class="adsbygoogle ads-btm-sub"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds --> 
+        </div>        
 
         <div id="footer" class="f_main"></div>
         <!-- //footer -->

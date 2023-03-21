@@ -27,16 +27,16 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="http://godlife.ivyro.net/highcharts/stock/highstock.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/hollowcandlestick.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/no-data-to-display.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/treemap.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/highcharts-more.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/exporting.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/export-data.js"></script>
+    <script src="http://godlife.ivyro.net/highcharts/stock/modules/accessibility.js"></script>
     <script src="../js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -100,14 +100,23 @@
                 </div>
 
                 <div class="top_invest buffett">
-                    <p class="sum_txt">
-                        피터 린치는 성장주 투자의 대가로 평가 받습니다. 그가 1977년 ~ 1990년까지 13년 동안 운영한 ‘마젤란 펀드’는 누적 수익률 2,795% (연평균 수익률 29.2%)를 기록했습니다.
-                        <br>
-                        그는 기업의 유형은 ‘경기 변동형’, ‘자산형’, ‘턴 어라운드형’, ‘저성장 기업’, ‘중간성장 기업’, ‘고성장 기업’ 등 6가지 나누고 고성장 기업을 사업 초기에 발굴해 집중 투자해 큰 수익을
-                        거뒀습니다.
-                        <br><br>
-                        아래 종목 선발 기준은 피터 린치가 인터뷰와 책 등을 통해 언급한 주요 투자지표를 적용해, 한국에 투자했다면 어떤 기업에 투자했을지 찾아 드립니다.
-                    </p>
+                    <div class="invest_box small">
+                        <!-- 박스 닫혀있는 경우 small, 열린 경우 big -->
+                        <span class="more">자세히</span>
+                        <p class="sum_txt">
+                            피터 린치는 성장주 투자의 대가로 평가 받습니다. 그가 1977년 ~ 1990년까지 13년 동안 운영한 ‘마젤란 펀드’는 누적 수익률 2,795% (연평균 수익률 29.2%)를 기록했습니다.
+                            <br>
+                            그는 기업의 유형은 ‘경기 변동형’, ‘자산형’, ‘턴 어라운드형’, ‘저성장 기업’, ‘중간성장 기업’, ‘고성장 기업’ 등 6가지 나누고 고성장 기업을 사업 초기에 발굴해 집중 투자해 큰 수익을
+                            거뒀습니다.
+                            <br><br>
+                            아래 종목 선발 기준은 피터 린치가 인터뷰와 책 등을 통해 언급한 주요 투자지표를 적용해, 한국에 투자했다면 어떤 기업에 투자했을지 찾아 드립니다.
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/N5ONdnyslg8" title="YouTube video player"
+                                style="margin: 30px 0;" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </p>
+                    </div>
+                    <!-- //invest_box -->                       
                     <div class="stand_standard face_lynch">
                         <div class="left">
                             <h3 class="title">종목 선발 기준</h3>
