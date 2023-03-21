@@ -5,13 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스</title>
     <meta name="robots" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스">
-    <meta name="description" content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스, 10년재무제표, 재무분석, 종목발굴, 투자대가, 업종분석, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
+    <meta name="description"
+        content="밸류라인 | 투자자를 위한 종목발굴 빅데이터 서비스, 10년재무제표, 재무분석, 종목발굴, 투자대가, 업종분석, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#2A3979">
     <!-- 오픈 그래프 -->
     <meta property="og:title" content="밸류라인" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="투자자를 위한 종목발굴 빅데이터 서비스, 10년재무제표, 재무분석, 종목발굴, 투자대가, 업종분석, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
+    <meta property="og:description"
+        content="투자자를 위한 종목발굴 빅데이터 서비스, 10년재무제표, 재무분석, 종목발굴, 투자대가, 업종분석, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
     <meta property="og:image" content="http://godlife.ivyro.net/vline/img/og_choicestockVline.png">
     <meta property="og:image:width" content="410" />
     <meta property="og:image:height" content="210" />
@@ -27,18 +29,16 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-    <script src="https://code.highcharts.com/modules/treemap.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- highstock -->
+    <script src="node_modules/highcharts/highstock.js"></script>
+    <script src="node_modules/highcharts/highcharts-more.js"></script>
+    <script src="node_modules/highcharts/modules/data.js"></script>
+    <script src="node_modules/highcharts/modules/hollowcandlestick.js"></script>
+    <script src="node_modules/highcharts/modules/no-data-to-display.js"></script>
+    <script src="node_modules/highcharts/modules/treemap.js"></script>    
+    <script src="node_modules/highcharts/modules/exporting.js"></script>
+    <script src="node_modules/highcharts/modules/export-data.js"></script>
+    <script src="node_modules/highcharts/modules/accessibility.js"></script>    
     <script src="js/vline_chartjs.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -47,12 +47,56 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/vline.css" />
     <!-- js -->
-    <script src="js/header_index.js"></script>
     <script src="js/vline.js"></script>
+    <!-- 구글 애드센스 -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6864430327621783" crossorigin="anonymous"></script> -->
     <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
     <script src="js/header.js"></script>
     <!-- 로컬에서만 사용되는 파일 종료 -->
 </head>
+
+<!-- Channel Plugin Scripts -->
+<script>
+    (function () {
+        var w = window;
+        if (w.ChannelIO) {
+            return (window.console.error || window.console.log || function () { })('ChannelIO script included twice.');
+        }
+        var ch = function () {
+            ch.c(arguments);
+        };
+        ch.q = [];
+        ch.c = function (args) {
+            ch.q.push(args);
+        };
+        w.ChannelIO = ch;
+        function l() {
+            if (w.ChannelIOInitialized) {
+                return;
+            }
+            w.ChannelIOInitialized = true;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+            s.charset = 'UTF-8';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+        if (document.readyState === 'complete') {
+            l();
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', l);
+        } else {
+            window.addEventListener('DOMContentLoaded', l, false);
+            window.addEventListener('load', l, false);
+        }
+    })();
+    ChannelIO('boot', {
+        "pluginKey": "09196b5e-03b3-46d7-b58b-572697149e0f"
+    });
+</script>
+<!-- End Channel Plugin -->
 
 <body class="valueline">
     <div
@@ -67,10 +111,29 @@
         <div id="header" class="main_hdr"></div>
         <!-- //header -->
 
-        <div id="container">
+        <div id="container">            
+            <!-- 메인 상단 (사각형) -->
+            <ins class="adsbygoogle ads-top-main"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds -->            
+
             <!-- 상단 배너 -->
             <div class="top_banner">
-                <a href="#"><img src="img/banner/main_topbannner.jpg" alt="벨류라인 투자자를 위한 종목발굴 빅데이터 서비스"></a>
+                <img src="img/banner/main_topbannner.jpg" alt="벨류라인 투자자를 위한 종목발굴 빅데이터 서비스">
+                <br><br>                
+                <!-- - 실적시즌 비로그인 : 회원가입 링크 -->
+                <a href="../winpop/login.html"><img src="img/banner/mainTopBanner_season.png" alt="벨류라인 지금 회원가입하면 실적시즌 기간 동안 매일 재무분석 3건 무료!"></a>
+                <br><br>                
+                <!-- - 실적시즌 무료회원/로그인 : 프리미엄 가입 -->
+                <a href="../winpop/payment_step01.html"><img src="img/banner/mainTopBanner_offseason.png" alt="벨류라인 프리미엄 서비스를 무제한을 이용하세요"></a>
+
             </div>
             <!-- //top_banner -->
 
@@ -397,7 +460,7 @@
                                             <span class="price">4,835</span>
                                             <span class="per">+1.15%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention on"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -411,7 +474,7 @@
                                             <span class="price">4,095</span>
                                             <span class="per">0%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -425,7 +488,7 @@
                                             <span class="price">24,950</span>
                                             <span class="per">+5.5%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -439,7 +502,7 @@
                                             <span class="price">68,100</span>
                                             <span class="per">+0.44%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -453,7 +516,7 @@
                                             <span class="price">3,960</span>
                                             <span class="per">-1.25%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -479,7 +542,7 @@
                                             <span class="price">112,500</span>
                                             <span class="per">+0.45%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -493,7 +556,7 @@
                                             <span class="price">96,100</span>
                                             <span class="per">-1.94%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 2 </span>
@@ -507,7 +570,7 @@
                                             <span class="price">112,000</span>
                                             <span class="per">0%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 1 </span>
@@ -521,7 +584,7 @@
                                             <span class="price">521,000</span>
                                             <span class="per">-0.76%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 1 </span>
@@ -535,7 +598,7 @@
                                             <span class="price">180,500</span>
                                             <span class="per">+2.27%</span>
                                         </td>
-                                        <td class="txt_L">
+                                        <td class="txt_c">
                                             <span class="attention_box">
                                                 <i class="attention"></i> <!-- 관심종목인 경우 class => attention on -->
                                                 1 </span>
@@ -803,7 +866,7 @@
 
                             <!-- 턴어라운드 -->
                             <div id="tabcon_turn" class="tab_content">
-                                <span class="tabs_info">*기준 : 전분기 대비 턴어라운드 점수 상승순 정렬</span>                                
+                                <span class="tabs_info">*기준 : 전분기 대비 턴어라운드 점수 상승순 정렬</span>
                                 <table cellspacing="0" border="0" class="turnListing_table">
                                     <thead>
                                         <tr>
@@ -877,84 +940,99 @@
                                             <td class="txt_c">8</td>
                                         </tr>
                                     </tbody>
-                                </table>                                
+                                </table>
                             </div>
 
                             <!-- 우량주 -->
                             <div id="tabcon_mri" class="tab_content">
-                                <span class="tabs_info">*기준 : 전분기 대비 종합 진단점수 상승순 정렬</span>                                
+                                <span class="tabs_info">*기준 : 전분기 대비 종합 진단점수 상승순 정렬</span>
                                 <table cellspacing="0" border="0" class="mriListing_table">
                                     <thead>
                                         <tr>
                                             <th class="">종목명</th>
                                             <th class="txt_c">종합</th>
+                                            <th class="txt_c">밸류</th>
+                                            <th class="txt_c">독점</th>
                                             <th class="txt_c">성장</th>
-                                            <th class="txt_c">재무</th>
-                                            <th class="txt_c">수익</th>
+                                            <th class="txt_c">안전</th>
                                             <th class="txt_c">현금</th>
-                                            <th class="txt_c">사업</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="name"><a href="analysis/mri.html">카카오네이버삼성전자게임즈</a></td>
+                                            <td class="name">
+                                                <a href="/finance/mri/000990">DB하이텍</a>
+                                            </td>
                                             <td class="up txt_c">
-                                                <span class="price">9</span>
-                                                <span class="per">(+8)</span>
+                                                <!--up, down-->
+                                                <span class="price">24</span>
+                                                <span class="per">(+2)</span>
                                             </td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.5</td>
                                         </tr>
                                         <tr>
-                                            <td class="name"><a href="analysis/mri.html">카카오</a></td>
-                                            <td class="down txt_c">
-                                                <span class="price">9</span>
-                                                <span class="per">(-8)</span>
+                                            <td class="name">
+                                                <a href="/finance/mri/108320">LX세미콘</a>
                                             </td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="name"><a href="analysis/mri.html">카카오네이버삼성전자게임즈</a></td>
                                             <td class="up txt_c">
-                                                <span class="price">9</span>
-                                                <span class="per">(+8)</span>
+                                                <!--up, down-->
+                                                <span class="price">24</span>
+                                                <span class="per">(+1)</span>
                                             </td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.5</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.5</td>
                                         </tr>
                                         <tr>
-                                            <td class="name"><a href="analysis/mri.html">카카오</a></td>
-                                            <td class="down txt_c">
-                                                <span class="price">9</span>
-                                                <span class="per">(-8)</span>
+                                            <td class="name">
+                                                <a href="/finance/mri/205470">휴마시스</a>
                                             </td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
+                                            <td class="same txt_c">
+                                                <!--up, down-->
+                                                <span class="price">24</span>
+                                                <span class="per">(0)</span>
+                                            </td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.7</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.7</td>
                                         </tr>
                                         <tr>
-                                            <td class="name"><a href="analysis/mri.html">카카오네이버삼성전자게임즈</a></td>
-                                            <td class="up txt_c">
-                                                <span class="price">9</span>
-                                                <span class="per">(+8)</span>
+                                            <td class="name">
+                                                <a href="/finance/mri/093520">매커스</a>
                                             </td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
-                                            <td class="txt_c">8</td>
+                                            <td class="same txt_c">
+                                                <!--up, down-->
+                                                <span class="price">22</span>
+                                                <span class="per">(0)</span>
+                                            </td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.2</td>
+                                            <td class="txt_c">4.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="name">
+                                                <a href="/finance/mri/302440">SK바이오사이언스</a>
+                                            </td>
+                                            <td class="same txt_c">
+                                                <!--up, down-->
+                                                <span class="price">22</span>
+                                                <span class="per">(0)</span>
+                                            </td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4</td>
+                                            <td class="txt_c">4</td>
+                                            <td class="txt_c">5</td>
+                                            <td class="txt_c">4.7</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1060,6 +1138,18 @@
                 </div>
             </div>
             <!-- //new_listing -->
+
+            <!-- 메인 중간 (사각형) -->
+            <ins class="adsbygoogle ads-mid-main"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds -->  
 
             <!-- 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트, 최신 실적 재무데이터 -->
             <div class="btm_layBox">
@@ -1333,30 +1423,6 @@
                     </div>
                     <!-- //ratio_box -->
 
-                    <!-- 마켓차트 -->
-                    <div class="market_box" style="display: none;">
-                        <h2 class="title">마켓차트</h2>
-                        <span class="table_update">기준 08/30 / 시가총액상위</span>
-                        <div class="chart_stand">
-                            <form action="">
-                                <label>
-                                    <input name="market_radio" type="radio" checked=""><span>업종</span>
-                                </label>
-                                <label>
-                                    <input name="market_radio" type="radio"><span>상위 100 종목</span>
-                                </label>
-                            </form>
-                        </div>
-                        <!-- //chart_stand -->
-
-                        <div class="line_swbox">
-                            <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
-                            <div id="main_treemapTop100" class="treemap_style" style="padding: 0;"></div>
-                        </div>
-
-                    </div>
-                    <!-- //market_box -->
-
                     <!-- 최신 실적 재무데이터 -->
                     <div class="result_box">
                         <div class="line_swbox">
@@ -1372,13 +1438,13 @@
                                                         <th class="txt_c" style="width: 7%;">구분</th>
                                                         <th class="txt_c">종목</th>
                                                         <th class="txt_c">주가</th>
-                                                        <th class="txt_c">전년대비</th>
                                                         <th class="txt_c">순이익(억원)</th>
+                                                        <th class="txt_c">전년대비</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name">
                                                             <a href="#" class="btn_joinPop">
                                                                 로긴<span
@@ -1389,43 +1455,43 @@
                                                             <span class="price">9,350</span>
                                                             <span class="per">+88.88%</span>
                                                         </td>
-                                                        <td class="deficit cpson">0.77%</td>
                                                         <td class="txt_R">9,350,888</td>
+                                                        <td class="deficit cpson">0.77%</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion import">주요</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="same">
                                                             <span class="price">9,350</span>
                                                             <span class="per">0%</span>
                                                         </td>
-                                                        <td class="bk_check cpson">-87.77%</td>
                                                         <td class="txt_R">98</td>
+                                                        <td class="bk_check cpson">-87.77%</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion all">전체</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">+1.38%</span>
                                                         </td>
-                                                        <td class="deficit trans"><span>[적자지속]</span></td>
                                                         <td class="txt_R">9,350,888</td>
+                                                        <td class="deficit trans"><span>[적자지속]</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">-1.38%</span>
                                                         </td>
-                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
                                                         <td class="txt_R">98</td>
+                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name">
                                                             <a href="#" class="btn_joinPop">
                                                                 로긴<span
@@ -1436,40 +1502,40 @@
                                                             <span class="price">9,350</span>
                                                             <span class="per">+1.38%</span>
                                                         </td>
-                                                        <td class="deficit cpson">0.77%</td>
                                                         <td class="txt_R">9,350,888</td>
+                                                        <td class="deficit cpson">0.77%</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">-1.38%</span>
                                                         </td>
-                                                        <td class="bk_check cpson">-87.77%</td>
                                                         <td class="txt_R">98</td>
+                                                        <td class="bk_check cpson">-87.77%</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">+1.38%</span>
                                                         </td>
-                                                        <td class="deficit trans"><span>[적자지속]</span></td>
                                                         <td class="txt_R">9,350,888</td>
+                                                        <td class="deficit trans"><span>[적자지속]</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">-1.38%</span>
                                                         </td>
-                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
                                                         <td class="txt_R">98</td>
+                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1479,209 +1545,104 @@
                                                         <th class="txt_c" style="width: 7%;">구분</th>
                                                         <th class="txt_c">종목</th>
                                                         <th class="txt_c">주가</th>
-                                                        <th class="txt_c">전년대비</th>
                                                         <th class="txt_c">순이익(억원)</th>
+                                                        <th class="txt_c">전년대비</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name">
+                                                            <a href="#" class="btn_joinPop">
+                                                                로긴<span
+                                                                    class="remark"><i></i><i></i><i></i><i></i></span>
+                                                            </a>
+                                                        </td>
                                                         <td class="up">
                                                             <span class="price">9,350</span>
-                                                            <span class="per">+1.38%</span>
+                                                            <span class="per">+88.88%</span>
                                                         </td>
-                                                        <td class="deficit cpson">0.77%</td>
                                                         <td class="txt_R">9,350,888</td>
+                                                        <td class="deficit cpson">0.77%</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">카</a>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
-                                                        <td class="down">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">-1.38%</span>
+                                                        <td class="same">
+                                                            <span class="price">9,350</span>
+                                                            <span class="per">0%</span>
                                                         </td>
+                                                        <td class="txt_R">98</td>
                                                         <td class="bk_check cpson">-87.77%</td>
-                                                        <td class="txt_R">98</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">게임즈게임즈게임즈</a></td>
-                                                        <td class="up">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">+1.38%</span>
-                                                        </td>
-                                                        <td class="deficit trans"><span>[적자지속]</span></td>
-                                                        <td class="txt_R">9,350,888</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">카카오네이버</a>
-                                                        </td>
-                                                        <td class="down">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">-1.38%</span>
-                                                        </td>
-                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
-                                                        <td class="txt_R">98</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
-                                                            <span class="price">9,350</span>
+                                                            <span class="price">9,350,000</span>
                                                             <span class="per">+1.38%</span>
                                                         </td>
-                                                        <td class="deficit cpson">0.77%</td>
                                                         <td class="txt_R">9,350,888</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">카</a>
-                                                        </td>
-                                                        <td class="down">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">-1.38%</span>
-                                                        </td>
-                                                        <td class="bk_check cpson">-87.77%</td>
-                                                        <td class="txt_R">98</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">게임즈게임즈게임즈</a></td>
-                                                        <td class="up">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">+1.38%</span>
-                                                        </td>
                                                         <td class="deficit trans"><span>[적자지속]</span></td>
-                                                        <td class="txt_R">9,350,888</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">카카오네이버</a>
-                                                        </td>
-                                                        <td class="down">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">-1.38%</span>
-                                                        </td>
-                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
-                                                        <td class="txt_R">98</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="season_data">
-                                            <table cellspacing="0" border="0" class="season_table">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="txt_c" style="width: 7%;">구분</th>
-                                                        <th class="txt_c">종목</th>
-                                                        <th class="txt_c">주가</th>
-                                                        <th class="txt_c">전년대비</th>
-                                                        <th class="txt_c">순이익(억원)</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">게임즈</a></td>
-                                                        <td class="up">
-                                                            <span class="price">9,350</span>
-                                                            <span class="per">+1.38%</span>
-                                                        </td>
-                                                        <td class="deficit cpson">0.77%</td>
-                                                        <td class="txt_c">9,350,888</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">-1.38%</span>
                                                         </td>
-                                                        <td class="bk_check cpson">-87.77%</td>
-                                                        <td class="txt_c">98</td>
+                                                        <td class="txt_R">98</td>
+                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name">
+                                                            <a href="#" class="btn_joinPop">
+                                                                로긴<span
+                                                                    class="remark"><i></i><i></i><i></i><i></i></span>
+                                                            </a>
+                                                        </td>
                                                         <td class="up">
-                                                            <span class="price">9,350,000</span>
+                                                            <span class="price">9,350</span>
                                                             <span class="per">+1.38%</span>
                                                         </td>
-                                                        <td class="deficit trans"><span>[적자지속]</span></td>
-                                                        <td class="txt_c">9,350,888</td>
+                                                        <td class="txt_R">9,350,888</td>
+                                                        <td class="deficit cpson">0.77%</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">-1.38%</span>
                                                         </td>
-                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
-                                                        <td class="txt_c">98</td>
+                                                        <td class="txt_R">98</td>
+                                                        <td class="bk_check cpson">-87.77%</td>
                                                     </tr>
-                                                </tbody>
-                                            </table>
-                                            <table cellspacing="0" border="0" class="season_table">
-                                                <thead>
                                                     <tr>
-                                                        <th class="txt_c" style="width: 7%;">구분</th>
-                                                        <th class="txt_c">종목</th>
-                                                        <th class="txt_c">주가</th>
-                                                        <th class="txt_c">전년대비</th>
-                                                        <th class="txt_c">순이익(억원)</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
-                                                            <span class="price">9,350</span>
-                                                            <span class="per">+1.38%</span>
-                                                        </td>
-                                                        <td class="deficit cpson">0.77%</td>
-                                                        <td class="txt_c">9,350,888</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">카</a>
-                                                        </td>
-                                                        <td class="down">
-                                                            <span class="price">9,350,000</span>
-                                                            <span class="per">-1.38%</span>
-                                                        </td>
-                                                        <td class="bk_check cpson">-87.77%</td>
-                                                        <td class="txt_c">98</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">게임즈게임즈게임즈</a></td>
-                                                        <td class="up">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">+1.38%</span>
                                                         </td>
+                                                        <td class="txt_R">9,350,888</td>
                                                         <td class="deficit trans"><span>[적자지속]</span></td>
-                                                        <td class="txt_c">9,350,888</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
-                                                        <td class="name"><a href="analysis/bill.html">카카오네이버</a>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
                                                             <span class="price">9,350,000</span>
                                                             <span class="per">-1.38%</span>
                                                         </td>
+                                                        <td class="txt_R">98</td>
                                                         <td class="bk_check trans"><span>[흑자전환]</span></td>
-                                                        <td class="txt_c">98</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1702,7 +1663,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
                                                             <span class="price">9,350</span>
@@ -1712,7 +1673,7 @@
                                                         <td class="txt_c">9,350,888</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
@@ -1723,7 +1684,7 @@
                                                         <td class="txt_c">98</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
                                                             <span class="price">9,350,000</span>
@@ -1733,7 +1694,7 @@
                                                         <td class="txt_c">9,350,888</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
                                                         </td>
                                                         <td class="down">
@@ -1757,7 +1718,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈</a></td>
                                                         <td class="up">
                                                             <span class="price">9,350</span>
@@ -1767,7 +1728,7 @@
                                                         <td class="txt_c">9,350,888</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카</a>
                                                         </td>
                                                         <td class="down">
@@ -1778,7 +1739,7 @@
                                                         <td class="txt_c">98</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">게임즈게임즈게임즈</a></td>
                                                         <td class="up">
                                                             <span class="price">9,350,000</span>
@@ -1788,7 +1749,122 @@
                                                         <td class="txt_c">9,350,888</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="dvsion result">잠정실적</td>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">카카오네이버</a>
+                                                        </td>
+                                                        <td class="down">
+                                                            <span class="price">9,350,000</span>
+                                                            <span class="per">-1.38%</span>
+                                                        </td>
+                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
+                                                        <td class="txt_c">98</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="season_data">
+                                            <table cellspacing="0" border="0" class="season_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="txt_c" style="width: 7%;">구분</th>
+                                                        <th class="txt_c">종목</th>
+                                                        <th class="txt_c">주가</th>
+                                                        <th class="txt_c">전년대비</th>
+                                                        <th class="txt_c">순이익(억원)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                                        <td class="up">
+                                                            <span class="price">9,350</span>
+                                                            <span class="per">+1.38%</span>
+                                                        </td>
+                                                        <td class="deficit cpson">0.77%</td>
+                                                        <td class="txt_c">9,350,888</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
+                                                        </td>
+                                                        <td class="down">
+                                                            <span class="price">9,350,000</span>
+                                                            <span class="per">-1.38%</span>
+                                                        </td>
+                                                        <td class="bk_check cpson">-87.77%</td>
+                                                        <td class="txt_c">98</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                                        <td class="up">
+                                                            <span class="price">9,350,000</span>
+                                                            <span class="per">+1.38%</span>
+                                                        </td>
+                                                        <td class="deficit trans"><span>[적자지속]</span></td>
+                                                        <td class="txt_c">9,350,888</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">카카오네이버삼성전자게임즈</a>
+                                                        </td>
+                                                        <td class="down">
+                                                            <span class="price">9,350,000</span>
+                                                            <span class="per">-1.38%</span>
+                                                        </td>
+                                                        <td class="bk_check trans"><span>[흑자전환]</span></td>
+                                                        <td class="txt_c">98</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table cellspacing="0" border="0" class="season_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="txt_c" style="width: 7%;">구분</th>
+                                                        <th class="txt_c">종목</th>
+                                                        <th class="txt_c">주가</th>
+                                                        <th class="txt_c">전년대비</th>
+                                                        <th class="txt_c">순이익(억원)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">게임즈</a></td>
+                                                        <td class="up">
+                                                            <span class="price">9,350</span>
+                                                            <span class="per">+1.38%</span>
+                                                        </td>
+                                                        <td class="deficit cpson">0.77%</td>
+                                                        <td class="txt_c">9,350,888</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">카</a>
+                                                        </td>
+                                                        <td class="down">
+                                                            <span class="price">9,350,000</span>
+                                                            <span class="per">-1.38%</span>
+                                                        </td>
+                                                        <td class="bk_check cpson">-87.77%</td>
+                                                        <td class="txt_c">98</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
+                                                        <td class="name"><a href="analysis/bill.html">게임즈게임즈게임즈</a></td>
+                                                        <td class="up">
+                                                            <span class="price">9,350,000</span>
+                                                            <span class="per">+1.38%</span>
+                                                        </td>
+                                                        <td class="deficit trans"><span>[적자지속]</span></td>
+                                                        <td class="txt_c">9,350,888</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dvsion result">잠정</td>
                                                         <td class="name"><a href="analysis/bill.html">카카오네이버</a>
                                                         </td>
                                                         <td class="down">
@@ -1812,9 +1888,48 @@
                     </div>
                     <!-- //ratio_box -->
 
+                    <!-- 마켓차트 -->
+                    <div class="market_box">
+                        <h2 class="title">마켓차트</h2>
+                        <span class="table_update">기준 08/30 / 시가총액상위</span>
+                        <!-- 차트 탭 -->
+                        <div class="chart_stand chart_tabs">
+                            <div class="tab_area">
+                                <form action="">
+                                    <ul>
+                                        <li rel="tabcon_turn" class="active"><label>
+                                                <input name="market_radio" type="radio" checked=""><span>업종</span>
+                                            </label></li>
+                                        <li rel="tabcon_mri"><label>
+                                                <input name="market_radio" type="radio"><span>상위 100 종목</span>
+                                            </label></li>
+                                    </ul>
+                                </form>
+                            </div>
+
+                            <!-- 업종 -->
+                            <div id="tabcon_sec" class="tab_content">
+                                <div class="line_swbox">
+                                    <div id="main_treemap01" class="treemap_style" style="padding: 0;"></div>
+                                </div>
+
+                            </div>
+
+                            <!-- 상위 100 종목 -->
+                            <div id="tabcon_top" class="tab_content">
+                                <div class="line_swbox">
+                                    <div id="main_treemapTop100" class="treemap_style" style="padding: 0;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //chart_stand chart_tabs -->
+                    </div>
+                    <!-- //market_box -->
+
                     <!-- 하단 롱 배너 -->
                     <div class="btm_banner">
-                        <a href="#"><img src="img/banner/main_btmbannner.jpg" alt="벨류라인 투자자를 위한 종목발굴 빅데이터 서비스"></a>
+                        <a href="inform/inform_list.html"><img src="img/banner/main_btmbannner.jpg"
+                                alt="벨류라인 투자자를 위한 종목발굴 빅데이터 서비스"></a>
                     </div>
                 </div>
                 <!-- //left -->
@@ -1833,40 +1948,73 @@
                         <div id="tabcon_up" class="tab_content">
                             <ul>
                                 <li>
-                                    <a href="#" class="name btn_joinPop">
-                                        로긴<span class="remark"><i></i><i></i><i></i><i></i></span>
-                                    </a>
+                                    <a href="/finance/income/340440" class="name">세림B&amp;G</a>
                                     <div class="up">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">3,170</span>
+                                        <span class="per">+29.92%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/002150" class="name">도화엔지니어링</a>
                                     <div class="up">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">11,650</span>
+                                        <span class="per">+29.73%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/016385" class="name">KG스틸우</a>
                                     <div class="up">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">426,000</span>
+                                        <span class="per">+22.06%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/016880" class="name">웅진</a>
                                     <div class="up">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">2,225</span>
+                                        <span class="per">+20.92%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
-                                    <div class="down">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                    <a href="/finance/income/050760" class="name">에스폴리텍</a>
+                                    <div class="up">
+                                        <span class="price">4,560</span>
+                                        <span class="per">+17.68%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/340440" class="name">세림B&amp;G</a>
+                                    <div class="up">
+                                        <span class="price">3,170</span>
+                                        <span class="per">+29.92%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/002150" class="name">도화엔지니어링</a>
+                                    <div class="up">
+                                        <span class="price">11,650</span>
+                                        <span class="per">+29.73%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/016385" class="name">KG스틸우</a>
+                                    <div class="up">
+                                        <span class="price">426,000</span>
+                                        <span class="per">+22.06%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/016880" class="name">웅진</a>
+                                    <div class="up">
+                                        <span class="price">2,225</span>
+                                        <span class="per">+20.92%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/050760" class="name">에스폴리텍</a>
+                                    <div class="up">
+                                        <span class="price">4,560</span>
+                                        <span class="per">+17.68%</span>
                                     </div>
                                 </li>
                             </ul>
@@ -1876,38 +2024,73 @@
                         <div id="tabcon_down" class="tab_content">
                             <ul>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/091810" class="name">티웨이항공</a>
                                     <div class="down">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">2,725</span>
+                                        <span class="per">-12.1%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/060230" class="name">소니드</a>
                                     <div class="down">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">1,110</span>
+                                        <span class="per">-11.9%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
+                                    <a href="/finance/income/031860" class="name">엔에스엔</a>
                                     <div class="down">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                        <span class="price">1,605</span>
+                                        <span class="per">-11.81%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오네이버삼성전자게임즈</a>
+                                    <a href="/finance/income/336060" class="name">웨이버스</a>
                                     <div class="down">
-                                        <span class="price">5,000</span>
-                                        <span class="per">-1.38%</span>
+                                        <span class="price">2,200</span>
+                                        <span class="per">-11.65%</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="analysis/bill.html" class="name">카카오</a>
-                                    <div class="up">
-                                        <span class="price">89,350,000</span>
-                                        <span class="per">+1.38%</span>
+                                    <a href="/finance/income/160550" class="name">NEW</a>
+                                    <div class="down">
+                                        <span class="price">8,400</span>
+                                        <span class="per">-11.21%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/091810" class="name">티웨이항공</a>
+                                    <div class="down">
+                                        <span class="price">2,725</span>
+                                        <span class="per">-12.1%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/060230" class="name">소니드</a>
+                                    <div class="down">
+                                        <span class="price">1,110</span>
+                                        <span class="per">-11.9%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/031860" class="name">엔에스엔</a>
+                                    <div class="down">
+                                        <span class="price">1,605</span>
+                                        <span class="per">-11.81%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/336060" class="name">웨이버스</a>
+                                    <div class="down">
+                                        <span class="price">2,200</span>
+                                        <span class="per">-11.65%</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/finance/income/160550" class="name">NEW</a>
+                                    <div class="down">
+                                        <span class="price">8,400</span>
+                                        <span class="per">-11.21%</span>
                                     </div>
                                 </li>
                             </ul>
@@ -1957,10 +2140,84 @@
                         <!-- //chart_box -->
                     </div>
                     <!-- //spider_area -->
+
+                    <!-- 메인 하단 우측 (수직형) -->                    
+                    <ins class="adsbygoogle ads-rightBtm-main"
+                        style="display:block"
+                        data-ad-client="ca-pub-6864430327621783"
+                        data-ad-slot="6821219711"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
+
+                <!-- 하단 서비스 노출 배너 -->                    
+                <style>
+                    .family_banner {   
+                        float: none;                 
+                        clear: both;
+                        padding: 35px 0 0;                                        
+                    }
+                    .family_banner ul {
+                        display: flex;                            
+                        gap: 8px;
+                    }                    
+                    .family_banner li img {
+                        display: inline-block;                                        
+                        width: 100%;
+                        height: 100%;
+                    }                
+                </style>
+                <div class="family_banner">
+                    <ul>
+                        <li><a href="http://godlife.ivyro.net/SStokes/event_221115.html" target="_blank"><img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스"></a></li>                        
+                        <li><a href="https://www.choicestock.co.kr/" target="_blank"><img src="img/banner/family_chous.png" alt="초이스스탁US"></a></li>                        
+                        <li><a href="https://bigfinance.co.kr/home" target="_blank"><img src="img/banner/family_vp.png" alt="빅파이낸스"></a></li>
+                    </ul>  
+                </div>
+                <!-- 슈스톡 이벤트 종료시 -->
+                <div class="family_banner">
+                    <ul>
+                        <li><a href="https://super.choicestock.co.kr/" target="_blank"><img src="img/banner/family_sst.png" alt="슈퍼스톡스"></a></li>                        
+                        <li><a href="https://www.choicestock.co.kr/" target="_blank"><img src="img/banner/family_chous.png" alt="초이스스탁US"></a></li>                        
+                        <li><a href="https://bigfinance.co.kr/home" target="_blank"><img src="img/banner/family_vp.png" alt="빅파이낸스"></a></li>
+                    </ul>  
+                </div>
+                <!-- //family_banner -->
             </div>
+
+            <!-- 메인 우측 (수직형) -->
+            <div class="ads-right-box">
+                <ins class="adsbygoogle ads-right-main"
+                    style="display:block"
+                    data-ad-client="ca-pub-6864430327621783"
+                    data-ad-slot="6821219711"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>          
+            
         </div>
         <!-- //container -->
+
+        <!-- 메인 하단 (사각형) -->
+        <div class="ads-btm-box">
+            <!-- 메인 하단 (사각형) -->
+            <ins class="adsbygoogle ads-btm-main"
+                style="display:block"
+                data-ad-client="ca-pub-6864430327621783"
+                data-ad-slot="4092900518"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //main-TopAds --> 
+        </div>        
 
         <div id="footer" class="f_main">
 
@@ -2375,12 +2632,10 @@
     </div>
 
     <!-- 유료서비스 이전 신청 안내 팝업 -->
-    <div id="layer_pop" class="modal previous_pop" style="display: none;">
+    <!-- <div id="layer_pop" class="modal previous_pop" style="display: block;">
         <div class="pop_header">
             <h1 class="pop_title"><b>밸류라인 서비스</b> 이전 신청 안내</span></h1>
-            <a href="#" class="clse" rel="modal:close">
-                <!--닫기-->
-            </a>
+            <a href="#" class="clse" rel="modal:close"></a>
         </div>
 
         <div class="pop_con">
@@ -2408,15 +2663,36 @@
                 <br><br>
             </div>
         </div>
-
         <div class="pop_foot">
-            <a href="https://forms.gle/mcKsz7jWWPRPPPcM6" class="join_btn open_payment" target="_blank">서비스 이전 신청</a>
+            <a href="https://value.choicestock.co.kr/member/notify_view/11" class="join_btn open_payment">자세히 보기</a>
             <div class="today_check">
                 <label for="pop_today" class="btn_day" style="display: none;">
                     <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
                 </label>
-                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지 않기</span></a>
-                
+                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지
+                        않기</span></a>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="layer_pop" class="modal previous_pop" style="display: none;">
+        <div class="pop_header" style="padding: 0; background-color: #Fff; border:none;">            
+            <a href="#" class="clse" rel="modal:close"></a>
+        </div>
+
+        <div class="pop_con">
+            <div class="scr_box" style="padding: 0; max-height: 495px; overflow: inherit;">
+                <a href="https://value.choicestock.co.kr/member/notify_view/17" class="join_btn open_payment"><img src="img/banner/valueline_popup.png" alt="밸류라인 레벨업! 종목검색+개요정보 추가!" style="display: block; width: 100%; height: 100%;"> </a>
+            </div>
+        </div>
+
+        <div class="pop_foot" style="padding: 0 20px 10px; background-color: #Fff;">            
+            <div class="today_check">
+                <label for="pop_today" class="btn_day" style="display: none;">
+                    <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
+                </label>
+                <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지
+                        않기</span></a>
             </div>
         </div>
     </div>
@@ -2431,7 +2707,7 @@
             document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
         }
         function closeWin() {
-            if (document.getElementById("pop_today").checked) {                
+            if (document.getElementById("pop_today").checked) {
                 setCookie("ncookie_vline", "done", 24);
             }
             document.getElementById('layer_pop').style.display = "none";
@@ -2439,12 +2715,12 @@
             $('body').removeAttr("style");
         }
 
-        if (cookiedata.indexOf("ncookie_vline=done") < 0) {            
+        if (cookiedata.indexOf("ncookie_vline=done") < 0) {
             $('.modal.previous_pop').modal({
                 fadeDuration: 100
-            });            
+            });
         } else {
-            
+
         }
 
     </script>
