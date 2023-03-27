@@ -457,11 +457,6 @@ body {
                         opacity: 0.75;
                     }
                 }
-
-                th,
-                td {
-                    // border-bottom: 1px solid #e7eaf2 !important;
-                }
             }
 
             tbody {
@@ -606,6 +601,7 @@ input.input_txt {
 
 /*radio 버튼 색상변경 */
 input[type='radio'] {
+    appearance: none;
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
@@ -654,7 +650,9 @@ input[type='radio']:checked:before {
         height: 24px;
         padding: 0 6px;
         box-sizing: border-box;
+        appearance: none;
         -webkit-appearance: none;
+        -moz-appearance: none;
         -moz-appearance: none;
         appearance: none;
         border-radius: 3px;
@@ -888,6 +886,7 @@ input[type='radio']:checked:before {
     box-sizing: border-box;
     border: 1px solid #E0E4E9;
     opacity: 0;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

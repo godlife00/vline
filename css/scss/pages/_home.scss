@@ -256,10 +256,7 @@
         .table_box {
             width: calc(100% - 254px - 25px);
             .indices_table {                  
-                width: 100%;          
-                th, td {
-                    // text-align: center;                       
-                }
+                width: 100%;                          
                 thead {
                     th {
                         border-bottom: 2px solid #7389af;
@@ -1439,9 +1436,7 @@
                     letter-spacing: -0.5px;
                     text-align: center;
                     color: #656d7e;
-                    &.import {
-
-                    }
+                    
                     &.all {
                         background-color: #97a3c9;
                         color: #fff;
@@ -1560,9 +1555,7 @@
                             color: #656d7e;            
                             position: relative;
                             top: -2px;
-                            &.import { 
-                                // background-color: #d9e6ff;
-                            }                
+                            
                             &.all {
                                 color: #fff;
                                 background-color: #97a3c9;                                

@@ -53,15 +53,11 @@
     <!-- 검색엔진 결과 대표페이지 설정 -->
     <script>        
         $(document).ready(function () {
-            var canonicalURL = $('link[rel=canonical]').attr('href'); // get the current canonical URL
-            console.log("Current Canonical URL: " + canonicalURL);
-
-            if (!canonicalURL) { // if canonical tag doesn't exist, create it
-                $('head').append('<link rel="canonical" href="' + window.location.href + '">');
-                console.log("New Canonical URL Created: " + window.location.href);
-            } else { // if canonical tag already exists, update it with the current URL
+            var canonicalURL = $('link[rel=canonical]').attr('href');
+            if (!canonicalURL) {
+                $('head').append('<link rel="canonical" href="' + window.location.href + '">');                
+            } else {
                 $('link[rel=canonical]').attr('href', window.location.href);
-                console.log("Canonical URL Updated: " + window.location.href);
             }
         });
     </script>
