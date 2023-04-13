@@ -523,6 +523,14 @@ body .numCunt::before {
   display: block;
   width: 100%;
 }
+.sub_service .service_wrap .premium_applybtn {
+  position: sticky;
+  bottom: 20px;
+}
+.sub_service .service_wrap .premium_applybtn img {
+  display: block;
+  border: 3px solid #fff;
+}
 
 .fix_wrap {
   width: 100%;
@@ -1139,6 +1147,9 @@ input[type=radio]:checked:before {
   clear: both;
   position: relative;
   background-color: blanchedalmond;
+}
+.valueline .adsbygoogle[data-ad-status=unfilled] {
+  display: none !important;
 }
 .valueline .adsbygoogle.ads-top-main {
   height: 280px;

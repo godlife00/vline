@@ -192,6 +192,15 @@ body {
                 width: 100%;
             }
         }
+
+        .premium_applybtn {	            
+            position: sticky;	
+            bottom: 20px;	
+            img {
+                display: block;
+                border: 3px solid #fff;
+            }
+        }
     }
 }
 
@@ -927,6 +936,10 @@ input[type='radio']:checked:before {
     clear: both;
     position: relative;
     background-color: blanchedalmond;        
+
+    &[data-ad-status="unfilled"] {
+        display: none !important;        
+    }
 
     &.ads-top-main {
         height: 280px;
