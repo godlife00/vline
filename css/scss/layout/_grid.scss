@@ -935,7 +935,7 @@ input[type='radio']:checked:before {
     table-layout: fixed;
     clear: both;
     position: relative;
-    background-color: blanchedalmond;        
+    // background-color: blanchedalmond;        
 
     &[data-ad-status="unfilled"] {
         display: none !important;        

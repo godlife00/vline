@@ -1146,7 +1146,6 @@ input[type=radio]:checked:before {
   table-layout: fixed;
   clear: both;
   position: relative;
-  background-color: blanchedalmond;
 }
 .valueline .adsbygoogle[data-ad-status=unfilled] {
   display: none !important;
