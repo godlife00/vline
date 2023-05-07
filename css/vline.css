@@ -344,6 +344,7 @@ body .numCunt::before {
   min-width: 1000px;
   max-width: 1138px;
   padding: 0 15px;
+  padding: 0;
 }
 
 #container {
@@ -1205,8 +1206,8 @@ input[type=radio]:checked:before {
 }
 #header .bgWrap .title {
   display: inline-block;
-  width: 18%;
-  padding-left: 15px;
+  width: 13%;
+  padding-left: 5px;
   box-sizing: border-box;
   vertical-align: top;
   margin-top: 12px;
@@ -1230,7 +1231,7 @@ input[type=radio]:checked:before {
   justify-content: space-between;
 }
 #header .bgWrap .gnb ul li {
-  margin-left: 23px;
+  margin-left: 15px;
   display: inline-block;
 }
 #header .bgWrap .gnb ul li:first-child {
@@ -1255,12 +1256,7 @@ input[type=radio]:checked:before {
   vertical-align: top;
   margin-top: 7px;
 }
-@media (min-width: 767px) and (max-width: 768px) {
-  #header .bgWrap .searchArea {
-    margin-left: 20px;
-  }
-}
-@media (min-width: 1138px) {
+@media (min-width: 1100px) {
   #header .bgWrap .searchArea {
     margin-left: 40px;
   }
@@ -1393,6 +1389,15 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 24px;
   height: 24px;
+}
+#header .bgWrap .premium .title_tama {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  padding-right: 20px;
+  color: #fff;
+  position: relative;
+  vertical-align: top;
 }
 
 /* 푸터 footer */

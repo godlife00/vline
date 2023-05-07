@@ -4,8 +4,8 @@
         background-color: #374b9d;
         .title {            
             display: inline-block;
-            width: 18%;
-            padding-left: 15px;            
+            width: 13%;
+            padding-left: 5px;            
             box-sizing: border-box;            
             vertical-align: top;
             margin-top: 12px;
@@ -29,7 +29,7 @@
                 display: flex;    
                 justify-content: space-between;                
                 li {
-                    margin-left: 23px;
+                    margin-left: 15px;
                     &:first-child {
                         margin-left: 0;
                     }
@@ -53,14 +53,10 @@
         }        
         .searchArea {
             position: relative;
-            margin-left: 20px;            
-            @media (min-width: 767px) and (max-width: 768px) {                
-                margin-left: 20px;
-            }
-            @media (min-width: 1138px) {                
+            margin-left: 20px;                        
+            @media (min-width: 1100px) {                
                 margin-left: 40px;
             }
-
             display: inline-block;
             vertical-align: top;  
             margin-top: 7px;                   
@@ -193,6 +189,15 @@
                     }
                 }
             }       
+            .title_tama {
+                display: inline-block;
+                font-size: 14px;                
+                letter-spacing: -0.35px;    
+                padding-right: 20px;
+                color: #fff;
+                position: relative;
+                vertical-align: top;
+            }
         }
         
     }

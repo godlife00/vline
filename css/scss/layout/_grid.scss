@@ -21,15 +21,16 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100%;    
     z-index: 82;
-    min-width: 1000px;
+    min-width: 1000px;    
     height: 42px;
     box-sizing: border-box;
     background: $colpmr;
 
     .bgWrap {
         @include width_minmax;
+        padding: 0
     }
 }
 
