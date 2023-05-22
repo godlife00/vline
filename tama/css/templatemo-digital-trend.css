@@ -438,7 +438,7 @@ strong {
 }
 
 .quote::after {
-  content: "â€œ";
+  content: "“";
   position: absolute;
   bottom: -80px;
   left: 20px;
@@ -1036,6 +1036,7 @@ a:focus {
 }
 .strategy_title {
   width: 100%;
+  text-align: center;
 }
 .strategy .container .row .list {
   display: flex;
@@ -1043,32 +1044,28 @@ a:focus {
   align-items: center;
   justify-content: flex-start;
   gap: 8px 12px;    
-  width: 80%;
+  width: 70%;
   margin: 30px auto;
 }
 .strategy .container .row .list div {
-  flex: 1 1 30%;     
-  text-align: center; 
+  
 }
-.strategy .container .row .list div:nth-child(1),
-.strategy .container .row .list div:nth-child(4),
-.strategy .container .row .list div:nth-child(7) {
-  text-align: left;
-}
-.strategy .container .row .list div:nth-child(3),
-.strategy .container .row .list div:nth-child(6),
-.strategy .container .row .list div:nth-child(8) {
-  text-align: right;
-}
+
 .strategy .container .row .list div a {
   position: relative;
   display: inline-block;
   list-style: none;  
-  font-size: 1.8rem;
-  color: #fff;  
+  font-size: 1.4rem;
+  color: var(--p-color);
   border-radius: 30px;
-  padding: 0.7em 0.8em;
-  background-color: #7389AF;
+  padding: 0.7em 1.8em;
+  background-color: #eaedf5;
+  border: 2px solid #5F62BE ;
+}
+.strategy .container .row .list div a::before {
+  content: "✔";      
+  padding-right: 5px;    
+  color: #5F62BE;
 }
 
 
