@@ -867,15 +867,18 @@ a:focus {
 .blog-sidebar {
   cursor: default;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start !important;
+  gap: 10px;  
 }
 .blog-sidebar a {
-  display: inline-block;  
-  margin-bottom: 8px;  
+  display: inline-block;      
+  line-height: 1.4;
 }
 .blog-sidebar img {  
+  display: inline-block;  
   border-radius: var(--border-radius-small);
-  /* width: 159px; */
+  max-width: none;
+  width: 180px;
   border: solid 1px #e7eaf2;
 }
 
@@ -883,6 +886,12 @@ a:focus {
   font-size: 18px;
 }
 
+.blog_sumList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-right: 0;  
+}
 /* 슬라이더 컨테이너 스타일 */
 .swiper-container {
   width: 100%;
@@ -1002,24 +1011,24 @@ a:focus {
   border-bottom-left-radius: 15px;  
   border-bottom-right-radius: 0;  
 }
-.proposal .container .chat:nth-child(1) .box .bg_box,
-.proposal .container .chat:nth-child(1) .box .bg_box::after {  
+.proposal .container .chat .box .bg_box.bg_01,
+.proposal .container .chat .box .bg_box.bg_01::after {  
   background-color:#4A6BF2 !important;
 }
-.proposal .container .chat:nth-child(2) .box .bg_box,
-.proposal .container .chat:nth-child(2) .box .bg_box::after {  
+.proposal .container .chat .box .bg_box.bg_02,
+.proposal .container .chat .box .bg_box.bg_02::after {  
   background-color: #7389AF !important;
 }
-.proposal .container .chat:nth-child(3) .box .bg_box,
-.proposal .container .chat:nth-child(3) .box .bg_box::after {  
+.proposal .container .chat .box .bg_box.bg_03,
+.proposal .container .chat .box .bg_box.bg_03::after {  
   background-color: #D37045 !important;
 }
-.proposal .container .chat:nth-child(4) .box .bg_box,
-.proposal .container .chat:nth-child(4) .box .bg_box::after {  
+.proposal .container .chat .box .bg_box.bg_04,
+.proposal .container .chat .box .bg_box.bg_04::after {  
   background-color: #5F62BE !important;
 }
-.proposal .container .chat:nth-child(5) .box .bg_box,
-.proposal .container .chat:nth-child(5) .box .bg_box::after {  
+.proposal .container .chat .box .bg_box.bg_05,
+.proposal .container .chat .box .bg_box.bg_05::after {  
   background-color: #37C60C !important;
 }
 
@@ -1226,6 +1235,10 @@ a:focus {
   -webkit-box-orient: vertical;
   overflow: hidden;
   color: #3655d6;
+  margin-bottom: 5px;
+}
+.blog-info h4 a {    
+  color: #17a2b8 !important;
 }
 
 .blog-info h3 {
