@@ -8118,7 +8118,7 @@ input[type=radio]:checked:before {
   padding-left: 25px;
 }
 .modal.login_form .pop_con, .modal.refund .pop_con {
-  padding: 10px 15px 20px;
+  padding: 10px 35px 20px;
 }
 .modal.login_form .pop_con .pop_sum, .modal.refund .pop_con .pop_sum {
   padding: 5px 0 15px;
@@ -11484,6 +11484,16 @@ input[type=radio]:checked:before {
   font-size: 0.75rem;
   line-height: 14px;
   margin-top: 7px;
+}
+
+.business_name {
+  padding: 27px 0 0;
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  font-weight: bold;
+  text-align: right;
+  color: #656d7e;
 }
 
 body {

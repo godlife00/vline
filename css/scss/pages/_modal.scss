@@ -340,12 +340,11 @@
 
                 strong {
                     color: #c22e06;
-                    font-weight: $f_sizeB;
-                    ;
+                    font-weight: $f_sizeB;                    ;
                 }
             }
 
-            padding: 10px 15px 20px;
+            padding: 10px 35px 20px;
 
             .mapage_form {
                 padding-top: 10px;
@@ -3826,5 +3825,16 @@
         font-size: 0.75rem;
         line-height: 14px;
         margin-top: 7px;
-    }
+    }    
+}
+
+.business_name {
+    // background-color: #f5f6fa;
+    padding: 27px 0 0;
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: -0.33px;
+    font-weight: bold;
+    text-align: right;
+    color: #656d7e;    
 }
