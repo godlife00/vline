@@ -82,8 +82,9 @@
             padding: 38px 64px 48px;
 
             .sns {
-                li {
-                    a {
+                li {                    
+                    border-radius: 5px;
+                    a {                        
                         display: block;
                         text-align: center;
                         padding: 18px 0;
@@ -91,44 +92,44 @@
                         text-align: left;
                         border-radius: 5px;
                         font-size: 15px;
+                    }                    
+
+                    span {
+                        display: inline-block;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: -30px;
+                            top: 3px;
+                            width: 22px;
+                            height: 22px;
+                            background: url('/img/sns_n.svg') no-repeat 0 0;
+                        }
+                    }
+
+                    &.sns_n {
+                        background-color: #20b703;
 
                         span {
-                            display: inline-block;
-                            position: relative;
+                            color: #fff;
 
                             &::before {
-                                content: "";
-                                position: absolute;
-                                left: -30px;
-                                top: 3px;
-                                width: 22px;
-                                height: 22px;
                                 background: url('/img/sns_n.svg') no-repeat 0 0;
                             }
                         }
+                    }
 
-                        &.sns_n {
-                            background-color: #20b703;
+                    &.sns_k {
+                        margin-top: 16px;
+                        background-color: #fae100;
 
-                            span {
-                                color: #fff;
+                        span {
+                            color: #333;
 
-                                &::before {
-                                    background: url('/img/sns_n.svg') no-repeat 0 0;
-                                }
-                            }
-                        }
-
-                        &.sns_k {
-                            margin-top: 16px;
-                            background-color: #fae100;
-
-                            span {
-                                color: #333;
-
-                                &::before {
-                                    background: url('/img/sns_k.svg') no-repeat 0 0;
-                                }
+                            &::before {
+                                background: url('/img/sns_k.svg') no-repeat 0 0;
                             }
                         }
                     }

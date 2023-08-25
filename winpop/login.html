@@ -65,9 +65,62 @@
                 </div>
                 <div class="pop_con">
                     <ul class="sns">
-                        <li><a href="login_terms_form.html" class="sns_n open_step02"><span>네이버로 로그인</span></a></li>
-                        <li><a href="login_terms_form.html" class="sns_k open_step02"><span>카카오톡으로 로그인</span></a></li>
-                    </ul>
+                        <li class="sns_n"><a href="login_idchk.html"><span>네이버로 로그인</span></a></li>
+                        <li class="sns_k"><a href="login_idchk.html"><span>카카오톡으로 로그인</span></a></li>
+                    </ul>                    
+                    <script>
+                        $(function() {
+                            // SNS 로그인 링크 클릭 이벤트
+                            $('.sns a').on('click', function(event) {
+                                const selectedSns = $(this).text(); // 선택한 SNS 계정 정보 가져오기
+                                localStorage.setItem('selectedSns', selectedSns); // 선택한 SNS 계정 정보 저장
+                                const snsClass = $(this).parent().attr('class'); // 선택한 SNS 계정 클래스 가져오기
+                                localStorage.setItem('selectedSnsClass', snsClass); // 선택한 SNS 계정 클래스 저장
+    
+                                console.log(selectedSns, snsClass);
+                                
+                                // TODO: 로그인 처리 등 필요한 처리 수행
+                            });
+    
+                            // 이전에 선택한 SNS 계정 정보 표시
+                            const selectedSnsClass = localStorage.getItem('selectedSnsClass');                        
+                            if (selectedSnsClass) {
+                                $('.sns .' + selectedSnsClass + ' a').addClass('selected'); // 선택한 SNS 계정 링크 강조
+                            }
+                        });
+                    </script>
+
+                    <style>                        
+                        .login_form .sns li a.selected {
+                            position: relative;
+                        }
+                        .login_form .sns li a.selected::before {                        
+                            content: '';
+                            position: absolute;
+                            right: calc(6% + 54px);
+                            top: 10px;
+                            border-top: 6px solid #fff;
+                            border-left: 6px solid transparent;
+                            border-right: 6px solid transparent;
+                            border-bottom: 6px solid transparent;
+    
+                        }
+                        .login_form .sns  li a.selected::after {
+                            content: '최근 로그인';
+                            position: absolute;
+                            right: 6%;
+                            top: -10px;
+                            display: inline-block;                                                
+                            background: #fff;
+                            border-radius: 5px;
+                            padding: 3px 10px;
+                            text-align: center;
+                            color: #444;                        
+                            font-size: 0.75rem;                        
+                        }
+                    </style>
+
+
                     <p class="guide_txt">네이버, 카카오 계정으로 간편하게 로그인 할 수 있습니다.</p>
                 </div>
                 <div class="pop_foot">

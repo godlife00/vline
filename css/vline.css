@@ -7897,6 +7897,9 @@ input[type=radio]:checked:before {
 .modal.login_form .pop_con {
   padding: 38px 64px 48px;
 }
+.modal.login_form .pop_con .sns li {
+  border-radius: 5px;
+}
 .modal.login_form .pop_con .sns li a {
   display: block;
   text-align: center;
@@ -7906,11 +7909,11 @@ input[type=radio]:checked:before {
   border-radius: 5px;
   font-size: 15px;
 }
-.modal.login_form .pop_con .sns li a span {
+.modal.login_form .pop_con .sns li span {
   display: inline-block;
   position: relative;
 }
-.modal.login_form .pop_con .sns li a span::before {
+.modal.login_form .pop_con .sns li span::before {
   content: "";
   position: absolute;
   left: -30px;
@@ -7919,23 +7922,23 @@ input[type=radio]:checked:before {
   height: 22px;
   background: url("/img/sns_n.svg") no-repeat 0 0;
 }
-.modal.login_form .pop_con .sns li a.sns_n {
+.modal.login_form .pop_con .sns li.sns_n {
   background-color: #20b703;
 }
-.modal.login_form .pop_con .sns li a.sns_n span {
+.modal.login_form .pop_con .sns li.sns_n span {
   color: #fff;
 }
-.modal.login_form .pop_con .sns li a.sns_n span::before {
+.modal.login_form .pop_con .sns li.sns_n span::before {
   background: url("/img/sns_n.svg") no-repeat 0 0;
 }
-.modal.login_form .pop_con .sns li a.sns_k {
+.modal.login_form .pop_con .sns li.sns_k {
   margin-top: 16px;
   background-color: #fae100;
 }
-.modal.login_form .pop_con .sns li a.sns_k span {
+.modal.login_form .pop_con .sns li.sns_k span {
   color: #333;
 }
-.modal.login_form .pop_con .sns li a.sns_k span::before {
+.modal.login_form .pop_con .sns li.sns_k span::before {
   background: url("/img/sns_k.svg") no-repeat 0 0;
 }
 .modal.login_form .pop_con .guide_txt {
