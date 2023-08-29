@@ -5252,17 +5252,39 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
-                crosshair: true
+                categories: ['2013.09','2013.12','2014.03','2014.06','2014.09','2014.12','2015.03','2015.06','2015.09','2015.12','2016.03','2016.06','2016.09','2016.12','2017.03','2017.06','2017.09','2017.12','2018.03','2018.06','2018.09','2018.12','2019.03','2019.06','2019.09','2019.12','2020.03','2020.06','2020.09','2020.12','2021.03','2021.06','2021.09','2021.12','2022.03','2022.06','2022.09','2022.12','2023.03','2023.06','2023.08.25',],
+                labels: {
+					formatter: function () {						
+                        var year = this.value.substr(0, 4);
+                        if (year !== this.axis.chart.lastDisplayedYear) {
+                            this.axis.chart.lastDisplayedYear = year;
+                            return year;
+                        }						
+					},					
+					rotation: 0,                        
+					align: 'center',
+					step : 1	
+				}, 
             }],
-
 
             yAxis: [{ // 1
                 title: {
                     text: null,
                 },
                 labels: {
-                    format: '{value}배',
+                    formatter: function () {
+                        if (this.value === 0) {
+                            return '0 %';
+                        } else if (this.value === 1) {
+                            return '1 %';
+                        } else if (this.value === 2) {
+                            return '2 %';
+                        } else if (this.value >= -2 && this.value <= 2) {
+                            return this.value.toFixed(2) + ' %';
+                        } else {
+                            return this.value.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' %';
+                        }
+                    },
                     style: {
                         color: ["#656d7e"],
                     }
@@ -5279,7 +5301,7 @@ $(document).ready(function () {
 
             series: [{
                 name: '주가매출액배수',
-                data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
+                data: [0.33,0.27,0.3,0.35,0.26,0.17,0.18,0.16,0.18,0.44,0.35,0.33,0.3,0.29,0.35,0.35,0.34,0.44,0.69,0.6,0.74,0.63,0.56,0.57,3.53,0.59,0.3,0.36,0.31,0.38,0.41,0.7,0.73,0.6,0.63,0.47,0.46,0.43,0.6,0.52,0.61,],
                 yAxis: 0,
                 tooltip: {
                     pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 배</b><br/>'
