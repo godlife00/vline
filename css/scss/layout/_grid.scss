@@ -526,12 +526,21 @@ body {
     }
 
     &.data_txtR {
+        td {            
+            font-size: 0;            
+            span.deci {                
+                font-size: 13px;            
+            }           
+        }
         tbody td {
             text-align: right;
         }
     }
 
     &.txtInt {
+        td {            
+            font-size: 13px;                        
+        }        
         td span.deci {
             display: none;
         }
