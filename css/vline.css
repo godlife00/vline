@@ -795,17 +795,17 @@ body .numCunt::before {
   max-width: 100px;
   box-sizing: border-box;
 }
-.table.data_txtR td {
-  font-size: 0;
-}
-.table.data_txtR td span.deci {
-  font-size: 13px;
-}
 .table.data_txtR tbody td {
   text-align: right;
 }
-.table.txtInt td {
-  font-size: 13px;
+.table.data_txtR td span.ess {
+  display: none;
+}
+.table.data_txtR td span.deci {
+  display: block;
+}
+.table.txtInt td span.ess {
+  display: block;
 }
 .table.txtInt td span.deci {
   display: none;

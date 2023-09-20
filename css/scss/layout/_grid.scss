@@ -525,23 +525,23 @@ body {
         }
     }
 
-    &.data_txtR {
-        td {            
-            font-size: 0;            
-            span.deci {                
-                font-size: 13px;            
-            }           
-        }
+    &.data_txtR {    
         tbody td {
             text-align: right;
         }
+        td span.ess {            
+            display: none;
+        }
+        td span.deci {            
+            display: block;
+        }
     }
 
-    &.txtInt {
-        td {            
-            font-size: 13px;                        
-        }        
-        td span.deci {
+    &.txtInt {        
+        td span.ess {            
+            display: block;
+        }
+        td span.deci {            
             display: none;
         }
     }
