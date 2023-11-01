@@ -166,7 +166,7 @@
             line-height: 1.54;            
             color: #656d7e;
             margin: 10px 0;
-            margin-left: 60px;
+            // margin-left: 60px;
             box-sizing: border-box;
             max-width: 100%;
             white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
@@ -1066,11 +1066,32 @@
             }
         }
     }
+
+    .freeInfo_box.bandchart {
+        min-height: 500px;
+        background: url("/img/freeInfo_box_bandchart.jpg") no-repeat 0 top;
+        p {            
+            overflow: hidden;
+            width: calc(100% - 80px);
+            margin: 0 auto;
+            border-radius: 5px;
+            background-color: #E6E7F4;            
+            padding: 50px 15px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 180px;
+            color: #222;
+            z-index: 999;
+        }
+        
+    }
 }
 
 .수급분석 {
     margin-top: 20px;
     padding-top: 60px;
+    padding-bottom: 150px;
 
     .box {
         display: flex;            
@@ -1199,6 +1220,12 @@
     
 }
 
+.contents.sub_con {
+    .투자매력은 {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+}
 .투자매력은 {
     margin-top: 20px;
     padding-top: 60px;
@@ -1267,12 +1294,14 @@
                 margin: 0 auto;
                 box-sizing: border-box;
 
-                .highcharts-title {                    
+                .highcharts-title,
+                .highcharts-title a {                    
                     @include font-family;
                     font-weight: bold !important;
                     font-size: 12px !important;
-                    color: #656d7e !important;
-                    fill: #656d7e !important;                    
+                    color: #527bea !important;
+                    fill: #527bea !important; 
+                    text-decoration: underline;                   
                 }
 
                 .highcharts-axis-labels {
@@ -1718,6 +1747,34 @@
             }
         }
     }
+    .freeInfo_box.diagnosischart {
+        min-height: 500px;
+        p {
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: #E6E7F4;            
+            padding: 50px 15px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 240px;
+            color: #222;
+            z-index: 999;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 300px;
+            background: url("/img/freeInfo_box_diagnosischart.jpg") no-repeat 0 top;
+        }
+        
+    }
+
 }
 .f_main {
     margin-top: 0;
@@ -1732,5 +1789,45 @@
     .f_logo {
         display: block;
         margin-top: 10px;
+    }
+}
+
+// 평가, 
+.평가 {
+    &.매우저평가 {
+        background-color: #3655d6;
+    }
+
+    &.저평가 {
+        background-color: #3655d6;
+    }
+
+    &.고평가 {
+        background-color: #dd5257;
+    }
+
+    &.매우고평가 {
+        background-color: #dd5257;
+    }
+}
+// 수급분석
+.평가 {
+    &.매우약함 {
+        background-color: #3655D6;
+    }
+
+    &.약함 {
+        background-color: #3655D6;
+    }
+
+    &.보통 {
+        background-color: #58BA62;
+    }
+
+    &.강함 {
+        background-color: #FF545B;
+    }
+    &.매우강함 {
+        background-color: #FF545B;
     }
 }
