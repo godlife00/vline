@@ -1,0 +1,1736 @@
+/* 전반적인 스타일 요소를 담당하는 파일 */
+.종목명 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 20px;
+
+    .company_logo {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        background-color: #f4f6fa;
+        border-radius: 50%;        
+    }
+
+    .company_logo .logo {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid #e7eaf2;
+        box-sizing: border-box;
+    }
+
+    .company_info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 5px 10px;
+        flex-direction: column;
+        align-content: flex-start;
+        padding: 3px 0;
+        width: calc(100% - 90px);
+
+        .company_nm {
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            max-width: 90%;
+        }
+
+        .company_nm a {
+            width: 100%;
+            font-size: 28px;
+            font-weight: $f_sizeB;
+            line-height: 1.25;
+            letter-spacing: -0.7px !important;
+            color: #222;
+        }
+
+        .ticker {
+            font-size: 16px;
+            line-height: 1.31;
+            letter-spacing: -0.4px !important;
+            color: #b1b9cb;
+        }
+
+        .detail {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 0 9.5px;
+            width: 100%;
+
+            .num>span {
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.25;
+                letter-spacing: -0.5px;
+                text-align: left;
+                color: #222;
+            }
+
+            .per {
+                display: inline-block;
+                font-size: 14px;
+                line-height: 1.29;
+                letter-spacing: -0.35px !important;
+                text-align: left;
+            }
+
+            .day {
+                font-size: 12px;
+                line-height: 2.5;
+                letter-spacing: -0.3px !important;
+                color: #b1b9cb;
+            }
+
+        }
+    }
+
+    .업데이트소식 {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+        background-color: #fdfbf7;
+        padding: 0 60px 0 80px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: solid 1px #fbf4ea;
+
+        .more_box {
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 3px 20px 17px;            
+            .more {                                    
+                font-size: 0;
+                width: 6px;
+                height: 6px;
+                border-top: 2px solid #bfc6d9;
+                border-right: 2px solid #bfc6d9;
+                display: inline-block;
+                transform: rotate(135deg);                
+            }
+        }
+       
+
+        .updata {            
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 4px 6px;
+            border-radius: 6px;
+            background-color: #ffea97;
+            font-size: 11px;
+            line-height: 1.27;
+            text-align: center;
+            color: #222;
+        }
+
+        .upData_Swiper {
+            overflow: hidden;
+            height: 40px;            
+
+            &>.swiper-wrapper {
+                // gap: 0 50px;
+                transition-timing-function: linear;
+            }
+    
+            .swiper-slide {
+                overflow: hidden;
+                background-position: center center;
+                background-size: cover;            
+                &:first-child {
+                    .txt {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }        
+
+        .txt {
+            position: relative;            
+            font-size: 13px;
+            line-height: 1.54;            
+            color: #656d7e;
+            margin: 10px 0;
+            margin-left: 60px;
+            box-sizing: border-box;
+            max-width: 100%;
+            white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+            overflow: hidden; /* 텍스트를 넘어간 부분을 숨김 */
+            text-overflow: ellipsis;            
+            
+            b {
+                color: #222;
+                padding: 0 2px;
+                &.increase {
+                    font-size: 13px;
+                    color: #ff545b;
+                }
+                &.decrease {
+                    font-size: 13px;
+                    color: #3655d6;
+                }
+            }
+            
+        }
+        .updata_allList {
+            display: none;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border: solid 1px #fbf4ea;
+            background-color: #fdfbf7;            
+            z-index: 99;
+
+            ul {
+                margin-left: 80px;                
+            }
+
+            ul li {
+                position: relative;                
+                padding-left: 14px;
+                margin: 10px 0 15px;
+                white-space: normal;               
+                overflow: initial; 
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    background-color: #b1b9cb;
+                }
+            }
+            .clse {                
+                cursor: pointer;
+                position: relative;
+                display: block;                
+                text-align: right;
+                padding: 0 20px 20px;
+                font-size: 12px;                
+                color: #b1b9cb;
+                &::after {
+                    content: '';
+                    position: relative;
+                    top: 2px;
+                    margin-left: 10px;
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    border-top: 2px solid #bfc6d9;
+                    border-right: 2px solid #bfc6d9;
+                    display: inline-block;
+                    transform: rotate(-45deg);                    
+                }
+            }
+        }
+        
+    }
+}
+
+.주가차트 {
+    margin-top: 30px;
+
+    .summary_Box {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 19.5px;
+    }
+
+    .chart_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;        
+        padding-top: 11px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: solid 1px #e7eaf2;
+
+        .period_tabs {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            padding: 0 19px;
+
+            li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                cursor: pointer;
+                border-bottom: 1px solid #222;
+
+                &.active {
+                    padding-bottom: 9px;
+                    font-weight: $f_sizeB;
+                    border-bottom: 3px solid #222;
+                }
+            }
+        }
+
+        .period_Data {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 0 20px;
+            margin-top: 20px;
+            padding: 15px 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: #f4f6fa;
+
+            dl {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 10px;
+            }
+
+            .title {
+                font-size: 11px;
+                color: #656d7e;
+            }
+            .same {
+                font-size: 12px;
+                font-weight: $f_sizeB;
+                color: #656d7e;
+            }
+
+            .총액 {
+                font-size: 12px;
+                font-weight: $f_sizeB;
+                color: #333;
+            }
+
+            .추세 {
+                font-size: 12px;
+                font-weight: $f_sizeB;
+                color: #333;
+            }
+        }
+    }
+
+    .BICchart_style {
+        margin-top: 30px;
+        width: 100%;
+        height: 380px;
+        box-sizing: border-box;
+        padding: 0 19px;
+
+        .highcharts-button-box {
+            cursor: pointer;
+            flex: 1;
+            padding: 8px 0;
+            border-bottom: 1px solid #000;
+            font-size: 13px;
+            letter-spacing: -0.65px;
+            text-align: center;
+            color: #222;
+        }
+
+        .highcharts-navigator-xaxis {
+            font-size: 0;
+            opacity: 0;
+        }
+
+        .highcharts-series-label text {
+            font-size: 0 !important;
+        }
+
+        .highcharts-input-group,
+        .highcharts-navigator {
+            display: none;
+        }
+
+        .highcharts-range-selector-group .highcharts-label {
+            display: none !important;
+            font-size: 0 !important;
+        }
+
+        .highcharts-point-up {
+            fill: rgb(252, 79, 79);
+            stroke: rgb(252, 79, 79);
+        }
+
+        .highcharts-point-down,
+        .highcharts-point-down-bearish-up {
+            fill: rgb(54, 85, 214);
+            stroke: rgb(54, 85, 214);
+        }
+    }
+
+    .오른쪽차트영역 {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+
+        .박스레이아웃 {
+            cursor: pointer;
+            width: 260px;
+            padding: 19px 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: #f4f6fa;
+
+            .title {
+                cursor: pointer;
+                position: relative;
+                font-size: 13px;
+                font-weight: $f_sizeB;
+                color: #222;
+                width: 100%;
+                &::after {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    border-top: 2px solid #bfc6d9;
+                    border-right: 2px solid #bfc6d9;
+                    display: inline-block;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    right: 0;
+                    top: 3px;
+                }
+            }
+        }
+
+        .밸류에이션 {
+            .box {
+                position: relative;
+
+                .평가 {
+                    position: absolute;
+                    right: 13px;
+                    top: -3px;
+                    display: inline-block;
+                    padding: 4px 6px;
+                    border-radius: 6px;
+                    font-size: 11px;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+
+            .value_chart {
+                margin-top: 45px;
+
+                .line {
+                    position: relative;
+                    width: calc(100% - 30px);
+                    box-sizing: border-box;
+                    height: 2px;
+                    border-radius: 20px;
+                    background-color: #e6e7f4;
+                    margin: 0 auto;
+
+                    &::after {
+                        left: auto;
+                        right: -15px;
+                    }
+
+                    .situation {
+                        position: absolute;
+                        left: auto;
+                        right: auto;
+                        top: -35px;
+                        width: 56px;
+                        text-align: center;
+                        margin-left: calc(-54px / 2);
+
+                        span {
+                            position: relative;
+                            font-size: 12px;
+                            line-height: 2.5;
+                            color: #b1b9cb;
+
+                            &::after {
+                                content: "";
+                                top: 100%;
+                                left: 50%;
+                                margin-left: -6px;
+                                content: " ";
+                                position: absolute;
+                                top: 24px;
+                                pointer-events: none;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background-color: #ff545b;
+                                z-index: 90;
+                            }
+                        }
+                    }
+
+                    .g_action {
+                        position: absolute;
+                        left: 0;
+                        top: -3px;
+                        margin-left: -5px;
+                        z-index: 2;
+                        display: inline-block;
+                        background: #ff545b;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        font-size: 0;
+                    }
+
+                    .g_action::after {
+                        content: "";
+                        position: absolute;
+                        left: 2px;
+                        top: 2px;
+                        display: inline-block;
+                        background: #fff;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        font-size: 0;
+                    }
+                }
+
+                .adequate {
+                    text-align: center;
+
+                    span {
+                        display: inline-block;
+                        padding-top: 5px;
+                        font-size: 12px;
+                        font-weight: $f_sizeB;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
+                        color: #222;
+                    }
+                    i {
+                        display: inline-block;
+                        border-radius: 50%;
+                        background-color: #999;
+                        width: 8px;
+                        height: 8px;
+                        margin: 0 1px 1px;
+                        opacity: 0.67;
+                        
+                    }
+                }
+                .no_data {
+                    position: relative;
+                    top: -20px;
+                    width: calc(100% - 30px);
+                    margin: 0 auto;
+                    padding: 5px 5px;
+                    border-radius: 2px;
+                    background-color: #e6e7f4;
+                    text-align: center;
+                    font-size: 13px;                    
+                    color: #222;
+                }
+            }
+        }
+
+        .수급분석시그널 {
+            .box {
+                position: relative;
+
+                .평가 {
+                    position: absolute;
+                    right: 13px;
+                    top: -3px;
+                    display: inline-block;
+                    padding: 4px 6px;
+                    border-radius: 6px;
+                    font-size: 11px;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+
+        .투자매력 {
+            cursor: pointer;
+            .star_area {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0 7px;
+                margin-top: 25px;
+
+                .star_ranking span {
+                    font-size: 12px;
+                    color: #656d7e;
+
+                    strong {
+                        font-size: 16px;
+                        font-weight: $f_sizeB;
+                        color: #ff545b;
+                    }
+                }
+            }
+        }
+
+        .AI주가예측 {
+            border: solid 1px #e7eaf2;
+            background-color: #fff;
+
+            .box {
+                position: relative;
+                display: flex;
+                gap: 0 11px;
+                align-items: stretch;
+                justify-content: flex-start;
+
+                .day {
+                    font-size: 12px;
+                    color: #b1b9cb;
+                }
+
+                .title {
+                    width: auto;
+                    cursor: text;
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                .txt_guide {
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+                    display: inline-block;                    
+                }
+
+                .tooltip {
+                    display: none;
+                    position: absolute;
+                    right: 5px;
+                    top: 20px;
+                    padding: 20px;
+                    width: 280px;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 20px 0 rgba(101, 109, 126, 0.08);
+                    border: solid 1px #222;
+                    background-color: #fff;
+                    z-index: 1;
+                    .t_title {
+                        font-size: 15px;
+                        font-weight: $f_sizeB;                        
+                        color: #333;
+                    }
+                    .t_txt {
+                        margin-top: 15px;
+                        font-size: 13px;                        
+                        line-height: 1.62;                        
+                        color: #656d7e;                        
+                    }
+                    .clse_tooltip {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        display: inline-block;
+                        cursor: pointer;
+                        font-size: 0;                        
+                        width: 24px;
+                        height: 24px;
+                        &::before {
+                            content: "";
+                            height: 18px;
+                            border-left: 2px solid #bfc6d9;
+                            position: absolute;
+                            transform: rotate(-45deg);
+                            top: 5px;
+                            left: 12px;
+                        }
+                        &::after {
+                            content: "";
+                            height: 18px;
+                            border-left: 2px solid #bfc6d9;
+                            position: absolute;
+                            transform: rotate(45deg);
+                            top: 5px;
+                            left: 12px;
+                        }
+                    }
+                }
+
+            }
+
+            .chart_layout {
+                margin-top: 10px;
+                width: 100%;
+                height: 100px;
+
+
+                .highcharts-grid-line {
+                    display: none;
+                }
+
+                .highcharts-label text,
+                .highcharts-label tspan {
+                    font-size: 11px !important;
+                    color: #656d7e !important;
+                    fill: #656d7e !important;
+                    font-weight: normal !important;
+                    text-shadow: none;
+                    stroke-width: 0;
+                }
+            }
+
+            .주가추세_기간상승률 {
+                display: flex;
+                margin-top: 10px;
+
+                .주가추세,
+                .기간상승률 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px 0;
+                }
+
+                .주가추세 {
+                    width: 110px;
+                }
+
+                .기간상승률 {
+                    gap: 3px 0;
+                }
+
+                .sub_title {
+                    font-size: 11px;
+                    letter-spacing: -0.28px;
+                    color: #656d7e;
+                }
+
+                .상승,
+                .하락,
+                .보합 {
+                    display: inline-block;
+                    padding: 4px 6px;
+                    width: 32px;
+                    box-sizing: border-box;
+                    border-radius: 6px;
+                    background-color: #ff545b;
+                    font-size: 11px;
+                    font-weight: $f_sizeS;
+                    text-align: center;
+                    color: #fff;
+                }
+
+                .하락 {
+                    background-color: #3655d6;
+                }
+                .보합 {
+                    background-color: #bdc8d8;
+                }
+                .거래정지종목 {
+                    font-size: 0.75rem;
+                    font-weight: $f_sizeS;           
+                    font-weight: 500;         
+                    color: #222;                    
+                }
+
+                .increase,
+                .decrease {
+                    font-size: 16px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.4px;
+                }
+                .same {
+                    font-size: 16px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.4px;
+                    color: #bdc8d8;
+                }
+            }
+        }
+    }
+
+    .기업개요 {
+        display: flex;
+        align-items: flex-start;
+        gap: 0 15px;
+        margin-top: 30px;
+        strong {
+            line-height: 1.7;
+            font-size: 15px;
+            font-weight: 700;
+            color: #222;
+        }       
+
+        p {
+            font-size: 13px;
+            line-height: 1.77;
+            color: #656d7e;
+        }
+
+    }
+}
+
+.투자지표 {
+    margin-top: 80px;
+
+    .title {
+        font-size: 20px;
+        font-weight: $f_sizeB;
+        color: #333;
+    }
+
+    .summary_Box {
+        margin-top: 12px;
+
+        .top {
+            display: flex;
+            gap: 0 20px;
+
+            .left,
+            .right {
+                padding: 20px 20px;
+                box-sizing: border-box;
+                border-radius: 10px;
+                border: solid 1px #efeff2;
+            }
+
+            .left {                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px 50px;
+            }
+
+            .box {
+                flex: 1 1 20%;
+                max-width: 20%;
+
+                .line1,
+                .line2 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 0 10px;
+                }
+            }
+
+            .right .box {
+                flex: 1;
+            }
+
+
+            .line1 {
+                .th {
+                    font-size: 13px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.46px;
+                    color: #222;
+                }
+
+                .sum {
+                    font-size: 13px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.33px;
+                    color: #656d7e;
+
+                }
+            }
+
+            .line2 {
+                margin-top: 2px;
+
+                .th {
+                    font-size: 11px;
+                    font-weight: 400;
+                    letter-spacing: -0.5px;
+                    color: #b1b9cb;
+
+                }
+
+                .sum {
+                    font-size: 11px;
+                    font-weight: 400;
+                    letter-spacing: -0.25px;
+                    color: #656d7e;
+                }
+            }
+
+        }
+    }
+
+    .chart_box {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 50px;
+        margin-top: 30px;
+
+        .box {
+            width: 100%;
+        }
+
+        .c_title {
+            font-size: 13px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.31;
+            letter-spacing: -0.33px;
+            text-align: left;
+            color: #222;
+        }
+
+        .financials_style {
+            width: 100%;
+            height: 200px;
+            margin-top: 15px;
+
+            rect.highcharts-point {
+                fill: #3655d6 !important;
+                background: #3655d6 !important;
+                stroke-width: 0;
+
+                &.point_color {
+                    fill: #dbdfed !important;
+                    background: #dbdfed !important;
+                }
+
+                &.decrease_color {
+                    fill: #0093ff59 !important;
+                    background: #0093ff59 !important;
+                }
+            }
+
+            // 마이나스 데이터인 경우                    
+            .highcharts-point.highcharts-negative.highcharts-color-0 {
+                fill: #26ABFF;
+                background: #26ABFF;
+            }
+
+            .highcharts-label {
+
+                text,
+                tspan {
+                    font-size: 12px !important;
+                    color: #707070 !important;
+                    fill: #707070 !important;
+                    text-shadow: none;
+                    stroke-width: 0;
+                    font-weight: $f_sizeN !important;
+                }
+            }
+
+            .highcharts-axis-labels text {
+                font-size: 10px !important;
+                color: #656d7e !important;
+                fill: #656d7e !important;
+                font-weight: 400 !important;
+            }
+
+        }
+
+    }
+}
+
+.벨류에이션 {
+    margin-top: 20px;
+    padding-top: 60px;
+
+    .title {
+        font-size: 20px;
+        font-weight: $f_sizeB;
+        color: #333;
+    }
+
+    .txt {        
+        margin-top: 12px;
+        font-size: 13px;
+        color: #656d7e;
+    }
+
+    .chart_box {
+        margin-top: 20px;
+        border-radius: 10px;
+        border: solid 1px #e7eaf2;
+
+        .value_data {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 0 100px;
+            padding: 11px 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #f4f6fa;
+
+            .title {
+                font-size: 12px;
+                font-weight: $f_sizeN;
+                color: #656d7e;
+            }
+
+            dl {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 10px;
+
+                .현재주가 {
+                    font-size: 16px;
+                    font-weight: $f_sizeB;
+                    color: #677fe0;
+                }
+
+                .적정주가 {
+                    font-size: 16px;
+                    font-weight: $f_sizeB;
+                    color: #333;
+                }
+
+                .평가 {
+                    border-radius: 6px;
+
+                    span {
+                        display: inline-block;
+                        padding: 4px 6px;
+                        font-size: 11px;
+                        text-align: center;
+                        color: #fff;
+                    }
+
+                }
+            }
+        }
+
+        .bandchart_layout {
+            width: 100%;
+            max-width: 95%;
+            height: 520px;
+            margin: 25px 20px 0;
+            box-sizing: border-box;
+
+        }
+    }
+
+    .bandchart_sume {
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: #f4f6fa;
+        padding: 16px 20px;
+
+        .sum_txt {
+            font-size: 13px;
+            color: #656d7e;
+        }
+
+        .sum_box {
+            margin-top: 15px;
+
+            .title {
+                font-size: 13px;
+                font-weight: $f_sizeB;
+                color: #222;
+            }
+
+            ul {
+                margin-top: 7px;
+            }
+
+            ul li {
+                font-size: 13px;
+                line-height: 1.77;
+                letter-spacing: -0.33px;
+                color: #656d7e;
+
+                i {
+                    display: inline-block;
+                    padding-right: 5px;
+                    line-height: 1.77;
+                    color: #656d7e;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
+
+.수급분석 {
+    margin-top: 20px;
+    padding-top: 60px;
+
+    .box {
+        display: flex;            
+        align-items: center;
+        gap: 0 10px;
+        
+        .star_area {
+            display: inline-block;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: $f_sizeB;
+        color: #333;
+    }
+
+    .txt {        
+        margin-top: 12px;
+        font-size: 13px;
+        color: #656d7e;
+    }
+
+    .수급분석_신호 {
+        display: flex;
+        align-items: center;
+        gap: 0 2px;
+        width: 100%;
+        max-width: 300px;
+        margin: 15px 0;
+        // width: 400px;        
+        background-color: #fff;        
+        user-select: none;
+        -moz-user-select: none; /* Firefox 지원 */
+        -webkit-user-select: none; /* Chrome, Safari, Edge 등 지원 */        
+        .시그널 {                        
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+            min-width: calc((100% - 100px) / 5);
+            width: 54px;
+            height: 3px;
+            background: #dbdfed;
+            font-size: 11px;            
+            line-height: 1.27;
+            letter-spacing: -0.55px;
+            color: #fff;                        
+            text-indent: -999px;
+            &.active {
+                text-indent: 0;                       
+                padding: 10px 10px;                
+                border-radius: 20px;
+            }            
+        }
+    }
+
+    .chart_box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+        margin-top: 25px;
+        div {
+            flex: 1 1 40%;
+            width: 100%;
+        }
+        .supplychart_style {                        
+            width: 100%;
+            height: 240px;
+            margin-top: 15px;
+
+            .highcharts-axis-line {
+                display: none !important
+            }
+
+            .highcharts-title {                    
+                @include font-family;
+                font-weight: bold !important;
+                font-size: 13px !important;
+                color: #222 !important;
+                fill: #222 !important;                    
+            }
+
+            rect.highcharts-point {
+                fill: #FF545B !important;
+                background: #FF545B !important;
+                stroke-width: 0;
+            }
+
+            // 마이나스 데이터인 경우                    
+            rect.highcharts-point.highcharts-negative {
+                fill: #3655D6 !important;
+                background: #3655D6 !important;
+            }
+
+            .highcharts-label {
+
+                text,
+                tspan {
+                    font-size: 11px !important;
+                    color: #656D7E !important;
+                    fill: #656D7E !important;
+                    text-shadow: none;
+                    stroke-width: 0;
+                    font-weight: $f_sizeN !important;
+                }
+            }
+
+            .highcharts-axis-labels text {
+                font-size: 12px !important;
+                color: #656d7e !important;
+                fill: #656d7e !important;
+                font-weight: 400 !important;
+            }
+
+        }
+        .차트설명주석 {
+            display: block;
+            text-align: right;
+            width: 100%;
+            font-size: 11px;
+            font-weight: 400;
+            color: #b1b9cb;
+        }
+    }
+
+    
+}
+
+.투자매력은 {
+    margin-top: 20px;
+    padding-top: 60px;
+    .box {
+        display: flex;            
+        align-items: center;
+        gap: 0 10px;
+        
+        .star_area {
+            display: inline-block;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: $f_sizeB;
+        color: #333;
+    }
+
+    .txt {
+        margin-top: 13px;
+        font-size: 13px;
+        color: #656d7e;
+    }
+    .contents.sub_con {
+        margin-top: 12px;        
+    }
+    .top_spider {
+        padding: 0;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        background-color: #f7f7f8;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        .left {
+            width: 430px;
+            padding: 30px 40px 0;
+            box-sizing: border-box;
+            flex-grow: 1;
+
+            .MRIchart_style {
+                width: 330px;
+                height: 260px;
+                // width: 98%;                
+                // height: 98%;                
+                margin: 0 auto;
+                box-sizing: border-box;
+
+                .highcharts-axis-labels {
+                    text {
+                        @include font-family;
+                        font-size: 14px !important;
+                        color: #656d7e !important;
+                        fill: #656d7e !important;
+                    }
+                }
+            }
+            .스파이더차트_스몰 {
+                display: flex;
+            }
+            .MRIchart_small_style {
+                width: 100px;
+                height: 100px;                
+                margin: 0 auto;
+                box-sizing: border-box;
+
+                .highcharts-title {                    
+                    @include font-family;
+                    font-weight: bold !important;
+                    font-size: 12px !important;
+                    color: #656d7e !important;
+                    fill: #656d7e !important;                    
+                }
+
+                .highcharts-axis-labels {
+                    text {
+                        @include font-family;
+                        font-size: 12px !important;
+                        color: #656d7e !important;
+                        fill: #656d7e !important;
+                    }
+                }
+                .highcharts-markers path {
+                    display: none;
+                }
+            }
+        }
+
+        .right {
+            width: calc(100% - 430px);
+            margin: 30px 30px 0 0;
+
+            .chart_area.diagnosis {
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                background-color: #fff;
+                box-sizing: border-box;
+                padding: 12px 10px;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .chart_area.diagnosis .chartData {
+                display: inline-block;
+                border-right: 1px solid #e7eaf2;
+                vertical-align: top;
+                text-align: center;
+                padding: 12px 0;
+                min-height: 103px;
+                box-sizing: border-box;
+                flex: 1;
+            }
+
+            .chart_area.diagnosis .chartData .charm {
+                position: relative;
+                font-size: 12px;
+                line-height: 1.5;
+                color: #656d7e;
+
+                .txt_guide {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: inline-block;
+                    padding: 10px 10px;
+                    cursor: pointer;
+                }
+
+                .tooltip {
+                    display: none;
+                    position: absolute;
+                    right: 5px;
+                    top: 20px;
+                    padding: 20px;
+                    width: 280px;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 20px 0 rgba(101, 109, 126, 0.08);
+                    border: solid 1px #222;
+                    background-color: #fff;
+                    text-align: left;
+                    z-index: 1;
+                    .t_title {
+                        font-size: 15px;
+                        font-weight: $f_sizeB;                        
+                        color: #333;
+                        text-align: left;
+                    }
+                    .t_txt {
+                        margin-top: 15px;
+                        font-size: 13px;                        
+                        line-height: 1.62;                        
+                        text-align: left;
+                        color: #656d7e;                        
+                    }
+                    .clse_tooltip {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        display: inline-block;
+                        cursor: pointer;
+                        text-align: left;
+                        font-size: 0;                        
+                        width: 24px;
+                        height: 24px;
+                        &::before {
+                            content: "";
+                            height: 18px;
+                            border-left: 2px solid #bfc6d9;
+                            position: absolute;
+                            transform: rotate(-45deg);
+                            top: 5px;
+                            left: 12px;
+                        }
+                        &::after {
+                            content: "";
+                            height: 18px;
+                            border-left: 2px solid #bfc6d9;
+                            position: absolute;
+                            transform: rotate(45deg);
+                            top: 5px;
+                            left: 12px;
+                        }
+                    }
+                }
+
+            }
+
+            .chart_area.diagnosis .chartData .charm strong {
+                font-weight: $f_sizeB;
+            }
+
+            .chart_area.diagnosis .chartData .charm_num {
+                // display: flex;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.47;
+                letter-spacing: -1px;
+                text-align: center;
+                color: rgb(147, 147, 147);
+
+                strong {
+                    font-size: 26px;
+                    font-weight: $f_sizeB;
+                    line-height: 1.47;
+                    text-align: center;
+                    color: #222;
+                }
+
+                padding-bottom: 10px;
+            }
+
+            .chart_area.diagnosis .difference {
+                box-sizing: border-box;
+                padding: 5px 10px 10px;
+                flex-basis: 260px;
+            }
+
+            .chart_area.diagnosis .difference .dt {
+                font-size: 18px;
+                text-align: left;
+                color: #333;
+            }
+
+            .chart_area.diagnosis .difference .dt:nth-child(3) {
+                font-size: 12px;
+                line-height: 1.5;
+                color: #656d7e;
+                margin-top: 10px;
+            }
+
+            .chart_area.diagnosis .difference .dt strong {
+                display: inline-block;
+                color: #3655d6;
+            }
+
+            .chart_area.diagnosis .difference .dd {
+                display: inline-block;
+                margin-top: 2px;
+                font-size: 10px;
+                letter-spacing: normal;
+                color: #b1b9cb;
+                vertical-align: top;
+            }
+
+            .chart_area.diagnosis .data_attainment {
+                width: 100%;
+                border-top: 1px solid #e7eaf2;
+                padding: 12px 5px 0;
+                position: relative;
+            }
+
+            .chart_area.diagnosis .data_attainment ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .chart_area.diagnosis .data_attainment ul li {
+                display: inline-block;
+                font-size: 11px;
+                line-height: 1.18;
+                color: #656d7e;
+            }
+
+            .chart_area.diagnosis .data_attainment ul li span {
+                color: #333;
+                font-weight: 500;
+                padding-left: 7px;
+            }
+
+            .chart_area.diagnosis .data_attainment ul li b {
+                color: #333;
+                font-weight: 300;
+                padding-left: 1px;
+            }
+
+            .chart_table {
+                position: relative;
+                width: 100%;
+                padding: 15px 20px;
+                box-sizing: border-box;
+                background-color: #eaedf5;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 18px;
+                    background-image: linear-gradient(to bottom, #dbdfea, #eaedf5);
+                }
+
+            }
+
+            .chart_table .tableRanking.table_alloca {
+                width: 100%;
+
+                td {
+                    vertical-align: middle;
+                    padding: 3px 0;
+                }
+
+                .star_area.w12 .starR {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            .chart_table .tableRanking.table_alloca .title {
+                span {
+                    font-size: 12px;
+                    letter-spacing: -0.6px;
+                    text-align: left;
+                    color: #656d7e;
+                }
+            }
+        }
+    }
+
+    .mid_column {
+        .report_title {
+            padding: 10.5px 20px;
+            background-color: #374b9d;
+            font-size: 18px;
+            font-weight: $f_sizeB;
+            letter-spacing: -0.45px;
+            color: #fff;
+        }
+
+        .con {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            padding: 40px 15px;
+            border-bottom: 1px solid #e7eaf2;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .left {
+                width: 400px;
+                flex-grow: 1;
+
+                .alloca_star {
+                    flex-wrap: wrap;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px 10px;
+
+                    .alloca_box {
+                        flex: 1;
+                        display: inline-block;
+                        vertical-align: bottom;
+                        flex-basis: auto;
+                        // margin-left: 19px;
+                        padding-left: 19px;
+
+                        .small_star {
+                            .title {
+                                padding-bottom: 8px;
+                                font-size: 14px;
+                                font-weight: $f_sizeN;
+                                letter-spacing: -0.7px;
+                                color: #656d7e;
+                            }
+
+                            .star_area {
+                                display: inline-block;
+                                overflow: hidden;
+
+                                .starRev {
+                                    .starR {
+                                        width: 12px;
+                                        height: 12px;
+
+                                    }
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                            padding-left: 0;
+                            padding-right: 7px;
+                            // flex-basis: 190px;
+                            border-right: 1px solid #e7eaf2;
+
+                            .title {
+                                padding-bottom: 7px;
+                                font-size: 15px;
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.75px;
+                                color: #333;
+                            }
+
+                            .star_area {
+                                .starRev {
+                                    .starR {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .txt {
+                        flex-wrap: wrap;
+                        margin-top: 44px;
+                        font-size: 13px;
+                        line-height: 1.54;
+                        color: #656d7e;
+                    }
+
+                    .leader_num {
+                        clear: both;
+                        display: block;
+                        font-size: 11px;
+                        text-align: left;
+                        padding-top: 7px;
+                        color: #656d7e;
+                    }
+                }
+            }
+
+            .right {
+                width: calc(100% - 320px);
+                margin-left: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                gap: 15px 0;
+
+                .containerDiagnosis {
+                    // flex: 1 1 150px;                    
+                    width: 150px;
+                    height: 190px;
+                }
+
+                // .containerfinancials5:first-of-type:nth-last-of-type(1),
+                // .containerfinancials5:first-of-type:nth-last-of-type(1)~.containerfinancials5 {
+                //     width: 100%;
+                // }
+
+                // .containerfinancials5:first-of-type:nth-last-of-type(2),
+                // .containerfinancials5:first-of-type:nth-last-of-type(2)~.containerfinancials5 {
+                //     width: calc(100% / 2);
+                // }
+
+                // .containerfinancials5:first-of-type:nth-last-of-type(3),
+                // .containerfinancials5:first-of-type:nth-last-of-type(3)~.containerfinancials5 {
+                //     width: calc(100% / 3);
+                // }
+
+                // .containerfinancials5:first-of-type:nth-last-of-type(4),
+                // .containerfinancials5:first-of-type:nth-last-of-type(4)~.containerfinancials5 {
+                //     width: calc(100% / 2);
+                // }
+
+                // .containerfinancials5:nth-of-type(4),
+                // .containerfinancials5:nth-of-type(5) {
+                //     display: inline-block;
+                //     width: calc(100% / 2);
+                //     height: 180px;
+                // }
+
+                .chart_legend {
+                    flex-wrap: wrap;
+                    display: block;
+                    width: 100%;
+                    border-radius: 5px;
+                    margin-bottom: 17px;
+                    text-align: center;
+                }
+
+                .chart_legend li {
+                    display: inline-block;
+                }
+
+                .chart_legend li span {
+                    display: inline-block;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    padding: 0 8px;
+                }
+
+                .chart_legend li span i {
+                    display: inline-block;
+                    margin-bottom: 1px;
+                    margin-right: 5px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                }
+
+                .chart_legend li:nth-child(1) span i {
+                    background: #3655d6;
+                }
+
+                .chart_legend li:nth-child(2) span i {
+                    background: #656d7e;
+                }
+
+                .chart_legend li:nth-child(3) span i {
+                    background: #bdc8d8;
+                }
+            }
+        }
+    }
+}
+.f_main {
+    margin-top: 0;
+    padding: 16px 20px;
+    background-color: #eaedf5;
+    .copyright {
+        font-size: 11px;        
+        line-height: 1.73;
+        letter-spacing: -0.28px !important;        
+        color: #b1b9cb;        
+    }    
+    .f_logo {
+        display: block;
+        margin-top: 10px;
+    }
+}

@@ -394,9 +394,40 @@ $(document).ready(function () {
         $(this).addClass('active')
     });
     
-    // 재무분석 - 개요 캔들차트 3개월 6개월 1년 3년 10년 탭 선택 스크립트
+    // 상단 업데이트 전체 소식 레이어 팝업
+    $('.종목명 .업데이트소식 .more_box, .종목명 .업데이트소식 .upData_Swiper').on('click', function () {
+        $('.종목명 .업데이트소식 .updata_allList').show();
+    });
+    $('.종목명 .업데이트소식 .updata_allList').on('click', function () {
+        $(this).hide();
+    });
+
+    // active 클래스 넣고 빼는 함수
+    function toggleActiveClass(element) {
+        element.addClass('active').siblings().removeClass('active');
+    }    
+    // 클릭 이벤트 처리
+    $('.주가차트 .chart_box .period_tabs li').on('click', function () {
+        toggleActiveClass($(this));
+    });    
+
+    // 툴팁
+    $(".txt_guide").click(function(e) {
+        e.stopPropagation();
+        $(this).siblings(".tooltip").toggle();
+    }); 
+    $(".clse_tooltip").click(function() {
+        $(".tooltip").hide();
+    });       
+    $(document).click(function(e) {
+        if (!$(e.target).closest('.tooltip').length) {
+            $(".tooltip").hide();
+        }
+    });
+
+    // 개요 캔들차트 3개월 6개월 1년 3년 10년 탭 선택 스크립트
     var tabList = document.querySelectorAll('.period_tabs > li');
-    var chartList = document.querySelectorAll('.BICchart_style');    
+    var chartList = document.querySelectorAll('.BICchart_style');
     for (let i = 0; i < tabList.length; i++) {
         var tab = tabList[i];
         var chart = chartList[i];
@@ -413,9 +444,42 @@ $(document).ready(function () {
             targetChart.style.display = 'block';
 
             // 차트 다시 그리기
-            var chartObj = Highcharts.charts.find(chart => chart.renderTo.id === targetChart.id);
-            chartObj.reflow();
+            // var chartObj = Highcharts.charts.find(chart => chart.renderTo.id === targetChart.id);
+            // chartObj.reflow();
         });
+    }
+
+    // 페이지내 scrollIntoView 스크롤 이동
+    function scrollToElement(selector, block) {
+        var targetElement = $(selector);
+        if (targetElement.length > 0) {
+            targetElement[0].scrollIntoView({
+                behavior: 'smooth',
+                block: block,                
+            });
+        }
+    }    
+    $('.주가차트 .오른쪽차트영역 .박스레이아웃.밸류에이션').on('click', function () {
+        scrollToElement('.벨류에이션', 'start');
+    });    
+    $('.주가차트 .오른쪽차트영역 .박스레이아웃.수급분석시그널').on('click', function () {
+        scrollToElement('.수급분석', 'start');
+    });
+    $('.주가차트 .오른쪽차트영역 .박스레이아웃.투자매력').on('click', function () {
+        scrollToElement('.투자매력은', 'start');
+    });
+
+    // 수급분석 차트 스크립트
+    var $initialElement = $(".시그널.active");                    
+    var backgroundColors = {
+        "매우약함": "#3655D6",
+        "약함": "#3655D6",
+        "보통": "#58BA62",
+        "강함": "#FF545B",
+        "매우강함": "#FF545B"
+    };
+    if (backgroundColors.hasOwnProperty($initialElement.text())) {
+        $initialElement.prevAll().andSelf().css("background-color", backgroundColors[$initialElement.text()]);
     }
 
     // 자세히보기 열기닫기

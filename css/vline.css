@@ -7842,6 +7842,1472 @@ input[type=radio]:checked:before {
   color: #656d7e;
 }
 
+/* 전반적인 스타일 요소를 담당하는 파일 */
+.종목명 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 20px;
+}
+.종목명 .company_logo {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-color: #f4f6fa;
+  border-radius: 50%;
+}
+.종목명 .company_logo .logo {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #e7eaf2;
+  box-sizing: border-box;
+}
+.종목명 .company_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px 10px;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 3px 0;
+  width: calc(100% - 90px);
+}
+.종목명 .company_info .company_nm {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  max-width: 90%;
+}
+.종목명 .company_info .company_nm a {
+  width: 100%;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.7px !important;
+  color: #222;
+}
+.종목명 .company_info .ticker {
+  font-size: 16px;
+  line-height: 1.31;
+  letter-spacing: -0.4px !important;
+  color: #b1b9cb;
+}
+.종목명 .company_info .detail {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 9.5px;
+  width: 100%;
+}
+.종목명 .company_info .detail .num > span {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #222;
+}
+.종목명 .company_info .detail .per {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.35px !important;
+  text-align: left;
+}
+.종목명 .company_info .detail .day {
+  font-size: 12px;
+  line-height: 2.5;
+  letter-spacing: -0.3px !important;
+  color: #b1b9cb;
+}
+.종목명 .업데이트소식 {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #fdfbf7;
+  padding: 0 60px 0 80px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: solid 1px #fbf4ea;
+}
+.종목명 .업데이트소식 .more_box {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3px 20px 17px;
+}
+.종목명 .업데이트소식 .more_box .more {
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #bfc6d9;
+  border-right: 2px solid #bfc6d9;
+  display: inline-block;
+  transform: rotate(135deg);
+}
+.종목명 .업데이트소식 .updata {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background-color: #ffea97;
+  font-size: 11px;
+  line-height: 1.27;
+  text-align: center;
+  color: #222;
+}
+.종목명 .업데이트소식 .upData_Swiper {
+  overflow: hidden;
+  height: 40px;
+}
+.종목명 .업데이트소식 .upData_Swiper > .swiper-wrapper {
+  transition-timing-function: linear;
+}
+.종목명 .업데이트소식 .upData_Swiper .swiper-slide {
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+}
+.종목명 .업데이트소식 .upData_Swiper .swiper-slide:first-child .txt {
+  margin-left: 0;
+}
+.종목명 .업데이트소식 .txt {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #656d7e;
+  margin: 10px 0;
+  margin-left: 60px;
+  box-sizing: border-box;
+  max-width: 100%;
+  white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+  overflow: hidden; /* 텍스트를 넘어간 부분을 숨김 */
+  text-overflow: ellipsis;
+}
+.종목명 .업데이트소식 .txt b {
+  color: #222;
+  padding: 0 2px;
+}
+.종목명 .업데이트소식 .txt b.increase {
+  font-size: 13px;
+  color: #ff545b;
+}
+.종목명 .업데이트소식 .txt b.decrease {
+  font-size: 13px;
+  color: #3655d6;
+}
+.종목명 .업데이트소식 .updata_allList {
+  display: none;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: solid 1px #fbf4ea;
+  background-color: #fdfbf7;
+  z-index: 99;
+}
+.종목명 .업데이트소식 .updata_allList ul {
+  margin-left: 80px;
+}
+.종목명 .업데이트소식 .updata_allList ul li {
+  position: relative;
+  padding-left: 14px;
+  margin: 10px 0 15px;
+  white-space: normal;
+  overflow: initial;
+}
+.종목명 .업데이트소식 .updata_allList ul li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #b1b9cb;
+}
+.종목명 .업데이트소식 .updata_allList .clse {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  text-align: right;
+  padding: 0 20px 20px;
+  font-size: 12px;
+  color: #b1b9cb;
+}
+.종목명 .업데이트소식 .updata_allList .clse::after {
+  content: "";
+  position: relative;
+  top: 2px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #bfc6d9;
+  border-right: 2px solid #bfc6d9;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.주가차트 {
+  margin-top: 30px;
+}
+.주가차트 .summary_Box {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 19.5px;
+}
+.주가차트 .chart_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 11px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid 1px #e7eaf2;
+}
+.주가차트 .chart_box .period_tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 0 19px;
+}
+.주가차트 .chart_box .period_tabs li {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+}
+.주가차트 .chart_box .period_tabs li.active {
+  padding-bottom: 9px;
+  font-weight: 700;
+  border-bottom: 3px solid #222;
+}
+.주가차트 .chart_box .period_Data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0 20px;
+  margin-top: 20px;
+  padding: 15px 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #f4f6fa;
+}
+.주가차트 .chart_box .period_Data dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+}
+.주가차트 .chart_box .period_Data .title {
+  font-size: 11px;
+  color: #656d7e;
+}
+.주가차트 .chart_box .period_Data .same {
+  font-size: 12px;
+  font-weight: 700;
+  color: #656d7e;
+}
+.주가차트 .chart_box .period_Data .총액 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+.주가차트 .chart_box .period_Data .추세 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+.주가차트 .BICchart_style {
+  margin-top: 30px;
+  width: 100%;
+  height: 380px;
+  box-sizing: border-box;
+  padding: 0 19px;
+}
+.주가차트 .BICchart_style .highcharts-button-box {
+  cursor: pointer;
+  flex: 1;
+  padding: 8px 0;
+  border-bottom: 1px solid #000;
+  font-size: 13px;
+  letter-spacing: -0.65px;
+  text-align: center;
+  color: #222;
+}
+.주가차트 .BICchart_style .highcharts-navigator-xaxis {
+  font-size: 0;
+  opacity: 0;
+}
+.주가차트 .BICchart_style .highcharts-series-label text {
+  font-size: 0 !important;
+}
+.주가차트 .BICchart_style .highcharts-input-group,
+.주가차트 .BICchart_style .highcharts-navigator {
+  display: none;
+}
+.주가차트 .BICchart_style .highcharts-range-selector-group .highcharts-label {
+  display: none !important;
+  font-size: 0 !important;
+}
+.주가차트 .BICchart_style .highcharts-point-up {
+  fill: rgb(252, 79, 79);
+  stroke: rgb(252, 79, 79);
+}
+.주가차트 .BICchart_style .highcharts-point-down,
+.주가차트 .BICchart_style .highcharts-point-down-bearish-up {
+  fill: rgb(54, 85, 214);
+  stroke: rgb(54, 85, 214);
+}
+.주가차트 .오른쪽차트영역 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+}
+.주가차트 .오른쪽차트영역 .박스레이아웃 {
+  cursor: pointer;
+  width: 260px;
+  padding: 19px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #f4f6fa;
+}
+.주가차트 .오른쪽차트영역 .박스레이아웃 .title {
+  cursor: pointer;
+  position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  width: 100%;
+}
+.주가차트 .오른쪽차트영역 .박스레이아웃 .title::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #bfc6d9;
+  border-right: 2px solid #bfc6d9;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: 3px;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .box {
+  position: relative;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .box .평가 {
+  position: absolute;
+  right: 13px;
+  top: -3px;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart {
+  margin-top: 45px;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line {
+  position: relative;
+  width: calc(100% - 30px);
+  box-sizing: border-box;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e6e7f4;
+  margin: 0 auto;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line::after {
+  left: auto;
+  right: -15px;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line .situation {
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: -35px;
+  width: 56px;
+  text-align: center;
+  margin-left: -27px;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line .situation span {
+  position: relative;
+  font-size: 12px;
+  line-height: 2.5;
+  color: #b1b9cb;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line .situation span::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  content: " ";
+  position: absolute;
+  top: 24px;
+  pointer-events: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff545b;
+  z-index: 90;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line .g_action {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  margin-left: -5px;
+  z-index: 2;
+  display: inline-block;
+  background: #ff545b;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  font-size: 0;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .line .g_action::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  font-size: 0;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .adequate {
+  text-align: center;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .adequate span {
+  display: inline-block;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2.5;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .adequate i {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #999;
+  width: 8px;
+  height: 8px;
+  margin: 0 1px 1px;
+  opacity: 0.67;
+}
+.주가차트 .오른쪽차트영역 .밸류에이션 .value_chart .no_data {
+  position: relative;
+  top: -20px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  padding: 5px 5px;
+  border-radius: 2px;
+  background-color: #e6e7f4;
+  text-align: center;
+  font-size: 13px;
+  color: #222;
+}
+.주가차트 .오른쪽차트영역 .수급분석시그널 .box {
+  position: relative;
+}
+.주가차트 .오른쪽차트영역 .수급분석시그널 .box .평가 {
+  position: absolute;
+  right: 13px;
+  top: -3px;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.주가차트 .오른쪽차트영역 .투자매력 {
+  cursor: pointer;
+}
+.주가차트 .오른쪽차트영역 .투자매력 .star_area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 7px;
+  margin-top: 25px;
+}
+.주가차트 .오른쪽차트영역 .투자매력 .star_area .star_ranking span {
+  font-size: 12px;
+  color: #656d7e;
+}
+.주가차트 .오른쪽차트영역 .투자매력 .star_area .star_ranking span strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff545b;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 {
+  border: solid 1px #e7eaf2;
+  background-color: #fff;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box {
+  position: relative;
+  display: flex;
+  gap: 0 11px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .day {
+  font-size: 12px;
+  color: #b1b9cb;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .title {
+  width: auto;
+  cursor: text;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .title::after {
+  display: none;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .txt_guide {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .tooltip {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  padding: 20px;
+  width: 280px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(101, 109, 126, 0.08);
+  border: solid 1px #222;
+  background-color: #fff;
+  z-index: 1;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .tooltip .t_title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .tooltip .t_txt {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.62;
+  color: #656d7e;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .tooltip .clse_tooltip {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .tooltip .clse_tooltip::before {
+  content: "";
+  height: 18px;
+  border-left: 2px solid #bfc6d9;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 5px;
+  left: 12px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .box .tooltip .clse_tooltip::after {
+  content: "";
+  height: 18px;
+  border-left: 2px solid #bfc6d9;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 5px;
+  left: 12px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .chart_layout {
+  margin-top: 10px;
+  width: 100%;
+  height: 100px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .chart_layout .highcharts-grid-line {
+  display: none;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .chart_layout .highcharts-label text,
+.주가차트 .오른쪽차트영역 .AI주가예측 .chart_layout .highcharts-label tspan {
+  font-size: 11px !important;
+  color: #656d7e !important;
+  fill: #656d7e !important;
+  font-weight: normal !important;
+  text-shadow: none;
+  stroke-width: 0;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 {
+  display: flex;
+  margin-top: 10px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .주가추세,
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .기간상승률 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px 0;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .주가추세 {
+  width: 110px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .기간상승률 {
+  gap: 3px 0;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .sub_title {
+  font-size: 11px;
+  letter-spacing: -0.28px;
+  color: #656d7e;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .상승,
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .하락,
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .보합 {
+  display: inline-block;
+  padding: 4px 6px;
+  width: 32px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: #ff545b;
+  font-size: 11px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .하락 {
+  background-color: #3655d6;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .보합 {
+  background-color: #bdc8d8;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .거래정지종목 {
+  font-size: 0.75rem;
+  font-weight: 300;
+  font-weight: 500;
+  color: #222;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .increase,
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .decrease {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .same {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #bdc8d8;
+}
+.주가차트 .기업개요 {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 15px;
+  margin-top: 30px;
+}
+.주가차트 .기업개요 strong {
+  line-height: 1.7;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+}
+.주가차트 .기업개요 p {
+  font-size: 13px;
+  line-height: 1.77;
+  color: #656d7e;
+}
+
+.투자지표 {
+  margin-top: 80px;
+}
+.투자지표 .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.투자지표 .summary_Box {
+  margin-top: 12px;
+}
+.투자지표 .summary_Box .top {
+  display: flex;
+  gap: 0 20px;
+}
+.투자지표 .summary_Box .top .left,
+.투자지표 .summary_Box .top .right {
+  padding: 20px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid 1px #efeff2;
+}
+.투자지표 .summary_Box .top .left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 50px;
+}
+.투자지표 .summary_Box .top .box {
+  flex: 1 1 20%;
+  max-width: 20%;
+}
+.투자지표 .summary_Box .top .box .line1,
+.투자지표 .summary_Box .top .box .line2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+}
+.투자지표 .summary_Box .top .right .box {
+  flex: 1;
+}
+.투자지표 .summary_Box .top .line1 .th {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.46px;
+  color: #222;
+}
+.투자지표 .summary_Box .top .line1 .sum {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+}
+.투자지표 .summary_Box .top .line2 {
+  margin-top: 2px;
+}
+.투자지표 .summary_Box .top .line2 .th {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #b1b9cb;
+}
+.투자지표 .summary_Box .top .line2 .sum {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  color: #656d7e;
+}
+.투자지표 .chart_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 50px;
+  margin-top: 30px;
+}
+.투자지표 .chart_box .box {
+  width: 100%;
+}
+.투자지표 .chart_box .c_title {
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.31;
+  letter-spacing: -0.33px;
+  text-align: left;
+  color: #222;
+}
+.투자지표 .chart_box .financials_style {
+  width: 100%;
+  height: 200px;
+  margin-top: 15px;
+}
+.투자지표 .chart_box .financials_style rect.highcharts-point {
+  fill: #3655d6 !important;
+  background: #3655d6 !important;
+  stroke-width: 0;
+}
+.투자지표 .chart_box .financials_style rect.highcharts-point.point_color {
+  fill: #dbdfed !important;
+  background: #dbdfed !important;
+}
+.투자지표 .chart_box .financials_style rect.highcharts-point.decrease_color {
+  fill: rgba(0, 147, 255, 0.3490196078) !important;
+  background: rgba(0, 147, 255, 0.3490196078) !important;
+}
+.투자지표 .chart_box .financials_style .highcharts-point.highcharts-negative.highcharts-color-0 {
+  fill: #26ABFF;
+  background: #26ABFF;
+}
+.투자지표 .chart_box .financials_style .highcharts-label text,
+.투자지표 .chart_box .financials_style .highcharts-label tspan {
+  font-size: 12px !important;
+  color: #707070 !important;
+  fill: #707070 !important;
+  text-shadow: none;
+  stroke-width: 0;
+  font-weight: 400 !important;
+}
+.투자지표 .chart_box .financials_style .highcharts-axis-labels text {
+  font-size: 10px !important;
+  color: #656d7e !important;
+  fill: #656d7e !important;
+  font-weight: 400 !important;
+}
+
+.벨류에이션 {
+  margin-top: 20px;
+  padding-top: 60px;
+}
+.벨류에이션 .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.벨류에이션 .txt {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #656d7e;
+}
+.벨류에이션 .chart_box {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: solid 1px #e7eaf2;
+}
+.벨류에이션 .chart_box .value_data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0 100px;
+  padding: 11px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #f4f6fa;
+}
+.벨류에이션 .chart_box .value_data .title {
+  font-size: 12px;
+  font-weight: 400;
+  color: #656d7e;
+}
+.벨류에이션 .chart_box .value_data dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+}
+.벨류에이션 .chart_box .value_data dl .현재주가 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #677fe0;
+}
+.벨류에이션 .chart_box .value_data dl .적정주가 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+.벨류에이션 .chart_box .value_data dl .평가 {
+  border-radius: 6px;
+}
+.벨류에이션 .chart_box .value_data dl .평가 span {
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.벨류에이션 .chart_box .bandchart_layout {
+  width: 100%;
+  max-width: 95%;
+  height: 520px;
+  margin: 25px 20px 0;
+  box-sizing: border-box;
+}
+.벨류에이션 .bandchart_sume {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f4f6fa;
+  padding: 16px 20px;
+}
+.벨류에이션 .bandchart_sume .sum_txt {
+  font-size: 13px;
+  color: #656d7e;
+}
+.벨류에이션 .bandchart_sume .sum_box {
+  margin-top: 15px;
+}
+.벨류에이션 .bandchart_sume .sum_box .title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+}
+.벨류에이션 .bandchart_sume .sum_box ul {
+  margin-top: 7px;
+}
+.벨류에이션 .bandchart_sume .sum_box ul li {
+  font-size: 13px;
+  line-height: 1.77;
+  letter-spacing: -0.33px;
+  color: #656d7e;
+}
+.벨류에이션 .bandchart_sume .sum_box ul li i {
+  display: inline-block;
+  padding-right: 5px;
+  line-height: 1.77;
+  color: #656d7e;
+  font-style: normal;
+}
+
+.수급분석 {
+  margin-top: 20px;
+  padding-top: 60px;
+}
+.수급분석 .box {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.수급분석 .box .star_area {
+  display: inline-block;
+}
+.수급분석 .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.수급분석 .txt {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #656d7e;
+}
+.수급분석 .수급분석_신호 {
+  display: flex;
+  align-items: center;
+  gap: 0 2px;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px 0;
+  background-color: #fff;
+  user-select: none;
+  -moz-user-select: none; /* Firefox 지원 */
+  -webkit-user-select: none; /* Chrome, Safari, Edge 등 지원 */
+}
+.수급분석 .수급분석_신호 .시그널 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: calc((100% - 100px) / 5);
+  width: 54px;
+  height: 3px;
+  background: #dbdfed;
+  font-size: 11px;
+  line-height: 1.27;
+  letter-spacing: -0.55px;
+  color: #fff;
+  text-indent: -999px;
+}
+.수급분석 .수급분석_신호 .시그널.active {
+  text-indent: 0;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+.수급분석 .chart_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  margin-top: 25px;
+}
+.수급분석 .chart_box div {
+  flex: 1 1 40%;
+  width: 100%;
+}
+.수급분석 .chart_box .supplychart_style {
+  width: 100%;
+  height: 240px;
+  margin-top: 15px;
+}
+.수급분석 .chart_box .supplychart_style .highcharts-axis-line {
+  display: none !important;
+}
+.수급분석 .chart_box .supplychart_style .highcharts-title {
+  font-family: "Spoqa Han Sans Neo", "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: normal;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  color: #222 !important;
+  fill: #222 !important;
+}
+.수급분석 .chart_box .supplychart_style rect.highcharts-point {
+  fill: #FF545B !important;
+  background: #FF545B !important;
+  stroke-width: 0;
+}
+.수급분석 .chart_box .supplychart_style rect.highcharts-point.highcharts-negative {
+  fill: #3655D6 !important;
+  background: #3655D6 !important;
+}
+.수급분석 .chart_box .supplychart_style .highcharts-label text,
+.수급분석 .chart_box .supplychart_style .highcharts-label tspan {
+  font-size: 11px !important;
+  color: #656D7E !important;
+  fill: #656D7E !important;
+  text-shadow: none;
+  stroke-width: 0;
+  font-weight: 400 !important;
+}
+.수급분석 .chart_box .supplychart_style .highcharts-axis-labels text {
+  font-size: 12px !important;
+  color: #656d7e !important;
+  fill: #656d7e !important;
+  font-weight: 400 !important;
+}
+.수급분석 .chart_box .차트설명주석 {
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 400;
+  color: #b1b9cb;
+}
+
+.투자매력은 {
+  margin-top: 20px;
+  padding-top: 60px;
+}
+.투자매력은 .box {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.투자매력은 .box .star_area {
+  display: inline-block;
+}
+.투자매력은 .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.투자매력은 .txt {
+  margin-top: 13px;
+  font-size: 13px;
+  color: #656d7e;
+}
+.투자매력은 .contents.sub_con {
+  margin-top: 12px;
+}
+.투자매력은 .top_spider {
+  padding: 0;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  background-color: #f7f7f8;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.투자매력은 .top_spider .left {
+  width: 430px;
+  padding: 30px 40px 0;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.투자매력은 .top_spider .left .MRIchart_style {
+  width: 330px;
+  height: 260px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.투자매력은 .top_spider .left .MRIchart_style .highcharts-axis-labels text {
+  font-family: "Spoqa Han Sans Neo", "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: normal;
+  font-size: 14px !important;
+  color: #656d7e !important;
+  fill: #656d7e !important;
+}
+.투자매력은 .top_spider .left .스파이더차트_스몰 {
+  display: flex;
+}
+.투자매력은 .top_spider .left .MRIchart_small_style {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-title {
+  font-family: "Spoqa Han Sans Neo", "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: normal;
+  font-weight: bold !important;
+  font-size: 12px !important;
+  color: #656d7e !important;
+  fill: #656d7e !important;
+}
+.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-axis-labels text {
+  font-family: "Spoqa Han Sans Neo", "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: normal;
+  font-size: 12px !important;
+  color: #656d7e !important;
+  fill: #656d7e !important;
+}
+.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-markers path {
+  display: none;
+}
+.투자매력은 .top_spider .right {
+  width: calc(100% - 430px);
+  margin: 30px 30px 0 0;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 12px 10px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData {
+  display: inline-block;
+  border-right: 1px solid #e7eaf2;
+  vertical-align: top;
+  text-align: center;
+  padding: 12px 0;
+  min-height: 103px;
+  box-sizing: border-box;
+  flex: 1;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #656d7e;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .txt_guide {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .tooltip {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  padding: 20px;
+  width: 280px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(101, 109, 126, 0.08);
+  border: solid 1px #222;
+  background-color: #fff;
+  text-align: left;
+  z-index: 1;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .tooltip .t_title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  text-align: left;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .tooltip .t_txt {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.62;
+  text-align: left;
+  color: #656d7e;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .tooltip .clse_tooltip {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .tooltip .clse_tooltip::before {
+  content: "";
+  height: 18px;
+  border-left: 2px solid #bfc6d9;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 5px;
+  left: 12px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm .tooltip .clse_tooltip::after {
+  content: "";
+  height: 18px;
+  border-left: 2px solid #bfc6d9;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 5px;
+  left: 12px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm strong {
+  font-weight: 700;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm_num {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.47;
+  letter-spacing: -1px;
+  text-align: center;
+  color: rgb(147, 147, 147);
+  padding-bottom: 10px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .chartData .charm_num strong {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.47;
+  text-align: center;
+  color: #222;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .difference {
+  box-sizing: border-box;
+  padding: 5px 10px 10px;
+  flex-basis: 260px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .difference .dt {
+  font-size: 18px;
+  text-align: left;
+  color: #333;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .difference .dt:nth-child(3) {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #656d7e;
+  margin-top: 10px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .difference .dt strong {
+  display: inline-block;
+  color: #3655d6;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .difference .dd {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 10px;
+  letter-spacing: normal;
+  color: #b1b9cb;
+  vertical-align: top;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .data_attainment {
+  width: 100%;
+  border-top: 1px solid #e7eaf2;
+  padding: 12px 5px 0;
+  position: relative;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .data_attainment ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .data_attainment ul li {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.18;
+  color: #656d7e;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .data_attainment ul li span {
+  color: #333;
+  font-weight: 500;
+  padding-left: 7px;
+}
+.투자매력은 .top_spider .right .chart_area.diagnosis .data_attainment ul li b {
+  color: #333;
+  font-weight: 300;
+  padding-left: 1px;
+}
+.투자매력은 .top_spider .right .chart_table {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background-color: #eaedf5;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.투자매력은 .top_spider .right .chart_table::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 18px;
+  background-image: linear-gradient(to bottom, #dbdfea, #eaedf5);
+}
+.투자매력은 .top_spider .right .chart_table .tableRanking.table_alloca {
+  width: 100%;
+}
+.투자매력은 .top_spider .right .chart_table .tableRanking.table_alloca td {
+  vertical-align: middle;
+  padding: 3px 0;
+}
+.투자매력은 .top_spider .right .chart_table .tableRanking.table_alloca .star_area.w12 .starR {
+  width: 12px;
+  height: 12px;
+}
+.투자매력은 .top_spider .right .chart_table .tableRanking.table_alloca .title span {
+  font-size: 12px;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #656d7e;
+}
+.투자매력은 .mid_column .report_title {
+  padding: 10.5px 20px;
+  background-color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  color: #fff;
+}
+.투자매력은 .mid_column .con {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 40px 15px;
+  border-bottom: 1px solid #e7eaf2;
+}
+.투자매력은 .mid_column .con:last-child {
+  border-bottom: none;
+}
+.투자매력은 .mid_column .con .left {
+  width: 400px;
+  flex-grow: 1;
+}
+.투자매력은 .mid_column .con .left .alloca_star {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 10px;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box {
+  flex: 1;
+  display: inline-block;
+  vertical-align: bottom;
+  flex-basis: auto;
+  padding-left: 19px;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box .small_star .title {
+  padding-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.7px;
+  color: #656d7e;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box .small_star .star_area {
+  display: inline-block;
+  overflow: hidden;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box .small_star .star_area .starRev .starR {
+  width: 12px;
+  height: 12px;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 7px;
+  border-right: 1px solid #e7eaf2;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box:first-child .title {
+  padding-bottom: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  color: #333;
+}
+.투자매력은 .mid_column .con .left .alloca_star .alloca_box:first-child .star_area .starRev .starR {
+  width: 20px;
+  height: 20px;
+}
+.투자매력은 .mid_column .con .left .alloca_star .txt {
+  flex-wrap: wrap;
+  margin-top: 44px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #656d7e;
+}
+.투자매력은 .mid_column .con .left .alloca_star .leader_num {
+  clear: both;
+  display: block;
+  font-size: 11px;
+  text-align: left;
+  padding-top: 7px;
+  color: #656d7e;
+}
+.투자매력은 .mid_column .con .right {
+  width: calc(100% - 320px);
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px 0;
+}
+.투자매력은 .mid_column .con .right .containerDiagnosis {
+  width: 150px;
+  height: 190px;
+}
+.투자매력은 .mid_column .con .right .chart_legend {
+  flex-wrap: wrap;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 17px;
+  text-align: center;
+}
+.투자매력은 .mid_column .con .right .chart_legend li {
+  display: inline-block;
+}
+.투자매력은 .mid_column .con .right .chart_legend li span {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1.54;
+  padding: 0 8px;
+}
+.투자매력은 .mid_column .con .right .chart_legend li span i {
+  display: inline-block;
+  margin-bottom: 1px;
+  margin-right: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.투자매력은 .mid_column .con .right .chart_legend li:nth-child(1) span i {
+  background: #3655d6;
+}
+.투자매력은 .mid_column .con .right .chart_legend li:nth-child(2) span i {
+  background: #656d7e;
+}
+.투자매력은 .mid_column .con .right .chart_legend li:nth-child(3) span i {
+  background: #bdc8d8;
+}
+
+.f_main {
+  margin-top: 0;
+  padding: 16px 20px;
+  background-color: #eaedf5;
+}
+.f_main .copyright {
+  font-size: 11px;
+  line-height: 1.73;
+  letter-spacing: -0.28px !important;
+  color: #b1b9cb;
+}
+.f_main .f_logo {
+  display: block;
+  margin-top: 10px;
+}
+
 .modal {
   z-index: 99;
   padding: 0;
