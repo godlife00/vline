@@ -7761,6 +7761,16 @@ input[type=radio]:checked:before {
   font-size: 11px;
   color: #656d7e;
 }
+.주가차트 .chart_box .period_Data .increase {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fc4f4f;
+}
+.주가차트 .chart_box .period_Data .decrease {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3655d6;
+}
 .주가차트 .chart_box .period_Data .same {
   font-size: 12px;
   font-weight: 700;

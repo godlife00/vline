@@ -418,33 +418,7 @@ $(document).ready(function () {
             keyboardControl: true,   
             allowTouchMove: false, // 사용자가 스와이프를 터치하여 움직일 수 없게 설정
         });    
-    }, 2000); // 2초 후에 스크롤 랜더링합니다.
-
-    
-    // 상단 업데이트 소식 좌우 슬라이드 기능
-    setTimeout(() => {        
-        var swiper = new Swiper(".upDataFree_Swiper", {        
-            loop: true,
-            autoplay: {            
-                delay: 0,
-                disableOnInteraction: true,
-            },
-            spaceBetween: 60,
-            slidesPerView: 'auto',
-            speed: 15000,
-            grabCursor: true,
-            mousewheelControl: true,
-            keyboardControl: true,   
-            allowTouchMove: false, // 사용자가 스와이프를 터치하여 움직일 수 없게 설정
-        });    
-    }, 2000); // 2초 후에 스크롤 랜더링합니다.
-
-    // 상단 업데이트 전체 소식 레이어 팝업
-    $('.종목명 .업데이트소식 .more_box, .종목명 .업데이트소식 .upDataFree_Swiper').on('click', function () {
-        $('.premium_join').modal({
-            fadeDuration: 100
-        });
-    });
+    }, 2000); // 2초 후에 스크롤 랜더링합니다.    
     
     // active 클래스 넣고 빼는 함수
     function toggleActiveClass(element) {
