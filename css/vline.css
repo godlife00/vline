@@ -8379,6 +8379,10 @@ input[type=radio]:checked:before {
   margin: 25px 20px 0;
   box-sizing: border-box;
 }
+.벨류에이션 .chart_box .bandchart_layout .highcharts-label text {
+  display: none !important;
+  font-size: 0 !important;
+}
 .벨류에이션 .bandchart_sume {
   margin-top: 20px;
   border-radius: 10px;
@@ -8488,7 +8492,6 @@ input[type=radio]:checked:before {
 }
 .수급분석 .chart_box {
   display: flex;
-  flex-wrap: wrap;
   gap: 15px 25px;
   margin-top: 25px;
 }

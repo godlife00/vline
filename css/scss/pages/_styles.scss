@@ -1032,6 +1032,10 @@
             height: 520px;
             margin: 25px 20px 0;
             box-sizing: border-box;
+            .highcharts-label text {
+                display: none !important;
+                font-size: 0 !important;
+            }
 
         }
     }
@@ -1159,8 +1163,7 @@
     }
 
     .chart_box {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex;        
         gap: 15px 25px;
         margin-top: 25px;
         div {
