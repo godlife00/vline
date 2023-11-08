@@ -8444,7 +8444,7 @@ input[type=radio]:checked:before {
 .수급분석 {
   margin-top: 20px;
   padding-top: 60px;
-  padding-bottom: 150px;
+  padding-bottom: 56px;
 }
 .수급분석 .box {
   display: flex;
@@ -8556,7 +8556,7 @@ input[type=radio]:checked:before {
 .contents.sub_con .투자매력은 {
   margin-top: 20px;
   padding-top: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 56px;
 }
 
 .투자매력은 {
