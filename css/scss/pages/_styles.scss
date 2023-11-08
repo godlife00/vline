@@ -1240,11 +1240,27 @@
 }
 
 .contents.sub_con {
-    .투자매력은 {        
+    .투자매력은 {                
         margin-top: 20px;
         padding-top: 60px;        
-        padding-bottom: 56px;
+        padding-bottom: 16px;
     }
+}
+.blue_stocks_area + .sum_box {    
+    + .contents {        
+        margin-top: 0;        
+        padding-top: 0 !important;
+    }
+    + .contents.sub_con {
+        .contents.sub_con {            
+            margin-top: 0;
+        }        
+        .투자매력은 {                   
+            margin-top: 0;
+            padding-top: 0;                    
+        }
+    }
+
 }
 .투자매력은 {
     margin-top: 20px;
