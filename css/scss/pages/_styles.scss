@@ -956,6 +956,12 @@
     }
 }
 
+.contents.sub_con {
+    .벨류에이션 {        
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+}
 .벨류에이션 {
     margin-top: 20px;
     padding-top: 60px;
@@ -1032,7 +1038,7 @@
             height: 520px;
             margin: 25px 20px 0;
             box-sizing: border-box;
-            .highcharts-label text {
+            .highcharts-series-label text {
                 display: none !important;
                 font-size: 0 !important;
             }
@@ -1234,9 +1240,10 @@
 }
 
 .contents.sub_con {
-    .투자매력은 {
-        margin-top: 0px;
-        padding-top: 0px;
+    .투자매력은 {        
+        margin-top: 20px;
+        padding-top: 60px;        
+        padding-bottom: 50px;
     }
 }
 .투자매력은 {

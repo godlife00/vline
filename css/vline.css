@@ -8312,6 +8312,11 @@ input[type=radio]:checked:before {
   font-weight: 400 !important;
 }
 
+.contents.sub_con .벨류에이션 {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 .벨류에이션 {
   margin-top: 20px;
   padding-top: 60px;
@@ -8379,7 +8384,7 @@ input[type=radio]:checked:before {
   margin: 25px 20px 0;
   box-sizing: border-box;
 }
-.벨류에이션 .chart_box .bandchart_layout .highcharts-label text {
+.벨류에이션 .chart_box .bandchart_layout .highcharts-series-label text {
   display: none !important;
   font-size: 0 !important;
 }
@@ -8549,8 +8554,9 @@ input[type=radio]:checked:before {
 }
 
 .contents.sub_con .투자매력은 {
-  margin-top: 0px;
-  padding-top: 0px;
+  margin-top: 20px;
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 
 .투자매력은 {
