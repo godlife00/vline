@@ -479,11 +479,9 @@ $(document).ready(function () {
     function scrollToElement(selector, alignToTop) {
         const element = document.querySelector(selector);
         if(element) {
-            element.scrollIntoView({ behavior: 'smooth', block: alignToTop });
+            element.scrollIntoView({block: alignToTop });
         }
     }
-
-
 
     // 수급분석 차트 스크립트
     var $initialElement = $(".시그널.active");                    
