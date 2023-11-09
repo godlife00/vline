@@ -467,23 +467,19 @@ $(document).ready(function () {
         });
     }
 
-    // sessionStorage에서 scrollTo 값을 가져옵니다.
-    var scrollTo = sessionStorage.getItem('scrollTo');
-    
-    // 가져온 값이 '투자매력'이면 스크롤을 이동시킵니다.
-    if(scrollTo === '투자매력') {
-        scrollToElement('.투자매력은', 'start');
-        // 스크롤 이동 후에는 더 이상 이 값을 사용하지 않으므로 삭제합니다.
-        sessionStorage.removeItem('scrollTo');
-    }
-    function scrollToElement(selector, alignToTop) {
-        const element = document.querySelector(selector);
-        if(element) {
-            element.scrollIntoView({ behavior: 'smooth', block: alignToTop });
+    // 페이지내 scrollIntoView 스크롤 이동
+    function scrollToElement(selector, block) {
+        var targetElement = $(selector);
+        if (targetElement.length > 0) {
+            targetElement[0].scrollIntoView({
+                behavior: 'smooth',
+                block: block,                
+            });
         }
-    }
-
-
+    }        
+    $('.주가차트 .오른쪽차트영역 .박스레이아웃.수급분석시그널').on('click', function () {
+        scrollToElement('.수급분석', 'start');
+    });    
 
     // 수급분석 차트 스크립트
     var $initialElement = $(".시그널.active");                    
