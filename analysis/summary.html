@@ -320,7 +320,7 @@
                         <!-- //chart_box -->
     
                         <div class="오른쪽차트영역">
-                            <div class="박스레이아웃 밸류에이션" onclick="location.href='mri.html';">
+                            <div class="박스레이아웃 밸류에이션" onclick="sessionStorage.setItem('scrollTo', '밸류에이션'); location.href='mri.html';" style="cursor: pointer;">
                                 <div class="box">
                                     <h2 class="title">밸류에이션</h2>
                                     <a href="" class="평가 매우저평가">매우저평가</a>
@@ -370,7 +370,7 @@
                             <div class="박스레이아웃 수급분석시그널" onclick="sessionStorage.setItem('scrollTo', '수급분석시그널'); location.href='mri.html';" style="cursor: pointer;">
                                 <div class="box">
                                     <h2 class="title">수급분석</h2>
-                                    <a href="" class="평가 매우약함">매우약함</a>
+                                    <span class="평가 매우약함">매우약함</span>
                                 </div>                            
                             </div>
                             <!-- //수급분석시그널 -->
