@@ -798,6 +798,15 @@ body .numCunt::before {
 .table.data_txtR tbody td {
   text-align: right;
 }
+.table.data_txtR td span.ess {
+  display: none;
+}
+.table.data_txtR td span.deci {
+  display: block;
+}
+.table.txtInt td span.ess {
+  display: block;
+}
 .table.txtInt td span.deci {
   display: none;
 }
@@ -970,7 +979,7 @@ input[type=radio]:checked:before {
   background-position: right 0 !important;
 }
 .star_area.w12 .starR {
-  background-position: -14px 0;
+  background-position: -18px 0;
   background-size: auto 12px;
   width: 12px;
   height: 12px;
