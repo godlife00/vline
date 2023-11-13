@@ -475,7 +475,7 @@ $(document).ready(function () {
         scrollToElement('.투자매력은', 'start');
         // 스크롤 이동 후에는 더 이상 이 값을 사용하지 않으므로 삭제합니다.
         sessionStorage.removeItem('scrollTo');
-    }
+    }    
     function scrollToElement(selector, alignToTop) {
         const element = document.querySelector(selector);
         if(element) {

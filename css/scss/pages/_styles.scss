@@ -956,15 +956,15 @@
     }
 }
 
-.contents.sub_con {
-    .벨류에이션 {        
-        margin-top: 0px;
-        padding-top: 0px;
-    }
-}
+// .contents.sub_con {
+//     .벨류에이션 {        
+//         margin-top: 0px;
+//         padding-top: 0px;
+//     }
+// }
 .벨류에이션 {
     margin-top: 20px;
-    padding-top: 60px;
+    padding-top: 60px;    
 
     .title {
         font-size: 20px;
@@ -1109,9 +1109,8 @@
 }
 
 .수급분석 {
-    margin-top: 20px;
-    padding-top: 60px;
-    padding-bottom: 56px;
+    margin-top: 0;
+    padding-top: 0;    
 
     .box {
         display: flex;            
@@ -1234,9 +1233,7 @@
             font-weight: 400;
             color: #b1b9cb;
         }
-    }
-
-    
+    }    
 }
 
 .contents.sub_con {

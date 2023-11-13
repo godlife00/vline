@@ -367,13 +367,14 @@
                             </div>
                             <!-- //밸류에이션 -->
     
-                            <!-- <div class="박스레이아웃 수급분석시그널">
+                            <div class="박스레이아웃 수급분석시그널" onclick="sessionStorage.setItem('scrollTo', '수급분석시그널'); location.href='mri.html';" style="cursor: pointer;">
                                 <div class="box">
                                     <h2 class="title">수급분석</h2>
                                     <a href="" class="평가 매우약함">매우약함</a>
                                 </div>                            
-                            </div> -->
+                            </div>
                             <!-- //수급분석시그널 -->
+
                             <div class="박스레이아웃 투자매력" onclick="sessionStorage.setItem('scrollTo', '투자매력'); location.href='mri.html';" style="cursor: pointer;">
                                 <h2 class="title">투자매력</h2>
                                 <div class="star_area">
@@ -512,33 +513,7 @@
                 </div>
                 <!-- //투자지표 -->
     
-                <div class="수급분석">
-                    <div class="box">
-                        <h2 class="title">수급분석</h2>
-                        <div class="수급분석_신호">                    
-                            <!-- 해당 시그널에 active 클래스 적용. ex <div class="시그널 강함 active">강함</div> -->
-                            <div class="시그널 매우약함">매우약함</div>
-                            <div class="시그널 약함">약함</div>
-                            <div class="시그널 보통 active">보통</div>
-                            <div class="시그널 강함">강함</div>
-                            <div class="시그널 매우강함">매우강함</div>
-                        </div>
-                    </div>                
-                    <p class="txt">외국인, 기관 투자자의 매매 동향과 주가 추세 데이터로 분석합니다.
-                        <br>수급 신호는 매우약함-약함-보통-강함-매우강함의 단계로 신호가 강할수록 주가 상승 모멘텀이 좋습니다
-                    </p>
-                    <div class="chart_box">
-                        <div>
-                            <div id="supply_chart01" class="supplychart_style"></div>                    
-                            <p class="차트설명주석">* 거래금액 : 백만원 |  비율 : 시가총액대비</p>
-                        </div>
-                        <div>
-                            <div id="supply_chart02" class="supplychart_style"></div>
-                            <p class="차트설명주석">* 거래금액 : 백만원 |  비율 : 시가총액대비</p>
-                        </div>
-                        
-                    </div>
-                </div>
+                
     
             </div>
             <!-- //M_right -->
