@@ -794,7 +794,6 @@ $(document).ready(function () {
         $('.table.fix_table').addClass('txtInt');
     }
 
-
     //가이드 레이어 툴팁
     $('.chart_area.diagnosis .chartData .charm .txt_guide').on("click", function () {
         $('.guide_layer').css({ 'z-index': 80 });
@@ -857,6 +856,63 @@ $(document).ready(function () {
         }).scroll();
     });
 
+    // 테이블 데이터 복붙 데이터 최적화
+    document.querySelector('.table').addEventListener('copy', function (e) {
+        var selection = window.getSelection();
     
+        if (!selection.rangeCount) {
+            return; // 선택된 텍스트가 없으면 함수를 종료
+        }
+    
+        var range = selection.getRangeAt(0);
+        var container = document.createElement('div');
+        container.appendChild(range.cloneContents());
+    
+        // .table의 txtInt 클래스 존재 여부 확인 및 콘솔 로그
+        var isTxtInt = document.querySelector('.table').classList.contains('txtInt');
+        console.log('txtInt class exists:', isTxtInt);
+    
+        var rows = container.querySelectorAll('tr');
+        var text = '';
+    
+        rows.forEach(function (row) {
+            // display 스타일 확인
+            var style = row.style.display;
+    
+            // "display: none"인 경우 건너뛰기
+            if (style === 'none') {
+                return;
+            }
+    
+            var cells = row.querySelectorAll('th, td');
+            var rowText = '';
+    
+            cells.forEach(function (cell) {
+                var cellText = '';
+    
+                var hiddenData = cell.querySelector('a.btn_joinPop span.remark');
+                if (hiddenData && hiddenData.querySelectorAll('i').length === 3) {
+                    cellText = '***';
+                } else {
+                    var span = isTxtInt ? cell.querySelector('.ess') : cell.querySelector('.deci');
+                    cellText = span ? span.textContent.trim() : cell.textContent.trim();
+                }
+    
+                rowText += '"' + cellText + '"' + '\t';
+            });
+    
+            text += rowText.trim() + '\n';
+        });
+    
+        if (text.trim() === '') {
+            text = selection.toString();
+        }
+    
+        var source = "\n\n\n출처 : 밸류라인 : 투자자를 위한 종목발굴 빅데이터 서비스\nhttps://www.valueline.co.kr/";
+        text += source;
+    
+        e.preventDefault();
+        e.clipboardData.setData('text/plain', text);
+    });
 
 });

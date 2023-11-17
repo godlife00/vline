@@ -454,7 +454,7 @@
                                         <tr>
                                             <th class="depth_1 fix txt_L"><strong>매출액(수익)</strong></th>
                                             <!-- 숨김 처리되는 소수점은 class = deci -->
-                                            <td><span class="ess">2,709,971</span></td>
+                                            <td><span class="ess">2,709,971</span><span class="deci">2,709,971.5</span></td>
                                             <td>69,043<span class="deci">.043</span></td>
                                             <td>2,569<span class="deci">.043</span></td>
                                             <td>
@@ -2675,9 +2675,5 @@
     </div>
     <!-- //wrap -->
 </body>
-
-<script>
-    
-</script>
 
 </html>
