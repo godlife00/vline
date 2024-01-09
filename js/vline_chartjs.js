@@ -1316,9 +1316,9 @@ $(document).ready(function () {
             },
 
             series: [
-                {name: '종목', data: [97.988]},
-                {name: '업종평균', data: [37.988]},
-                {name: '전체평균', data: [197.988]},
+                {'name': '종목', 'data': [5.16]},
+                {'name': '업종평균', 'data': [2.857059]},
+                {'name': '전체평균', 'data': [-11.538237]}
             ],
             
             plotOptions: {
@@ -1437,9 +1437,9 @@ $(document).ready(function () {
             },
 
             series: [
-                {name: '종목', data: [97.988]},
-                {name: '업종평균', data: [-37.988]},
-                {name: '전체평균', data: [197.988]},
+                {'name': '종목', 'data': [1.48]},
+                {'name': '업종평균', 'data': [3.629706]},
+                {'name': '전체평균', 'data': [8.5296]}
             ],
             
             plotOptions: {
