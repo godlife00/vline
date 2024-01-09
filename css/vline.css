@@ -8170,6 +8170,10 @@ input[type=radio]:checked:before {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.4px;
+  color: #ff545b;
+}
+.주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .decrease {
+  color: #3655d6;
 }
 .주가차트 .오른쪽차트영역 .AI주가예측 .주가추세_기간상승률 .same {
   font-size: 16px;
@@ -8286,7 +8290,6 @@ input[type=radio]:checked:before {
 .투자지표 .chart_box .financials_style {
   width: 100%;
   height: 200px;
-  margin-top: 15px;
 }
 .투자지표 .chart_box .financials_style rect.highcharts-point {
   fill: #3655d6 !important;

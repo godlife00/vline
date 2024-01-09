@@ -47,7 +47,8 @@
     <link rel="stylesheet" type="text/css" href="../css/vline.css" />
     <!-- js -->
     <script src="../js/vline.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6864430327621783" crossorigin="anonymous"></script>
+    <script src="../js/regression.js?v_10183"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6864430327621783" crossorigin="anonymous"></script> -->
     <!-- 로컬에서만 사용되는 코드 시작 -->
     <script src="../js/header.js"></script>
     <!-- 로컬에서만 사용되는 코드 종료 -->
@@ -320,6 +321,36 @@
                         <!-- //chart_box -->
     
                         <div class="오른쪽차트영역">
+                            <div class="박스레이아웃 AI주가예측">
+                                <div class="box">
+                                    <h2 class="title">실시간 AI주가예측</h2>
+                                    <span class="day">04.03 ~ 04.13</span>
+                                    <span class="txt_guide"><img src="../img/txt_guide.svg" alt="실시간 AI주가예측"></span>
+                                    <div class="tooltip">
+                                        <strong class="t_title">실시간 AI주가예측</strong>
+                                        <span class="clse_tooltip">닫기</span>
+                                        <br>
+                                        <p class="t_txt">
+                                            인공지능 AI가 향후 10일 간 미래주가를 예측해 알려 드립니다. <br>
+                                            예상주가는 당일 현재가를 반영해 한 시간 단위로 실시간 업데이트 됩니다.
+                                            빅 데이터 분석과 주가 예측 알고리즘, ARIMA모델을 활용해 계산합니다. <br>
+                                            주가추세는 상승 - 하락 으로 표시되며, 기간 상승률은 10일간의 주가변동률을 표시합니다
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="sum_topchart_band" class="chart_layout"></div>
+                                
+                                <div class="주가추세_기간상승률">
+                                    <div class="주가추세">
+                                        <h3 class="sub_title">주가추세</h3>
+                                        <span class="거래정지종목">[거래정지종목]</span>                                
+                                    </div>       
+                                    <div class="기간상승률">
+										<h3 class="sub_title">기간 상승률</h3>
+										<span class="increase">+0.41%</span>
+									</div>                                                             
+                                </div>
+                            </div>                               
                             <div class="박스레이아웃 밸류에이션" onclick="sessionStorage.setItem('scrollTo', '밸류에이션'); location.href='mri.html';" style="cursor: pointer;">
                                 <div class="box">
                                     <h2 class="title">밸류에이션</h2>
@@ -389,7 +420,7 @@
                                         <span>/ 상위 <strong>88%</strong></span>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>                                                     
                         </div>
                     </div>
                     <!-- //summary_Box -->

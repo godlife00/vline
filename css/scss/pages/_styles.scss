@@ -763,6 +763,10 @@
                     font-size: 16px;
                     font-weight: $f_sizeB;
                     letter-spacing: -0.4px;
+                    color: #ff545b;                                        
+                }
+                .decrease {                    
+                    color: #3655d6;
                 }
                 .same {
                     font-size: 16px;
@@ -907,7 +911,7 @@
         .financials_style {
             width: 100%;
             height: 200px;
-            margin-top: 15px;
+            // margin-top: 15px;
 
             rect.highcharts-point {
                 fill: #3655d6 !important;

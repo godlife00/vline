@@ -1,5 +1,136 @@
 $(document).ready(function () {
 
+    // 가상 선차트
+    if ($('#sum_topchart_band').length) {
+        var sourceData = [
+            113425,
+            113373,
+            112369,
+            113855,
+            115918,
+            114829,
+            117887,
+            118085,
+            116862,
+            113780,
+        ];
+
+        var chart_linear = new Highcharts.Chart({
+            chart: {
+                renderTo: 'sum_topchart_band',
+                backgroundColor: {
+                    // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
+                },
+                margin: [0, 0, 0, 0],
+                events: {
+                    load: function () {
+                        setTimeout(() => {                            
+                            const series = this.series[0];
+                            series.update({
+                                dataLabels: {
+                                    enabled: true
+                                }
+                            });
+                        }, 500); // 1초 후에 하이차트를 랜더링합니다.                        
+                    }
+                }
+            },
+            credits: {
+                enabled: false
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            legend: {
+                enabled: false,
+            },
+
+            tooltip: {
+                // shared: true,
+                crosshairs: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+
+            title: {
+                text: null
+            },
+
+            credits: {
+                enabled: false,
+            },
+
+            lang: {
+                noData: "해당 데이터가 없습니다",
+            },
+
+            colors: ["#ff545b", "#4d6ee4", "#F0CC09"],
+
+            xAxis: [{                
+                categories: ['04.03', '04.03', '04.03', '04.03', '04.03', '04.03', '04.03', '04.03', '04.03',],                
+            }],
+
+            yAxis: {
+                visible: true,
+            },
+
+            series: [{
+                type: 'spline',
+                name: '예상주가',
+                zIndex: 3,
+                data: sourceData,
+                dataLabels: {
+                    enabled: false, // 초기에는 데이터 라벨을 숨김
+                    y: -5,
+                    formatter: function () {
+                        if (this.point === this.series.data[this.series.data.length - 1]) {
+                            return Highcharts.numberFormat(this.y, 0);
+                        }
+                        return null;
+                    }
+                }
+            }],
+
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                },
+            },
+        });
+
+        /* add regression line dynamically */
+        chart_linear.addSeries({
+            type: 'line',
+            name: '주가추세',                
+            color: "#dbdfed",                        
+            enableMouseTracking: false,
+            /* function returns data for trend-line */
+            data: (function () {
+                return fitOneDimensionalData(sourceData);
+            })(), 
+        });
+
+        function fitOneDimensionalData(source_data) {
+            var trend_source_data = [];
+            for (var i = source_data.length; i-- > 0;) {
+                trend_source_data[i] = [i, source_data[i]]
+            }
+            var regression_data = fitData(trend_source_data).data
+            var trend_line_data = [];
+            for (var i = regression_data.length; i-- > 0;) {
+                trend_line_data[i] = regression_data[i][1];
+            }
+            return trend_line_data;
+        }
+    }
+
     if ($('#test1').length) {
         Highcharts.chart('test1', {
 
@@ -8674,6 +8805,7 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },
+                marginTop: 35,
             },
             // 하단 네비게이션 제거
             navigator: {
@@ -8940,10 +9072,11 @@ $(document).ready(function () {
             chart: {
                 chart: {
                     type: 'column'
-                },
+                },                
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },            
+                marginTop: 35,
             },
             // 하단 네비게이션 제거
             navigator: {
@@ -9026,21 +9159,22 @@ $(document).ready(function () {
 
             series: [{
                 type: 'column',
-                name: '매출액',
+                name: '매출액',                
                 data: [{
-                    y: 97.988,
+                    y: 7.40,
                 },
                 {
-                    y: 45.988,
+                    y: -0.11,
+                    className: 'decrease_color'
                 },
                 {
-                    y: 75.988,
+                    y: 7.05,
                 },
                 {
-                    y: 85.988,
+                    y: 12.95,
                 },
                 {
-                    y: 95.988,
+                    y: 18.24,
                     className: 'point_color'
                 }]
             }],
@@ -10928,4 +11062,6 @@ $(document).ready(function () {
 
         });
     }
+
+    
 });
