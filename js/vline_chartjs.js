@@ -1921,9 +1921,9 @@ $(document).ready(function () {
             },
 
             series: [
-                {name: '종목', data: [77.988]},
-                {name: '업종평균', data: [137.988]},
-                {name: '전체평균', data: [97.988]},
+                {'name': '종목', 'data': [-15.65]},
+                {'name': '업종평균', 'data': [124.981373]},
+                {'name': '전체평균', 'data': [123.850268]}
             ],
             
             plotOptions: {
@@ -1937,9 +1937,9 @@ $(document).ready(function () {
 
                     dataLabels: {
                         enabled: true,
-                        allowOverlap: true,
-                        crop: false,
+                        allowOverlap: false,                        
                         color: '#656d7e',
+                        crop: false,
                         overflow: 'none',
                         format: '{point.y:,.2f}',
                         style: {
