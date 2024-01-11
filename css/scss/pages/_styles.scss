@@ -124,7 +124,8 @@
         }
        
 
-        .updata {            
+        .updata, 
+        .performance {            
             position: absolute;
             left: 15px;
             top: 10px;
@@ -137,6 +138,23 @@
             line-height: 1.27;
             text-align: center;
             color: #222;
+        }        
+        .performance_box {
+            position: relative;            
+            margin-top: 25px;       
+            &::before {
+                content: '';
+                display: block;
+                height: 1px;
+                width: calc(100% - 36px);
+                margin: 0 auto 25px;
+                background-color: #bfc6d9;
+            }
+            .performance {                
+                background-color: #3655d6;                
+                color: #fff;
+                top: 25px;
+            }
         }
 
         .upData_Swiper {

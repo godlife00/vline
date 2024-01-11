@@ -3583,6 +3583,155 @@ input[type=radio]:checked:before {
 .valueline #wrap #container .new_listing .alloListing_table tbody td.same .per {
   color: #444;
 }
+.valueline #wrap #container .new_listing .alloListing_table tr td:nth-child(3),
+.valueline #wrap #container .new_listing .alloListing_table tr th:nth-child(3) {
+  width: 110px;
+  box-sizing: border-box;
+}
+.valueline #wrap #container .new_listing .aiListing_table {
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+}
+.valueline #wrap #container .new_listing .aiListing_table:last-child {
+  margin-top: 40px;
+}
+.valueline #wrap #container .new_listing .aiListing_table:last-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -20px;
+  height: 1px;
+  width: 100%;
+  background-color: #e7eaf2;
+}
+.valueline #wrap #container .new_listing .aiListing_table:last-child thead {
+  visibility: collapse;
+}
+.valueline #wrap #container .new_listing .aiListing_table:last-child thead th, .valueline #wrap #container .new_listing .aiListing_table:last-child thead td {
+  padding: 0;
+  height: 0;
+}
+.valueline #wrap #container .new_listing .aiListing_table th, .valueline #wrap #container .new_listing .aiListing_table td {
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+.valueline #wrap #container .new_listing .aiListing_table th.txt_c, .valueline #wrap #container .new_listing .aiListing_table td.txt_c {
+  text-align: center;
+}
+.valueline #wrap #container .new_listing .aiListing_table thead th {
+  padding-bottom: 3px;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #b1b9cb;
+}
+.valueline #wrap #container .new_listing .aiListing_table thead th.yield {
+  text-align: center;
+}
+.valueline #wrap #container .new_listing .aiListing_table thead th.num {
+  text-align: center;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td {
+  padding: 5px 0;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td.name {
+  width: 140px;
+  max-width: 140px;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td.name a {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: table-cell;
+  width: 100%;
+  max-width: 160px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td.up .price, .valueline #wrap #container .new_listing .aiListing_table tbody td.down .price, .valueline #wrap #container .new_listing .aiListing_table tbody td.same .price {
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td.up .per, .valueline #wrap #container .new_listing .aiListing_table tbody td.down .per, .valueline #wrap #container .new_listing .aiListing_table tbody td.same .per {
+  padding-left: 2px;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  color: #d30000;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td.down .per {
+  color: #0052ff;
+}
+.valueline #wrap #container .new_listing .aiListing_table tbody td.same .per {
+  color: #444;
+}
+.valueline #wrap #container .new_listing .aiListing_table .increase {
+  color: #d30000;
+}
+.valueline #wrap #container .new_listing .aiListing_table .decrease {
+  color: #0052ff;
+}
+.valueline #wrap #container .new_listing .aiListing_table .평가 {
+  display: inline-block;
+  padding: 4px 4px;
+  border-radius: 6px;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  width: 38px;
+}
+.valueline #wrap #container .new_listing .aiListing_table .attention_box {
+  position: relative;
+  padding-left: 14px;
+}
+.valueline #wrap #container .new_listing .aiListing_table .attention_box .attention {
+  background-color: #bfc8d6;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.valueline #wrap #container .new_listing .aiListing_table .attention_box .attention:after {
+  background-color: #bfc8d6;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0px;
+  left: 4px;
+}
+.valueline #wrap #container .new_listing .aiListing_table .attention_box .attention:before {
+  background-color: #bfc8d6;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -4px;
+  left: 0px;
+}
+.valueline #wrap #container .new_listing .aiListing_table .attention_box .attention.on, .valueline #wrap #container .new_listing .aiListing_table .attention_box .attention.on:after, .valueline #wrap #container .new_listing .aiListing_table .attention_box .attention.on:before {
+  background-color: #ff6f6f;
+}
+.valueline #wrap #container .new_listing .aiListing_table td.txt_L {
+  text-align: left;
+}
 .valueline #wrap #container .new_listing .hotListing_table {
   position: relative;
   width: 100%;
@@ -3826,7 +3975,7 @@ input[type=radio]:checked:before {
   display: flex;
   justify-content: flex-start;
   gap: 5px;
-  align-items: flex-end;
+  align-items: center;
 }
 .valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(2) .price {
   min-width: 100px;
@@ -7604,7 +7753,8 @@ input[type=radio]:checked:before {
   display: inline-block;
   transform: rotate(135deg);
 }
-.종목명 .업데이트소식 .updata {
+.종목명 .업데이트소식 .updata,
+.종목명 .업데이트소식 .performance {
   position: absolute;
   left: 15px;
   top: 10px;
@@ -7617,6 +7767,23 @@ input[type=radio]:checked:before {
   line-height: 1.27;
   text-align: center;
   color: #222;
+}
+.종목명 .업데이트소식 .performance_box {
+  position: relative;
+  margin-top: 25px;
+}
+.종목명 .업데이트소식 .performance_box::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% - 36px);
+  margin: 0 auto 25px;
+  background-color: #bfc6d9;
+}
+.종목명 .업데이트소식 .performance_box .performance {
+  background-color: #3655d6;
+  color: #fff;
+  top: 25px;
 }
 .종목명 .업데이트소식 .upData_Swiper {
   overflow: hidden;

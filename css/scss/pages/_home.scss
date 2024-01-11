@@ -451,7 +451,84 @@
 
         // 배당배력
         .alloListing_table {
-            @include newListingTable_style;                                 
+            @include newListingTable_style;            
+            tr td:nth-child(3),
+            tr th:nth-child(3) {
+                width: 110px;
+                box-sizing: border-box;
+            }                                 
+        }
+
+        // AI주가예측
+        .aiListing_table {
+            @include newListingTable_style;                    
+
+            .increase {
+                color: #d30000;                
+            }
+            .decrease {
+                color: #0052ff;                
+            }
+
+            .평가 {                
+                display: inline-block;
+                padding: 4px 4px;
+                border-radius: 6px;
+                font-size: 10px;
+                text-align: center;
+                color: #fff;
+                width: 38px;
+            }
+
+            .attention_box {
+                position: relative;
+                padding-left: 14px;                
+                .attention {
+                    // 하트 크기
+                    @mixin whpx {
+                        width: 8px;
+                        height: 8px;                        
+                    }
+                    background-color: #bfc8d6;
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                    @include whpx;                                        
+                    transform: rotate(-45deg);                    
+                    animation-name: beat;                    
+                    animation-duration: 1s;                    
+                    animation-iteration-count: infinite;
+
+                    &:after {
+                        background-color: #bfc8d6;
+                        content: "";
+                        border-radius: 50%;
+                        position: absolute;
+                        @include whpx;                    
+                        top: 0px;
+                        left: 4px;
+                    }
+
+                    &:before {
+                        background-color: #bfc8d6;
+                        content: "";
+                        border-radius: 50%;
+                        position: absolute;
+                        @include whpx;                    
+                        top: -4px;
+                        left: 0px;
+                    }
+
+                    &.on,
+                    &.on:after,
+                    &.on:before {
+                        background-color: #ff6f6f;
+                    }
+                }
+            }
+            td.txt_L {
+                text-align: left;
+            }
         }
 
         // 인기종목
@@ -542,7 +619,7 @@
                         display: flex;                        
                         justify-content: flex-start;
                         gap: 5px;
-                        align-items: flex-end;
+                        align-items: center;
 
                         .price {                            
                             min-width: 100px;                            
