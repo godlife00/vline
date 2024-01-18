@@ -115,6 +115,9 @@
         padding: 15px 70px 15px 26px;
         border-radius: 5px;
         background-color: #eceff5;
+        &.sub_attention { // 재무분석 상단에 들어가는 관심종목 리스트일 경우            
+            margin-bottom: 13px;
+        }
         
         // 관심종목이 없는 경우
         .no_data {
