@@ -702,6 +702,18 @@
 
             }
 
+            .sum_topchart_band_nodata {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                .img {
+                    display: block;
+                    width: 218px;
+                    height: 100px;
+                    background: url('/img/bandchart_nodata.jpg') no-repeat center center;
+                    background-size: auto;
+                }                
+            }
+
             .chart_layout {
                 margin-top: 10px;
                 width: 100%;
