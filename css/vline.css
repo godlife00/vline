@@ -8307,8 +8307,8 @@ input[type=radio]:checked:before {
 .주가차트 .오른쪽차트영역 .AI주가예측 .sum_topchart_band_nodata .img {
   display: block;
   width: 218px;
-  height: 100px;
-  background: url("/img/bandchart_nodata.jpg") no-repeat center center;
+  height: 121px;
+  background: url("/img/bandchart_nodata.jpg") no-repeat center top;
   background-size: auto;
 }
 .주가차트 .오른쪽차트영역 .AI주가예측 .chart_layout {
