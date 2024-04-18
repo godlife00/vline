@@ -26,13 +26,13 @@
         width: calc(100% - 64px);
         margin: 0 auto;
         padding: 30px 0 10px;
-        border-bottom: 1px solid #e7eaf2;
+        // border-bottom: 1px solid #e7eaf2;
 
         .pop_title {
             font-size: 21px;
             font-weight: $f_sizeB;
             letter-spacing: -1.05px;
-            color: #333;
+            color: #333;            
         }
 
         .clse {
@@ -91,7 +91,8 @@
                         padding-left: calc(50% - 40px);
                         text-align: left;
                         border-radius: 5px;
-                        font-size: 15px;
+                        font-size: 16px;
+                        font-weight: $f_sizeB;
                     }                    
 
                     span {
@@ -110,26 +111,27 @@
                     }
 
                     &.sns_n {
-                        background-color: #20b703;
+                        background-color: #00cf5d;
 
                         span {
-                            color: #fff;
+                            font-weight: $f_sizeB;
+                            color: #fff;                            
 
                             &::before {
-                                background: url('/img/sns_n.svg') no-repeat 0 0;
+                                background: url('/img/icon_sns_n.svg') no-repeat 0 0;
                             }
                         }
                     }
 
                     &.sns_k {
                         margin-top: 16px;
-                        background-color: #fae100;
+                        background-color: #FEE501;
 
                         span {
-                            color: #333;
-
+                            font-weight: $f_sizeB;
+                            color: #391b1a;                            
                             &::before {
-                                background: url('/img/sns_k.svg') no-repeat 0 0;
+                                background: url('/img/icon_sns_k.svg') no-repeat 0 0;
                             }
                         }
                     }
@@ -179,143 +181,412 @@
                     }
                 }
             }
+            .business_name {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 
     // 초이스스탁 통합회원 로그인 스탭2
     &.terms_form {
         .pop_con {
-            padding: 39px 30px;
-
-            .loign_chk .id_chk {
-                padding: 40px 15px;
-                border-radius: 5px;
-                border: solid 1px #e8eaf1;
-                text-align: center;
-
-                .sns_name {
-                    font-size: 12px;
-                    letter-spacing: -0.6px;
-                    color: #939393;
+            padding: 15px 15px 0;            
+            .loign_chk {
+                padding: 15px 15px;
+                .login_title {
+                    font-size: 1rem;
+                    font-weight: bold;		
+                    line-height: 1.19;		
+                    color: #333;
                 }
-
-                .sns_chk {
-                    margin-top: 8px;
-                    font-size: 18px;
-                    font-weight: $f_sizeB;
-                    letter-spacing: -0.9px;
-                    text-align: center;
-                    color: #3655d6;
+                .dup_sns {
+                    margin-bottom: 16px;
+                    font-size: 1.25rem;
+                    font-weight: bold;		
+                    line-height: 1.25;		
+                    color: #333;
                 }
-            }
-
-            .member_sum {
-                margin-top: 15px;
-                font-size: 13px;
-                font-weight: normal;
-                letter-spacing: -0.33px;
-                color: #222;
-                text-align: center;
+                .id_chk {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0 16px;			
+                    margin-top: 8px;		
+                    border-radius: 16px;
+                    background-color: #f7f8f9;
+                    padding: 13px 24px;
+                    box-sizing: border-box;
+                    width: 100%;	
+                    height: 68px;
+                    
+                    .sns_img {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;			
+                        margin-top: 4px;
+                        border-radius: 50%;
+                        width: 32px;
+                        height: 32px;
+                    }	
+                    .sns_info {
+                        width: calc(100% - 50px);			
+                        margin-top: 4px;
+                    }
+                    &.sns_n {	
+                        .sns_img {
+                            background-color: #00cf5d;					
+                            img {
+                                display: block;
+                                height: 12px;
+                                width: 32px;
+                            }					
+                        } 
+                    }
+                    &.sns_k {
+                        .sns_img {
+                            background-color: #FEE501;
+                            img {
+                                display: block;
+                                height: 15px;
+                                width: 32px;
+                            }
+                        } 
+                    }
+                    .sns_name {
+                        font-size: 0.8125rem;			
+                        line-height: 1.15;			
+                        color: #6a727b;
+                    }
+                    .sns_chk {			
+                        display: inline-block;			
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        margin-top: 3px;			
+                        font-size: 0.9375rem;
+                        line-height: 1.33;			
+                        color: #333;			
+                    }		
+                }
+                &.dup {			
+                    // 중복가입 화면 css			
+                    .sns_img, .sns_info {
+                        margin-top: 0;
+                    }
+                    .id_chk {
+                        padding: 24px 24px 25px;
+                        height: auto;
+                    }
+                    .sns_name {
+                        font-size: 0.8125rem;
+                        line-height: 1.15;				
+                        color: #6a727b;
+                    }
+                    .sns_chk, .sns_phon {
+                        font-size: 0.9375rem;
+                        line-height: 1.33;				
+                        color: #333;
+                    }			
+        
+                }
+        
+        
             }
 
             .agree_area {
-                .member_txt {
-                    margin-top: 45px;
-                    font-size: 13px;
-                    font-weight: normal;
-                    letter-spacing: -0.33px;
-                    color: #656d7e;
-                    text-align: center;
-
-                    b {
-                        color: #222;
-                        font-weight: normal;
-                    }
+                width: calc(100% - 30px);
+                margin: 26px auto 0;
+            }
+            .agree_area .txt {
+                font-size: 1rem;
+                font-weight: bold;		
+                line-height: 1.19;		
+                color: #333;
+            }
+            .agree_area .agree_from {
+                margin-top: 16px;		
+                .bg_gray {			
+                    padding: 15px 0;		
+                    border-radius: 12px;
+                    background-color: #f7f8f9;
                 }
-
-                .member_txt+.txt {
-                    margin-top: 7px;
-                }
-
-                .txt {
-                    margin-top: 53px;
-                    margin-bottom: 15px;
-                    font-size: 13px;
-                    font-weight: normal;
-                    letter-spacing: -0.33px;
-                    color: #656d7e;
-                    text-align: center;
-                }
-
-                .agree_from .label {
-                    width: 100%;
-                    margin-top: 8px;
+            }
+            .agree_area .agree_from .free_sum,
+            .agree_area .agree_from .free_sum strong {
+                color: #333;
+                font-size: 0.9375rem;
+                margin: 30px 0 15px;
+                line-height: 1.3;
+                vertical-align: middle;
+            }
+            .agree_area .agree_from .free_sum span {
+                color: #ff2929;
+                font-size: 0.84rem;
+                margin-top: 7px;
+                text-decoration: underline;
+                vertical-align: middle;
+            }
+            .agree_area .agree_from .label {
+                display: flex;		
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 0 9px;	
+                background: #f7f8f9;
+                border-radius: 9px;
+                padding: 9px 21px 11px 16px;
+        
+                .label_chk {
                     position: relative;
-                    border-radius: 5px;
-                    background-color: #f5f6fa;
-                    padding: 15px 85px 15px 36px;
-                    box-sizing: border-box;
-
-                    .label_chk {
-                        cursor: pointer;
-                        position: relative;
-                        display: inline-block;
-                        font-size: 15px;
-                        letter-spacing: -0.75px;
-                        color: #222;
-
-                        &::before {
-                            content: '';
-                            display: inline-block;
-                            vertical-align: top;
-                            position: absolute;
-                            top: 4px;
-                            left: -21px;
-                            width: 14px;
-                            height: 14px;
-                            background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
-                            margin-right: 7px;
-                        }
-
-                        &.active {
-                            &::before {
-                                background-position: 0 100%;
-                            }
-
-                        }
-
+                    cursor: pointer;
+                    font-size: 0.875rem;
+                    line-height: 1.14;			
+                    color: #6a727b;			
+                    padding-left: 24px;
+                    @media (min-width:320px) and (max-width: 374px) {
+                        letter-spacing: -0.03rem;			
                     }
-
-                    .terms_btn {
-                        position: absolute;
-                        right: 14px;
-                        top: 14px;
-                        border-radius: 3px;
-                        border: solid 1px #3c55ce;
-                        padding: 3px 5px;
-                        width: 64px;
-                        height: 25px;
-                        box-sizing: border-box;
-                        font-size: 12px;
-                        letter-spacing: -0.6px;
-                        text-align: center;
-                        color: #3655d6;
-                    }
-
                 }
-
-                .btnArea {
-                    margin-top: 25px;
-                    padding: 0 33px;
-
-                    .agr_btn {
-                        @include one_btn;
-                    }
-
+                .label_chk i {
+                    position: absolute;
+                    left: 0;
+                    display: inline-block;		
+                    vertical-align: middle;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 9px;
+                    background: url('/img/icon_agreecheck.svg') no-repeat 0 100%;		
+                    filter: grayscale(100%) opacity(30%);
+                }	
+                &.active .label_chk i {
+                    filter: grayscale(0%) opacity(100%);
                 }
+            }	
+            .agree_area .agree_from .label.active .label_chk
+            .agree_area .agree_from .label .label_chk.sub_label {
+                padding-left: 15px;
+                padding-top: 10px;
+                opacity: 0.5;
+            }
+            .agree_area .agree_from .label.active .label_chk.sub_label {
+                opacity: 1;
+            }
+            .agree_area .agree_from .label .terms_btn {
+                cursor: pointer;
+                font-size: 12px;
+                font-weight: 500;		
+                line-height: 1.42;		
+                color: #939393;		
+                text-decoration: underline;
+                padding: 2px 2px 2px 10px;
+            }
+            .agree_area .agree_from .payBtn {
+                margin-top: 13px;	
+                background-color: #fff;
+                padding: 0;
+            }
+            .agree_area .agree_from .btn {
+                font-size: 1rem;
+                font-weight: bold;		
+                line-height: 1.19;		
+                color: #fff;
+                color: #404fc3;		
+                border-radius: 8px;
+                position: relative;
+                width: calc(100% / 2 + 60px);
+            }
+            .agree_area .agree_from .btn_save {
+                display: block;
+                width: 100%;
+                padding: 13px 5px;
+                box-sizing: border-box;
+                background-color: #404fc3;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: bold;
+                line-height: 1.19;
+                border-radius: 5px;
+                position: relative;
+                transition: transform 100ms ease-in-out;
+                &:active {
+                    transform: scale(0.99); /* 버튼을 약간 축소 */
+                }
+            }
+            .agree_area .agree_from .btn_save i {
+                position: absolute;
+                right: 18px;
+                top: 15px;
+                display: inline-block;
+                width: 5px;
+                height: 10px;
+                background: url('/img/icon_moreRR.png') no-repeat 0 0;
+                background-size: cover;
+            }           
 
+            .loign {                
+                padding: 9px 15px 20px;
+            }
+            
+            .loign .login_title {
+                color: #333;
+                font-weight: bold;
+                font-size: 1.9rem;
+            }
+            
+            .loign .sns_loign {
+                font-size: 0.875rem;
+                line-height: 1.43;	
+                color: #333;
+            }
+            
+            .loign .att_service {
+                /* padding: 10px 0; */
+                text-align: center;
+            }
+            
+            .loign .att_service .service_title {
+                font-size: 1.875rem;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.37;
+                letter-spacing: -1.5px;
+                text-align: left;
+            }
+            
+            .loign .att_service .service_title strong {
+                color: #333;
+                font-weight: bold;
+            }
+            
+            .loign .att_service .guide_txt {
+                text-align: left;
+                margin-top: 10px;
+                padding-bottom: 25px;
+            }
+            
+            .loign .att_service .guide_txt li {
+                color: #939393;
+                font-size: 0.75rem;
+                padding-left: 10px;
+                line-height: 1.6;
+            }
+            
+            .loign .att_service .guide_txt li.title {
+                color: #333;
+                font-size: 0.82rem;
+                padding-left: 0;
+            }
+            
+            .loign .att_service .guide_txt li.title .go_mam {
+                color: #608BFF;
+                font-size: 0.82rem;
+                padding-left: 0;
+                text-decoration: underline;
+            }
+            
+            .loign .sns {
+                margin-top: 14px;
+                text-align: center;
+            }
+            
+            .loign .sns li {
+                display: inline-block;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+            
+            .loign .sns li a {
+                position: relative;
+                display: block;
+                padding: 19px 20px 19px 44px;
+                border-radius: 8px;
+                box-sizing: border-box;
+                font-size: 1rem;
+                font-weight: bold;	
+                line-height: 1.19;	
+                color: #fff;	
+            }
+            
+            .loign .sns li.sns_n a {
+                background-color: #00cf5d;
+            }
+            
+            .loign .sns li.sns_n a i,
+            .loign .sns li.sns_K a i {
+                content: '';
+                position: absolute;	
+                left: calc(50% - 67px);
+                top: 20px;
+                width: 22px;
+                height: 22px;
+            }
+            
+            .loign .sns li.sns_K a {	
+                background-color: #FEE501;	
+                color: #391b1a;
+            }
+            
+            .loign .sns li.sns_n a i {
+                background: url('/img/icon_sns_n.svg') no-repeat left top;
+            }
+            
+            .loign .sns li.sns_K a i {
+                top: 22px;
+                left: calc(50% - 68px);
+                background: url('/img/icon_sns_k.svg') no-repeat left top;
+            }
+            
+            .loign .sns li a,
+            .loign .sns li a img {
+                display: inline-block;
+                width: 100%;
+            }
+            
+            .loign .att_service:nth-of-type(2) {
+                padding: 0;
+                text-align: left;
+                margin-top: 0;
+            }
+            
+            .loign .att_service:nth-of-type(2) .service_title {
+                font-size: 0.9375rem;
+                border-bottom: none;
+                padding-bottom: 9px;	
+            }
+            
+            .loign .att_service:nth-of-type(2) .service_title strong {
+                color: #404fc3;
+            }
+            
+            .loign .att_service:nth-of-type(2) .guide_txt.bg_blue {
+                padding: 22px 15px;
+                background: #e6e7f4;
+                margin-top: 0;
+            }
+            
+            .loign .att_service:nth-of-type(2) .guide_txt li.title {
+                font-size: 0.875rem;
+                line-height: 1.43;	
+                padding: 2px 0;
+                color: #333;
+                b {
+                    color: #333;
+                }
+            }
+            
+            .loign .btn_channel {
+                display: block;
+                font-size: 0.8125rem;
+                font-weight: 500;	
+                line-height: 1.46;	
+                color: #939393;
+                text-decoration: underline;
             }
         }
+
     }
 
     // 월자동결제 서비스 변경, 기간결제 해지/환불 팝업
@@ -491,8 +762,8 @@
         .pop_con {
             .loign_com {
                 .login_title {
-                    padding: 35px 33px;
-                    background: #fff url('/img/bg_premium_top.svg') no-repeat 90% 70%;
+                    padding: 115px 33px 45px;
+                    background: #fff url('/img/bg_premium_top.svg') no-repeat 100% 0%;
                     text-align: left;
 
                     .title {
@@ -564,7 +835,22 @@
                     padding: 24px 33px 40px;
 
                     .join_btn {
-                        @include one_btn;
+                        display: block;
+                        width: 100%;
+                        padding: 13px 5px;
+                        box-sizing: border-box;
+                        background-color: #404fc3;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        line-height: 1.19;
+                        border-radius: 5px;
+                        position: relative;
+                        transition: transform 100ms ease-in-out;
+                        &:active {
+                            transform: scale(0.99); /* 버튼을 약간 축소 */
+                        }
                     }
 
                     .link_menu {
@@ -595,6 +881,8 @@
                     }
                 }
             }
+
+            
         }
     }
 
@@ -3680,7 +3968,7 @@
     }
 
     .phonePin_form .box {
-        padding: 0 35px 10px;
+        padding: 0 20px 0 35px;
         position: relative;
         background-color: #f5f6fa;
     }
@@ -3695,15 +3983,12 @@
 
     .phonePin_form .pinInput,
     .phonePin_form .pinInput_out {
-        border: none;
-        color: #333;
-        font-size: 1rem;
-        letter-spacing: -0.8px;
-        padding: 8px 13px;
         width: 100%;
         box-sizing: border-box;
-        border-radius: 5px;
-        background-color: #ececef;
+        padding: 9.5px 16px;
+        border-radius: 8px;
+        border: solid 1px #e0e4e9;
+        background-color: #fff;
     }
 
     .phonePin_form .pinInput {
@@ -3711,7 +3996,7 @@
     }
 
     .phonePin_form .pinInput:focus {
-        border: none;
+        // border: none;
         outline: none;
     }
 
@@ -3730,8 +4015,8 @@
     .phonePin_form .pinBtn {
         cursor: pointer;
         position: absolute;
-        right: 42px;
-        top: 6px;
+        right: 23px;
+        top: 8px;
         width: 70px;
         height: 25px;
         font-size: 0.75rem;
@@ -3747,37 +4032,50 @@
 
         &.pin_req {
             display: block;
-            color: #fff;
-            border: solid 1px #404fc3;
-            background-color: #404fc3;
+            outline: none;
+            border: none;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.58;
+            color: #404fc3;
+            text-decoration: underline;
+            background-color: transparent;
         }
 
         &.pin_reqAgain {
             display: none;
-            color: #404fc3;
-            border: solid 1px #404fc3;
-            background-color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.58;
+            color: #939393;
+            outline: none;
+            border: none;                        
+            text-decoration: underline;
+            background-color: transparent;
         }
     }
 
+    .phonePin_form {
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
     .phonePin_form .pinInput_out {
+        margin-top: 8px;
         font-size: 1rem;
-        font-weight: bold;
-        letter-spacing: 1.6px;
         color: #333;
     }
 
     .phonePin_form .pinInput_out:focus {
-        border: none;
+        // border: none;
         outline: none;
     }
 
     .phonePin_form .pinInput::placeholder,
     .phonePin_form .pinInput_out::placeholder {
-        font-size: 16px;
-        font-weight: normal;
-        color: #82929f;
-        letter-spacing: -0.8px;
+        font-size: 0.8125rem;
+        line-height: 1.46;	
+        color: #d3d3d3;
     }
 
     .phonePin_form .pinInput_out:focus::-webkit-input-placeholder {
@@ -3803,21 +4101,23 @@
     .phonePin_form .pin_completion {
         cursor: pointer;
         position: absolute;
-        right: 42px;
-        top: 6px;
-        width: 70px;
-        height: 25px;
-        box-sizing: border-box;
-        font-size: 0.75rem;
-        font-weight: normal;
-        letter-spacing: -0.6px;
-        text-align: center;
-        color: #fff;
+        right: 21px;
+        top: 9px;
+        height: 40px;
+        width: 80px;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        line-height: 1.46;
+        color: #d3d3d3;
+        border: none;
+        border-left: 1px solid #e0e4e9;
         outline: none;
-        padding: 4px 8px;
-        border-radius: 3px;
-        border: solid 1px #404fc3;
-        background-color: #404fc3;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        transition: transform 100ms ease-in-out;
+        &:active {
+            transform: scale(0.95); /* 버튼을 약간 축소 */
+        }
     }
 
     .txt_reject {
@@ -3831,7 +4131,7 @@
 
 .business_name {
     // background-color: #f5f6fa;
-    padding: 27px 0 0;
+    padding: 27px 15px;
     font-size: 13px;
     line-height: 1.54;
     letter-spacing: -0.33px;

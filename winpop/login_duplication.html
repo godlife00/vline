@@ -66,137 +66,41 @@
                 <!-- 비회원인 경우 -->
                 <div class="pop_con">
                     <!-- 주요 콘텐츠 -->
-                    <div class="loign_chk">
-                        <h2 class="login_title">통합회원 아이디</h2>
+                    <div class="loign_chk dup">                
+                        <p class="dup_sns">이미 가입한 계정이 있습니다</p>                
                         <div class="id_chk sns_n">
                             <div class="sns_img">
                                 <img src="../img/icon_sns_n.svg" alt="네이버">
                             </div>
                             <div class="sns_info">
-                                <p class="sns_name">네이버 이메일</p>
+                                <p class="sns_name">네이버 연동</p>
                                 <p class="sns_chk">cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76@gmail.com</p>
+                                <p class="sns_phon">010-***-1234</p>
                             </div>                    
                         </div>
-                        <div class="id_chk sns_k">
+                        <!-- <div class="id_chk sns_k">
                             <div class="sns_img">
                                 <img src="../img/icon_sns_k.svg" alt="카카오톡">
                             </div>
-                            <div>
-                                <p class="sns_name">카카오 이메일</p>
-                                <p class="sns_chk">cmux76@gmail.com</p>
+                            <div class="sns_info">
+                                <p class="sns_name">카카오 연동</p>
+                                <p class="sns_chk">cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76@gmail.com</p>
+                                <p class="sns_phon">010-***-5678</p>
                             </div>                    
-                        </div>
-                        <!-- //id_chk -->
+                        </div>                 -->
                     </div>
                     <!-- //loign_chk -->
 
-                    <div class="agree_area">
-                        <p class="txt">서비스 이용을 위해<br>약관을 확인하시고 동의해주세요.</p>
-                        <div class="agree_from">
-                            <div class="bg_gray">
-
-                                <div class="label">
-                                    <p class="label_chk"><i></i>[필수] 초이스스탁 US 서비스 약관 동의</p>
-                                    <span class="terms_btn btn_terms">보기</span>
-                                </div>
-                                <div class="label">
-                                    <p class="label_chk"><i></i>[필수] 개인정보 수집 이용 동의</p>
-                                    <span class="terms_btn btn_policy">보기</span>
-                                </div>
-                                <!-- 휴대폰 등록 -->
-                                <div class="label phone_label">
-                                    <p class="label_chk"><i></i>[필수] 프리미엄 서비스를 위한 휴대폰번호 수집 동의</p>
-                                    <p class="guide_txt">서비스 편의를 위해 휴대폰 문자 또는 알림 메세지(Push) 등으로 종목추천/관심종목 등 알림서비스가 제공됩니다.</p>
-                                </div>
-                                <div class="phonePin_form">
-                                    <form action="">
-                                        <fieldset>
-                                            <div class="box">
-                                                <input type="tel" placeholder="휴대폰번호 입력" class="pinInput">
-                                                <!-- 최초 인증 요청 -->
-                                                <input type="button" src="../img/icon_search.svg" value="인증 요청"
-                                                    class="pinBtn pin_req">
-                                                <!-- 다시 인증 요청 -->
-                                                <input type="button" src="../img/icon_search.svg" value="재요청"
-                                                    class="pinBtn pin_reqAgain">
-                                                <!-- <p class="dsc_error">사용중인 휴대폰번호 입니다.</p> -->
-                                            </div>
-                                            <div class="box">                                    
-                                                <input type="number" class="pinInput_out" name="auth-token" inputmode="numeric"
-                                                    pattern="[0-9]*" autocomplete="one-time-code" placeholder="인증번호 입력 (02:46)">
-                                                <input type="button" src="../img/icon_search.svg" value="번호 확인"
-                                                    class="pin_completion">
-                                                <p class="dsc_error" id="auth_result">인증번호가 일치하지 않습니다. 다시 입력해주세요.</p>                                    
-                                            </div>
-                                        </fieldset>
-                                        <!-- 인증번호 요청 성공하면 실행되는 추가되는 스크립트 -->
-                                        <script>
-                                            $(document).ready(function () {
-                                                const animationDuration = 300;
-                                        
-                                                // 입력 필드 비활성화하지만, 값은 계속 보이도록 설정
-                                                function togglePhoneInputDisable(disable) {
-                                                    $('.phonePin_form .pinInput').attr('disabled', disable).css('cursor', disable ? 'not-allowed' : 'auto');
-                                                }
-                                        
-                                                $('.phonePin_form .pinInput_out').on('input', function() {
-                                                    // 숫자만 입력되도록 현재 값에 숫자가 아닌 문자가 포함되어 있으면 제거
-                                                    $(this).val($(this).val().replace(/[^0-9]/g, ''));
-            
-                                                    // 4자리를 초과하는 입력을 제거
-                                                    if ($(this).val().length > 4) {
-                                                        $(this).val($(this).val().substr(0, 4));
-                                                    }
-            
-                                                    // 입력된 값이 정확히 4자리 숫자인 경우
-                                                    if ($(this).val().length === 4) {
-                                                        $('.pin_completion').css('color', '#404fc3'); // 버튼 색상 변경
-                                                    } else {
-                                                        $('.pin_completion').css('color', '#d3d3d3'); // 기본 색상으로 재설정
-                                                    }
-                                                });
-                                        
-                                                $('.phonePin_form').on("click", ".pinBtn.pin_req", function () {
-                                                    $(this).fadeOut();
-                                                    $('.phonePin_form .pinBtn.pin_reqAgain').fadeIn();
-                                                    togglePhoneInputDisable(true); // 입력 필드 비활성화
-                                                    $('.phonePin_form .box:last-child').slideDown(animationDuration);
-                                                });
-                                        
-                                                $('.phonePin_form').on("click", ".pinBtn.pin_reqAgain", function () {
-                                                    $(this).fadeOut();
-                                                    $('.phonePin_form .pinBtn.pin_req').fadeIn();
-                                                    togglePhoneInputDisable(false); // 입력 필드 다시 활성화
-                                                    $('.phonePin_form .box:last-child').slideUp(animationDuration);
-                                                });
-                                            });
-                                        </script>
-                                        
-                                        <!-- //인증번호 요청 성공하면 실행되는 추가되는 스크립트 -->
-                                    </form>
-                                </div>
-                                <!-- //phonePin_form -->
-                                <!-- //휴대폰 등록 -->
-            
-                                <div class="label sub_label">
-                                    <p class="label_chk"><i></i>[선택] 뉴스레터, 프로모션 정보 수신 동의</p>
-                                </div>
-
-                            </div>
-                            <!-- //bg_gray -->                    
-
-                            <div class="btnArea payBtn">
-                                <a href="sign_complete.html" class="btn btn_save">동의</a>
-                            </div>                            
-                        </div>
-                        <!-- //agree_from -->
+                    <div class="loign">
+                        <p class="sns_loign">정보가 맞다면 이 계정으로 로그인하세요</p>
+                        <ul class="sns">
+                            <li class="sns_K"><a href=""><i></i>카카오로 로그인</a></li>
+                            <li class="sns_n"><a href=""><i></i>네이버로 로그인</a></li>
+                        </ul>
+                        <a href="https://kq64o.channel.io/" class="btn_channel" target="_blank" >회원가입 관련 문의하기</a>
                     </div>
-                    <!-- //agree_area -->
+                    <!-- //loign -->      
                     <div class="business_name">(주)데이터히어로</div>                
-
-                    
-                    <br><br>
-                            <a href="login_duplication.html">[테스트] 기존 회원인 경우</a>                    
                 </div> 
             </div>
 

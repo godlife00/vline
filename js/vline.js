@@ -18,12 +18,19 @@ $(document).ready(function () {
         });
 
         // active
-        $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function () {
-            $(this).toggleClass('active');
-        });
+        // $('.modal.terms_form .pop_con .agree_area .agree_from .label .label_chk').on('click', function () {
+        //     $(this).toggleClass('active');
+        // });
         // $('.modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk').on('click', function () {
         //     $(this).toggleClass('active');
         // });
+        $('.modal.terms_form .pop_con .agree_area .agree_from .label').on("click", function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
+        });
 
         $('#header .bgWrap .premium a.join, .btn_freePop, .btn_joinPop, .inform_area.list .listWrap li.lock').on('click', function () {
             $('.premium_join').modal({
