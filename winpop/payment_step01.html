@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../css/scss/vline.css" />
     <!-- js -->
     <script src="../js/vline.js"></script>
@@ -57,75 +57,104 @@
         <div id="header" class="main_hdr"></div>
 
         <div id="container">
-
-            <!-- 밸류라인 프리미엄 가입 - 가입방법 -->
-            <div class="modal payment_step pay01 win_pop">
-                <div class="pop_header">
-                    <h1 class="pop_title">밸류라인 프리미엄 가입</h1>                    
-                </div>
-                <div class="pop_con">
-                    <div class="step_area">
-                        <ul>
-                            <li class="active">1. 가입방법 선택</li>
-                            <li>2. 결제하기</li>
-                            <li>3. 결제완료</li>
-                        </ul>
+            <div class="modal win_pop sub_payment">
+                <!-- 가입방법 선택 -->
+                <div class="serviceStep step01">
+                    <div class="page_sumtop">
+                        <p class="txt">초이스스탁 이용권 결제하고<br>나에게 딱 맞는 주식 정보 받아보세요. </p>
                     </div>
-                    <!-- //step_area -->
+                    <!-- //page_sumtop -->
 
-                    <div class="serviceStep step01">
-                        <div class="step_top">
-                            <h2 class="step_title">결제하기</h2>
-                        </div>
-                        <!-- //step_top -->
-
-                        <div class="step_box active event_1year">
-                            <!-- 기존 결제 회원 -->
-                            <h3 class="title">월 정기결제 <span class="way">신용카드</span></h3>
+                    <div class="step_wrap">
+                        <!-- 연간 정기결제 12개월 클래스 routine_pay는 정기결제, period_pay 는 기간결제  -->
+                        <div class="step_box routine_pay active">
+                            <h3 class="title">월 정기결제</h3>
                             <div class="payRight">
-                                <span class="pay01">49,000<b>원</b><span class="pay_sale"><strong>8%</strong>
-                                        할인!</span></span>
-                                <span class="pay02 sale">45,000<b>원</b></span>
-                                <div class="txt_line">                                    
-                                    <p class="txt">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
-                                    <p class="txt"><strong>약정 기간 없이 언제든 해지 가능합니다.</strong></p>
-                                </div>
+                                <!-- <span class="pay01">33,000원</span> -->
+                                <span class="pay02">33,000원
+                                </span>
                             </div>
                             <!-- //payRight -->
+                            <div class="subscribe">
+                                <a href="step02_routine.html"><span>구독</span></a>
+                            </div>
+                        </div>
+                        <!-- //step_box -->
+                        <div class="step_box routine_pay active">
+                            <h3 class="title">월 정기결제</h3>
+                            <div class="payRight">
+                                <span class="pay01">33,000원</span>
+                                <span class="pay02">1,000원
+                                    <span class="pay_sale">
+                                        <strong>신규가입 할인</strong>
+                                    </span>
+                                </span>
+                            </div>
+                            <!-- //payRight -->
+                            <div class="subscribe">
+                                <a href="step02_routine.html"><span>구독</span></a>
+                            </div>
+                        </div>
+                        <!-- //step_box -->
+                        <div class="step_box routine_pay active">
+                            <h3 class="title">연간 정기결제</h3>
+                            <div class="payRight">
+                                <span class="pay01">396,000원</span>
+                                <span class="pay02">240,000원
+                                    <span class="pay_sale">
+                                        <strong>(39%, 월 20,000원)</strong>
+                                    </span>
+                                </span>
+                            </div>
+                            <!-- //payRight -->
+                            <div class="subscribe">
+                                <a href="step02_routine.html"><span>구독</span></a>
+                            </div>
+                        </div>
+                        <!-- //step_box -->
+                        <p class="pay_guideTxt">신규 월 정기결제 시, 첫째 달에 1,000원이 결제되며,<br>둘째 달 부터는 매월 33,000원으로 자동결제됩니다.</p>
+
+                        <!-- 기간결제(3개월)  -->
+                        <div class="step_box period_pay">
+                            <h3 class="title">기간결제(6개월)</h3>
+                            <div class="payRight">
+                                <span class="pay01">198,000원</span>
+                                <span class="pay02">165,000원
+                                    <span class="pay_sale">
+                                        <strong>(16%, 월 27,500원)</strong>
+                                    </span>
+                                </span>
+                            </div>
+                            <!-- //payRight -->
+                            <div class="subscribe">
+                                <a href="step02_period.html"><span>구독</span></a>
+                            </div>
                         </div>
                         <!-- //step_box -->
 
-                        <div class="step_box">
-                            <h3 class="title">3개월 기간 결제<span class="way">신용카드, 가상계좌(무통장), 계좌이체</span></h3>
+                        <!-- 기간결제(6개월)  -->
+                        <div class="step_box period_pay">
+                            <h3 class="title">기간결제(1년)</h3>
                             <div class="payRight">
-                                <span class="pay02">147,000<b>원</b></span>
-                                <span class="pay02"><span class="pay_sale">(49,000원 * 3개월)</span></span>
+                                <span class="pay01">396,000원</span>
+                                <span class="pay02">300,000원
+                                    <span class="pay_sale">
+                                        <strong>(24%, 월 25,000원)</strong>
+                                    </span>
+                                </span>
                             </div>
                             <!-- //payRight -->
-                        </div>
-                        <!-- //step_box -->
-                        <div class="step_box">
-                            <h3 class="title">6개월 기간 결제<span class="way">신용카드, 가상계좌(무통장), 계좌이체</span></h3>
-                            <div class="payRight">
-                                <span class="pay02">264,000<b>원</b></span>
-                                <span class="pay02"><span class="pay_sale">(49,000원 * 3개월)</span></span>
+                            <div class="subscribe">
+                                <a href="step02_period.html"><span>구독</span></a>
                             </div>
-                            <!-- //payRight -->
                         </div>
-                        <!-- //step_box -->
-
-                        <div class="btnArea modBtn">
-                            <a href="#" class="btn btn_cncl">취소</a>
-                            <a href="payment_step02.html" class="btn btn_save payment_step02">다음</a>
-                        </div>
-
+                        <!-- //step_box -->                        
                     </div>
-                    <!-- //serviceStep -->
+                    <!-- //step_wrap -->
                 </div>
-
-                <div class="business_name">(주)데이터히어로</div>                
+                <!-- //serviceStep -->
             </div>
-
+            <!-- //modal win_pop sub_payment -->
         </div>
         <!-- //container -->
 

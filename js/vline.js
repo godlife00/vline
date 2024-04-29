@@ -75,25 +75,43 @@ $(document).ready(function () {
             });
         });
 
-        // 나이스페이 전자금융거래 이용약관
-        $('.age_pop01').on('click', function () {
-            $('.age_popbox01').modal({
+        // [필수]전자금융거래 약관 동의
+        $('.age_pop01').on('click', function () {                        
+            $('.agreePopBox.box_01').modal({
                 fadeDuration: 100
             });
-        });
-        // 나이스페이 전자금융거래 이용약관
+        });        
+        // [필수]개인정보 수집 및 이용에 대한 동의
         $('.age_pop02').on('click', function () {
-            $('.age_popbox02').modal({
+            $('.agreePopBox.box_02').modal({
                 fadeDuration: 100
             });
         });
-        // 나이스페이 전자금융거래 이용약관
+        // [필수]개인정보 제 3자 제공약관 동의
         $('.age_pop03').on('click', function () {
-            $('.age_popbox03').modal({
+            $('.agreePopBox.box_03').modal({
                 fadeDuration: 100
             });
+        });
+        // 모달팝업 - 닫기
+        $('.modal .pop_header .clse, .blocker').on('click', function () {
+            $('body').css('overflow', '');
+            $('.blocker').hide();
+            $('.modal').hide().removeClass('slideUp');
         });
 
+        // 결제 이용약관 모달 팝업        
+        $('.valueline #wrap .sub_payment .refund_terms').on('click', function () {
+            if ($(this).hasClass('no_signal')) {            
+                return;
+            } else {
+                $('body').css('overflow', 'hidden');
+                $('.modal').hide().removeClass('slideUp');
+                $('.blocker').show();
+                $('.refundTerms_pop01').show().addClass('slideUp');
+            }        
+        });
+        
         // 월자동결제 서비스 변경 팝업
         $('.btn_payCan').on('click', function () {
             $('.login_form').modal({
@@ -256,13 +274,18 @@ $(document).ready(function () {
 
     // 이용약관
     $('.btn_terms').on('click', function () {
+        $('body').css('overflow', '');
+        $('.blocker').hide();
+        $('.modal').hide().removeClass('slideUp');
         $('.modal.terms').modal({
             fadeDuration: 100
         });
+        
     });
 
     // 개인정보처리방침
     $('.btn_policy').on('click', function () {
+        console.log("약관");
         $('.modal.policy').modal({
             fadeDuration: 100
         });
