@@ -112,7 +112,7 @@
     // 관심종목
     .attention_area {        
         position: relative;        
-        padding: 15px 70px 15px 26px;
+        padding: 19px 70px 19px 26px;
         border-radius: 5px;
         background-color: #eceff5;
         &.sub_attention { // 재무분석 상단에 들어가는 관심종목 리스트일 경우            
@@ -189,10 +189,10 @@
                         content: 'update';
                         position: absolute;
                         right: 0;                
-                        top: 4px;
+                        top: 2px;
                         width: 36px;
                         height: 17px;
-                        padding: 1px 2px;
+                        padding: 2px 2px 1px;
                         box-sizing: border-box;
                         background-color: #2ec400;                
                         border-radius: 3px;
@@ -210,6 +210,7 @@
                     font-weight: $f_sizeB;
                     letter-spacing: -0.5px;                    
                     color: #222;
+                    margin: 5px 0;
                     .unit {
                         display: inline-block;
                         padding-left: 1px;

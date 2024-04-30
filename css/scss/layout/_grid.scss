@@ -15,6 +15,13 @@ body {
     @include pad(0);
 }
 
+body, #wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: -webkit-fill-available;
+	min-height: 100vh;	
+}
+
 #header {
     @include pad(0);
     position: fixed;
@@ -37,6 +44,9 @@ body {
 #container {
     @include width_minmax;
     @include pad(0);
+    min-height: auto;
+    box-sizing: border-box;
+    flex: 1;
     // background: url('/img/temp.jpg') no-repeat center -42px;
     padding-top: 14px;
     position: relative;

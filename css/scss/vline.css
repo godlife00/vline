@@ -326,6 +326,13 @@ body .numCunt::before {
   padding: 0;
 }
 
+body, #wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
+}
+
 #header {
   padding: 0;
   position: fixed;
@@ -355,6 +362,9 @@ body .numCunt::before {
   max-width: 1138px;
   padding: 0 15px;
   padding: 0;
+  min-height: auto;
+  box-sizing: border-box;
+  flex: 1;
   padding-top: 14px;
   position: relative;
 }
@@ -2219,7 +2229,7 @@ input[type=radio]:checked:before {
   transform: rotate(135deg);
 }
 #container .M_right .sum_box.big .more::after {
-  top: 5px;
+  top: 4px;
   transform: rotate(315deg);
 }
 #container .M_right .sum_box .more {
@@ -2244,7 +2254,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   position: absolute;
   right: 0;
-  top: 3px;
+  top: 1px;
 }
 #container .M_right .page_drop {
   text-align: center;
@@ -2384,7 +2394,8 @@ input[type=radio]:checked:before {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  padding: 7px 8px;
+  padding: 8.5px 8px;
+  box-sizing: border-box;
   font-size: 13px;
   letter-spacing: -0.33px;
   text-align: left;
@@ -2407,7 +2418,7 @@ input[type=radio]:checked:before {
 #container .M_right .contents_header .data_filter .data .set {
   display: inline-block;
   cursor: pointer;
-  padding: 6px 14px;
+  padding: 7.5px 14px;
   box-sizing: border-box;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -2417,7 +2428,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  padding-top: 5px;
+  padding-top: 3px;
 }
 #container .M_right .contents_header .data_filter .table_search {
   position: relative;
@@ -2555,6 +2566,8 @@ input[type=radio]:checked:before {
 #container .M_right .contents_header .data_filter .set_box .set_filter .top .clse {
   display: inline-block;
   cursor: pointer;
+  position: relative;
+  top: -2px;
 }
 #container .M_right .contents_header .data_filter .set_box .set_filter .top .clse img {
   display: inline-block;
@@ -2679,7 +2692,12 @@ input[type=radio]:checked:before {
   color: #fff;
 }
 #container .M_right .contents_header .table_filter {
-  float: right;
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+  margin-left: auto;
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 #container .M_right .contents_header .table_filter .term {
   display: inline-block;
@@ -3107,7 +3125,7 @@ input[type=radio]:checked:before {
 }
 .valueline #wrap #container .attention_area {
   position: relative;
-  padding: 15px 70px 15px 26px;
+  padding: 19px 70px 19px 26px;
   border-radius: 5px;
   background-color: #eceff5;
 }
@@ -3182,10 +3200,10 @@ input[type=radio]:checked:before {
   content: "update";
   position: absolute;
   right: 0;
-  top: 4px;
+  top: 2px;
   width: 36px;
   height: 17px;
-  padding: 1px 2px;
+  padding: 2px 2px 1px;
   box-sizing: border-box;
   background-color: #2ec400;
   border-radius: 3px;
@@ -3200,6 +3218,7 @@ input[type=radio]:checked:before {
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #222;
+  margin: 5px 0;
 }
 .valueline #wrap #container .attention_area .data_area .detail .price .unit {
   display: inline-block;
@@ -5681,7 +5700,7 @@ input[type=radio]:checked:before {
   top: 1px;
   bottom: 1px;
   width: 12px;
-  height: 58px;
+  height: 52px;
   background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 
@@ -6340,17 +6359,18 @@ input[type=radio]:checked:before {
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox] + label i {
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 0px;
   display: inline-block;
   width: 14px;
   height: 14px;
   background: url("/img/icon_agreecheck.svg") no-repeat right 0;
+  filter: grayscale(100%) opacity(30%);
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox]:checked + label {
   display: inline-block;
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox]:checked + label i {
-  background-position: 0 0;
+  filter: grayscale(0%) opacity(100%);
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk .vote-num {
   width: 100%;
@@ -6400,8 +6420,8 @@ input[type=radio]:checked:before {
   content: "";
   display: inline-block;
   position: absolute;
-  left: -15px;
-  top: 2px;
+  left: -16px;
+  top: 0px;
   width: 12px;
   height: 12px;
   background: url("/img/icon_help.svg") no-repeat 0 0;
@@ -6612,17 +6632,18 @@ input[type=radio]:checked:before {
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox] + label i {
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 0px;
   display: inline-block;
   width: 14px;
   height: 14px;
   background: url("/img/icon_agreecheck.svg") no-repeat right 0;
+  filter: grayscale(100%) opacity(30%);
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox]:checked + label {
   display: inline-block;
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk input[type=checkbox]:checked + label i {
-  background-position: 0 0;
+  filter: grayscale(0%) opacity(100%);
 }
 .top_invest .stand_standard .cen .stand_from .from_box .label .label_chk .vote-num {
   width: 100%;
@@ -6672,8 +6693,8 @@ input[type=radio]:checked:before {
   content: "";
   display: inline-block;
   position: absolute;
-  left: -15px;
-  top: 2px;
+  left: -16px;
+  top: 0px;
   width: 12px;
   height: 12px;
   background: url("/img/icon_help.svg") no-repeat 0 0;
@@ -6708,7 +6729,7 @@ input[type=radio]:checked:before {
 .top_invest.greenblatt .stand_standard .cen ul li i {
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 3px;
   font-style: normal;
   color: #656d7e;
 }
@@ -9634,6 +9655,7 @@ input[type=radio]:checked:before {
   padding: 13px 5px;
   box-sizing: border-box;
   background-color: #404fc3;
+  text-align: center;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -9714,6 +9736,7 @@ input[type=radio]:checked:before {
   display: inline-block;
   margin-bottom: 15px;
   width: 100%;
+  text-align: center;
 }
 .modal.terms_form .pop_con .loign .sns li a {
   position: relative;
@@ -10263,7 +10286,6 @@ input[type=radio]:checked:before {
   letter-spacing: -0.4px;
   text-align: center;
   color: #222;
-  padding: 16px 0 7px;
   border-bottom: 2px solid #e7eaf2;
 }
 .modal.mypage_info .pop_con .mapage_area .tab_area ul li.active {
@@ -10271,8 +10293,13 @@ input[type=radio]:checked:before {
   color: #3655d6;
   border-color: #3655d6;
 }
+.modal.mypage_info .pop_con .mapage_area .tab_area ul li.active a {
+  font-weight: 700;
+  color: #3655d6;
+}
 .modal.mypage_info .pop_con .mapage_area .tab_area ul li a {
   display: inline-block;
+  padding: 16px 0 7px;
   width: 100%;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table table {
@@ -10305,6 +10332,8 @@ input[type=radio]:checked:before {
   color: #222;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_btn {
+  position: relative;
+  top: -2px;
   display: inline-block;
   cursor: pointer;
   border-radius: 3px;
@@ -10312,7 +10341,7 @@ input[type=radio]:checked:before {
   margin-top: 2px;
   margin-left: 12px;
   height: 19px;
-  padding: 1px 9px;
+  padding: 2px 9px 1px;
   box-sizing: border-box;
   font-size: 11px;
   letter-spacing: -0.5px;
@@ -10349,6 +10378,7 @@ input[type=radio]:checked:before {
   background-size: 12px 12px;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_phone .txt_info {
+  display: inline-block;
   color: #656d7e;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .mod_phone .phone_mod {
@@ -10399,21 +10429,17 @@ input[type=radio]:checked:before {
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput,
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out {
-  border: none;
-  color: #333;
-  font-size: 1rem;
-  letter-spacing: -0.8px;
-  padding: 8px 13px;
   width: 100%;
   box-sizing: border-box;
-  border-radius: 5px;
-  background-color: #ececef;
+  padding: 9.5px 16px;
+  border-radius: 8px;
+  border: solid 1px #e0e4e9;
+  background-color: #fff;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput {
   color: #333;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput:focus {
-  border: none;
   outline: none;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput:focus::-webkit-input-placeholder {
@@ -10448,38 +10474,44 @@ input[type=radio]:checked:before {
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinBtn.pin_req {
   display: block;
-  color: #fff;
-  border: solid 1px #424fbc;
-  background-color: #424fbc;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.58;
+  color: #404fc3;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinBtn.pin_reqAgain {
   display: none;
-  color: #424fbc;
-  border: solid 1px #424fbc;
-  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.58;
+  color: #939393;
+  outline: none;
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out {
   font-size: 1rem;
-  font-weight: bold;
   letter-spacing: 1.6px;
   color: #333;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out:focus {
-  border: none;
   outline: none;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput::-moz-placeholder, .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out::-moz-placeholder {
-  font-size: 16px;
-  font-weight: normal;
-  color: #82929f;
-  letter-spacing: -0.8px;
+  font-size: 0.8125rem;
+  line-height: 1.46;
+  color: #d3d3d3;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput::placeholder,
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out::placeholder {
-  font-size: 16px;
-  font-weight: normal;
-  color: #82929f;
-  letter-spacing: -0.8px;
+  font-size: 0.8125rem;
+  line-height: 1.46;
+  color: #d3d3d3;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pinInput_out:focus::-webkit-input-placeholder {
   color: transparent;
@@ -10501,21 +10533,23 @@ input[type=radio]:checked:before {
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pin_completion {
   cursor: pointer;
   position: absolute;
-  right: 9px;
-  top: 6px;
-  width: 70px;
-  height: 25px;
-  box-sizing: border-box;
-  font-size: 0.75rem;
-  font-weight: normal;
-  letter-spacing: -0.6px;
-  text-align: center;
-  color: #fff;
+  right: 1px;
+  top: 0px;
+  height: 40px;
+  width: 80px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.46;
+  color: #d3d3d3;
+  border: none;
+  border-left: 1px solid #e0e4e9;
   outline: none;
-  padding: 4px 8px;
-  border-radius: 3px;
-  border: solid 1px #404fc3;
-  background-color: #404fc3;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: transform 100ms ease-in-out;
+}
+.modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td.phonePin_form .pin_completion:active {
+  transform: scale(0.95); /* 버튼을 약간 축소 */
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table td .txt_reject {
   text-align: right;
@@ -10541,6 +10575,7 @@ input[type=radio]:checked:before {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 0;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .inUse_box .use_service li {
   padding: 8px 5px;
@@ -10779,6 +10814,18 @@ input[type=radio]:checked:before {
   color: #575757;
   padding-left: 5px;
 }
+.modal.mypage_info .pop_con .mapage_service .service_table .day .pay_cacl {
+  cursor: pointer;
+  display: inline-block;
+  color: #f2333a;
+  position: relative;
+  top: 6px;
+  font-size: 0.75rem;
+  border: 1px solid #f2333a;
+  text-align: center;
+  border-radius: 3px;
+  padding: 4px 5px;
+}
 .modal.mypage_info .pop_con .mapage_service .service_table .system {
   font-size: 12px;
   font-weight: 700;
@@ -10802,11 +10849,13 @@ input[type=radio]:checked:before {
   border-radius: 3px;
   border: 1px solid #3c55ce;
   background-color: transparent;
-  padding: 1px 5px;
-  font-size: 10px;
-  letter-spacing: -0.6px;
+  padding: 2px 5px;
+  margin: 4px auto 0;
+  font-size: 11px;
   text-align: center;
   color: #3655d6;
+  display: block;
+  max-width: 65px;
 }
 .modal.mypage_info .pop_con .mapage_service .service_table .card_ch {
   display: inline-block;
@@ -10815,10 +10864,10 @@ input[type=radio]:checked:before {
   border: solid 1px #3c55ce;
   width: 36px;
   height: 17px;
-  padding: 0 4px;
+  padding: 1px 4px;
   margin-left: 8px;
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: -0.5px;
   text-align: center;
   color: #3655d6;
@@ -11287,9 +11336,13 @@ input[type=radio]:checked:before {
   word-break: break-all;
   word-wrap: break-word;
 }
+.modal.modal.terms .pop_con .sub_terms .txt, .modal.modal.policy .pop_con .sub_terms .txt {
+  line-height: 1.42;
+}
 .modal.modal.terms .pop_con .sub_terms .txt_B,
 .modal.modal.terms .pop_con .sub_terms .terms_title, .modal.modal.policy .pop_con .sub_terms .txt_B,
 .modal.modal.policy .pop_con .sub_terms .terms_title {
+  line-height: 1.42;
   font-weight: 700;
 }
 .modal.modal.terms .pop_con .sub_terms .terms_sum, .modal.modal.policy .pop_con .sub_terms .terms_sum {
@@ -11545,8 +11598,182 @@ input[type=radio]:checked:before {
 }
 
 /* 가입 - 가입방법 선택 step 01 */
+.agree_area .agree_from .label.phone_label {
+  display: block;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 18px;
+}
+.agree_area .agree_from .label.phone_label .label_chk {
+  width: 100%;
+}
+.agree_area .agree_from .label.phone_label .guide_txt {
+  padding-top: 5px;
+  padding-left: 24px;
+  font-size: 0.75rem;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #939393;
+  line-height: 1.2;
+}
+.agree_area .agree_from .phonePin_form .box {
+  padding: 0 20px 0 35px;
+  position: relative;
+  background-color: #f5f6fa;
+}
+.agree_area .agree_from .phonePin_form .box:first-child {
+  margin-top: 0;
+}
+.agree_area .agree_from .phonePin_form .box:last-child {
+  display: none;
+}
+.agree_area .agree_from .phonePin_form .pinInput,
+.agree_area .agree_from .phonePin_form .pinInput_out {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9.5px 16px;
+  border-radius: 8px;
+  border: solid 1px #e0e4e9;
+  background-color: #fff;
+}
+.agree_area .agree_from .phonePin_form .pinInput {
+  color: #333;
+}
+.agree_area .agree_from .phonePin_form .pinInput:focus {
+  outline: none;
+}
+.agree_area .agree_from .phonePin_form .pinInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.agree_area .agree_from .phonePin_form .dsc_error {
+  text-align: right;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #f2333a;
+}
+.agree_area .agree_from .phonePin_form .pinBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 23px;
+  top: 8px;
+  width: 70px;
+  height: 25px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #C22E06;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #C22E06;
+  background-color: #fff;
+}
+.agree_area .agree_from .phonePin_form .pinBtn.pin_req {
+  display: block;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.58;
+  color: #404fc3;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.agree_area .agree_from .phonePin_form .pinBtn.pin_reqAgain {
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.58;
+  color: #939393;
+  outline: none;
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.agree_area .agree_from .phonePin_form {
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.agree_area .agree_from .phonePin_form .pinInput_out {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+.agree_area .agree_from .phonePin_form .pinInput_out:focus {
+  outline: none;
+}
+.agree_area .agree_from .phonePin_form .pinInput::-moz-placeholder, .agree_area .agree_from .phonePin_form .pinInput_out::-moz-placeholder {
+  font-size: 0.8125rem;
+  line-height: 1.46;
+  color: #d3d3d3;
+}
+.agree_area .agree_from .phonePin_form .pinInput::placeholder,
+.agree_area .agree_from .phonePin_form .pinInput_out::placeholder {
+  font-size: 0.8125rem;
+  line-height: 1.46;
+  color: #d3d3d3;
+}
+.agree_area .agree_from .phonePin_form .pinInput_out:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.agree_area .agree_from .phonePin_form .pin_countDown {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+  text-align: center;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-top: 6px;
+}
+.agree_area .agree_from .phonePin_form .pin_countDown span {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+}
+.agree_area .agree_from .phonePin_form .pin_completion {
+  cursor: pointer;
+  position: absolute;
+  right: 21px;
+  top: 9px;
+  height: 40px;
+  width: 80px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.46;
+  color: #d3d3d3;
+  border: none;
+  border-left: 1px solid #e0e4e9;
+  outline: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: transform 100ms ease-in-out;
+}
+.agree_area .agree_from .phonePin_form .pin_completion:active {
+  transform: scale(0.95); /* 버튼을 약간 축소 */
+}
+.agree_area .agree_from .txt_reject {
+  text-align: right;
+  color: #898989;
+  font-size: 0.75rem;
+  line-height: 14px;
+  margin-top: 7px;
+}
+
 .business_name {
-  padding: 15px 15px 0;
+  padding: 27px 15px;
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: -0.33px;
+  font-weight: bold;
+  text-align: right;
+  color: #656d7e;
+}
+
+.business_name {
+  padding: 15px 15px;
   font-size: 13px;
   line-height: 1.54;
   letter-spacing: -0.33px;

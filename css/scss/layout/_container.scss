@@ -848,7 +848,7 @@
             &.big {
                 .more {
                     &::after {
-                        top: 5px;
+                        top: 4px;
                         transform: rotate(315deg);
                     }
                 }
@@ -876,7 +876,7 @@
                     display: inline-block;
                     position: absolute;
                     right: 0;
-                    top: 3px;
+                    top: 1px;
                 }
             }
         }
@@ -1044,7 +1044,8 @@
                         position: relative;
                         display: inline-block;
                         cursor: pointer;
-                        padding: 7px 8px;
+                        padding: 8.5px 8px;
+                        box-sizing: border-box;
                         font-size: 13px;
                         letter-spacing: -0.33px;
                         text-align: left;
@@ -1070,7 +1071,7 @@
                     .set {
                         display: inline-block;
                         cursor: pointer;
-                        padding: 6px 14px;
+                        padding: 7.5px 14px;
                         box-sizing: border-box;
                         border-top-right-radius: 5px;
                         border-bottom-right-radius: 5px;
@@ -1080,7 +1081,7 @@
                             display: inline-block;
                             width: 14px;
                             height: 14px;
-                            padding-top: 5px;
+                            padding-top: 3px;
                         }
                     }
                 }
@@ -1224,6 +1225,8 @@
                             .clse {
                                 display: inline-block;
                                 cursor: pointer;
+                                position: relative;                                
+                                top: -2px;
 
                                 img {
                                     display: inline-block;
@@ -1379,7 +1382,13 @@
             }
 
             .table_filter {
-                float: right;
+                display: flex;
+                align-items: center;
+                gap: 0 6px;                
+                margin-left: auto;
+                padding-bottom: 10px;
+                box-sizing: border-box;
+                // float: right;
                 // margin-left: 15px;       
 
                 .term {

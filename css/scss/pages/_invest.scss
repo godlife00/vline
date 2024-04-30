@@ -110,17 +110,18 @@
                                     i {
                                         position: absolute;
                                         left: 0;
-                                        top: 2px;
+                                        top: 0px;
                                         display: inline-block;
                                         width:14px;
                                         height: 14px;                                
                                         background: url('/img/icon_agreecheck.svg') no-repeat right 0;
+                                        filter: grayscale(100%) opacity(30%);
                                     }
                                 }
                                 &:checked + label {
                                     display: inline-block;                                
                                     i {                                                                        
-                                        background-position: 0 0;
+                                        filter: grayscale(0%) opacity(100%);                                    
                                     }
                                 }                                                                
                             }
@@ -178,8 +179,8 @@
                         content: '';
                         display: inline-block;
                         position: absolute;    
-                        left: -15px;                    
-                        top: 2px;
+                        left: -16px;                    
+                        top: 0px;
                         width: 12px;
                         height: 12px;
                         background: url('/img/icon_help.svg') no-repeat 0 0;                    
@@ -422,7 +423,7 @@
                             i {
                                 position: absolute;
                                 left: 0;
-                                top: 1px;
+                                top: 3px;
                                 font-style: normal;
                                 color: #656d7e;     
                             }                   
