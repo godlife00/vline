@@ -6198,7 +6198,7 @@ input[type=radio]:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 #container .M_right .contents .excavation_area.pattern .paginate {
   margin-top: 30px;
@@ -6476,7 +6476,7 @@ input[type=radio]:checked:before {
   bottom: 0;
   width: 12px;
   height: 49px;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td {
   padding: 8.5px 8px;
@@ -6513,7 +6513,7 @@ input[type=radio]:checked:before {
   bottom: 0;
   width: 12px;
   height: 100%;
-  background: url("../img/fix_shadow.svg") repeat-y 0 0;
+  background: url("/img/fix_shadow.svg") repeat-y 0 0;
 }
 #container .M_right .contents .invest_area.buffett .thead2_table tbody td .check {
   display: inline-block;
@@ -6754,7 +6754,7 @@ input[type=radio]:checked:before {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+  background: #fff url("/img/gray_tdline.gif") repeat-y right top;
 }
 #container .M_right .contents .invest_area.greenblatt .thead2_table th, #container .M_right .contents .invest_area.greenblatt .thead2_table td {
   padding: 8.5px 12px;
@@ -9865,7 +9865,7 @@ input[type=radio]:checked:before {
   background: #f5f5f5;
   border-radius: 5px;
   margin-top: 10px;
-  margin-left: -90px;
+  margin-left: -45px;
   padding: 15px 15px;
   box-sizing: border-box;
 }
@@ -9878,6 +9878,7 @@ input[type=radio]:checked:before {
   color: #575757;
 }
 .modal.login_form .pop_con .mapage_form .form_table table .certification_area .go_link, .modal.refund .pop_con .mapage_form .form_table table .certification_area .go_link {
+  cursor: pointer;
   margin-top: 5px;
   display: block;
   text-decoration: underline;
@@ -9918,9 +9919,10 @@ input[type=radio]:checked:before {
   height: 18px;
   background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
+  filter: grayscale(100%) opacity(30%);
 }
 .modal.login_form .pop_con .mapage_form .label_chk.active i, .modal.refund .pop_con .mapage_form .label_chk.active i {
-  background-position: 0 0;
+  filter: grayscale(0%) opacity(100%);
 }
 .modal.login_form .pop_con .mapage_form .btnArea.edtBtn, .modal.refund .pop_con .mapage_form .btnArea.edtBtn {
   position: relative;
@@ -10649,11 +10651,12 @@ input[type=radio]:checked:before {
   left: -21px;
   width: 14px;
   height: 14px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 100%;
+  background: url(/img/icon_agreecheck.svg) no-repeat 0 100%;
   margin-right: 7px;
+  filter: grayscale(100%) opacity(30%);
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .agree_area .agree_from .label .label_chk.active::before {
-  background-position: 0 100%;
+  filter: grayscale(0%) opacity(100%);
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .btnArea.modBtn {
   display: flex;
@@ -12295,6 +12298,7 @@ input[type=radio]:checked:before {
   color: #d3d3d3;
 }
 .valueline #wrap .sub_payment .payment_guide .mapage_form .error-message {
+  display: none;
   margin-top: 10px;
   font-size: 0.75rem;
   line-height: 1.72;
@@ -12376,6 +12380,7 @@ input[type=radio]:checked:before {
   gap: 10px;
   padding-left: 4px;
   box-sizing: border-box;
+  display: none;
 }
 .valueline #wrap .sub_payment .payment_note .agree_chk.caution .age_link {
   visibility: hidden;

@@ -113,11 +113,11 @@ $(document).ready(function () {
         });
         
         // 월자동결제 서비스 변경 팝업
-        $('.btn_payCan').on('click', function () {
-            $('.login_form').modal({
-                fadeDuration: 100
-            });
-        });
+        // $('.btn_payCan').on('click', function () {            
+        //     $('.login_form').modal({
+        //         fadeDuration: 100                
+        //     });
+        // });
         $('.btn_payRefund').on('click', function () {
             $('.refund').modal({
                 fadeDuration: 100

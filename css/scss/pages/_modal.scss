@@ -658,7 +658,7 @@
                             background: #f5f5f5;
                             border-radius: 5px;
                             margin-top: 10px;
-                            margin-left: -90px;
+                            margin-left: -45px;
                             padding: 15px 15px;
                             box-sizing: border-box;
 
@@ -674,6 +674,7 @@
                             }
 
                             .go_link {
+                                cursor: pointer;
                                 margin-top: 5px;
                                 display: block;
                                 text-decoration: underline;
@@ -719,10 +720,11 @@
                     height: 18px;
                     background: url('/img/icon_agreecheck.svg') no-repeat 100% 0;
                     margin-right: 7px;
+                    filter: grayscale(100%) opacity(30%);                                
                 }
 
                 .label_chk.active i {
-                    background-position: 0 0;
+                    filter: grayscale(0%) opacity(100%);                                
                 }
 
                 .btnArea.edtBtn {
@@ -1517,13 +1519,14 @@
                                     left: -21px;
                                     width: 14px;
                                     height: 14px;
-                                    background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
+                                    background: url(/img/icon_agreecheck.svg) no-repeat 0 100%;
                                     margin-right: 7px;
+                                    filter: grayscale(100%) opacity(30%);                                
                                 }
 
                                 &.active {
                                     &::before {
-                                        background-position: 0 100%;
+                                        filter: grayscale(0%) opacity(100%);
                                     }
 
                                 }
@@ -3223,7 +3226,7 @@
     }
     .mapage_form .error-message {	
         // display: inline-block;
-        // display: none;
+        display: none;
         margin-top: 10px;
         font-size: 0.75rem;
         line-height: 1.72;
@@ -3307,7 +3310,7 @@
         gap: 10px;
         padding-left: 4px;
         box-sizing: border-box;
-        // display: none;
+        display: none;
         &.caution {
             .age_link {
                 visibility: hidden;

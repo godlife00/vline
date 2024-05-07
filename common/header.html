@@ -75,109 +75,182 @@
 <!-- //header_bgWrap -->
 
 <!-- Modal popup -->
-<!-- 초이스스탁 통합회원 로그인 스탭1 SNS 확인 -->
+
+<!-- 결제취소, 환불 팝업 들 -->
+<!-- 월자동결제 결제취소 팝업 -->
 <div class="modal login_form">
     <div class="pop_header">
-        <h1 class="pop_title">초이스스탁 통합회원 로그인</h1>
+        <h1 class="pop_title">결제취소 <span id="now_time" style="color: #d30000; font-style: normal;">2022.3/14 9:48</span> </h1>
         <a href="#" class="clse" rel="modal:close">
             <!--닫기-->
         </a>
     </div>
+
     <div class="pop_con">
-        <ul class="sns">
-            <li><a href="#" class="sns_n open_step02"><span>네이버로 로그인</span></a></li>
-            <li><a href="#" class="sns_k open_step02"><span>카카오톡으로 로그인</span></a></li>
-        </ul>
-        <p class="guide_txt">네이버, 카카오 계정으로 간편하게 로그인 할 수 있습니다.</p>
+        <div class="mapage_form">
+            <form name="payForm" method="post">
+                <fieldset>
+                    <div class="form_table">
+                        <table border="1" class="">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">서비스</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_srv_name">밸류라인 (월자동)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_srv_price">990원</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사용일수</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_use_day">543일</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_refund_price">0원</p>                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info" id="pay_card_no">신용카드(****23)</p>
+                                        </div>
+                                        <div class="certification_area">
+                                            <p class="txt">
+                                                <b>기간결제</b> : 해지일로부터 이용일 수에 해당하는 금액과 수수료 및 제반비용(3.5%)차감후 환불됩니다.
+                                                <br><br>
+                                                <b>월 정기결제</b> : 결제 주기가 종료될 때까지 서비스를 이용할 수 있으며, 결제 금액은 환불되지 않습니다.
+                                                <br><br>
+                                                결제취소는 신청 즉시(또는 영업일 기준 D+2 이내) 처리되며, 가상계좌/계좌이체 결제금액은
+                                                D+7 이내 등록하신 환불계좌로 입금처리됩니다.</p>                                            
+                                                <span class="go_link refund_terms">(환불정책 보기)</span>
+                                        </div>
+                                        <!-- //certification_area -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="label_chk"><i></i>위 내용을 확인했으며, 결제취소를 신청합니다.</p>
+                    </div>
+                    <!-- //form_table -->
+                    <div class="btnArea edtBtn">
+                        <a href="" class="btn btn_save">결제취소</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </div>
-    <div class="pop_foot">
-        <h2 class="sub_title">초이스스탁 프리미엄 서비스</h2>
-        <ul class="guide_list">
-            <li><strong>밸류라인</strong>성공하는 투자자의 정석, 종목발굴 빅 데이터 서비스</li>
-            <li><strong>인더스트리워치</strong>성장주를 발굴하세요. 산업 통계 빅데이터 서비스</li>
-            <li><strong>초이스스탁US</strong>미국주식 쉽게 편리하게! 종목분석, 추천포트폴리오 서비스</li>
-        </ul>
-    </div>
+
 </div>
-<!-- 초이스스탁 통합회원 로그인 스탭2 약관 동의 -->
-<div class="modal terms_form">
+
+<!-- 기간결제 해지/환불 팝업 -->
+<div class="modal refund">
     <div class="pop_header">
-        <h1 class="pop_title">초이스스탁 통합회원 로그인</h1>
+        <h1 class="pop_title">서비스 해지/환불 <span>2019.12/23 12:24</span> </h1>
         <a href="#" class="clse" rel="modal:close">
             <!--닫기-->
         </a>
     </div>
+
     <div class="pop_con">
-        <div class="loign_chk">
-            <div class="id_chk">
-                <p class="sns_name">네이버 아이디</p>
-                <p class="sns_chk">datahero33@naver.com</p>
-            </div>
-            <!-- //id_chk -->
+        <p class="pop_sum">이용중인 <strong>‘초이스스탁US’</strong> 서비스 해지와 환불을 신청합니다.</p>
+        <div class="mapage_form">
+            <form action="" method="post">
+                <fieldset>
+                    <div class="form_table">
+                        <table border="1" class="">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">서비스</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info">초이스스탁 (기간결제)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info">35,000원</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이용일수</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info"><strong>20</strong>일 <span>/ 31일</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불금액</th>
+                                    <td>
+                                        <div class="item">
+                                            <p class="txt_info"><strong>15,000</strong>원</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불계좌</th>
+                                    <td>
+                                        <div class="item">
+                                            <div class="selectbox" style="width: 180px;">
+                                                <label for="select">은행 선택</label>
+                                                <select id="select">
+                                                    <option selected>신한은행</option>
+                                                    <option>농협은행</option>
+                                                    <option>국민은행</option>
+                                                    <option>우리은행</option>
+                                                    <option>신한은행</option>
+                                                </select>
+                                            </div>
+                                            <input type="number" placeholder="계좌번호 입력" name="" id="" class="tr_num">
+                                        </div>
+                                        
+
+                                        <div class="certification_area">
+                                            <h3 class="service_title"><strong>[환불 안내]</strong></h3>
+                                            <p class="txt">해지일로부터 이용일수에 해당하는 금액과 환불처리에 발생하는 수수료 및
+                                                기타 제반 비용(환불대상 서비스 결제금액의 3.5%)을 결제금액에서 차감 후 환불합니다.
+                                                단, 유료 서비스 이용 개시일로부터 3일 이내에 해지를 요구하는 경우
+                                                이용일수에 해당하는 금액만을 차감하여 환불합니다</p>
+                                            <p class="txt">환불 요청 시 상거래보호법에 따른 거래내역 보존 필요에 따라 5년~10년간
+                                                아이디와 함께 정보가 보관됩니다. </p>
+                                        </div>
+                                        <!-- //certification_area -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="label_chk"><i></i>서비스 해지 및 환불에 관한 내용을 모두 확인했습니다.</p>
+                    </div>
+                    <!-- //form_table -->
+                </fieldset>
+            </form>
         </div>
-        <!-- //loign_chk -->
-
-        <div class="agree_area">
-            <p class="txt">서비스 이용을 위해 약관을 확인하시고 동의해주세요.</p>
-            <div class="agree_from">
-                <div class="label">
-                    <p class="label_chk active">초이스스탁 서비스 약관에 동의합니다.</p>
-                    <a href="#" class="terms_btn">내용보기</a>
-                </div>
-                <div class="label">
-                    <p class="label_chk">개인정보 수집 및 이용에 동의합니다.</p>
-                    <a href="#" class="terms_btn">내용보기</a>
-                </div>
-                <div class="label sub_label">
-                    <p class="label_chk">뉴스레터, 특별 프로모션 정보를 수신합니다. (선택)</p>
-                </div>
-
-                <div class="btnArea">
-                    <a href="#" class="agr_btn open_step03">동의<i></i></a>
-                </div>
-            </div>
-            <!-- //agree_from -->
-        </div>
-        <!-- //agree_area -->
-    </div>
-    <div class="pop_foot">
-
-    </div>
-</div>
-<!-- 초이스스탁 통합회원 로그인 스탭3 가입 완료 -->
-<div class="modal sign_complete">
-    <div class="pop_header">
-        <h1 class="pop_title">초이스스탁 통합회원 로그인</h1>
-        <a href="#" class="clse" rel="modal:close">
-            <!--닫기-->
-        </a>
-    </div>
-    <div class="pop_con">
-        <div class="loign_com">
-            <h2 class="login_title"><strong>초이스스탁 통합회원</strong> 가입이<br>완료되었습니다.</h2>
-
-            <div class="prm_guide">
-                <h3 class="title">밸류라인 프리미엄</h3>
-                <p class="sum">종목발굴 서비스와 데이터를 무제한으로 이용하세요.</p>
-                <ul class="list">
-                    <li>기업분석을 위한 <b>10년 재무제표</b></li>
-                    <li>빅데이터 기반 종목발굴 <b>BIC차트</b></li>
-                    <li>기업의 강점/약점을 한눈에 <b>우량주</b></li>
-                    <li>데이터/차트 업종분석 <b>매트릭스 분석</b></li>
-                    <li>대가들의 투자법 <b>투자대가 가치주</b></li>
-                    <li>주요 <b>데이터 다운로드</b> 제공</li>
-                </ul>
-            </div>
-            <!-- //prm_guide -->
-
-            <div class="btnArea">
-                <a href="#" class="join_btn open_payment"><b>프리미엄</b> 가입하기</a>
-                <ul class="link_menu">
-                    <li><a href="#">밸류라인 홈으로 이동</a></li>
-                </ul>
-            </div>
+        <div class="btnArea edtBtn">
+            <a href="#" class="btn btn_save">서비스 해지 및 환불요청</a>
         </div>
     </div>
+
 </div>
 
 <!-- 벨류라인 프리미엄 -->
@@ -446,3 +519,20 @@
         
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        // 결제 이용약관 모달 팝업        
+        $('.certification_area .refund_terms').on('click', function () {            
+            $('body').css('overflow', '');            
+            $('.modal').hide().removeClass('slideUp');
+            $('.refundTerms_pop01').show().addClass('slideUp');
+        });
+        // 모달팝업 - 닫기
+        $('.modal .pop_header .clse, .blocker').on('click', function () {
+            $('body').css('overflow', '');
+            $('.blocker').hide();
+            $('.modal').hide().removeClass('slideUp');
+        });
+    })
+</script>

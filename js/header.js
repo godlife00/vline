@@ -83,8 +83,12 @@ $(document).ready(function () {
             $('.premium_join').modal('show');
         });
 
-        
-
+        // 월자동결제 서비스 변경 팝업
+        $('.btn_payCan').on('click', function () {                        
+            $('.login_form').modal({
+                fadeDuration: 100                
+            });
+        });
 
         //select
         $(function () {
