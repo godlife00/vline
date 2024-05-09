@@ -2710,6 +2710,46 @@
 
 // 2024.04.25 기본 가격 33000변경, 관련 가격 페이지, 배너 변경 수정 
 /* 서비스 결제 스탭 1 */
+.valueline #wrap .sub_payment {
+    .headerTop {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex: 0 0 60px;
+		height: 54px;
+        padding: 0 30px 0 16px;
+		box-sizing: border-box;		
+        background-color: #404fc3;
+
+		.headerLogo {						
+			flex: auto;
+			font-size: 20px;
+			padding-right: 14px;
+		}
+		.headerLogo span {
+			font-size: 20px;
+			font-weight: bold;
+			letter-spacing: -0.43px;
+			color: #fff;			
+		}
+
+		.go_back {
+			position: relative;
+			top: -6px;
+			left: 4px;
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-top: 2px solid #fff;
+			border-right: 2px solid #fff;
+			transform: rotate(-135deg);
+			border-color: #fff;
+			font-size: 0;
+		}
+
+	}
+}
 .valueline #wrap .sub_payment .serviceStep {
 	background-color: #404fc3;
     // background: #F4F4F5;
@@ -2865,7 +2905,7 @@
     }
 }
 .valueline #wrap .sub_payment .mapage_form .payment_note .agree_txt {
-	// display: none;
+	display: none;
 	font-size: 0.75rem;	
 	line-height: 1.42;	
 	color: #939393;		
