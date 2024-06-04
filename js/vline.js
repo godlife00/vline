@@ -412,7 +412,10 @@ $(document).ready(function () {
         $('.table tr.hide_line').toggle();
     });
     if ($('#container .M_right .contents_header .table_filter .detail span.table_view').hasClass('active')) {
-        $('.table tr.hide_line').show();
+        $('.table tr.hide_line').css({
+            'visibility' : 'inherit',
+            'display' : 'table-row',
+        });
     }
     $('#container .M_right .contents_header .table_filter .detail span.simple').resize(function () {
         $('.highcharts-root').append("<div>Handler for .resize() called.</div>");

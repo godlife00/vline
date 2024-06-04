@@ -570,7 +570,7 @@ body, #wrap {
   border: none;
 }
 .table tr.hide_line {
-  display: none;
+  visibility: visible;
 }
 .table th,
 .table td {

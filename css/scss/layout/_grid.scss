@@ -245,7 +245,8 @@ body, #wrap {
     border: none;
 
     tr.hide_line {
-        display: none;
+        // display: none;
+        visibility: visible;        
     }
 
     th,
