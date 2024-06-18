@@ -880,6 +880,7 @@ $(document).ready(function () {
             },
         });
     }
+    
 
     //재무분석 주식MRI 차트, 종목발굴 우량주 주식MRI 차트
     if ($('#MRIchart_analy01').length) {
@@ -887,122 +888,165 @@ $(document).ready(function () {
         Highcharts.chart('MRIchart_analy01', {
             chart: {
                 polar: true,
+                type: 'area',
+                renderTo: 'MRIchart_analy01',
                 backgroundColor: {
                     stops: [
                         [0, '#ffffff'],
                         [1, '#ffffff']
                     ]
                 },
+                margin:[55, 0, 45, 0],
+                events: {
+                    load: function () {
+                        alignCenterElements(this);
+                    },
+                    redraw: function () {
+                        alignCenterElements(this);
+                    }
+                }
             },
-            colors: ["#3c55ce"],
+
             title: {
-                text: null,
+                text: ''
             },
+
+            colors: ["rgba(131, 145, 246, 1)"],
+
             tooltip: {
-                shared: true,
-                useHTML: true,
-                formatter: function () {
-                    var imgOne = '<img src = "../img/startol_one.png" height="10" width="10"/>'  /* 1점 */
-                    var imgZero = '<img src = "../img/startol_zero.png" height="10" width="10"/>'  /* 0점 */
-                    var imgHalf = '<img src = "../img/startol_half.png" height="10" width="10"/>'  /* 0.5점 */
-                    var s = '<b>' + this.x + '</b>';
-                    $.each(this.points, function (i, point) {
-                        if (point.y == '5') {
-                            s += imgOne + imgOne + imgOne + imgOne + imgOne + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '4.5') {
-                            s += imgOne + imgOne + imgOne + imgOne + imgHalf + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '4') {
-                            s += imgOne + imgOne + imgOne + imgOne + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '3.5') {
-                            s += imgOne + imgOne + imgOne + imgHalf + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '3') {
-                            s += imgOne + imgOne + imgOne + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '2.5') {
-                            s += imgOne + imgOne + imgHalf + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '2') {
-                            s += imgOne + imgOne + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '1.5') {
-                            s += imgOne + imgHalf + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '1') {
-                            s += imgOne + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                        else if (point.y >= '0.5') {
-                            s += imgHalf + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                        else {
-                            s += imgZero + imgZero + imgZero + imgZero + imgZero + '&nbsp;' + point.y;
-                        }
-                    });
-                    return s;
-                },
+                enabled: false,
             },
+
             pane: {
-                startAngle: 0,
-                endAngle: 360
+                size: '100%',
+                center: ['50%', '50%'],                
             },
-            xAxis: {
-                categories: ['미래성장성', '사업<br>독점력', '현금<br>창출력', '수익<br>성장성', '재무<br>안전성'],
+
+            xAxis: {                
+                categories: ['밸류에이션<br><strong>100</strong> ', '미래 성장성<br><strong>100</strong> ', '사업 독점력<br><strong>50</strong>', '재무 안전성<br><strong>75</strong>', '현금창출력<br><strong>100</strong>'],                
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
-                max: 5,
+                gridLineColor: 'transparent',                
                 labels: {
-                    allowOverlap: true,
                     style: {
                         color: '#656d7e',
-                        fontSize: '14px',
-                    }
+                        fontSize: '13px',
+                        textAlign: 'center',
+                        fontWeight: '400',
+                        fontFamily: "Pretendard Variable, Pretendard",
+                    },                    
+                    formatter: function () {
+                        // Y 좌표와 X 좌표의 보정값을 미리 정의된 배열로 설정
+                        var labelYPositions = [-18, -7, 23, 23, -7]; // 각 인덱스별 Y 좌표 보정값
+                        var labelXPositions = [0, 0, -12, 12, 0]; // 각 인덱스별 X 좌표 보정값, 예시값
+                        
+                        // 현재 카테고리 인덱스에 해당하는 보정값을 가져옴
+                        var labelYPosition = labelYPositions[this.pos] || 0; // 기본값 0
+                        var labelXPosition = labelXPositions[this.pos] || 0; // 기본값 0
+            
+                        // 'y' 속성을 사용해 레이블의 y 좌표를 조정합니다.
+                        return '<span style="position:relative; top:' + labelYPosition + 'px; left:' + labelXPosition + 'px;">' + this.value + '</span>';
+                    },
+                    useHTML: true,                 
                 }
             },
+
             yAxis: {
                 gridLineInterpolation: 'polygon',
-                minorGridLineColor: '#E0E0E0',
-                tickInterval: 1.07,
+                gridLineColor: 'transparent',                
                 min: 0,
-                max: 5,
+                max: 100,
                 labels: {
                     enabled: false
                 }
             },
+
             exporting: {
                 enabled: false
             },
+
             credits: {
                 enabled: false
             },
+
             legend: {
                 enabled: false,
             },
+
             series: [{
-                type: 'area',
-                name: '데이터1',
-                data: [4, 5, 5, 4.5, 5],
-                pointPlacement: 'on',
+                name: '투자매력도',
+                data: [50, 100, 100, 90, 90],
+                pointPlacement: 'on',  
+                color: '#3655d6', // 시리즈 선의 색상을 설정
+                lineWidth: 1, // 시리즈 선의 너비를 설정
                 marker: {
                     enabled: true,
-                }
+                    fillColor: '#404fc3',
+                    lineColor: '#f7f8f9', // 마커 테두리 색상을 설정
+                    lineWidth: 1, // 마커 테두리 두께
+                    radius: 2.7 // 마커의 반지름
+                }              
             }],
+            
             plotOptions: {
-                series: {
+                series: {                    
                     lineWidth: 1,
-                    fillOpacity: 0.3,
-                    marker: {
-                        enabled: false,
+                    fillColor: '#e5eafa',
+                    states: {
+                        hover: {
+                            enabled: false // 시리즈 hover 상태 비활성화
+                        },                        
                     }
-                },
+                }
             },
         });
+        // 차트 리사이즈 계산
+        function alignCenterElements(chart) {            
+            var paneSize = chart.pane[0].options.size,
+                paneCenter = chart.pane[0].center,
+                centerX = paneCenter[0],
+                centerY = paneCenter[1] + 34, // centerY 조정
+                size = Math.min(chart.plotWidth, chart.plotHeight) * (parseInt(paneSize) / 100),
+                radius = size / 2;
+        
+            // 기존에 추가된 배경 이미지와 텍스트가 있다면 제거
+            if (chart.bgImage) {
+                chart.bgImage.destroy();
+            }
+            if (chart.centerText) {
+                chart.centerText.destroy();
+            }
+        
+            // 배경 이미지 추가
+            chart.bgImage = chart.renderer.image('../img/bg_spider.svg', centerX - radius, centerY - radius, size, size)
+                .attr({
+                    zIndex: -1
+                })
+                .add()
+                .translate(0, 14);
+        
+            // 중앙의 값 텍스트 추가
+            chart.centerText = chart.renderer.text('23', centerX, centerY)
+                .css({
+                    color: '#3655d6',
+                    fontSize: '32px',
+                    textAlign: 'center',
+                    fontWeight: 'bold',                    
+                    fontFamily: "Pretendard Variable, Pretendard",
+                    // textOutline: '1px contrast',
+                    // textShadow: '0px 0px 4px rgba(255, 255, 255, 1)'
+                })
+                .attr({
+                    zIndex: 5,
+                    align: 'center'
+                })
+                .add()
+                .translate(0, 25);
+        }
     }
-    if ($('#MRIchart_analy01_small').length) {
-
-        Highcharts.chart('MRIchart_analy01_small', {
+    
+    function createSpiderChart(containerId, seriesData, chartTitle) {
+        Highcharts.chart(containerId, {
             chart: {
                 polar: true,
                 backgroundColor: {
@@ -1011,36 +1055,53 @@ $(document).ready(function () {
                         [1, '#ffffff']
                     ]
                 },
-                margin: [0, 0, 30, 0],
+                margin:[0, 0, 0, 0],
+                events: {
+                    load: function () {
+                        var chart = this,
+                            paneSize = chart.pane[0].options.size,
+                            paneCenter = chart.pane[0].center,
+                            centerX = paneCenter[0],
+                            centerY = paneCenter[1] - 5,
+                            size = Math.min(chart.plotWidth, chart.plotHeight) * (parseInt(paneSize) / 90),
+                            radius = size / 2;
+                        
+                        chart.renderer.image('../../../img/bg_spider.svg', centerX - radius, centerY - radius, size, size)
+                        .attr({
+                            zIndex: -1
+                        })
+                        .add();
+                    }
+                }
             },
-            colors: ["#3c55ce"],
+            colors: ["rgba(131, 145, 246, 1)"],
             title: {
-                text: '<a href="https://www.valueline.co.kr/finance/summary/293490">카카오게임즈</a>', // 종목명에 링크
-                align: 'center', // 가로 위치를 가운데로 설정
-                verticalAlign: 'bottom', // 세로 위치를 하단으로 설정                
+                useHTML: true,
+                text: chartTitle,
+                align: 'center',
+                verticalAlign: 'bottom',                                                                 
             },
             tooltip: {
-                enabled: false                
+                enabled: false
             },
             pane: {
-                startAngle: 0,
-                endAngle: 360
+                size: '50%',
+                center: ['50%', '50%'],                
             },
             xAxis: {
-                categories: ['밸류에이션', '미래<br>성장성', '사업<br>독점력', '재무<br>안전성', '현금<br>창출력' ],
+                categories: ['미래성장성<br><strong>50</strong> ', '사업 독점력<br><strong>35</strong>', '현금창출력<br><strong>100</strong>', '수익성<br><strong>0</strong>', '재무안전성<br><strong>75</strong>'],                
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
-                max: 5,
+                gridLineColor: 'transparent', 
                 labels: {
                     enabled: false
                 }
             },
             yAxis: {
-                gridLineInterpolation: 'polygon',
-                minorGridLineColor: '#E0E0E0',
-                tickInterval: 0,
+                gridLineInterpolation: 'polygon',                
+                gridLineColor: 'transparent',                
                 min: 0,
-                max: 5,
+                max: 100,
                 labels: {
                     enabled: false
                 }
@@ -1054,173 +1115,51 @@ $(document).ready(function () {
             legend: {
                 enabled: false,
             },
+
             series: [{
                 type: 'area',
-                name: '데이터1',
-                data: [5, 4, 5, 3.5, 5],
-                pointPlacement: 'on',
+                name: '투자매력도',
+                data: seriesData,
+                pointPlacement: 'on',  
+                color: '#7983d5', // 시리즈 선의 색상을 설정
+                lineWidth: 1, // 시리즈 선의 너비를 설정
                 marker: {
                     enabled: true,
-                }
+                    fillColor: '#404fc3',
+                    lineColor: '#f7f8f9', // 마커 테두리 색상을 설정
+                    lineWidth: 1.5, // 마커 테두리 두께
+                    radius: 2.7 // 마커의 반지름
+                }           
             }],
             plotOptions: {
                 series: {
                     lineWidth: 1,
-                    fillOpacity: 0.3,
+                    fillColor: '#f0f3ff',
                     marker: {
                         enabled: false,
+                    },
+                    states: {
+                        hover: {
+                            enabled: false // 시리즈 hover 상태 비활성화
+                        },                        
                     }
                 },
             },
         });
+    }
+
+    // 차트 생성 예시
+    if ($('#MRIchart_analy01_small').length) {
+        createSpiderChart('MRIchart_analy01_small', [100, 50, 100, 45, 75], '<a href="">피프스 써드 뱅코프</a>');
     }
     if ($('#MRIchart_analy02_small').length) {
-
-        Highcharts.chart('MRIchart_analy02_small', {
-            chart: {
-                polar: true,
-                backgroundColor: {
-                    stops: [
-                        [0, '#ffffff'],
-                        [1, '#ffffff']
-                    ]
-                },
-                margin: [0, 0, 30, 0],
-            },
-            colors: ["#3c55ce"],
-            title: {
-                text: '<a href="https://www.valueline.co.kr/finance/summary/005930">삼성전자</a>', // 종목명에 링크
-                align: 'center', // 가로 위치를 가운데로 설정
-                verticalAlign: 'bottom', // 세로 위치를 하단으로 설정                
-            },
-            tooltip: {
-                enabled: false                
-            },
-            pane: {
-                startAngle: 0,
-                endAngle: 360
-            },
-            xAxis: {
-                categories: ['밸류에이션', '미래<br>성장성', '사업<br>독점력', '재무<br>안전성', '현금<br>창출력' ],
-                tickmarkPlacement: 'on',
-                lineWidth: 0,
-                max: 5,
-                labels: {
-                    enabled: false
-                }
-            },
-            yAxis: {
-                gridLineInterpolation: 'polygon',
-                minorGridLineColor: '#E0E0E0',
-                tickInterval: 1.07,
-                min: 0,
-                max: 5,
-                labels: {
-                    enabled: false
-                }
-            },
-            exporting: {
-                enabled: false
-            },
-            credits: {
-                enabled: false
-            },
-            legend: {
-                enabled: false,
-            },
-            series: [{
-                type: 'area',
-                name: '데이터1',
-                data: [3, 2, 3, 1, 4],
-                pointPlacement: 'on',
-                marker: {
-                    enabled: true,
-                }
-            }],
-            plotOptions: {
-                series: {
-                    lineWidth: 1,
-                    fillOpacity: 0.3,
-                    marker: {
-                        enabled: false,
-                    }
-                },
-            },
-        });
+        createSpiderChart('MRIchart_analy02_small', [40, 50, 80, 70, 50], '<a href="">마이크로소프트</a>');
     }
     if ($('#MRIchart_analy03_small').length) {
-
-        Highcharts.chart('MRIchart_analy03_small', {
-            chart: {
-                polar: true,
-                backgroundColor: {
-                    stops: [
-                        [0, '#ffffff'],
-                        [1, '#ffffff']
-                    ]
-                },
-                margin: [0, 0, 30, 0],
-            },
-            colors: ["#3c55ce"],
-            title: {
-                text: '<a href="https://www.valueline.co.kr/finance/summary/067160">아프리카TV</a>', // 종목명에 링크
-                align: 'center', // 가로 위치를 가운데로 설정
-                verticalAlign: 'bottom', // 세로 위치를 하단으로 설정                
-            },
-            tooltip: {
-                enabled: false                
-            },
-            pane: {
-                startAngle: 0,
-                endAngle: 360
-            },
-            xAxis: {
-                categories: ['밸류에이션', '미래<br>성장성', '사업<br>독점력', '재무<br>안전성', '현금<br>창출력' ],
-                tickmarkPlacement: 'on',
-                lineWidth: 0,
-                max: 5,
-                labels: {
-                    enabled: false
-                }
-            },
-            yAxis: {
-                gridLineInterpolation: 'polygon',
-                minorGridLineColor: '#E0E0E0',
-                tickInterval: 1.07,
-                min: 0,
-                max: 5,
-                labels: {
-                    enabled: false
-                }
-            },
-            exporting: {
-                enabled: false
-            },
-            credits: {
-                enabled: false
-            },
-            legend: {
-                enabled: false,
-            },
-            series: [{
-                type: 'area',
-                name: '데이터1',
-                data: [5, 5, 0, 5, 4],
-                pointPlacement: 'on',
-                marker: {
-                    enabled: true,
-                }
-            }],
-            plotOptions: {
-                series: {
-                    lineWidth: 1,
-                    fillOpacity: 0.3,
-                    marker: {
-                        enabled: false,
-                    }
-                },
-            },
-        });
+        createSpiderChart('MRIchart_analy03_small', [70, 30, 40, 50, 60], '<a href="">애플</a>');
+    }
+    if ($('#MRIchart_analy04_small').length) {
+        createSpiderChart('MRIchart_analy04_small', [90, 30, 40, 50, 40], '<a href="">마이크로소프트</a>');
     }
 
     //종목진단 결과 보고서 차트

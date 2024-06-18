@@ -8839,7 +8839,7 @@ input[type=radio]:checked:before {
   padding: 0;
   padding-bottom: 30px;
   box-sizing: border-box;
-  background-color: #f7f7f8;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -8856,6 +8856,18 @@ input[type=radio]:checked:before {
   margin: 0 auto;
   box-sizing: border-box;
 }
+.투자매력은 .top_spider .left .MRIchart_style .highcharts-axis-labels.highcharts-radial-axis-labels span {
+  color: #656d7e !important;
+  font-weight: 400;
+  font-size: 14px;
+}
+.투자매력은 .top_spider .left .MRIchart_style .highcharts-axis-labels.highcharts-radial-axis-labels strong {
+  display: inline-block;
+  padding-top: 3px;
+  font-weight: 400;
+  color: #656d7e !important;
+  font-size: 14px;
+}
 .투자매력은 .top_spider .left .MRIchart_style .highcharts-axis-labels text {
   font-family: "Pretendard Variable", Pretendard, "Spoqa Han Sans Neo", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: normal;
@@ -8867,29 +8879,31 @@ input[type=radio]:checked:before {
   display: flex;
 }
 .투자매력은 .top_spider .left .MRIchart_small_style {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 140px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-title,
-.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-title a {
-  font-family: "Pretendard Variable", Pretendard, "Spoqa Han Sans Neo", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: normal;
-  font-weight: bold !important;
+.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-title, .투자매력은 .top_spider .left .MRIchart_small_style a {
+  cursor: pointer;
+  width: 100px !important;
+  padding-top: 9px;
+  line-height: 1.2;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
   font-size: 12px !important;
   color: #656d7e !important;
   fill: #656d7e !important;
 }
 .투자매력은 .top_spider .left .MRIchart_small_style .highcharts-axis-labels text {
-  font-family: "Pretendard Variable", Pretendard, "Spoqa Han Sans Neo", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: normal;
   font-size: 12px !important;
   color: #656d7e !important;
   fill: #656d7e !important;
-}
-.투자매력은 .top_spider .left .MRIchart_small_style .highcharts-markers path {
-  display: none;
 }
 .투자매력은 .top_spider .right {
   width: calc(100% - 430px);
@@ -8898,7 +8912,8 @@ input[type=radio]:checked:before {
 .투자매력은 .top_spider .right .chart_area.diagnosis {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-color: #fff;
+  border: 1px solid #E8EAF1;
+  background-color: #F4F6FA;
   box-sizing: border-box;
   padding: 12px 10px;
   position: relative;
@@ -9066,19 +9081,11 @@ input[type=radio]:checked:before {
   width: 100%;
   padding: 15px 20px;
   box-sizing: border-box;
-  background-color: #eaedf5;
+  border: 1px solid #E8EAF1;
+  border-top: none;
+  background-color: #fff;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-}
-.투자매력은 .top_spider .right .chart_table::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 18px;
-  background-image: linear-gradient(to bottom, #dbdfea, #eaedf5);
 }
 .투자매력은 .top_spider .right .chart_table .tableRanking.table_alloca {
   width: 100%;
