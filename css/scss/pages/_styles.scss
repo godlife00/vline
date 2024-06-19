@@ -1919,3 +1919,27 @@
         background-color: #FF545B;
     }
 }
+
+.sub_service {
+    .service_wrap {
+        .gifimg_01 {
+            position: absolute;
+            right: 63px;
+            top: 1550px;
+            width: 413px;
+            height: 260px;
+        }
+        .gifimg_02 {
+            position: absolute;
+            right: 63px;
+            top: 2184px;
+            width: 413px;
+            height: 260px;
+        }
+        img {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }        
+    }
+}
