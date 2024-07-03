@@ -8567,9 +8567,28 @@ input[type=radio]:checked:before {
   color: #333;
 }
 .벨류에이션 .txt {
+  display: flex;
+  gap: 0 12px;
   margin-top: 12px;
   font-size: 13px;
   color: #656d7e;
+}
+.벨류에이션 .txt .more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 6px;
+  font-size: 12px;
+  color: #527bea;
+  text-decoration: underline;
+}
+.벨류에이션 .txt .more::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin: auto;
+  border-top: 1px solid #527bea;
+  border-right: 1px solid #527bea;
+  transform: rotate(45deg);
 }
 .벨류에이션 .chart_box {
   margin-top: 20px;
