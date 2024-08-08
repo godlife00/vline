@@ -335,14 +335,13 @@ body, #wrap {
 
 #header {
   padding: 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 82;
   min-width: 1000px;
-  height: 42px;
   box-sizing: border-box;
   background: #374b9d;
 }
@@ -9343,6 +9342,22 @@ input[type=radio]:checked:before {
   height: auto;
 }
 
+.event_discount {
+  text-align: center;
+  height: 60px;
+  background-color: #151934;
+}
+.event_discount a {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+.event_discount a img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 .modalBox .modal + .blocker {
   display: none;
 }
@@ -9497,6 +9512,46 @@ input[type=radio]:checked:before {
 .modal.login_form .pop_foot .business_name {
   padding-left: 0;
   padding-right: 0;
+}
+.modal.payment_cacl02 .pop_con {
+  padding: 30px 33px 50px;
+}
+.modal.payment_cacl02 .pop_con .txt {
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: -0.8px;
+  text-align: center;
+  color: #222;
+  font-weight: 500;
+}
+.modal.payment_cacl02 .pop_con .txt b {
+  color: #D00000;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+.modal.payment_cacl02 .pop_con .txt:first-child {
+  margin-top: 0;
+}
+.modal.payment_cacl02 .pop_con .btnArea.payBtn {
+  margin-top: 30px;
+  display: flex;
+}
+.modal.payment_cacl02 .pop_con .btnArea.payBtn .btn {
+  flex: 1;
+  margin-right: 0.4rem;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 17.5px 5px;
+  border-radius: 5px;
+  border: solid 1px #3b4b98;
+  color: #374b9d;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal.payment_cacl02 .pop_con .btnArea.payBtn .btn.btn_save {
+  background-color: #374b9d;
+  color: #fff;
 }
 .modal.terms_form .pop_con {
   padding: 15px 15px 0;
@@ -10156,163 +10211,92 @@ input[type=radio]:checked:before {
 }
 .modal.premium_join {
   width: 70%;
-  max-width: 450px;
+  max-width: 350px;
+  background: #fff url("/img/bg_blue.svg") no-repeat center center;
+  background-size: cover;
 }
 .modal.premium_join .pop_header {
-  padding: 25px 30px 30px;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  background: #374b9d url("/img/bg_premium_top.svg") no-repeat right bottom;
-}
-.modal.premium_join .pop_header .pop_title {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -1.2px;
-  color: #fff;
-}
-.modal.premium_join .pop_header .pop_title span {
-  display: block;
-  margin-top: 5px;
-  font-size: 14px;
-  letter-spacing: -0.7px;
-  color: #fff;
-  opacity: 0.55;
-}
-.modal.premium_join .pop_header .clse::before, .modal.premium_join .pop_header .clse::after {
-  background-color: #fff;
-}
-.modal.premium_join .pop_con {
-  padding: 27px 33px;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare {
-  width: 100%;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare th,
-.modal.premium_join .pop_con .tableRanking.type_compare td {
-  text-align: center;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare thead tr:first-child {
-  width: 100%;
-  border-bottom: 1px solid #e7eaf2;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare thead tr:first-child .top_th span {
-  display: inline-block;
-  padding-bottom: 6px;
-  font-size: 14px;
-  font-weight: normal;
-  letter-spacing: -0.8px;
-  color: #3655d6;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare thead tr:first-child .top_th:first-child {
-  text-align: left;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare thead tr:first-child .top_th:first-child span {
-  font-size: 16px;
-  text-align: left;
-  font-weight: 700;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare thead tr:first-child .top_th:last-child span {
-  font-weight: normal;
-  color: #656d7e;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td span {
-  font-size: 14px;
-  font-weight: normal;
-  letter-spacing: -0.7px;
-  color: #656d7e;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td.mid_td {
-  text-align: left;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td.mid_td tr:first-child td {
   padding-top: 50px;
 }
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td.mid_td span {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 2.31;
-  letter-spacing: -0.8px;
-  color: #656d7e;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td.mid_td b {
-  font-weight: 700;
-  color: #656d7e;
-}
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td.com_select {
+.modal.premium_join .pop_header .pop_title {
   text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #656d7e;
 }
-.modal.premium_join .pop_con .tableRanking.type_compare tbody td.com_select span {
+.modal.premium_join .pop_header .pop_title b {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.31;
+  color: #384b9d;
+}
+.modal.premium_join .pop_con {
+  padding-bottom: 0;
+  background: url("/img/img_popCen.svg") no-repeat center top;
+  box-sizing: border-box;
+}
+.modal.premium_join .pop_con ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
+  gap: 6px 10px;
+  margin-top: 183px;
+}
+.modal.premium_join .pop_con ul li.txt {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6a727b;
+}
+.modal.premium_join .pop_con ul li.txt b {
+  font-weight: bold;
+  color: #384b9d;
+}
+.modal.premium_join .pop_con ul li.txt i {
   display: inline-block;
-  width: 16px;
-  height: 12px;
-  background: url("/img/com_select.svg") no-repeat 0 0;
+  background-color: #384b9d;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+  text-align: center;
+  line-height: 20px;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
 }
 .modal.premium_join .pop_foot {
-  padding: 24px 33px;
-  background-color: #edf3ff;
+  padding: 10px 32px 26px;
 }
 .modal.premium_join .pop_foot .join_btn {
   position: relative;
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 13px 0;
+  padding: 15px 0;
   box-sizing: border-box;
-  border-radius: 5px;
-  background-color: #374b9d;
-  font-size: 18px;
+  border-radius: 8px;
+  background-color: #384b9d;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: -0.9px;
+  letter-spacing: normal !important;
   text-align: center;
   color: #fff;
-  background-color: #00d885;
-}
-.modal.premium_join .pop_foot .join_btn::before {
-  content: "";
-  width: 11px;
-  height: 11px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  display: inline-block;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 .modal.premium_join .pop_foot .join_btn b {
-  color: #ff8d5a;
-  font-weight: 700;
-}
-.modal.premium_join .pop_foot .join_btn b {
-  color: #fff;
-}
-.modal.premium_join .pop_foot .join_btn:hover {
-  background-color: #0a7b44;
-}
-.modal.premium_join .pop_foot .link_menu {
-  margin-top: 12px;
-  text-align: center;
-}
-.modal.premium_join .pop_foot .link_menu li a {
-  position: relative;
   display: inline-block;
-  font-size: 14px;
-  letter-spacing: -0.7px;
-  color: #656d7e;
-  text-decoration: underline;
+  color: #ffde17;
+  padding-left: 3px;
 }
-.modal.premium_join .pop_foot .link_menu li a::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid #656d7e;
-  border-right: 1px solid #656d7e;
-  display: inline-block;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 7px;
-  right: -12px;
+.modal.premium_join.eventDiscount .pop_con {
+  background-image: url("/img/img_popCen_discount.svg");
 }
 .modal.mypage_info .pop_header {
   border: none;
@@ -10324,6 +10308,7 @@ input[type=radio]:checked:before {
   padding: 0 30px 40px;
 }
 .modal.mypage_info .pop_con .mapage_area .tab_area ul {
+  display: flex;
   font-size: 0;
 }
 .modal.mypage_info .pop_con .mapage_area .tab_area ul li {
@@ -10864,7 +10849,6 @@ input[type=radio]:checked:before {
   padding-left: 5px;
 }
 .modal.mypage_info .pop_con .mapage_service .service_table .day .pay_cacl {
-  cursor: pointer;
   display: inline-block;
   color: #f2333a;
   position: relative;
@@ -10893,6 +10877,7 @@ input[type=radio]:checked:before {
   padding: 3px 0 2px;
 }
 .modal.mypage_info .pop_con .mapage_service .service_table .btn_payCan,
+.modal.mypage_info .pop_con .mapage_service .service_table .btn_payCan2,
 .modal.mypage_info .pop_con .mapage_service .service_table .btn_payRefund {
   cursor: pointer;
   border-radius: 3px;

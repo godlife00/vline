@@ -89,6 +89,19 @@ $(document).ready(function () {
                 fadeDuration: 100                
             });
         });
+        
+        // 평생할인 결제 회원 취소 시 팝업
+        $('.btn_payCan2').on('click', function () {                        
+            $('.payment_cacl02').modal({
+                fadeDuration: 100                
+            });
+        });
+
+        $('.modal.payment_cacl02 .btnArea .btn_cncl, .modal.payment_cacl02 .btnArea .btn_save').on('click', function () {
+            $('body').css('overflow', '');
+            $('.blocker').hide();
+            $('.modal').hide().removeClass('slideUp');
+        });
 
         //select
         $(function () {

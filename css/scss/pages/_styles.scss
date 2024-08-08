@@ -1962,3 +1962,19 @@
         }        
     }
 }
+
+.event_discount {    
+    text-align: center;    
+    height: 60px;    
+    background-color: #151934;
+    a {
+        display: inline-block;        
+        width: auto;
+        height: 100%;
+        img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }    
+}
