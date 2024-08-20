@@ -852,22 +852,27 @@ $(document).ready(function () {
         var floatPosition = parseInt($(".ads-right-box").css('top'));
         var adsTopSub = $('.ads-top-sub').height() + 92;
         var adsTopMain = $('.ads-top-main').height() + 92;    
-
+    
         $(window).scroll(function () {
             var scrollTop = $(this).scrollTop();
             var maxScroll = $(document).height() - $(this).height();
             var newPosition = scrollTop + floatPosition;
-            var adsClass = $(".adsbygoogle").attr("class").split(' ')[1];
-
-            if (adsClass == "ads-top-main") {
-                $(".ads-right-box").stop().animate({
-                    "top": adsTopMain
-                }, 0);
-            } else if (adsClass == "ads-top-sub") {
-                $(".ads-right-box").stop().animate({
-                    "top": adsTopSub
-                }, 0);
-            } 
+    
+            var adsClass = $(".adsbygoogle").attr("class");
+            if (adsClass) {
+                adsClass = adsClass.split(' ')[1];
+    
+                if (adsClass == "ads-top-main") {
+                    $(".ads-right-box").stop().animate({
+                        "top": adsTopMain
+                    }, 0);
+                } else if (adsClass == "ads-top-sub") {
+                    $(".ads-right-box").stop().animate({
+                        "top": adsTopSub
+                    }, 0);
+                } 
+            }
+    
             // else if (scrollTop <= adsTopSub) {
             //     $(".ads-right-box").stop().animate({
             //         "top": adsTopSub - 20
@@ -882,9 +887,10 @@ $(document).ready(function () {
             //         "top": newPosition
             //     }, 300);
             // };
-
+    
         }).scroll();
     });
+    
 
     // 테이블 데이터 복붙 데이터 최적화
     if ($('.table').length) {
