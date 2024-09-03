@@ -1254,7 +1254,7 @@ a:focus {
 /* ë°¸ë¥˜ë¼ì¸ í—¤ë” */
 #header {
   padding: 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;

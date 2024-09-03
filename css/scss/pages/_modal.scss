@@ -1060,7 +1060,11 @@
                         text-align: center;
                         color: #222;
                         // padding: 16px 0 7px;
-                        border-bottom: 2px solid #e7eaf2;                                                                        
+                        border-bottom: 2px solid #e7eaf2;    
+                        
+                        &:not(:has(a)) {                                                        
+                            padding: 18px 0 5px;                            
+                        }
 
                         &.active {
                             font-weight: $f_sizeB;
@@ -1070,13 +1074,13 @@
                                 font-weight: 700;
                                 color: #3655d6;
                             }
-                        }
-
+                        }                        
                         a {
                             display: inline-block;
-                            padding: 16px 0 7px;
+                            padding: 21px 0 5px;                            
                             width: 100%;
                         }
+                        
                     }
                 }
 

@@ -10321,6 +10321,9 @@ input[type=radio]:checked:before {
   color: #222;
   border-bottom: 2px solid #e7eaf2;
 }
+.modal.mypage_info .pop_con .mapage_area .tab_area ul li:not(:has(a)) {
+  padding: 18px 0 5px;
+}
 .modal.mypage_info .pop_con .mapage_area .tab_area ul li.active {
   font-weight: 700;
   color: #3655d6;
@@ -10332,7 +10335,7 @@ input[type=radio]:checked:before {
 }
 .modal.mypage_info .pop_con .mapage_area .tab_area ul li a {
   display: inline-block;
-  padding: 16px 0 7px;
+  padding: 21px 0 5px;
   width: 100%;
 }
 .modal.mypage_info .pop_con .mapage_area .mapage_form .form_table table {
