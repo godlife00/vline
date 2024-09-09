@@ -2723,6 +2723,25 @@
 
 	}
 }
+.valueline #wrap .sub_payment .step_top {	
+	box-sizing: border-box;	
+	padding: 16px 15px;
+    background-color: #404fc3;
+	
+	.event2024_payment_sub {        
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+		img {
+			display: block;
+			border-radius: 16px;
+			overflow: hidden;
+			width: 100%;
+		}
+	}
+}
 .valueline #wrap .sub_payment .serviceStep {
 	background-color: #404fc3;
     // background: #F4F4F5;

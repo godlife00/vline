@@ -11856,6 +11856,23 @@ input[type=radio]:checked:before {
   font-size: 0;
 }
 
+.valueline #wrap .sub_payment .step_top {
+  box-sizing: border-box;
+  padding: 16px 15px;
+  background-color: #404fc3;
+}
+.valueline #wrap .sub_payment .step_top .event2024_payment_sub a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.valueline #wrap .sub_payment .step_top .event2024_payment_sub img {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
 .valueline #wrap .sub_payment .serviceStep {
   background-color: #404fc3;
   padding: 0 0 20px;
