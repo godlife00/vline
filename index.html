@@ -45,7 +45,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="css/scss/valueline.css" />    
+    <link rel="stylesheet" type="text/css" href="css/scss/valueline.css?v=240911" />    
     <!-- js -->    
     <script src="js/valueline.js"></script>
     <!-- 구글 애드센스 -->
@@ -2796,22 +2796,33 @@
             </div>
         </div>
     </div> -->
-
-    <div id="layer_pop" class="modal previous_pop" style="display: none;">
-        <div class="pop_header" style="padding: 0; background-color: #Fff; border:none;">            
-            <a href="#" class="clse" rel="modal:close"></a>
+    
+    <div id="layer_pop" class="modal previous_pop eventDiscount" style="display: none;">
+        
+        <!-- 벨류라인 프리미엄 -->        
+        <div class="pop_header">
+            <h1 class="pop_title">투자자를 위한 빅데이터 종목분석 <b>밸류라인 프리미엄</b></h1>
+            <a href="#" class="clse" rel="modal:close">
+                <!--닫기-->
+            </a>
         </div>
-
+    
         <div class="pop_con">
-            <div class="scr_box" style="padding: 0; max-height: 495px; overflow: inherit;">
-                <a href="https://www.valueline.co.kr/member/notify_view/26" class="join_btn open_payment">
-                    <img src="img/banner/valueline_popup_231219.png" alt="실시간 AI주가예측 런칭! 현재 시세를 반영한 10일간 예상주가를 실시간으로 제공합니다." style="display: block; width: 100%; height: 100%;">
-                </a>
-            </div>
+            <ul>
+                <li class="txt"><i>01</i> 기업의 강점을 한 눈에! <b>종목진단, 재무분석차트</b></li>
+                <li class="txt"><i>02</i> 투자는 타이밍! <b>AI주가예측, 업데이트 알림</b></li>
+                <li class="txt"><i>03</i> 특허받은 알고리즘의 <b>적정주가</b></li>
+                <li class="txt"><i>04</i> 전 종목 기업분석을 위한 <b>20년 재무제표</b></li>
+                <li class="txt"><i>05</i> 투자자를 위한 <b>종목 스크리닝, 데이터 다운로드</b></li>
+            </ul>
+        </div>
+        <div class="pop_foot">
+            <a href="service.html" class="join_btn open_payment" target="_blank">밸류라인 프리미엄 <b>가입하기</b></a>
         </div>
 
-        <div class="pop_foot" style="padding: 0 20px 10px; background-color: #Fff;">            
-            <div class="today_check">
+
+        <div class="pop_foot" style="padding: 1px 25px 10px;">            
+            <div class="today_check" style="margin-top: 10px;">
                 <label for="pop_today" class="btn_day" style="display: none;">
                     <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
                 </label>
