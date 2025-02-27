@@ -1747,35 +1747,5 @@
         & + .indices_area + .btm_layBox {
             margin-top: 0;        
         }
-    }
-    .weeks_free3 {
-        padding: 10px 26px;
-        margin-bottom: 30px;
-        // border-radius: 5px;
-        background-color: #d8d9df ;
-        p, a {
-            font-size: 13px;
-            line-height: 1.54;
-            color: #3f4462;
-            font-weight: bold;
-            text-align: center;
-        }
-        .btn_close {
-            position: relative;
-            padding-left: 25px;
-            padding-right: 15px;
-            &::after {
-                content: "";
-                width: 6px;
-                height: 6px;
-                border-top: 1px solid #3f4462;
-                border-right: 1px solid #3f4462;
-                transform: rotate(45deg);
-                display: inline-block;
-                position: absolute;
-                right: 0;
-                top: 6px;
-            }
-        }
-    }
+    }    
 }

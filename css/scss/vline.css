@@ -5167,35 +5167,6 @@ input[type=radio]:checked:before {
 .valueline #wrap #container .resultdata_area + .indices_area + .btm_layBox {
   margin-top: 0;
 }
-.valueline #wrap #container .weeks_free3 {
-  padding: 10px 26px;
-  margin-bottom: 30px;
-  background-color: #d8d9df;
-}
-.valueline #wrap #container .weeks_free3 p, .valueline #wrap #container .weeks_free3 a {
-  font-size: 13px;
-  line-height: 1.54;
-  color: #3f4462;
-  font-weight: bold;
-  text-align: center;
-}
-.valueline #wrap #container .weeks_free3 .btn_close {
-  position: relative;
-  padding-left: 25px;
-  padding-right: 15px;
-}
-.valueline #wrap #container .weeks_free3 .btn_close::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-top: 1px solid #3f4462;
-  border-right: 1px solid #3f4462;
-  transform: rotate(45deg);
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 6px;
-}
 
 #container .M_right .contents.sub_con .tab_content {
   position: relative;
@@ -9358,6 +9329,35 @@ input[type=radio]:checked:before {
   height: 100%;
 }
 
+.weeks_free3 {
+  padding: 10px 26px;
+  background-color: #d8d9df;
+}
+.weeks_free3 p, .weeks_free3 a {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #3f4462;
+  font-weight: bold;
+  text-align: center;
+}
+.weeks_free3 .btn_close {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 15px;
+}
+.weeks_free3 .btn_close::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #3f4462;
+  border-right: 1px solid #3f4462;
+  transform: rotate(45deg);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
 .modalBox .modal + .blocker {
   display: none;
 }
@@ -11372,13 +11372,21 @@ input[type=radio]:checked:before {
   overflow: auto;
   overflow-x: hidden;
   max-height: 500px;
-  padding: 38px 32px 48px;
+  padding: 0 32px 0cap;
   color: #333;
   font-size: 15px;
   word-break: break-all;
   word-wrap: break-word;
 }
 .modal.modal.terms .pop_con .sub_terms .txt, .modal.modal.policy .pop_con .sub_terms .txt {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  line-height: 1.42;
+}
+.modal.modal.terms .pop_con .sub_terms .txt span, .modal.modal.policy .pop_con .sub_terms .txt span {
+  display: block;
   line-height: 1.42;
 }
 .modal.modal.terms .pop_con .sub_terms .txt_B,

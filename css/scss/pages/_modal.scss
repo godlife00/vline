@@ -2252,14 +2252,22 @@
                 overflow: auto;
                 overflow-x: hidden;
                 max-height: 500px;
-                padding: 38px 32px 48px;
+                padding: 0 32px 0cap;
                 color: #333;
                 font-size: 15px;
                 word-break: break-all;
                 word-wrap: break-word;
 
                 .txt {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 8px;
                     line-height: 1.42;
+                    span {
+                        display: block;
+                        line-height: 1.42;
+                    }
                 }
 
                 .txt_B,

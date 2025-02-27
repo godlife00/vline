@@ -52,9 +52,10 @@ $(document).ready(function () {
             },
 
             tooltip: {
+                enabled: false,
                 // shared: true,
                 crosshairs: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>●●●●</b><br/>'
             },
 
             title: {
@@ -89,7 +90,7 @@ $(document).ready(function () {
                     y: -5,
                     formatter: function () {
                         if (this.point === this.series.data[this.series.data.length - 1]) {
-                            return Highcharts.numberFormat(this.y, 0);
+                            return 'AI예상주가';
                         }
                         return null;
                     }
